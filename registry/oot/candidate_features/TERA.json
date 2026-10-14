@@ -1,0 +1,213 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "TERA",
+  "company": "Tera Yatırım Menkul Değerler A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "353837",
+      "source_id": "KAP_1088290_EK1",
+      "source_document": "KAP 1088290 ek 1",
+      "source_published_at": "2022-12-19T09:47:13+03:00",
+      "source_sha256": "21323ca4b8f01d7d4ea2fe7004461b54c20877862d7c10ffc829de90eef6a7f1",
+      "source_path": "registry/oot/source_docs/TERA/KAP_1088290_ek1.pdf",
+      "quote": "Halka arza toplamda 377.967 yatırımcı katılmış olup 353.837 yatırımcıya dağıtım gerçekleşmiştir.",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "katılan (talep eden) 377.967",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "348912",
+        "retail_high_application": "4832",
+        "domestic_institutional": "87",
+        "foreign_institutional": "6"
+      },
+      "source_id": "KAP_1088290_EK1",
+      "source_document": "KAP 1088290 ek 1",
+      "source_published_at": "2022-12-19T09:47:13+03:00",
+      "source_sha256": "21323ca4b8f01d7d4ea2fe7004461b54c20877862d7c10ffc829de90eef6a7f1",
+      "source_path": "registry/oot/source_docs/TERA/KAP_1088290_ek1.pdf",
+      "quote": [
+        "Bireysel 3.750.000 25,0% 372.955 434.606.254 33,6% 348.912 3.750.000 22,7% Yatırımcılar",
+        "Yüksek Başvurulu 2.250.000 15,0% 4.876 642.656.399 49,5% 4.832 2.250.000 13,7% Yatırımcılar",
+        "Yurt İçi Kurumsal 5.250.000 35,0% 130 200.199.765 15,5% 87 6.750.000 40,9% Yatırımcılar",
+        "Yurt Dışı Kurumsal 3.750.000 25,0% 6 17.670.000 1,4% 6 3.750.000 22,7% Yatırımcılar"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "116",
+      "source_id": "KAP_1088290_EK1",
+      "source_document": "KAP 1088290 ek 1",
+      "source_published_at": "2022-12-19T09:47:13+03:00",
+      "source_sha256": "21323ca4b8f01d7d4ea2fe7004461b54c20877862d7c10ffc829de90eef6a7f1",
+      "source_path": "registry/oot/source_docs/TERA/KAP_1088290_ek1.pdf",
+      "quote": "Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 116 katı",
+      "note": "belge 'yaklaşık' diyor; Yüksek Başvurulu ayrıca yaklaşık 285 kat",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "30",
+      "source_id": "KAP_1088290_EK1",
+      "source_document": "KAP 1088290 ek 1",
+      "source_published_at": "2022-12-19T09:47:13+03:00",
+      "source_sha256": "21323ca4b8f01d7d4ea2fe7004461b54c20877862d7c10ffc829de90eef6a7f1",
+      "source_path": "registry/oot/source_docs/TERA/KAP_1088290_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara nihai tahsisat tutarının yaklaşık 30 katı",
+      "note": "belge 'yaklaşık' diyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "5",
+      "source_id": "KAP_1088290_EK1",
+      "source_document": "KAP 1088290 ek 1",
+      "source_published_at": "2022-12-19T09:47:13+03:00",
+      "source_sha256": "21323ca4b8f01d7d4ea2fe7004461b54c20877862d7c10ffc829de90eef6a7f1",
+      "source_path": "registry/oot/source_docs/TERA/KAP_1088290_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara nihai tahsisat tutarının yaklaşık 5 katı",
+      "note": "belge 'yaklaşık' diyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "3750000",
+        "retail_high_application": "2250000",
+        "domestic_institutional": "6750000",
+        "foreign_institutional": "3750000"
+      },
+      "source_id": "KAP_1088290_EK1",
+      "source_document": "KAP 1088290 ek 1",
+      "source_published_at": "2022-12-19T09:47:13+03:00",
+      "source_sha256": "21323ca4b8f01d7d4ea2fe7004461b54c20877862d7c10ffc829de90eef6a7f1",
+      "source_path": "registry/oot/source_docs/TERA/KAP_1088290_ek1.pdf",
+      "quote": [
+        "Bireysel 3.750.000 25,0% 372.955 434.606.254 33,6% 348.912 3.750.000 22,7% Yatırımcılar",
+        "Yüksek Başvurulu 2.250.000 15,0% 4.876 642.656.399 49,5% 4.832 2.250.000 13,7% Yatırımcılar",
+        "Yurt İçi Kurumsal 5.250.000 35,0% 130 200.199.765 15,5% 87 6.750.000 40,9% Yatırımcılar",
+        "Yurt Dışı Kurumsal 3.750.000 25,0% 6 17.670.000 1,4% 6 3.750.000 22,7% Yatırımcılar"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "22.7",
+      "source_id": "KAP_1088290_EK1",
+      "source_document": "KAP 1088290 ek 1",
+      "source_published_at": "2022-12-19T09:47:13+03:00",
+      "source_sha256": "21323ca4b8f01d7d4ea2fe7004461b54c20877862d7c10ffc829de90eef6a7f1",
+      "source_path": "registry/oot/source_docs/TERA/KAP_1088290_ek1.pdf",
+      "quote": "Bireysel 3.750.000 25,0% 372.955 434.606.254 33,6% 348.912 3.750.000 22,7% Yatırımcılar",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yalnız Bireysel; Yüksek Başvurulu ayrıca %13,7",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "40.9",
+      "source_id": "KAP_1088290_EK1",
+      "source_document": "KAP 1088290 ek 1",
+      "source_published_at": "2022-12-19T09:47:13+03:00",
+      "source_sha256": "21323ca4b8f01d7d4ea2fe7004461b54c20877862d7c10ffc829de90eef6a7f1",
+      "source_path": "registry/oot/source_docs/TERA/KAP_1088290_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 5.250.000 35,0% 130 200.199.765 15,5% 87 6.750.000 40,9% Yatırımcılar",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "22.7",
+      "source_id": "KAP_1088290_EK1",
+      "source_document": "KAP 1088290 ek 1",
+      "source_published_at": "2022-12-19T09:47:13+03:00",
+      "source_sha256": "21323ca4b8f01d7d4ea2fe7004461b54c20877862d7c10ffc829de90eef6a7f1",
+      "source_path": "registry/oot/source_docs/TERA/KAP_1088290_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal 3.750.000 25,0% 6 17.670.000 1,4% 6 3.750.000 22,7% Yatırımcılar",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç belgesi yalnız talep toplama yöntemini ('Sabit Fiyatla Talep Toplama') yazıyor; dağıtım yöntemi adlandırılmıyor; TSSD eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde aracı kurumu adlandıran cümle yok (TSSD yok); sonuç bildirimini ihraççı Tera Yatırım Menkul Değerler A.Ş. kendisi yayımladı",
+      "provenance": "MISSING"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD eldeki belgelerde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_1088529",
+      "source_document": "KAP 1088529",
+      "source_published_at": "2022-12-19T18:49:55+03:00",
+      "source_sha256": "6c1bb1df207742edc8af574832ea4dbfa9d3fdc058b78306caf5b6f2bc0e0d55",
+      "source_path": "registry/oot/source_docs/TERA/KAP_1088529_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1088529",
+      "source_document": "KAP 1088529",
+      "source_published_at": "2022-12-19T18:49:55+03:00",
+      "source_sha256": "6c1bb1df207742edc8af574832ea4dbfa9d3fdc058b78306caf5b6f2bc0e0d55",
+      "source_path": "registry/oot/source_docs/TERA/KAP_1088529_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1088529": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1088529",
+      "published_at": "2022-12-19T18:49:55+03:00",
+      "sha256": "6c1bb1df207742edc8af574832ea4dbfa9d3fdc058b78306caf5b6f2bc0e0d55",
+      "path": "registry/oot/source_docs/TERA/KAP_1088529_bildirim.pdf"
+    },
+    "KAP_1088290_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1088290 ek 1",
+      "published_at": "2022-12-19T09:47:13+03:00",
+      "sha256": "21323ca4b8f01d7d4ea2fe7004461b54c20877862d7c10ffc829de90eef6a7f1",
+      "path": "registry/oot/source_docs/TERA/KAP_1088290_ek1.pdf"
+    }
+  }
+}

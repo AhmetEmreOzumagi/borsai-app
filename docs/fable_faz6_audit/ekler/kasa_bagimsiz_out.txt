@@ -1,0 +1,14 @@
+numpy 2.5.2; kohort registry/oot/cohort_pre_h99.csv; üye 135
+135/135 eşleşme | kasa n=64 | ANA_OKUMA (D2+I4: tek PCG64(20260924), yıllar artan, tabaka içi (tarih,ticker), choice(n, n//2, replace=False), maruz kodlar önce çıkarılır)
+ 65/135 eşleşme | kasa n=64 | alt: rng.permutation(n)[:n//2]
+135/135 eşleşme | kasa n=64 | alt: rng.choice(dizi_ticker, n//2, replace=False)
+ 65/135 eşleşme | kasa n=64 | alt: rng.shuffle(liste)[:n//2]
+ 73/135 eşleşme | kasa n=64 | alt: choice(..., shuffle=False)
+101/135 eşleşme | kasa n=66 | alt: tek sayıda YUKARI yuvarlama (ceil)
+ 71/135 eşleşme | kasa n=64 | alt: her yıl için yeni PCG64(20260924)
+ 69/135 eşleşme | kasa n=64 | alt: tabaka içi sıra yalnız ticker
+ 71/135 eşleşme | kasa n=64 | alt: yıllar azalan sırayla
+106/135 eşleşme | kasa n=65 | alt: maruz kodlar çekilişe girer, sonra üzerine yazılır
+ 72/135 eşleşme | kasa n=65 | alt: tabakasız (tek çekiliş, 130 aday, 65 kasa)
+dosyadaki yıl × kasa sayıları: {'2020': {'OPEN': 4, 'SEALED': 4}, '2021': {'OPEN': 26, 'SEALED': 26}, '2022': {'EXPOSED_CODEX': 1, 'OPEN': 19, 'SEALED': 18}, '2023': {'EXPOSED_ARCHIVE': 4, 'OPEN': 17, 'SEALED': 16}}
+borsai sys.modules içinde mi: False

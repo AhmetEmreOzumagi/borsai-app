@@ -1,0 +1,6 @@
+[
+  "cd /REPO",
+  "/REPO/.venv/bin/python -m borsai.outcomes update --through 2030-01-07",
+  "git add data/",
+  "git commit -m \"BORSAI_OUTCOMES_2030-01-07: bulletins and outcomes through D_1\" -- data/"
+]

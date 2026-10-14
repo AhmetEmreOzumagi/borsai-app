@@ -1,0 +1,240 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "PASEU",
+  "company": "Pasifik Eurasia Lojistik Dış Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "903205",
+      "source_id": "KAP_1157128_EK1",
+      "source_document": "KAP 1157128 ek 1",
+      "source_published_at": "2023-06-08T12:26:24+03:00",
+      "source_sha256": "4fe08f1439f8bb1f78abe16ed3761e0a494d3bdff1c35996fee9a165982ed6f9",
+      "source_path": "registry/oot/source_docs/PASEU/KAP_1157128_ek1.pdf",
+      "quote": "Toplam 34.000.000 %100,00 929.307 86.463.542 %100,00 903.205 34.000.000 %100,00",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 929.307; dağıtım yapılan 903.205",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "903134",
+        "domestic_institutional": "68",
+        "foreign_institutional": "3"
+      },
+      "source_id": "KAP_1157128_EK1",
+      "source_document": "KAP 1157128 ek 1",
+      "source_published_at": "2023-06-08T12:26:24+03:00",
+      "source_sha256": "4fe08f1439f8bb1f78abe16ed3761e0a494d3bdff1c35996fee9a165982ed6f9",
+      "source_path": "registry/oot/source_docs/PASEU/KAP_1157128_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 23.800.000 %70,00 929.235 56.087.718 %64,87 903.134 24.225.000 %71,25",
+        "8.500.000 %25,00 69 29.100.824 %33,66 68 8.500.000 %25,00",
+        "1.700.000 %5,00 3 1.275.000 %1,47 3 1.275.000 %3,75"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "başvuru: bireysel 929.235, yurt içi kurumsal 69, yurt dışı kurumsal 3",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "2.3",
+      "source_id": "KAP_1157128_EK1",
+      "source_document": "KAP 1157128 ek 1",
+      "source_published_at": "2023-06-08T12:26:24+03:00",
+      "source_sha256": "4fe08f1439f8bb1f78abe16ed3761e0a494d3bdff1c35996fee9a165982ed6f9",
+      "source_path": "registry/oot/source_docs/PASEU/KAP_1157128_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 2,3 katı",
+      "note": "belge 'yaklaşık' diyor; nihai tahsisata göre (24.225.000)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,3",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "3.4",
+      "source_id": "KAP_1157128_EK1",
+      "source_document": "KAP 1157128 ek 1",
+      "source_published_at": "2023-06-08T12:26:24+03:00",
+      "source_sha256": "4fe08f1439f8bb1f78abe16ed3761e0a494d3bdff1c35996fee9a165982ed6f9",
+      "source_path": "registry/oot/source_docs/PASEU/KAP_1157128_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara ise yaklaşık 3,4 katı oranında talep gelmiştir.",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "3,4",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "0.75",
+      "source_id": "KAP_1157128_EK1",
+      "source_document": "KAP 1157128 ek 1",
+      "source_published_at": "2023-06-08T12:26:24+03:00",
+      "source_sha256": "4fe08f1439f8bb1f78abe16ed3761e0a494d3bdff1c35996fee9a165982ed6f9",
+      "source_path": "registry/oot/source_docs/PASEU/KAP_1157128_ek1.pdf",
+      "quote": "1.700.000 %5,00 3 1.275.000 %1,47 3 1.275.000 %3,75",
+      "derived": true,
+      "formula": "talep 1.275.000 / planlanan tahsisat 1.700.000",
+      "note": "belge bu grubun katını yazmıyor; talep planlanan tahsisatın altında (nihai tahsisat = talep 1.275.000, o tabanda 1,0)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "24225000",
+        "domestic_institutional": "8500000",
+        "foreign_institutional": "1275000"
+      },
+      "source_id": "KAP_1157128_EK1",
+      "source_document": "KAP 1157128 ek 1",
+      "source_published_at": "2023-06-08T12:26:24+03:00",
+      "source_sha256": "4fe08f1439f8bb1f78abe16ed3761e0a494d3bdff1c35996fee9a165982ed6f9",
+      "source_path": "registry/oot/source_docs/PASEU/KAP_1157128_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 23.800.000 %70,00 929.235 56.087.718 %64,87 903.134 24.225.000 %71,25",
+        "8.500.000 %25,00 69 29.100.824 %33,66 68 8.500.000 %25,00",
+        "1.700.000 %5,00 3 1.275.000 %1,47 3 1.275.000 %3,75"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "71.25",
+      "source_id": "KAP_1157128_EK1",
+      "source_document": "KAP 1157128 ek 1",
+      "source_published_at": "2023-06-08T12:26:24+03:00",
+      "source_sha256": "4fe08f1439f8bb1f78abe16ed3761e0a494d3bdff1c35996fee9a165982ed6f9",
+      "source_path": "registry/oot/source_docs/PASEU/KAP_1157128_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 23.800.000 %70,00 929.235 56.087.718 %64,87 903.134 24.225.000 %71,25",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %70,00",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "25.00",
+      "source_id": "KAP_1157128_EK1",
+      "source_document": "KAP 1157128 ek 1",
+      "source_published_at": "2023-06-08T12:26:24+03:00",
+      "source_sha256": "4fe08f1439f8bb1f78abe16ed3761e0a494d3bdff1c35996fee9a165982ed6f9",
+      "source_path": "registry/oot/source_docs/PASEU/KAP_1157128_ek1.pdf",
+      "quote": "8.500.000 %25,00 69 29.100.824 %33,66 68 8.500.000 %25,00",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %25,00",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "3.75",
+      "source_id": "KAP_1157128_EK1",
+      "source_document": "KAP 1157128 ek 1",
+      "source_published_at": "2023-06-08T12:26:24+03:00",
+      "source_sha256": "4fe08f1439f8bb1f78abe16ed3761e0a494d3bdff1c35996fee9a165982ed6f9",
+      "source_path": "registry/oot/source_docs/PASEU/KAP_1157128_ek1.pdf",
+      "quote": "1.700.000 %5,00 3 1.275.000 %1,47 3 1.275.000 %3,75",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %5,00",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız talep toplama yöntemini yazıyor (“Sabit Fiyatla Talep Toplama” yöntemiyle); dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede talep toplama (satış) yöntemi olarak geçiyor, dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Halk Yatırım Menkul Değerler Anonim Şirketi",
+      "source_id": "KAP_1155869_EK1",
+      "source_document": "KAP 1155869 ek 1",
+      "source_published_at": "2023-06-02T20:17:24+03:00",
+      "source_sha256": "dcfe32d284f4a1a67971cc4f38fbe8d23651f39aec8284bbacc40f028281658f",
+      "source_path": "registry/oot/source_docs/PASEU/KAP_1155869_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Halk Yatırım Menkul Değerler Anonim Şirketi'nin",
+      "note": "sonuç bildirimini yayımlayan kurum da HALK YATIRIM MENKUL DEĞERLER A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1157808",
+      "source_document": "KAP 1157808",
+      "source_published_at": "2023-06-09T18:12:36+03:00",
+      "source_sha256": "3d506178ab2198406be4e0174581f94d9234069ac07f44352ef5d7c21ff8e20a",
+      "source_path": "registry/oot/source_docs/PASEU/KAP_1157808_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1157808",
+      "source_document": "KAP 1157808",
+      "source_published_at": "2023-06-09T18:12:36+03:00",
+      "source_sha256": "3d506178ab2198406be4e0174581f94d9234069ac07f44352ef5d7c21ff8e20a",
+      "source_path": "registry/oot/source_docs/PASEU/KAP_1157808_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1157808": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1157808",
+      "published_at": "2023-06-09T18:12:36+03:00",
+      "sha256": "3d506178ab2198406be4e0174581f94d9234069ac07f44352ef5d7c21ff8e20a",
+      "path": "registry/oot/source_docs/PASEU/KAP_1157808_bildirim.pdf"
+    },
+    "KAP_1157128_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1157128 ek 1",
+      "published_at": "2023-06-08T12:26:24+03:00",
+      "sha256": "4fe08f1439f8bb1f78abe16ed3761e0a494d3bdff1c35996fee9a165982ed6f9",
+      "path": "registry/oot/source_docs/PASEU/KAP_1157128_ek1.pdf"
+    },
+    "KAP_1155869_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1155869 ek 1",
+      "published_at": "2023-06-02T20:17:24+03:00",
+      "sha256": "dcfe32d284f4a1a67971cc4f38fbe8d23651f39aec8284bbacc40f028281658f",
+      "path": "registry/oot/source_docs/PASEU/KAP_1155869_ek1.pdf"
+    }
+  }
+}

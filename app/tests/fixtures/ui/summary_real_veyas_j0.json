@@ -1,0 +1,475 @@
+{
+  "featured": {
+    "model_id": "ceiling_hazard_v0",
+    "reason": "RULE_5_5_NONE_ELIGIBLE_V0",
+    "candidates": [
+      {
+        "model_id": "ceiling_hazard_v1_clip",
+        "in_index": true,
+        "primary_verdict": "ayırt edilemiyor",
+        "model_value": 0.23064424059930472,
+        "v0_ci95_hi": -0.01613177068683678,
+        "near_era_label": "tolerans içinde",
+        "k1": false,
+        "k2": true,
+        "k3": true,
+        "eligible": false
+      },
+      {
+        "model_id": "ceiling_hazard_v1_real",
+        "in_index": true,
+        "primary_verdict": "ayırt edilemiyor",
+        "model_value": 0.18624177511793225,
+        "v0_ci95_hi": -0.03472803241622338,
+        "near_era_label": "bozuyor",
+        "k1": false,
+        "k2": true,
+        "k3": false,
+        "eligible": false
+      },
+      {
+        "model_id": "ceiling_hazard_v1_pooled",
+        "in_index": true,
+        "primary_verdict": "geçiyor",
+        "model_value": 0.15727002051897176,
+        "v0_ci95_hi": -0.03805562558101779,
+        "near_era_label": "bozuyor",
+        "k1": true,
+        "k2": true,
+        "k3": false,
+        "eligible": false
+      }
+    ]
+  },
+  "featured_params_sha256": "caa4dc867a9fc20d9f57cf6269e157ee1fafc9527c5144e53797bf48af0ffb67",
+  "j": 0,
+  "j_source": "NONE",
+  "official": false,
+  "record_file": null,
+  "f3_missing": true,
+  "rows": [
+    {
+      "model_id": "ceiling_hazard_v0",
+      "role": "FEATURED",
+      "in_record": true,
+      "status": "REFUSED",
+      "refused": {
+        "code": "F3_MISSING",
+        "field": "total_demand_multiple",
+        "reason": "Toplam talep katı (f3) yok; bu model f3'süz tahmin vermez. f3'süz tavan tahmini pb_ceiling_v0'dan gelir."
+      },
+      "expected_l": null,
+      "median_l": null,
+      "mode_l": null,
+      "mode_break_day": null,
+      "p_mode": null,
+      "p_ge3": null,
+      "p_ge5": null,
+      "p_10": null,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "OPEN",
+        "verdict": "ayırt edilemiyor",
+        "diff": 0.07283261260629621,
+        "ci95": [
+          -0.0008143088786751569,
+          0.1388043212581849
+        ],
+        "n": 62,
+        "rule_id": "base_km_expanding"
+      },
+      "live": {
+        "n_scored": 6,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "ceiling_hazard_v1_clip",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "REFUSED",
+      "refused": {
+        "code": "F3_MISSING",
+        "field": "total_demand_multiple",
+        "reason": "Toplam talep katı (f3) yok; bu model f3'süz tahmin vermez. f3'süz tavan tahmini pb_ceiling_v0'dan gelir."
+      },
+      "expected_l": null,
+      "median_l": null,
+      "mode_l": null,
+      "mode_break_day": null,
+      "p_mode": null,
+      "p_ge3": null,
+      "p_ge5": null,
+      "p_10": null,
+      "cond": null,
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "tolerans içinde",
+        "comparator": "ceiling_hazard_v0",
+        "metric": "RPS",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": -0.0010908228675155854,
+        "ci95": [
+          -0.006628108974885741,
+          0.0048954313965766045
+        ],
+        "n": 78,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "OPEN",
+        "verdict": "ayırt edilemiyor",
+        "diff": 0.03336532567620602,
+        "ci95": [
+          -0.026028029043685126,
+          0.08863570008448185
+        ],
+        "n": 62,
+        "rule_id": "base_km_expanding"
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "ceiling_hazard_v1_real",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "REFUSED",
+      "refused": {
+        "code": "F3_MISSING",
+        "field": "total_demand_multiple",
+        "reason": "Toplam talep katı (f3) yok; bu model f3'süz tahmin vermez. f3'süz tavan tahmini pb_ceiling_v0'dan gelir."
+      },
+      "expected_l": null,
+      "median_l": null,
+      "mode_l": null,
+      "mode_break_day": null,
+      "p_mode": null,
+      "p_ge3": null,
+      "p_ge5": null,
+      "p_10": null,
+      "cond": null,
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "bozuyor",
+        "comparator": "ceiling_hazard_v0",
+        "metric": "RPS",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": 0.01040491775044087,
+        "ci95": [
+          0.002758965367669575,
+          0.018303938280187493
+        ],
+        "n": 78,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "OPEN",
+        "verdict": "ayırt edilemiyor",
+        "diff": -0.011037139805166457,
+        "ci95": [
+          -0.05003103391284945,
+          0.025900739364758035
+        ],
+        "n": 62,
+        "rule_id": "base_km_expanding"
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "ceiling_hazard_v1_pooled",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "REFUSED",
+      "refused": {
+        "code": "F3_MISSING",
+        "field": "total_demand_multiple",
+        "reason": "Toplam talep katı (f3) yok; bu model f3'süz tahmin vermez. f3'süz tavan tahmini pb_ceiling_v0'dan gelir."
+      },
+      "expected_l": null,
+      "median_l": null,
+      "mode_l": null,
+      "mode_break_day": null,
+      "p_mode": null,
+      "p_ge3": null,
+      "p_ge5": null,
+      "p_10": null,
+      "cond": null,
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "bozuyor",
+        "comparator": "ceiling_hazard_v0",
+        "metric": "RPS",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": 0.02892955998311833,
+        "ci95": [
+          0.008863281030026428,
+          0.05182936251908227
+        ],
+        "n": 78,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "OPEN",
+        "verdict": "geçiyor",
+        "diff": -0.04000889440412693,
+        "ci95": [
+          -0.06705354553925666,
+          -0.01217810930908314
+        ],
+        "n": 62,
+        "rule_id": "base_km_expanding"
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "ceiling_hazard_v1_pooled@INF",
+      "role": "RULE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 4.599804693485842,
+      "median_l": 4,
+      "mode_l": 10,
+      "mode_break_day": null,
+      "p_mode": 0.1699412572194017,
+      "p_ge3": 0.6719301584881678,
+      "p_ge5": 0.4536756549782651,
+      "p_10": 0.1699412572194017,
+      "cond": null,
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "bozuyor",
+        "comparator": "ceiling_hazard_v0",
+        "metric": "RPS",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": 0.05471571103737757,
+        "ci95": [
+          0.028681831718726517,
+          0.08058222824327596
+        ],
+        "n": 78,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "OPEN",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "ceiling_hazard_v0@INF",
+      "role": "RULE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 4.346833273309837,
+      "median_l": 4,
+      "mode_l": 0,
+      "mode_break_day": null,
+      "p_mode": 0.16836734693877553,
+      "p_ge3": 0.6706712041204986,
+      "p_ge5": 0.4263342698216684,
+      "p_10": 0.13735728667745215,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "OPEN",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": 7,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "base_km_expanding",
+      "role": "RULE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 4.2727272727272725,
+      "median_l": 4,
+      "mode_l": 0,
+      "mode_break_day": null,
+      "p_mode": 0.18181818181818188,
+      "p_ge3": 0.6666666666666666,
+      "p_ge5": 0.4141414141414141,
+      "p_10": 0.1414141414141414,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "OPEN",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": 7,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "base_km_last10",
+      "role": "RULE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 2.2126901760000006,
+      "median_l": 0,
+      "mode_l": 0,
+      "mode_break_day": null,
+      "p_mode": 0.5,
+      "p_ge3": 0.32000000000000006,
+      "p_ge5": 0.20480000000000007,
+      "p_10": 0.058720256000000026,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "OPEN",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": 7,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "pb_ceiling_v0",
+      "role": "PB",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 1.4151138960470593,
+      "median_l": 1,
+      "mode_l": 0,
+      "mode_break_day": null,
+      "p_mode": 0.4487039081386952,
+      "p_ge3": 0.26231384355466386,
+      "p_ge5": 0.055161638682206644,
+      "p_10": 0.0011186057048506609,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "OPEN",
+        "verdict": "ayırt edilemiyor",
+        "diff": 0.06525746986718695,
+        "ci95": [
+          -0.004170036275606481,
+          0.1328753573360889
+        ],
+        "n": 53,
+        "rule_id": "base_km_expanding"
+      },
+      "live": {
+        "n_scored": 7,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "pb_ceiling_v0@INF",
+      "role": "PB",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 4.259896607843641,
+      "median_l": 4,
+      "mode_l": 0,
+      "mode_break_day": null,
+      "p_mode": 0.18499999999999994,
+      "p_ge3": 0.6572577800380887,
+      "p_ge5": 0.417807584425235,
+      "p_10": 0.13461014094390308,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "OPEN",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": 7,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "ALWAYS_CEILING",
+      "role": "CONSTANT",
+      "in_record": true,
+      "status": null,
+      "refused": null,
+      "expected_l": 10.0,
+      "median_l": 10,
+      "mode_l": 10,
+      "mode_break_day": null,
+      "p_mode": 1.0,
+      "p_ge3": 1.0,
+      "p_ge5": 1.0,
+      "p_10": 1.0,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "NONE",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      }
+    }
+  ],
+  "integrity": null,
+  "scores": {
+    "source": "REPO",
+    "sha12": "FIXTURE",
+    "generated_at_utc": "2026-10-01T13:15:09Z"
+  },
+  "oot": {
+    "source": "REPO",
+    "generated_at_utc": "2026-09-29T18:08:37Z",
+    "sha12": "12852121309c",
+    "vault_open": true,
+    "rows_present": true,
+    "unsupported_version": null,
+    "integrity": null
+  },
+  "tufe": null,
+  "fall": null
+}

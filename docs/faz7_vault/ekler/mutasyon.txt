@@ -1,0 +1,31 @@
+BORSAI_FAZ7_VAULT_OPEN — mutasyon gösterimleri (M-B, M-C, M-D, M-E, M-I). Yalnız sayılar ve sentetik test adları.
+
+Yöntem: C (1b2fe00) commit'inin üç geçici klonunda her mutasyon borsai/outcomes_oot.py'de (m13: tests/test_outcome_guard.py) tek
+bir denetimi kaldırır; ilgili sentetik testler koşulur; mutasyon geri alınır. Ağ yok, gerçek kasa verisi yok. Sürücü betikleri
+geçici dizindeydi (mutations.py: 18 mutasyon; run.sh). m17'nin yakalanması için test C2'de güçlendirildi (aşağıda).
+
+Mutasyonsuz taban (tests/test_faz7_vault.py + test_faz6_oot::test_extractor_reads_only_open_codes_and_never_opens_sealed): 16 geçti.
+
+| mutasyon | kaldırılan denetim | sonuç | kırmızının nedeni (ilk hata satırı) |
+|---|---|---|---|
+| m01 | VaultFetcher: taze indirme = karantina kopyası (M-C a) | 1 kırmızı | DID NOT RAISE SourceChanged |
+| m02 | VaultFetcher: taze indirme = MANIFEST_OOT pini (M-C b) | 1 kırmızı | DID NOT RAISE SourceChanged |
+| m03 | VaultFetcher: taze indirme = Takvim C kanıtındaki THB pini (M-C c) | 1 kırmızı | DID NOT RAISE SourceChanged |
+| m04 | VaultFetcher indirmek yerine karantinadan okur ("o koşuda indirilmiş" kuralı) | 1 kırmızı | indirme çağrısı beklenirken yok |
+| m05 | open_vault: yeniden indirilen zip = pinli sha256 (M-C) | 1 kırmızı | DID NOT RAISE SourceChanged |
+| m06 | open_vault: M-B belge kapısı | 1 kırmızı | DID NOT RAISE GateError |
+| m07 | işaret dosyası farklıysa DUR yerine üzerine yazma (M-D) | 1 kırmızı | DID NOT RAISE OotOutcomeError |
+| m08 | kasa bekçisi, kapalı kip (işaret yokken kasa dosyası) (M-E) | 1 kırmızı | beklenen sorun iletisi yok |
+| m09 | kasa bekçisi (b): kasa dosyası işaret commit'inden önce (M-E) | 1 kırmızı | beklenen sorun iletisi yok |
+| m10 | kasa bekçisi (a): üye yolu yalnız kendi kodunu taşır (M-E) | 1 kırmızı | başka üyenin kodu kabul edildi |
+| m11 | kasa bekçisi (a): izinli yol dışında kasa kodu (M-E) | 1 kırmızı | izinli yol dışı dosya kabul edildi |
+| m12 | açılış yetkisi: düz küme kasa kodunu açar (M-E d) | 2 kırmızı | kasadaki kodun bülteni istendi |
+| m13 | data/ bekçisi açık kipte v2 dahil her yerde kasa koduna izin (M-E c) | 1 kırmızı | v2'deki kasa kodu yakalanmadı |
+| m14 | B kapısı: d1_rows push kanıtı denetimi (M-I) | 1 kırmızı | sorun listesi eksik |
+| m15 | B kapısı: POST_D1 kaydı denetimi (M-I) | 1 kırmızı | sorun listesi eksik |
+| m16 | B kapısı: işaret dosyası push kanıtı (M-I) | 1 kırmızı | sorun listesi eksik |
+| m17 | vault-s5 B kapısını çağırmaz (M-I) | C'de 1 geçti; C2'de 1 kırmızı | C'nin testinde ikinci savunma (vault_marker_unsealed) aynı durumu kapatıyordu; C2'de test "işaret kanıtlı, POST_D1 kanıtsız" durumunu ekledi: mutasyonlu vault-s5 ayıklamaya geçti (DUR beklenirken TAMAM) |
+| m18 | vault-post-d1: işaret commit'li değilse DUR (M-G/M-H) | 1 kırmızı | DUR beklenirken TAMAM |
+
+Özet: 18 mutasyonun 18'i kırmızı (m17 C2 testiyle). Görevin istediği M-I mutasyonları (kanıt denetimi: m14, m16; POST_D1
+denetimi: m15) C'nin testiyle de kırmızıydı.

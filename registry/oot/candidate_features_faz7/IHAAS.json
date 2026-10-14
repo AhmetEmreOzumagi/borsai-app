@@ -1,0 +1,252 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "IHAAS",
+ "company": "İhlas Haber Ajansı A.Ş.",
+ "first_trading_date": "2021-11-03",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Borsa İstanbul Birincil Piyasa; yatırımcı grubu bazında tahsisat ve dağıtım yapılmadı",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_972069_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017ca89c1ca45691",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "972069",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/972069",
+   "published_at": "2021-10-22T18:26:49+03:00",
+   "source_sha256": "88a101124fc03c4ee6fd82e73290befe1ee4bf3767717b2c1210ea696d783adf",
+   "source_file": "source_docs/IHAAS/KAP_972069_ek1.pdf",
+   "page": 24,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "25.2.3. Halka arzda yatırımcılara tahsis ve dağıtım esasları: Halka arz, Borsa Istanbul A.Ş. Birincil Piyasa 'da Sabit Fiyatla Talep Toplama ve Satış Yöntemi ile yapılacağından, herhangi bir yatırımcıya tahsisat yapılmayacaktır.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_972069_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017ca89c1ca45691",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "972069",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/972069",
+     "published_at": "2021-10-22T18:26:49+03:00",
+     "source_sha256": "88a101124fc03c4ee6fd82e73290befe1ee4bf3767717b2c1210ea696d783adf",
+     "source_file": "source_docs/IHAAS/KAP_972069_ek1.pdf",
+     "page": 24,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "a) Yatırımcı grubu bazında tahsisat oranları: Yoktur."
+    },
+    {
+     "source_id": "KAP_972069_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017ca89c1ca45691",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "972069",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/972069",
+     "published_at": "2021-10-22T18:26:49+03:00",
+     "source_sha256": "88a101124fc03c4ee6fd82e73290befe1ee4bf3767717b2c1210ea696d783adf",
+     "source_file": "source_docs/IHAAS/KAP_972069_ek1.pdf",
+     "page": 24,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "c) Bireysel yatırımcılar ve ihraççının çalışanlarına ilişkin tahsisat grubunda tahsis edilen nominal değerden daha fazla talep gelmesi durumunda uygulanacak dağıtım yöntemi/yöntemleri: Yoktur."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Borsa'da satış (Borsa İstanbul Birincil Piyasa, Sabit Fiyatla Talep Toplama ve Satış Yöntemi; Tera Yatırım). Yatırımcı grubu tahsisatı ve dağıtım yöntemi yok; dağıtımı Borsa İstanbul yapar (s.25). Belge ve Borsa duyurusu (KAP_972072) eşit/oransal adlandırmıyor.",
+   "codex_value": "Borsa'da Satış - Sabit Fiyatla Talep Toplama ve Satış",
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_planned": {
+   "value": "FALSE",
+   "unit": "boolean",
+   "status": "VERIFIED",
+   "source_id": "KAP_972070_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017ca89dbf2a56cf",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "972070",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/972070",
+   "published_at": "2021-10-22T18:28:33+03:00",
+   "source_sha256": "337ebeca59c58edd6e6cd8f4ed5a2d4a3e37e8bce771589d0597051da6c74d33",
+   "source_file": "source_docs/IHAAS/KAP_972070_ek1.pdf",
+   "page": 1,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: Yoktur.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "26.5.1-26.5.7 alt başlıkların hepsi 'Yoktur'.",
+   "codex_value": false,
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_days": {
+   "value": "0",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_972070_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017ca89dbf2a56cf",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "972070",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/972070",
+   "published_at": "2021-10-22T18:28:33+03:00",
+   "source_sha256": "337ebeca59c58edd6e6cd8f4ed5a2d4a3e37e8bce771589d0597051da6c74d33",
+   "source_file": "source_docs/IHAAS/KAP_972070_ek1.pdf",
+   "page": 1,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5.2. Fiyat istikrarı işlemlerinin gerçekleştirilebileceği zaman aralığı: Yoktur.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "Fiyat istikrarı planlanmadığı için 0 (H99 biçimi).",
+   "codex_value": "",
+   "codex_verdict": "VERIFIED"
+  },
+  "issuer_lockup_days": {
+   "value": "180",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_972070_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017ca89dbf2a56cf",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "972070",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/972070",
+   "published_at": "2021-10-22T18:28:33+03:00",
+   "source_sha256": "337ebeca59c58edd6e6cd8f4ed5a2d4a3e37e8bce771589d0597051da6c74d33",
+   "source_file": "source_docs/IHAAS/KAP_972070_ek1.pdf",
+   "page": 2,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "a)İhraççı tarafından verilen taahhüt: İhraççının 21.06.2021 tarih ve 2021/31 sayılı yönetim kurulu kararı ile; Şirket paylarının Borsa Istanbul'da işlem görmeye başladığı tarihten itibaren 180 gün süreyle; *Herhangi bir bedelli sermaye artırımı yapılmamasına ve dolaşımdaki pay miktarının iç kaynaklardan yapılacak sermaye artırımları haricinde artırılmamasına,",
+   "provenance": "CODEX_VERIFIED",
+   "note": "Kapsam: bedelli sermaye artırımı yapmama, dolaşımdaki payı (iç kaynaklı artırım hariç) artırmama, yeni satış/halka arz kararı almama ve açıklama yapmama. Başlangıç: Borsa İstanbul'da işlem görmeye başlama.",
+   "codex_value": "180",
+   "codex_verdict": "VERIFIED"
+  },
+  "shareholder_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_972070_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017ca89dbf2a56cf",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "972070",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/972070",
+   "published_at": "2021-10-22T18:28:33+03:00",
+   "source_sha256": "337ebeca59c58edd6e6cd8f4ed5a2d4a3e37e8bce771589d0597051da6c74d33",
+   "source_file": "source_docs/IHAAS/KAP_972070_ek1.pdf",
+   "page": 2,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "b)Ortaklar tarafından verilen taahhütler: Ihraççının sermayesinde %10 ve üzeri pay sahibi olan ortak ile pay sahipliği oranına bakılmaksızın yönetim kontrolünü elinde bulunduran ortaklar Ihlas Yayın Holding A.Ş. ve Ihlas Gazetecilik A.Ş. tarafından, sahip olduğu payları, ortaklık paylarının Borsa'da işlem görmeye başlamasından itibaren 1 (bir) yı1 boyunca hiçbir şekilde Borsa'da satmayacağına, Borsa dışında yapılacak satışlarda satışa konu payların da bu sınırlamaya tabi olacağını alıcılara bildireceğini ve izahnamenin KAP'ta ilan edildiği tarihten itibaren 1 (bir) yıl boyunca bu payların Borsa'da satılması sonucunu doğuracak şekilde herhangi bir işleme tabi tutmayacağını beyan ve taahhüt etmiştir.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_972070_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017ca89dbf2a56cf",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "972070",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/972070",
+     "published_at": "2021-10-22T18:28:33+03:00",
+     "source_sha256": "337ebeca59c58edd6e6cd8f4ed5a2d4a3e37e8bce771589d0597051da6c74d33",
+     "source_file": "source_docs/IHAAS/KAP_972070_ek1.pdf",
+     "page": 2,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "c) Sermaye piyasası mevzuatı kapsamında verilen tahhütler: Sermaye Piyasası Kurulu'nun VII-128.1 sayılı Pay tebliğinin 8. maddesinin 6. fikrası ile 9. maddesinin 3. fikrası çerçevesinde, Ihraççının sermayesinde %10 ve üzeri pay sahibi olan ortak ile pay sahipliği oranına bakılmaksızın yönetim kontrolünü elinde bulunduran ortaklar Ihlas Yayın Holding A.Ş. ve Ihlas Gazetecilik A.Ş. tarafından sahip olduğu payları, şirket paylarının Borsa'da işlem görmeye başlamasından itibaren bir yıl süreyle ve izahnamenin KAP'ta ilan edildiği tarihten itibaren bir yıl süre ile hiçbir şekilde Borsa'da satamayacak,"
+    }
+   ],
+   "components": [
+    {
+     "who": "İhlas Yayın Holding A.Ş.",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa'da işlem görmeye başlama (ayrıca izahnamenin KAP'ta ilanından itibaren 1 yıl işlem yapmama)"
+    },
+    {
+     "who": "İhlas Gazetecilik A.Ş.",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa'da işlem görmeye başlama (ayrıca izahnamenin KAP'ta ilanından itibaren 1 yıl işlem yapmama)"
+    },
+    {
+     "who": "İhlas Yayın Holding A.Ş.",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "MEVZUAT Pay Tebliği 8/6 ve 9/3",
+     "start": "Borsa'da işlem görmeye başlama ve izahnamenin KAP'ta ilanı"
+    },
+    {
+     "who": "İhlas Gazetecilik A.Ş.",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "MEVZUAT Pay Tebliği 8/6 ve 9/3",
+     "start": "Borsa'da işlem görmeye başlama ve izahnamenin KAP'ta ilanı"
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Tüm ortak taahhütleri 1 yıl, hiçbir şekilde borsada satmama (mutlak). En kısa süre 365. Özet (KAP_972062_EK1 s.22) ayrıca bir yıl halka arz fiyatının altında satmama taahhüdünden söz ediyor (aynı süre). Paylarını halka arz eden ortak yok (27.1 Yoktur); halka arz yalnız sermaye artırımı. Yetkili kuruluş taahhüdü başlığı yok."
+  },
+  "sector": {
+   "value": "Haber ajanslığı",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_972062_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017ca895131755ce",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "972062",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/972062",
+   "published_at": "2021-10-22T18:19:11+03:00",
+   "source_sha256": "29b8c9327aa20cf4168251712ee5071cacc92f70935aa8955b7ba3f0f8b41d00",
+   "source_file": "source_docs/IHAAS/KAP_972062_ek1.pdf",
+   "page": 10,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Şirket haber ajanslığı ile iştigal etmektedir.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "Özet B.3: 'Şirketin ana faaliyet konusu Haber ajanscılığı olup' (s.9, OCR sütunları karışık). Ağırlıklı olarak medya sektöründeki şirketlere haber ajanslığı hizmeti.",
+   "codex_value": "haber ajansı hizmetleri",
+   "codex_verdict": "VERIFIED"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahname 1-5. kısımlar, TSSD ve Borsa birincil piyasa duyurusunda katılım endeksi / faizsiz finans uygunluk beyanı yok. qfind 'kat[ıi]l[ıi]m (endeks|bank|finans)|faiz[sş]iz|[iİ]slam|icazet|helal' eşleşme vermedi.",
+   "looked_at": [
+    "KAP_972062_EK1",
+    "KAP_972066_EK1",
+    "KAP_972068_EK1",
+    "KAP_972069_EK1",
+    "KAP_972070_EK1",
+    "KAP_972071_EK1",
+    "KAP_972072"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_972062_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "972062",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017ca895131755ce",
+   "published_at": "2021-10-22T18:19:11+03:00",
+   "sha256": "29b8c9327aa20cf4168251712ee5071cacc92f70935aa8955b7ba3f0f8b41d00",
+   "file": "source_docs/IHAAS/KAP_972062_ek1.pdf"
+  },
+  "KAP_972069_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "972069",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017ca89c1ca45691",
+   "published_at": "2021-10-22T18:26:49+03:00",
+   "sha256": "88a101124fc03c4ee6fd82e73290befe1ee4bf3767717b2c1210ea696d783adf",
+   "file": "source_docs/IHAAS/KAP_972069_ek1.pdf"
+  },
+  "KAP_972070_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "972070",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017ca89dbf2a56cf",
+   "published_at": "2021-10-22T18:28:33+03:00",
+   "sha256": "337ebeca59c58edd6e6cd8f4ed5a2d4a3e37e8bce771589d0597051da6c74d33",
+   "file": "source_docs/IHAAS/KAP_972070_ek1.pdf"
+  }
+ }
+}

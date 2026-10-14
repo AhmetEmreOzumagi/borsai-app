@@ -1,0 +1,32 @@
+f3 sart True min olay 5 fold 87 ilk EKOS 2023-11-21 egitim(ev,sv,nipo) (6, 64, 10) test azinlik L<1,L<3,L<5,L>=10: [16, 31, 54] 11
+f3 sart True min olay 10 fold 80 ilk MEGMT 2023-12-15 egitim(ev,sv,nipo) (10, 108, 17) test azinlik L<1,L<3,L<5,L>=10: [16, 30, 50] 9
+f3 sart False min olay 5 fold 89 ilk EKOS 2023-11-21 egitim(ev,sv,nipo) (6, 64, 10) test azinlik L<1,L<3,L<5,L>=10: [18, 33, 56] 11
+f3 sart False min olay 10 fold 82 ilk MEGMT 2023-12-15 egitim(ev,sv,nipo) (10, 108, 17) test azinlik L<1,L<3,L<5,L>=10: [18, 32, 52] 9
+PB ticker kumesi esit: True ftd esit: True
+ek satis semantigi Counter({'SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE': 75, 'SPK_TABLE_DASH__NO_PLANNED_ADDITIONAL_SALE': 16, 'SPK_EXPLICIT_CONDITIONAL_ADDITIONAL_SALE_CEILING_IF_EXCESS_DEMAND': 5, 'SPK_EXPLICIT_CONDITIONAL_ADDITIONAL_SALE_CEILING': 2, 'KAP_APPROVED_PROSPECTUS_SECTION_25_2_5__EK_SATIS_YOKTUR': 1})
+pb1 min 19.4884 med 21.1287 max 22.6439 sifir 0 ==100 0
+pb2 min 10.0124 med 25.0 max 40.4749 sifir 0 ==100 0
+pb3 min 22.2222 med 75.0 max 100.0 sifir 0 ==100 17
+pb4 min 0.0 med 0.0 max 20.0 sifir 92 ==100 0
+pb4 degerleri Counter({0.0: 92, 20.0: 5, 18.4: 1, 10.0: 1})
+planli!=nihai: fiyat 0 pay 10 sermaye artirimi 2
+[]
+ftd - ilk talep toplama gunu (gun): min,med,max 4 8 12
+spk_pub < bookbuilding hepsi: True
+PB D1 fold n>=10: 87 n_eff min/max 12 95
+   Y=0 sayisi skorlanabilir: 10 tum: 10
+PB D3 fold n>=10: 87 n_eff min/max 12 94
+   Y=0 sayisi skorlanabilir: 19 tum: 19
+PB D5 fold n>=10: 87 n_eff min/max 12 94
+   Y=0 sayisi skorlanabilir: 22 tum: 22
+PB D10 fold n>=10: 84 n_eff min/max 12 92
+   Y=0 sayisi skorlanabilir: 27 tum: 29
+takvim B seans 910 2023-01-02 2026-08-19
+takvim A seans 728 2023-09-22 2026-08-19 A alt kume B: True B∩[A araligi]==A: True
+xu100 kayit 9682 1986-01-31 2026-08-19
+takvim B seansinda XU100 kapanisi eksik: 5 ['2023-02-09', '2023-02-10', '2023-02-13', '2023-02-14', '2023-04-24']
+XU100 var ama takvimde seans degil: 0 []
+takvim A hesaplanabilir 93 ['HATSN', 'DMRGD', 'MEKAG', 'DOFER', 'MHRGY', 'BORLS']
+takvim B hesaplanabilir 99 []
+f6 min/med/max -0.1117 0.023 0.1548
+T=2026-09-30 -> S0 2026-08-19

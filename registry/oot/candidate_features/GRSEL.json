@@ -1,0 +1,192 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "GRSEL",
+  "company": "Gür-Sel Turizm Taşımacılık ve Servis Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "256544",
+      "source_id": "KAP_1007706_EK1",
+      "source_document": "KAP 1007706 ek 1",
+      "source_published_at": "2022-03-07T11:15:48+03:00",
+      "source_sha256": "dfb391e370136bc525f4a16b89784245f921bcd0e32c6f28df343332bb32d3da",
+      "source_path": "registry/oot/source_docs/GRSEL/KAP_1007706_ek1.pdf",
+      "quote": "toplam 256.544 yatırımcı 22.000.000 TL nominal değerli payın alımını gerçekleştirmiştir",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "'Halka arza toplamda 256.544 yatırımcı katılmıştır' — katılan = alım yapan",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "256114",
+        "domestic_institutional": "66",
+        "foreign_retail": "364"
+      },
+      "source_id": "KAP_1007706_EK1",
+      "source_document": "KAP 1007706 ek 1",
+      "source_published_at": "2022-03-07T11:15:48+03:00",
+      "source_sha256": "dfb391e370136bc525f4a16b89784245f921bcd0e32c6f28df343332bb32d3da",
+      "source_path": "registry/oot/source_docs/GRSEL/KAP_1007706_ek1.pdf",
+      "quote": "toplam 256.114 yerli gerçek ve tüzel kişi yatırımcı, 364 yabancı gerçek ve tüzel kişi yatırımcı, 66 yerli kurumsal yatırımcı olmak üzere toplam 256.544 yatırımcı",
+      "semantic": "ALLOCATED",
+      "note": "retail = yerli gerçek ve tüzel kişi; foreign_retail = yabancı gerçek ve tüzel kişi (tabloda 'Yurt Dışı Yatırımcı -Gerçek Kişi')",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "belge grup bazında talep/kat vermiyor; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belge grup bazında talep/kat vermiyor; grup tahsisatı yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belge grup bazında talep/kat vermiyor; grup tahsisatı yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "21963105",
+        "domestic_institutional": "5571",
+        "foreign_retail": "31324"
+      },
+      "source_id": "KAP_1007706_EK1",
+      "source_document": "KAP 1007706 ek 1",
+      "source_published_at": "2022-03-07T11:15:48+03:00",
+      "source_sha256": "dfb391e370136bc525f4a16b89784245f921bcd0e32c6f28df343332bb32d3da",
+      "source_path": "registry/oot/source_docs/GRSEL/KAP_1007706_ek1.pdf",
+      "quote": [
+        "-Gerçek Kişi (*) 21.963.105 99,83 256.114",
+        "-Kurumsal (**) 5.571 0,03 66",
+        "-Gerçek Kişi (*) 31.324 0,14 364"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.83",
+      "source_id": "KAP_1007706_EK1",
+      "source_document": "KAP 1007706 ek 1",
+      "source_published_at": "2022-03-07T11:15:48+03:00",
+      "source_sha256": "dfb391e370136bc525f4a16b89784245f921bcd0e32c6f28df343332bb32d3da",
+      "source_path": "registry/oot/source_docs/GRSEL/KAP_1007706_ek1.pdf",
+      "quote": "-Gerçek Kişi (*) 21.963.105 99,83 256.114",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yurt içi gerçek (ve tüzel) kişi; yurt dışı gerçek kişi %0,14",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.03",
+      "source_id": "KAP_1007706_EK1",
+      "source_document": "KAP 1007706 ek 1",
+      "source_published_at": "2022-03-07T11:15:48+03:00",
+      "source_sha256": "dfb391e370136bc525f4a16b89784245f921bcd0e32c6f28df343332bb32d3da",
+      "source_path": "registry/oot/source_docs/GRSEL/KAP_1007706_ek1.pdf",
+      "quote": "-Kurumsal (**) 5.571 0,03 66",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "dağıtım tablosunda yurt dışı kurumsal satırı yok (yalnız yurt dışı gerçek kişi)",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "İnfo Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1004978_EK1",
+      "source_document": "KAP 1004978 ek 1",
+      "source_published_at": "2022-02-28T09:55:52+03:00",
+      "source_sha256": "17e9db700ef5890174eae2e26e1414068c7b37b471b55362ff414871e25d9983",
+      "source_path": "registry/oot/source_docs/GRSEL/KAP_1004978_ek1.pdf",
+      "quote": "halka arzdą satişa aracılik edecek Info Yatirım Menkul Değerler A.Ş.'nin",
+      "note": "TSSD OCR metni ('Info Yatirım' OCR yazımı); sonuç bildirimini yayımlayan kurum İNFO YATIRIM MENKUL DEĞERLER A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde fiyat istikrarı yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_1007910",
+      "source_document": "KAP 1007910",
+      "source_published_at": "2022-03-07T18:07:18+03:00",
+      "source_sha256": "33eaad64b55a99a9c02004b60d3350618deae5d4fb6413cef41485082b841477",
+      "source_path": "registry/oot/source_docs/GRSEL/KAP_1007910_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_1007910",
+      "source_document": "KAP 1007910",
+      "source_published_at": "2022-03-07T18:07:18+03:00",
+      "source_sha256": "33eaad64b55a99a9c02004b60d3350618deae5d4fb6413cef41485082b841477",
+      "source_path": "registry/oot/source_docs/GRSEL/KAP_1007910_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1007910": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1007910",
+      "published_at": "2022-03-07T18:07:18+03:00",
+      "sha256": "33eaad64b55a99a9c02004b60d3350618deae5d4fb6413cef41485082b841477",
+      "path": "registry/oot/source_docs/GRSEL/KAP_1007910_bildirim.pdf"
+    },
+    "KAP_1007706_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1007706 ek 1",
+      "published_at": "2022-03-07T11:15:48+03:00",
+      "sha256": "dfb391e370136bc525f4a16b89784245f921bcd0e32c6f28df343332bb32d3da",
+      "path": "registry/oot/source_docs/GRSEL/KAP_1007706_ek1.pdf"
+    },
+    "KAP_1004978_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1004978 ek 1",
+      "published_at": "2022-02-28T09:55:52+03:00",
+      "sha256": "17e9db700ef5890174eae2e26e1414068c7b37b471b55362ff414871e25d9983",
+      "path": "registry/oot/source_docs/GRSEL/KAP_1004978_ek1.pdf"
+    }
+  }
+}

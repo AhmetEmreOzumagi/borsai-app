@@ -1,0 +1,42 @@
+# K1 · B1 altın ledger yeniden üretimi (BORSAI_FAZ7_FREEZE_20260927)
+
+## 1. Nihai fit önizlemeleri (B1 dokunmaz; created_at, code_version, runtime dışında ==)
+- ceiling_hazard_v1_clip: AYNI
+- ceiling_hazard_v1_real: AYNI
+- ceiling_hazard_v1_pooled: AYNI
+- ceiling_hazard_v1_pooled@INF: AYNI
+
+## 2. Koşular (resmi günlük, context = faz7_golden_b1)
+- ceiling_hazard_v1_clip: started_at 2026-09-27T17:06:48+03:00, ledger_sha256 22057c06f683871ea1fd7cb8c98d46a36f60135b5f7d173fd8e71b7987865141, git_commit eda9732, borsai_dirty True, borsai_source_sha256 0d374dd8ae9a1202a7459ce294c8779d51e0740d445159cce4378049f5360039
+- ceiling_hazard_v1_real: started_at 2026-09-27T17:06:53+03:00, ledger_sha256 e97a67f4246e5f706250ae74585e2aa0e29e3204dfa7a5ed221ad5e66610e955, git_commit eda9732, borsai_dirty True, borsai_source_sha256 0d374dd8ae9a1202a7459ce294c8779d51e0740d445159cce4378049f5360039
+- ceiling_hazard_v1_pooled: started_at 2026-09-27T17:06:57+03:00, ledger_sha256 e165cafe26ee7150b66eb3b31e8e0d83e351983a889be6974e68f5c0f6f1010c, git_commit eda9732, borsai_dirty True, borsai_source_sha256 0d374dd8ae9a1202a7459ce294c8779d51e0740d445159cce4378049f5360039
+- ceiling_hazard_v1_pooled@INF: started_at 2026-09-27T17:07:15+03:00, ledger_sha256 08cec307684d4da7aaa863fc5d3e22827a6032834a34c1d52914cfb5475a4128, git_commit eda9732, borsai_dirty True, borsai_source_sha256 0d374dd8ae9a1202a7459ce294c8779d51e0740d445159cce4378049f5360039
+
+## 3. Sütun sütun karşılaştırma (eski altın ↔ yeni koşu)
+- ceiling_hazard_v1_clip_fold_ledger.csv: 74 sütun × 87 satır; değişen sütunlar ['test_clipped'] (satır {'test_clipped': 15}); geçişler [('FALSE', 'TRUE')]; eski sha256 ca711a6c029c9e3e6c51a233511b4e862e4b33b86bc0277385d16e6d5fbc533b → yeni 22057c06f683871ea1fd7cb8c98d46a36f60135b5f7d173fd8e71b7987865141
+- ceiling_hazard_v1_real_fold_ledger.csv: 76 sütun × 87 satır; değişen sütunlar ['test_clipped'] (satır {'test_clipped': 16}); geçişler [('FALSE', 'TRUE')]; eski sha256 026598438264298a89a587fecfbbb9c7b4cada37141725cd56a54b86688f632c → yeni e97a67f4246e5f706250ae74585e2aa0e29e3204dfa7a5ed221ad5e66610e955
+- ceiling_hazard_v1_pooled_fold_ledger.csv: 81 sütun × 97 satır; değişen sütunlar ['test_clipped'] (satır {'test_clipped': 16}); geçişler [('FALSE', 'TRUE')]; eski sha256 45a3e2dfe5f57851e9686bb0c9128d09a658958b06f6df91b68bcf1e74dbf6c5 → yeni e165cafe26ee7150b66eb3b31e8e0d83e351983a889be6974e68f5c0f6f1010c
+- base_km_expanding__pooled_fold_ledger.csv: bayt-eşit (sha256 cd77d9fec3d6446d38d56a007642837b3e012ae417b4719ef697e994273f6738)
+- base_km_last10__pooled_fold_ledger.csv: bayt-eşit (sha256 e93ffc42a75ee8c8e5b3587351e1d91f4e2b2f890911b65e4908074c89f3f525)
+- ceiling_hazard_v1_pooled@INF_fold_ledger.csv: bayt-eşit (sha256 08cec307684d4da7aaa863fc5d3e22827a6032834a34c1d52914cfb5475a4128)
+
+## 4. Sayımlar ve Fable'ın bağımsız ledger'larıyla karşılaştırma (docs/fable_faz7_audit/ekler/repro_ledgers/)
+- ceiling_hazard_v1_clip: fold 87; test arzı kırpılan (herhangi bir sütun) 35; f3 kırpılan 20; Fable ile test_clipped 87/87, test_clipped_features 87/87
+- ceiling_hazard_v1_real: fold 87; test arzı kırpılan (herhangi bir sütun) 36; f3 kırpılan 20; Fable ile test_clipped 87/87, test_clipped_features 87/87
+- ceiling_hazard_v1_pooled: fold 97; test arzı kırpılan (herhangi bir sütun) 23; f3 kırpılan 7; Fable ile test_clipped 97/97, test_clipped_features 97/97
+- ceiling_hazard_v1_pooled@INF: fold 97; test arzı kırpılan (herhangi bir sütun) 0; f3 kırpılan 0; Fable ile test_clipped 97/97, test_clipped_features 97/97
+
+## 5. Altın dizin (tests/reference/macos_golden_faz7/)
+- MANIFEST.json: YENİ, sha256 934811c7876ab91a68b1d80078b2ad5e4f373348c76bd02236101ab87b2a3f01
+- SHA256SUMS: YENİ, sha256 bca5f194bd8648f078b32057cd51e3c1272a8a7e3cd7c40c4e6b00b90321dfdf
+- base_km_expanding__pooled_fold_ledger.csv: aynı, sha256 cd77d9fec3d6446d38d56a007642837b3e012ae417b4719ef697e994273f6738
+- base_km_last10__pooled_fold_ledger.csv: aynı, sha256 e93ffc42a75ee8c8e5b3587351e1d91f4e2b2f890911b65e4908074c89f3f525
+- ceiling_hazard_v1_clip_final_fit_preview.json: aynı, sha256 18fdfb92d286602796e41f5ca6888b55b137bb86cd77518f2e3a25b928050e81
+- ceiling_hazard_v1_clip_fold_ledger.csv: YENİ, sha256 22057c06f683871ea1fd7cb8c98d46a36f60135b5f7d173fd8e71b7987865141
+- ceiling_hazard_v1_pooled@INF_final_fit_preview.json: aynı, sha256 88c069584f7214c9c2323e61e7e8e3ab58b61076d0f4ca584cb4c66925a8f2ad
+- ceiling_hazard_v1_pooled@INF_fold_ledger.csv: aynı, sha256 08cec307684d4da7aaa863fc5d3e22827a6032834a34c1d52914cfb5475a4128
+- ceiling_hazard_v1_pooled_final_fit_preview.json: aynı, sha256 4fab0d630259aaf3054b32eae481e90b667212bea9a154ca7db16472cec35f9a
+- ceiling_hazard_v1_pooled_fold_ledger.csv: YENİ, sha256 e165cafe26ee7150b66eb3b31e8e0d83e351983a889be6974e68f5c0f6f1010c
+- ceiling_hazard_v1_real_final_fit_preview.json: aynı, sha256 212a4075da6c306b9e7d234f7ef2b98b8cb0ae87c97e1b33e290d8d4913cef55
+- ceiling_hazard_v1_real_fold_ledger.csv: YENİ, sha256 e97a67f4246e5f706250ae74585e2aa0e29e3204dfa7a5ed221ad5e66610e955
+- MANIFEST: git_commit eda9732f73832d928e2e60431a797198650a27dc, borsai_dirty True, borsai_source_sha256 0d374dd8ae9a1202a7459ce294c8779d51e0740d445159cce4378049f5360039 (eski: 2a21a96, False)

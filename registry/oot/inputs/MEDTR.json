@@ -1,0 +1,353 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "MEDTR",
+  "company": "Meditera Tıbbi Malzeme Sanayi ve Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_944905",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "28",
+      "source_id": "KAP_944905",
+      "source_document": "KAP 944905",
+      "source_published_at": "2021-06-29T18:10:47+03:00",
+      "source_sha256": "daf82b556c57862d2f21a0a2a056aea170d12fa1b1c5aa30921b0adfdbbb8388",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944905_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 28",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_30",
+          "quote": "Meditera Tıbbi Malzeme 27.000.000 34.000.000 7.000.000 - - - 28 Sanayi ve Ticaret A.Ş.",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "7000000",
+      "source_id": "KAP_944905",
+      "source_document": "KAP 944905",
+      "source_published_at": "2021-06-29T18:10:47+03:00",
+      "source_sha256": "daf82b556c57862d2f21a0a2a056aea170d12fa1b1c5aa30921b0adfdbbb8388",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944905_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 7.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "34000000",
+      "source_id": "KAP_944905",
+      "source_document": "KAP 944905",
+      "source_published_at": "2021-06-29T18:10:47+03:00",
+      "source_sha256": "daf82b556c57862d2f21a0a2a056aea170d12fa1b1c5aa30921b0adfdbbb8388",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944905_bildirim.pdf",
+      "quote": "sermayesini temsil eden 34.000.000 TL",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "capital_increase_shares": {
+      "value": "7000000",
+      "source_id": "SPK_BULTEN_2021_30",
+      "source_document": "SPK Bülteni 2021/30",
+      "source_published_at": "2021-06-17T23:59:59+03:00",
+      "source_sha256": "eae9be5ea74833397b63ffb31fc3c13fe92d17e4cd343b61178f6680b9549ed3",
+      "source_path": "registry/oot/source_docs/MEDTR/SPK_BULTEN_2021-30.pdf",
+      "quote": "Meditera Tıbbi Malzeme 27.000.000 34.000.000 7.000.000 - - - 28 Sanayi ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_944472",
+          "quote": "Meditera'nın 196.000.000 TL tutarlı ve 7.000.000 TL nominal değerli paylarının halka arzında 22.865 adet yurtiçi bireysel yatırımcıya"
+        },
+        "b_shares_offered_equals_planned_base": "7000000 = 7000000 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_30",
+      "source_document": "SPK Bülteni 2021/30",
+      "source_published_at": "2021-06-17T23:59:59+03:00",
+      "source_sha256": "eae9be5ea74833397b63ffb31fc3c13fe92d17e4cd343b61178f6680b9549ed3",
+      "source_path": "registry/oot/source_docs/MEDTR/SPK_BULTEN_2021-30.pdf",
+      "quote": "Meditera Tıbbi Malzeme 27.000.000 34.000.000 7.000.000 - - - 28 Sanayi ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_944472",
+          "quote": "Meditera'nın 196.000.000 TL tutarlı ve 7.000.000 TL nominal değerli paylarının halka arzında 22.865 adet yurtiçi bireysel yatırımcıya"
+        },
+        "b_shares_offered_equals_planned_base": "7000000 = 7000000 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "10.36",
+      "source_id": "KAP_944472",
+      "source_document": "KAP 944472",
+      "source_published_at": "2021-06-28T14:37:45+03:00",
+      "source_sha256": "2f6639066faad510b9e9efc84651546a3f642f8159cee185f5e2a79a11f7a124",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944472_bildirim.pdf",
+      "quote": "olmak üzere toplam halka arz büyüklüğünün 10,36 katı talep toplanmıştır",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat",
+      "note": "ek tablosuyla tutarlı: 72.548.583 / 7.000.000 lot = 10,3641",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_944472",
+      "source_document": "KAP 944472",
+      "source_published_at": "2021-06-28T14:37:45+03:00",
+      "source_sha256": "2f6639066faad510b9e9efc84651546a3f642f8159cee185f5e2a79a11f7a124",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944472_bildirim.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_944472_EK1",
+      "source_document": "KAP 944472 ek 1",
+      "source_published_at": "2021-06-28T14:37:45+03:00",
+      "source_sha256": "56d2c2d9b40ef85a8142750aa38e3925c16c88c0317e0a19b968ddeae5971da1",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944472_ek1.pdf",
+      "quote": "Toplam 7.000.000 %100,0 72.548.583,00 %100,0 23.590 7.000.000 %100,0",
+      "zero_from_statement": true,
+      "note": "dağıtılan toplam 7.000.000 = SPK planlanan taban (bedelli 7.000.000; mevcut pay satışı '-'); SPK satırında ek pay satışı '-'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_size_tl": {
+      "value": "196000000",
+      "source_id": "KAP_944472",
+      "source_document": "KAP 944472",
+      "source_published_at": "2021-06-28T14:37:45+03:00",
+      "source_sha256": "2f6639066faad510b9e9efc84651546a3f642f8159cee185f5e2a79a11f7a124",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944472_bildirim.pdf",
+      "quote": "Meditera'nın 196.000.000 TL tutarlı ve 7.000.000 TL nominal değerli paylarının halka arzında",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_price_try": {
+      "value": "28",
+      "source_id": "SPK_BULTEN_2021_30",
+      "source_document": "SPK Bülteni 2021/30",
+      "source_published_at": "2021-06-17T23:59:59+03:00",
+      "source_sha256": "eae9be5ea74833397b63ffb31fc3c13fe92d17e4cd343b61178f6680b9549ed3",
+      "source_path": "registry/oot/source_docs/MEDTR/SPK_BULTEN_2021-30.pdf",
+      "quote": "Meditera Tıbbi Malzeme 27.000.000 34.000.000 7.000.000 - - - 28 Sanayi ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-06-17",
+        "bookbuilding_start": "2021-06-23",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "27000000",
+      "source_id": "SPK_BULTEN_2021_30",
+      "source_document": "SPK Bülteni 2021/30",
+      "source_published_at": "2021-06-17T23:59:59+03:00",
+      "source_sha256": "eae9be5ea74833397b63ffb31fc3c13fe92d17e4cd343b61178f6680b9549ed3",
+      "source_path": "registry/oot/source_docs/MEDTR/SPK_BULTEN_2021-30.pdf",
+      "quote": "Meditera Tıbbi Malzeme 27.000.000 34.000.000 7.000.000 - - - 28 Sanayi ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-06-17",
+        "bookbuilding_start": "2021-06-23",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "34000000",
+      "source_id": "SPK_BULTEN_2021_30",
+      "source_document": "SPK Bülteni 2021/30",
+      "source_published_at": "2021-06-17T23:59:59+03:00",
+      "source_sha256": "eae9be5ea74833397b63ffb31fc3c13fe92d17e4cd343b61178f6680b9549ed3",
+      "source_path": "registry/oot/source_docs/MEDTR/SPK_BULTEN_2021-30.pdf",
+      "quote": "Meditera Tıbbi Malzeme 27.000.000 34.000.000 7.000.000 - - - 28 Sanayi ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-06-17",
+        "bookbuilding_start": "2021-06-23",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "7000000",
+      "source_id": "SPK_BULTEN_2021_30",
+      "source_document": "SPK Bülteni 2021/30",
+      "source_published_at": "2021-06-17T23:59:59+03:00",
+      "source_sha256": "eae9be5ea74833397b63ffb31fc3c13fe92d17e4cd343b61178f6680b9549ed3",
+      "source_path": "registry/oot/source_docs/MEDTR/SPK_BULTEN_2021-30.pdf",
+      "quote": "Meditera Tıbbi Malzeme 27.000.000 34.000.000 7.000.000 - - - 28 Sanayi ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-06-17",
+        "bookbuilding_start": "2021-06-23",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_30",
+      "source_document": "SPK Bülteni 2021/30",
+      "source_published_at": "2021-06-17T23:59:59+03:00",
+      "source_sha256": "eae9be5ea74833397b63ffb31fc3c13fe92d17e4cd343b61178f6680b9549ed3",
+      "source_path": "registry/oot/source_docs/MEDTR/SPK_BULTEN_2021-30.pdf",
+      "quote": "Meditera Tıbbi Malzeme 27.000.000 34.000.000 7.000.000 - - - 28 Sanayi ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-06-17",
+        "bookbuilding_start": "2021-06-23",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "7000000",
+      "source_id": "SPK_BULTEN_2021_30",
+      "source_document": "SPK Bülteni 2021/30",
+      "source_published_at": "2021-06-17T23:59:59+03:00",
+      "source_sha256": "eae9be5ea74833397b63ffb31fc3c13fe92d17e4cd343b61178f6680b9549ed3",
+      "source_path": "registry/oot/source_docs/MEDTR/SPK_BULTEN_2021-30.pdf",
+      "quote": "Meditera Tıbbi Malzeme 27.000.000 34.000.000 7.000.000 - - - 28 Sanayi ve Ticaret A.Ş.",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-06-17",
+        "bookbuilding_start": "2021-06-23",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_30",
+      "source_document": "SPK Bülteni 2021/30",
+      "source_published_at": "2021-06-17T23:59:59+03:00",
+      "source_sha256": "eae9be5ea74833397b63ffb31fc3c13fe92d17e4cd343b61178f6680b9549ed3",
+      "source_path": "registry/oot/source_docs/MEDTR/SPK_BULTEN_2021-30.pdf",
+      "quote": "Meditera Tıbbi Malzeme 27.000.000 34.000.000 7.000.000 - - - 28 Sanayi ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2021-06-17",
+        "bookbuilding_start": "2021-06-23",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "7000000",
+      "source_id": "SPK_BULTEN_2021_30",
+      "source_document": "SPK Bülteni 2021/30",
+      "source_published_at": "2021-06-17T23:59:59+03:00",
+      "source_sha256": "eae9be5ea74833397b63ffb31fc3c13fe92d17e4cd343b61178f6680b9549ed3",
+      "source_path": "registry/oot/source_docs/MEDTR/SPK_BULTEN_2021-30.pdf",
+      "quote": "Meditera Tıbbi Malzeme 27.000.000 34.000.000 7.000.000 - - - 28 Sanayi ve Ticaret A.Ş.",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-06-17",
+        "bookbuilding_start": "2021-06-23",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2021-07-02",
+      "source_id": "KAP_944905",
+      "source_document": "KAP 944905",
+      "source_published_at": "2021-06-29T18:10:47+03:00",
+      "source_sha256": "daf82b556c57862d2f21a0a2a056aea170d12fa1b1c5aa30921b0adfdbbb8388",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944905_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 02/07/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-06-23",
+      "source_id": "KAP_944905",
+      "source_document": "KAP 944905",
+      "source_published_at": "2021-06-29T18:10:47+03:00",
+      "source_sha256": "daf82b556c57862d2f21a0a2a056aea170d12fa1b1c5aa30921b0adfdbbb8388",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944905_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 23-24-25/06/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-06-25",
+      "source_id": "KAP_944905",
+      "source_document": "KAP 944905",
+      "source_published_at": "2021-06-29T18:10:47+03:00",
+      "source_sha256": "daf82b556c57862d2f21a0a2a056aea170d12fa1b1c5aa30921b0adfdbbb8388",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944905_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 23-24-25/06/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_944905": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 944905",
+      "published_at": "2021-06-29T18:10:47+03:00",
+      "sha256": "daf82b556c57862d2f21a0a2a056aea170d12fa1b1c5aa30921b0adfdbbb8388",
+      "path": "registry/oot/source_docs/MEDTR/KAP_944905_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_30": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/30",
+      "published_at": "2021-06-17T23:59:59+03:00",
+      "sha256": "eae9be5ea74833397b63ffb31fc3c13fe92d17e4cd343b61178f6680b9549ed3",
+      "path": "registry/oot/source_docs/MEDTR/SPK_BULTEN_2021-30.pdf"
+    },
+    "KAP_944472": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 944472",
+      "published_at": "2021-06-28T14:37:45+03:00",
+      "sha256": "2f6639066faad510b9e9efc84651546a3f642f8159cee185f5e2a79a11f7a124",
+      "path": "registry/oot/source_docs/MEDTR/KAP_944472_bildirim.pdf"
+    },
+    "KAP_944472_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 944472 ek 1",
+      "published_at": "2021-06-28T14:37:45+03:00",
+      "sha256": "56d2c2d9b40ef85a8142750aa38e3925c16c88c0317e0a19b968ddeae5971da1",
+      "path": "registry/oot/source_docs/MEDTR/KAP_944472_ek1.pdf"
+    }
+  }
+}

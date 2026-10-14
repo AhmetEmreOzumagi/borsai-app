@@ -1,0 +1,171 @@
+{
+ "ticker": "KAYSE",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_1151365",
+  "KAP_1151365_EK1",
+  "KAP_1151757"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "1.1451163585",
+   "origin": "CALCULATED_FROM_SOURCE_TOTALS",
+   "source_id": "KAP_1151365",
+   "numerator": "121382334",
+   "numerator_quote": "yurt dışı kurumsal yatırımcı kategorisinde ise 800.000 TL nominal olmak üzere toplam 121.382.334 TL nominal talep toplanmıştır.",
+   "denominator": "106000000",
+   "denominator_quote": "satışa sunulan 106.000.000 TL nominal değerli payların yatırımcılara dağıtımı gerçekleştirilmiştir.",
+   "definition": "TOPLAM_TALEP_NOMINALI_121382334 / DAGITILAN_NOMINAL_PAY_106000000 (belge katı yazmıyor; iki nominal aynı bildirimde yazılı)",
+   "denominator_includes_additional_sale": false,
+   "note": "ek satış planlanmamış (SPK satırı '-'); planlanan = gerçekleşen 106.000.000, ek tablo TOPLAM satırı aynı talep (121.382.334,00)"
+  },
+  "total_demand_filter_status": {
+   "value": "NOT_SPECIFIED",
+   "source_id": "KAP_1151365",
+   "note": "belgede 'filtre' ifadesi yok"
+  },
+  "ipo_size_tl": {
+   "value": "1724620000",
+   "source_id": "KAP_1151365",
+   "quote": "Kayseri Şeker'in 1.724.620.000 TL halka arz büyüklüğüne sahip"
+  },
+  "capital_increase_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (yalnız 'satışa sunulan 106.000.000'; sermaye artırımı nitelemesi yalnız SPK planında)"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (ortak satışından söz edilmiyor; SPK satırında mevcut pay satışı '-')"
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_1151365",
+   "zero_from_statement": true,
+   "quote": "satışa sunulan 106.000.000 TL nominal değerli payların yatırımcılara dağıtımı gerçekleştirilmiştir.",
+   "note": "SPK satırında ek satış '-'; dağıtılan toplam 106.000.000 = planlanan taban (bedelli 106.000.000)"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_1151365",
+   "quote": "satışa sunulan 106.000.000 TL nominal değerli payların yatırımcılara dağıtımı gerçekleştirilmiştir."
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_1151365",
+   "used": "NONE",
+   "quote": "satışa sunulan 106.000.000 TL nominal değerli payların yatırımcılara dağıtımı gerçekleştirilmiştir.",
+   "note": "ek satış planlanmamıştı; dağıtılan = taban"
+  },
+  "investor_count": {
+   "value": "1619459",
+   "source_id": "KAP_1151365",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "toplamda 1.619.459 yatırımcıya dağıtım gerçekleştirilmiştir.",
+   "note": "belge talep eden kişi sayısını ayrıca yazmıyor"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "1618666",
+    "employees_farmers": "747",
+    "domestic_institutional": "44",
+    "foreign_institutional": "2"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_1151365",
+   "quote": "1.618.666 adet yurt içi bireysel yatırımcıya, 747 adet çalışanlardan ve çiftçilerden oluşan yatırımcıya, 44 adet yurt içi kurumsal yatırımcıya ve 2 adet yurt dışı kurumsal yatırımcıya olmak üzere toplamda 1.619.459 yatırımcıya dağıtım gerçekleştirilmiştir.",
+   "note": "employees_farmers = çalışanlardan ve çiftçilerden oluşan yatırımcılar"
+  },
+  "retail_demand_multiple": {
+   "value": "1.5945872424",
+   "source_id": "KAP_1151365_EK1",
+   "derived": true,
+   "formula": "talep 109.867.061 / planlanan tahsisat 68.900.000",
+   "quote": "68.900.000,00 %65,00 109.867.061,00 90,51% 1.618.666 94.484.927,00 89,14%",
+   "note": "belge grup katı yazmıyor; aynı tablodaki talep ve planlanan tahsisat nominalinden"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": "0.302210717",
+   "source_id": "KAP_1151365_EK1",
+   "derived": true,
+   "formula": "talep 8.008.584 / planlanan tahsisat 26.500.000",
+   "quote": "26.500.000,00 %25,00 8.008.584,00 6,60% 44 8.008.584,00 7,56%"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": "0.1509433962",
+   "source_id": "KAP_1151365_EK1",
+   "derived": true,
+   "formula": "talep 800.000 / planlanan tahsisat 5.300.000",
+   "quote": "5.300.000,00 %5,00 800.000,00 0,66% 2 800.000,00 0,75%"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "94484927",
+    "employees_farmers": "2706489",
+    "domestic_institutional": "8008584",
+    "foreign_institutional": "800000"
+   },
+   "source_id": "KAP_1151365_EK1",
+   "quote": [
+    "68.900.000,00 %65,00 109.867.061,00 90,51% 1.618.666 94.484.927,00 89,14%",
+    "Çiftçilerden Oluşan 5.300.000,00 %5,00 2.706.689,00 2,23% 747 2.706.489,00 2,55%",
+    "26.500.000,00 %25,00 8.008.584,00 6,60% 44 8.008.584,00 7,56%",
+    "5.300.000,00 %5,00 800.000,00 0,66% 2 800.000,00 0,75%"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "89.14",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1151365_EK1",
+   "quote": "68.900.000,00 %65,00 109.867.061,00 90,51% 1.618.666 94.484.927,00 89,14%",
+   "note": "bildirim metni %89,1; planlanan %65"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "7.56",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1151365_EK1",
+   "quote": "26.500.000,00 %25,00 8.008.584,00 6,60% 44 8.008.584,00 7,56%",
+   "note": "bildirim metni %7,6; planlanan %25"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": "0.75",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1151365_EK1",
+   "quote": "5.300.000,00 %5,00 800.000,00 0,66% 2 800.000,00 0,75%",
+   "note": "bildirim metni %0,8; planlanan %5"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç bildirimi ve eki dağıtım yöntemini adlandırmıyor; TSSD dossier'de yok"
+  },
+  "lead_broker": {
+   "value": "Gedik Yatırım Menkul Değerler A.Ş.",
+   "source_id": "KAP_1151365",
+   "quote": "Gedik Yatırım Menkul Değerler A.Ş. liderliğindeki konsorsiyum aracılığı ile"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD dossier'de yok; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD dossier'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD dossier'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD dossier'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {},
+ "notes": "Borsa dışı talep toplama (16,27 TL); yalnız sermaye artırımı, ek satış yok. Belge toplam katı yazmıyor; bildirim metnindeki toplam talep (121.382.334) / dağıtılan (106.000.000) ile hesaplandı. Yurt içi kurumsal ve yurt dışı kurumsal gruplarda talep planlanan tahsisatın altında kalmış, fazla bireysel gruba kaydırılmış. Codex bu arz için sonuç alanlarını bulamamıştı.",
+ "needs_search": false
+}

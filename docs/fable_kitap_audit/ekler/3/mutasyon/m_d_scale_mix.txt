@@ -1,0 +1,42 @@
+### m_d_scale_mix :: tests/test_scoring.py::test_9d_scales_never_combined tests/test_scoring_conditional.py tests/test_faz8_live.py::test_13_13_scale_mix_is_refused tests/test_faz5_live.py::test_scale_mix_post_d1
+F................FF                                                      [100%]
+=================================== FAILURES ===================================
+________________________ test_9d_scales_never_combined _________________________
+
+    def test_9d_scales_never_combined():
+>       with pytest.raises(sc.ScaleMixError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ScaleMixError
+
+tests/test_scoring.py:277: Failed
+_______________________ test_13_13_scale_mix_is_refused ________________________
+
+    def test_13_13_scale_mix_is_refused():
+        obs = [sc.PairedObs(sc.SCALE_LIVE_BREAK, f"T{i}", "2027-01", 0.1, 0.2, sc.CLASS_MACHINE) for i in range(12)]
+        assert sc.paired_metric(obs)["scale"] == "live_break"
+        for other in (sc.SCALE_LIVE, sc.SCALE_BACKTEST, sc.SCALE_LIVE_CONDITIONAL, sc.SCALE_LIVE_POST_D1, sc.SCALE_OOT, "backtest_break"):
+>           with pytest.raises(sc.ScaleMixError):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           Failed: DID NOT RAISE ScaleMixError
+
+tests/test_faz8_live.py:546: Failed
+____________________________ test_scale_mix_post_d1 ____________________________
+
+    def test_scale_mix_post_d1():
+        rows = twelve_rows()
+        post = sc.post_d1_obs(rows, "S_cond", None, "RPS", "ceiling_hazard_v0")
+        cond = [sc.PairedObs(sc.SCALE_LIVE_CONDITIONAL, f"C{i}", "2027-01", 0.1, 0.2, sc.CLASS_LATE, 1) for i in range(12)]
+        live = [sc.PairedObs(sc.SCALE_LIVE, f"L{i}", "2027-01", 0.1, 0.2, sc.CLASS_LATE) for i in range(12)]
+        bt = [sc.PairedObs(sc.SCALE_BACKTEST, "B", "2027-01", 0.1, 0.2)]
+        for other in (cond, live, bt):
+>           with pytest.raises(sc.ScaleMixError):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           Failed: DID NOT RAISE ScaleMixError
+
+tests/test_faz5_live.py:418: Failed
+=========================== short test summary info ============================
+FAILED tests/test_scoring.py::test_9d_scales_never_combined - Failed: DID NOT...
+FAILED tests/test_faz8_live.py::test_13_13_scale_mix_is_refused - Failed: DID...
+FAILED tests/test_faz5_live.py::test_scale_mix_post_d1 - Failed: DID NOT RAIS...
+3 failed, 16 passed in 11.00s
+exit=1

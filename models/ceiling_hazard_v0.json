@@ -1,0 +1,441 @@
+{
+  "algorithm": "discrete_time_hazard_logit_l2",
+  "beta": {
+    "f1": 0.4489496623236836,
+    "f2": -0.17873210876625734,
+    "f3": -0.5498510595924825
+  },
+  "code_version": {
+    "borsai_dirty": true,
+    "borsai_source_sha256": "c873f64bf27bb6c0c1f6c0da343672b7f615d051beca8b59707ea4a1a6bf5ea8",
+    "git_commit": "d3fabada3a4b3b7ada1b03681c57c29a7e303be5"
+  },
+  "columns": [
+    "f1",
+    "f2",
+    "f3"
+  ],
+  "created_at": "2026-09-22T13:05:40+03:00",
+  "day_groups": {
+    "g1": [
+      1
+    ],
+    "g2": [
+      2,
+      3
+    ],
+    "g3": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "description": "Tavan serisi, ayrık zamanlı hazard (SPEC_CEILING_V0): 3 gün-grubu sabiti + f1 (ln arz büyüklüğü), f2 (halka açıklık), f3 (talep katı) katsayıları, L2 (λ iç arz-bırak CV ile). Çıktı S_k = P(seri ≥ k), k = 1..10.",
+  "feature_definitions": {
+    "f1": "arz büyüklüğü TL: kaynakta bildirilen ipo_size_tl, yoksa ipo_price_tl × shares_offered; ön işlemede doğal log",
+    "f2": "shares_offered / post_ipo_share_capital × 100; 10 ondalık ROUND_HALF_UP",
+    "f3": "total_demand_multiple (toplam talep katı); eksik ≠ 0; ön işlemede fold içi p05/p95 winsor"
+  },
+  "feature_ranges": {
+    "f1": {
+      "max": 6825000000.0,
+      "min": 290870000.0,
+      "n": 97,
+      "n_missing": 0
+    },
+    "f2": {
+      "max": 40.4749055586,
+      "min": 10.0314889789,
+      "n": 97,
+      "n_missing": 0
+    },
+    "f3": {
+      "max": 14.6,
+      "min": 1.0,
+      "n": 97,
+      "n_missing": 0
+    }
+  },
+  "features": [
+    "f1",
+    "f2",
+    "f3"
+  ],
+  "gamma": [
+    -1.8094610656223502,
+    -2.1470148967547216,
+    -1.0070890642576587
+  ],
+  "horizons": {
+    "D1": {
+      "p_up": null,
+      "return": null
+    },
+    "D10": {
+      "p_up": null,
+      "return": null
+    },
+    "D3": {
+      "p_up": null,
+      "return": null
+    },
+    "D5": {
+      "p_up": null,
+      "return": null
+    }
+  },
+  "input_policy": {
+    "f3_missing": "REFUSE",
+    "f3_outside_train_p05_p95": "CLIP_AND_FLAG",
+    "invalid_f1_f2": "LABELED_REFUSAL",
+    "out_of_training_range": "WARN"
+  },
+  "lambda": 10.0,
+  "lambda_score_table": [
+    {
+      "lambda": 0.1,
+      "score": 0.40642299111685504,
+      "status": "SCORED"
+    },
+    {
+      "lambda": 1.0,
+      "score": 0.40617835118761747,
+      "status": "SCORED"
+    },
+    {
+      "lambda": 3.0,
+      "score": 0.4057817300333255,
+      "status": "SCORED"
+    },
+    {
+      "lambda": 10.0,
+      "score": 0.40542582422039675,
+      "status": "SCORED"
+    },
+    {
+      "lambda": 30.0,
+      "score": 0.4076653929818766,
+      "status": "SCORED"
+    },
+    {
+      "lambda": 100.0,
+      "score": 0.41760873476306126,
+      "status": "SCORED"
+    },
+    {
+      "lambda": 300.0,
+      "score": 0.43026917219721,
+      "status": "SCORED"
+    },
+    {
+      "lambda": 1000.0,
+      "score": 0.43936952358359604,
+      "status": "SCORED"
+    },
+    {
+      "lambda": "INF",
+      "score": 0.44481573979096667,
+      "status": "SCORED"
+    }
+  ],
+  "model_id": "ceiling_hazard_v0",
+  "preprocessing": {
+    "columns": [
+      "f1",
+      "f2",
+      "f3"
+    ],
+    "dropped": {},
+    "f3_filter_mode": "NOT_SPECIFIED",
+    "f3_filter_mode_tie": false,
+    "f3_filter_nulled_tickers": [],
+    "f5_created": false,
+    "log_transform": [
+      "f1"
+    ],
+    "mean": {
+      "f1": 21.17172714170336,
+      "f2": 24.05388937524536,
+      "f3": 3.5573891649226805
+    },
+    "medians": {},
+    "n_train": 97,
+    "preprocessing_id": "V1_3_STEPS_F1_F2_F3_IPO_LEVEL_NO_IMPUTATION_NO_F5",
+    "std": {
+      "f1": 0.709158677133166,
+      "f2": 6.6190142551672,
+      "f3": 2.0606556422344537
+    },
+    "winsor": {
+      "f3": {
+        "p05": 1.14870997716,
+        "p95": 8.332
+      }
+    }
+  },
+  "pseudo_rows": {
+    "weight": 0.5
+  },
+  "reclose_rates": {
+    "a_a": 1,
+    "a_b": 61,
+    "n_a": 102,
+    "n_b": 429,
+    "r_a": 0.014563106796116505,
+    "r_b": 0.14302325581395348
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "schema_version": "borsai.model/1",
+  "solver": {
+    "grad_max": 6.217248937900877e-15,
+    "iterations": 5
+  },
+  "spec": {
+    "algorithm": "discrete_time_hazard_logit_l2",
+    "day_groups": {
+      "g1": [
+        1
+      ],
+      "g2": [
+        2,
+        3
+      ],
+      "g3": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "days": 10,
+    "description": "Tavan serisi, ayrık zamanlı hazard (SPEC_CEILING_V0): 3 gün-grubu sabiti + f1 (ln arz büyüklüğü), f2 (halka açıklık), f3 (talep katı) katsayıları, L2 (λ iç arz-bırak CV ile). Çıktı S_k = P(seri ≥ k), k = 1..10.",
+    "feature_version": "BORSAI_FEATURES_V1_5_PORT_1",
+    "features": [
+      "f1",
+      "f2",
+      "f3"
+    ],
+    "input_policy": {
+      "f3_missing": "REFUSE",
+      "f3_outside_train_p05_p95": "CLIP_AND_FLAG",
+      "invalid_f1_f2": "LABELED_REFUSAL",
+      "out_of_training_range": "WARN"
+    },
+    "lambda_INF": "beta ≡ 0; gamma_g = logit((olay_g + 0.5)/(risk_g + 1))",
+    "lambda_grid": [
+      0.1,
+      1.0,
+      3.0,
+      10.0,
+      30.0,
+      100.0,
+      300.0,
+      1000.0,
+      "INF"
+    ],
+    "min_train_n": 10,
+    "model": "logit h_d(x) = gamma_{g(d)} + beta·z(x); S_k = prod_{d<=k}(1 - h_d)",
+    "model_id": "ceiling_hazard_v0",
+    "outputs": [
+      "hazard",
+      "S",
+      "P_L",
+      "P_close_ceiling"
+    ],
+    "penalty": "L2 yalnız beta'da, (lambda/2)·||beta||²; gamma cezasız",
+    "plan_id": "H99_CEILING_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_MIN10IPO_5EV_5SV",
+    "preprocessing_id": "V1_3_STEPS_F1_F2_F3_IPO_LEVEL_NO_IMPUTATION_NO_F5",
+    "pseudo_rows": {
+      "rows": "her grup için z = 0'da bir event = 1 ve bir event = 0 satırı",
+      "weight": 0.5
+    },
+    "reclose": {
+      "P_close": "k = 1: S_1; k >= 2: S_k + (1 − S_k)·r_{b(k)}",
+      "groups": {
+        "a": [
+          2,
+          3,
+          4
+        ],
+        "b": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "rate": "(a + 0.5)/(n + 1)"
+    },
+    "runtime_pins": {
+      "joblib": "1.5.3",
+      "numpy": "2.5.2",
+      "python": "3.12",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "scorability": {
+      "min_events": 5,
+      "min_ipo": 10,
+      "min_survivals": 5
+    },
+    "selection": {
+      "method": "INNER_LEAVE_ONE_IPO_OUT",
+      "non_convergence": "CANDIDATE_NOT_CONVERGED_DROPPED_INF_ALWAYS_KEPT",
+      "objective": "satır başına ortalama log-kayıp; h [1e-12, 1 − 1e-12]'ye kırpılır",
+      "preprocessing": "her iç bölmede kalan arzlardan yeniden kurulur",
+      "tie_break": "BIT_EXACT_TIE_TO_LARGEST_LAMBDA_INF_LARGEST"
+    },
+    "solver": {
+      "descent_check": "J_new <= J_old + m·eps·max(|J_old|, 1) (toplama yuvarlama sınırı)",
+      "grad_tol": 1e-10,
+      "init": "beta = 0, gamma_g = logit((olay_g + 0.5)/(risk_g + 1))",
+      "max_halvings": 30,
+      "max_iter": 100,
+      "method": "NEWTON_RAPHSON_NUMPY",
+      "non_convergence": "MODEL_NOT_FIT_DID_NOT_CONVERGE"
+    },
+    "spec_document": {
+      "path": "docs/specs/SPEC_CEILING_V0.md",
+      "sha256": "d78cb234f6b3fedfd451ea5aafd31f14022d225ff4b981770868d45a963fc731"
+    },
+    "training": {
+      "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+      "description": "data/training_table.csv'nin total_demand_multiple dolu 97 satırı (ALBTN ve ENDAE hariç), tablo sırasıyla",
+      "n": 97,
+      "set": "H99_F3_PRESENT"
+    }
+  },
+  "spec_sha256": "18949ac747fd9759d63ce2182a12ee0f2b5ab2bb4d56682491270dea853b8623",
+  "training": {
+    "cutoff_date": "2026-08-19",
+    "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+    "first_trading_date_range": [
+      "2023-09-22",
+      "2026-08-06"
+    ],
+    "labels_sha256": "41cabaaaba8f96a81d29498725106b4e3e6dd2adca4e839a37a3faee7f9dc37c",
+    "n": 97,
+    "n_events": 83,
+    "n_ipo": 97,
+    "n_pp_rows": 506,
+    "n_survivals": 423,
+    "set": "H99_F3_PRESENT",
+    "tickers": [
+      "HATSN",
+      "DMRGD",
+      "MEKAG",
+      "DOFER",
+      "MHRGY",
+      "BORLS",
+      "TABGD",
+      "VRGYO",
+      "MARBL",
+      "BINHO",
+      "EKOS",
+      "AGROT",
+      "SKYMD",
+      "CATES",
+      "BEGYO",
+      "KBORU",
+      "SURGY",
+      "MEGMT",
+      "AVPGY",
+      "PATEK",
+      "BORSK",
+      "LMKDC",
+      "ALVES",
+      "OBAMS",
+      "ARTMS",
+      "MOGAN",
+      "ODINE",
+      "ENTRA",
+      "RGYAS",
+      "LILAK",
+      "KOTON",
+      "ALTNY",
+      "KOCMT",
+      "HRKET",
+      "ONRYT",
+      "OZYSR",
+      "ALKLC",
+      "YIGIT",
+      "HOROZ",
+      "SEGMN",
+      "EFORC",
+      "DCTTR",
+      "BAHKM",
+      "TCKRC",
+      "GUNDG",
+      "AHSGY",
+      "OZATD",
+      "CEMZY",
+      "DURKN",
+      "BINBN",
+      "CGCAM",
+      "SMRVA",
+      "ARMGD",
+      "EGEGY",
+      "GLRMK",
+      "AKFIS",
+      "MOPAS",
+      "SERNT",
+      "BIGEN",
+      "DSTKF",
+      "VSNMD",
+      "KLYPV",
+      "BALSU",
+      "BULGS",
+      "DOFRB",
+      "ECOGR",
+      "VAKFA",
+      "PAHOL",
+      "ZERGY",
+      "ARFYE",
+      "MEYSU",
+      "FRMPL",
+      "ZGYO",
+      "UCAYM",
+      "NETCD",
+      "AKHAN",
+      "BESTE",
+      "ATATR",
+      "EMPAE",
+      "GENKM",
+      "SVGYO",
+      "LXGYO",
+      "MCARD",
+      "AAGYO",
+      "EKDMR",
+      "BETAE",
+      "SOHOE",
+      "ORZAX",
+      "GOLDA",
+      "EKIM",
+      "ISVEA",
+      "SSAAT",
+      "SARAE",
+      "METEN",
+      "MASFN",
+      "KARCL",
+      "QUICK"
+    ],
+    "tickers_sha256": "77c35faf9bc2379bdced9b860e4f6d06e9d4976e84af48e26398d74fe6d69c07"
+  }
+}

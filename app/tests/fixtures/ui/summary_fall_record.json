@@ -1,0 +1,293 @@
+{
+  "featured": {
+    "model_id": null,
+    "reason": "VAULT_CLOSED",
+    "candidates": [
+      {
+        "model_id": "fall_d10_v0_addsale",
+        "in_index": true,
+        "primary_verdict": null,
+        "model_value": null,
+        "v15_ci95_hi": null,
+        "near_era_label": null,
+        "near_era_comparator": null,
+        "near_era_ci95_lo": null,
+        "k1": false,
+        "k2": false,
+        "k3": false,
+        "eligible": false,
+        "first_failed": null
+      },
+      {
+        "model_id": "fall_d10_v0_h99",
+        "in_index": true,
+        "primary_verdict": null,
+        "model_value": null,
+        "v15_ci95_hi": null,
+        "near_era_label": null,
+        "near_era_comparator": null,
+        "near_era_ci95_lo": null,
+        "k1": false,
+        "k2": false,
+        "k3": false,
+        "eligible": false,
+        "first_failed": null
+      },
+      {
+        "model_id": "fall_d10_v0_pooled",
+        "in_index": true,
+        "primary_verdict": null,
+        "model_value": null,
+        "v15_ci95_hi": null,
+        "near_era_label": null,
+        "near_era_comparator": null,
+        "near_era_ci95_lo": null,
+        "k1": false,
+        "k2": false,
+        "k3": false,
+        "eligible": false,
+        "first_failed": null
+      }
+    ]
+  },
+  "official": true,
+  "record_file": "20300105T100000Z_aaaaaaaaaaaa.json",
+  "rows": [
+    {
+      "model_id": "fall_d10_v0_addsale",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.6,
+        "p_fall": 0.4,
+        "pct_fall": 40,
+        "pct_up": 60
+      },
+      "d5": {
+        "p_up": 0.75,
+        "p_fall": 0.25,
+        "pct_fall": 25,
+        "pct_up": 75
+      },
+      "near_era": null,
+      "vault": {
+        "status": "UNAVAILABLE",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": {
+        "description": "Düşen arz v0 (SPEC_C_V0): yalnız ek satış bayrağı (1[additional_sale_shares > 0]) ile L2-lojistik (V1.6 C ızgarası); eğitim H99 + açık küme, ek satış alanı dolu 165 arz; f3 istemez.",
+        "training_n": null,
+        "training_cutoff": null,
+        "params_sha256_8": null,
+        "n_variants_same_data": null,
+        "primary_cell": null
+      }
+    },
+    {
+      "model_id": "fall_d10_v0_h99",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.6,
+        "p_fall": 0.4,
+        "pct_fall": 40,
+        "pct_up": 60
+      },
+      "d5": {
+        "p_up": 0.75,
+        "p_fall": 0.25,
+        "pct_fall": 25,
+        "pct_up": 75
+      },
+      "near_era": null,
+      "vault": {
+        "status": "UNAVAILABLE",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": {
+        "description": "Düşen arz v0 (SPEC_C_V0): D10 ve D5'te P(kapanış > arz) için L2-lojistik (V1.6 C ızgarası, iç LOOCV Brier); özellikler f1r (TÜFE ile reel büyüklük), ln f3 (talep katı), ek satış bayrağı; H99'un f3 ve ek satış alanı dolu 94 arzı. Düşme olasılığı = 1 − p_up.",
+        "training_n": null,
+        "training_cutoff": null,
+        "params_sha256_8": null,
+        "n_variants_same_data": null,
+        "primary_cell": null
+      }
+    },
+    {
+      "model_id": "fall_d10_v0_pooled",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.6,
+        "p_fall": 0.4,
+        "pct_fall": 40,
+        "pct_up": 60
+      },
+      "d5": {
+        "p_up": 0.75,
+        "p_fall": 0.25,
+        "pct_fall": 25,
+        "pct_up": 75
+      },
+      "near_era": null,
+      "vault": {
+        "status": "UNAVAILABLE",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": {
+        "description": "Düşen arz v0 (SPEC_C_V0): h99 ile aynı özellikler ve model (f1r, ln f3, ek satış bayrağı; L2-lojistik, V1.6 C ızgarası); eğitim H99 + eski kohortun açık kümesi (161 arz, training_table_v2); rejim terimi yok.",
+        "training_n": null,
+        "training_cutoff": null,
+        "params_sha256_8": null,
+        "n_variants_same_data": null,
+        "primary_cell": null
+      }
+    },
+    {
+      "model_id": "fall_d10_v0_pooled@ZERO",
+      "role": "RULE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.6,
+        "p_fall": 0.4,
+        "pct_fall": 40,
+        "pct_up": 60
+      },
+      "d5": {
+        "p_up": 0.75,
+        "p_fall": 0.25,
+        "pct_fall": 25,
+        "pct_up": 75
+      },
+      "near_era": null,
+      "vault": {
+        "status": "UNAVAILABLE",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": {
+        "description": "fall_d10_v0_pooled ızgarasının uç noktası (C = ZERO) kural olarak: ufuk başına sabit p_up = eğitim oranı (kapalı biçim), özellik yok (SPEC_C_V0 §2). Eğitim kümesi, plan ve f3 filtre dışlaması modelinkiyle aynı.",
+        "training_n": null,
+        "training_cutoff": null,
+        "params_sha256_8": null,
+        "n_variants_same_data": null,
+        "primary_cell": null
+      }
+    },
+    {
+      "model_id": "base_rate",
+      "role": "COMPARATOR",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.6,
+        "p_fall": 0.4,
+        "pct_fall": 40,
+        "pct_up": 60
+      },
+      "d5": {
+        "p_up": 0.75,
+        "p_fall": 0.25,
+        "pct_fall": 25,
+        "pct_up": 75
+      },
+      "near_era": null,
+      "vault": {
+        "status": "NONE",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": null
+    },
+    {
+      "model_id": "v1_5_h99",
+      "role": "COMPARATOR",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.6,
+        "p_fall": 0.4,
+        "pct_fall": 40,
+        "pct_up": 60
+      },
+      "d5": {
+        "p_up": 0.75,
+        "p_fall": 0.25,
+        "pct_fall": 25,
+        "pct_up": 75
+      },
+      "near_era": null,
+      "vault": {
+        "status": "NONE",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": null
+    }
+  ],
+  "integrity": null,
+  "scores": null,
+  "oot": null,
+  "tufe": null
+}

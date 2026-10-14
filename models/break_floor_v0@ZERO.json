@@ -1,0 +1,459 @@
+{
+  "algorithm": "l2_logit_v1_6_grid",
+  "band_rule": {
+    "lower_over_reference": [
+      "0.9",
+      "0.9020"
+    ],
+    "on_mismatch": "BAND_RULE_MISMATCH; yastık rozeti gizli; regime_tags BAND_CHANGED",
+    "upper_over_reference": [
+      "1.098",
+      "1.1"
+    ]
+  },
+  "code_version": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "ec8ca3f85bb18c02bec48b82c95355939353f08e3e1f407735d616b1058849a1",
+    "git_commit": "74b851a5be6ad6b4746ac96a7745d2ee0c9d95f3"
+  },
+  "comparators": {
+    "by_type_F1": {
+      "0": {
+        "events": 6,
+        "n": 47,
+        "rate": 0.1276595744680851
+      },
+      "1": {
+        "events": 19,
+        "n": 35,
+        "rate": 0.5428571428571428
+      }
+    },
+    "zero": {
+      "F1": 0.3048780487804878,
+      "F2": 0.14102564102564102
+    }
+  },
+  "created_at": "2026-10-02T16:21:01+03:00",
+  "decisions_document": {
+    "path": "docs/specs_faz8/KARARLAR.md",
+    "sha256": "8d8bbc971b01472f498cc96d5eddd26cdb868406512426a355df213e74d89ce7"
+  },
+  "description": "break_floor_v0 ızgarasının uç noktası (C = ZERO) kural olarak: başlık başına sabit p_floor = eğitim oranı (kırılmalar arasındaki taban oranı; kapalı biçim), özellik yok (§4.2). Eğitim kümesi ve plan modelinkiyle aynı.",
+  "event_definition": "b = L + 1, first traded non-ceiling close; b in 1..9",
+  "family": "break_floor_v0",
+  "feature_definitions": {},
+  "feature_ranges": {},
+  "features": [],
+  "horizons": {
+    "F1": {
+      "p_floor": {
+        "C": "ZERO",
+        "kind": "constant",
+        "n_class_0": 57,
+        "n_class_1": 25,
+        "rule": "n_1 / n (eğitim oranı)",
+        "value": 0.3048780487804878
+      }
+    },
+    "F2": {
+      "p_floor": {
+        "C": "ZERO",
+        "kind": "constant",
+        "n_class_0": 67,
+        "n_class_1": 11,
+        "rule": "n_1 / n (eğitim oranı)",
+        "value": 0.14102564102564102
+      }
+    }
+  },
+  "input_policy": {
+    "note": "kırılma günü alanlarını okumaz; kapsam (b) kuralları aynı",
+    "required_inputs": []
+  },
+  "model_id": "break_floor_v0@ZERO",
+  "preprocessing": null,
+  "regime_warning": {
+    "end_d1": null,
+    "start_d1": "2026-09-16",
+    "tag": "FON_KRIZI_2026",
+    "text": "Bu arzın ilk seansları Eylül 2026 fon krizi penceresine düşüyor; eğitim kümesinde (2023-09…2026-08) böyle bir stres yok. Beklenti (önceden yazıldı): model tabanı az tahmin eder."
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "schema_version": "borsai.model/1",
+  "spec": {
+    "algorithm": "l2_logit_v1_6_grid",
+    "band_rule": {
+      "lower_over_reference": [
+        "0.9",
+        "0.9020"
+      ],
+      "on_mismatch": "BAND_RULE_MISMATCH; yastık rozeti gizli; regime_tags BAND_CHANGED",
+      "upper_over_reference": [
+        "1.098",
+        "1.1"
+      ]
+    },
+    "decisions_document": {
+      "path": "docs/specs_faz8/KARARLAR.md",
+      "sha256": "8d8bbc971b01472f498cc96d5eddd26cdb868406512426a355df213e74d89ce7"
+    },
+    "description": "break_floor_v0 ızgarasının uç noktası (C = ZERO) kural olarak: başlık başına sabit p_floor = eğitim oranı (kırılmalar arasındaki taban oranı; kapalı biçim), özellik yok (§4.2). Eğitim kümesi ve plan modelinkiyle aynı.",
+    "event_definition": "b = L + 1, first traded non-ceiling close; b in 1..9",
+    "family": "break_floor_v0",
+    "features": [],
+    "free_parameters_per_head": 1,
+    "grid_version": "v1_6",
+    "heads": [
+      "F1",
+      "F2"
+    ],
+    "input_policy": {
+      "note": "kırılma günü alanlarını okumaz; kapsam (b) kuralları aynı",
+      "required_inputs": []
+    },
+    "logit": {
+      "C_grid": [
+        "ZERO"
+      ],
+      "class_weight": null,
+      "direction_rule": "UP iff p > 0.5",
+      "endpoint_ZERO": "yalnız sabit terim: p = n_1/n, intercept = ln(p/(1 − p)), coef = 0; kapalı biçim",
+      "estimator": "sklearn.linear_model.LogisticRegression",
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "label": "y_h = 1[ertesi işlem görmüş seans(lar)ın kapanışı alt limitte] (p_floor başlığı; F1 ve F2 bağımsız)",
+      "max_iter": 10000,
+      "minority_lt_2_policy": "NO_TUNING_FIXED_C_0.01",
+      "non_convergence_policy": "CANDIDATE_NOT_CONVERGED_DROPPED_FINAL_FIT_FALLS_BACK_TO_NEXT_RANKED",
+      "single_class_policy": "MODEL_NOT_FIT_SINGLE_CLASS",
+      "solver": "lbfgs",
+      "tie_break": "BIT_EXACT_TIE_TO_SMALLEST_C_ZERO_SMALLEST",
+      "tol": 1e-10,
+      "tuning": "INNER_LOOCV_RAW_UNCLIPPED_BRIER"
+    },
+    "min_train_n": 10,
+    "model_id": "break_floor_v0@ZERO",
+    "outputs": [
+      "p_floor"
+    ],
+    "parent_model_id": "break_floor_v0",
+    "plan_id": "H99_BREAK_WALK_FORWARD_E_CUTOFF_B_LE_9_MIN10ROWS_5EV_5NE",
+    "primary_head": "F1",
+    "regime_warning": {
+      "end_d1": null,
+      "start_d1": "2026-09-16",
+      "tag": "FON_KRIZI_2026",
+      "text": "Bu arzın ilk seansları Eylül 2026 fon krizi penceresine düşüyor; eğitim kümesinde (2023-09…2026-08) böyle bir stres yok. Beklenti (önceden yazıldı): model tabanı az tahmin eder."
+    },
+    "ridge": null,
+    "runtime_pins": {
+      "joblib": "1.5.3",
+      "numpy": "2.5.2",
+      "python": "3.12",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "scorability": {
+      "min_events": 5,
+      "min_nonevents": 5,
+      "min_rows": 10
+    },
+    "spec_document": {
+      "path": "docs/specs_faz8/SPEC_BREAK_V0.md",
+      "sha256": "da98351c2b1bb4d7ef3c9ee5954ff4daade0960eab0ec44daa0b4ba540001f31"
+    },
+    "stage": "POST_BREAK",
+    "structural_zero_rule": {
+      "lower_rounding": "CEIL_TO_TICK_AT_LIMIT_LEVEL",
+      "margin": "0.10",
+      "name": "D10_STRUCTURAL_ZERO",
+      "note": "gösterim sabiti; parametre değil, skorlanmaz (§2.4)",
+      "tick_table": [
+        {
+          "below": "20",
+          "tick": "0.01"
+        },
+        {
+          "below": "50",
+          "tick": "0.02"
+        },
+        {
+          "below": "100",
+          "tick": "0.05"
+        },
+        {
+          "below": "250",
+          "tick": "0.10"
+        },
+        {
+          "below": "500",
+          "tick": "0.25"
+        },
+        {
+          "below": "1000",
+          "tick": "0.50"
+        },
+        {
+          "below": "2500",
+          "tick": "1.00"
+        },
+        {
+          "below": null,
+          "tick": "2.50"
+        }
+      ]
+    },
+    "target_definition": {
+      "F1": "close(D_{b+1}) == lower_limit(D_{b+1})",
+      "F2": "F1 and close(D_{b+2}) == lower_limit(D_{b+2})"
+    },
+    "training": {
+      "cutoff_date": "2026-08-19",
+      "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+      "description": "SESSIONS dosyasından kurulan kırılma tablosu (§7.1): H99'un b ≤ 9 olan 82 arzı (F1), F2 başlığı b ≤ 8 olan 78 arz; shares_offered ve arz fiyatı data/training_table.csv'den; tablo sırası (first_trading_date, ticker)",
+      "n_F1": 82,
+      "n_F2": 78,
+      "sessions_file": "data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_session_outcomes.csv",
+      "sessions_file_sha256": "eca620d3a5e8fed0b118bab556da5ce519257a4b2e14efcd22065f5bcdc93da9",
+      "set": "H99_BREAK_B_LE_9"
+    }
+  },
+  "spec_document": {
+    "path": "docs/specs_faz8/SPEC_BREAK_V0.md",
+    "sha256": "da98351c2b1bb4d7ef3c9ee5954ff4daade0960eab0ec44daa0b4ba540001f31"
+  },
+  "spec_sha256": "73d719f0124063e19079dcb0a4158b98b4095196dbebe53be55339c309f54e3c",
+  "stage": "POST_BREAK",
+  "structural_zero_rule": {
+    "lower_rounding": "CEIL_TO_TICK_AT_LIMIT_LEVEL",
+    "margin": "0.10",
+    "name": "D10_STRUCTURAL_ZERO",
+    "note": "gösterim sabiti; parametre değil, skorlanmaz (§2.4)",
+    "tick_table": [
+      {
+        "below": "20",
+        "tick": "0.01"
+      },
+      {
+        "below": "50",
+        "tick": "0.02"
+      },
+      {
+        "below": "100",
+        "tick": "0.05"
+      },
+      {
+        "below": "250",
+        "tick": "0.10"
+      },
+      {
+        "below": "500",
+        "tick": "0.25"
+      },
+      {
+        "below": "1000",
+        "tick": "0.50"
+      },
+      {
+        "below": "2500",
+        "tick": "1.00"
+      },
+      {
+        "below": null,
+        "tick": "2.50"
+      }
+    ]
+  },
+  "target_definition": {
+    "F1": "close(D_{b+1}) == lower_limit(D_{b+1})",
+    "F2": "F1 and close(D_{b+2}) == lower_limit(D_{b+2})"
+  },
+  "training": {
+    "break_fields_sha256": "e0cbf778f2c6c19924b7d22458594a1ab8269bee4bce69484a2ada2a6329010f",
+    "cutoff_date": "2026-08-10",
+    "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+    "events_F1": 25,
+    "events_F2": 11,
+    "labels_sha256": "d57609ed1b3bb5f877733f8e5a973b16b6a09ab0d1747d39bb453887485793d5",
+    "n_F1": 82,
+    "n_F2": 78,
+    "sessions_file": "data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_session_outcomes.csv",
+    "sessions_file_sha256": "eca620d3a5e8fed0b118bab556da5ce519257a4b2e14efcd22065f5bcdc93da9",
+    "set": "H99_BREAK_B_LE_9",
+    "tickers_F1": [
+      "DMRGD",
+      "MHRGY",
+      "BORLS",
+      "TABGD",
+      "VRGYO",
+      "MARBL",
+      "SKYMD",
+      "CATES",
+      "BEGYO",
+      "KBORU",
+      "SURGY",
+      "MEGMT",
+      "AVPGY",
+      "BORSK",
+      "OBAMS",
+      "MOGAN",
+      "ENTRA",
+      "RGYAS",
+      "LILAK",
+      "KOTON",
+      "KOCMT",
+      "HRKET",
+      "ONRYT",
+      "OZYSR",
+      "ALKLC",
+      "YIGIT",
+      "HOROZ",
+      "SEGMN",
+      "EFORC",
+      "DCTTR",
+      "BAHKM",
+      "TCKRC",
+      "GUNDG",
+      "AHSGY",
+      "OZATD",
+      "CEMZY",
+      "DURKN",
+      "BINBN",
+      "CGCAM",
+      "SMRVA",
+      "ARMGD",
+      "EGEGY",
+      "GLRMK",
+      "AKFIS",
+      "MOPAS",
+      "SERNT",
+      "BIGEN",
+      "DSTKF",
+      "VSNMD",
+      "ENDAE",
+      "KLYPV",
+      "BALSU",
+      "BULGS",
+      "VAKFA",
+      "PAHOL",
+      "ZERGY",
+      "ARFYE",
+      "MEYSU",
+      "FRMPL",
+      "ZGYO",
+      "UCAYM",
+      "NETCD",
+      "AKHAN",
+      "ATATR",
+      "EMPAE",
+      "GENKM",
+      "LXGYO",
+      "MCARD",
+      "AAGYO",
+      "EKDMR",
+      "SOHOE",
+      "ORZAX",
+      "GOLDA",
+      "EKIM",
+      "ISVEA",
+      "SSAAT",
+      "SARAE",
+      "METEN",
+      "ALBTN",
+      "MASFN",
+      "KARCL",
+      "QUICK"
+    ],
+    "tickers_F2": [
+      "MHRGY",
+      "BORLS",
+      "TABGD",
+      "VRGYO",
+      "MARBL",
+      "SKYMD",
+      "CATES",
+      "BEGYO",
+      "KBORU",
+      "SURGY",
+      "MEGMT",
+      "AVPGY",
+      "BORSK",
+      "OBAMS",
+      "MOGAN",
+      "ENTRA",
+      "RGYAS",
+      "LILAK",
+      "KOTON",
+      "KOCMT",
+      "HRKET",
+      "ONRYT",
+      "OZYSR",
+      "ALKLC",
+      "YIGIT",
+      "HOROZ",
+      "SEGMN",
+      "EFORC",
+      "DCTTR",
+      "BAHKM",
+      "TCKRC",
+      "GUNDG",
+      "AHSGY",
+      "OZATD",
+      "CEMZY",
+      "DURKN",
+      "BINBN",
+      "CGCAM",
+      "SMRVA",
+      "ARMGD",
+      "EGEGY",
+      "GLRMK",
+      "AKFIS",
+      "MOPAS",
+      "SERNT",
+      "BIGEN",
+      "DSTKF",
+      "VSNMD",
+      "ENDAE",
+      "KLYPV",
+      "BALSU",
+      "BULGS",
+      "VAKFA",
+      "PAHOL",
+      "ZERGY",
+      "ARFYE",
+      "MEYSU",
+      "FRMPL",
+      "ZGYO",
+      "AKHAN",
+      "ATATR",
+      "EMPAE",
+      "GENKM",
+      "LXGYO",
+      "MCARD",
+      "AAGYO",
+      "EKDMR",
+      "SOHOE",
+      "ORZAX",
+      "EKIM",
+      "ISVEA",
+      "SSAAT",
+      "SARAE",
+      "METEN",
+      "ALBTN",
+      "MASFN",
+      "KARCL",
+      "QUICK"
+    ],
+    "tickers_sha256": "a6b9557400ebba42067289f782f67338b14e6ee21a74528328b6f7d214b6f967",
+    "tickers_sha256_F2": "fc59946f7a2ab2e961003bac64c94530dc385ec6c5e4c3b90c3626905ff2ae38"
+  }
+}

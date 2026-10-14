@@ -1,0 +1,197 @@
+{
+ "ticker": "GWIND",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_929019",
+  "KAP_929019_EK1",
+  "KAP_929019_EK2",
+  "KAP_929033",
+  "KAP_929033_EK1",
+  "KAP_929710",
+  "KAP_929022",
+  "KAP_929022_EK1",
+  "KAP_929022_EK2",
+  "KAP_929022_EK3"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "6.6620872285",
+   "origin": "CALCULATED_FROM_SOURCE_TOTALS",
+   "source_id": "KAP_929019_EK1",
+   "numerator": "1068848220",
+   "numerator_quote": "TOPLAM 133.697.870,00 %100,0 868.939 1.068.848.220,00 %100,0 810.216 160.437.440,00 %100,0",
+   "denominator": "160437440",
+   "denominator_quote": "ek satışa konu 26.739.570,00 TL nominal değerli paylarının da satışıyla toplam 160.437.440 TL nominal değerli paylar halka arz edilmiştir",
+   "definition": "TOPLAM_TALEP_NOMINALI_1068848220 / HALKA_ARZ_EDILEN_TOPLAM_NOMINAL_160437440 (ek satış dahil; aynı birim TL nominal; belge toplam katı yazmıyor)",
+   "denominator_includes_additional_sale": true,
+   "note": "bu belgede grup katları ek satış hariç planlanan tahsisata göre (ör. bireysel 4,3 = 280.149.186 / 65.511.956,30); taban 133.697.870 paydasıyla toplam 7,9945"
+  },
+  "total_demand_filter_status": {
+   "value": "NOT_SPECIFIED",
+   "source_id": "KAP_929019_EK1",
+   "note": "belgede 'filtre' ifadesi yok"
+  },
+  "ipo_size_tl": {
+   "value": "811018951.48",
+   "source_id": "KAP_929019_EK1",
+   "quote": "Nihai sonuçlara göre 160.437.440,00 TL nominal değerli payların satışı sonucunda halka arz büyüklüğü 811.018.951,48 TL olarak gerçekleşmiştir.",
+   "note": "çalışanlara %10 iskontolu (4,554 TL) satış dahil"
+  },
+  "capital_increase_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok ('Şirket'in 133.697.870 TL nominal değerli payları halka arz edilmiş'; sermaye artırımı/ortak satışı nitelemesi yok)"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok"
+  },
+  "additional_sale_shares": {
+   "value": "26739570",
+   "source_id": "KAP_929019_EK1",
+   "quote": "gelen talebin ardından satışa sunulan payların %20’sine denk gelen ek satışa konu 26.739.570,00 TL nominal değerli paylarının da satışıyla toplam 160.437.440 TL nominal değerli paylar halka arz edilmiştir"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_929019_EK1",
+   "quote": "Şirket’in 133.697.870 TL nominal değerli payları halka arz edilmiş, gelen talebin ardından satışa sunulan payların %20’sine denk gelen ek satışa konu 26.739.570,00 TL nominal değerli paylarının da satışıyla toplam 160.437.440 TL nominal değerli paylar halka arz edilmiştir."
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_929019_EK1",
+   "used": "FULL",
+   "quote": "ek satışa konu 26.739.570,00 TL nominal değerli paylarının da satışıyla toplam 160.437.440 TL nominal değerli paylar halka arz edilmiştir",
+   "note": "SPK planlanan ek satış 26.739.570 ile aynı"
+  },
+  "investor_count": {
+   "value": "810216",
+   "source_id": "KAP_929019_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "TOPLAM 133.697.870,00 %100,0 868.939 1.068.848.220,00 %100,0 810.216 160.437.440,00 %100,0",
+   "note": "talep eden 868.939; dağıtım yapılan 810.216"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "809966",
+    "domestic_institutional": "199",
+    "foreign_institutional": "10",
+    "employees": "41"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_929019_EK1",
+   "quote": [
+    "Yurt Dışı 13.369.787,00 %10,0 16 113.804.836,00 %10,6 10 39.146.736,00 %24,4 Kurumsal",
+    "Yurt İçi Kurumsal 53.479.148,00 %40,0 326 673.083.385,00 %63,0 199 42.783.319,00 %26,7",
+    "Oluşan 1.336.978,70 %1,0 41 1.810.813,00 %0,2 41 1.570.148,00 %1,0 Yatırımcılar",
+    "Yurt İçi Bireysel 65.511.956,30 %49,0 868.556 280.149.186,00 %26,2 809.966 76.937.237,00 %48,0"
+   ],
+   "note": "talep eden: bireysel 868.556, yurt içi kurumsal 326, yurt dışı kurumsal 16, çalışan 41"
+  },
+  "retail_demand_multiple": {
+   "value": "4.3",
+   "source_id": "KAP_929019_EK1",
+   "quote": "kendilerine tahsis edilen pay miktarının 4,3 katı olan 280.149.186,00 TL nominal değerli pay talebi gelmiştir"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": "12.6",
+   "source_id": "KAP_929019_EK1",
+   "quote": "kendilerine tahsis edilen pay miktarının 12,6 katı olan 673.083.385,00 TL nominal değerli pay talebi gelmiştir"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": "8.5",
+   "source_id": "KAP_929019_EK1",
+   "quote": "kendilerine tahsis edilen pay miktarının 8,5 katı olan 113.804.836,00 TL nominal değerli pay talebi gelmiştir"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "76937237",
+    "domestic_institutional": "42783319",
+    "foreign_institutional": "39146736",
+    "employees": "1570148"
+   },
+   "source_id": "KAP_929019_EK1",
+   "quote": [
+    "Yurt Dışı 13.369.787,00 %10,0 16 113.804.836,00 %10,6 10 39.146.736,00 %24,4 Kurumsal",
+    "Yurt İçi Kurumsal 53.479.148,00 %40,0 326 673.083.385,00 %63,0 199 42.783.319,00 %26,7",
+    "Oluşan 1.336.978,70 %1,0 41 1.810.813,00 %0,2 41 1.570.148,00 %1,0 Yatırımcılar",
+    "Yurt İçi Bireysel 65.511.956,30 %49,0 868.556 280.149.186,00 %26,2 809.966 76.937.237,00 %48,0"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "48.0",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_929019_EK1",
+   "quote": "Yurt İçi Bireysel 65.511.956,30 %49,0 868.556 280.149.186,00 %26,2 809.966 76.937.237,00 %48,0",
+   "note": "planlanan %49,0"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "26.7",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_929019_EK1",
+   "quote": "Yurt İçi Kurumsal 53.479.148,00 %40,0 326 673.083.385,00 %63,0 199 42.783.319,00 %26,7",
+   "note": "planlanan %40,0; izahname 25.2.3.b kapsamında yurt içi kurumsal tahsisatı %20 azaltılmış"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": "24.4",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_929019_EK1",
+   "quote": "Yurt Dışı 13.369.787,00 %10,0 16 113.804.836,00 %10,6 10 39.146.736,00 %24,4 Kurumsal",
+   "note": "planlanan %10,0"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç eki dağıtım yöntemini adlandırmıyor; TSSD indirilmedi"
+  },
+  "lead_broker": {
+   "value": "Garanti Yatırım Menkul Kıymetler A.Ş.",
+   "source_id": "KAP_929022",
+   "basis": "EXPLICIT_CONSORTIUM_LEADER",
+   "quote": "konsorsiyum lideri olarak görev alan aracı kurum Garanti Yatırım Menkul Kıymetler A.Ş.",
+   "note": "Doğan Şirketler Grubu Holding bildirimi (ilgili şirket alanı boş) konsorsiyum liderini açıkça yazıyor; önceki kaynak yalnız sonuç ekini imzalayan kurumdu (KAP_929019_EK1)"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD ve izahname indirilmedi; sonuç belgesinde yok"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD ve izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD ve izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD ve izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "eldeki belgelerde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "eldeki belgelerde yok"
+  }
+ },
+ "codex_check": {
+  "capital_increase_shares": {
+   "codex_value": "0",
+   "verdict": "NOT_APPLICABLE",
+   "note": "SPK bülteni planından; sonuç belgesi ayrım yazmıyor"
+  },
+  "existing_share_sale_shares": {
+   "codex_value": "133.697.870",
+   "verdict": "NOT_APPLICABLE",
+   "note": "SPK bülteni planından; sonuç belgesi 133.697.870'i ortak satışı diye nitelemiyor"
+  },
+  "additional_sale_shares": {
+   "codex_value": "26.739.570",
+   "verdict": "FOUND_SAME"
+  },
+  "lead_broker": {
+   "codex_value": "GARANTİ YATIRIM MENKUL KIYMETLER A.Ş.",
+   "verdict": "FOUND_SAME",
+   "note": "KAP_929022 konsorsiyum lideri olarak açıkça yazıyor; yazım farkı"
+  }
+ },
+ "notes": "Codex f3, arz büyüklüğü, katılımcı ve grup alanlarını bulamamıştı; KAP_929019_EK1'de hepsi var. Arz büyüklüğü 811.018.951,48 TL belgede açık. Yurt içi kurumsal tahsisatı dağıtımda %20 azaltılmış. gözden geçirme: KAP_929022 (Doğan Holding, ilgili şirket alanı boş) eklendi; EK1 KAP_929019_EK1 ile aynı metin, f3 ve diğer değerler değişmedi; lead_broker kaynağı 'konsorsiyum lideri' ifadesini açıkça içeren KAP_929022'ye taşındı (değer aynı).",
+ "needs_search": false
+}

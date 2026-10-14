@@ -1,0 +1,417 @@
+{
+  "rows": [
+    {
+      "model_id": "ceiling_hazard_v0",
+      "question": "CEILING_DAYS",
+      "source": "scores.json",
+      "scale": "backtest",
+      "output": "S",
+      "horizon_or_k": null,
+      "metric": "RPS",
+      "rule_id": "base_km_last10",
+      "label": "birincil",
+      "model_value": 0.1503154628757853,
+      "rule_value": 0.199872469867329,
+      "diff": -0.04955700699154372,
+      "ci95": [
+        -0.07514553916184136,
+        -0.021864379524414897
+      ],
+      "n": 87,
+      "n_months": 24,
+      "wins": 52,
+      "losses": 35,
+      "ties": 0,
+      "verdict": "geçiyor",
+      "file_label": null,
+      "featured": true
+    },
+    {
+      "model_id": "ceiling_hazard_v0",
+      "question": "CEILING_DAYS",
+      "source": "scores.json",
+      "scale": "backtest",
+      "output": "S",
+      "horizon_or_k": null,
+      "metric": "RPS",
+      "rule_id": "base_km_expanding",
+      "label": "birincil",
+      "model_value": 0.1503154628757853,
+      "rule_value": 0.20718022182337753,
+      "diff": -0.05686475894759226,
+      "ci95": [
+        -0.08326250342000621,
+        -0.028645800631111253
+      ],
+      "n": 87,
+      "n_months": 24,
+      "wins": 59,
+      "losses": 28,
+      "ties": 0,
+      "verdict": "geçiyor",
+      "file_label": null,
+      "featured": true
+    },
+    {
+      "model_id": "v1_5_h99",
+      "question": "RETURN",
+      "source": "scores.json",
+      "scale": "backtest",
+      "output": "return",
+      "horizon_or_k": "D5",
+      "metric": "MAE",
+      "rule_id": "base_train_median",
+      "label": "birincil",
+      "model_value": 0.22203575470086492,
+      "rule_value": 0.3059016144209764,
+      "diff": -0.08386585972011146,
+      "ci95": [
+        -0.13431795512649639,
+        -0.0321106934245665
+      ],
+      "n": 87,
+      "n_months": 23,
+      "wins": 58,
+      "losses": 29,
+      "ties": 0,
+      "verdict": "geçiyor",
+      "file_label": null,
+      "featured": true
+    },
+    {
+      "model_id": "v1_5_h99",
+      "question": "ABOVE_IPO",
+      "source": "scores.json",
+      "scale": "backtest",
+      "output": "p_up",
+      "horizon_or_k": "D10",
+      "metric": "Brier",
+      "rule_id": "base_rate",
+      "label": "keşif",
+      "model_value": 0.18834296523191446,
+      "rule_value": 0.2274448733896527,
+      "diff": -0.039101908157738195,
+      "ci95": [
+        -0.07561505127546772,
+        0.002338146272147476
+      ],
+      "n": 81,
+      "n_months": 23,
+      "wins": 52,
+      "losses": 29,
+      "ties": 0,
+      "verdict": "ayırt edilemiyor",
+      "file_label": null,
+      "featured": false
+    },
+    {
+      "model_id": "break_floor_v0",
+      "question": "BREAK_FLOOR",
+      "source": "scores_break.json",
+      "scale": "backtest_break",
+      "output": "p_floor",
+      "horizon_or_k": "F1",
+      "metric": "Brier",
+      "rule_id": "PRODUCT_BREAK_FLOOR",
+      "label": null,
+      "model_value": null,
+      "rule_value": null,
+      "diff": -0.19038429252388073,
+      "ci95": [
+        -0.2520349536711236,
+        -0.12470055611027922
+      ],
+      "n": 69,
+      "n_months": 21,
+      "wins": null,
+      "losses": null,
+      "ties": null,
+      "verdict": null,
+      "file_label": "backtest'te geçiyor (tasarıma maruz)",
+      "featured": true
+    },
+    {
+      "model_id": "break_floor_v0",
+      "question": "BREAK_FLOOR",
+      "source": "scores_break.json",
+      "scale": "backtest_break",
+      "output": "p_floor",
+      "horizon_or_k": "F1",
+      "metric": "Brier",
+      "rule_id": "break_floor_v0@ZERO",
+      "label": null,
+      "model_value": null,
+      "rule_value": null,
+      "diff": -0.02808492786446958,
+      "ci95": [
+        -0.0452816349205337,
+        -0.007396321020727523
+      ],
+      "n": 69,
+      "n_months": 21,
+      "wins": null,
+      "losses": null,
+      "ties": null,
+      "verdict": null,
+      "file_label": "backtest'te geçiyor (tasarıma maruz)",
+      "featured": true
+    }
+  ],
+  "scales": [
+    {
+      "model_id": "ceiling_hazard_v0",
+      "question": "CEILING_DAYS",
+      "backtest_verdicts": [
+        "geçiyor",
+        "geçiyor"
+      ],
+      "backtest_label": null,
+      "backtest_status": "OK",
+      "featured": true,
+      "oot": {
+        "status": "OK",
+        "block": "oot_pre_h99_all",
+        "verdict": "geçemiyor",
+        "n": 130,
+        "rule_id": "base_km_expanding"
+      },
+      "live": {
+        "n_scored": 6,
+        "n_live": 0,
+        "n_late": 6,
+        "n_refused": 1,
+        "n_retro": null,
+        "n_machine": null
+      }
+    },
+    {
+      "model_id": "v1_5_h99",
+      "question": "RETURN",
+      "backtest_verdicts": [
+        "geçiyor"
+      ],
+      "backtest_label": null,
+      "backtest_status": "OK",
+      "featured": true,
+      "oot": {
+        "status": "OK",
+        "block": "oot_pre_h99_all",
+        "verdict": "ayırt edilemiyor",
+        "n": 130,
+        "rule_id": "base_train_median"
+      },
+      "live": {
+        "n_scored": 6,
+        "n_live": 1,
+        "n_late": 5,
+        "n_refused": 1,
+        "n_retro": null,
+        "n_machine": null
+      }
+    },
+    {
+      "model_id": "post_d1_hazard_v0",
+      "question": "POST_D1_BREAK",
+      "backtest_verdicts": [],
+      "backtest_label": null,
+      "backtest_status": "OK",
+      "featured": false,
+      "oot": {
+        "status": "OK",
+        "block": "post_d1_all",
+        "verdict": "geçiyor",
+        "n": 104,
+        "rule_id": "ceiling_hazard_v0"
+      },
+      "live": {
+        "n_scored": 0,
+        "n_live": 0,
+        "n_late": 0,
+        "n_refused": 0,
+        "n_retro": 7,
+        "n_machine": null
+      }
+    },
+    {
+      "model_id": "break_floor_v0",
+      "question": "BREAK_FLOOR",
+      "backtest_verdicts": [],
+      "backtest_label": "backtest'te geçiyor (tasarıma maruz)",
+      "backtest_status": "OK",
+      "featured": true,
+      "oot": {
+        "status": "NO_TEST",
+        "block": null,
+        "verdict": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": 0,
+        "n_live": 0,
+        "n_late": null,
+        "n_refused": 0,
+        "n_retro": 7,
+        "n_machine": 0
+      }
+    }
+  ],
+  "live_rows": [
+    {
+      "ticker": "CITAS",
+      "d1": "2026-08-18",
+      "ceiling": {
+        "class": "LATE_RECORD",
+        "status": "SCORED",
+        "predicted": 5.750308114517438,
+        "realized": 5,
+        "record_source": "REGISTRY"
+      },
+      "d5": {
+        "class": "LATE_RECORD",
+        "status": "SCORED",
+        "predicted": 0.48599035486460374,
+        "realized": "0.60786974219810040705563093622795115332428765264586",
+        "record_source": "REGISTRY"
+      },
+      "post_d1_status": "RETRO",
+      "break_class": "RETRO"
+    },
+    {
+      "ticker": "TKNKA",
+      "d1": "2026-08-20",
+      "ceiling": {
+        "class": "LATE_RECORD",
+        "status": "SCORED",
+        "predicted": 5.146602740274739,
+        "realized": 7,
+        "record_source": "REGISTRY"
+      },
+      "d5": {
+        "class": "LATE_RECORD",
+        "status": "SCORED",
+        "predicted": 0.429314148719538,
+        "realized": "0.60655737704918032786885245901639344262295081967213",
+        "record_source": "REGISTRY"
+      },
+      "post_d1_status": "RETRO",
+      "break_class": "RETRO"
+    },
+    {
+      "ticker": "VEYAS",
+      "d1": "2026-08-20",
+      "ceiling": {
+        "class": "LATE_RECORD",
+        "status": "REFUSED",
+        "predicted": null,
+        "realized": 0,
+        "record_source": "REGISTRY"
+      },
+      "d5": {
+        "class": "LATE_RECORD",
+        "status": "REFUSED",
+        "predicted": null,
+        "realized": "0.014705882352941176470588235294117647058823529411765",
+        "record_source": "REGISTRY"
+      },
+      "post_d1_status": "RETRO",
+      "break_class": "RETRO"
+    },
+    {
+      "ticker": "KPEKS",
+      "d1": "2026-08-21",
+      "ceiling": {
+        "class": "LATE_RECORD",
+        "status": "SCORED",
+        "predicted": 2.844554776534156,
+        "realized": 5,
+        "record_source": "REGISTRY"
+      },
+      "d5": {
+        "class": "LATE_RECORD",
+        "status": "SCORED",
+        "predicted": 0.2040949134778463,
+        "realized": "0.60851063829787234042553191489361702127659574468085",
+        "record_source": "REGISTRY"
+      },
+      "post_d1_status": "RETRO",
+      "break_class": "RETRO"
+    },
+    {
+      "ticker": "INTET",
+      "d1": "2026-09-01",
+      "ceiling": {
+        "class": "LATE_RECORD",
+        "status": "SCORED",
+        "predicted": 2.5655149863789353,
+        "realized": 4,
+        "record_source": "REGISTRY"
+      },
+      "d5": {
+        "class": "LATE_RECORD",
+        "status": "SCORED",
+        "predicted": 0.17523359058729834,
+        "realized": "0.39085820895522388059701492537313432835820895522388",
+        "record_source": "REGISTRY"
+      },
+      "post_d1_status": "RETRO",
+      "break_class": "RETRO"
+    },
+    {
+      "ticker": "BKRGY",
+      "d1": "2026-09-02",
+      "ceiling": {
+        "class": "LATE_RECORD",
+        "status": "SCORED",
+        "predicted": 2.591395604530826,
+        "realized": 0,
+        "record_source": "REGISTRY"
+      },
+      "d5": {
+        "class": "LATE_RECORD",
+        "status": "SCORED",
+        "predicted": 0.1683415153321528,
+        "realized": "-0.31554524361948955916473317865429234338747099767981",
+        "record_source": "REGISTRY"
+      },
+      "post_d1_status": "RETRO",
+      "break_class": "RETRO"
+    },
+    {
+      "ticker": "NETGL",
+      "d1": "2026-09-17",
+      "ceiling": {
+        "class": "LATE_RECORD",
+        "status": "SCORED",
+        "predicted": 3.281147205061138,
+        "realized": 3,
+        "record_source": "REGISTRY"
+      },
+      "d5": {
+        "class": "LIVE",
+        "status": "SCORED",
+        "predicted": 0.25515244136301285,
+        "realized": "0.078369905956112852664576802507836990595611285266458",
+        "record_source": "LEGACY"
+      },
+      "post_d1_status": "RETRO",
+      "break_class": "RETRO"
+    }
+  ],
+  "counts": {
+    "n_rows": 6,
+    "n_pass": 3,
+    "n_undecided": 1,
+    "n_fail": 0,
+    "n_other": 0,
+    "n_no_verdict": 2
+  },
+  "min_n_metric": 10,
+  "min_n_verdict": 30,
+  "n_production": 4,
+  "scores_source": "REPO",
+  "scores_integrity": null,
+  "has_post_d1": true,
+  "has_break": true,
+  "has_oot": true
+}

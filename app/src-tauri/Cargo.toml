@@ -1,0 +1,49 @@
+[package]
+name = "borsai-app"
+version = "0.1.0"
+description = "BorsAi masaüstü uygulaması (SPEC_APP)"
+authors = ["BorsAi"]
+license = "Apache-2.0"
+edition = "2021"
+rust-version = "1.77.2"
+
+[workspace]
+members = [".", "crates/borsai_predict"]
+resolver = "2"
+
+[lib]
+# `_lib` soneki bin adıyla çakışmasın diye (create-tauri-app düzeni).
+name = "borsai_app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+serde_json = { version = "1", features = ["preserve_order", "float_roundtrip"] }
+sha2 = "0.10"
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order", "float_roundtrip"] }
+sha2 = "0.10"
+borsai_predict = { path = "crates/borsai_predict" }
+
+# YALNIZ GELİŞTİRME: ekran görüntüsü komutu (commands/snapshot.rs). Paketler Cargo.lock'ta zaten var
+# (wry bağımlılığı); varsayılan derlemeye girmez.
+[features]
+snapshot = ["dep:objc2", "dep:objc2-web-kit", "dep:objc2-app-kit", "dep:objc2-foundation", "dep:block2"]
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = { version = "0.6", optional = true }
+objc2-web-kit = { version = "0.3", optional = true, default-features = false, features = ["std", "WKWebView", "WKSnapshotConfiguration", "block2", "objc2-app-kit"] }
+objc2-app-kit = { version = "0.3", optional = true, default-features = false, features = ["std", "NSImage", "NSImageRep", "NSBitmapImageRep"] }
+objc2-foundation = { version = "0.3", optional = true, default-features = false, features = ["std", "NSData", "NSDictionary", "NSError", "NSString"] }
+block2 = { version = "0.6", optional = true }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+panic = "abort"
+strip = true

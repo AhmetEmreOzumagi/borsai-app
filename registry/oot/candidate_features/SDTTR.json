@@ -1,0 +1,237 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "SDTTR",
+  "company": "SDT Uzay ve Savunma Teknolojileri A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "838560",
+      "source_id": "KAP_1091533_EK1",
+      "source_document": "KAP 1091533 ek 1",
+      "source_published_at": "2022-12-30T17:16:13+03:00",
+      "source_sha256": "780882381184ecb7f5c336c0f82973817bf71a9cc260e6fe238d28731449e128",
+      "source_path": "registry/oot/source_docs/SDTTR/KAP_1091533_ek1.pdf",
+      "quote": "Toplam 12.250.000 100,0 902.098 250.971.577 100,0 838.560 12.250.000 100,0",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "başvuru sayısı 902.098; talebi karşılanan başvuru 838.560",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "employees": "171",
+        "retail": "838269",
+        "domestic_institutional": "114",
+        "foreign_institutional": "6"
+      },
+      "source_id": "KAP_1091533_EK1",
+      "source_document": "KAP 1091533 ek 1",
+      "source_published_at": "2022-12-30T17:16:13+03:00",
+      "source_sha256": "780882381184ecb7f5c336c0f82973817bf71a9cc260e6fe238d28731449e128",
+      "source_path": "registry/oot/source_docs/SDTTR/KAP_1091533_ek1.pdf",
+      "quote": [
+        "Şirket Çalışanları 122.500 1,0 171 266.200 0,1 171 122.500 1,0",
+        "Yurt İçi Bireysel 6.002.500 49,0 901.771 67.103.563 26,7 838.269 6.002.500 49,0 Yatırımcılar",
+        "Yurt İçi Kurumsal 4.900.000 40,0 150 176.468.814 70,3 114 4.900.000 40,0 Yatırımcılar",
+        "Yurt Dışı Kurumsal 1.225.000 10,0 6 7.133.000 2,8 6 1.225.000 10,0 Yatırımcılar"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "11.2",
+      "source_id": "KAP_1091533_EK1",
+      "source_document": "KAP 1091533 ek 1",
+      "source_published_at": "2022-12-30T17:16:13+03:00",
+      "source_sha256": "780882381184ecb7f5c336c0f82973817bf71a9cc260e6fe238d28731449e128",
+      "source_path": "registry/oot/source_docs/SDTTR/KAP_1091533_ek1.pdf",
+      "quote": "Bireysel Yatırımcılara tahsisat tutarının yaklaşık 11,2 katı",
+      "note": "belge 'yaklaşık' diyor; çalışanlar ayrı 2,2 kat",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "11,2",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "36.0",
+      "source_id": "KAP_1091533_EK1",
+      "source_document": "KAP 1091533 ek 1",
+      "source_published_at": "2022-12-30T17:16:13+03:00",
+      "source_sha256": "780882381184ecb7f5c336c0f82973817bf71a9cc260e6fe238d28731449e128",
+      "source_path": "registry/oot/source_docs/SDTTR/KAP_1091533_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara tahsisat tutarının yaklaşık 36,0 katı",
+      "note": "belge 'yaklaşık' diyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "36,0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "5.8",
+      "source_id": "KAP_1091533_EK1",
+      "source_document": "KAP 1091533 ek 1",
+      "source_published_at": "2022-12-30T17:16:13+03:00",
+      "source_sha256": "780882381184ecb7f5c336c0f82973817bf71a9cc260e6fe238d28731449e128",
+      "source_path": "registry/oot/source_docs/SDTTR/KAP_1091533_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara tahsisat tutarının 5,8 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "5,8",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "employees": "122500",
+        "retail": "6002500",
+        "domestic_institutional": "4900000",
+        "foreign_institutional": "1225000"
+      },
+      "source_id": "KAP_1091533_EK1",
+      "source_document": "KAP 1091533 ek 1",
+      "source_published_at": "2022-12-30T17:16:13+03:00",
+      "source_sha256": "780882381184ecb7f5c336c0f82973817bf71a9cc260e6fe238d28731449e128",
+      "source_path": "registry/oot/source_docs/SDTTR/KAP_1091533_ek1.pdf",
+      "quote": [
+        "Şirket Çalışanları 122.500 1,0 171 266.200 0,1 171 122.500 1,0",
+        "Yurt İçi Bireysel 6.002.500 49,0 901.771 67.103.563 26,7 838.269 6.002.500 49,0 Yatırımcılar",
+        "Yurt İçi Kurumsal 4.900.000 40,0 150 176.468.814 70,3 114 4.900.000 40,0 Yatırımcılar",
+        "Yurt Dışı Kurumsal 1.225.000 10,0 6 7.133.000 2,8 6 1.225.000 10,0 Yatırımcılar"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "49.0",
+      "source_id": "KAP_1091533_EK1",
+      "source_document": "KAP 1091533 ek 1",
+      "source_published_at": "2022-12-30T17:16:13+03:00",
+      "source_sha256": "780882381184ecb7f5c336c0f82973817bf71a9cc260e6fe238d28731449e128",
+      "source_path": "registry/oot/source_docs/SDTTR/KAP_1091533_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 6.002.500 49,0 901.771 67.103.563 26,7 838.269 6.002.500 49,0 Yatırımcılar",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "çalışanlar ayrıca %1,0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "40.0",
+      "source_id": "KAP_1091533_EK1",
+      "source_document": "KAP 1091533 ek 1",
+      "source_published_at": "2022-12-30T17:16:13+03:00",
+      "source_sha256": "780882381184ecb7f5c336c0f82973817bf71a9cc260e6fe238d28731449e128",
+      "source_path": "registry/oot/source_docs/SDTTR/KAP_1091533_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 4.900.000 40,0 150 176.468.814 70,3 114 4.900.000 40,0 Yatırımcılar",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "10.0",
+      "source_id": "KAP_1091533_EK1",
+      "source_document": "KAP 1091533 ek 1",
+      "source_published_at": "2022-12-30T17:16:13+03:00",
+      "source_sha256": "780882381184ecb7f5c336c0f82973817bf71a9cc260e6fe238d28731449e128",
+      "source_path": "registry/oot/source_docs/SDTTR/KAP_1091533_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal 1.225.000 10,0 6 7.133.000 2,8 6 1.225.000 10,0 Yatırımcılar",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "İnfo Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1089540_EK1",
+      "source_document": "KAP 1089540 ek 1",
+      "source_published_at": "2022-12-23T17:47:58+03:00",
+      "source_sha256": "3964d064999fa0215acc7e40dd84ff837f1c28f1e578e7b62437d96f003aadd7",
+      "source_path": "registry/oot/source_docs/SDTTR/KAP_1089540_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek İnfo Yatırım Menkul Değerler A.Ş.'nin",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "İnfo Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim, OCR) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1092297",
+      "source_document": "KAP 1092297",
+      "source_published_at": "2023-01-02T18:10:25+03:00",
+      "source_sha256": "50b86480d91e3f8388941b956be741c58bb813f1b9ab1aed47d2db9a3aa8fa81",
+      "source_path": "registry/oot/source_docs/SDTTR/KAP_1092297_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1092297",
+      "source_document": "KAP 1092297",
+      "source_published_at": "2023-01-02T18:10:25+03:00",
+      "source_sha256": "50b86480d91e3f8388941b956be741c58bb813f1b9ab1aed47d2db9a3aa8fa81",
+      "source_path": "registry/oot/source_docs/SDTTR/KAP_1092297_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1092297": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1092297",
+      "published_at": "2023-01-02T18:10:25+03:00",
+      "sha256": "50b86480d91e3f8388941b956be741c58bb813f1b9ab1aed47d2db9a3aa8fa81",
+      "path": "registry/oot/source_docs/SDTTR/KAP_1092297_bildirim.pdf"
+    },
+    "KAP_1091533_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1091533 ek 1",
+      "published_at": "2022-12-30T17:16:13+03:00",
+      "sha256": "780882381184ecb7f5c336c0f82973817bf71a9cc260e6fe238d28731449e128",
+      "path": "registry/oot/source_docs/SDTTR/KAP_1091533_ek1.pdf"
+    },
+    "KAP_1089540_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1089540 ek 1",
+      "published_at": "2022-12-23T17:47:58+03:00",
+      "sha256": "3964d064999fa0215acc7e40dd84ff837f1c28f1e578e7b62437d96f003aadd7",
+      "path": "registry/oot/source_docs/SDTTR/KAP_1089540_ek1.pdf"
+    }
+  }
+}

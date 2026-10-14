@@ -1,0 +1,42 @@
+# BORSAI_FAZ7_FREEZE_20260927 — test koşuları (sayı, süre)
+
+## 0. Taban (HEAD eda9732; izlenmeyen yalnız docs/prompts/FAZ7_FABLE_C_SPEC.md, docs/prompts/FAZ7_FREEZE.md)
+- .venv/bin/pytest -q                       : 712 passed in 450.67s (0:07:30)
+- app/parity/gen_golden.py --check          : {"checked": 25, "different": []}
+- bash app/scripts/test.sh                  : exit 0, 35 s; cargo 94 passed / 0 failed (3 e2e adıyla atlandı), npm 222 passed (16 dosya), parity pytest 4 passed, golden_unchanged YEŞİL (U46)
+
+## 1. K öncesi (çalışma ağacı; K commit'lenmeden; HEAD 4fe4e51 = paralel Fable (C) commit'i, borsai/ dokunmadı)
+- .venv/bin/pytest -q -rf                   : 726 passed, 3 failed in 677.91s (0:11:17)
+  kırmızılar yalnız temizlik bekçileri, nedeni commit'lenmemiş data/raw/tuik/build_tufe_csv.py (K5):
+    tests/test_guardrails.py::test_legacy_and_data_have_no_working_tree_changes
+    tests/test_faz5_post_d1.py::test_14_models_goldens_and_read_only_paths_unchanged
+    tests/test_scoring.py::test_faz4_scores_json_existing_blocks_unchanged
+  (bu koşudan sonra iki testte dondurma sonrası uyarlama düzeltildi: test_14 satır sonu, check_schema(committed); K sonrası tam koşu kapsar)
+- app/parity/gen_golden.py --check          : {"checked": 25, "different": []}
+- bash app/scripts/test.sh                  : exit 0, 37 s; cargo 94 passed / 0 failed, npm 222 passed, parity 4 passed, U46 YEŞİL
+
+## Prova (geçici klon, silinecek): K + gerçek `borsai.freeze --models …` + F1 commit'i sonrası tam pytest
+- K'sız ilk prova (HEAD eda9732 + önizlemelerden INDEX'e 4 giriş): 22 failed, 690 passed (491 s) — "19 model" varsayımları, skor karşılaştırmaları
+- K'lı prova: 4 failed, 725 passed (714 s) — 2'si MODELS.md'nin F1 sonrası yeniden üretilmemesi (F2'nin işi), 2'si uyarlama düzeltmesi (yukarıda); düzeltmeler klonda 2/2 yeşil
+
+## 2. K sonrası (HEAD d903ab1, ağaç temiz, seçimsiz)
+- .venv/bin/pytest -q -rf                   : 729 passed in 516.15s (0:08:36)
+
+## 3. F1 (66adbca) sonrası — ağaçta yalnız docs/MODELS.md yeniden üretilmiş (INDEX'in 4 yeni satırı), commit'lenmemiş
+- .venv/bin/pytest -q -rf                   : 729 passed in 504.93s (0:08:24)   (test_outcome_guard sıra bekçisi, test_models, Faz 1B/4/5 bekçileri dahil)
+- Hızlı kontrol F1 commit'inden önce (tests/test_faz7_golden.py tests/test_faz7_model.py): 36 passed, 1 failed
+  (test_models_dir_unchanged'in son satırı `git status -- models` boş değil: dosyalar henüz commit'lenmemişti; F1 sonrası yeşil)
+- Uygulama, yeniden pin ÖNCESİ (F1 = 66adbca):
+  - gen_golden --check                      : {"checked": 25, "different": ["golden/MANIFEST.json"]}  (models_index_sha256)
+  - bash app/scripts/test.sh                : exit 101 (ilk hata: build_embed::plan_pins_first_19_index_entries)
+  - cargo test --workspace --no-fail-fast   : 92 passed, 2 failed (build_embed::plan_pins_first_19_index_entries, stage3::wizard_fixtures)
+  - pytest app/parity/test_gen_golden.py    : 3 passed, 1 failed (test_golden_files_are_reproducible: MANIFEST)
+  - npm test                                : 222 passed (16 dosya)
+- Uygulama, yeniden pin SONRASI (APPPIN = 7133991; proje sahibi kararı, SPEC_DEVIATIONS J31):
+  - gen_golden --check                      : {"checked": 25, "different": []}
+  - bash app/scripts/test.sh                : exit 0, 32 s; cargo 94 passed / 0 failed, npm 222 passed, parity 4 passed, U46 YEŞİL
+
+## 4. F2 öncesi (HEAD 7133991 = APPPIN; ağaçta F2 değişiklikleri: report_faz7 dondurma notu, MODELS.md, test_faz7_frozen.py, rapor)
+- .venv/bin/pytest -q -rf                   : 741 passed in 502.77s (0:08:22)
+- app/parity/gen_golden.py --check          : {"checked": 25, "different": []}
+- bash app/scripts/test.sh                  : exit 0, 55 s; cargo 94 passed / 0 failed, npm 222 passed, parity 4 passed, U46 YEŞİL

@@ -1,0 +1,301 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "CITAS",
+  "company": "Çitlekçi Mağazacılık Gıda A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-22T14:48:03+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul ve aracı kurum) ve SPK bülteni; hepsi ilk işlem gününden önce yayımlanmış.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok.",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok.",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0) (H99 PB CSV tanımı), resmi belgede açıkça yazan toplamla çapraz denetlendi.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı."
+  ],
+  "first_trading_date_source": "KAP_1649391",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "73.7",
+      "source_id": "KAP_1649026",
+      "source_document": "KAP 1649026",
+      "source_published_at": "2026-08-13T13:12:37+03:00",
+      "source_sha256": "e8481bbc10c40a284db6e70a97598d678ff5000d0f3f191c4ba78da05c38dd21",
+      "source_path": "registry/source_docs/CITAS/KAP_1649026_bildirim.pdf",
+      "quote": "HALKA ARZ FİYATI 73,7",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2026_49",
+          "quote": "73,70 TL sabit fiyat"
+        },
+        {
+          "source_id": "KAP_1649391",
+          "quote": "Baz Fiyat (TL) 73,7"
+        }
+      ]
+    },
+    "shares_offered": {
+      "value": "36500000",
+      "source_id": "KAP_1649026",
+      "source_document": "KAP 1649026",
+      "source_published_at": "2026-08-13T13:12:37+03:00",
+      "source_sha256": "e8481bbc10c40a284db6e70a97598d678ff5000d0f3f191c4ba78da05c38dd21",
+      "source_path": "registry/source_docs/CITAS/KAP_1649026_bildirim.pdf",
+      "quote": "SATIŞA SUNULAN PAY ADEDİ 36.500.000",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1649026_EK1",
+          "quote": "toplam 36.500.000 TL nominal değerli paylar dağıtıma konu edilerek satış gerçekleştirilmiştir"
+        },
+        {
+          "source_id": "KAP_1649391",
+          "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 36.500.000"
+        }
+      ]
+    },
+    "ipo_size_tl": {
+      "value": "2690050000",
+      "source_id": "KAP_1649026",
+      "source_document": "KAP 1649026",
+      "source_published_at": "2026-08-13T13:12:37+03:00",
+      "source_sha256": "e8481bbc10c40a284db6e70a97598d678ff5000d0f3f191c4ba78da05c38dd21",
+      "source_path": "registry/source_docs/CITAS/KAP_1649026_bildirim.pdf",
+      "quote": "HALKA ARZ BÜYÜKLÜĞÜ (TL) 2.690.050.000",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1649026_EK1",
+          "quote": "Çitlekçi 2.690.050.000 TL halka arz büyüklüğüne sahip"
+        }
+      ]
+    },
+    "post_ipo_share_capital": {
+      "value": "180000000",
+      "source_id": "KAP_1649391",
+      "source_document": "KAP 1649391",
+      "source_published_at": "2026-08-13T18:10:49+03:00",
+      "source_sha256": "cb64822ec9d33d44373f746b55b68dea379f2106f6d6b268f6b2afc0106c47fa",
+      "source_path": "registry/source_docs/CITAS/KAP_1649391_bildirim.pdf",
+      "quote": "sermayesini temsil eden 180.000.000 TL nominal değerli payları",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2026_49",
+          "quote": "Gıda AŞ 150.000.000 180.000.000 30.000.000 -"
+        }
+      ]
+    },
+    "capital_increase_shares": {
+      "value": "30000000",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/CITAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Gıda AŞ 150.000.000 180.000.000 30.000.000 -",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1649026_EK1",
+          "quote": "sermaye artırımı ve ortak satışı kapsamında satışa sunulan toplam 36.500.000 TL nominal değerli paylar dağıtıma konu edilerek satış gerçekleştirilmiştir"
+        }
+      ],
+      "locator": "SPK tablosu Bedelli sütunu; sonuç belgesi satışa sunulan payların tamamının satıldığını yazar"
+    },
+    "existing_share_sale_shares": {
+      "value": "6500000",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/CITAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Tunçlar Yatırım Holding AŞ’ye ait 6.500.000 TL nominal değerli B grubu payların satışı",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1649026_EK1",
+          "quote": "sermaye artırımı ve ortak satışı kapsamında satışa sunulan toplam 36.500.000 TL nominal değerli paylar dağıtıma konu edilerek satış gerçekleştirilmiştir"
+        }
+      ]
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/CITAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "30.000.000 - 6.500.000 (1) - 73,70",
+      "locator": "SPK tablosu Ek Pay Satışı sütunu '-': onaylı ek satış yok"
+    },
+    "total_demand_multiple": {
+      "value": "7.83",
+      "source_id": "KAP_1649026_EK1",
+      "source_document": "KAP 1649026 ek 1",
+      "source_published_at": "2026-08-13T13:12:37+03:00",
+      "source_sha256": "f88675a19cc4f3e5907259038d1e5113737d82319f28928dc1c5f3382970d02a",
+      "source_path": "registry/source_docs/CITAS/KAP_1649026_ek1.pdf",
+      "quote": "Toplam halka arz büyüklüğünün yaklaşık 7,83 katı 285.705.992 TL nominal talep toplanmıştır",
+      "origin": "SOURCE_REPORTED_APPROX"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_1649026_EK1",
+      "source_document": "KAP 1649026 ek 1",
+      "source_published_at": "2026-08-13T13:12:37+03:00",
+      "source_sha256": "f88675a19cc4f3e5907259038d1e5113737d82319f28928dc1c5f3382970d02a",
+      "source_path": "registry/source_docs/CITAS/KAP_1649026_ek1.pdf",
+      "locator": "belgede 'filtre' ifadesi yok (H99 kuralı: açık ifade yoksa NOT_SPECIFIED)"
+    },
+    "first_trading_date": {
+      "value": "2026-08-18",
+      "source_id": "KAP_1649391",
+      "source_document": "KAP 1649391",
+      "source_published_at": "2026-08-13T18:10:49+03:00",
+      "source_sha256": "cb64822ec9d33d44373f746b55b68dea379f2106f6d6b268f6b2afc0106c47fa",
+      "source_path": "registry/source_docs/CITAS/KAP_1649391_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 18/08/2026"
+    },
+    "bookbuilding_start": {
+      "value": "2026-08-10",
+      "source_id": "KAP_1649391",
+      "source_document": "KAP 1649391",
+      "source_published_at": "2026-08-13T18:10:49+03:00",
+      "source_sha256": "cb64822ec9d33d44373f746b55b68dea379f2106f6d6b268f6b2afc0106c47fa",
+      "source_path": "registry/source_docs/CITAS/KAP_1649391_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 10-12/08/2026",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1649026_EK1",
+          "quote": "10-11-12 Ağustos 2026"
+        }
+      ]
+    },
+    "bookbuilding_end": {
+      "value": "2026-08-12",
+      "source_id": "KAP_1649391",
+      "source_document": "KAP 1649391",
+      "source_published_at": "2026-08-13T18:10:49+03:00",
+      "source_sha256": "cb64822ec9d33d44373f746b55b68dea379f2106f6d6b268f6b2afc0106c47fa",
+      "source_path": "registry/source_docs/CITAS/KAP_1649391_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 10-12/08/2026",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1649026_EK1",
+          "quote": "10-11-12 Ağustos 2026"
+        }
+      ]
+    },
+    "ipo_price_try": {
+      "value": "73.70",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/CITAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "73,70 TL sabit fiyat",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "150000000",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/CITAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Gıda AŞ 150.000.000 180.000.000 30.000.000 -",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)"
+    },
+    "planned_post_ipo_capital": {
+      "value": "180000000",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/CITAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Gıda AŞ 150.000.000 180.000.000 30.000.000 -",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)"
+    },
+    "planned_capital_increase_shares": {
+      "value": "30000000",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/CITAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Gıda AŞ 150.000.000 180.000.000 30.000.000 -",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)"
+    },
+    "planned_existing_share_sale": {
+      "value": "6500000",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/CITAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Tunçlar Yatırım Holding AŞ’ye ait 6.500.000 TL nominal değerli",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/CITAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "30.000.000 - 6.500.000 (1) - 73,70",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)"
+    },
+    "planned_base_offer_shares": {
+      "value": "36500000",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/CITAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Gıda AŞ 150.000.000 180.000.000 30.000.000 -",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1649026_EK1",
+          "quote": "Toplam 36.500.000 100,00%"
+        }
+      ],
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz); çapraz denetim açıkça yazan resmi toplamla"
+    },
+    "planned_max_offer_shares": {
+      "value": "36500000",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/CITAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Gıda AŞ 150.000.000 180.000.000 30.000.000 -",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı"
+    }
+  },
+  "sources": {
+    "KAP_1649026": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1649026",
+      "published_at": "2026-08-13T13:12:37+03:00",
+      "sha256": "e8481bbc10c40a284db6e70a97598d678ff5000d0f3f191c4ba78da05c38dd21",
+      "path": "registry/source_docs/CITAS/KAP_1649026_bildirim.pdf"
+    },
+    "KAP_1649026_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1649026 ek 1",
+      "published_at": "2026-08-13T13:12:37+03:00",
+      "sha256": "f88675a19cc4f3e5907259038d1e5113737d82319f28928dc1c5f3382970d02a",
+      "path": "registry/source_docs/CITAS/KAP_1649026_ek1.pdf"
+    },
+    "KAP_1649391": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1649391",
+      "published_at": "2026-08-13T18:10:49+03:00",
+      "sha256": "cb64822ec9d33d44373f746b55b68dea379f2106f6d6b268f6b2afc0106c47fa",
+      "path": "registry/source_docs/CITAS/KAP_1649391_bildirim.pdf"
+    },
+    "SPK_BULTEN_2026_49": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2026/49",
+      "published_at": "2026-08-05T22:56:18+03:00",
+      "sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "path": "registry/source_docs/CITAS/SPK_BULTEN_2026-49.pdf"
+    }
+  }
+}

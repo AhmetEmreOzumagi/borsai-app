@@ -1,0 +1,323 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "PLTUR",
+  "company": "Platform Turizm Taşımacılık Gıda İnşaat Temizlik Hizmetleri Sanayi ve Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1086666",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "9.1",
+      "source_id": "KAP_1086666",
+      "source_document": "KAP 1086666",
+      "source_published_at": "2022-12-12T18:10:33+03:00",
+      "source_sha256": "be7540992fda1d22076f30ba92f8091946b0c1080182f01a40808938a30666e3",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086666_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 9,1",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2022_66",
+          "quote": "Platform Turizm Taşımacılık 24.750.000 9,10 Gıda İnşaat Temizlik Hizmetleri 220.000.000 244.750.000 24.750.000 - - (3) (4) Sanayi ve Ticaret A.Ş.",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "49500000",
+      "source_id": "KAP_1086666",
+      "source_document": "KAP 1086666",
+      "source_published_at": "2022-12-12T18:10:33+03:00",
+      "source_sha256": "be7540992fda1d22076f30ba92f8091946b0c1080182f01a40808938a30666e3",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086666_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 49.500.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "244750000",
+      "source_id": "KAP_1086666",
+      "source_document": "KAP 1086666",
+      "source_published_at": "2022-12-12T18:10:33+03:00",
+      "source_sha256": "be7540992fda1d22076f30ba92f8091946b0c1080182f01a40808938a30666e3",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086666_bildirim.pdf",
+      "quote": "sermayesini temsil eden 244.750.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "24750000",
+      "source_id": "KAP_1086587_EK1",
+      "source_document": "KAP 1086587 ek 1",
+      "source_published_at": "2022-12-12T12:18:59+03:00",
+      "source_sha256": "ce88eda02dc500a1214f886d509d7327a04a0a5fd6c2a13c8da86174e3482acc",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086587_ek1.pdf",
+      "quote": "Platform Turizm’in sermayesinin 220.000.000 TL’den 244.750.000 TL’ye çıkarılması nedeniyle artırılan 24.750.000 TL nominal değerli 24.750.000 adet pay",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "existing_share_sale_shares": {
+      "value": "24750000",
+      "source_id": "KAP_1086587_EK1",
+      "source_document": "KAP 1086587 ek 1",
+      "source_published_at": "2022-12-12T12:18:59+03:00",
+      "source_sha256": "ce88eda02dc500a1214f886d509d7327a04a0a5fd6c2a13c8da86174e3482acc",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086587_ek1.pdf",
+      "quote": "mevcut ortakların sahip olduğu 24.750.000 TL nominal değerli 24.750.000 adet pay olmak üzere toplam 49.500.000 TL nominal değerli 49.500.000 adet pay halka arz edilmiştir.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "3.7",
+      "source_id": "KAP_1086587_EK1",
+      "source_document": "KAP 1086587 ek 1",
+      "source_published_at": "2022-12-12T12:18:59+03:00",
+      "source_sha256": "ce88eda02dc500a1214f886d509d7327a04a0a5fd6c2a13c8da86174e3482acc",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086587_ek1.pdf",
+      "quote": "talep sonucunda halka arz büyüklüğünün toplamda 3,7 katına denk gelen 1,6 milyar TL karşılığı filtre edilmemiş 180.704.973 TL nominal değerli talep gelmiştir.",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (filtre edilmemiş talep / halka arz büyüklüğü)",
+      "denominator_includes_additional_sale": false,
+      "note": "arz 49.500.000 = sermaye artırımı 24.750.000 + ortak satışı 24.750.000; SPK satırında ek pay satışı '-'. Aynı cümledeki nominaller 180.704.973 / 49.500.000 = 3,65 (belge 3,7 yazıyor). Borsada satış yöntemi ama belge katı açıkça yazıyor",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_1086587_EK1",
+      "source_document": "KAP 1086587 ek 1",
+      "source_published_at": "2022-12-12T12:18:59+03:00",
+      "source_sha256": "ce88eda02dc500a1214f886d509d7327a04a0a5fd6c2a13c8da86174e3482acc",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086587_ek1.pdf",
+      "quote": "halka arz büyüklüğünün toplamda 3,7 katına denk gelen 1,6 milyar TL karşılığı filtre edilmemiş 180.704.973 TL nominal değerli talep gelmiştir.",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1086587_EK1",
+      "source_document": "KAP 1086587 ek 1",
+      "source_published_at": "2022-12-12T12:18:59+03:00",
+      "source_sha256": "ce88eda02dc500a1214f886d509d7327a04a0a5fd6c2a13c8da86174e3482acc",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086587_ek1.pdf",
+      "quote": "toplam 630.866 yatırımcı 49.500.000 TL nominal değerli payın alımını gerçekleştirmiştir.",
+      "zero_from_statement": true,
+      "note": "satılan toplam 49.500.000 = SPK planlanan taban (bedelli 24.750.000 + mevcut pay satışı 24.750.000); SPK satırında ek pay satışı '-'",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": "450450000",
+      "source_id": "KAP_1086587_EK1",
+      "source_document": "KAP 1086587 ek 1",
+      "source_published_at": "2022-12-12T12:18:59+03:00",
+      "source_sha256": "ce88eda02dc500a1214f886d509d7327a04a0a5fd6c2a13c8da86174e3482acc",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086587_ek1.pdf",
+      "quote": "belirlenen halka arz fiyatı ile halka arz büyüklüğü 450.450.000 TL olarak gerçekleşmiştir.",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "9.10",
+      "source_id": "SPK_BULTEN_2022_66",
+      "source_document": "SPK Bülteni 2022/66",
+      "source_published_at": "2022-12-02T23:59:59+03:00",
+      "source_sha256": "5bc869a38713b84989fe2d136692838b0538b348bc957cdf5816ff19580feab5",
+      "source_path": "registry/oot/source_docs/PLTUR/SPK_BULTEN_2022-66.pdf",
+      "quote": "Platform Turizm Taşımacılık 24.750.000 9,10 Gıda İnşaat Temizlik Hizmetleri 220.000.000 244.750.000 24.750.000 - - (3) (4) Sanayi ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2022-12-02",
+        "bookbuilding_start": "2022-12-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "220000000",
+      "source_id": "SPK_BULTEN_2022_66",
+      "source_document": "SPK Bülteni 2022/66",
+      "source_published_at": "2022-12-02T23:59:59+03:00",
+      "source_sha256": "5bc869a38713b84989fe2d136692838b0538b348bc957cdf5816ff19580feab5",
+      "source_path": "registry/oot/source_docs/PLTUR/SPK_BULTEN_2022-66.pdf",
+      "quote": "Platform Turizm Taşımacılık 24.750.000 9,10 Gıda İnşaat Temizlik Hizmetleri 220.000.000 244.750.000 24.750.000 - - (3) (4) Sanayi ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-12-02",
+        "bookbuilding_start": "2022-12-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "244750000",
+      "source_id": "SPK_BULTEN_2022_66",
+      "source_document": "SPK Bülteni 2022/66",
+      "source_published_at": "2022-12-02T23:59:59+03:00",
+      "source_sha256": "5bc869a38713b84989fe2d136692838b0538b348bc957cdf5816ff19580feab5",
+      "source_path": "registry/oot/source_docs/PLTUR/SPK_BULTEN_2022-66.pdf",
+      "quote": "Platform Turizm Taşımacılık 24.750.000 9,10 Gıda İnşaat Temizlik Hizmetleri 220.000.000 244.750.000 24.750.000 - - (3) (4) Sanayi ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-12-02",
+        "bookbuilding_start": "2022-12-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "24750000",
+      "source_id": "SPK_BULTEN_2022_66",
+      "source_document": "SPK Bülteni 2022/66",
+      "source_published_at": "2022-12-02T23:59:59+03:00",
+      "source_sha256": "5bc869a38713b84989fe2d136692838b0538b348bc957cdf5816ff19580feab5",
+      "source_path": "registry/oot/source_docs/PLTUR/SPK_BULTEN_2022-66.pdf",
+      "quote": "Platform Turizm Taşımacılık 24.750.000 9,10 Gıda İnşaat Temizlik Hizmetleri 220.000.000 244.750.000 24.750.000 - - (3) (4) Sanayi ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2022-12-02",
+        "bookbuilding_start": "2022-12-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "24750000",
+      "source_id": "SPK_BULTEN_2022_66",
+      "source_document": "SPK Bülteni 2022/66",
+      "source_published_at": "2022-12-02T23:59:59+03:00",
+      "source_sha256": "5bc869a38713b84989fe2d136692838b0538b348bc957cdf5816ff19580feab5",
+      "source_path": "registry/oot/source_docs/PLTUR/SPK_BULTEN_2022-66.pdf",
+      "quote": "Platform Turizm Taşımacılık 24.750.000 9,10 Gıda İnşaat Temizlik Hizmetleri 220.000.000 244.750.000 24.750.000 - - (3) (4) Sanayi ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-12-02",
+        "bookbuilding_start": "2022-12-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "49500000",
+      "source_id": "SPK_BULTEN_2022_66",
+      "source_document": "SPK Bülteni 2022/66",
+      "source_published_at": "2022-12-02T23:59:59+03:00",
+      "source_sha256": "5bc869a38713b84989fe2d136692838b0538b348bc957cdf5816ff19580feab5",
+      "source_path": "registry/oot/source_docs/PLTUR/SPK_BULTEN_2022-66.pdf",
+      "quote": "Platform Turizm Taşımacılık 24.750.000 9,10 Gıda İnşaat Temizlik Hizmetleri 220.000.000 244.750.000 24.750.000 - - (3) (4) Sanayi ve Ticaret A.Ş.",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-12-02",
+        "bookbuilding_start": "2022-12-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2022_66",
+      "source_document": "SPK Bülteni 2022/66",
+      "source_published_at": "2022-12-02T23:59:59+03:00",
+      "source_sha256": "5bc869a38713b84989fe2d136692838b0538b348bc957cdf5816ff19580feab5",
+      "source_path": "registry/oot/source_docs/PLTUR/SPK_BULTEN_2022-66.pdf",
+      "quote": "Platform Turizm Taşımacılık 24.750.000 9,10 Gıda İnşaat Temizlik Hizmetleri 220.000.000 244.750.000 24.750.000 - - (3) (4) Sanayi ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2022-12-02",
+        "bookbuilding_start": "2022-12-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "49500000",
+      "source_id": "SPK_BULTEN_2022_66",
+      "source_document": "SPK Bülteni 2022/66",
+      "source_published_at": "2022-12-02T23:59:59+03:00",
+      "source_sha256": "5bc869a38713b84989fe2d136692838b0538b348bc957cdf5816ff19580feab5",
+      "source_path": "registry/oot/source_docs/PLTUR/SPK_BULTEN_2022-66.pdf",
+      "quote": "Platform Turizm Taşımacılık 24.750.000 9,10 Gıda İnşaat Temizlik Hizmetleri 220.000.000 244.750.000 24.750.000 - - (3) (4) Sanayi ve Ticaret A.Ş.",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-12-02",
+        "bookbuilding_start": "2022-12-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2022-12-14",
+      "source_id": "KAP_1086666",
+      "source_document": "KAP 1086666",
+      "source_published_at": "2022-12-12T18:10:33+03:00",
+      "source_sha256": "be7540992fda1d22076f30ba92f8091946b0c1080182f01a40808938a30666e3",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086666_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 14/12/2022",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2022-12-08",
+      "source_id": "KAP_1086666",
+      "source_document": "KAP 1086666",
+      "source_published_at": "2022-12-12T18:10:33+03:00",
+      "source_sha256": "be7540992fda1d22076f30ba92f8091946b0c1080182f01a40808938a30666e3",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086666_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 08-09/12/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2022-12-09",
+      "source_id": "KAP_1086666",
+      "source_document": "KAP 1086666",
+      "source_published_at": "2022-12-12T18:10:33+03:00",
+      "source_sha256": "be7540992fda1d22076f30ba92f8091946b0c1080182f01a40808938a30666e3",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086666_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 08-09/12/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1086666": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1086666",
+      "published_at": "2022-12-12T18:10:33+03:00",
+      "sha256": "be7540992fda1d22076f30ba92f8091946b0c1080182f01a40808938a30666e3",
+      "path": "registry/oot/source_docs/PLTUR/KAP_1086666_bildirim.pdf"
+    },
+    "SPK_BULTEN_2022_66": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2022/66",
+      "published_at": "2022-12-02T23:59:59+03:00",
+      "sha256": "5bc869a38713b84989fe2d136692838b0538b348bc957cdf5816ff19580feab5",
+      "path": "registry/oot/source_docs/PLTUR/SPK_BULTEN_2022-66.pdf"
+    },
+    "KAP_1086587_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1086587 ek 1",
+      "published_at": "2022-12-12T12:18:59+03:00",
+      "sha256": "ce88eda02dc500a1214f886d509d7327a04a0a5fd6c2a13c8da86174e3482acc",
+      "path": "registry/oot/source_docs/PLTUR/KAP_1086587_ek1.pdf"
+    }
+  }
+}

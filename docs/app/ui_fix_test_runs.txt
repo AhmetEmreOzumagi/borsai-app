@@ -1,0 +1,33 @@
+BORSAI_FAZ9_UI_FIX_20261004 — test günlüğü (yerel koşular; push yok)
+
+TABAN b045e71 (= origin/main), ağaç temiz (izinli izlenmeyenler: docs/prompts/FAZ9_UI_FIX.md, TUFE_2026_09.md, FAZ10_FABLE_STREAK_SPEC.md)
+
+[adım 0] .venv/bin/pytest -q -n 6 --dist loadgroup            → 952 passed in 589.93s (0:09:49)
+[adım 0] bash app/scripts/test.sh                              → cargo 161 passed / 0 failed; vitest 24 dosya, 365 test; parity 8 passed; golden_unchanged YEŞİL
+[adım 0] .venv/bin/python app/parity/gen_golden.py --check     → {"checked": 35, "different": []}
+
+[adım 1] prova klonu (git clone --local), yalnız test_5c, yeni _app_ui_commits_only (APP_TASKS):
+         (i) temiz: 1 passed · (ii) commit'siz app/: 1 passed · (iii) BORSAI_FAZ9_UI_FIX_A: commit: 1 passed
+         (iv) BORSAI_PROVA_X: commit: 1 failed (konu öneki) · (v) app/parity değişikliği: 1 failed ("app/parity")
+         (vi) BORSAI_FAZ9_UI_FIX_C: sonrası commit'siz app/: 1 failed (" M app/README.md") · (vi-b) C sonrası temiz: 1 passed
+
+[adım 2, A öncesi] BORSAI_REPO=… BORSAI_UPDATE_UI_FIXTURES=1 cargo test --test sade -- --include-ignored → 13 passed (fixture'lar yenilendi)
+[adım 2, A öncesi] npx vitest run                               → 24 dosya, 376 test passed
+[adım 2, A öncesi] .venv/bin/pytest -q -n 6 --dist loadgroup --deselect tests/test_faz8_break.py::test_14b_old_specs_models_and_cutoff_unchanged
+                                                               → 951 passed in 644.49s (0:10:44), 1 deselected
+[adım 2, A öncesi] bash app/scripts/test.sh                    → cargo 164 passed / 0 failed; vitest 376; parity 8; golden_unchanged YEŞİL
+[adım 2, A öncesi] gen_golden --check                          → {"checked": 35, "different": []}
+[adım 2, A sonrası 317304a, temiz ağaç] pytest test_5c + test_14b tek başına → 2 passed in 4.43s
+
+[adım 3] bash app/scripts/screens_v2.sh                        → 26 görüntü, zz_demo_error yok; "asıl repo registry/ ve data/ sha listesi öncesiyle aynı"
+         (1024 × 680 yatay kaydırma denetimi: Monitör, Analiz liste, Model performansı, Sicil, Kayıtlarım, Analiz NETGL, Giriş — geçti)
+
+[adım 4] npm run tauri build -- --bundles app (HEAD b2a861b)   → BorsAi.app 8.4 MB; borsai-app sha256 81a7d329e9661917b07272b4bfcaf92a32abf44ca6ff64600d828da60eef6860
+
+[adım 5, son kabul, HEAD b2a861b, temiz ağaç]
+         .venv/bin/pytest -q (sıralı, ayrılan yok)              → 952 passed in 1120.82s (0:18:40) — ayrılan yok (derleme ve test.sh ile eşzamanlı; nohup)
+         bash app/scripts/test.sh                              → cargo 164 passed / 0 failed; vitest 24 dosya, 376 test; parity 8 passed; golden_unchanged YEŞİL
+         .venv/bin/python app/parity/gen_golden.py --check     → {"checked": 35, "different": []}
+
+Hijyen (registry/oot/cohort_pre_h99.csv 64 SEALED kodu, sözcük sınırı, büyük/küçük harf duyarlı; th[bm]+8 hane):
+         A öncesi 36 metin dosyası → 0 bulgu · C öncesi 64 dosya (38 metin, 26 ikili) → 0 bulgu

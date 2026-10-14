@@ -1,0 +1,131 @@
+{
+  "case_reports": {
+    "BKRGY": {
+      "eligibility_columns_compared": 16,
+      "evidence_columns_compared": 16,
+      "frozen_manifest_packet_sha256_matches": null,
+      "gate_report_status": "POST_BOOKBUILD_V1_5_GATES_PASSED_READY_TO_FREEZE",
+      "ledger_columns_compared": 34,
+      "recomputed_packet_sha256": "1e72653af9e3c44c2e8755908ac7574f5d36ce8a39697bd12767f854bf4f71c6"
+    },
+    "INTET": {
+      "eligibility_columns_compared": 16,
+      "evidence_columns_compared": 16,
+      "frozen_manifest_packet_sha256_matches": null,
+      "gate_report_status": "POST_BOOKBUILD_V1_5_GATES_PASSED_READY_TO_FREEZE",
+      "ledger_columns_compared": 34,
+      "recomputed_packet_sha256": "7d1f290806debcf0289a812695b14925bdda9b8b5999432f8878afb1b47502e7"
+    }
+  },
+  "cases_replayed": [
+    "BKRGY",
+    "INTET"
+  ],
+  "historical_training_target_access": {
+    "master_path": "artifacts/ipo_master/historical99/HISTORICAL99_FROZEN_COHORT_V1/canonical/HISTORICAL99_FROZEN_COHORT_V1_canonical_pretrade_master.csv",
+    "master_rows": 99,
+    "master_sha256": "573f4c77c5ac9f9d3aaf7715a5b054ff412991120c73f2c03065521c7fc9173b",
+    "note": "counts and file hashes only; no individual R_h/Y_h value read, printed, or serialized by this harness",
+    "target_path": "artifacts/outcomes/historical99/HISTORICAL99_FROZEN_COHORT_V1/OFFICIAL_BIST_OUTCOME_V1/canonical/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_d1_d3_d5_d10_targets.csv",
+    "target_rows": 396,
+    "target_sha256": "64dce0bb3b2aff28f5dfd5f335da8f423a5cf0839430cac1df200bfed4417f9c"
+  },
+  "mismatch_count": 9,
+  "mismatches": [
+    {
+      "artifact": "frozen_prediction_ledger",
+      "column": "ridge_point_prediction_return",
+      "frozen_value": "0.066104265198569254",
+      "horizon": "D1",
+      "match": "MISMATCH",
+      "replay_value": "0.066104265198569268",
+      "ticker": "BKRGY"
+    },
+    {
+      "artifact": "frozen_prediction_ledger",
+      "column": "ridge_point_prediction_return",
+      "frozen_value": "0.1432792430364192",
+      "horizon": "D3",
+      "match": "MISMATCH",
+      "replay_value": "0.14327924303641923",
+      "ticker": "BKRGY"
+    },
+    {
+      "artifact": "frozen_prediction_ledger",
+      "column": "logistic_probability_above_ipo_raw",
+      "frozen_value": "0.69801187368060746",
+      "horizon": "D3",
+      "match": "MISMATCH",
+      "replay_value": "0.69801187368060735",
+      "ticker": "BKRGY"
+    },
+    {
+      "artifact": "frozen_prediction_ledger",
+      "column": "ridge_point_prediction_return",
+      "frozen_value": "0.16834151533215258",
+      "horizon": "D5",
+      "match": "MISMATCH",
+      "replay_value": "0.16834151533215264",
+      "ticker": "BKRGY"
+    },
+    {
+      "artifact": "frozen_prediction_ledger",
+      "column": "ridge_point_prediction_return",
+      "frozen_value": "0.063650349829948771",
+      "horizon": "D10",
+      "match": "MISMATCH",
+      "replay_value": "0.063650349829948716",
+      "ticker": "BKRGY"
+    },
+    {
+      "artifact": "frozen_prediction_ledger",
+      "column": "ridge_point_prediction_return",
+      "frozen_value": "0.17523359058729854",
+      "horizon": "D5",
+      "match": "MISMATCH",
+      "replay_value": "0.17523359058729848",
+      "ticker": "INTET"
+    },
+    {
+      "artifact": "frozen_prediction_ledger",
+      "column": "ridge_point_prediction_return",
+      "frozen_value": "0.11657961915696524",
+      "horizon": "D10",
+      "match": "MISMATCH",
+      "replay_value": "0.11657961915696513",
+      "ticker": "INTET"
+    },
+    {
+      "artifact": "frozen_prediction_ledger",
+      "column": "ridge_predicted_close",
+      "frozen_value": "59.848667586813342",
+      "horizon": "D10",
+      "match": "MISMATCH",
+      "replay_value": "59.848667586813328",
+      "ticker": "INTET"
+    },
+    {
+      "artifact": "frozen_prediction_ledger",
+      "column": "logistic_probability_above_ipo_raw",
+      "frozen_value": "0.46957214414699289",
+      "horizon": "D10",
+      "match": "MISMATCH",
+      "replay_value": "0.469572144146993",
+      "ticker": "INTET"
+    }
+  ],
+  "realized_outcome_reads": 0,
+  "runtime_report": {
+    "executable": "/Users/ahmet/.borsai-venvs/v1_5-model-macos/bin/python",
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scipy": "1.18.0",
+    "sklearn": "1.9.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "task_id": "BORSAI_V1_5_MACOS_RUNTIME_REPLAY_20260911_V1",
+  "total_columns_compared": 688,
+  "uncheckable_count": 0,
+  "verdict": "REPLAY_FAIL"
+}

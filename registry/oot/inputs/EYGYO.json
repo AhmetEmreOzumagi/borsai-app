@@ -1,0 +1,345 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "EYGYO",
+  "company": "EYG Gayrimenkul Yatırım Ortaklığı A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1090293",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "14.23",
+      "source_id": "KAP_1090293",
+      "source_document": "KAP 1090293",
+      "source_published_at": "2022-12-27T18:10:18+03:00",
+      "source_sha256": "d2e0c8321cdf6c122c7433f023ddc3f9512d002be945bbf46aa082801c013707",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1090293_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 14,23",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2022_70",
+          "quote": "EYG Gayrimenkul 8.250.000 14.23 66.000.000 82.500.000 16.500.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "24750000",
+      "source_id": "KAP_1090293",
+      "source_document": "KAP 1090293",
+      "source_published_at": "2022-12-27T18:10:18+03:00",
+      "source_sha256": "d2e0c8321cdf6c122c7433f023ddc3f9512d002be945bbf46aa082801c013707",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1090293_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 24.750.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "82500000",
+      "source_id": "KAP_1090293",
+      "source_document": "KAP 1090293",
+      "source_published_at": "2022-12-27T18:10:18+03:00",
+      "source_sha256": "d2e0c8321cdf6c122c7433f023ddc3f9512d002be945bbf46aa082801c013707",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1090293_bildirim.pdf",
+      "quote": "sermayesini temsil eden 82.500.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "16500000",
+      "source_id": "SPK_BULTEN_2022_70",
+      "source_document": "SPK Bülteni 2022/70",
+      "source_published_at": "2022-12-15T23:59:59+03:00",
+      "source_sha256": "683358aec73f3a0091773eef1697b2cce45edf3a9634b3cf8d2f040198ad6edc",
+      "source_path": "registry/oot/source_docs/EYGYO/SPK_BULTEN_2022-70.pdf",
+      "quote": "EYG Gayrimenkul 8.250.000 14.23 66.000.000 82.500.000 16.500.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1089787_EK1",
+          "quote": "halka arz edilen 24.750.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir"
+        },
+        "b_shares_offered_equals_planned_base": "24750000 = 16500000 + 8250000",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "8250000",
+      "source_id": "SPK_BULTEN_2022_70",
+      "source_document": "SPK Bülteni 2022/70",
+      "source_published_at": "2022-12-15T23:59:59+03:00",
+      "source_sha256": "683358aec73f3a0091773eef1697b2cce45edf3a9634b3cf8d2f040198ad6edc",
+      "source_path": "registry/oot/source_docs/EYGYO/SPK_BULTEN_2022-70.pdf",
+      "quote": "EYG Gayrimenkul 8.250.000 14.23 66.000.000 82.500.000 16.500.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1089787_EK1",
+          "quote": "halka arz edilen 24.750.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir"
+        },
+        "b_shares_offered_equals_planned_base": "24750000 = 16500000 + 8250000",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "4.49",
+      "source_id": "KAP_1089787_EK1",
+      "source_document": "KAP 1089787 ek 1",
+      "source_published_at": "2022-12-26T13:02:41+03:00",
+      "source_sha256": "8a26d60e964ba5565d76f3632d420bb3bfec442795fb5d711fc41e3abd417e4c",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1089787_ek1.pdf",
+      "quote": "Halka arzda toplam 883.639 yatırımcıdan, 24.750.000 adet nominal değerli paylar için toplam arzın 4.49 katına tekabül eden 111.316.881 TL nominal değerli talep gelmiş olup",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (toplam talep nominali / toplam arz 24.750.000 nominal)",
+      "denominator_includes_additional_sale": false,
+      "note": "belge ondalığı nokta ile yazmış ('4.49'); 111.316.881 / 24.750.000 = 4,4977 (belge 4.49 yazıyor, yuvarlama değil kesme); borsada satış yöntemi ama belge katı yazıyor; ek satış öngörülmemiş",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_1089787_EK1",
+      "source_document": "KAP 1089787 ek 1",
+      "source_published_at": "2022-12-26T13:02:41+03:00",
+      "source_sha256": "8a26d60e964ba5565d76f3632d420bb3bfec442795fb5d711fc41e3abd417e4c",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1089787_ek1.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1089787_EK1",
+      "source_document": "KAP 1089787 ek 1",
+      "source_published_at": "2022-12-26T13:02:41+03:00",
+      "source_sha256": "8a26d60e964ba5565d76f3632d420bb3bfec442795fb5d711fc41e3abd417e4c",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1089787_ek1.pdf",
+      "quote": "halka arz edilen 24.750.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir",
+      "zero_from_statement": true,
+      "note": "satılan toplam 24.750.000 = SPK planlanan taban (bedelli 16.500.000 + mevcut pay satışı 8.250.000); SPK satırında ek pay satışı '-'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_size_tl": {
+      "value": "352192500",
+      "source_id": "KAP_1089787_EK1",
+      "source_document": "KAP 1089787 ek 1",
+      "source_published_at": "2022-12-26T13:02:41+03:00",
+      "source_sha256": "8a26d60e964ba5565d76f3632d420bb3bfec442795fb5d711fc41e3abd417e4c",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1089787_ek1.pdf",
+      "quote": "toplam halka arz büyüklüğü 352.192.500 TL olarak gerçekleşmiştir",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "14.23",
+      "source_id": "SPK_BULTEN_2022_70",
+      "source_document": "SPK Bülteni 2022/70",
+      "source_published_at": "2022-12-15T23:59:59+03:00",
+      "source_sha256": "683358aec73f3a0091773eef1697b2cce45edf3a9634b3cf8d2f040198ad6edc",
+      "source_path": "registry/oot/source_docs/EYGYO/SPK_BULTEN_2022-70.pdf",
+      "quote": "EYG Gayrimenkul 8.250.000 14.23 66.000.000 82.500.000 16.500.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2022-12-15",
+        "bookbuilding_start": "2022-12-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "66000000",
+      "source_id": "SPK_BULTEN_2022_70",
+      "source_document": "SPK Bülteni 2022/70",
+      "source_published_at": "2022-12-15T23:59:59+03:00",
+      "source_sha256": "683358aec73f3a0091773eef1697b2cce45edf3a9634b3cf8d2f040198ad6edc",
+      "source_path": "registry/oot/source_docs/EYGYO/SPK_BULTEN_2022-70.pdf",
+      "quote": "EYG Gayrimenkul 8.250.000 14.23 66.000.000 82.500.000 16.500.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-12-15",
+        "bookbuilding_start": "2022-12-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "82500000",
+      "source_id": "SPK_BULTEN_2022_70",
+      "source_document": "SPK Bülteni 2022/70",
+      "source_published_at": "2022-12-15T23:59:59+03:00",
+      "source_sha256": "683358aec73f3a0091773eef1697b2cce45edf3a9634b3cf8d2f040198ad6edc",
+      "source_path": "registry/oot/source_docs/EYGYO/SPK_BULTEN_2022-70.pdf",
+      "quote": "EYG Gayrimenkul 8.250.000 14.23 66.000.000 82.500.000 16.500.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-12-15",
+        "bookbuilding_start": "2022-12-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "16500000",
+      "source_id": "SPK_BULTEN_2022_70",
+      "source_document": "SPK Bülteni 2022/70",
+      "source_published_at": "2022-12-15T23:59:59+03:00",
+      "source_sha256": "683358aec73f3a0091773eef1697b2cce45edf3a9634b3cf8d2f040198ad6edc",
+      "source_path": "registry/oot/source_docs/EYGYO/SPK_BULTEN_2022-70.pdf",
+      "quote": "EYG Gayrimenkul 8.250.000 14.23 66.000.000 82.500.000 16.500.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2022-12-15",
+        "bookbuilding_start": "2022-12-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "8250000",
+      "source_id": "SPK_BULTEN_2022_70",
+      "source_document": "SPK Bülteni 2022/70",
+      "source_published_at": "2022-12-15T23:59:59+03:00",
+      "source_sha256": "683358aec73f3a0091773eef1697b2cce45edf3a9634b3cf8d2f040198ad6edc",
+      "source_path": "registry/oot/source_docs/EYGYO/SPK_BULTEN_2022-70.pdf",
+      "quote": "EYG Gayrimenkul 8.250.000 14.23 66.000.000 82.500.000 16.500.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-12-15",
+        "bookbuilding_start": "2022-12-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "24750000",
+      "source_id": "SPK_BULTEN_2022_70",
+      "source_document": "SPK Bülteni 2022/70",
+      "source_published_at": "2022-12-15T23:59:59+03:00",
+      "source_sha256": "683358aec73f3a0091773eef1697b2cce45edf3a9634b3cf8d2f040198ad6edc",
+      "source_path": "registry/oot/source_docs/EYGYO/SPK_BULTEN_2022-70.pdf",
+      "quote": "EYG Gayrimenkul 8.250.000 14.23 66.000.000 82.500.000 16.500.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-12-15",
+        "bookbuilding_start": "2022-12-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2022_70",
+      "source_document": "SPK Bülteni 2022/70",
+      "source_published_at": "2022-12-15T23:59:59+03:00",
+      "source_sha256": "683358aec73f3a0091773eef1697b2cce45edf3a9634b3cf8d2f040198ad6edc",
+      "source_path": "registry/oot/source_docs/EYGYO/SPK_BULTEN_2022-70.pdf",
+      "quote": "EYG Gayrimenkul 8.250.000 14.23 66.000.000 82.500.000 16.500.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2022-12-15",
+        "bookbuilding_start": "2022-12-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "24750000",
+      "source_id": "SPK_BULTEN_2022_70",
+      "source_document": "SPK Bülteni 2022/70",
+      "source_published_at": "2022-12-15T23:59:59+03:00",
+      "source_sha256": "683358aec73f3a0091773eef1697b2cce45edf3a9634b3cf8d2f040198ad6edc",
+      "source_path": "registry/oot/source_docs/EYGYO/SPK_BULTEN_2022-70.pdf",
+      "quote": "EYG Gayrimenkul 8.250.000 14.23 66.000.000 82.500.000 16.500.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-12-15",
+        "bookbuilding_start": "2022-12-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2022-12-29",
+      "source_id": "KAP_1090293",
+      "source_document": "KAP 1090293",
+      "source_published_at": "2022-12-27T18:10:18+03:00",
+      "source_sha256": "d2e0c8321cdf6c122c7433f023ddc3f9512d002be945bbf46aa082801c013707",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1090293_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 29/12/2022",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2022-12-22",
+      "source_id": "KAP_1090293",
+      "source_document": "KAP 1090293",
+      "source_published_at": "2022-12-27T18:10:18+03:00",
+      "source_sha256": "d2e0c8321cdf6c122c7433f023ddc3f9512d002be945bbf46aa082801c013707",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1090293_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 22-23/12/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2022-12-23",
+      "source_id": "KAP_1090293",
+      "source_document": "KAP 1090293",
+      "source_published_at": "2022-12-27T18:10:18+03:00",
+      "source_sha256": "d2e0c8321cdf6c122c7433f023ddc3f9512d002be945bbf46aa082801c013707",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1090293_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 22-23/12/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1090293": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1090293",
+      "published_at": "2022-12-27T18:10:18+03:00",
+      "sha256": "d2e0c8321cdf6c122c7433f023ddc3f9512d002be945bbf46aa082801c013707",
+      "path": "registry/oot/source_docs/EYGYO/KAP_1090293_bildirim.pdf"
+    },
+    "SPK_BULTEN_2022_70": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2022/70",
+      "published_at": "2022-12-15T23:59:59+03:00",
+      "sha256": "683358aec73f3a0091773eef1697b2cce45edf3a9634b3cf8d2f040198ad6edc",
+      "path": "registry/oot/source_docs/EYGYO/SPK_BULTEN_2022-70.pdf"
+    },
+    "KAP_1089787_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1089787 ek 1",
+      "published_at": "2022-12-26T13:02:41+03:00",
+      "sha256": "8a26d60e964ba5565d76f3632d420bb3bfec442795fb5d711fc41e3abd417e4c",
+      "path": "registry/oot/source_docs/EYGYO/KAP_1089787_ek1.pdf"
+    }
+  }
+}

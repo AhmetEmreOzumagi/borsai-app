@@ -1,0 +1,279 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "KZBGY",
+ "company": "Kızılbük Gayrimenkul Yatırım Ortaklığı A.Ş.",
+ "first_trading_date": "2021-08-12",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Yurt içi bireysele oransal; kurumsala takdire bağlı dağıtım",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_951851_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35f62610cf9",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "951851",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/951851",
+   "published_at": "2021-07-26T18:15:18+03:00",
+   "source_sha256": "9ee56da1a33cb319e60a02a13bfbf52152d284c2a45a73176460c5b65cb65daf",
+   "source_file": "source_docs/KZBGY/KAP_951851_ek1.pdf",
+   "page": 21,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "f) Mükerrer talep olması halinde uygulanacak esaslar: Yurt Içi Bireysel Yatırımcılar grubunda, tek bir bireysel yatırımcıya asgari 1 (bir) adet pay dağıtımı yapılırken, mükerrer talep kontrolü işlemi yapılarak, bir defadan fazla talepte bulunan yatırımcılara, TCKN bazında bir adet pay (bu gruba tahsis edilen miktarın yetmemesi durumunda kura ile belirlenecektir) verilecek şekilde dağıtım yapılacaktır. Bu gruptaki yatırımcılara birer adet pay dağıtıldıktan sonra kalan miktar için oransal dağıtım yöntemi kullanılacağından",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_951851_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35f62610cf9",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "951851",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/951851",
+     "published_at": "2021-07-26T18:15:18+03:00",
+     "source_sha256": "9ee56da1a33cb319e60a02a13bfbf52152d284c2a45a73176460c5b65cb65daf",
+     "source_file": "source_docs/KZBGY/KAP_951851_ek1.pdf",
+     "page": 20,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "36.000.000 adedi (%60) Yurt içi Bireysel Yatırımcılara • 24.000.000 adedi (%40) Kurumsal Yatırımcılara gerçekleştirilecek satışlar için tahsis edilmiştir."
+    },
+    {
+     "source_id": "KAP_951850_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35d71890c9c",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "951850",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/951850",
+     "published_at": "2021-07-26T18:13:43+03:00",
+     "source_sha256": "e5629a436f80940aeef093be0479a42ccfdd0b74afdc8b7512b23ffb6c4642fb",
+     "source_file": "source_docs/KZBGY/KAP_951850_ek1.pdf",
+     "page": 50,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "daha sonra, Yurt Içi Bireysel Yatırımcılar için geriye kalan tahsisat miktarının, kalan pay talep miktarına bölünmesi ile \"Arzın Talebi Karşılama Oranı\" bulunacaktır. Bulunan Arzın Talebi Karşılama Oranı her bir yatırımcıya ait kişisel talep ile çarpılacak ve paylar dağıtılacaktır:"
+    },
+    {
+     "source_id": "KAP_951850_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35d71890c9c",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "951850",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/951850",
+     "published_at": "2021-07-26T18:13:43+03:00",
+     "source_sha256": "e5629a436f80940aeef093be0479a42ccfdd0b74afdc8b7512b23ffb6c4642fb",
+     "source_file": "source_docs/KZBGY/KAP_951850_ek1.pdf",
+     "page": 50,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Kurumsal Yatırımeılar: Her bir Kurumsal Yatırımcıya verilecek pay miktarına Konsorsiyum Liderleri'nin önerisi dikkate alınarak halka arz eden pay sahibi tarafından karar verilecektir."
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Borsa dışı talep toplama (konsorsiyum liderleri Türkiye Kalkınma ve Yatırım Bankası, Halk Yatırım). Tahsisat: yurt içi bireysel %60, kurumsal (yurt içi + yurt dışı) %40; çalışan tahsisatı yok. Yurt içi bireysel: oransal (ilk aşamada herkese 1 pay, kalan için Arzın Talebi Karşılama Oranı). Kurumsal: her yatırımcıya verilecek miktara Konsorsiyum Liderleri önerisiyle halka arz eden pay sahibi (Sinpaş GYO) karar verir (eşit/oransal değil; 'takdire bağlı'). KAP_951850_EK1 s.49'daki 'Yurt İçi Bireysel Yatırımcılar: Oransal Dağıtım Yöntemi'ne göre' cümlesi OCR'da bozuk (reocr sonrası 'Oransaf'), bu yüzden oransal ifadesi s.21'den alıntılandı. s.20 (KAP_951851_EK1) yerel OCR ile yeniden okundu; c) bendi hâlâ bozuk ('Jafklebır yöntem yoktur')."
+  },
+  "price_stability_planned": {
+   "value": "TRUE",
+   "unit": "boolean",
+   "status": "VERIFIED",
+   "source_id": "KAP_951851_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35f62610cf9",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "951851",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/951851",
+   "published_at": "2021-07-26T18:15:18+03:00",
+   "source_sha256": "9ee56da1a33cb319e60a02a13bfbf52152d284c2a45a73176460c5b65cb65daf",
+   "source_file": "source_docs/KZBGY/KAP_951851_ek1.pdf",
+   "page": 28,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Halk Yatırım, Şirket paylarına yönelik olarak fiyat istikranı işlemlerinde bulunmayı planlamaktadır.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_951851_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35f62610cf9",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "951851",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/951851",
+     "published_at": "2021-07-26T18:15:18+03:00",
+     "source_sha256": "9ee56da1a33cb319e60a02a13bfbf52152d284c2a45a73176460c5b65cb65daf",
+     "source_file": "source_docs/KZBGY/KAP_951851_ek1.pdf",
+     "page": 27,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Fiyat istikrarı işlemlerinin gerçekleştirilmesi planlanmaktadır."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "26.5 başlığı s.27'de OCR ile karışık ('*5265/Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: TÜRKİDE KALKINMA ... Fiyat istikrarı işlemlerinin gerçekleştirilmesi planlanmaktadır'). Kaynak: toplam brüt halka arz gelirinin %15'ine kadar olan kısmı (Ek Satış ve Fiyat İstikrarını Sağlayıcı İşlemler Sözleşmesi). Ayrıca 26.5.7'de halka arz teşvikleri (Bonus Pay, indirim çekleri) var; bunlar fiyat istikrarı işlemi değil.",
+   "codex_value": true,
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_days": {
+   "value": "30",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_951851_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35f62610cf9",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "951851",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/951851",
+   "published_at": "2021-07-26T18:15:18+03:00",
+   "source_sha256": "9ee56da1a33cb319e60a02a13bfbf52152d284c2a45a73176460c5b65cb65daf",
+   "source_file": "source_docs/KZBGY/KAP_951851_ek1.pdf",
+   "page": 28,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Payların borsada işlem görmeye başlamasından itibaren en fazla 30 (otuz) gündülr.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "26.5.2 zaman aralığı; OCR 'gündülr' (gündür)."
+  },
+  "issuer_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_951851_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35f62610cf9",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "951851",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/951851",
+   "published_at": "2021-07-26T18:15:18+03:00",
+   "source_sha256": "9ee56da1a33cb319e60a02a13bfbf52152d284c2a45a73176460c5b65cb65daf",
+   "source_file": "source_docs/KZBGY/KAP_951851_ek1.pdf",
+   "page": 31,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "İhraççı tarafından verilen taahhüt: Şirket, 25.05.2021 tarihli ve 2021/11 sayılı yönetim kurulu kararına binaen verdiği taahhüdü ile Şirket paylarının Borsa Istanbul'da işlem görmeye başladığı tarihten itibaren bir yıl boyunca bedelli sermaye artırımı yapmayacağını,",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Kapsam: bedelli sermaye artırımı yapmama, maliki olabileceği Şirket paylarını satmama/devretmeme/rehnetmeme, dolaşımdaki payı artıracak işlem yapmama. Başlangıç: Borsa İstanbul'da işlem görmeye başlama."
+  },
+  "shareholder_lockup_days": {
+   "value": "180",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_951851_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35f62610cf9",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "951851",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/951851",
+   "published_at": "2021-07-26T18:15:18+03:00",
+   "source_sha256": "9ee56da1a33cb319e60a02a13bfbf52152d284c2a45a73176460c5b65cb65daf",
+   "source_file": "source_docs/KZBGY/KAP_951851_ek1.pdf",
+   "page": 31,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Ortaklar tarafından verilen taahhütler: Şirket ortağı Sinpaş GYO, 25.05.2021 tarihli ve 2021/19 sayılı yönetim kurulu kararına binaen verdiği taahhtıdü ile Şirket paylarının Borsa İstanbul'da işlem görmeye başladığı tarihten itibaren 6 ay boyunca maliki olduğu Şirket paylarını satmayacağını,",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_951851_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35f62610cf9",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "951851",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/951851",
+     "published_at": "2021-07-26T18:15:18+03:00",
+     "source_sha256": "9ee56da1a33cb319e60a02a13bfbf52152d284c2a45a73176460c5b65cb65daf",
+     "source_file": "source_docs/KZBGY/KAP_951851_ek1.pdf",
+     "page": 31,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Sermaye piyasası mevzuatı kapsamında verilen taahhütler: Şirket ortağı Sinpaş GYO, 25.05.2021 tarihli ve 2021/19 sayılı yönetim kurulu kararına binaen verdiği taahhüdü ile VII-128.1 sayılı Pay Tebliği'nin 8'inci maddesi uyarınca, maliki olduğu Şirket paylarının; Şirket paylarının Borsa İstanbul' da işlem görmeye başladığı tarihten itibaren bir yıl boyunca Şirket paylarının halka arz fiyatının altındaki bir fiyattan borsada satılmamasına,"
+    }
+   ],
+   "components": [
+    {
+     "who": "Sinpaş GYO (tek ortak, halka arz eden)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU (Ortaklar tarafından verilen taahhüt)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Sinpaş GYO",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "6 ay = 180 gün (belgede '6 ay'); en kısa 180. Yetkili kuruluşlar tarafından verilen taahhütler: Bulunmamaktadır. Bonus Pay teşviki kapsamında yatırımcılara verilecek payların bir yıl satışa konu olamaması (s.29) mevcut ortak taahhüdü değil, hariç.",
+   "codex_value": "180",
+   "codex_verdict": "VERIFIED"
+  },
+  "sector": {
+   "value": "Gayrimenkul yatırım ortaklığı; devre mülk ve otel içeren karma kullanımlı proje",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_951849_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35e16e40ccd",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "951849",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/951849",
+   "published_at": "2021-07-26T18:13:02+03:00",
+   "source_sha256": "e6f2824f8e28395f3bba1bcc5541ca9cd2d19b0734f289d1ea93c550d282f6fe",
+   "source_file": "source_docs/KZBGY/KAP_951849_ek1.pdf",
+   "page": 10,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Şirket'in mevcut durumda tek yatırımı Muğla lli, Marmaris Ilçesi, Içmeler Mahallesi'nde bulunan 1598 ve 2518 numaralı parseller üzerinde geliştirilmekte olan Kızılbük Projesi'dir: Kızılbük Projesi, Türkiye'nin önemli tatil destinasyonlarından biri olan Marmaris Içmeler'de, Ege ile Akdeniz'in kesiştiği noktada Şirket'e ait 173 dönüm arsa üzerinde inşa edilen karma kullanımlı bir gayrimenkul projesidir. Projede, çeşitli büyüklükte Devre mülkler, 5 yıldızlı 205 oda kapasiteli Resort Otel,",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_951849_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35e16e40ccd",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "951849",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/951849",
+     "published_at": "2021-07-26T18:13:02+03:00",
+     "source_sha256": "e6f2824f8e28395f3bba1bcc5541ca9cd2d19b0734f289d1ea93c550d282f6fe",
+     "source_file": "source_docs/KZBGY/KAP_951849_ek1.pdf",
+     "page": 5,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Şirket, bir gayrimenkul yatırım ortaklığı olarak, İstanbul Ticaret Sicili Memurluğu'nca 30.03.2021 tarihinde tescil edilmiş"
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Sinpaş GYO'nun kısmi bölünmesiyle kurulan GYO; tek yatırımı Marmaris Kızılbük Thermal Wellness Resort (devre mülk, otel, termal SPA, AVM, aquapark).",
+   "codex_value": "gayrimenkul yatırım ortaklığı ve turizm projeleri",
+   "codex_verdict": "VERIFIED"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahname 1-4 ve TSSD'de katılım endeksi / faizsiz finans uygunluk beyanı yok. qfind 'katılım endeks|faizsiz|islami|icazet|katılım finans|katılım bank|danışma kurulu' yalnız başvuru yeri olarak Albaraka Türk / Türkiye Finans Katılım Bankası eşleşmesi verdi (uygunluk beyanı değil).",
+   "looked_at": [
+    "KAP_951848_EK1",
+    "KAP_951849_EK1",
+    "KAP_951850_EK1",
+    "KAP_951851_EK1",
+    "KAP_951890_EK1",
+    "KAP_951890"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_951849_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "951849",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35e16e40ccd",
+   "published_at": "2021-07-26T18:13:02+03:00",
+   "sha256": "e6f2824f8e28395f3bba1bcc5541ca9cd2d19b0734f289d1ea93c550d282f6fe",
+   "file": "source_docs/KZBGY/KAP_951849_ek1.pdf"
+  },
+  "KAP_951850_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "951850",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35d71890c9c",
+   "published_at": "2021-07-26T18:13:43+03:00",
+   "sha256": "e5629a436f80940aeef093be0479a42ccfdd0b74afdc8b7512b23ffb6c4642fb",
+   "file": "source_docs/KZBGY/KAP_951850_ek1.pdf"
+  },
+  "KAP_951851_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "951851",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017ae35f62610cf9",
+   "published_at": "2021-07-26T18:15:18+03:00",
+   "sha256": "9ee56da1a33cb319e60a02a13bfbf52152d284c2a45a73176460c5b65cb65daf",
+   "file": "source_docs/KZBGY/KAP_951851_ek1.pdf"
+  }
+ }
+}

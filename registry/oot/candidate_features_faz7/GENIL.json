@@ -1,0 +1,342 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "GENIL",
+ "company": "Gen İlaç ve Sağlık Ürünleri Sanayi ve Ticaret A.Ş.",
+ "first_trading_date": "2021-08-05",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Yurt içi bireysel ve çalışanlara oransal; kurumsala takdire bağlı dağıtım",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_950534_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7a4e446c017a9b98827c0d6e",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "950534",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/950534",
+   "published_at": "2021-07-13T10:15:50+03:00",
+   "source_sha256": "a11feab78a57c62116d3073a1899b9488747179f6fe349c178d7bc5e545501e2",
+   "source_file": "source_docs/GENIL/KAP_950534_ek1.pdf",
+   "page": 8,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "c) Bireysel yatırımcılar ve ihraççının çalışanlarına ilişkin tahsisat grubunda tahsis edilen nominal değerden daha fazla talep gelmesi durumunda uygulanacak dağıtım yöntemi/yöntemleri: Yurt Içi Bireysel Yatırımcılar ile Şirket Çalışanlarına dağıtım oransal dağıtım yöntemine göre yapılacaktır.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_950533_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017a9b97cfc65fe8",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "950533",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/950533",
+     "published_at": "2021-07-13T10:15:39+03:00",
+     "source_sha256": "37944fa5440ab4943d4e2df651723e1f14c9ac662888460aa73fb9c71709198c",
+     "source_file": "source_docs/GENIL/KAP_950533_ek1.pdf",
+     "page": 31,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Yurt Içi Bireysel Yatırımcılara Dağıtım: Oransal Dağıtım Yöntemine göre yapılacaktır."
+    },
+    {
+     "source_id": "KAP_950533_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017a9b97cfc65fe8",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "950533",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/950533",
+     "published_at": "2021-07-13T10:15:39+03:00",
+     "source_sha256": "37944fa5440ab4943d4e2df651723e1f14c9ac662888460aa73fb9c71709198c",
+     "source_file": "source_docs/GENIL/KAP_950533_ek1.pdf",
+     "page": 31,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Şirket Çalışanlarına Dağıtım: Oransal Dağıtım Yöntemine göre yapılacaktır."
+    },
+    {
+     "source_id": "KAP_950533_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017a9b97cfc65fe8",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "950533",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/950533",
+     "published_at": "2021-07-13T10:15:39+03:00",
+     "source_sha256": "37944fa5440ab4943d4e2df651723e1f14c9ac662888460aa73fb9c71709198c",
+     "source_file": "source_docs/GENIL/KAP_950533_ek1.pdf",
+     "page": 31,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Kurumsal Yatırımcılara Dağıtım: Her bir Yurt Içi Kurumsal Yatırımcıya verilecek pay miktarına OYAK Yatırım, Şirket ve Halka Arz Eden Pay Sahipleri birlikte karar verecektir. Yurt Dışı Kurumsal Yatırımcılara Dağıtım: Her bir Yurt Dışı Kurunsal Yatırımcıya verilecek pay miktarına OYAK Yatırım, Şirket ve Halka Arz Eden Pay Sahipleri birlikte karar verecektir."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Borsa dışı talep toplama (OYAK Yatırım konsorsiyumu). Tahsisat (s.7, KAP_950534_EK1): yurt içi bireysel %34, şirket çalışanları %1, yurt içi kurumsal %35, yurt dışı kurumsal %30. Yurt içi bireysel: oransal (ilk aşamada herkese 1 pay, sonra Arzın Talebi Karşılama Oranı). Şirket çalışanları: oransal (%15 iskonto). Yurt içi ve yurt dışı kurumsal: her yatırımcıya verilecek miktara OYAK Yatırım, Şirket ve Halka Arz Eden Pay Sahipleri birlikte karar verir (eşit/oransal değil; kalıba uymadığı için 'takdire bağlı'). 13.07.2021 tarihli yeniden yayımlanan izahname seti (KAP_950530-950534) esas alındı; 12.07.2021 seti aynı ifadeleri içeriyor.",
+   "codex_value": "oransal dağıtım",
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_planned": {
+   "value": "TRUE",
+   "unit": "boolean",
+   "status": "VERIFIED",
+   "source_id": "KAP_950534_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7a4e446c017a9b98827c0d6e",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "950534",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/950534",
+   "published_at": "2021-07-13T10:15:50+03:00",
+   "source_sha256": "a11feab78a57c62116d3073a1899b9488747179f6fe349c178d7bc5e545501e2",
+   "source_file": "source_docs/GENIL/KAP_950534_ek1.pdf",
+   "page": 18,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: Fiyat istikrarı işlemlerinin gerçekleştirilmesi planlanmaktadır. Ek satış hakkının kullanılması halinde, azami olarak ek pay satışından elde edilecek kaynağın tümü bu amaç için kullanacaktır.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "Fiyat istikrarı işlemlerini OYAK Yatırım yapar; kaynak Abidin Gülmüş'ün ek satış (6.250.000 TL nominal) geliri. Garanti yok (26.5.1).",
+   "codex_value": true,
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_days": {
+   "value": "30",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_950534_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7a4e446c017a9b98827c0d6e",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "950534",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/950534",
+   "published_at": "2021-07-13T10:15:50+03:00",
+   "source_sha256": "a11feab78a57c62116d3073a1899b9488747179f6fe349c178d7bc5e545501e2",
+   "source_file": "source_docs/GENIL/KAP_950534_ek1.pdf",
+   "page": 18,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5.2. Fiyat istikrarı işlemlerinin gerçekleştirilebileceği zaman aralığı: Payların borsada işlem görmeye başlamasından itibaren 30 (otuz) gündür.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "",
+   "codex_value": "30",
+   "codex_verdict": "VERIFIED"
+  },
+  "issuer_lockup_days": {
+   "value": "180",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_950534_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7a4e446c017a9b98827c0d6e",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "950534",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/950534",
+   "published_at": "2021-07-13T10:15:50+03:00",
+   "source_sha256": "a11feab78a57c62116d3073a1899b9488747179f6fe349c178d7bc5e545501e2",
+   "source_file": "source_docs/GENIL/KAP_950534_ek1.pdf",
+   "page": 20,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "a) İhraççı tarafından verilen taahhüt: Şirket, 03.05.2021 tarih ve 2021/05.001 sayılı Yönetim Kurulu Kararı'na binaen halka arz edilen payların Borsa Istanbul'da işlem görmeye başlamasından itibaren 180 gün süreyle nakit artırım yoluyla bedelli sermaye artırımı yapılmayacağına,",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Kapsam: nakit artırım yoluyla bedelli sermaye artırımı yapmama, dolaşımdaki pay miktarını artıracak şekilde halka arz yapmama, bu yönde karar almama/başvuruda bulunmama. Başlangıç: Borsa İstanbul'da işlem görmeye başlama."
+  },
+  "shareholder_lockup_days": {
+   "value": "730",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_950534_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7a4e446c017a9b98827c0d6e",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "950534",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/950534",
+   "published_at": "2021-07-13T10:15:50+03:00",
+   "source_sha256": "a11feab78a57c62116d3073a1899b9488747179f6fe349c178d7bc5e545501e2",
+   "source_file": "source_docs/GENIL/KAP_950534_ek1.pdf",
+   "page": 22,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "c) Sermaye piyasası mevzuatı kapsamında verilen taahhütler: Şirket'in mevcut ortaklarından Abidin GÜLMÜŞ ve Absel Emlak ve Turizm San. ve Tic. Ltd. Ști.. SPK'mın VII-128.1 sayılı Pay Tebliği nin S'inci maddesi uyarınca, Şirket paylarının Borsa Istanbul da işlem görmeye başlamasından itibaren 1 yıl süreyle (i) elinde bulunduracağı Şirket paylarıı halka arz fiyatının altındaki bir fiyattan borsada satmayacağını",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_950534_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7a4e446c017a9b98827c0d6e",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "950534",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/950534",
+     "published_at": "2021-07-13T10:15:50+03:00",
+     "source_sha256": "a11feab78a57c62116d3073a1899b9488747179f6fe349c178d7bc5e545501e2",
+     "source_file": "source_docs/GENIL/KAP_950534_ek1.pdf",
+     "page": 20,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Halka Arz Eden Pay Sahibi Abidin GÜLMÜŞ, maliki olduğu ve halka arza konü ołmayacak paylar ile halka arza konu olup da satılamayan paylarını (Şirket'in iç kaynaklardan ve kar payından vapabileceği bedelsiz senmaye artırımları nedeniyle elde edeceği bedelsiz paylar da dâhil). Şirket paylarının Borsa Istanbul da işlem görmeye başlamasından itibaren 2 (iki) yıl boyunca satmayacağını,"
+    },
+    {
+     "source_id": "KAP_950534_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7a4e446c017a9b98827c0d6e",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "950534",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/950534",
+     "published_at": "2021-07-13T10:15:50+03:00",
+     "source_sha256": "a11feab78a57c62116d3073a1899b9488747179f6fe349c178d7bc5e545501e2",
+     "source_file": "source_docs/GENIL/KAP_950534_ek1.pdf",
+     "page": 21,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Şirket'in mevcut ortaklarından Ömer DINÇER maliki olduğu payları (Şirket in iç kaynaklardan ve kar payından yapabileceği bedelsiz sermaye artırımları nedeniyle elde edeceği bedelsiz paylar da dâhil). Şirket paylarının Borsa Istanbul'da işlem görmeye başlamasından itibaren 2 (iki) yıl bovunca satmayacağını,"
+    },
+    {
+     "source_id": "KAP_950534_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7a4e446c017a9b98827c0d6e",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "950534",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/950534",
+     "published_at": "2021-07-13T10:15:50+03:00",
+     "source_sha256": "a11feab78a57c62116d3073a1899b9488747179f6fe349c178d7bc5e545501e2",
+     "source_file": "source_docs/GENIL/KAP_950534_ek1.pdf",
+     "page": 22,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "itibaren 2 (iki) yıl boyunca satmayacağını, devretmeyeceğini, rehnetmeyeceğini veya bu paylar üzerinde sair surette tasarrufia bulunmayacağını."
+    }
+   ],
+   "components": [
+    {
+     "who": "Abidin GÜLMÜŞ (halka arz eden, yönetim kontrolü)",
+     "days": "730",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Ömer DİNÇER",
+     "days": "730",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Şükrü TÜRKMEN",
+     "days": "730",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Semra GÜLMÜŞ",
+     "days": "730",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Absel Emlak ve Turizm San. ve Tic. Ltd. Şti. (halka arz eden)",
+     "days": "730",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Abidin GÜLMÜŞ",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Absel Emlak ve Turizm San. ve Tic. Ltd. Şti.",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "b) Tüm mevcut ortaklar 2 (iki) yıl satmama/devretmeme/rehnetmeme taahhüdü (s.20-22; Abidin Gülmüş ve Absel'in taahhüdü halka arza konu olmayan ve satılamayan paylar için). c) Abidin Gülmüş ve Absel için Pay Tebliği 8. madde 1 yıl fiyat altı satmama. En kısa süre 1 yıl = 365. d) Yetkili kuruluşlar tarafından verilen taahhütler: Yoktur. Şirket çalışanlarının halka arzda iskontolu aldıkları payları 3 ay satamaması (s.9) mevcut ortak taahhüdü değil, hariç. [kapsanan bileşen kuralı (doğrulayıcı): 365 -> 730; beş ortak MUTLAK 730; FIYAT_ALTI 365 (Abidin Gülmüş, Absel) kapsanıyor. Değer = herhangi bir ortağın borsada satış kısıtının ilk gevşediği gün.]"
+  },
+  "sector": {
+   "value": "Beşeri ilaç imalatı ve sağlık ürünleri ticareti",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_950530_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7a4e446d017a9b92ca8d49ed",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "950530",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/950530",
+   "published_at": "2021-07-13T10:13:45+03:00",
+   "source_sha256": "7b4d2a30ba4619cdf5ba672b7241987756e522a19152ff10e36948126d4d6d4d",
+   "source_file": "source_docs/GENIL/KAP_950530_ek1.pdf",
+   "page": 23,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Şirket, her nevi beşeri ilaç imalatı ve sağlık ürünleri alım satimi, ithalat ve ihracati alanlarında faaliyet göstermektedir.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_950531_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017a9b960e6b5f99",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "950531",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/950531",
+     "published_at": "2021-07-13T10:15:13+03:00",
+     "source_sha256": "b3565040c1c75c1be505a3cbbe424594546826fd09819b1ca03b8f2234414b5a",
+     "source_file": "source_docs/GENIL/KAP_950531_ek1.pdf",
+     "page": 16,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Gen İlaç orjinal ilaçların yanı sıra patent süresi dolmuş, kendi portföyüne uyan ilaçların eşdeğerlerinin geliştirilmesi, üretimi ve satış - pazarlanmasında faaliyet göstermektedir."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Ender hastalık ilaçları ithalatı/ruhsatlandırması, jenerik ilaç geliştirme ve üretimi (Ankara fabrikası, 2017'den beri) ve satış-pazarlama (İzahname s.15-16).",
+   "codex_value": "ilaç ve sağlık ürünleri",
+   "codex_verdict": "VERIFIED"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahname (12.07 ve 13.07 setleri, 1-5. kısımlar) ve TSSD'lerde katılım endeksi / faizsiz finans uygunluk beyanı yok. qfind 'katılım endeks|faizsiz|islami|icazet|katılım finans|katılım bank' yalnız başvuru yeri olarak Albaraka Türk ve Türkiye Finans Katılım Bankası eşleşmesi verdi (uygunluk beyanı değil).",
+   "looked_at": [
+    "KAP_950482_EK1",
+    "KAP_950483_EK1",
+    "KAP_950484_EK1",
+    "KAP_950485_EK1",
+    "KAP_950486_EK1",
+    "KAP_950489_EK1",
+    "KAP_950530_EK1",
+    "KAP_950531_EK1",
+    "KAP_950532_EK1",
+    "KAP_950533_EK1",
+    "KAP_950534_EK1",
+    "KAP_950539_EK1"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_950530_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "950530",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7a4e446d017a9b92ca8d49ed",
+   "published_at": "2021-07-13T10:13:45+03:00",
+   "sha256": "7b4d2a30ba4619cdf5ba672b7241987756e522a19152ff10e36948126d4d6d4d",
+   "file": "source_docs/GENIL/KAP_950530_ek1.pdf"
+  },
+  "KAP_950531_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "950531",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017a9b960e6b5f99",
+   "published_at": "2021-07-13T10:15:13+03:00",
+   "sha256": "b3565040c1c75c1be505a3cbbe424594546826fd09819b1ca03b8f2234414b5a",
+   "file": "source_docs/GENIL/KAP_950531_ek1.pdf"
+  },
+  "KAP_950533_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "950533",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c7a4e423c017a9b97cfc65fe8",
+   "published_at": "2021-07-13T10:15:39+03:00",
+   "sha256": "37944fa5440ab4943d4e2df651723e1f14c9ac662888460aa73fb9c71709198c",
+   "file": "source_docs/GENIL/KAP_950533_ek1.pdf"
+  },
+  "KAP_950534_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "950534",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7a4e446c017a9b98827c0d6e",
+   "published_at": "2021-07-13T10:15:50+03:00",
+   "sha256": "a11feab78a57c62116d3073a1899b9488747179f6fe349c178d7bc5e545501e2",
+   "file": "source_docs/GENIL/KAP_950534_ek1.pdf"
+  }
+ }
+}

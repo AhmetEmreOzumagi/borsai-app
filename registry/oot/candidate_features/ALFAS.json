@@ -1,0 +1,212 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "ALFAS",
+  "company": "Alfa Solar Enerji Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "348146",
+      "source_id": "KAP_1079684_EK1",
+      "source_document": "KAP 1079684 ek 1",
+      "source_published_at": "2022-11-14T09:18:03+03:00",
+      "source_sha256": "fc93912f054dae2ae5ce69957a8347c5d6f576acd18fae87b30d234c6f80db02",
+      "source_path": "registry/oot/source_docs/ALFAS/KAP_1079684_ek1.pdf",
+      "quote": "Toplam 9.200.000 100,0% 389.294 488.773.839 100,0% 348.146 9.200.000 100,0%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "toplam başvuru 389.294; talebi karşılanan 348.146",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "330263",
+        "domestic_high_applicant": "17785",
+        "domestic_institutional": "98"
+      },
+      "source_id": "KAP_1079684_EK1",
+      "source_document": "KAP 1079684 ek 1",
+      "source_published_at": "2022-11-14T09:18:03+03:00",
+      "source_sha256": "fc93912f054dae2ae5ce69957a8347c5d6f576acd18fae87b30d234c6f80db02",
+      "source_path": "registry/oot/source_docs/ALFAS/KAP_1079684_ek1.pdf",
+      "quote": [
+        "5.520.000 60,0% 370.336 103.076.635 21,1% 330.263 5.520.000 60,0%",
+        "2.300.000 25,0% 18.768 326.732.479 66,8% 17.785 2.300.000 25,0%",
+        "1.380.000 15,0% 190 58.964.725 12,1% 98 1.380.000 15,0%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "domestic_high_applicant = Yüksek Başvurulu Yatırımcılar; başvuru: bireysel 370.336, yüksek başvurulu 18.768, yurt içi kurumsal 190; yurt dışı kurumsal grup yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "18.7",
+      "source_id": "KAP_1079684_EK1",
+      "source_document": "KAP 1079684 ek 1",
+      "source_published_at": "2022-11-14T09:18:03+03:00",
+      "source_sha256": "fc93912f054dae2ae5ce69957a8347c5d6f576acd18fae87b30d234c6f80db02",
+      "source_path": "registry/oot/source_docs/ALFAS/KAP_1079684_ek1.pdf",
+      "quote": "Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 18,7 katı",
+      "note": "belge 'yaklaşık' ve 'filtrelenmemiş' diyor; Yüksek Başvurulu yaklaşık 142,1 kat",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "42.7",
+      "source_id": "KAP_1079684_EK1",
+      "source_document": "KAP 1079684 ek 1",
+      "source_published_at": "2022-11-14T09:18:03+03:00",
+      "source_sha256": "fc93912f054dae2ae5ce69957a8347c5d6f576acd18fae87b30d234c6f80db02",
+      "source_path": "registry/oot/source_docs/ALFAS/KAP_1079684_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara nihai tahsisat tutarının yaklaşık 42,7 katı filtrelenmemiş talep gelmiştir",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "42,7",
+        "verdict": "FOUND_SAME",
+        "note": "belgede 'yaklaşık', filtrelenmemiş"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "sonuç ekinde yurt dışı kurumsal yatırımcı grubu yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "5520000",
+        "domestic_high_applicant": "2300000",
+        "domestic_institutional": "1380000"
+      },
+      "source_id": "KAP_1079684_EK1",
+      "source_document": "KAP 1079684 ek 1",
+      "source_published_at": "2022-11-14T09:18:03+03:00",
+      "source_sha256": "fc93912f054dae2ae5ce69957a8347c5d6f576acd18fae87b30d234c6f80db02",
+      "source_path": "registry/oot/source_docs/ALFAS/KAP_1079684_ek1.pdf",
+      "quote": [
+        "5.520.000 60,0% 370.336 103.076.635 21,1% 330.263 5.520.000 60,0%",
+        "2.300.000 25,0% 18.768 326.732.479 66,8% 17.785 2.300.000 25,0%",
+        "1.380.000 15,0% 190 58.964.725 12,1% 98 1.380.000 15,0%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "60.0",
+      "source_id": "KAP_1079684_EK1",
+      "source_document": "KAP 1079684 ek 1",
+      "source_published_at": "2022-11-14T09:18:03+03:00",
+      "source_sha256": "fc93912f054dae2ae5ce69957a8347c5d6f576acd18fae87b30d234c6f80db02",
+      "source_path": "registry/oot/source_docs/ALFAS/KAP_1079684_ek1.pdf",
+      "quote": "5.520.000 60,0% 370.336 103.076.635 21,1% 330.263 5.520.000 60,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "Yüksek Başvurulu ayrıca %25,0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "15.0",
+      "source_id": "KAP_1079684_EK1",
+      "source_document": "KAP 1079684 ek 1",
+      "source_published_at": "2022-11-14T09:18:03+03:00",
+      "source_sha256": "fc93912f054dae2ae5ce69957a8347c5d6f576acd18fae87b30d234c6f80db02",
+      "source_path": "registry/oot/source_docs/ALFAS/KAP_1079684_ek1.pdf",
+      "quote": "1.380.000 15,0% 190 58.964.725 12,1% 98 1.380.000 15,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "sonuç ekinde yurt dışı kurumsal grup yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor (TSSD izahnameye atıf yapıyor)",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Deniz Yatırım Menkul Kıymetler Anonim Şirketi",
+      "source_id": "KAP_1076881_EK1",
+      "source_document": "KAP 1076881 ek 1",
+      "source_published_at": "2022-11-04T18:08:04+03:00",
+      "source_sha256": "16439c7a7b232df94f38b1abb7f193a1d14222a455071a705e7eff883d45d7b5",
+      "source_path": "registry/oot/source_docs/ALFAS/KAP_1076881_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Deniz Yatırım Menkul Kıymetler Anonim Şirketi'nin",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1079840",
+      "source_document": "KAP 1079840",
+      "source_published_at": "2022-11-14T18:00:44+03:00",
+      "source_sha256": "c43143128183e3bd54d15a845e22e7a5ba55f2abb18e612984d0d9a5ed8e6285",
+      "source_path": "registry/oot/source_docs/ALFAS/KAP_1079840_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1079840",
+      "source_document": "KAP 1079840",
+      "source_published_at": "2022-11-14T18:00:44+03:00",
+      "source_sha256": "c43143128183e3bd54d15a845e22e7a5ba55f2abb18e612984d0d9a5ed8e6285",
+      "source_path": "registry/oot/source_docs/ALFAS/KAP_1079840_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1079840": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1079840",
+      "published_at": "2022-11-14T18:00:44+03:00",
+      "sha256": "c43143128183e3bd54d15a845e22e7a5ba55f2abb18e612984d0d9a5ed8e6285",
+      "path": "registry/oot/source_docs/ALFAS/KAP_1079840_bildirim.pdf"
+    },
+    "KAP_1079684_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1079684 ek 1",
+      "published_at": "2022-11-14T09:18:03+03:00",
+      "sha256": "fc93912f054dae2ae5ce69957a8347c5d6f576acd18fae87b30d234c6f80db02",
+      "path": "registry/oot/source_docs/ALFAS/KAP_1079684_ek1.pdf"
+    },
+    "KAP_1076881_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1076881 ek 1",
+      "published_at": "2022-11-04T18:08:04+03:00",
+      "sha256": "16439c7a7b232df94f38b1abb7f193a1d14222a455071a705e7eff883d45d7b5",
+      "path": "registry/oot/source_docs/ALFAS/KAP_1076881_ek1.pdf"
+    }
+  }
+}

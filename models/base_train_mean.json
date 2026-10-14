@@ -1,0 +1,199 @@
+{
+  "algorithm": "TRAIN_MEAN",
+  "code_version": {
+    "borsai_dirty": true,
+    "borsai_source_sha256": "17e7374070328e7dbb3a887605167f4670315bb15a4c5d819a4feaf65a4ca004",
+    "git_commit": "ff3eee64eadd70c61e8b2eff657fd98cb94a0d04"
+  },
+  "created_at": "2026-09-21T21:10:30+03:00",
+  "description": "Getiri = eğitimdeki R_h'lerin ortalaması (legacy V1_BASE_MEAN).",
+  "feature_definitions": {},
+  "feature_ranges": {},
+  "features": [],
+  "horizons": {
+    "D1": {
+      "p_up": null,
+      "return": {
+        "kind": "constant",
+        "value": 0.07742476639192437
+      }
+    },
+    "D10": {
+      "p_up": null,
+      "return": {
+        "kind": "constant",
+        "value": 0.4725141481353383
+      }
+    },
+    "D3": {
+      "p_up": null,
+      "return": {
+        "kind": "constant",
+        "value": 0.20969361395763195
+      }
+    },
+    "D5": {
+      "p_up": null,
+      "return": {
+        "kind": "constant",
+        "value": 0.31207871117449043
+      }
+    }
+  },
+  "input_policy": {
+    "required_inputs": [
+      "ipo_price_tl"
+    ],
+    "return_output": "CLIP_TO_PHYSICAL_BOUNDS_AND_FLAG"
+  },
+  "model_id": "base_train_mean",
+  "preprocessing": null,
+  "schema_version": "borsai.model/1",
+  "spec": {
+    "algorithm": "TRAIN_MEAN",
+    "description": "Getiri = eğitimdeki R_h'lerin ortalaması (legacy V1_BASE_MEAN).",
+    "features": [],
+    "horizons": [
+      "D1",
+      "D3",
+      "D5",
+      "D10"
+    ],
+    "input_policy": {
+      "required_inputs": [
+        "ipo_price_tl"
+      ],
+      "return_output": "CLIP_TO_PHYSICAL_BOUNDS_AND_FLAG"
+    },
+    "min_train_n": 10,
+    "model_id": "base_train_mean",
+    "outputs": [
+      "return"
+    ],
+    "training": {
+      "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+      "description": "data/training_table.csv'nin 99 satırının hepsi, tablo sırasıyla (first_trading_date, ticker)",
+      "n": 99,
+      "set": "H99_ALL_ROWS"
+    }
+  },
+  "spec_sha256": "f94c2e58d8a4f0607c33fa0c0a12cec8daef39ee0e012c2db1d11d2bb1706119",
+  "training": {
+    "cutoff_date": "2026-08-19",
+    "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+    "first_trading_date_range": [
+      "2023-09-22",
+      "2026-08-06"
+    ],
+    "n": 99,
+    "set": "H99_ALL_ROWS",
+    "targets_sha256": {
+      "D1": "62a670993946893f771bdc39841bcd3af5bc39c2e639995db60adca214d718a4",
+      "D10": "48432418e0f2e48bbdac91b95c3b0ebbf4992ee8c7e9a1dccd22e2299067fb2d",
+      "D3": "0465300b74653802492ef186e82231a75d872ee3d0a888263f75dc914d21b8bf",
+      "D5": "a77b63e284b0c86167d8f8b1eaf820da8e8290b823a90711e1d3f758b55c56e9"
+    },
+    "tickers": [
+      "HATSN",
+      "DMRGD",
+      "MEKAG",
+      "DOFER",
+      "MHRGY",
+      "BORLS",
+      "TABGD",
+      "VRGYO",
+      "MARBL",
+      "BINHO",
+      "EKOS",
+      "AGROT",
+      "SKYMD",
+      "CATES",
+      "BEGYO",
+      "KBORU",
+      "SURGY",
+      "MEGMT",
+      "AVPGY",
+      "PATEK",
+      "BORSK",
+      "LMKDC",
+      "ALVES",
+      "OBAMS",
+      "ARTMS",
+      "MOGAN",
+      "ODINE",
+      "ENTRA",
+      "RGYAS",
+      "LILAK",
+      "KOTON",
+      "ALTNY",
+      "KOCMT",
+      "HRKET",
+      "ONRYT",
+      "OZYSR",
+      "ALKLC",
+      "YIGIT",
+      "HOROZ",
+      "SEGMN",
+      "EFORC",
+      "DCTTR",
+      "BAHKM",
+      "TCKRC",
+      "GUNDG",
+      "AHSGY",
+      "OZATD",
+      "CEMZY",
+      "DURKN",
+      "BINBN",
+      "CGCAM",
+      "SMRVA",
+      "ARMGD",
+      "EGEGY",
+      "GLRMK",
+      "AKFIS",
+      "MOPAS",
+      "SERNT",
+      "BIGEN",
+      "DSTKF",
+      "VSNMD",
+      "ENDAE",
+      "KLYPV",
+      "BALSU",
+      "BULGS",
+      "DOFRB",
+      "ECOGR",
+      "VAKFA",
+      "PAHOL",
+      "ZERGY",
+      "ARFYE",
+      "MEYSU",
+      "FRMPL",
+      "ZGYO",
+      "UCAYM",
+      "NETCD",
+      "AKHAN",
+      "BESTE",
+      "ATATR",
+      "EMPAE",
+      "GENKM",
+      "SVGYO",
+      "LXGYO",
+      "MCARD",
+      "AAGYO",
+      "EKDMR",
+      "BETAE",
+      "SOHOE",
+      "ORZAX",
+      "GOLDA",
+      "EKIM",
+      "ISVEA",
+      "SSAAT",
+      "SARAE",
+      "METEN",
+      "ALBTN",
+      "MASFN",
+      "KARCL",
+      "QUICK"
+    ],
+    "tickers_sha256": "dca11401234cc3a66a155fd1b546ff1f26ac09b519278011b1ee84a47896174f"
+  }
+}

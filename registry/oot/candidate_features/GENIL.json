@@ -1,0 +1,280 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "GENIL",
+  "company": "Gen İlaç ve Sağlık Ürünleri Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "49079",
+      "source_id": "KAP_954020_EK2",
+      "source_document": "KAP 954020 ek 2",
+      "source_published_at": "2021-08-01T20:28:30+03:00",
+      "source_sha256": "d79a944c33dcfa7d85fce7fe061c31ad14b9977cee50c8d10d188273d4e8cc7b",
+      "source_path": "registry/oot/source_docs/GENIL/KAP_954020_ek2.pdf",
+      "quote": "Toplam 62.500.000 100,0% 51.564 418.528.945 100,00% 49.079 68.750.000 100,00%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden kişi sayısı tabloda 51.564, metinde 'toplam 51.574 yatırımcıdan' (belge içi tutarsızlık); dağıtım yapılan 49.079",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "51.574",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "51.574",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex metindeki talep eden sayısını (51.574; tabloda 51.564) almış; fields'ta dağıtım yapılan 49.079 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "48606",
+        "company_employees": "265",
+        "domestic_institutional": "194",
+        "foreign_institutional": "14"
+      },
+      "source_id": "KAP_954020_EK2",
+      "source_document": "KAP 954020 ek 2",
+      "source_published_at": "2021-08-01T20:28:30+03:00",
+      "source_sha256": "d79a944c33dcfa7d85fce7fe061c31ad14b9977cee50c8d10d188273d4e8cc7b",
+      "source_path": "registry/oot/source_docs/GENIL/KAP_954020_ek2.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 21.250.000 34,0% 51.073 167.378.030 39,99% 48.606 24.375.000 35,46%",
+        "Şirket Çalışanları 625.000 1,0% 265 1.075.893 0,26% 265 625.000 0,91%",
+        "21.875.000 35,0% 212 212.501.232 50,77% 194 26.320.000 38,28%",
+        "18.750.000 30,0% 14 37.573.790 8,98% 14 17.430.000 25,35%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 51.073, çalışan 265, yurt içi kurumsal 212, yurt dışı kurumsal 14",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "51.073",
+        "Şirket Çalışanları": "265",
+        "Yurt İçi Kurumsal": "212",
+        "Yurt Dışı Kurumsal": "14"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '51.073', 'Şirket Çalışanları': '265', 'Yurt İçi Kurumsal': '212', 'Yurt Dışı Kurumsal': '14'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex talep eden sayılarını almış (belgede var); fields'ta dağıtım yapılan sayılar (48.606 / 265 / 194 / 14)"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "7.9",
+      "source_id": "KAP_954020_EK2",
+      "source_document": "KAP 954020 ek 2",
+      "source_published_at": "2021-08-01T20:28:30+03:00",
+      "source_sha256": "d79a944c33dcfa7d85fce7fe061c31ad14b9977cee50c8d10d188273d4e8cc7b",
+      "source_path": "registry/oot/source_docs/GENIL/KAP_954020_ek2.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara tahsis edilen payların 7,9 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "7,9",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "9.7",
+      "source_id": "KAP_954020_EK2",
+      "source_document": "KAP 954020 ek 2",
+      "source_published_at": "2021-08-01T20:28:30+03:00",
+      "source_sha256": "d79a944c33dcfa7d85fce7fe061c31ad14b9977cee50c8d10d188273d4e8cc7b",
+      "source_path": "registry/oot/source_docs/GENIL/KAP_954020_ek2.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara tahsis edilen payların 9,7 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "9,7",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "2.0",
+      "source_id": "KAP_954020_EK2",
+      "source_document": "KAP 954020 ek 2",
+      "source_published_at": "2021-08-01T20:28:30+03:00",
+      "source_sha256": "d79a944c33dcfa7d85fce7fe061c31ad14b9977cee50c8d10d188273d4e8cc7b",
+      "source_path": "registry/oot/source_docs/GENIL/KAP_954020_ek2.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara tahsis edilen payların 2,0 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "24375000",
+        "company_employees": "625000",
+        "domestic_institutional": "26320000",
+        "foreign_institutional": "17430000"
+      },
+      "source_id": "KAP_954020_EK2",
+      "source_document": "KAP 954020 ek 2",
+      "source_published_at": "2021-08-01T20:28:30+03:00",
+      "source_sha256": "d79a944c33dcfa7d85fce7fe061c31ad14b9977cee50c8d10d188273d4e8cc7b",
+      "source_path": "registry/oot/source_docs/GENIL/KAP_954020_ek2.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 21.250.000 34,0% 51.073 167.378.030 39,99% 48.606 24.375.000 35,46%",
+        "Şirket Çalışanları 625.000 1,0% 265 1.075.893 0,26% 265 625.000 0,91%",
+        "21.875.000 35,0% 212 212.501.232 50,77% 194 26.320.000 38,28%",
+        "18.750.000 30,0% 14 37.573.790 8,98% 14 17.430.000 25,35%"
+      ],
+      "unit": "lot",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "24.375.000",
+        "Şirket Çalışanları": "625.000",
+        "Yurt İçi Kurumsal": "26.320.000",
+        "Yurt Dışı Kurumsal": "17.430.000"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '24.375.000', 'Şirket Çalışanları': '625.000', 'Yurt İçi Kurumsal': '26.320.000', 'Yurt Dışı Kurumsal': '17.430.000'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "35.46",
+      "source_id": "KAP_954020_EK2",
+      "source_document": "KAP 954020 ek 2",
+      "source_published_at": "2021-08-01T20:28:30+03:00",
+      "source_sha256": "d79a944c33dcfa7d85fce7fe061c31ad14b9977cee50c8d10d188273d4e8cc7b",
+      "source_path": "registry/oot/source_docs/GENIL/KAP_954020_ek2.pdf",
+      "quote": "nihai halka arz büyüklüğünün %35,46’ine denk gelen paylar Yurtiçi Bireysel Yatırımcılar’a",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "35,46",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "38.28",
+      "source_id": "KAP_954020_EK2",
+      "source_document": "KAP 954020 ek 2",
+      "source_published_at": "2021-08-01T20:28:30+03:00",
+      "source_sha256": "d79a944c33dcfa7d85fce7fe061c31ad14b9977cee50c8d10d188273d4e8cc7b",
+      "source_path": "registry/oot/source_docs/GENIL/KAP_954020_ek2.pdf",
+      "quote": "%38,28’ine denk gelen 26.320.000 TL nominal değerli paylar Yurt İçi Kurumsal Yatırımcılar’a",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "38,28",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "25.35",
+      "source_id": "KAP_954020_EK2",
+      "source_document": "KAP 954020 ek 2",
+      "source_published_at": "2021-08-01T20:28:30+03:00",
+      "source_sha256": "d79a944c33dcfa7d85fce7fe061c31ad14b9977cee50c8d10d188273d4e8cc7b",
+      "source_path": "registry/oot/source_docs/GENIL/KAP_954020_ek2.pdf",
+      "quote": "%25,35’ine denk gelen paylar Yurt Dışı Kurumsal Yatırımcılar’a dağıtılmıştır",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "25,35",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız 'talep toplama işlemleri' diyor; dağıtım yöntemi adlandırılmıyor; TSSD (OCR) dağıtım yöntemini izahnameye atfediyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "sonuç ekinde 'Sabit Fiyatla Talep Toplama' ifadesi yok (yalnız 'talep toplama işlemleri'); ayrıca bu satış yöntemi, dağıtım yöntemi değil"
+      }
+    },
+    "lead_broker": {
+      "value": "OYAK Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_950539_EK1",
+      "source_document": "KAP 950539 ek 1",
+      "source_published_at": "2021-07-13T10:17:19+03:00",
+      "source_sha256": "cefbe612e9dd47d8adff0c1dfc398812d81269e0b774634a84fc587cf7ab5261",
+      "source_path": "registry/oot/source_docs/GENIL/KAP_950539_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek OYAK Yatırım Menkul Degerler A.Ş.'nin",
+      "note": "OCR metninde 'Degerler'; sonuç bildirimini de aynı kurum yayımladı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Oyak Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "TSSD'de aracı kurum olarak yazılı"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (3 sayfa, OCR) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_954206",
+      "source_document": "KAP 954206",
+      "source_published_at": "2021-08-02T18:13:57+03:00",
+      "source_sha256": "af28c0a9a8058011cbb38f6c0b6074a118bc33e82769c47b57274927cdabe0fa",
+      "source_path": "registry/oot/source_docs/GENIL/KAP_954206_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_954206",
+      "source_document": "KAP 954206",
+      "source_published_at": "2021-08-02T18:13:57+03:00",
+      "source_sha256": "af28c0a9a8058011cbb38f6c0b6074a118bc33e82769c47b57274927cdabe0fa",
+      "source_path": "registry/oot/source_docs/GENIL/KAP_954206_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_954206": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 954206",
+      "published_at": "2021-08-02T18:13:57+03:00",
+      "sha256": "af28c0a9a8058011cbb38f6c0b6074a118bc33e82769c47b57274927cdabe0fa",
+      "path": "registry/oot/source_docs/GENIL/KAP_954206_bildirim.pdf"
+    },
+    "KAP_954020_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 954020 ek 2",
+      "published_at": "2021-08-01T20:28:30+03:00",
+      "sha256": "d79a944c33dcfa7d85fce7fe061c31ad14b9977cee50c8d10d188273d4e8cc7b",
+      "path": "registry/oot/source_docs/GENIL/KAP_954020_ek2.pdf"
+    },
+    "KAP_950539_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 950539 ek 1",
+      "published_at": "2021-07-13T10:17:19+03:00",
+      "sha256": "cefbe612e9dd47d8adff0c1dfc398812d81269e0b774634a84fc587cf7ab5261",
+      "path": "registry/oot/source_docs/GENIL/KAP_950539_ek1.pdf"
+    }
+  }
+}

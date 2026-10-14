@@ -1,0 +1,57 @@
+FF...F....................                                               [100%]
+=================================== FAILURES ===================================
+________________ test_b1_files_and_shas_match_manifest_and_log _________________
+
+golden = {'rows': [{'model_id': 'break_floor_v0', 'fold_id': 'DMRGD|2023-10-11', 'ticker': 'DMRGD', 'first_trading_date': '2023...nts': 19, 'n': 35, 'rate': 0.5428571428571428}}, 'zero': {'F1': 0.3048780487804878, 'F2': 0.14102564102564102}}, ...}}}
+log_entries = [{'borsai_dirty': True, 'borsai_source_sha256': '74da0adaee6d278e6bc7ccc6a9ae12afabda40d111ced73d8695913109c5604a', 'c..._acceptance_run', 'data_version_sha256': 'a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977', ...}, ...]
+
+    def test_b1_files_and_shas_match_manifest_and_log(golden, log_entries):
+        m = golden["manifest"]
+        sums = dict(reversed(line.split("  ")) for line in (GOLDEN / "SHA256SUMS").read_text(encoding="utf-8").splitlines())
+        for name, sha in sums.items():
+            assert sha256_file(GOLDEN / name) == sha, name
+        run = m["runs"][pbk.MODEL_ID]
+        assert sha256_file(GOLDEN / run["file"]) == run["ledger_sha256"] and run["plan_id"] == pbk.PLAN_BREAK_H99
+        bt = [e for e in log_entries if e.get("kind") == "backtest" and e.get("model_id") == pbk.MODEL_ID]
+>       assert len(bt) == 1 and bt[0]["ledger_sha256"] == run["ledger_sha256"] and bt[0]["context"] == "official"
+E       assert (0 == 1)
+E        +  where 0 = len([])
+
+tests/test_faz8_golden.py:58: AssertionError
+___________ test_b2_variant_counter_counts_backtest_not_sensitivity ____________
+
+log_entries = [{'borsai_dirty': True, 'borsai_source_sha256': '74da0adaee6d278e6bc7ccc6a9ae12afabda40d111ced73d8695913109c5604a', 'c..._acceptance_run', 'data_version_sha256': 'a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977', ...}, ...]
+
+    def test_b2_variant_counter_counts_backtest_not_sensitivity(log_entries):
+        """§13-15: kart varyant sayacı backtest satırını sayar (H99 sürümünde Faz 8 varyantı 1), duyarlılık satırlarını saymaz."""
+>       assert fs8.faz8_variants(H99_DATA_VERSION_SHA256) == 1
+E       AssertionError: assert 0 == 1
+E        +  where 0 = <function faz8_variants at 0x10de79760>('a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977')
+E        +    where <function faz8_variants at 0x10de79760> = fs8.faz8_variants
+
+tests/test_faz8_golden.py:76: AssertionError
+________________________ test_b6_models_md_faz8_section ________________________
+
+golden = {'rows': [{'model_id': 'break_floor_v0', 'fold_id': 'DMRGD|2023-10-11', 'ticker': 'DMRGD', 'first_trading_date': '2023...nts': 19, 'n': 35, 'rate': 0.5428571428571428}}, 'zero': {'F1': 0.3048780487804878, 'F2': 0.14102564102564102}}, ...}}}
+
+    def test_b6_models_md_faz8_section(golden):
+        text = (ROOT / "docs" / "MODELS.md").read_text(encoding="utf-8")
+>       assert text == r1.render()
+E       assert "# Modeller v...del_id'dir.\n" == "# Modeller v...del_id'dir.\n"
+E         
+E         Skipping 123637 identical leading characters in diff, use -v to show
+E         Skipping 64505 identical trailing characters in diff, use -v to show
+E         - 3cc75d` | 0 | 3 |
+E         ?           ^
+E         + 3cc75d` | 1 | 3 |
+E         ?           ^
+E           
+E           #
+
+tests/test_faz8_golden.py:127: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_faz8_golden.py::test_b1_files_and_shas_match_manifest_and_log
+FAILED tests/test_faz8_golden.py::test_b2_variant_counter_counts_backtest_not_sensitivity
+FAILED tests/test_faz8_golden.py::test_b6_models_md_faz8_section - assert "# ...
+3 failed, 23 passed in 55.62s
+exit=1

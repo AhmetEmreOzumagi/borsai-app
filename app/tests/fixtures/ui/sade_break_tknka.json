@@ -1,0 +1,111 @@
+{
+  "ticker": "TKNKA",
+  "status": "OK",
+  "record_file": "machine_20261002T161730Z_130557515e13.json",
+  "record_params_sha256": "81f07e7810ca5b9513ebc577e14182798ea0b227f105df1551950d6ce40a3eab",
+  "model_file_sha256": "81f07e7810ca5b9513ebc577e14182798ea0b227f105df1551950d6ce40a3eab",
+  "produced_at_utc": "2026-10-02T16:17:30Z",
+  "b": 8,
+  "l": 7,
+  "break_date": "2026-08-31",
+  "b_floor": 0,
+  "model_status": "PREDICTED",
+  "p_f1": 0.13817491254287276,
+  "p_f2": 0.09521214961923939,
+  "zero_f1": 0.3048780487804878,
+  "zero_f2": 0.14102564102564102,
+  "by_type_f1": 0.1276595744680851,
+  "product_status": "NOT_AVAILABLE",
+  "product_f1": null,
+  "features": [
+    {
+      "name": "b_floor",
+      "close_raw": "157.1",
+      "lower_limit_raw": "149.4",
+      "ratio_raw": null,
+      "ln_value": null,
+      "value_f1": 0.0,
+      "clipped_f1": null,
+      "z_f1": -0.8629489272626913,
+      "z_f2": -0.8563488385776753,
+      "coef_f1": 0.9866556408087268,
+      "coef_f2": 0.28721801132023284
+    },
+    {
+      "name": "b_turnover",
+      "close_raw": null,
+      "lower_limit_raw": null,
+      "ratio_raw": "1.44245058064516129032258064516129032258064516129032258064516",
+      "ln_value": 0.3663434592951611,
+      "value_f1": 0.3663434592951611,
+      "clipped_f1": false,
+      "z_f1": 0.34338708772100723,
+      "z_f2": 0.35969537081072683,
+      "coef_f1": 0.06286893543556789,
+      "coef_f2": -0.3079897535288709
+    }
+  ],
+  "heads": [
+    {
+      "head": "F1",
+      "c": 1.0,
+      "intercept": -1.0006869243500793,
+      "training_n": 82,
+      "training_events": 25
+    },
+    {
+      "head": "F2",
+      "c": 0.1,
+      "intercept": -1.89485164203132,
+      "training_n": 78,
+      "training_events": 11
+    }
+  ],
+  "structural_p": "85.4",
+  "structural_min10": "127.30",
+  "impossible_d10": true,
+  "warnings": [],
+  "exposure_class": "MACHINE_SEQUENCED",
+  "t_open": "2026-09-01T09:40:00+03:00",
+  "class": "RETRO",
+  "live_n_scored": 0,
+  "live_n_retro": 7,
+  "card": {
+    "backtest_info": {
+      "F1_product": {
+        "ci95": [
+          -0.2520349536711236,
+          -0.12470055611027922
+        ],
+        "diff": -0.19038429252388073,
+        "n": 69,
+        "n_months": 21
+      },
+      "F1_zero": {
+        "ci95": [
+          -0.0452816349205337,
+          -0.007396321020727523
+        ],
+        "diff": -0.02808492786446958,
+        "n": 69,
+        "n_months": 21
+      },
+      "k1": true,
+      "label": "backtest'te geçiyor (tasarıma maruz)",
+      "scale": "backtest_break",
+      "subset": "first_trading_date >= 2024-01-01"
+    },
+    "promotion_label": "ön eleme (yakın dönem backtest'i, tasarıma maruz); canlı n = 0",
+    "promoted": true,
+    "promotion_stage": 1,
+    "regime_tag": "FON_KRIZI_2026",
+    "regime_start_d1": "2026-09-16",
+    "regime_text": "Bu arzın ilk seansları Eylül 2026 fon krizi penceresine düşüyor; eğitim kümesinde (2023-09…2026-08) böyle bir stres yok. Beklenti (önceden yazıldı): model tabanı az tahmin eder.",
+    "frozen_at": "2026-10-02T16:21:00+03:00",
+    "model_commit": "4d3c9a26be65ee4b3b8f204945f36cdae7eedd5a",
+    "model_push_proof_created_at": "2026-10-02T14:45:08Z",
+    "n_variants_same_data": 24,
+    "training_n_f1": 82,
+    "training_n_f2": 78
+  }
+}

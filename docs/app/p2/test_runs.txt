@@ -1,0 +1,43 @@
+# BORSAI_FAZ7_APP_P2 test koşuları (Europe/Istanbul tarihleri; komutlar repo kökünden)
+
+## Adım 0 — taban (HEAD d1193fa = origin/main; ağaçta yalnız izinli görev dosyası docs/prompts/FAZ7_APP_P2.md)
+- bash app/scripts/test.sh: exit 0 · cargo 116 geçti (0 kalan) · vitest 243/243 (17 dosya) · parity (test_gen_golden.py) 6 geçti · golden_unchanged: YEŞİL (U46, U55)
+- .venv/bin/python app/parity/gen_golden.py --check: {"checked": 30, "different": []} exit 0
+- .venv/bin/pytest -q -n 6 --dist loadgroup: 866 passed in 598.76s (0:09:58)
+
+## Adım 1 — B1 (92b7a44)
+- bash app/scripts/test.sh: exit 0 · cargo 121 (0 kalan; +5: post_d1 birim 3, post_d1_semantics 2 [U65 post_d1_inf_and_lock, durumlar]) · vitest 243/243 · parity 6 · golden_unchanged YEŞİL
+
+## Adım 2 — B2 (0041dc9) + APPPIN (bkz. aşağı)
+- bash app/scripts/test.sh: exit 0 · cargo 123 (+2: golden post_d1_parity [U64], coverage post_d1_coverage [U66]) · vitest 243/243 · parity 7 (+1 test_post_d1_golden_pinned) · golden_unchanged YEŞİL (16 eski 0b67f5d, 3+3 tavan yolu 7133991, 4 v1 d01daa4; _patched ilk 19/31/43 satır; dec_cases 9/10/11 eski bölüm)
+- .venv/bin/python app/parity/gen_golden.py --check: {"checked": 31, "different": []}
+- parity_report.json: 23 model 23 geçen (10143 satır, bit-eşit 10135, maks |Δ| 1.137e-13; değişmedi) · post_d1_hazard_v0 238/238 geçen, bit-eşit 204 (0.857), maks |Δ| 1.776e-15, ret 22, hata (D1_NOT_TRADED) 5 · yamalı 51/51 (D1 sonrası 8: PARAMS_INVALID 7, SCHEMA_UNSUPPORTED 1)
+- golden_coverage_post_d1.json: D1_NOT_CEILING 34, D1_NOT_TRADED 5, D1_LIMIT_NA 4, D1_VOLUME_INVALID 4, D1_FIELD_INVALID low/open/high 2/3/2, WARN_D1_* 2'şer, kırpma alt 37 / üst 4, OUT_OF_TRAINING_RANGE d1_turnover 30, path_conditional dolu 175 / boş (path verilmemiş) 2
+- APPPIN: .venv/bin/pytest -q tests/test_faz7c_model.py -k app_golden_pins: 1 passed (pin 30 → 31)
+
+## Adım 3 — B3 (9d38fda)
+- bash app/scripts/test.sh: exit 0 · cargo 131 (+8: records_parity post_d1_oot_open [K-P2-4], integrity post_d1_integrity [U67], build_embed plan_pins_post_d1_index, stage3 post_d1_records_reader [U68 Rust] / post_d1_preflight_real_repo / post_d1_todo_block_shape [U32 P2], post_d1 birim 2) · vitest 243/243 · parity 7 · golden_unchanged YEŞİL
+- K-P2-4: BORSAI_REPO=… cargo test -p borsai_predict --test records_parity post_d1_oot_open -- --ignored --nocapture → açık üye 71, kayıt 71, parite 71/71, bit-eşit 64, maks |Δ| 8.88e-16, path verilen 67; durumlar PREDICTED 59 · NOT_APPLICABLE (D1_NOT_CEILING) 9 · REFUSED (F3_MISSING) 3 (kasa dizinleri açılmadı; çıktıda kod yok)
+
+## Adım 4 — B4 (bkz. git log: BORSAI_APP_P2_B4)
+- bash app/scripts/test.sh: exit 0 · cargo 133 (+2: stage3 official_summary_post_d1_row [K-P2-3], stage4 scores_post_d1_reader [U70 Rust]) · vitest 260/260 (18 dosya; +17 post_d1.test.ts: U68 ×7, K-P2-3 ×5, U70 ×4, hesap taraması ×1) · parity 7 · golden_unchanged YEŞİL
+
+## Adım 5 — B5 (d134558)
+- bash app/scripts/test.sh: exit 0 · cargo 134 (+1: stage3 post_d1_wizard_fixtures; e2e post_d1_flow burada atlanır, betikte koşar) · vitest 272/272 (19 dosya; +12 post_d1_wizard.test.ts) · parity 7 · golden_unchanged YEŞİL
+- bash app/tests/e2e_post_d1_tmp_repo.sh: YEŞİL (U69: kurgusal SNTA1, D_1 = takvimden bugün+3'ten sonraki ilk seans; kayıt yokken DUR [NO_PRE_LISTING_RECORD, D1_PENDING] ve Python çağrılmadı; T_open Python registry.t_open'dan (D2 09:40+03:00); freeze --post-d1 kaydı yazdı, Rust parite 1/1 maks |Δ| 4.44e-16; comparators_conditional 5 karşılaştırıcı maks |Δ| 0; kayıt untracked; uygulamanın commit sayısı değişmedi; DUPLICATE_RECORD; T_open'dan önce iptal kabul; T_open sonrası iptal Python reddi aynen [POST_D1_CANCEL_AFTER_T_OPEN]; asıl repo registry/ ve data/ sha listesi birebir aynı)
+- bash app/tests/e2e_freeze_tmp_repo.sh: YEŞİL · bash app/tests/e2e_personal_isolation.sh: YEŞİL
+
+## Adım 5 (ek) — yalnız geliştirme: P2 görüntü adımları (bkz. git log: BORSAI_APP_P2_B5 (ek))
+- bash app/scripts/test.sh: exit 0 · cargo 134 · vitest 272/272 · parity 7 · golden_unchanged YEŞİL (prepare_screens_p2 test.sh'ta atlanır)
+
+## Adım 6 — ekran görüntüleri
+- bash app/scripts/screens_p2.sh <geçici dizin>: exit 0 · geçici klonda prepare_screens_p2 (SNTA1 listeleme öncesi kaydı + sentetik D_1, klonda commit) → VITE_BORSAI_DEMO=1 VITE_BORSAI_DEMO_P2=1 npm run tauri dev -- --features snapshot · 12 görüntü (sips -Z 1200) → docs/app/p2/ekran/ · asıl repo registry/ ve data/ sha listesi öncesiyle aynı
+
+## Adım 7 — derleme (commit yok)
+- source app/scripts/env.sh; cd app; npm run tauri build -- --bundles app: exit 0 · BorsAi.app/Contents/MacOS/borsai-app sha256 d7dd4daa1459cdbcfaa6ea5022825fc657f06bb614d295e01c575b901bdde4c3 (7 700 976 bayt; gömülü HEAD e27b3e130e33) · /Applications'a kopyalanmadı
+
+## Adım 8 — son kabul (HEAD e27b3e1; ağaçta yalnız docs/app/p2/)
+- .venv/bin/python app/parity/gen_golden.py --check: {"checked": 31, "different": []} exit 0
+- bash app/scripts/test.sh: exit 0 · cargo 134 geçti (0 kalan) · vitest 272/272 (19 dosya) · parity 7 · golden_unchanged: YEŞİL (U46, U55, EK 3 P2)
+- .venv/bin/pytest -q (sıralı): 866 passed in 929.51s (0:15:29)
+- APPPIN: ek pin gerekmedi (6be3103 yeterli)

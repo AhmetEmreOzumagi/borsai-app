@@ -1,0 +1,84 @@
+{
+  "authoritative": true,
+  "byte_equality_r1_vs_r2_proof": {
+    "frozen_prediction_ledger": true,
+    "pretrade_evidence_packet": true,
+    "training_eligibility_summary": true
+  },
+  "corrected_identity": "BKRGY_20260825_V1_5_R2",
+  "defect_class": "PACKAGING_MANIFEST_IDEMPOTENCY_DEFECT_ONLY",
+  "defect_description": "The R1 manifest embedded write-outcome bookkeeping fields (packet_status/prediction_status/eligibility_status) inside its own hashed content, making the manifest non-reproducible on a second run. No scientific value (prediction, feature, training identity, timestamp, cutoff) was affected.",
+  "immutability_rule": "Once written, BKRGY_20260825_V1_5_R2 may never be silently edited, regenerated with different bytes, or overwritten. Any future correction must be additive, under a new identity, preserving both BKRGY_20260825_V1_5 and BKRGY_20260825_V1_5_R2 unchanged.",
+  "post_cutoff_information_inspected": false,
+  "predecessor_reference": {
+    "authoritative": false,
+    "directory": "artifacts/predictions/prospective/BKRGY_20260825_V1_5",
+    "identity": "BKRGY_20260825_V1_5",
+    "manifest_sha256": "511c45bb99f8a9799340dbaa3da33286d56567ea7ecf393cedfe253535b0534a",
+    "manifest_status": "PRESERVED_UNMODIFIED_SUPERSEDED_BY_ADDITIVE_CORRECTION_PACKAGING_DEFECT_ONLY"
+  },
+  "prediction_classification": "DURING_BOOKBUILD_PRE_RESULT_PROSPECTIVE",
+  "prediction_cutoff": "2026-08-25",
+  "prediction_local_date": "2026-08-25",
+  "prediction_timestamp_changed": false,
+  "prediction_timestamp_istanbul": "2026-08-25T00:00:00+03:00",
+  "prediction_values_changed": false,
+  "predictions_by_horizon": {
+    "D1": {
+      "logistic_predicted_direction": "0",
+      "logistic_probability_above_ipo_raw": "0.30396499957149087",
+      "logistic_status": "FIT_OK",
+      "ridge_point_prediction_return": "0.011950829551288178",
+      "ridge_predicted_close": "13.084524226098157",
+      "ridge_status": "FIT_OK"
+    },
+    "D10": {
+      "logistic_predicted_direction": "0",
+      "logistic_probability_above_ipo_raw": "0.036521484382684828",
+      "logistic_status": "FIT_OK",
+      "ridge_point_prediction_return": "-0.26810006838260891",
+      "ridge_predicted_close": "9.4634661158128672",
+      "ridge_status": "FIT_OK"
+    },
+    "D3": {
+      "logistic_predicted_direction": "0",
+      "logistic_probability_above_ipo_raw": "0.046670197449007834",
+      "logistic_status": "FIT_OK",
+      "ridge_point_prediction_return": "-0.089462739354973675",
+      "ridge_predicted_close": "11.773246780140191",
+      "ridge_status": "FIT_OK"
+    },
+    "D5": {
+      "logistic_predicted_direction": "0",
+      "logistic_probability_above_ipo_raw": "0.048192525199307501",
+      "logistic_status": "FIT_OK",
+      "ridge_point_prediction_return": "-0.16031911167742963",
+      "ridge_predicted_close": "10.857073886010834",
+      "ridge_status": "FIT_OK"
+    }
+  },
+  "scientific_artifact_sha256": {
+    "BKRGY_20260825_V1_5_R2_frozen_prediction_ledger.csv": "be99d022c9984e173ab7b291fbba07bd55f8e171c6bff24ff5e3a1bab965d951",
+    "BKRGY_20260825_V1_5_R2_pretrade_evidence_packet.csv": "eeeb3acd3f8cefead337dc47bc3fc2cbb28c21cd6fc140bbe94ed80f8930dc3b",
+    "BKRGY_20260825_V1_5_R2_training_eligibility_summary.csv": "c60b5b7344c4cd5de5858fad17c4ed3de6407ddb1e360c2e93dca18f7857bf0c"
+  },
+  "source_scientific_artifact_sha256_r1": {
+    "BKRGY_20260825_V1_5_frozen_prediction_ledger.csv": "be99d022c9984e173ab7b291fbba07bd55f8e171c6bff24ff5e3a1bab965d951",
+    "BKRGY_20260825_V1_5_pretrade_evidence_packet.csv": "eeeb3acd3f8cefead337dc47bc3fc2cbb28c21cd6fc140bbe94ed80f8930dc3b",
+    "BKRGY_20260825_V1_5_training_eligibility_summary.csv": "c60b5b7344c4cd5de5858fad17c4ed3de6407ddb1e360c2e93dca18f7857bf0c"
+  },
+  "task_id": "BORSAI_BKRGY_V1_5_PROSPECTIVE_PREDICTION_FREEZE_PACKAGING_CORRECTION_01",
+  "training_identity_by_horizon": {
+    "D1": "dca11401234cc3a66a155fd1b546ff1f26ac09b519278011b1ee84a47896174f",
+    "D10": "dca11401234cc3a66a155fd1b546ff1f26ac09b519278011b1ee84a47896174f",
+    "D3": "dca11401234cc3a66a155fd1b546ff1f26ac09b519278011b1ee84a47896174f",
+    "D5": "dca11401234cc3a66a155fd1b546ff1f26ac09b519278011b1ee84a47896174f"
+  },
+  "training_identity_changed": false,
+  "training_n_by_horizon": {
+    "D1": "99",
+    "D10": "99",
+    "D3": "99",
+    "D5": "99"
+  }
+}

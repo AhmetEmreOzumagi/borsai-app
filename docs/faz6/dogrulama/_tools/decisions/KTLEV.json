@@ -1,0 +1,196 @@
+{
+ "ticker": "KTLEV",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_1157126",
+  "KAP_1157126_EK1",
+  "KAP_1157126_EK2",
+  "KAP_1155790_EK1",
+  "KAP_1157361"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "1.3",
+   "origin": "SOURCE_REPORTED",
+   "source_id": "KAP_1157126_EK1",
+   "quote": "halka arz büyüklüğünün toplamda 1,3 katına denk gelen 1,1 milyar TL karşılığı filtre edilmemiş 79.435.607 TL nominal değerli talep gelmiştir.",
+   "definition": "belgedeki toplam kat (halka arz büyüklüğüne göre; Borsa İstanbul verisi)",
+   "denominator_includes_additional_sale": false,
+   "note": "ek satış planlanmamış; aynı belgedeki nominal toplamlardan 79.435.607 / 60.000.000 = 1,3239267833. Borsa'da satış (Birincil Piyasa) arzı, ancak belge katı açıkça yazıyor."
+  },
+  "total_demand_filter_status": {
+   "value": "UNFILTERED",
+   "source_id": "KAP_1157126_EK1",
+   "quote": "halka arz büyüklüğünün toplamda 1,3 katına denk gelen 1,1 milyar TL karşılığı filtre edilmemiş 79.435.607 TL nominal değerli talep gelmiştir."
+  },
+  "ipo_size_tl": {
+   "value": "805800000",
+   "source_id": "KAP_1157126_EK1",
+   "quote": "halka arz büyüklüğü 805.800.000 TL olarak gerçekleşmiştir."
+  },
+  "capital_increase_shares": {
+   "value": "30000000",
+   "source_id": "KAP_1157126_EK1",
+   "quote": "Katılımevim’in sermayesinin 150.000.000 TL’den 180.000.000 TL’ye çıkarılması nedeniyle artırılan 30.000.000 TL nominal değerli 30.000.000 adet pay"
+  },
+  "existing_share_sale_shares": {
+   "value": "30000000",
+   "source_id": "KAP_1157126_EK1",
+   "quote": "mevcut ortakların sahip olduğu 30.000.000 TL nominal değerli 30.000.000 adet pay"
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_1157126_EK1",
+   "zero_from_statement": true,
+   "quote": "olmak üzere toplam 60.000.000 TL nominal değerli 60.000.000 adet pay halka arz edilmiştir.",
+   "note": "SPK satırında 'Ek Pay Satışı' hücresi boş; halka arz edilen toplam 60.000.000 = planlanan taban (bedelli 30.000.000 + mevcut pay satışı 30.000.000); TSSD'de ek satış beyanı yok"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_1157126_EK1",
+   "quote": "olmak üzere toplam 474.210 yatırımcı 60.000.000 TL nominal değerli payın alımını gerçekleştirmiştir."
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_1157126_EK1",
+   "used": "NONE",
+   "quote": "olmak üzere toplam 60.000.000 TL nominal değerli 60.000.000 adet pay halka arz edilmiştir.",
+   "note": "toplam = taban; ek satıştan söz edilmiyor"
+  },
+  "investor_count": {
+   "value": "474210",
+   "source_id": "KAP_1157126_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "olmak üzere toplam 474.210 yatırımcı 60.000.000 TL nominal değerli payın alımını gerçekleştirmiştir.",
+   "note": "belge 'halka arza toplamda 474.210 yatırımcı katılmıştır' da diyor; tabloda dağıtılan yatırımcı sayısı da 474.210"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "473340",
+    "domestic_institutional": "30",
+    "foreign_retail": "839",
+    "foreign_institutional": "1"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_1157126_EK1",
+   "quote": [
+    "- Bireysel Yatırımcı (*) 473.340 33.967.240 56,61",
+    "- Kurumsal Yatırımcı (**) 30 25.793.129 42,99",
+    "- Bireysel Yatırımcı (*) 839 64.631 0,11",
+    "- Kurumsal Yatırımcı (**) 1 175.000 0,29"
+   ],
+   "note": "retail = yurt içi bireysel (gerçek ve tüzel kişiler); ilk iki satır Yurt İçi, son iki satır Yurt Dışı başlığı altında"
+  },
+  "retail_demand_multiple": {
+   "value": null,
+   "missing_reason": "Borsa'da satış; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır', grup katı yok"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "Borsa'da satış; grup tahsisatı ve grup katı yok"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "Borsa'da satış; grup tahsisatı ve grup katı yok"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "33967240",
+    "domestic_institutional": "25793129",
+    "foreign_retail": "64631",
+    "foreign_institutional": "175000"
+   },
+   "source_id": "KAP_1157126_EK1",
+   "quote": [
+    "- Bireysel Yatırımcı (*) 473.340 33.967.240 56,61",
+    "- Kurumsal Yatırımcı (**) 30 25.793.129 42,99",
+    "- Bireysel Yatırımcı (*) 839 64.631 0,11",
+    "- Kurumsal Yatırımcı (**) 1 175.000 0,29"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "56.61",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1157126_EK1",
+   "quote": "- Bireysel Yatırımcı (*) 473.340 33.967.240 56,61"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "42.99",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1157126_EK1",
+   "quote": "- Kurumsal Yatırımcı (**) 30 25.793.129 42,99"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": "0.29",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1157126_EK1",
+   "quote": "- Kurumsal Yatırımcı (**) 1 175.000 0,29"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "belge yalnız satış yöntemini yazıyor (“Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor"
+  },
+  "lead_broker": {
+   "value": "İnfo Yatırım Menkul Değerler A.Ş.",
+   "source_id": "KAP_1155790_EK1",
+   "quote": "aracılk edecek İnfo Yatırım Menkul Değerler A.Ş.'nin",
+   "note": "TSSD OCR metni ('aracılk' OCR hatası); sonuç bildirimini yayımlayan kurum da İNFO YATIRIM MENKUL DEĞERLER A.Ş."
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {
+  "capital_increase_shares": {
+   "codex_value": "30.000.000",
+   "verdict": "FOUND_SAME"
+  },
+  "ipo_size_tl": {
+   "codex_value": "805.800.000",
+   "verdict": "FOUND_SAME"
+  },
+  "total_demand_multiple": {
+   "codex_value": "1,3",
+   "verdict": "FOUND_SAME",
+   "note": "Codex filtre durumunu NOT_SPECIFIED yazmış; belge 'filtre edilmemiş' diyor (UNFILTERED)"
+  },
+  "investor_count": {
+   "codex_value": "474.210",
+   "verdict": "FOUND_SAME"
+  },
+  "distribution_method": {
+   "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+  }
+ },
+ "notes": "Borsa İstanbul Birincil Piyasa'da sabit fiyatla (13,43 TL) satış. Sonuç eki sermaye artırımı (30.000.000) ve ortak satışını (30.000.000) ayrı yazıyor; katı (1,3) Borsa verisine dayanarak açıkça veriyor. SPK bülteninde Ek Pay Satışı hücresi boş; TSSD'de ek satış yapılıp yapılmayacağına dair açık beyan yok (pb_notes yazılmadı).",
+ "needs_search": false,
+ "pb_notes": {
+  "additional_sale_statement": {
+   "source_id": "KAP_1155781_EK1",
+   "quote": "25.2.5 Ek satış işlemlerine ilişkin bilgi: Yoktur.",
+   "meaning": "NONE",
+   "note": "Doğrulayıcı: SPK tablosunda Ek Pay Satışı hücresi boş; onaylı izahname §25.2.5 beyanı (H99 BESTE emsali)"
+  }
+ }
+}

@@ -1,0 +1,75 @@
+{
+  "borsai_dirty": false,
+  "borsai_source_sha256": "0e13b6be356cdb27041e90cfb882e82f17f09859ccc761340e3279fb99f16a89",
+  "created_at": "2026-10-02T11:36:14+03:00",
+  "description": "Faz 8: break_floor_v0'ın (SPEC_BREAK_V0) bu makinedeki H99 walk-forward fold ledger'ı (zero_F1/zero_F2 sütunları break_floor_v0@ZERO kural satırının backtest'idir), üç duyarlılığın ledger'ları (model değil) ve iki kimliğin nihai fit önizlemeleri. docs/MODELS.md Faz 8 bölümü bunlardan üretilir. Modeller DONDURULMADI; önizlemeler models/'e yazılmadı.",
+  "final_fit_previews": {
+    "break_floor_v0": {
+      "file": "break_floor_v0_final_fit_preview.json",
+      "parity_max_abs": {
+        "F1": 1.1102230246251565e-16,
+        "F2": 5.551115123125783e-17
+      },
+      "sha256": "eab46afb1b052f4727ccb0eaaed0aa0e90ac95185e7a94be9a9daf6f08e118fa"
+    },
+    "break_floor_v0@ZERO": {
+      "file": "break_floor_v0@ZERO_final_fit_preview.json",
+      "parity_max_abs": {
+        "F1": 0.0,
+        "F2": 0.0
+      },
+      "sha256": "d63f8f55b896c199a6df121f27dcd79b131d4f7cddc12dd15fa3b59c722a373e"
+    }
+  },
+  "git_commit": "fa623dfcef38ce3b368f5d74592cb15163f15355",
+  "info": {
+    "faz4_cell_parity": 87,
+    "folds_insufficient_F1": 13,
+    "folds_insufficient_F2": 26,
+    "folds_target_undefined_F2": 4,
+    "folds_total": 82,
+    "product_insufficient": 5
+  },
+  "log_entry": {
+    "context": "official",
+    "ledger_sha256": "730a4e3cc75d007cf66306294a0b9c0dcc58840d82968864ab87357ee170098e",
+    "started_at": "2026-10-02T11:35:50+03:00"
+  },
+  "machine": {
+    "platform": "Darwin 27.0.0 arm64 / CPython 3.12.14"
+  },
+  "runs": {
+    "break_floor_v0": {
+      "file": "break_floor_v0_fold_ledger.csv",
+      "ledger_sha256": "730a4e3cc75d007cf66306294a0b9c0dcc58840d82968864ab87357ee170098e",
+      "model_id": "break_floor_v0",
+      "plan_id": "H99_BREAK_WALK_FORWARD_E_CUTOFF_B_LE_9_MIN10ROWS_5EV_5NE",
+      "spec_sha256": "8ada9ccf77dc12caa5e9ea00b5bd028456dc8ce7d6857665358737c4b7a84e50"
+    }
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "sensitivities": {
+    "break_floor_v0__sens_floor_only": {
+      "file": "break_floor_v0__sens_floor_only_fold_ledger.csv",
+      "ledger_sha256": "1900f91015123db87b9ed6b7fda9e4aff3ca18d62fe54f00886df8915a6f175c",
+      "spec_sha256": "f9496dde556cf01d7140441f1566b74c27015594eb11ccb5b53b7b96539f702c"
+    },
+    "break_floor_v0__sens_turnover_only": {
+      "file": "break_floor_v0__sens_turnover_only_fold_ledger.csv",
+      "ledger_sha256": "228822983914039b6dbd19f76c8e1156d8d231e89660c8b3d1a10cb92b53f199",
+      "spec_sha256": "d0459fd94be2a00de999bcf716fae9627958697038a34044e1ab8f6124efd867"
+    },
+    "break_floor_v0__sens_with_group_Z": {
+      "file": "break_floor_v0__sens_with_group_Z_fold_ledger.csv",
+      "ledger_sha256": "0e7fa3a7758fb4ccd87aabb21ab6457ba05c524be29fb065de04e1504325f141",
+      "spec_sha256": "22bfe21ee77994b8431dd7514b60faa9d9f618db48c32dc1f835b1ee9ff4f12d"
+    }
+  }
+}

@@ -1,0 +1,166 @@
+# Mutasyon denetimi çıktıları — klon /tmp/borsai_app_audit/clone (git clone --local), CARGO_TARGET_DIR=/tmp/borsai_app_audit/target
+# Klon derlemesi (cargo test --workspace --no-run --offline): build rc=0 dur=209s
+# Sürücü: ekler/mutate.sh ; özet:
+a_golden_digit rc=0 dur=32s :: cargo_t -p borsai_predict --test golden golden_parity
+21:        "D3" => ("-0.271", "0.332"),
+b1_clip_bound rc=101 dur=44s :: cargo_t -p borsai_predict --test golden golden_parity
+95:    py_sum(coef.iter().rev().zip(z.iter()).map(|(c, v)| c * v)) + intercept
+b2_ridge_coef_order rc=101 dur=33s :: cargo_t -p borsai_predict --test golden golden_parity
+c_n7_cells_rust rc=101 dur=4s :: cargo_t --test stage4
+c_n7_cells_vitest rc=1 dur=3s :: vitest_t tests/accuracy.test.ts
+d_n35_verdict_ci0_rust rc=101 dur=0s :: cargo_t --test stage4
+d_n35_verdict_ci0_vitest rc=1 dur=3s :: vitest_t tests/accuracy.test.ts
+e1_declared_in_api_line rc=1 dur=1s :: vitest_t tests/u52_declaration.test.ts
+e2_declared_one_line_above_npm_test rc=0 dur=5s :: bash -c cd app && npm test
+9:pub const GIT_READONLY_SUBCOMMANDS: [&str; 5] = ["rev-parse", "status", "log", "ls-files", "commit"];
+f_git_commit_whitelist rc=101 dur=4s :: cargo_t --test stage2 git_readonly_whitelist
+g_guard_removed_stage2 rc=101 dur=3s :: cargo_t --test stage2 scenario_path_guard
+g_guard_removed_unit rc=101 dur=2s :: cargo_t --lib export_all_scenarios_array_and_guard
+g_guard_removed_e2e rc=101 dur=4s :: bash app/tests/e2e_freeze_tmp_repo.sh
+h_band_registry_scenario rc=1 dur=2s :: vitest_t tests/stage5.test.ts
+i_official_predict_all rc=1 dur=2s :: vitest_t tests/registry.test.ts
+=== klon durumu ===
+?? .venv
+?? app/node_modules
+?? app/src-tauri/crates/borsai_predict/tests/audit_sample.rs
+?? app/src-tauri/tests/audit_probe.rs
+DONE
+
+=================== a_golden_digit
+test golden_parity ... ok
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 6 filtered out; finished in 30.36s
+=================== a_golden_digit_nocapture
+v1_5_h99                 satır  392  geçen  392  bit-eşit  391 (0.9974)  maks |Δ| 6.661338147750939e-16
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 6 filtered out; finished in 12.13s
+=================== a2_u1_check
+app/parity/test_gen_golden.py:35: AssertionError
+=================== a3_golden_1e-8
+1 uyuşmazlık; ilk 20:
+v1_5_h99/0000: D5.p_up: beklenen 0.9790906501090418, Rust 0.9790906401090418, |Δ| = 1.0000000050247593e-8
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 12.32s
+=================== b1_clip_bound
+test golden_parity ... FAILED
+v1_5_h99                 satır  392  geçen  364  bit-eşit  364 (0.9286)  maks |Δ| 3.0239999999999156e-2
+thread 'golden_parity' (2790204) panicked at crates/borsai_predict/tests/golden.rs:470:5:
+288 uyuşmazlık; ilk 20:
+v1_5_h99/0001: D3.return: beklenen 0.331, Rust 0.332, |Δ| = 1.0000000000000009e-3
+v1_5_h99/0001: D3.price: beklenen 13.62944, Rust 13.63968, |Δ| = 1.0239999999999583e-2
+v1_5_h99/0001: warning RETURN_CLIPPED_TO_PHYSICAL_BOUND:D3.used: beklenen 0.331, Rust 0.332, |Δ| = 1.0000000000000009e-3
+v1_5_h99/0002: D3.return: beklenen 0.331, Rust 0.332, |Δ| = 1.0000000000000009e-3
+v1_5_h99/0002: D3.price: beklenen 33.275, Rust 33.300000000000004, |Δ| = 2.5000000000005684e-2
+v1_5_h99/0002: warning RETURN_CLIPPED_TO_PHYSICAL_BOUND:D3.used: beklenen 0.331, Rust 0.332, |Δ| = 1.0000000000000009e-3
+v1_5_h99/0003: D3.return: beklenen 0.331, Rust 0.332, |Δ| = 1.0000000000000009e-3
+v1_5_h99/0003: D3.price: beklenen 22.77341, Rust 22.79052, |Δ| = 1.71100000000024e-2
+v1_5_h99/0003: warning RETURN_CLIPPED_TO_PHYSICAL_BOUND:D3.used: beklenen 0.331, Rust 0.332, |Δ| = 1.0000000000000009e-3
+v1_5_h99/0012: D3.return: beklenen 0.331, Rust 0.332, |Δ| = 1.0000000000000009e-3
+v1_5_h99/0012: D3.price: beklenen 9.317, Rust 9.324, |Δ| = 6.999999999999673e-3
+v1_5_h99/0012: warning RETURN_CLIPPED_TO_PHYSICAL_BOUND:D3.used: beklenen 0.331, Rust 0.332, |Δ| = 1.0000000000000009e-3
+v1_5_h99/0022: D3.return: beklenen 0.331, Rust 0.331692170732885, |Δ| = 6.921707328849669e-4
+v1_5_h99/0022: D3.price: beklenen 25.88795, Rust 25.901412720754614, |Δ| = 1.3462720754613855e-2
+v1_5_h99/0022: D3.return_clipped: beklenen "UPPER", Rust null
+v1_5_h99/0022: warnings çok kümesi: beklenen [(("RETURN_CLIPPED_TO_PHYSICAL_BOUND", "D3"), 1)], Rust []
+v1_5_h99/0024: D3.return: beklenen 0.331, Rust 0.332, |Δ| = 1.0000000000000009e-3
+v1_5_h99/0024: D3.price: beklenen 33.74085, Rust 33.766200000000005, |Δ| = 2.5350000000003092e-2
+v1_5_h99/0024: warning RETURN_CLIPPED_TO_PHYSICAL_BOUND:D3.used: beklenen 0.331, Rust 0.332, |Δ| = 1.0000000000000009e-3
+v1_5_h99/0026: D3.return: beklenen 0.331, Rust 0.332, |Δ| = 1.0000000000000009e-3
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 41.88s
+=================== b2_ridge_coef_order
+test golden_parity ... FAILED
+v1_5_h99                 satır  392  geçen   63  bit-eşit   63 (0.1607)  maks |Δ| 5.647448439656157e2
+thread 'golden_parity' (2791390) panicked at crates/borsai_predict/tests/golden.rs:470:5:
+21691 uyuşmazlık; ilk 20:
+v1_5_h99/0000: D1.return: beklenen 0.08728023453804833, Rust 0.0940964819703238, |Δ| = 6.816247432275477e-3
+v1_5_h99/0000: D1.return_unclipped: beklenen 0.08728023453804833, Rust 0.0940964819703238, |Δ| = 6.816247432275477e-3
+v1_5_h99/0000: D1.price: beklenen 24.572533300559893, Rust 24.72658049252932, |Δ| = 1.540471919694255e-1
+v1_5_h99/0000: D1.p_up: beklenen 0.9493195264084894, Rust 0.9584099201653287, |Δ| = 9.090393756839288e-3
+v1_5_h99/0000: D10.return: beklenen 0.9508009355433078, Rust 0.8788707389969235, |Δ| = 7.193019654638433e-2
+v1_5_h99/0000: D10.return_unclipped: beklenen 0.9508009355433078, Rust 0.8788707389969235, |Δ| = 7.193019654638433e-2
+v1_5_h99/0000: D10.price: beklenen 44.088101143278756, Rust 42.462478701330475, |Δ| = 1.6256224419482805e0
+v1_5_h99/0000: D10.p_up: beklenen 0.9645354713331642, Rust 0.9532680509535413, |Δ| = 1.1267420379622917e-2
+v1_5_h99/0000: D3.return: beklenen 0.3005804462318246, Rust 0.31338892321491396, |Δ| = 1.2808476983089345e-2
+v1_5_h99/0000: D3.return_unclipped: beklenen 0.3005804462318246, Rust 0.31338892321491396, |Δ| = 1.2808476983089345e-2
+v1_5_h99/0000: D3.price: beklenen 29.39311808483924, Rust 29.68258966465706, |Δ| = 2.8947157981781757e-1
+v1_5_h99/0000: D3.p_up: beklenen 0.9873859492342022, Rust 0.9894674476454427, |Δ| = 2.081498411240501e-3
+v1_5_h99/0000: D5.return: beklenen 0.48568236237719487, Rust 0.49684819992668605, |Δ| = 1.1165837549491187e-2
+v1_5_h99/0000: D5.return_unclipped: beklenen 0.48568236237719487, Rust 0.49684819992668605, |Δ| = 1.1165837549491187e-2
+v1_5_h99/0000: D5.price: beklenen 33.57642138972461, Rust 33.828769318343106, |Δ| = 2.52347928618498e-1
+v1_5_h99/0000: D5.p_up: beklenen 0.9790906401090418, Rust 0.9805083047597251, |Δ| = 1.4176646506832702e-3
+v1_5_h99/0001: D1.return_unclipped: beklenen 0.11005905604592854, Rust 0.10267604619330166, |Δ| = 7.383009852626882e-3
+v1_5_h99/0001: D1.p_up: beklenen 0.9814787117004544, Rust 0.977037588435589, |Δ| = 4.441123264865454e-3
+v1_5_h99/0001: D10.return: beklenen 1.0780770722887687, Rust 0.9065313061920475, |Δ| = 1.7154576609672123e-1
+v1_5_h99/0001: D10.return_unclipped: beklenen 1.0780770722887687, Rust 0.9065313061920475, |Δ| = 1.7154576609672123e-1
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 30.35s
+=================== c_n7_cells_rust
+test unsupported_schema_version_closes_panel ... ok
+test header_fields_and_index_mismatch ... FAILED
+test integrity_is_fail_closed ... FAILED
+test ui_view_fixtures ... FAILED
+test real_scores_file_passes_integrity ... ok
+thread 'header_fields_and_index_mismatch' (2792679) panicked at tests/stage4.rs:127:5:
+thread 'integrity_is_fail_closed' (2792680) panicked at tests/stage4.rs:41:5:
+thread 'ui_view_fixtures' (2792682) panicked at tests/stage4.rs:41:5:
+test result: FAILED. 2 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s
+=================== c_n7_cells_vitest
+     × fixture'daki her model_value ve kural değeri DOM'da (biçimlendirilmiş) 16ms
+ FAIL  tests/accuracy.test.ts > U25: uygulama skor hesaplamaz > fixture'daki her model_value ve kural değeri DOM'da (biçimlendirilmiş)
+AssertionError: n7 return D1 MAE base_train_median: expected 'Kaynak: REPO (repo dosyası) · üretim …' to contain '3.1 puan'
+ Test Files  1 failed (1)
+      Tests  1 failed | 42 passed (43)
+=================== d_n35_verdict_ci0_rust
+test unsupported_schema_version_closes_panel ... ok
+test header_fields_and_index_mismatch ... ok
+test integrity_is_fail_closed ... FAILED
+test real_scores_file_passes_integrity ... ok
+test ui_view_fixtures ... FAILED
+thread 'integrity_is_fail_closed' (2793532) panicked at tests/stage4.rs:41:5:
+thread 'ui_view_fixtures' (2793534) panicked at tests/stage4.rs:217:5:
+test result: FAILED. 3 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+=================== d_n35_verdict_ci0_vitest
+     × aralıklar dosyadaki uçlarla 7ms
+ FAIL  tests/accuracy.test.ts > U18: n ≥ 30 → hüküm ve renk > aralıklar dosyadaki uçlarla
+AssertionError: expected '[-0.9, 0.1] puan' to be '[-0.9, -0.1] puan' // Object.is equality
+ Test Files  1 failed (1)
+      Tests  1 failed | 42 passed (43)
+=================== e1_declared_in_api_line
+     × api çağrılarının hiçbirinde beyan alanı yok 18ms
+ FAIL  tests/u52_declaration.test.ts > U52-5: beyan hiçbir Rust komutuna geçmez (ön uç tarafı) > api çağrılarının hiçbirinde beyan alanı yok
+AssertionError: screens/results.ts: out.push({ model_id: run.model_id, result: await api.pathConditional(run.model_id, source, jOrT + store.view.declared.filter((x) => x).length, stateName), error: null });: expected true to be false // Object.is equality
+ Test Files  1 failed (1)
+      Tests  1 failed | 18 passed (19)
+=================== e2_declared_one_line_above_npm_test
+ Test Files  15 passed (15)
+      Tests  207 passed (207)
+=================== f_git_commit_whitelist
+test git_readonly_whitelist ... FAILED
+thread 'git_readonly_whitelist' (2795769) panicked at tests/stage2.rs:418:47:
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 13 filtered out; finished in 0.00s
+=================== g_guard_removed_stage2
+test scenario_path_guard ... FAILED
+thread 'scenario_path_guard' (2796311) panicked at tests/stage2.rs:389:102:
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 13 filtered out; finished in 0.07s
+=================== g_guard_removed_unit
+test commands::scenario::tests::export_all_scenarios_array_and_guard ... FAILED
+thread 'commands::scenario::tests::export_all_scenarios_array_and_guard' (2796599) panicked at src/commands/scenario.rs:436:9:
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 15 filtered out; finished in 0.00s
+=================== g_guard_removed_e2e
+E2E| U31 adım 5: T = 2026-09-22 ≤ bugün (2026-09-23) → KIRMIZI uyarı
+thread 'freeze_flow' (2797325) panicked at tests/e2e.rs:337:87:
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3 filtered out; finished in 2.13s
+=================== h_band_registry_scenario
+     × Sicil · liste: sınıf ve metin birebir 7ms
+     × Sicil · liste: SENARYO bandı ve notu hiç geçmez 2ms
+ FAIL  tests/stage5.test.ts > A5-1: mod bandı ekran ve hâl başına (§3 tablosu) > Sicil · liste: sınıf ve metin birebir
+AssertionError: expected 'mode-scenario' to be 'mode-official' // Object.is equality
+ FAIL  tests/stage5.test.ts > A5-2: senaryo metni yalnız senaryo ekranlarında > Sicil · liste: SENARYO bandı ve notu hiç geçmez
+AssertionError: Sicil · liste: SENARYO: expected '<header class="mode-band mode-scenari…' not to contain 'SENARYO'
+ Test Files  1 failed (1)
+      Tests  2 failed | 33 passed (35)
+=================== i_official_predict_all
+     × sicil ekranı ve arz sayfası predict_all yolunu hiç çağırmaz 4ms
+     × arz sayfasının çağırdığı komutlar sabit bir kümededir 3ms
+ FAIL  tests/registry.test.ts > resmi görünüm modeli yeniden çalıştırmaz (U38 / U49 statik) > sicil ekranı ve arz sayfası predict_all yolunu hiç çağırmaz
+AssertionError: src/screens/registry.ts: expected true to be false // Object.is equality
+ FAIL  tests/registry.test.ts > resmi görünüm modeli yeniden çalıştırmaz (U38 / U49 statik) > arz sayfasının çağırdığı komutlar sabit bir kümededir
+AssertionError: expected [ 'predictAll' ] to deeply equal []
+ Test Files  1 failed (1)
+      Tests  2 failed | 11 passed (13)

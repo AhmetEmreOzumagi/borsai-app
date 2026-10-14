@@ -1,0 +1,40 @@
+kayıt sayısı 135 | hücre toplamı 2565
+INDEX model sayısı 19
+
+model | PREDICTED/REFUSED/NA (135) | açık küme PREDICTED | ret kodları | NA kodları
+v1_5_h99                 130/  5/ 0 |  68 | {'F3_MISSING': 5} | {}
+base_always_ceiling      134/  0/ 1 |  71 | {} | {'MARGIN_NOT_10PCT': 1}
+base_train_median        135/  0/ 0 |  71 | {} | {}
+base_train_mean          135/  0/ 0 |  71 | {} | {}
+base_zero                135/  0/ 0 |  71 | {} | {}
+base_rate                135/  0/ 0 |  71 | {} | {}
+base_last10_rate         135/  0/ 0 |  71 | {} | {}
+v1_6_h99                 130/  5/ 0 |  68 | {'F3_MISSING': 5} | {}
+v1_5_market20_v0         130/  5/ 0 |  68 | {'F3_MISSING': 5} | {}
+pb_v0                    112/ 23/ 0 |  59 | {'PB_FIELD_MISSING': 2, 'PB_PRICE_RANGE': 9, 'PB_IDENTITY': 12} | {}
+ceiling_hazard_v0        130/  5/ 0 |  68 | {'F3_MISSING': 5} | {}
+ceiling_hazard_v0@INF    134/  0/ 1 |  71 | {} | {'MARGIN_NOT_10PCT': 1}
+pb_ceiling_v0            112/ 23/ 0 |  59 | {'PB_FIELD_MISSING': 2, 'PB_PRICE_RANGE': 9, 'PB_IDENTITY': 12} | {}
+pb_ceiling_v0@INF        134/  0/ 1 |  71 | {} | {'MARGIN_NOT_10PCT': 1}
+base_km_expanding        135/  0/ 0 |  71 | {} | {}
+base_km_last10           135/  0/ 0 |  71 | {} | {}
+ceiling_path_v0          127/  4/ 4 |  67 | {'F3_MISSING': 4} | {'TICK_TABLE_MISMATCH': 3, 'MARGIN_NOT_10PCT': 1}
+ceiling_path_v0@INF      134/  0/ 1 |  71 | {} | {'MARGIN_NOT_10PCT': 1}
+pb_ceiling_path_v0       109/ 22/ 4 |  58 | {'PB_FIELD_MISSING': 2, 'PB_PRICE_RANGE': 9, 'PB_IDENTITY': 11} | {'TICK_TABLE_MISMATCH': 3, 'MARGIN_NOT_10PCT': 1}
+
+NA hücre eşleşmezliği: []
+NA taşıyan üye sayısı: 4
+
+comparator_note sayıları: {('base_always_ceiling', 'FROZEN_H99'): 135, ('base_km_expanding', 'FROZEN_H99'): 135, ('base_km_last10', 'FROZEN_H99_LAST10_NOT_CHRONOLOGICAL'): 135, ('base_last10_rate', 'FROZEN_H99_LAST10_NOT_CHRONOLOGICAL'): 135, ('base_rate', 'FROZEN_H99'): 135, ('base_train_mean', 'FROZEN_H99'): 135, ('base_train_median', 'FROZEN_H99'): 135, ('base_zero', 'FROZEN_H99'): 135}
+karşılaştırıcı çıktısı kayıtlar arasında kaç farklı değer alıyor: {'base_always_ceiling': 107, 'base_km_expanding': 1, 'base_km_last10': 1, 'base_last10_rate': 1, 'base_rate': 1, 'base_train_mean': 107, 'base_train_median': 107, 'base_zero': 107}
+
+§5 alanları var mı: {'schema_version': True, 'record_type': True, 'record_stage': True, 'scale': True, 'ticker': True, 'cohort_file_sha256': True, 'inputs_sha256': True, 'models_index': True, 'models': True, 'comparators': True, 'regime_tags': True, 'recorded_at_utc': True, 'code': True} | models_index anahtarları ['model_ids', 'path', 'sha256'] | code ['borsai_dirty', 'borsai_source_sha256', 'git_head']
+hücre anahtarları: ['algorithm', 'file', 'kind', 'model_id', 'not_applicable', 'output', 'params_sha256', 'refusal', 'spec_sha256', 'status']
+schema/stage/scale: borsai.oot_record/1 OOT_PRE_LISTING OOT_PRE_H99 | cohort sha eşit: True
+inputs sha eşit: True
+sonuç anahtarı var mı: False
+dosya adı içerik adresli: True
+vault/regime_tags kohort satırından: True
+market20 takvim C ve ref_date=ftd: True
+
+5 kayıt (['CVKMD', 'DNISI', 'KZBGY', 'QUAGR', 'UNLU']): 95 hücre doğrudan predict ile karşılaştırıldı; eşit olmayan: 0

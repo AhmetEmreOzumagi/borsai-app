@@ -1,0 +1,424 @@
+{
+  "algorithm": "discrete_time_hazard_logit_l2",
+  "beta": {},
+  "code_version": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "41f5ad27fcad84047d40e1eeeb95857c0cb113695500849d6fa8cb60173b150b",
+    "git_commit": "2a21a96c950579cd56f4983f72175f130c1b3bb0"
+  },
+  "columns": [],
+  "created_at": "2026-09-26T03:22:09+03:00",
+  "day_groups": {
+    "g1": [
+      1
+    ],
+    "g2": [
+      2,
+      3
+    ],
+    "g3": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "description": "ceiling_hazard_v1_pooled ızgarasının uç noktası (λ = INF) kural olarak: 3 gün-grubu sabiti + rejim sabiti δ, özellik yok (SPEC_HAZARD_V1 §2); (γ, δ) Newton. Eğitim kümesi ve kesim modelinkiyle aynı.",
+  "family": "ceiling_hazard_v1",
+  "feature_definitions": {},
+  "feature_ranges": {},
+  "features": [],
+  "gamma": [
+    -1.7831500876735458,
+    -2.049908670969854,
+    -1.5278740496402061
+  ],
+  "horizons": {
+    "D1": {
+      "p_up": null,
+      "return": null
+    },
+    "D10": {
+      "p_up": null,
+      "return": null
+    },
+    "D3": {
+      "p_up": null,
+      "return": null
+    },
+    "D5": {
+      "p_up": null,
+      "return": null
+    }
+  },
+  "input_policy": {
+    "regime_live": "r = live_value (0); girdi istemez; çıktı regime_value_used",
+    "regime_oot_record": "girdi alloc_regime (kohort etiketi) -> r; bilinmeyen/boş etiket REFUSE REGIME_UNKNOWN",
+    "required_inputs": []
+  },
+  "lambda": "INF",
+  "lambda_score_table": [],
+  "model_id": "ceiling_hazard_v1_pooled@INF",
+  "preprocessing": null,
+  "pseudo_rows": {
+    "r": 0,
+    "weight": 0.5,
+    "z": 0
+  },
+  "reclose_rates": {
+    "a_a": 8,
+    "a_b": 77,
+    "n_a": 176,
+    "n_b": 711,
+    "r_a": 0.0480225988700565,
+    "r_b": 0.10884831460674158
+  },
+  "regime": {
+    "alloc_regime": "borsai.data.alloc_regime(talep toplama başlangıcı) = kohort dosyasının ALLOC_REGIME etiketi (SPEC_DEVIATIONS I8, J)",
+    "column": "r_pre_equal",
+    "definition": "1[ALLOC_REGIME != EQUAL_DIST_20230330] (PRE_20211111 ve THRESH100_20211111 -> 1)",
+    "delta": 0.22766381281724804,
+    "h99_value": 0,
+    "live_value": 0,
+    "penalized": false,
+    "pseudo_row_value": 0,
+    "z_scored": false
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "schema_version": "borsai.model/1",
+  "solver": {
+    "grad_max": 1.4498124922823763e-13,
+    "iterations": 4
+  },
+  "spec": {
+    "algorithm": "discrete_time_hazard_logit_l2",
+    "day_groups": {
+      "g1": [
+        1
+      ],
+      "g2": [
+        2,
+        3
+      ],
+      "g3": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "days": 10,
+    "decisions_document": {
+      "path": "docs/specs_faz7/KARARLAR.md",
+      "sha256": "eb6ac63cce3efdd05c824e474d9be53ccd70e992ce952f9f58c77a391f70ff36"
+    },
+    "description": "ceiling_hazard_v1_pooled ızgarasının uç noktası (λ = INF) kural olarak: 3 gün-grubu sabiti + rejim sabiti δ, özellik yok (SPEC_HAZARD_V1 §2); (γ, δ) Newton. Eğitim kümesi ve kesim modelinkiyle aynı.",
+    "f3_filter_rule": "SPEC_CEILING_V0 §4 filtre adımı aynen; bir eğitim kümesinde (iç CV dahil) f3'lü birimlerin filtre modu açık ve birimin durumu ona açıkça zıtsa o birimin f3'ü boşalır ve birim o kümede kullanılmaz (§7; proje sahibi kararı, SPEC_DEVIATIONS J); iç CV'de tutulan birimin f3'ü boşalıyorsa o birim skorlanmaz",
+    "family": "ceiling_hazard_v1",
+    "feature_version": "BORSAI_FEATURES_V1_5_PORT_1",
+    "features": [],
+    "input_policy": {
+      "regime_live": "r = live_value (0); girdi istemez; çıktı regime_value_used",
+      "regime_oot_record": "girdi alloc_regime (kohort etiketi) -> r; bilinmeyen/boş etiket REFUSE REGIME_UNKNOWN",
+      "required_inputs": []
+    },
+    "lambda_INF": "beta ≡ 0; (gamma, delta) pseudo-satırlı MLE, Newton (kapalı biçim yok; SPEC_HAZARD_V1 §3.3)",
+    "lambda_grid": [
+      "INF"
+    ],
+    "min_train_n": 10,
+    "model": "logit h_d(x) = gamma_{g(d)} + delta·r + beta·z(x); S_k = prod_{d<=k}(1 - h_d)",
+    "model_id": "ceiling_hazard_v1_pooled@INF",
+    "outputs": [
+      "hazard",
+      "S",
+      "P_L",
+      "P_close_ceiling"
+    ],
+    "parent_model_id": "ceiling_hazard_v1_pooled",
+    "penalty": "L2 yalnız beta'da, (lambda/2)·||beta||²; gamma ve delta (rejim) cezasız",
+    "plan_id": "H99_PLUS_OOT_OPEN_CEILING_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_MIN10IPO_5EV_5SV",
+    "pseudo_rows": {
+      "rows": "her grup için z = 0, r = 0'da bir event = 1 ve bir event = 0 satırı",
+      "weight": 0.5
+    },
+    "reclose": {
+      "P_close": "k = 1: S_1; k >= 2: S_k + (1 − S_k)·r_{b(k)}",
+      "groups": {
+        "a": [
+          2,
+          3,
+          4
+        ],
+        "b": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "rate": "(a + 0.5)/(n + 1)"
+    },
+    "regime": {
+      "alloc_regime": "borsai.data.alloc_regime(talep toplama başlangıcı) = kohort dosyasının ALLOC_REGIME etiketi (SPEC_DEVIATIONS I8, J)",
+      "column": "r_pre_equal",
+      "definition": "1[ALLOC_REGIME != EQUAL_DIST_20230330] (PRE_20211111 ve THRESH100_20211111 -> 1)",
+      "h99_value": 0,
+      "live_value": 0,
+      "penalized": false,
+      "pseudo_row_value": 0,
+      "z_scored": false
+    },
+    "runtime_pins": {
+      "joblib": "1.5.3",
+      "numpy": "2.5.2",
+      "python": "3.12",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "scorability": {
+      "min_events": 5,
+      "min_ipo": 10,
+      "min_survivals": 5
+    },
+    "selection": {
+      "method": "INNER_LEAVE_ONE_IPO_OUT",
+      "non_convergence": "CANDIDATE_NOT_CONVERGED_DROPPED_INF_ALWAYS_KEPT",
+      "objective": "satır başına ortalama log-kayıp; h [1e-12, 1 − 1e-12]'ye kırpılır",
+      "preprocessing": "her iç bölmede kalan arzlardan yeniden kurulur",
+      "tie_break": "BIT_EXACT_TIE_TO_LARGEST_LAMBDA_INF_LARGEST"
+    },
+    "solver": {
+      "descent_check": "J_new <= J_old + m·eps·max(|J_old|, 1) (toplama yuvarlama sınırı)",
+      "grad_tol": 1e-10,
+      "init": "beta = 0, delta = 0, gamma_g = logit((olay_g + 0.5)/(risk_g + 1))",
+      "max_halvings": 30,
+      "max_iter": 100,
+      "method": "NEWTON_RAPHSON_NUMPY",
+      "non_convergence": "MODEL_NOT_FIT_DID_NOT_CONVERGE"
+    },
+    "spec_document": {
+      "path": "docs/specs_faz7/SPEC_HAZARD_V1.md",
+      "sha256": "25229cea8f6f235db6562f3dee4992e6b8e22e0cbc23b44b25eeb6d2704d0944"
+    },
+    "training": {
+      "cohort_counts": {
+        "H99": 97,
+        "OOT_OPEN": 68
+      },
+      "data_version_sha256": "2ee8d51be3f026ad05ff7b4894f9512809556b3da2fd2d0b06256b7de5ee525a",
+      "description": "data/training_table_v2.csv'nin total_demand_multiple dolu 165 satırı: H99'un 97'si ve eski kohortun açık kümesinin (kasa dışı) 68'i, tablo sırasıyla",
+      "n": 165,
+      "set": "H99_F3_PRESENT+OOT_OPEN_F3_PRESENT",
+      "table": "data/training_table_v2.csv"
+    },
+    "variant": "pooled@INF"
+  },
+  "spec_sha256": "f53ad4cf1ba9dd08ab03678e86e5a49b56b1363d8205b27c00113d280ab82872",
+  "training": {
+    "cohort_counts": {
+      "H99": 97,
+      "OOT_OPEN": 68
+    },
+    "cutoff_date": "2026-08-19",
+    "data_version_sha256": "2ee8d51be3f026ad05ff7b4894f9512809556b3da2fd2d0b06256b7de5ee525a",
+    "filter_excluded": [],
+    "first_trading_date_range": [
+      "2020-10-19",
+      "2026-08-06"
+    ],
+    "labels_sha256": "ed774cfbc85537e331f12a9c4e9311b65b1bcb025297b6dcc6e9c41315f9102c",
+    "n": 165,
+    "n_events": 142,
+    "n_ipo": 165,
+    "n_pp_rows": 880,
+    "n_survivals": 738,
+    "set": "H99_F3_PRESENT+OOT_OPEN_F3_PRESENT",
+    "table": "data/training_table_v2.csv",
+    "tickers": [
+      "KONTR",
+      "ISKPL",
+      "NTGAZ",
+      "MTRKS",
+      "TUREX",
+      "QUAGR",
+      "GWIND",
+      "CANTE",
+      "PENTA",
+      "KLKIM",
+      "ATATP",
+      "OYYAT",
+      "MEDTR",
+      "VBTYZ",
+      "MANAS",
+      "KZBGY",
+      "GESAN",
+      "YEOTK",
+      "MAREN",
+      "ANGEN",
+      "IHAAS",
+      "ULUFA",
+      "MIATK",
+      "KONKA",
+      "PCILT",
+      "RNPOL",
+      "PSGYO",
+      "PNLSN",
+      "DAPGM",
+      "HTTBT",
+      "KLSYN",
+      "GRSEL",
+      "LIDER",
+      "BMSTL",
+      "IMASM",
+      "SUNTK",
+      "YYLGD",
+      "SEGYO",
+      "EUREN",
+      "PRDGS",
+      "RUBNS",
+      "KRPLS",
+      "OBASE",
+      "BARMA",
+      "HKTM",
+      "SNICA",
+      "BRKVY",
+      "ONCSM",
+      "SDTTR",
+      "ASTOR",
+      "MACKO",
+      "GOKNR",
+      "AKFYE",
+      "KOPOL",
+      "EUPWR",
+      "BIGCH",
+      "KTLEV",
+      "FORTE",
+      "PASEU",
+      "KLSER",
+      "FZLGY",
+      "ASGYO",
+      "TATEN",
+      "ENERY",
+      "TARKM",
+      "GIPTA",
+      "ADGYO",
+      "REEDR",
+      "HATSN",
+      "DMRGD",
+      "MEKAG",
+      "DOFER",
+      "MHRGY",
+      "BORLS",
+      "TABGD",
+      "VRGYO",
+      "MARBL",
+      "BINHO",
+      "EKOS",
+      "AGROT",
+      "SKYMD",
+      "CATES",
+      "BEGYO",
+      "KBORU",
+      "SURGY",
+      "MEGMT",
+      "AVPGY",
+      "PATEK",
+      "BORSK",
+      "LMKDC",
+      "ALVES",
+      "OBAMS",
+      "ARTMS",
+      "MOGAN",
+      "ODINE",
+      "ENTRA",
+      "RGYAS",
+      "LILAK",
+      "KOTON",
+      "ALTNY",
+      "KOCMT",
+      "HRKET",
+      "ONRYT",
+      "OZYSR",
+      "ALKLC",
+      "YIGIT",
+      "HOROZ",
+      "SEGMN",
+      "EFORC",
+      "DCTTR",
+      "BAHKM",
+      "TCKRC",
+      "GUNDG",
+      "AHSGY",
+      "OZATD",
+      "CEMZY",
+      "DURKN",
+      "BINBN",
+      "CGCAM",
+      "SMRVA",
+      "ARMGD",
+      "EGEGY",
+      "GLRMK",
+      "AKFIS",
+      "MOPAS",
+      "SERNT",
+      "BIGEN",
+      "DSTKF",
+      "VSNMD",
+      "KLYPV",
+      "BALSU",
+      "BULGS",
+      "DOFRB",
+      "ECOGR",
+      "VAKFA",
+      "PAHOL",
+      "ZERGY",
+      "ARFYE",
+      "MEYSU",
+      "FRMPL",
+      "ZGYO",
+      "UCAYM",
+      "NETCD",
+      "AKHAN",
+      "BESTE",
+      "ATATR",
+      "EMPAE",
+      "GENKM",
+      "SVGYO",
+      "LXGYO",
+      "MCARD",
+      "AAGYO",
+      "EKDMR",
+      "BETAE",
+      "SOHOE",
+      "ORZAX",
+      "GOLDA",
+      "EKIM",
+      "ISVEA",
+      "SSAAT",
+      "SARAE",
+      "METEN",
+      "MASFN",
+      "KARCL",
+      "QUICK"
+    ],
+    "tickers_sha256": "cb0000c2724cee5177dee306438d7cfe5f1b2f39d6c492138dd42590c8a9cdce"
+  },
+  "variant": "pooled@INF"
+}

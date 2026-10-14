@@ -1,0 +1,283 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "CANTE",
+ "company": "Çan2 Termik A.Ş.",
+ "first_trading_date": "2021-04-30",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Yurt içi bireysele eşit; kurumsala takdire bağlı dağıtım",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_928977_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7850aacc0178dbb3393d1130",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "928977",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/928977",
+   "published_at": "2021-04-16T21:24:59+03:00",
+   "source_sha256": "9f102680aa8382ffe1dd0e9e15e2ed219842302b37c37ba9e463e3367bf4a51c",
+   "source_file": "source_docs/CANTE/KAP_928977_ek1.pdf",
+   "page": 4,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Her bir tahsisat grubuna dağıtım, aşağıda helirtiten şekilde kerdeiçi Vurt İçi Bireysel Yatırımcılara Dağıtım: Eşit Dağıtım Yönteming göres apilačaktr.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_928977_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7850aacc0178dbb3393d1130",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "928977",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/928977",
+     "published_at": "2021-04-16T21:24:59+03:00",
+     "source_sha256": "9f102680aa8382ffe1dd0e9e15e2ed219842302b37c37ba9e463e3367bf4a51c",
+     "source_file": "source_docs/CANTE/KAP_928977_ek1.pdf",
+     "page": 5,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Yurt İçi Kurumsal Yatırımeılara Dağıtım: Her bir Yurt İçi Kurumsal Yatırımeıya verilecek paş miktarına Vakıf Vatırım ve Halk Yatırım'm önerileri de dikkate alınarak Şirket taratindan karar verilecektir."
+    },
+    {
+     "source_id": "KAP_928977_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7850aacc0178dbb3393d1130",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "928977",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/928977",
+     "published_at": "2021-04-16T21:24:59+03:00",
+     "source_sha256": "9f102680aa8382ffe1dd0e9e15e2ed219842302b37c37ba9e463e3367bf4a51c",
+     "source_file": "source_docs/CANTE/KAP_928977_ek1.pdf",
+     "page": 24,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Ek satış hariç halka arz edilecek toplam 67.590.000 TL nominal değerli payların; - 33.795.000 TL nominal değerdeki %50 oranındaki kısmı Yurt İçi Bireysel Yatırımcılara - 33.795.000 TL nominal değerdeki %50 oranındaki kısmı Yurt İçi Kurumsal Yatırımcılara gerçekleştirilecek satışlar için tahsis edilmiştir."
+    },
+    {
+     "source_id": "KAP_928977_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7850aacc0178dbb3393d1130",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "928977",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/928977",
+     "published_at": "2021-04-16T21:24:59+03:00",
+     "source_sha256": "9f102680aa8382ffe1dd0e9e15e2ed219842302b37c37ba9e463e3367bf4a51c",
+     "source_file": "source_docs/CANTE/KAP_928977_ek1.pdf",
+     "page": 25,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Yurt Içi Bireysei Yatırımeılar grubunda eşit dağıtım vöntemi kullanılacaktır"
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Talep toplama (borsa dışı, Sabit Fiyatla Talep Toplama, En İyi Gayret; Vakıf Yatırım ve Halk Yatırım konsorsiyum liderleri). Tahsisat: yurt içi bireysel %50, yurt içi kurumsal %50; yurt dışı kurumsal ve çalışan grubu yok (§25.2.3.c: 'İhraççı'nın çalışanlarına ilişkin bir tahsisat grubu bulunmamaktadır'). Yurt içi bireysel: 'Eşit Dağıtım Yöntemine göre'; yurt içi kurumsal: her kurumsal yatırımcıya verilecek pay miktarına Vakıf Yatırım ve Halk Yatırım'ın önerileri dikkate alınarak Şirket karar verir; belge kurumsal için 'oransal' demiyor, kanonik kalıba uymadığından kısa metin. Ek satış paylarının gruplar arası dağılımını Odaş belirler (s.26). TSSD (KAP_928989_EK1) izahnameye atıf yapıyor. [yazım normalize edildi; ajan değeri: 'Yurt içi bireysele eşit; kurumsala şirketin takdiriyle dağıtım']"
+  },
+  "price_stability_planned": {
+   "value": "TRUE",
+   "unit": "boolean",
+   "status": "FILLED",
+   "source_id": "KAP_928977_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7850aacc0178dbb3393d1130",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "928977",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/928977",
+   "published_at": "2021-04-16T21:24:59+03:00",
+   "source_sha256": "9f102680aa8382ffe1dd0e9e15e2ed219842302b37c37ba9e463e3367bf4a51c",
+   "source_file": "source_docs/CANTE/KAP_928977_ek1.pdf",
+   "page": 33,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: Fiyat istikrarı işlemlerinin gerçekleştirilmesi planlanmaktadır.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Fiyat istikrarı işlemlerini Vakıf Yatırım Menkul Değerler A.Ş. gerçekleştirebilir; kaynak: ek satışta Odaş'ın ek satış geliri, ek satış olmazsa Şirket'in brüt fonunun azami %10'u."
+  },
+  "price_stability_days": {
+   "value": "30",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_928977_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7850aacc0178dbb3393d1130",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "928977",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/928977",
+   "published_at": "2021-04-16T21:24:59+03:00",
+   "source_sha256": "9f102680aa8382ffe1dd0e9e15e2ed219842302b37c37ba9e463e3367bf4a51c",
+   "source_file": "source_docs/CANTE/KAP_928977_ek1.pdf",
+   "page": 33,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5.2. Fiyat istikrarı işlemlerinin gerçekleştirileblleceği zaman aralığı: Payların borsada işlem görmeye başlamasından itibaren en fazla 30 (otuz) gündüir.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "OCR 'gündüir' (gündür)."
+  },
+  "issuer_lockup_days": {
+   "value": "180",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_928977_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7850aacc0178dbb3393d1130",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "928977",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/928977",
+   "published_at": "2021-04-16T21:24:59+03:00",
+   "source_sha256": "9f102680aa8382ffe1dd0e9e15e2ed219842302b37c37ba9e463e3367bf4a51c",
+   "source_file": "source_docs/CANTE/KAP_928977_ek1.pdf",
+   "page": 35,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "a) İhraççı tarafından verilen taahhüt: Şirket Yönetim Kurulu'nun 17.01.2021 tarih ve 2021/07 sayılı karanıyla, Şirket paylarının birincil halka arzını takiben, payların Borsa İstanbul A.Ş.'de işlem görmeye başladığı tarihten itibaren 6 (altı) ay süreyle Şirket paylarında herhangi bir bedelli sermaye artırımı gerçekleştirilmemesi, dolaşımdaki pay miktarının artırılmaması ve bu süre boyunca ileride yeni bir satış veya halka arz yapılmasına yönelik bir karar alınmaması hususunda taahhüt verilmiştir.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "6 ay = 180 gün (H99 biçimi). Kapsam: bedelli sermaye artırımı yapmama, dolaşımdaki payı artırmama, yeni satış/halka arz kararı almama. Başlangıç: Borsa İstanbul'da işlem görmeye başlama."
+  },
+  "shareholder_lockup_days": {
+   "value": "180",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_928977_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7850aacc0178dbb3393d1130",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "928977",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/928977",
+   "published_at": "2021-04-16T21:24:59+03:00",
+   "source_sha256": "9f102680aa8382ffe1dd0e9e15e2ed219842302b37c37ba9e463e3367bf4a51c",
+   "source_file": "source_docs/CANTE/KAP_928977_ek1.pdf",
+   "page": 35,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "b) Ortaklar tarafindan verilen taahhütler: Şirketin tek ortağı olan Odaş'ın 18.03.2021 tarihli beyanı ile, payların Borsa'da işlem görmeye başladığı tarihten itibaren; AIRINİ) 1 yıl sıüreyle halka arz fiyatının altındaki bir fiyattan Borsa'da satmayaçağınrvę",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_928977_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7850aacc0178dbb3393d1130",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "928977",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/928977",
+     "published_at": "2021-04-16T21:24:59+03:00",
+     "source_sha256": "9f102680aa8382ffe1dd0e9e15e2ed219842302b37c37ba9e463e3367bf4a51c",
+     "source_file": "source_docs/CANTE/KAP_928977_ek1.pdf",
+     "page": 36,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "(ii) 6 ay süreyle, pay sahiplerine aymı koşullarla yapılacak genel bir alım teklifinin kabul edilmesi veya buna ilişkin bir taahhütte bulunulması, Şirket'in kendi paylarını satın almak amacıyla her bir pay sahibine aynı koşullarla yaptığı teklif sonucunda gerçekleşen pay devirleri, payların mevzuat, yetkili kamu kuruluşu kararı veya mahkeme kararı gereği elden çıkarılması ve payların bağlı ortaklıklarına devredilmesi hariç olmak üizere, maliki olduğu Şirket paylarını hiçbir şekilde borsada satmayacağını, devretmeyeceğini"
+    },
+    {
+     "source_id": "KAP_928973_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7850aacc0178dbad282a1092",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "928973",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/928973",
+     "published_at": "2021-04-16T21:20:54+03:00",
+     "source_sha256": "d6eff5fcd9b53c154bcce0097e3814ce3c18ff07ba1788cbe02ac2631e27c87b",
+     "source_file": "source_docs/CANTE/KAP_928973_ek1.pdf",
+     "page": 16,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "SPK'nın VII-128.1 sayılı Pay Tebliği'nin 8'inci maddesi uyarınca ve tebliğ hükümlerine ilave olarak, Odaş tarafindan SPK'ya 18.03.2021 tarihli yazılı taahhüt sunulmuştur. Anılan taahhüt kapsamında Şirket'in mevcut tek ortağı olan Odaş, Şirket paylarının Borsa Istanbul'da işlem görmeye başlamasından itibaren (i) 1 (bir) yıl süreyle halka arz fiyatının altındaki bir fiyattan Borsa'da satmayacağını"
+    }
+   ],
+   "components": [
+    {
+     "who": "Odaş Elektrik Üretim Sanayi Ticaret A.Ş. (halka arz öncesi %100 tek ortak)",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Odaş Elektrik Üretim Sanayi Ticaret A.Ş.",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU (tebliğ hükümlerine ilave; genel alım teklifi, geri alım, mevzuat/mahkeme gereği elden çıkarma ve bağlı ortaklıklara devir hariç)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "En kısa süre 180 (6 ay mutlak satmama/devretmeme). Taahhüt 'Pay Tebliği 8. maddesi uyarınca ve tebliğ hükümlerine ilave olarak' tek yazılı taahhüt; (i) 1 yıl fiyat altı satmama 8/1 karşılığı, (ii) 6 ay mutlak satmama ilave (gönüllü) kısım. §27.3.c mevzuat taahhüdü için 27.3.b'ye atıf yapıyor (s.36). Risk faktörleri (KAP_928974_EK1 s.1) de 1 yıl fiyat altı satmamayı yazıyor. d) Yetkili kuruluşlar tarafından verilen taahhütler: Yoktur (s.36)."
+  },
+  "sector": {
+   "value": "Yerli linyit kömürüne dayalı termik santralde elektrik üretimi",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_928974_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7850aacc0178dbae985e289b",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "928974",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/928974",
+   "published_at": "2021-04-16T21:22:00+03:00",
+   "source_sha256": "2e4a27f0eec02259f342d92c8d6b80456d91b335ceca2d6d4143f7944a4720d9",
+   "source_file": "source_docs/CANTE/KAP_928974_ek1.pdf",
+   "page": 7,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Çan-2 Termik Santrali yerli linyit. kömürül kullanarak elektrik üretimi konusunda faaliyet göstermektedir.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_928972_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7850aacc0178dbabe4bb1067",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "928972",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/928972",
+     "published_at": "2021-04-16T21:19:50+03:00",
+     "source_sha256": "d8b23b483bd72c9e6151d67a5054facc540086f254ac867a96666de3ddacc40f",
+     "source_file": "source_docs/CANTE/KAP_928972_ek1.pdf",
+     "page": 11,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Şirket'in mevcut durum şekilde itibariyle 340 MWm/330MWe kurulu güce sahip yerli kömüre ibraççinmn dayalı termik santrali bulunmaktadır."
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Özet B.3 (KAP_928972_EK1 s.11): Şirket elektrik enerjisi üretim tesisleri kurulması, işletilmesi, elektrik enerjisi üretilmesi ve satışı ile iştigal ediyor; tek santral Çan-2 Termik Santrali (330 MWe, Çanakkale Çan). Ana ortak Odaş'ın grup faaliyetleri (doğalgaz, hidro, maden) ihraççıya ait değil."
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahname 6 parça (s.1-174), ekler ve TSSD'de katılım endeksi / faizsiz finans uygunluk beyanı yok. qfind 'katılım|faizsiz|islam|icazet|helal' yalnız 'piyasa katılımcıları', genel kurula katılım ve teminat tablosundaki 'Katılım Fonları' eşleşmelerini verdi; bunlar uygunluk beyanı değil.",
+   "looked_at": [
+    "KAP_928972_EK1",
+    "KAP_928973_EK1",
+    "KAP_928974_EK1",
+    "KAP_928975_EK1",
+    "KAP_928976_EK1",
+    "KAP_928977_EK1",
+    "KAP_928986_EK1",
+    "KAP_928988_EK1",
+    "KAP_928989_EK1",
+    "KAP_928989"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_928972_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "928972",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7850aacc0178dbabe4bb1067",
+   "published_at": "2021-04-16T21:19:50+03:00",
+   "sha256": "d8b23b483bd72c9e6151d67a5054facc540086f254ac867a96666de3ddacc40f",
+   "file": "source_docs/CANTE/KAP_928972_ek1.pdf"
+  },
+  "KAP_928973_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "928973",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7850aacc0178dbad282a1092",
+   "published_at": "2021-04-16T21:20:54+03:00",
+   "sha256": "d6eff5fcd9b53c154bcce0097e3814ce3c18ff07ba1788cbe02ac2631e27c87b",
+   "file": "source_docs/CANTE/KAP_928973_ek1.pdf"
+  },
+  "KAP_928974_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "928974",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c7850aacc0178dbae985e289b",
+   "published_at": "2021-04-16T21:22:00+03:00",
+   "sha256": "2e4a27f0eec02259f342d92c8d6b80456d91b335ceca2d6d4143f7944a4720d9",
+   "file": "source_docs/CANTE/KAP_928974_ek1.pdf"
+  },
+  "KAP_928977_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "928977",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7850aacc0178dbb3393d1130",
+   "published_at": "2021-04-16T21:24:59+03:00",
+   "sha256": "9f102680aa8382ffe1dd0e9e15e2ed219842302b37c37ba9e463e3367bf4a51c",
+   "file": "source_docs/CANTE/KAP_928977_ek1.pdf"
+  }
+ }
+}

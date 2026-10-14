@@ -1,0 +1,37 @@
+{
+  "borsai_dirty": false,
+  "borsai_source_sha256": "5804e5cdbfdedd021525be051bd86c42654873dbe1bdb9339c716b5698558ab8",
+  "created_at": "2026-09-24T14:53:59+03:00",
+  "description": "Faz 5: post_d1_hazard_v0'ın (SPEC_POST_D1_V0) bu makinedeki H99 walk-forward fold ledger'ı; ofset o fold'un ceiling_hazard_v0 fit'i (Faz 1B ledger'ıyla parite), fold kümesi Faz 1B tavan ledger'ınınki. Regresyon testi buna karşı BİREBİR (bayt) çalışır; docs/MODELS.md Faz 5 bölümü bundan üretilir. Model DONDURULMADI.",
+  "final_fit_preview": {
+    "file": "post_d1_hazard_v0_final_fit_preview.json",
+    "note": "models/'e yazılmadı; dondurma görevi bit-eşitliği created_at, code_version ve runtime dışında sınar",
+    "sha256": "3054f97da8d3fead3c9358bf268811693b382e01057ca7a4a230500d42a6e959"
+  },
+  "git_commit": "7ce0593f8b80afac7ca9c6b9117f9079f7abb662",
+  "log_entry": {
+    "context": "faz5_golden",
+    "ledger_sha256": "579cf2ae4a359ea7e40a9d7f764a5e781a8b00af7c2c1bb17b7fee2a981397e4",
+    "started_at": "2026-09-24T14:53:48+03:00"
+  },
+  "machine": {
+    "platform": "Darwin 27.0.0 arm64 / CPython 3.12.14"
+  },
+  "runs": {
+    "post_d1_hazard_v0": {
+      "file": "post_d1_hazard_v0_fold_ledger.csv",
+      "ledger_sha256": "579cf2ae4a359ea7e40a9d7f764a5e781a8b00af7c2c1bb17b7fee2a981397e4",
+      "model_id": "post_d1_hazard_v0",
+      "plan_id": "H99_POST_D1_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_L_GE_1_MIN10IPO_5EV_5SV",
+      "spec_sha256": "9d01c3c08cabe1bb6611c599edfe713319faec3e048a6491e649c32ba68898f4"
+    }
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  }
+}

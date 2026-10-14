@@ -1,0 +1,237 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "GZNMI",
+  "company": "Gezinomi Seyahat Turizm Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "5391",
+      "source_id": "KAP_1006715_EK1",
+      "source_document": "KAP 1006715 ek 1",
+      "source_published_at": "2022-03-03T07:49:05+03:00",
+      "source_sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf",
+      "quote": "Toplam 10.000.000 100% 5.391 110.807.780 100% 5.391 10.000.000 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden de 5.391 (bireysel sayısı MKK sicil numarasına göre konsolide)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "5.391",
+        "verdict": "FOUND_SAME",
+        "note": "talep eden = dağıtım yapılan = 5.391"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "5342",
+        "domestic_institutional": "44",
+        "foreign_institutional": "5"
+      },
+      "source_id": "KAP_1006715_EK1",
+      "source_document": "KAP 1006715 ek 1",
+      "source_published_at": "2022-03-03T07:49:05+03:00",
+      "source_sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf",
+      "quote": [
+        "2.500.000 25% 5.342 65.277.240 59% 5.342 2.500.000 25%",
+        "5.500.000 55% 44 41.460.540 37% 44 5.500.000 55%",
+        "2.000.000 20% 5 4.070.000 4% 5 2.000.000 20%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden sayıları da aynı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "26.1",
+      "source_id": "KAP_1006715_EK1",
+      "source_document": "KAP 1006715 ek 1",
+      "source_published_at": "2022-03-03T07:49:05+03:00",
+      "source_sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara tahsis edilen payların 26,1 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "26,1",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "7.5",
+      "source_id": "KAP_1006715_EK1",
+      "source_document": "KAP 1006715 ek 1",
+      "source_published_at": "2022-03-03T07:49:05+03:00",
+      "source_sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara tahsis edilen payların 7,5 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "7,5",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "2.0",
+      "source_id": "KAP_1006715_EK1",
+      "source_document": "KAP 1006715 ek 1",
+      "source_published_at": "2022-03-03T07:49:05+03:00",
+      "source_sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara tahsis edilen payların 2,0 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "2500000",
+        "domestic_institutional": "5500000",
+        "foreign_institutional": "2000000"
+      },
+      "source_id": "KAP_1006715_EK1",
+      "source_document": "KAP 1006715 ek 1",
+      "source_published_at": "2022-03-03T07:49:05+03:00",
+      "source_sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf",
+      "quote": [
+        "2.500.000 25% 5.342 65.277.240 59% 5.342 2.500.000 25%",
+        "5.500.000 55% 44 41.460.540 37% 44 5.500.000 55%",
+        "2.000.000 20% 5 4.070.000 4% 5 2.000.000 20%"
+      ],
+      "note": "tablo birimi 'Lot'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "25",
+      "source_id": "KAP_1006715_EK1",
+      "source_document": "KAP 1006715 ek 1",
+      "source_published_at": "2022-03-03T07:49:05+03:00",
+      "source_sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf",
+      "quote": "2.500.000 25% 5.342 65.277.240 59% 5.342 2.500.000 25%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %25",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "55",
+      "source_id": "KAP_1006715_EK1",
+      "source_document": "KAP 1006715 ek 1",
+      "source_published_at": "2022-03-03T07:49:05+03:00",
+      "source_sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf",
+      "quote": "5.500.000 55% 44 41.460.540 37% 44 5.500.000 55%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %55",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "20",
+      "source_id": "KAP_1006715_EK1",
+      "source_document": "KAP 1006715 ek 1",
+      "source_published_at": "2022-03-03T07:49:05+03:00",
+      "source_sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf",
+      "quote": "2.000.000 20% 5 4.070.000 4% 5 2.000.000 20%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %20",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD penceresi dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "İnfo Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1004831_EK1",
+      "source_document": "KAP 1004831 ek 1",
+      "source_published_at": "2022-02-25T19:43:43+03:00",
+      "source_sha256": "917fc92f6c5e57b923f294a30f68f4b9a56b85a8dc5383a50293df87fa264f18",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1004831_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Info Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "TSSD OCR metni ('Info'); sonuç bildirimini yayımlayan kurum İnfo Yatırım Menkul Değerler A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde fiyat istikrarı yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_1006991",
+      "source_document": "KAP 1006991",
+      "source_published_at": "2022-03-03T18:18:53+03:00",
+      "source_sha256": "076e81cf68224dbdd1bc5e0f8f0fccfb1b35af3402e64e274c9775d6c4f07f1b",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006991_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1006991",
+      "source_document": "KAP 1006991",
+      "source_published_at": "2022-03-03T18:18:53+03:00",
+      "source_sha256": "076e81cf68224dbdd1bc5e0f8f0fccfb1b35af3402e64e274c9775d6c4f07f1b",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006991_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1006991": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1006991",
+      "published_at": "2022-03-03T18:18:53+03:00",
+      "sha256": "076e81cf68224dbdd1bc5e0f8f0fccfb1b35af3402e64e274c9775d6c4f07f1b",
+      "path": "registry/oot/source_docs/GZNMI/KAP_1006991_bildirim.pdf"
+    },
+    "KAP_1006715_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1006715 ek 1",
+      "published_at": "2022-03-03T07:49:05+03:00",
+      "sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf"
+    },
+    "KAP_1004831_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1004831 ek 1",
+      "published_at": "2022-02-25T19:43:43+03:00",
+      "sha256": "917fc92f6c5e57b923f294a30f68f4b9a56b85a8dc5383a50293df87fa264f18",
+      "path": "registry/oot/source_docs/GZNMI/KAP_1004831_ek1.pdf"
+    }
+  }
+}

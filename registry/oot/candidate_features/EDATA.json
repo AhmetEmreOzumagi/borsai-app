@@ -1,0 +1,247 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "EDATA",
+  "company": "E-Data Teknoloji Pazarlama A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "45105",
+      "source_id": "KAP_945477_EK1",
+      "source_document": "KAP 945477 ek 1",
+      "source_published_at": "2021-07-01T16:59:39+03:00",
+      "source_sha256": "9e05cd815f481106968657c195caded88012b91770d21665da3bc27258738212",
+      "source_path": "registry/oot/source_docs/EDATA/KAP_945477_ek1.pdf",
+      "quote": "TOPLAM 45.105 13.000.000 100,00",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "metin: 'Halka arza toplamda 45.105 yatırımcı katılmıştır.'; dağıtım tablosu kişi sayısı aynı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "45.105",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "44993",
+        "domestic_institutional": "28",
+        "foreign_retail": "83",
+        "foreign_institutional": "1"
+      },
+      "source_id": "KAP_945477_EK1",
+      "source_document": "KAP 945477 ek 1",
+      "source_published_at": "2021-07-01T16:59:39+03:00",
+      "source_sha256": "9e05cd815f481106968657c195caded88012b91770d21665da3bc27258738212",
+      "source_path": "registry/oot/source_docs/EDATA/KAP_945477_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 44.993 12.952.421 99,63",
+        "Yurt İçi Kurumsal 28 21.882 0,17",
+        "Yurt Dışı Bireysel 83 24.854 0,19",
+        "Yurt Dışı Kurumsal 1 843 0,01"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "44.993",
+        "Yurt İçi Kurumsal": "28",
+        "Yurt Dışı Bireysel": "83",
+        "Yurt Dışı Kurumsal": "1"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '44.993', 'Yurt İçi Kurumsal': '28', 'Yurt Dışı Bireysel': '83', 'Yurt Dışı Kurumsal': '1'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır', grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "12952421",
+        "domestic_institutional": "21882",
+        "foreign_retail": "24854",
+        "foreign_institutional": "843"
+      },
+      "source_id": "KAP_945477_EK1",
+      "source_document": "KAP 945477 ek 1",
+      "source_published_at": "2021-07-01T16:59:39+03:00",
+      "source_sha256": "9e05cd815f481106968657c195caded88012b91770d21665da3bc27258738212",
+      "source_path": "registry/oot/source_docs/EDATA/KAP_945477_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 44.993 12.952.421 99,63",
+        "Yurt İçi Kurumsal 28 21.882 0,17",
+        "Yurt Dışı Bireysel 83 24.854 0,19",
+        "Yurt Dışı Kurumsal 1 843 0,01"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "12.952.421",
+        "Yurt İçi Kurumsal": "21.882",
+        "Yurt Dışı Bireysel": "24.854",
+        "Yurt Dışı Kurumsal": "843"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '12.952.421', 'Yurt İçi Kurumsal': '21.882', 'Yurt Dışı Bireysel': '24.854', 'Yurt Dışı Kurumsal': '843'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "99.63",
+      "source_id": "KAP_945477_EK1",
+      "source_document": "KAP 945477 ek 1",
+      "source_published_at": "2021-07-01T16:59:39+03:00",
+      "source_sha256": "9e05cd815f481106968657c195caded88012b91770d21665da3bc27258738212",
+      "source_path": "registry/oot/source_docs/EDATA/KAP_945477_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 44.993 12.952.421 99,63",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "99,63",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.17",
+      "source_id": "KAP_945477_EK1",
+      "source_document": "KAP 945477 ek 1",
+      "source_published_at": "2021-07-01T16:59:39+03:00",
+      "source_sha256": "9e05cd815f481106968657c195caded88012b91770d21665da3bc27258738212",
+      "source_path": "registry/oot/source_docs/EDATA/KAP_945477_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 28 21.882 0,17",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,17",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.01",
+      "source_id": "KAP_945477_EK1",
+      "source_document": "KAP 945477 ek 1",
+      "source_published_at": "2021-07-01T16:59:39+03:00",
+      "source_sha256": "9e05cd815f481106968657c195caded88012b91770d21665da3bc27258738212",
+      "source_path": "registry/oot/source_docs/EDATA/KAP_945477_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal 1 843 0,01",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,01",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa Birincil Piyasada sabit fiyatla talep toplama ve satış yöntemi",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa Birincil Piyasada sabit fiyatla talep toplama ve satış yöntemi",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "belgede benzer ifade satış yöntemi olarak geçiyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”), dağıtım yöntemi değil; Codex alıntısı indirilmemiş KAP satırı başlığı; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "A1 Capital Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_944163_EK1",
+      "source_document": "KAP 944163 ek 1",
+      "source_published_at": "2021-06-25T16:31:23+03:00",
+      "source_sha256": "e6fc7aa0ea0d476548007c4555b0794a074016408bc3284ab1b686f5a6129286",
+      "source_path": "registry/oot/source_docs/EDATA/KAP_944163_ek1.pdf",
+      "quote": "A1 Capital Yatırım Menkul Değerler A.Ş.'nin www.alcapital.com.tr",
+      "note": "TSSD (OCR) 'halka arzda satışa aracılık cdecek' (OCR hatası) ifadesinin devamı; sonuç bildirimini de aynı kurum yayımladı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": "A1 CAPITAL YATIRIM MENKUL DEĞERLER A.Ş.",
+      "codex_check": {
+        "codex_value": "A1 CAPITAL YATIRIM MENKUL DEĞERLER A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "TSSD'de aracı kurum olarak yazılı"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR) penceresinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_945601",
+      "source_document": "KAP 945601",
+      "source_published_at": "2021-07-01T22:33:07+03:00",
+      "source_sha256": "7b9c66356ed64fd474a5c1f770b64b8f8ae95f57fe036069b098b4bd28d0912c",
+      "source_path": "registry/oot/source_docs/EDATA/KAP_945601_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_945601",
+      "source_document": "KAP 945601",
+      "source_published_at": "2021-07-01T22:33:07+03:00",
+      "source_sha256": "7b9c66356ed64fd474a5c1f770b64b8f8ae95f57fe036069b098b4bd28d0912c",
+      "source_path": "registry/oot/source_docs/EDATA/KAP_945601_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_945601": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 945601",
+      "published_at": "2021-07-01T22:33:07+03:00",
+      "sha256": "7b9c66356ed64fd474a5c1f770b64b8f8ae95f57fe036069b098b4bd28d0912c",
+      "path": "registry/oot/source_docs/EDATA/KAP_945601_bildirim.pdf"
+    },
+    "KAP_945477_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 945477 ek 1",
+      "published_at": "2021-07-01T16:59:39+03:00",
+      "sha256": "9e05cd815f481106968657c195caded88012b91770d21665da3bc27258738212",
+      "path": "registry/oot/source_docs/EDATA/KAP_945477_ek1.pdf"
+    },
+    "KAP_944163_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 944163 ek 1",
+      "published_at": "2021-06-25T16:31:23+03:00",
+      "sha256": "e6fc7aa0ea0d476548007c4555b0794a074016408bc3284ab1b686f5a6129286",
+      "path": "registry/oot/source_docs/EDATA/KAP_944163_ek1.pdf"
+    }
+  }
+}

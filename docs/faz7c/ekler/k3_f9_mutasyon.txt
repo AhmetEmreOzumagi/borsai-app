@@ -1,0 +1,18 @@
+# BORSAI_FAZ7C_FREEZE K3 (F9): denetimin d ve p mutasyonları yeni semantik testlerde (docs/faz7c/ekler/k3_f9_mutasyon.py; ana ağaçta, yedekten geri alındı; 2026-09-28)
+# Komut: .venv/bin/python docs/faz7c/ekler/k3_f9_mutasyon.py <geçici dizin>
+borsai/ ağacı önce: 6f96e74150391c369803f54eebc866764648f930958d15302bfae6633d756d10
+0_mutasyonsuz: rc=0 :: 5 passed in 24.13s
+d_clip_bounds_include_test_ipo: rc=1 :: 3 failed, 2 passed in 13.83s
+    FAILED tests/test_faz7c_freeze.py::test_f9_fold_fit_is_bit_equal_when_test_ipo_inputs_change[fall_d10_v0_h99-D10]
+    FAILED tests/test_faz7c_freeze.py::test_f9_fold_fit_is_bit_equal_when_test_ipo_inputs_change[fall_d10_v0_pooled-D10]
+    FAILED tests/test_faz7c_freeze.py::test_f9_fold_fit_is_bit_equal_when_test_ipo_inputs_change[fall_d10_v0_addsale-D5]
+p_label_direction_flipped: rc=1 :: 2 failed, 3 passed in 12.26s
+    FAILED tests/test_faz7c_freeze.py::test_f9_high_f3_in_training_gives_higher_p_up[fall_d10_v0_h99]
+    FAILED tests/test_faz7c_freeze.py::test_f9_high_f3_in_training_gives_higher_p_up[fall_d10_v0_pooled]
+p1_backtest_fold_only: rc=1 :: 2 failed in 1.69s
+    FAILED tests/test_faz7c_freeze.py::test_f9_high_f3_in_training_gives_higher_p_up[fall_d10_v0_h99]
+    FAILED tests/test_faz7c_freeze.py::test_f9_high_f3_in_training_gives_higher_p_up[fall_d10_v0_pooled]
+p2_final_fit_only: rc=1 :: 2 failed in 3.47s
+    FAILED tests/test_faz7c_freeze.py::test_f9_high_f3_in_training_gives_higher_p_up[fall_d10_v0_h99]
+    FAILED tests/test_faz7c_freeze.py::test_f9_high_f3_in_training_gives_higher_p_up[fall_d10_v0_pooled]
+borsai/ ağacı sonra: 6f96e74150391c369803f54eebc866764648f930958d15302bfae6633d756d10 (aynı)

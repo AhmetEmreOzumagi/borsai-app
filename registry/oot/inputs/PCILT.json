@@ -1,0 +1,323 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "PCILT",
+  "company": "PC İletişim ve Medya Hizmetleri Sanayi Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_979917",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "9.5",
+      "source_id": "KAP_979917",
+      "source_document": "KAP 979917",
+      "source_published_at": "2021-11-26T18:33:04+03:00",
+      "source_sha256": "126e810812a7acadb579c93335062fd205fe27cbeebab418eb365aa9b9b7f15e",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979917_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 9,5",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_58",
+          "quote": "PC İletişim ve Medya 1.540.659 9,50 35.050.000 45.000.000 9.950.000 - - Hizmetleri Sanayi Ticaret A.Ş. (1) (2)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "11490659",
+      "source_id": "KAP_979917",
+      "source_document": "KAP 979917",
+      "source_published_at": "2021-11-26T18:33:04+03:00",
+      "source_sha256": "126e810812a7acadb579c93335062fd205fe27cbeebab418eb365aa9b9b7f15e",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979917_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 11.490.659",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "45000000",
+      "source_id": "KAP_979917",
+      "source_document": "KAP 979917",
+      "source_published_at": "2021-11-26T18:33:04+03:00",
+      "source_sha256": "126e810812a7acadb579c93335062fd205fe27cbeebab418eb365aa9b9b7f15e",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979917_bildirim.pdf",
+      "quote": "sermayesini temsil eden 45.000.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "9950000",
+      "source_id": "KAP_979759_EK1",
+      "source_document": "KAP 979759 ek 1",
+      "source_published_at": "2021-11-26T12:09:33+03:00",
+      "source_sha256": "e7488c4962cf3c3eb938d49da42958ff78f22acdc9214a55df45347a6a377fa4",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979759_ek1.pdf",
+      "quote": "PC İletişim’in çıkarılmış sermayesinin 35.050.000 TL’den 45.000.000 TL’ye çıkarılması nedeniyle 9.950.000 TL nominal değerli 9.950.000 adet payın",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "existing_share_sale_shares": {
+      "value": "1540659",
+      "source_id": "KAP_979759_EK1",
+      "source_document": "KAP 979759 ek 1",
+      "source_published_at": "2021-11-26T12:09:33+03:00",
+      "source_sha256": "e7488c4962cf3c3eb938d49da42958ff78f22acdc9214a55df45347a6a377fa4",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979759_ek1.pdf",
+      "quote": "mevcut ortaklardan Banun Erkıran Çıtak’ın sahip olduğu 1.540.659 TL nominal değerli 1.540.659 adet pay",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_multiple": {
+      "value": "4.1742231668",
+      "source_id": "KAP_979759_EK1",
+      "source_document": "KAP 979759 ek 1",
+      "source_published_at": "2021-11-26T12:09:33+03:00",
+      "source_sha256": "e7488c4962cf3c3eb938d49da42958ff78f22acdc9214a55df45347a6a377fa4",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979759_ek1.pdf",
+      "origin": "CALCULATED_FROM_SOURCE_TOTALS",
+      "numerator": "47964575",
+      "numerator_quote": "Borsa İstanbul tarafından paylaşılan verilere göre filtre edilmemiş talep 47.964.575 pay karşılığı 181.181 adet emir ile toplam 455.663.463 TL’ye ulaşmıştır.",
+      "denominator": "11490659",
+      "denominator_quote": "toplam 11.490.659 TL nominal değerli 11.490.659 adet (B) grubu pay halka arz edilmiştir",
+      "definition": "TOPLAM_FILTRE_EDILMEMIS_TALEP_PAY_47964575 / SATILAN_TOPLAM_PAY_11490659 (aynı birim pay adedi; belgedeki açık kat 4,1 filtrelenmiş talebe ait)",
+      "denominator_includes_additional_sale": false,
+      "note": "KARAR NOTU: belge açık katı yalnız filtrelenmiş (mükerrer tarama sonrası kabul edilen) talep için yazıyor: 'Kabul edilen talep halka arz büyüklüğünün 4,1 katına denk gelmektedir' (47.384.208 / 11.490.659 = 4,1237). Belge filtrelenmemiş toplamı da (47.964.575 pay) verdiği için talimattaki 'hem filtrelenmiş hem filtrelenmemiş toplam varsa filtrelenmemiş olanı al' kuralı uygulandı. 'Açık kat her zaman SOURCE_REPORTED' kuralı öncelikli sayılırsa f3 = 4,1 (SOURCE_REPORTED, FILTERED) olur. Ek satış planlanmamış; satılan = arz edilen 11.490.659",
+      "derived": true,
+      "formula": "47964575 / 11490659 (10 ondalık ROUND_HALF_UP)",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "4,1",
+      "correction_kind": "VALUE"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_979759_EK1",
+      "source_document": "KAP 979759 ek 1",
+      "source_published_at": "2021-11-26T12:09:33+03:00",
+      "source_sha256": "e7488c4962cf3c3eb938d49da42958ff78f22acdc9214a55df45347a6a377fa4",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979759_ek1.pdf",
+      "quote": "filtre edilmemiş talep 47.964.575 pay karşılığı 181.181 adet emir ile toplam 455.663.463 TL’ye ulaşmıştır",
+      "locator": "filtrelenmiş: 'Mükerrer talep taramasının ardından 47.384.208 pay karşılığı 178.514 adet emir ile toplam 450.149.976 TL talep kabul edilmiş' ve 'Kabul edilen talep halka arz büyüklüğünün 4,1 katına denk gelmektedir'",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "FILTERED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_979759_EK1",
+      "source_document": "KAP 979759 ek 1",
+      "source_published_at": "2021-11-26T12:09:33+03:00",
+      "source_sha256": "e7488c4962cf3c3eb938d49da42958ff78f22acdc9214a55df45347a6a377fa4",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979759_ek1.pdf",
+      "quote": "talep kabul edilmiş ve 11.490.659 TL nominal değerli payların satışı gerçekleşmiştir",
+      "zero_from_statement": true,
+      "note": "SPK satırında ek satış '-'; satılan toplam 11.490.659 = planlanan taban (bedelli 9.950.000 + mevcut pay satışı 1.540.659)",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": "109161260.50",
+      "source_id": "KAP_979759_EK1",
+      "source_document": "KAP 979759 ek 1",
+      "source_published_at": "2021-11-26T12:09:33+03:00",
+      "source_sha256": "e7488c4962cf3c3eb938d49da42958ff78f22acdc9214a55df45347a6a377fa4",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979759_ek1.pdf",
+      "quote": "belirlenen halka arz fiyatı ile halka arz büyüklüğü 109.161.260,50 TL olarak gerçekleşmiştir",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "9.50",
+      "source_id": "SPK_BULTEN_2021_58",
+      "source_document": "SPK Bülteni 2021/58",
+      "source_published_at": "2021-11-18T23:59:59+03:00",
+      "source_sha256": "21ab770290b7ce53c15cdc622496dfcad19a2aff7b3bb7fa36aa0af033dc6a42",
+      "source_path": "registry/oot/source_docs/PCILT/SPK_BULTEN_2021-58.pdf",
+      "quote": "PC İletişim ve Medya 1.540.659 9,50 35.050.000 45.000.000 9.950.000 - - Hizmetleri Sanayi Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-11-18",
+        "bookbuilding_start": "2021-11-24",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "35050000",
+      "source_id": "SPK_BULTEN_2021_58",
+      "source_document": "SPK Bülteni 2021/58",
+      "source_published_at": "2021-11-18T23:59:59+03:00",
+      "source_sha256": "21ab770290b7ce53c15cdc622496dfcad19a2aff7b3bb7fa36aa0af033dc6a42",
+      "source_path": "registry/oot/source_docs/PCILT/SPK_BULTEN_2021-58.pdf",
+      "quote": "PC İletişim ve Medya 1.540.659 9,50 35.050.000 45.000.000 9.950.000 - - Hizmetleri Sanayi Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-11-18",
+        "bookbuilding_start": "2021-11-24",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "45000000",
+      "source_id": "SPK_BULTEN_2021_58",
+      "source_document": "SPK Bülteni 2021/58",
+      "source_published_at": "2021-11-18T23:59:59+03:00",
+      "source_sha256": "21ab770290b7ce53c15cdc622496dfcad19a2aff7b3bb7fa36aa0af033dc6a42",
+      "source_path": "registry/oot/source_docs/PCILT/SPK_BULTEN_2021-58.pdf",
+      "quote": "PC İletişim ve Medya 1.540.659 9,50 35.050.000 45.000.000 9.950.000 - - Hizmetleri Sanayi Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-11-18",
+        "bookbuilding_start": "2021-11-24",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "9950000",
+      "source_id": "SPK_BULTEN_2021_58",
+      "source_document": "SPK Bülteni 2021/58",
+      "source_published_at": "2021-11-18T23:59:59+03:00",
+      "source_sha256": "21ab770290b7ce53c15cdc622496dfcad19a2aff7b3bb7fa36aa0af033dc6a42",
+      "source_path": "registry/oot/source_docs/PCILT/SPK_BULTEN_2021-58.pdf",
+      "quote": "PC İletişim ve Medya 1.540.659 9,50 35.050.000 45.000.000 9.950.000 - - Hizmetleri Sanayi Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-11-18",
+        "bookbuilding_start": "2021-11-24",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "1540659",
+      "source_id": "SPK_BULTEN_2021_58",
+      "source_document": "SPK Bülteni 2021/58",
+      "source_published_at": "2021-11-18T23:59:59+03:00",
+      "source_sha256": "21ab770290b7ce53c15cdc622496dfcad19a2aff7b3bb7fa36aa0af033dc6a42",
+      "source_path": "registry/oot/source_docs/PCILT/SPK_BULTEN_2021-58.pdf",
+      "quote": "PC İletişim ve Medya 1.540.659 9,50 35.050.000 45.000.000 9.950.000 - - Hizmetleri Sanayi Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-11-18",
+        "bookbuilding_start": "2021-11-24",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "11490659",
+      "source_id": "SPK_BULTEN_2021_58",
+      "source_document": "SPK Bülteni 2021/58",
+      "source_published_at": "2021-11-18T23:59:59+03:00",
+      "source_sha256": "21ab770290b7ce53c15cdc622496dfcad19a2aff7b3bb7fa36aa0af033dc6a42",
+      "source_path": "registry/oot/source_docs/PCILT/SPK_BULTEN_2021-58.pdf",
+      "quote": "PC İletişim ve Medya 1.540.659 9,50 35.050.000 45.000.000 9.950.000 - - Hizmetleri Sanayi Ticaret A.Ş. (1) (2)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-11-18",
+        "bookbuilding_start": "2021-11-24",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_58",
+      "source_document": "SPK Bülteni 2021/58",
+      "source_published_at": "2021-11-18T23:59:59+03:00",
+      "source_sha256": "21ab770290b7ce53c15cdc622496dfcad19a2aff7b3bb7fa36aa0af033dc6a42",
+      "source_path": "registry/oot/source_docs/PCILT/SPK_BULTEN_2021-58.pdf",
+      "quote": "PC İletişim ve Medya 1.540.659 9,50 35.050.000 45.000.000 9.950.000 - - Hizmetleri Sanayi Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2021-11-18",
+        "bookbuilding_start": "2021-11-24",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "11490659",
+      "source_id": "SPK_BULTEN_2021_58",
+      "source_document": "SPK Bülteni 2021/58",
+      "source_published_at": "2021-11-18T23:59:59+03:00",
+      "source_sha256": "21ab770290b7ce53c15cdc622496dfcad19a2aff7b3bb7fa36aa0af033dc6a42",
+      "source_path": "registry/oot/source_docs/PCILT/SPK_BULTEN_2021-58.pdf",
+      "quote": "PC İletişim ve Medya 1.540.659 9,50 35.050.000 45.000.000 9.950.000 - - Hizmetleri Sanayi Ticaret A.Ş. (1) (2)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-11-18",
+        "bookbuilding_start": "2021-11-24",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2021-12-01",
+      "source_id": "KAP_979917",
+      "source_document": "KAP 979917",
+      "source_published_at": "2021-11-26T18:33:04+03:00",
+      "source_sha256": "126e810812a7acadb579c93335062fd205fe27cbeebab418eb365aa9b9b7f15e",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979917_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 01/12/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-11-24",
+      "source_id": "KAP_979917",
+      "source_document": "KAP 979917",
+      "source_published_at": "2021-11-26T18:33:04+03:00",
+      "source_sha256": "126e810812a7acadb579c93335062fd205fe27cbeebab418eb365aa9b9b7f15e",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979917_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 24-25/11/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-11-25",
+      "source_id": "KAP_979917",
+      "source_document": "KAP 979917",
+      "source_published_at": "2021-11-26T18:33:04+03:00",
+      "source_sha256": "126e810812a7acadb579c93335062fd205fe27cbeebab418eb365aa9b9b7f15e",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979917_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 24-25/11/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_979917": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 979917",
+      "published_at": "2021-11-26T18:33:04+03:00",
+      "sha256": "126e810812a7acadb579c93335062fd205fe27cbeebab418eb365aa9b9b7f15e",
+      "path": "registry/oot/source_docs/PCILT/KAP_979917_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_58": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/58",
+      "published_at": "2021-11-18T23:59:59+03:00",
+      "sha256": "21ab770290b7ce53c15cdc622496dfcad19a2aff7b3bb7fa36aa0af033dc6a42",
+      "path": "registry/oot/source_docs/PCILT/SPK_BULTEN_2021-58.pdf"
+    },
+    "KAP_979759_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 979759 ek 1",
+      "published_at": "2021-11-26T12:09:33+03:00",
+      "sha256": "e7488c4962cf3c3eb938d49da42958ff78f22acdc9214a55df45347a6a377fa4",
+      "path": "registry/oot/source_docs/PCILT/KAP_979759_ek1.pdf"
+    }
+  }
+}

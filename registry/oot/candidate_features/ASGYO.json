@@ -1,0 +1,217 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "ASGYO",
+  "company": "ASCE Gayrimenkul Yatırım Ortaklığı A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "1320135",
+      "source_id": "KAP_1176967_EK1",
+      "source_document": "KAP 1176967 ek 1",
+      "source_published_at": "2023-07-31T08:56:05+03:00",
+      "source_sha256": "895f558c569a615d5ddabfd5164fe42dad384ecd05317e762161c02cd74c90b4",
+      "source_path": "registry/oot/source_docs/ASGYO/KAP_1176967_ek1.pdf",
+      "quote": "Toplam 165.000.000 %100,00 1.356.351,00 370.040.559 100,00% 1.320.135 165.000.000 100,00%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 1.356.351; dağıtım yapılan 1.320.135",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "1320026",
+        "domestic_institutional": "109"
+      },
+      "source_id": "KAP_1176967_EK1",
+      "source_document": "KAP 1176967 ek 1",
+      "source_published_at": "2023-07-31T08:56:05+03:00",
+      "source_sha256": "895f558c569a615d5ddabfd5164fe42dad384ecd05317e762161c02cd74c90b4",
+      "source_path": "registry/oot/source_docs/ASGYO/KAP_1176967_ek1.pdf",
+      "quote": [
+        "132.000.000 %80,00 1.356.242 263.491.634 71,21% 1.320.026 132.000.000 80,00%",
+        "33.000.000 %20,00 109 106.548.925 28,79% 109 33.000.000 20,00%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 1.356.242, kurumsal 109; yurt dışı grup yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "2.00",
+      "source_id": "KAP_1176967_EK1",
+      "source_document": "KAP 1176967 ek 1",
+      "source_published_at": "2023-07-31T08:56:05+03:00",
+      "source_sha256": "895f558c569a615d5ddabfd5164fe42dad384ecd05317e762161c02cd74c90b4",
+      "source_path": "registry/oot/source_docs/ASGYO/KAP_1176967_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 2,00 katı",
+      "note": "belgede 'yaklaşık'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,00",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "3.23",
+      "source_id": "KAP_1176967_EK1",
+      "source_document": "KAP 1176967 ek 1",
+      "source_published_at": "2023-07-31T08:56:05+03:00",
+      "source_sha256": "895f558c569a615d5ddabfd5164fe42dad384ecd05317e762161c02cd74c90b4",
+      "source_path": "registry/oot/source_docs/ASGYO/KAP_1176967_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara ise yaklaşık 3,23 katı oranında talep gelmiştir.",
+      "note": "belgede 'yaklaşık'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "3,23",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "arzda yurt dışı kurumsal grup yok (sonuç tablosunda satır yok)",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "132000000",
+        "domestic_institutional": "33000000"
+      },
+      "source_id": "KAP_1176967_EK1",
+      "source_document": "KAP 1176967 ek 1",
+      "source_published_at": "2023-07-31T08:56:05+03:00",
+      "source_sha256": "895f558c569a615d5ddabfd5164fe42dad384ecd05317e762161c02cd74c90b4",
+      "source_path": "registry/oot/source_docs/ASGYO/KAP_1176967_ek1.pdf",
+      "quote": [
+        "132.000.000 %80,00 1.356.242 263.491.634 71,21% 1.320.026 132.000.000 80,00%",
+        "33.000.000 %20,00 109 106.548.925 28,79% 109 33.000.000 20,00%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "80.00",
+      "source_id": "KAP_1176967_EK1",
+      "source_document": "KAP 1176967 ek 1",
+      "source_published_at": "2023-07-31T08:56:05+03:00",
+      "source_sha256": "895f558c569a615d5ddabfd5164fe42dad384ecd05317e762161c02cd74c90b4",
+      "source_path": "registry/oot/source_docs/ASGYO/KAP_1176967_ek1.pdf",
+      "quote": "132.000.000 %80,00 1.356.242 263.491.634 71,21% 1.320.026 132.000.000 80,00%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "20.00",
+      "source_id": "KAP_1176967_EK1",
+      "source_document": "KAP 1176967 ek 1",
+      "source_published_at": "2023-07-31T08:56:05+03:00",
+      "source_sha256": "895f558c569a615d5ddabfd5164fe42dad384ecd05317e762161c02cd74c90b4",
+      "source_path": "registry/oot/source_docs/ASGYO/KAP_1176967_ek1.pdf",
+      "quote": "33.000.000 %20,00 109 106.548.925 28,79% 109 33.000.000 20,00%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "arzda yurt dışı kurumsal grup yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız talep toplama (satış) yöntemini ('Sabit Fiyatla Talep Toplama') adlandırıyor, dağıtım yöntemini adlandırmıyor; TSSD izahnameye atıf yapıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede talep toplama (satış) yöntemi olarak geçiyor, dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Halk Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1174378_EK1",
+      "source_document": "KAP 1174378 ek 1",
+      "source_published_at": "2023-07-21T19:24:56+03:00",
+      "source_sha256": "72fcca39975d769f35d46d6269dbb3400adfac6e1ee08267f3341307f8c1d6ad",
+      "source_path": "registry/oot/source_docs/ASGYO/KAP_1174378_ek1.pdf",
+      "quote": "Halka Arza Aracılık Eden Yetkili Kuruluş Halk Yatırım Menkul Değerler A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1177591",
+      "source_document": "KAP 1177591",
+      "source_published_at": "2023-07-31T18:10:07+03:00",
+      "source_sha256": "23e84b460b620bbe78b5d6ca28328e0161f0463aea044af5fe9873d8e2744d77",
+      "source_path": "registry/oot/source_docs/ASGYO/KAP_1177591_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1177591",
+      "source_document": "KAP 1177591",
+      "source_published_at": "2023-07-31T18:10:07+03:00",
+      "source_sha256": "23e84b460b620bbe78b5d6ca28328e0161f0463aea044af5fe9873d8e2744d77",
+      "source_path": "registry/oot/source_docs/ASGYO/KAP_1177591_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1177591": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1177591",
+      "published_at": "2023-07-31T18:10:07+03:00",
+      "sha256": "23e84b460b620bbe78b5d6ca28328e0161f0463aea044af5fe9873d8e2744d77",
+      "path": "registry/oot/source_docs/ASGYO/KAP_1177591_bildirim.pdf"
+    },
+    "KAP_1176967_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1176967 ek 1",
+      "published_at": "2023-07-31T08:56:05+03:00",
+      "sha256": "895f558c569a615d5ddabfd5164fe42dad384ecd05317e762161c02cd74c90b4",
+      "path": "registry/oot/source_docs/ASGYO/KAP_1176967_ek1.pdf"
+    },
+    "KAP_1174378_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1174378 ek 1",
+      "published_at": "2023-07-21T19:24:56+03:00",
+      "sha256": "72fcca39975d769f35d46d6269dbb3400adfac6e1ee08267f3341307f8c1d6ad",
+      "path": "registry/oot/source_docs/ASGYO/KAP_1174378_ek1.pdf"
+    }
+  }
+}

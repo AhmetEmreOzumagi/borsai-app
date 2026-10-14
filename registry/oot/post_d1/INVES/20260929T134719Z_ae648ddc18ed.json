@@ -1,0 +1,262 @@
+{
+  "base_record": {
+    "file": "registry/oot/records/INVES/20260924T221308Z_5055fbe75c62.json",
+    "model_inputs_sha256": "ae7d7a60e33597f3b1d63ed72bb6c582da0d07df7ecb2e76bc1fc49967f34364",
+    "selected_by": "OOT_EARLIEST_ACTIVE_RECORD",
+    "sha256": "5055fbe75c62e4cf48543f38be169888b595ec61f8ecdd601cadccbaf8cc61e6"
+  },
+  "code": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "f501510d12c3a4e1513d03afa5b4ab2e59a2c5b2b8758e9b9e1a7891baef27bb",
+    "git_head": "2f914dd76117babbc52f5b8853e43a891f3a53f8"
+  },
+  "comparators_conditional": {
+    "base_always_ceiling": {
+      "S": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "S_cond": {
+        "10": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 1.0,
+        "8": 1.0,
+        "9": 1.0
+      },
+      "record_cell_sha256": null,
+      "source": "SPEC_DEVIATIONS_C4"
+    },
+    "base_km_expanding": {
+      "S": [
+        0.8181818181818181,
+        0.7070707070707071,
+        0.6666666666666666,
+        0.5353535353535352,
+        0.4141414141414141,
+        0.3333333333333333,
+        0.2727272727272727,
+        0.2121212121212121,
+        0.1717171717171717,
+        0.1414141414141414
+      ],
+      "S_cond": {
+        "10": 0.17283950617283952,
+        "2": 0.8641975308641976,
+        "3": 0.8148148148148149,
+        "4": 0.6543209876543209,
+        "5": 0.5061728395061729,
+        "6": 0.40740740740740744,
+        "7": 0.3333333333333333,
+        "8": 0.25925925925925924,
+        "9": 0.20987654320987656
+      },
+      "record_cell_sha256": "d0f7fbd6fc51bdb5a7c80446c338f250d72446a432cf04c9e8093cc5002634bb",
+      "source": "base_record"
+    },
+    "base_km_last10": {
+      "S": [
+        0.5,
+        0.4,
+        0.32000000000000006,
+        0.25600000000000006,
+        0.20480000000000007,
+        0.16384000000000007,
+        0.13107200000000005,
+        0.10485760000000005,
+        0.07340032000000003,
+        0.058720256000000026
+      ],
+      "S_cond": {
+        "10": 0.11744051200000005,
+        "2": 0.8,
+        "3": 0.6400000000000001,
+        "4": 0.5120000000000001,
+        "5": 0.40960000000000013,
+        "6": 0.32768000000000014,
+        "7": 0.2621440000000001,
+        "8": 0.2097152000000001,
+        "9": 0.14680064000000007
+      },
+      "record_cell_sha256": "64a8b0bbe81e98953a8595bb7906d66f474a2b0d856704d33bf6c381dc183d5c",
+      "source": "base_record"
+    },
+    "ceiling_hazard_v0": {
+      "S": [
+        0.8162210896401607,
+        0.7032427119667544,
+        0.6059023936178651,
+        0.40331948668353973,
+        0.26846998799160665,
+        0.17870729491621906,
+        0.11895667554941351,
+        0.07918362070447384,
+        0.052708650093919764,
+        0.03508556150888792
+      ],
+      "S_cond": {
+        "10": 0.04298536506126758,
+        "2": 0.8615836087704938,
+        "3": 0.7423263149019873,
+        "4": 0.4941301956083335,
+        "5": 0.32891822007437266,
+        "6": 0.21894471630842566,
+        "7": 0.1457407521800947,
+        "8": 0.09701246599666119,
+        "9": 0.06457643739290896
+      },
+      "record_cell_sha256": "09cd36eb278069796ac72985be956c80b71865fefa944474ba5609456af278fe",
+      "source": "base_record"
+    },
+    "ceiling_hazard_v0@INF": {
+      "S": [
+        0.8316326530612245,
+        0.746828007518797,
+        0.6706712041204986,
+        0.5347243384203976,
+        0.4263342698216684,
+        0.3399151610740329,
+        0.27101343923470195,
+        0.2160782826330732,
+        0.1722786307479908,
+        0.13735728667745215
+      ],
+      "S_cond": {
+        "10": 0.16516581710908357,
+        "2": 0.8980263157894737,
+        "3": 0.8064512638504155,
+        "4": 0.642981413069926,
+        "5": 0.5126473428530491,
+        "6": 0.408732340923377,
+        "7": 0.32588119073620603,
+        "8": 0.25982419261400214,
+        "9": 0.2071571265435963
+      },
+      "record_cell_sha256": "7745364b42b9571d5b4377476338f8beb6236dfb1c4d74b36911a6c9c3412702",
+      "source": "base_record"
+    }
+  },
+  "d1": {
+    "ceiling_close_D1": 0,
+    "fields_raw": {
+      "aof": "24.792",
+      "close": "24.46",
+      "halt": "0",
+      "high": "25.68",
+      "low": "24.3",
+      "lower_limit": "21.6",
+      "open": "24.8",
+      "reference_price": "24",
+      "special_trade_turnover": "0",
+      "special_trade_volume": "0",
+      "trade_count": "95678",
+      "turnover": "539330841.66",
+      "upper_limit": "26.4",
+      "volume": "21754401"
+    },
+    "half_day": 0,
+    "halt_flag": 0,
+    "lock_consistency": {
+      "close_at_U": false,
+      "high_at_U": false,
+      "open_at_U": false
+    },
+    "session_date": "2022-03-01",
+    "session_h": 1,
+    "thb": {
+      "downloaded_at": "2026-09-25T16:19:19+03:00",
+      "file": "quarantine/thb/2022/thb202203011.zip",
+      "http_last_modified": "Tue, 01 Mar 2022 15:21:27 GMT",
+      "internal_filename": "thb202203011.csv",
+      "sha256": "209e98db9ad2fe631d730260d9b37b9507fded7c24bc9720019b06e072a7c076",
+      "url": "https://www.borsaistanbul.com/data/thb/2022/03/thb202203011.zip"
+    },
+    "thm": {
+      "downloaded_at": "2026-09-25T16:19:20+03:00",
+      "file": "quarantine/thm/2022/thm202203011.zip",
+      "http_last_modified": "Tue, 01 Mar 2022 05:02:26 GMT",
+      "internal_filename": "thm202203011.csv",
+      "sha256": "e7a4e8bff16527af58686a1b56cf4a65c79b3afc39def4d05f7345a050f85474",
+      "url": "https://www.borsaistanbul.com/data/thm/2022/03/thm202203011.zip"
+    }
+  },
+  "d1_features": {
+    "clipped": null,
+    "d1_lock": null,
+    "d1_turnover_ln": null,
+    "d1_turnover_ratio": null,
+    "warnings": [],
+    "z": null
+  },
+  "d1_rows": {
+    "file": "registry/oot/d1_rows/INVES.json",
+    "sha256": "1df18d16ab5f78885c868347125c23a39e313775f570935d0282dc657d91a006"
+  },
+  "exposure_class": "MACHINE_SEQUENCED",
+  "models": [
+    {
+      "algorithm": "discrete_time_hazard_offset_logit_l2",
+      "file": "models/post_d1_hazard_v0.json",
+      "kind": "post_d1",
+      "model_id": "post_d1_hazard_v0",
+      "output": {
+        "P_L": null,
+        "P_close_ceiling": null,
+        "S": null,
+        "clipped": false,
+        "conditional_j1": null,
+        "d1_features": null,
+        "hazard": null,
+        "model_id": "post_d1_hazard_v0",
+        "not_applicable": {
+          "code": "D1_NOT_CEILING",
+          "reason": "D_1 kapanışı 24.46 ≠ üst limit 26.4: model yalnız D1'i tavanda kapatan arzlarda tanımlı"
+        },
+        "path_conditional": null,
+        "refused": null,
+        "stage": "POST_D1",
+        "warnings": []
+      },
+      "params_sha256": "3f7640267cd0f6b114ec88cf29e811587daa18c191866f9fa2d6910bc949e5dc",
+      "refusal": {
+        "code": "D1_NOT_CEILING",
+        "reason": "D_1 kapanışı 24.46 ≠ üst limit 26.4: model yalnız D1'i tavanda kapatan arzlarda tanımlı"
+      },
+      "spec_sha256": "9d01c3c08cabe1bb6611c599edfe713319faec3e048a6491e649c32ba68898f4",
+      "stage": "POST_D1",
+      "status": "NOT_APPLICABLE"
+    }
+  ],
+  "models_index": {
+    "model_ids": [
+      "post_d1_hazard_v0"
+    ],
+    "path": "models/INDEX_POST_D1.json",
+    "sha256": "94ac36faffac6017d54ff406b97b37623c27633c847bd0117fb51bf42975b820"
+  },
+  "record_stage": "OOT_POST_D1",
+  "record_type": "PREDICTION",
+  "recorded_at_basis": "LOCAL_CLOCK_SELF_REPORTED: zaman kanıtı bu kaydı içeren commit'in push kanıtıdır; kayıt, kohortun sonucu repoya girmeden push edilir (KARARLAR D3, D6)",
+  "recorded_at_istanbul": "2026-09-29T16:47:19+03:00",
+  "recorded_at_utc": "2026-09-29T13:47:19Z",
+  "scale": "OOT_PRE_H99",
+  "schema_version": "borsai.oot_post_d1_record/1",
+  "summary": {
+    "n_models": 1,
+    "n_not_applicable": 1,
+    "n_predicted": 0,
+    "n_refused": 0
+  },
+  "ticker": "INVES"
+}

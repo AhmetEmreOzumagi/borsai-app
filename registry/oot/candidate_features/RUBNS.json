@@ -1,0 +1,216 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "RUBNS",
+  "company": "Rubenis Tekstil Sanayi Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "155606",
+      "source_id": "KAP_1040639_EK1",
+      "source_document": "KAP 1040639 ek 1",
+      "source_published_at": "2022-07-01T13:39:58+03:00",
+      "source_sha256": "b64e503b752473fc805b3b4cb2ee204bfd2761e3caea5cd7fd9dbe9a846612fd",
+      "source_path": "registry/oot/source_docs/RUBNS/KAP_1040639_ek1.pdf",
+      "quote": "Toplam 24.500.000 100% 157.488 39.820.117 100% 155.606 24.500.000 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 157.488; dağıtım yapılan 155.606 (son sürüm 'dağıtılan kişi sayısı düzeltilerek' yeniden açıklandı; önceki sürümler 157.488 yazıyordu)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "155529",
+        "employees": "15",
+        "domestic_institutional": "62"
+      },
+      "source_id": "KAP_1040639_EK1",
+      "source_document": "KAP 1040639 ek 1",
+      "source_published_at": "2022-07-01T13:39:58+03:00",
+      "source_sha256": "b64e503b752473fc805b3b4cb2ee204bfd2761e3caea5cd7fd9dbe9a846612fd",
+      "source_path": "registry/oot/source_docs/RUBNS/KAP_1040639_ek1.pdf",
+      "quote": [
+        "11.760.000 48% 157.411 21.385.885 53,71% 155.529 11.760.000 48%",
+        "490.000 2% 15 490.000 1,23% 15 490.000 2%",
+        "6.125.000 25% 62 17.944.232 45,06% 62 12.250.000 50%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 157.411, çalışan 15, yurt içi kurumsal 62; yurt dışı kurumsal talep/dağıtım '-'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "1.82",
+      "source_id": "KAP_1040639_EK1",
+      "source_document": "KAP 1040639 ek 1",
+      "source_published_at": "2022-07-01T13:39:58+03:00",
+      "source_sha256": "b64e503b752473fc805b3b4cb2ee204bfd2761e3caea5cd7fd9dbe9a846612fd",
+      "source_path": "registry/oot/source_docs/RUBNS/KAP_1040639_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara tahsis edilen payların 1,82 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "1,82",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "2.93",
+      "source_id": "KAP_1040639_EK1",
+      "source_document": "KAP 1040639 ek 1",
+      "source_published_at": "2022-07-01T13:39:58+03:00",
+      "source_sha256": "b64e503b752473fc805b3b4cb2ee204bfd2761e3caea5cd7fd9dbe9a846612fd",
+      "source_path": "registry/oot/source_docs/RUBNS/KAP_1040639_ek1.pdf",
+      "quote": "Yatırımcılara tahsis edilen payların 2,93 katı",
+      "note": "Yurt İçi Kurumsal (planlanan 6.125.000'e göre: 17.944.232 / 6.125.000 = 2,93)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,93",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "tabloda yurt dışı kurumsal talep '-' (talep yok); belge kat yazmıyor",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "11760000",
+        "employees": "490000",
+        "domestic_institutional": "12250000"
+      },
+      "source_id": "KAP_1040639_EK1",
+      "source_document": "KAP 1040639 ek 1",
+      "source_published_at": "2022-07-01T13:39:58+03:00",
+      "source_sha256": "b64e503b752473fc805b3b4cb2ee204bfd2761e3caea5cd7fd9dbe9a846612fd",
+      "source_path": "registry/oot/source_docs/RUBNS/KAP_1040639_ek1.pdf",
+      "quote": [
+        "11.760.000 48% 157.411 21.385.885 53,71% 155.529 11.760.000 48%",
+        "490.000 2% 15 490.000 1,23% 15 490.000 2%",
+        "6.125.000 25% 62 17.944.232 45,06% 62 12.250.000 50%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "48",
+      "source_id": "KAP_1040639_EK1",
+      "source_document": "KAP 1040639 ek 1",
+      "source_published_at": "2022-07-01T13:39:58+03:00",
+      "source_sha256": "b64e503b752473fc805b3b4cb2ee204bfd2761e3caea5cd7fd9dbe9a846612fd",
+      "source_path": "registry/oot/source_docs/RUBNS/KAP_1040639_ek1.pdf",
+      "quote": "11.760.000 48% 157.411 21.385.885 53,71% 155.529 11.760.000 48%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %48; şirket çalışanları ayrıca %2",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "50",
+      "source_id": "KAP_1040639_EK1",
+      "source_document": "KAP 1040639 ek 1",
+      "source_published_at": "2022-07-01T13:39:58+03:00",
+      "source_sha256": "b64e503b752473fc805b3b4cb2ee204bfd2761e3caea5cd7fd9dbe9a846612fd",
+      "source_path": "registry/oot/source_docs/RUBNS/KAP_1040639_ek1.pdf",
+      "quote": "6.125.000 25% 62 17.944.232 45,06% 62 12.250.000 50%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %25; yurt dışı kurumsal tahsisat yurt içi kurumsala aktarılmış görünüyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "tabloda yurt dışı kurumsal dağıtım '-' yazılı (sayı yok); planlanan %25",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç ekleri ve TSSD penceresi dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Ahlatcı Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1039267_EK1",
+      "source_document": "KAP 1039267 ek 1",
+      "source_published_at": "2022-06-24T21:32:48+03:00",
+      "source_sha256": "e35caa4d0d6dd1dfd4c4bf9b8df68738e2097a44b23dff8d5a9010faf8d6c2a4",
+      "source_path": "registry/oot/source_docs/RUBNS/KAP_1039267_ek1.pdf",
+      "quote": "Halka Arza Aracılık Eden Yetkili Kuruluş Sorumlu Olduğu Kısım: AHLATCI YATIRIM MENKUL DEĞERLER",
+      "note": "TSSD OCR imza bloğu; ana metindeki aracı adı OCR'da kayıp ('balka arzda Degerler A.Ş.'nin'); sonuç bildirimlerini yayımlayan kurum AHLATCI YATIRIM MENKUL DEĞERLER A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde fiyat istikrarı yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1040771",
+      "source_document": "KAP 1040771",
+      "source_published_at": "2022-07-01T18:00:22+03:00",
+      "source_sha256": "8124a2827ace55d2fed552bb71642c27eaa751066a154989af8dd345d36d3427",
+      "source_path": "registry/oot/source_docs/RUBNS/KAP_1040771_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1040771",
+      "source_document": "KAP 1040771",
+      "source_published_at": "2022-07-01T18:00:22+03:00",
+      "source_sha256": "8124a2827ace55d2fed552bb71642c27eaa751066a154989af8dd345d36d3427",
+      "source_path": "registry/oot/source_docs/RUBNS/KAP_1040771_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1040771": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1040771",
+      "published_at": "2022-07-01T18:00:22+03:00",
+      "sha256": "8124a2827ace55d2fed552bb71642c27eaa751066a154989af8dd345d36d3427",
+      "path": "registry/oot/source_docs/RUBNS/KAP_1040771_bildirim.pdf"
+    },
+    "KAP_1040639_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1040639 ek 1",
+      "published_at": "2022-07-01T13:39:58+03:00",
+      "sha256": "b64e503b752473fc805b3b4cb2ee204bfd2761e3caea5cd7fd9dbe9a846612fd",
+      "path": "registry/oot/source_docs/RUBNS/KAP_1040639_ek1.pdf"
+    },
+    "KAP_1039267_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1039267 ek 1",
+      "published_at": "2022-06-24T21:32:48+03:00",
+      "sha256": "e35caa4d0d6dd1dfd4c4bf9b8df68738e2097a44b23dff8d5a9010faf8d6c2a4",
+      "path": "registry/oot/source_docs/RUBNS/KAP_1039267_ek1.pdf"
+    }
+  }
+}

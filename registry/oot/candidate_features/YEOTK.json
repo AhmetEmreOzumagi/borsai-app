@@ -1,0 +1,238 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "YEOTK",
+  "company": "YEO Teknoloji Enerji ve Endüstri A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "121489",
+      "source_id": "KAP_961151_EK1",
+      "source_document": "KAP 961151 ek 1",
+      "source_published_at": "2021-09-01T13:14:50+03:00",
+      "source_sha256": "0a1e7009edf4fc533d482669be8ec8c83bf0742c7ff3ec8bc979191a8246b0e5",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961151_ek1.pdf",
+      "quote": "olmak üzere toplam 121.489 yatırımcıya 5.000.000 TL nominal değerli paylar dağıtılmıştır",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "filtrelenmemiş talep 126.177 adet emir (kişi değil)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "121.489",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "121131",
+        "domestic_legal_entity": "80",
+        "domestic_institutional": "36",
+        "foreign_retail": "240",
+        "foreign_legal_entity": "2"
+      },
+      "source_id": "KAP_961151_EK1",
+      "source_document": "KAP 961151 ek 1",
+      "source_published_at": "2021-09-01T13:14:50+03:00",
+      "source_sha256": "0a1e7009edf4fc533d482669be8ec8c83bf0742c7ff3ec8bc979191a8246b0e5",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961151_ek1.pdf",
+      "quote": "Yurt İçi Gerçek 121.131 4.985.073 %99,70 Tüzel 80 3.357 %0,07 Kurumsal 36 1.581 %0,03 Yurt Dışı Gerçek 240 9.902 %0,20 Tüzel 2 87 %0,00",
+      "semantic": "ALLOCATED",
+      "note": "tablo: Yurt İçi (Gerçek, Tüzel, Kurumsal), Yurt Dışı (Gerçek, Tüzel); retail = Yurt İçi Gerçek; metinde 'yurt içi gerçek ve tüzel kişi olarak 121.211 yatırımcı'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Gerçek": "121.131",
+        "Yurt İçi Tüzel": "80",
+        "Yurt İçi Kurumsal": "36",
+        "Yurt Dışı Gerçek": "240",
+        "Yurt Dışı Tüzel": "2"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Gerçek': '121.131', 'Yurt İçi Tüzel': '80', 'Yurt İçi Kurumsal': '36', 'Yurt Dışı Gerçek': '240', 'Yurt Dışı Tüzel': '2'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı yok ('Halka arzda herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'), grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "4985073",
+        "domestic_legal_entity": "3357",
+        "domestic_institutional": "1581",
+        "foreign_retail": "9902",
+        "foreign_legal_entity": "87"
+      },
+      "source_id": "KAP_961151_EK1",
+      "source_document": "KAP 961151 ek 1",
+      "source_published_at": "2021-09-01T13:14:50+03:00",
+      "source_sha256": "0a1e7009edf4fc533d482669be8ec8c83bf0742c7ff3ec8bc979191a8246b0e5",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961151_ek1.pdf",
+      "quote": "Yurt İçi Gerçek 121.131 4.985.073 %99,70 Tüzel 80 3.357 %0,07 Kurumsal 36 1.581 %0,03 Yurt Dışı Gerçek 240 9.902 %0,20 Tüzel 2 87 %0,00",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Gerçek": "4.985.073",
+        "Yurt İçi Tüzel": "3.357",
+        "Yurt İçi Kurumsal": "1.581",
+        "Yurt Dışı Gerçek": "9.902",
+        "Yurt Dışı Tüzel": "87"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Gerçek': '4.985.073', 'Yurt İçi Tüzel': '3.357', 'Yurt İçi Kurumsal': '1.581', 'Yurt Dışı Gerçek': '9.902', 'Yurt Dışı Tüzel': '87'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "99.70",
+      "source_id": "KAP_961151_EK1",
+      "source_document": "KAP 961151 ek 1",
+      "source_published_at": "2021-09-01T13:14:50+03:00",
+      "source_sha256": "0a1e7009edf4fc533d482669be8ec8c83bf0742c7ff3ec8bc979191a8246b0e5",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961151_ek1.pdf",
+      "quote": "Yurt İçi Gerçek 121.131 4.985.073 %99,70",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yalnız Yurt İçi Gerçek; Yurt İçi Tüzel %0,07 ayrı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "99,70",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.03",
+      "source_id": "KAP_961151_EK1",
+      "source_document": "KAP 961151 ek 1",
+      "source_published_at": "2021-09-01T13:14:50+03:00",
+      "source_sha256": "0a1e7009edf4fc533d482669be8ec8c83bf0742c7ff3ec8bc979191a8246b0e5",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961151_ek1.pdf",
+      "quote": "Kurumsal 36 1.581 %0,03",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,03",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok; tabloda Yurt Dışı Gerçek %0,20 ve Yurt Dışı Tüzel %0,00 (tüzel kişi, kurumsal olarak adlandırılmıyor)",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "0",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "0",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "belgede yurt dışı kurumsal grup yok; Yurt Dışı Tüzel %0,00; alan null"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "belgede benzer ifade satış yöntemi olarak geçiyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”), dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Global Menkul Değerler A.Ş.",
+      "source_id": "KAP_959861_EK1",
+      "source_document": "KAP 959861 ek 1",
+      "source_published_at": "2021-08-20T22:33:57+03:00",
+      "source_sha256": "ec9d170e844c459957a8190a19cdeafa5cd7f390c03904ea30a47ef45fc6876f",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_959861_ek1.pdf",
+      "quote": "aracılık edecek Global Menkul Değerler A.Ş.'nin",
+      "note": "sonuç bildirimini de Global Menkul Değerler yayımlamış; KAP_959832_EK1 aynı TSSD",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Global Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_961251",
+      "source_document": "KAP 961251",
+      "source_published_at": "2021-09-01T18:15:50+03:00",
+      "source_sha256": "fadc0e98c4a12a3d142cdb9b0618775b86ba9976dba16a4b99fbd8aee18c1fff",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961251_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_961251",
+      "source_document": "KAP 961251",
+      "source_published_at": "2021-09-01T18:15:50+03:00",
+      "source_sha256": "fadc0e98c4a12a3d142cdb9b0618775b86ba9976dba16a4b99fbd8aee18c1fff",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961251_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_961251": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 961251",
+      "published_at": "2021-09-01T18:15:50+03:00",
+      "sha256": "fadc0e98c4a12a3d142cdb9b0618775b86ba9976dba16a4b99fbd8aee18c1fff",
+      "path": "registry/oot/source_docs/YEOTK/KAP_961251_bildirim.pdf"
+    },
+    "KAP_961151_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 961151 ek 1",
+      "published_at": "2021-09-01T13:14:50+03:00",
+      "sha256": "0a1e7009edf4fc533d482669be8ec8c83bf0742c7ff3ec8bc979191a8246b0e5",
+      "path": "registry/oot/source_docs/YEOTK/KAP_961151_ek1.pdf"
+    },
+    "KAP_959861_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 959861 ek 1",
+      "published_at": "2021-08-20T22:33:57+03:00",
+      "sha256": "ec9d170e844c459957a8190a19cdeafa5cd7f390c03904ea30a47ef45fc6876f",
+      "path": "registry/oot/source_docs/YEOTK/KAP_959861_ek1.pdf"
+    }
+  }
+}

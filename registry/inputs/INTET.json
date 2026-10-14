@@ -1,0 +1,320 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "INTET",
+  "company": "İntetra Teknoloji ve Bilişim Hizmetleri A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-22T14:48:03+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul ve aracı kurum) ve SPK bülteni; hepsi ilk işlem gününden önce yayımlanmış.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok.",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok.",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0) (H99 PB CSV tanımı), resmi belgede açıkça yazan toplamla çapraz denetlendi.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı."
+  ],
+  "first_trading_date_source": "KAP_1655890",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "53.6",
+      "source_id": "KAP_1655573",
+      "source_document": "KAP 1655573",
+      "source_published_at": "2026-08-28T11:39:53+03:00",
+      "source_sha256": "56a29c1453a4fa911f487759962c832b748a9bd402d400a60f211e8a567f1087",
+      "source_path": "registry/source_docs/INTET/KAP_1655573_bildirim.pdf",
+      "quote": "HALKA ARZ FİYATI 53,6",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1655573_EK1",
+          "quote": "1 TL nominal değerli pay için 53,60 TL’den talep toplanmıştır"
+        },
+        {
+          "source_id": "KAP_1654174",
+          "quote": "Halka Arz Fiyatı (TL) 53,6"
+        },
+        {
+          "source_id": "SPK_BULTEN_2026_52",
+          "quote": "53,60 TL sabit fiyat"
+        }
+      ]
+    },
+    "shares_offered": {
+      "value": "40000000",
+      "source_id": "KAP_1655573",
+      "source_document": "KAP 1655573",
+      "source_published_at": "2026-08-28T11:39:53+03:00",
+      "source_sha256": "56a29c1453a4fa911f487759962c832b748a9bd402d400a60f211e8a567f1087",
+      "source_path": "registry/source_docs/INTET/KAP_1655573_bildirim.pdf",
+      "quote": "SATIŞA SUNULAN PAY ADEDİ 40.000.000",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1655573_EK1",
+          "quote": "653.433 adet yatırımcıya 40.000.000 TL nominal değerli payların satışı gerçekleştirilmiştir"
+        },
+        {
+          "source_id": "KAP_1655890",
+          "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 40.000.000"
+        }
+      ]
+    },
+    "ipo_size_tl": {
+      "value": "2144000000",
+      "source_id": "KAP_1655573",
+      "source_document": "KAP 1655573",
+      "source_published_at": "2026-08-28T11:39:53+03:00",
+      "source_sha256": "56a29c1453a4fa911f487759962c832b748a9bd402d400a60f211e8a567f1087",
+      "source_path": "registry/source_docs/INTET/KAP_1655573_bildirim.pdf",
+      "quote": "HALKA ARZ BÜYÜKLÜĞÜ (TL) 2.144.000.000",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1655573_EK1",
+          "quote": "Toplam halka arz büyüklüğü 2.144.000.000 TL olarak gerçekleşmiştir"
+        }
+      ]
+    },
+    "post_ipo_share_capital": {
+      "value": "160000000",
+      "source_id": "KAP_1655890",
+      "source_document": "KAP 1655890",
+      "source_published_at": "2026-08-28T18:10:50+03:00",
+      "source_sha256": "c7752145551b5a7e1001ca47c84c22162086a50a4b04060b830e263960108509",
+      "source_path": "registry/source_docs/INTET/KAP_1655890_bildirim.pdf",
+      "quote": "sermayesini temsil eden 160.000.000 TL nominal değerli payları",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2026_52",
+          "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60"
+        }
+      ]
+    },
+    "capital_increase_shares": {
+      "value": "30000000",
+      "source_id": "KAP_1655573_EK1",
+      "source_document": "KAP 1655573 ek 1",
+      "source_published_at": "2026-08-28T11:39:53+03:00",
+      "source_sha256": "6df48115631e0ffe7426520b658cd00e254541cf0bac5d1282a1bc200c1a1f08",
+      "source_path": "registry/source_docs/INTET/KAP_1655573_ek1.pdf",
+      "quote": "Halka arzda sermaye artışı yoluyla 30.000.000 TL",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2026_52",
+          "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60"
+        }
+      ]
+    },
+    "existing_share_sale_shares": {
+      "value": "10000000",
+      "source_id": "KAP_1655573_EK1",
+      "source_document": "KAP 1655573 ek 1",
+      "source_published_at": "2026-08-28T11:39:53+03:00",
+      "source_sha256": "6df48115631e0ffe7426520b658cd00e254541cf0bac5d1282a1bc200c1a1f08",
+      "source_path": "registry/source_docs/INTET/KAP_1655573_ek1.pdf",
+      "quote": "ortak satışı yoluyla halka arz edilen 10.000.000 TL nominal değerli payların tamamı satılmıştır",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2026_52",
+          "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60"
+        }
+      ]
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+      "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+      "locator": "SPK tablosu Ek Pay Satışı sütunu '-': onaylı ek satış yok"
+    },
+    "total_demand_multiple": {
+      "value": "1.7",
+      "source_id": "KAP_1655573_EK1",
+      "source_document": "KAP 1655573 ek 1",
+      "source_published_at": "2026-08-28T11:39:53+03:00",
+      "source_sha256": "6df48115631e0ffe7426520b658cd00e254541cf0bac5d1282a1bc200c1a1f08",
+      "source_path": "registry/source_docs/INTET/KAP_1655573_ek1.pdf",
+      "quote": "satışa sunulan adedin 1,7 katına tekabül eden 67.922.943 adet nominal",
+      "origin": "SOURCE_REPORTED"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_1655573_EK1",
+      "source_document": "KAP 1655573 ek 1",
+      "source_published_at": "2026-08-28T11:39:53+03:00",
+      "source_sha256": "6df48115631e0ffe7426520b658cd00e254541cf0bac5d1282a1bc200c1a1f08",
+      "source_path": "registry/source_docs/INTET/KAP_1655573_ek1.pdf",
+      "quote": "halka arzda toplam filtre edilmemiş veriler baz alındığında",
+      "locator": "belge talebin filtre edilmemiş veriyle hesaplandığını açıkça yazar"
+    },
+    "first_trading_date": {
+      "value": "2026-09-01",
+      "source_id": "KAP_1655890",
+      "source_document": "KAP 1655890",
+      "source_published_at": "2026-08-28T18:10:50+03:00",
+      "source_sha256": "c7752145551b5a7e1001ca47c84c22162086a50a4b04060b830e263960108509",
+      "source_path": "registry/source_docs/INTET/KAP_1655890_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 01/09/2026"
+    },
+    "bookbuilding_start": {
+      "value": "2026-08-26",
+      "source_id": "KAP_1655890",
+      "source_document": "KAP 1655890",
+      "source_published_at": "2026-08-28T18:10:50+03:00",
+      "source_sha256": "c7752145551b5a7e1001ca47c84c22162086a50a4b04060b830e263960108509",
+      "source_path": "registry/source_docs/INTET/KAP_1655890_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 26-27/08/2026",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1654174",
+          "quote": "53,60 TL fiyattan 26-27/08/2026 tarihlerinde"
+        },
+        {
+          "source_id": "KAP_1655573_EK1",
+          "quote": "26 – 27 Ağustos 2026"
+        }
+      ]
+    },
+    "bookbuilding_end": {
+      "value": "2026-08-27",
+      "source_id": "KAP_1655890",
+      "source_document": "KAP 1655890",
+      "source_published_at": "2026-08-28T18:10:50+03:00",
+      "source_sha256": "c7752145551b5a7e1001ca47c84c22162086a50a4b04060b830e263960108509",
+      "source_path": "registry/source_docs/INTET/KAP_1655890_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 26-27/08/2026",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1654174",
+          "quote": "53,60 TL fiyattan 26-27/08/2026 tarihlerinde"
+        },
+        {
+          "source_id": "KAP_1655573_EK1",
+          "quote": "26 – 27 Ağustos 2026"
+        }
+      ]
+    },
+    "ipo_price_try": {
+      "value": "53.60",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+      "quote": "53,60 TL sabit fiyat",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "130000000",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+      "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)"
+    },
+    "planned_post_ipo_capital": {
+      "value": "160000000",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+      "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)"
+    },
+    "planned_capital_increase_shares": {
+      "value": "30000000",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+      "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)"
+    },
+    "planned_existing_share_sale": {
+      "value": "10000000",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+      "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+      "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)"
+    },
+    "planned_base_offer_shares": {
+      "value": "40000000",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+      "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1654174",
+          "quote": "Halka Arz Edilecek Payların Nominal Tutarı (TL) 40.000.000"
+        }
+      ],
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz); çapraz denetim açıkça yazan resmi toplamla"
+    },
+    "planned_max_offer_shares": {
+      "value": "40000000",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+      "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı"
+    }
+  },
+  "sources": {
+    "KAP_1654174": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1654174",
+      "published_at": "2026-08-21T18:10:16+03:00",
+      "sha256": "816c75fdd3968f2d0cebeb3dc1ba43c35420515a7719bde0a90de4299d1c3942",
+      "path": "registry/source_docs/INTET/KAP_1654174_bildirim.pdf"
+    },
+    "KAP_1655573": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1655573",
+      "published_at": "2026-08-28T11:39:53+03:00",
+      "sha256": "56a29c1453a4fa911f487759962c832b748a9bd402d400a60f211e8a567f1087",
+      "path": "registry/source_docs/INTET/KAP_1655573_bildirim.pdf"
+    },
+    "KAP_1655573_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1655573 ek 1",
+      "published_at": "2026-08-28T11:39:53+03:00",
+      "sha256": "6df48115631e0ffe7426520b658cd00e254541cf0bac5d1282a1bc200c1a1f08",
+      "path": "registry/source_docs/INTET/KAP_1655573_ek1.pdf"
+    },
+    "KAP_1655890": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1655890",
+      "published_at": "2026-08-28T18:10:50+03:00",
+      "sha256": "c7752145551b5a7e1001ca47c84c22162086a50a4b04060b830e263960108509",
+      "path": "registry/source_docs/INTET/KAP_1655890_bildirim.pdf"
+    },
+    "SPK_BULTEN_2026_52": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2026/52",
+      "published_at": "2026-08-20T20:44:05+03:00",
+      "sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf"
+    }
+  }
+}

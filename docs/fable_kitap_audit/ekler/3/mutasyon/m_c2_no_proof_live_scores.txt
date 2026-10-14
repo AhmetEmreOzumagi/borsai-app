@@ -1,0 +1,59 @@
+### m_c2_no_proof_live_scores :: tests/test_scoring.py::test_committed_scores_json_matches_recomputation
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_______________ test_committed_scores_json_matches_recomputation _______________
+
+scores = {'schema_version': 'borsai.scores/1', 'generated_at_utc': '2026-10-11T23:21:36Z', 'as_of_session': '2026-09-30', 'code...borsai_source_sha256': 'd4c35a5dbcabecceec2a4c3a3be4d5f2f80552f368eabd40b52383868aa38a58', 'borsai_dirty': False}, ...}
+
+    def test_committed_scores_json_matches_recomputation(scores):
+        path = sc.SCORES_PATH
+        if not path.exists():
+            return
+        committed = json.loads(path.read_text(encoding="utf-8"))
+        check_schema(committed, drop=fs7.frozen_tail_ids() if fs7.scores_json_is_pre_faz7() else ())
+        if not any("conditional" in m for m in committed["models"]):
+            # Faz 2C commit A → B arası: koşullu bloklar yalnız B'de yazılır (SPEC_DEVIATIONS G, test düzenlemeleri). İstisna
+            # yalnız dosya 0c3cb99'daki haliyle bayt-eşitken geçerlidir; yeniden üretilen her scores.json blokları taşır.
+            assert path.read_bytes() == _show(PRE_FAZ2C_SCORES_COMMIT, "scores/scores.json")
+            scores = {**scores, "models": [{k: v for k, v in m.items() if k != "conditional"} for m in scores["models"]]}
+        if fs.scores_json_is_pre_faz5():
+            # Faz 5 (SPEC_DEVIATIONS H): scores.json bu görevde yeniden üretilmez; post_d1_hazard_v0'ın backtest satırı veri
+            # geneli varyant sayacını (E16) artırır. İstisna yalnız dosya 72a000f'deki haliyle bayt-eşitken ve fark tam olarak
+            # günlükteki POST_D1 varyant sayısı kadarken geçerlidir; yeniden üretilen her scores.json tam karşılaştırılır.
+            dv = {e["model_id"]: e["data_version_sha256"] for e in json.loads((ROOT / "models" / "INDEX.json").read_text(encoding="utf-8"))["models"]}
+            scores = json.loads(json.dumps(scores))
+            for m in scores["models"]:
+                m["card"]["n_variants_same_data"] -= fs.faz5_variants(dv[m["model_id"]])
+        if fs7.scores_json_is_pre_faz7():
+            # Faz 7 (SPEC_DEVIATIONS J; H22 kalıbı): scores.json bu görevde yeniden üretilmez; v1_clip/v1_real backtest satırları H99
+            # veri sürümünde varyant sayacını (E16) artırır. İstisna yalnız dosya 8e3a623'teki haliyle bayt-eşitken ve fark tam olarak
+            # günlükteki Faz 7 varyant sayısı kadarken geçerlidir; yeniden üretilen her scores.json tam karşılaştırılır.
+            # Faz 7 dondurması (SPEC_DEVIATIONS J23; aynı kalıp): dört v1 modeli INDEX'e girer, scores/ yeniden üretilmez; yeniden
+            # hesaptan YALNIZ onların kartları, retro_info satırları ve INDEX sha'sı çıkarılır (`faz7_support.strip_frozen_faz7`).
+            # Faz 7C dondurması (SPEC_DEVIATIONS K19; orkestratör kararı, aynı koşullar): dört (C) kimliği de aynı biçimde çıkarılır.
+            scores = fs7.strip_frozen_faz7(scores)
+            dv = {e["model_id"]: e["data_version_sha256"] for e in json.loads((ROOT / "models" / "INDEX.json").read_text(encoding="utf-8"))["models"]}
+            scores = json.loads(json.dumps(scores))
+            for m in scores["models"]:      # Faz 7C (SPEC_DEVIATIONS K): aynı istisna, Faz 7C varyantlarıyla (backtest + keşif)
+                m["card"]["n_variants_same_data"] -= fs7.faz7_variants(dv[m["model_id"]]) + fs7c.faz7c_variants(dv[m["model_id"]])
+        if fs8.scores_json_is_pre_faz8():
+            # Faz 8 (SPEC_DEVIATIONS N19; proje sahibi kararı 2026-10-01; J16/K10 kalıbı): scores/ bu görevde yeniden üretilmez; break_floor_v0'ın
+            # backtest satırı H99 veri sürümünde varyant sayacını (E16) artırır. İstisna yalnız dosya 87434ff'teki haliyle bayt-eşitken ve
+            # fark tam olarak günlükteki Faz 8 varyant sayısı kadarken geçerlidir; yeniden üretilen her scores.json tam karşılaştırılır.
+            dv = {e["model_id"]: e["data_version_sha256"] for e in json.loads((ROOT / "models" / "INDEX.json").read_text(encoding="utf-8"))["models"]}
+            scores = json.loads(json.dumps(scores))
+            for m in scores["models"]:
+                m["card"]["n_variants_same_data"] -= fs8.faz8_variants(dv[m["model_id"]])
+>       assert _stable(committed) == _stable(scores)
+E       AssertionError: assert {'as_of_sessi...be8fba'}, ...} == {'schema_vers...06, ...}, ...}
+E         
+E         Omitting 9 identical items, use -vv to show
+E         Differing items:
+E         {'models': [{'backtest': {'cells': [{'bootstrap': 'random.Random(20260921), ilk işlem ayı blokları, 4000 tekrar (SPEC_...d': 'rule', 'live': {'cancelled_records': [], 'cells': [], 'descriptive': [], 'invalid_use_rows': [], ...}, ...}, ...]} != {'models': [{'model_id': 'v1_5_h99', 'kind': 'linear', 'card': {'training_n': 99, 'training_cutoff': '2026-08-19', 'pa...toff': '2026-08-19', 'params_sha256_8': 'eb91ae3d', 'n_variants_same_data': 23, ...}, 'primary_cell': None, ...}, ...]}
+E         Use -v to get more diff
+
+tests/test_scoring.py:474: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_scoring.py::test_committed_scores_json_matches_recomputation
+1 failed in 8.70s
+exit=1

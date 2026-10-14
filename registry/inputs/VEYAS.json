@@ -1,0 +1,302 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "VEYAS",
+  "company": "Türker Vangölü Enerji Yatırım A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-22T14:48:03+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul ve aracı kurum) ve SPK bülteni; hepsi ilk işlem gününden önce yayımlanmış.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok.",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok.",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0) (H99 PB CSV tanımı), resmi belgede açıkça yazan toplamla çapraz denetlendi.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı."
+  ],
+  "first_trading_date_source": "KAP_1652124",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "136",
+      "source_id": "KAP_1650990",
+      "source_document": "KAP 1650990",
+      "source_published_at": "2026-08-17T09:38:51+03:00",
+      "source_sha256": "47c2bff0bab035f7908a126086c478a67305018fc2017a9c0d7dfc382b00579b",
+      "source_path": "registry/source_docs/VEYAS/KAP_1650990_bildirim.pdf",
+      "quote": "HALKA ARZ FİYATI 136",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2026_49",
+          "quote": "136,00 TL sabit fiyat"
+        },
+        {
+          "source_id": "KAP_1652124",
+          "quote": "Baz Fiyat (TL) 136"
+        }
+      ]
+    },
+    "shares_offered": {
+      "value": "44375000",
+      "source_id": "KAP_1650990",
+      "source_document": "KAP 1650990",
+      "source_published_at": "2026-08-17T09:38:51+03:00",
+      "source_sha256": "47c2bff0bab035f7908a126086c478a67305018fc2017a9c0d7dfc382b00579b",
+      "source_path": "registry/source_docs/VEYAS/KAP_1650990_bildirim.pdf",
+      "quote": "SATIŞA SUNULAN PAY ADEDİ 44.375.000",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1650990_EK1",
+          "quote": "toplam 44.375.000 TL nominal değerli payın tamamının yatırımcılara dağıtımı gerçekleştirilmiştir"
+        },
+        {
+          "source_id": "KAP_1652124",
+          "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 44.375.000"
+        }
+      ]
+    },
+    "ipo_size_tl": {
+      "value": "6035000000",
+      "source_id": "KAP_1650990",
+      "source_document": "KAP 1650990",
+      "source_published_at": "2026-08-17T09:38:51+03:00",
+      "source_sha256": "47c2bff0bab035f7908a126086c478a67305018fc2017a9c0d7dfc382b00579b",
+      "source_path": "registry/source_docs/VEYAS/KAP_1650990_bildirim.pdf",
+      "quote": "HALKA ARZ BÜYÜKLÜĞÜ (TL) 6.035.000.000",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1650990_EK1",
+          "quote": "6.035.000.000 TL halka arz büyüklüğüne sahip"
+        }
+      ]
+    },
+    "post_ipo_share_capital": {
+      "value": "566854723",
+      "source_id": "KAP_1652124",
+      "source_document": "KAP 1652124",
+      "source_published_at": "2026-08-18T18:10:26+03:00",
+      "source_sha256": "16fe84a311394f5859f84cd79586c6b24c78848079d7cac30e9440ead9a31b55",
+      "source_path": "registry/source_docs/VEYAS/KAP_1652124_bildirim.pdf",
+      "quote": "sermayesini temsil eden 566.854.723 TL nominal değerli payları",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2026_49",
+          "quote": "Yatırım AŞ 529.354.723 566.854.723 37.500.000 - 27.500.000 (5) 12.500.000 (6) 136,00"
+        }
+      ]
+    },
+    "capital_increase_shares": {
+      "value": "37500000",
+      "source_id": "KAP_1650990_EK1",
+      "source_document": "KAP 1650990 ek 1",
+      "source_published_at": "2026-08-17T09:38:51+03:00",
+      "source_sha256": "98791c4dfff7f79d544e3f3c21987e4f1fc872ac38a810acfb3267223a2d7fa8",
+      "source_path": "registry/source_docs/VEYAS/KAP_1650990_ek1.pdf",
+      "quote": "sermaye artırımı yoluyla halka arz edilen 37.500.000 TL nominal değerli pay",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2026_49",
+          "quote": "Yatırım AŞ 529.354.723 566.854.723 37.500.000 - 27.500.000 (5) 12.500.000 (6) 136,00"
+        }
+      ]
+    },
+    "existing_share_sale_shares": {
+      "value": "6875000",
+      "source_id": "KAP_1650990_EK1",
+      "source_document": "KAP 1650990 ek 1",
+      "source_published_at": "2026-08-17T09:38:51+03:00",
+      "source_sha256": "98791c4dfff7f79d544e3f3c21987e4f1fc872ac38a810acfb3267223a2d7fa8",
+      "source_path": "registry/source_docs/VEYAS/KAP_1650990_ek1.pdf",
+      "quote": "ortak satışı yoluyla satışa sunulan 27.500.000 TL nominal değerli payın 6.875.000 TL nominal değerli kısmı dağıtıma konu edilmiştir",
+      "locator": "nihai dağıtılan ortak satışı (planlanan 27.500.000'in 6.875.000'i)"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1650990_EK1",
+      "source_document": "KAP 1650990 ek 1",
+      "source_published_at": "2026-08-17T09:38:51+03:00",
+      "source_sha256": "98791c4dfff7f79d544e3f3c21987e4f1fc872ac38a810acfb3267223a2d7fa8",
+      "source_path": "registry/source_docs/VEYAS/KAP_1650990_ek1.pdf",
+      "quote": "37.500.000 TL nominal değerli pay ile ortak satışı kapsamında dağıtıma konu edilen 6.875.000 TL nominal değerli pay olmak üzere toplam 44.375.000 TL",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2026_49",
+          "quote": "12.500.000 TL nominal değerli B grubu payların ek satışı gerçekleştirilebilecektir"
+        }
+      ],
+      "locator": "dağıtılan toplam = bedelli + ortak satışı; onaylı 12.500.000 ek satıştan dağıtım yok"
+    },
+    "total_demand_multiple": {
+      "value": null,
+      "missing_reason": "Sonuç belgesi toplam talep katı yayımlamıyor. Tablodaki talep sütunu dağıtım sütununa eşit (toplam 44.375.000; planlanan 65.000.000). Kat, planlanana oranla (0,68) ya da dağıtılana oranla (1,00) TÜRETİLMEZ (görev kuralı; legacy VEYAS kaydıyla aynı karar: DATA_NOT_FOUND).",
+      "checked_sources": [
+        "KAP_1650990_EK1"
+      ],
+      "evidence": [
+        {
+          "source_id": "KAP_1650990_EK1",
+          "quote": "Toplam 65.000.000 %100,00 365.280 44.375.000 %100,00 365.280 44.375.000 %100,00"
+        }
+      ]
+    },
+    "total_demand_filter_status": {
+      "value": null,
+      "missing_reason": "f3 yok; filtre durumu uygulanamaz (H99: NOT_APPLICABLE).",
+      "checked_sources": [
+        "KAP_1650990_EK1"
+      ]
+    },
+    "first_trading_date": {
+      "value": "2026-08-20",
+      "source_id": "KAP_1652124",
+      "source_document": "KAP 1652124",
+      "source_published_at": "2026-08-18T18:10:26+03:00",
+      "source_sha256": "16fe84a311394f5859f84cd79586c6b24c78848079d7cac30e9440ead9a31b55",
+      "source_path": "registry/source_docs/VEYAS/KAP_1652124_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 20/08/2026"
+    },
+    "bookbuilding_start": {
+      "value": "2026-08-12",
+      "source_id": "KAP_1652124",
+      "source_document": "KAP 1652124",
+      "source_published_at": "2026-08-18T18:10:26+03:00",
+      "source_sha256": "16fe84a311394f5859f84cd79586c6b24c78848079d7cac30e9440ead9a31b55",
+      "source_path": "registry/source_docs/VEYAS/KAP_1652124_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 12-14/08/2026",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1650990_EK1",
+          "quote": "12-13-14 Ağustos 2026"
+        }
+      ]
+    },
+    "bookbuilding_end": {
+      "value": "2026-08-14",
+      "source_id": "KAP_1652124",
+      "source_document": "KAP 1652124",
+      "source_published_at": "2026-08-18T18:10:26+03:00",
+      "source_sha256": "16fe84a311394f5859f84cd79586c6b24c78848079d7cac30e9440ead9a31b55",
+      "source_path": "registry/source_docs/VEYAS/KAP_1652124_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 12-14/08/2026",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1650990_EK1",
+          "quote": "12-13-14 Ağustos 2026"
+        }
+      ]
+    },
+    "ipo_price_try": {
+      "value": "136.00",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/VEYAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "136,00 TL sabit fiyat",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "529354723",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/VEYAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Yatırım AŞ 529.354.723 566.854.723 37.500.000 - 27.500.000 (5) 12.500.000 (6) 136,00",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)"
+    },
+    "planned_post_ipo_capital": {
+      "value": "566854723",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/VEYAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Yatırım AŞ 529.354.723 566.854.723 37.500.000 - 27.500.000 (5) 12.500.000 (6) 136,00",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)"
+    },
+    "planned_capital_increase_shares": {
+      "value": "37500000",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/VEYAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Yatırım AŞ 529.354.723 566.854.723 37.500.000 - 27.500.000 (5) 12.500.000 (6) 136,00",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)"
+    },
+    "planned_existing_share_sale": {
+      "value": "27500000",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/VEYAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Yatırım AŞ 529.354.723 566.854.723 37.500.000 - 27.500.000 (5) 12.500.000 (6) 136,00",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "12500000",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/VEYAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Yatırım AŞ 529.354.723 566.854.723 37.500.000 - 27.500.000 (5) 12.500.000 (6) 136,00",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)"
+    },
+    "planned_base_offer_shares": {
+      "value": "65000000",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/VEYAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Yatırım AŞ 529.354.723 566.854.723 37.500.000 - 27.500.000 (5) 12.500.000 (6) 136,00",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1650990_EK1",
+          "quote": "Toplam 65.000.000 %100,00"
+        }
+      ],
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz); çapraz denetim açıkça yazan resmi toplamla"
+    },
+    "planned_max_offer_shares": {
+      "value": "77500000",
+      "source_id": "SPK_BULTEN_2026_49",
+      "source_document": "SPK Bülteni 2026/49",
+      "source_published_at": "2026-08-05T22:56:18+03:00",
+      "source_sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "source_path": "registry/source_docs/VEYAS/SPK_BULTEN_2026-49.pdf",
+      "quote": "Yatırım AŞ 529.354.723 566.854.723 37.500.000 - 27.500.000 (5) 12.500.000 (6) 136,00",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı"
+    }
+  },
+  "sources": {
+    "KAP_1650990": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1650990",
+      "published_at": "2026-08-17T09:38:51+03:00",
+      "sha256": "47c2bff0bab035f7908a126086c478a67305018fc2017a9c0d7dfc382b00579b",
+      "path": "registry/source_docs/VEYAS/KAP_1650990_bildirim.pdf"
+    },
+    "KAP_1650990_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1650990 ek 1",
+      "published_at": "2026-08-17T09:38:51+03:00",
+      "sha256": "98791c4dfff7f79d544e3f3c21987e4f1fc872ac38a810acfb3267223a2d7fa8",
+      "path": "registry/source_docs/VEYAS/KAP_1650990_ek1.pdf"
+    },
+    "KAP_1652124": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1652124",
+      "published_at": "2026-08-18T18:10:26+03:00",
+      "sha256": "16fe84a311394f5859f84cd79586c6b24c78848079d7cac30e9440ead9a31b55",
+      "path": "registry/source_docs/VEYAS/KAP_1652124_bildirim.pdf"
+    },
+    "SPK_BULTEN_2026_49": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2026/49",
+      "published_at": "2026-08-05T22:56:18+03:00",
+      "sha256": "04cf2aaceba9cb032739edfc1c226198e8369f196ed6bc2e46c810b28011eb7b",
+      "path": "registry/source_docs/VEYAS/SPK_BULTEN_2026-49.pdf"
+    }
+  }
+}

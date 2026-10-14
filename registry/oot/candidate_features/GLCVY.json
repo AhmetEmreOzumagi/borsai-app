@@ -1,0 +1,288 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "GLCVY",
+  "company": "Gelecek Varlık Yönetimi A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "83197",
+      "source_id": "KAP_971188_EK1",
+      "source_document": "KAP 971188 ek 1",
+      "source_published_at": "2021-10-18T12:10:09+03:00",
+      "source_sha256": "69954619251b569185fbbee59f1b467546f5493fcfd6d3053166ca6bd476d16b",
+      "source_path": "registry/oot/source_docs/GLCVY/KAP_971188_ek1.pdf",
+      "quote": "TOPLAM 22.000.000 100% 4.400.000 85.489 145.121.269 100% 83.197 26.400.000 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 85.489; dağıtım yapılan 83.197",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "85.489",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "85.489",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "85.489 talep eden kişi sayısı; dağıtım yapılan 83.197 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "80429",
+        "high_application_retail": "2616",
+        "domestic_institutional": "152"
+      },
+      "source_id": "KAP_971188_EK1",
+      "source_document": "KAP 971188 ek 1",
+      "source_published_at": "2021-10-18T12:10:09+03:00",
+      "source_sha256": "69954619251b569185fbbee59f1b467546f5493fcfd6d3053166ca6bd476d16b",
+      "source_path": "registry/oot/source_docs/GLCVY/KAP_971188_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel Yatırımcılar 8.800.000 40% 82.659 23.322.746 16,1% 80.429 8.800.000 33,3%",
+        "Yurt İçi Yüksek Başvurulu Yatırımcılar 4.400.000 20% 2.662 62.223.843 42,9% 2.616 6.600.000 25,0%",
+        "Yurt İçi Kurumsal Yatırımcılar 6.600.000 30% 4.400.000 168 59.574.680 41,1% 152 11.000.000 41,7%",
+        "Yurt Dışı Kurumsal Yatırımcılar 2.200.000 10% - - 0,0% - - 0,0%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 82.659, yüksek başvurulu 2.662, yurt içi kurumsal 168; yurt dışı kurumsal satırı '-'",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "82.659",
+        "Yurt İçi Yüksek Başvurulu": "2.662",
+        "Yurt İçi Kurumsal": "168",
+        "Yurt Dışı Kurumsal": "0"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '82.659', 'Yurt İçi Yüksek Başvurulu': '2.662', 'Yurt İçi Kurumsal': '168', 'Yurt Dışı Kurumsal': '0'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex talep eden sayılarını almış; dağıtım yapılan: 80.429, 2.616, 152; yurt dışı '-'"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "2.7",
+      "source_id": "KAP_971188_EK1",
+      "source_document": "KAP 971188 ek 1",
+      "source_published_at": "2021-10-18T12:10:09+03:00",
+      "source_sha256": "69954619251b569185fbbee59f1b467546f5493fcfd6d3053166ca6bd476d16b",
+      "source_path": "registry/oot/source_docs/GLCVY/KAP_971188_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara planlanan tahsisat tutarının yaklaşık 2,7 katı",
+      "note": "belgede 'yaklaşık'; yalnız Yurt İçi Bireysel grubu; ayrı Yüksek Başvurulu grubu 'yaklaşık 14,1 katı' (gruplar birleştirilmedi)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,7",
+        "verdict": "FOUND_SAME",
+        "note": "belgede 'yaklaşık'"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "9",
+      "source_id": "KAP_971188_EK1",
+      "source_document": "KAP 971188 ek 1",
+      "source_published_at": "2021-10-18T12:10:09+03:00",
+      "source_sha256": "69954619251b569185fbbee59f1b467546f5493fcfd6d3053166ca6bd476d16b",
+      "source_path": "registry/oot/source_docs/GLCVY/KAP_971188_ek1.pdf",
+      "quote": "Yurt içi Kurumsal Yatırımcılara planlanan tahsisat tutarının yaklaşık 9 katı",
+      "note": "belgede 'yaklaşık'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "9",
+        "verdict": "FOUND_SAME",
+        "note": "belgede 'yaklaşık'"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "0",
+      "source_id": "KAP_971188_EK1",
+      "source_document": "KAP 971188 ek 1",
+      "source_published_at": "2021-10-18T12:10:09+03:00",
+      "source_sha256": "69954619251b569185fbbee59f1b467546f5493fcfd6d3053166ca6bd476d16b",
+      "source_path": "registry/oot/source_docs/GLCVY/KAP_971188_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılar 2.200.000 10% - - 0,0% - - 0,0%",
+      "derived": true,
+      "formula": "yurt dışı kurumsal talep '-' (talep oranı 0,0%) / planlanan tahsisat 2.200.000 = 0",
+      "note": "belge: 'Yurt Dışı Kurumsal Yatırımcılar için ayrılan %10’luk tahsisat oranı diğer tahsisat gruplarına aktarılmıştır'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0",
+        "verdict": "FOUND_SAME",
+        "note": "belgede talep '-' ve 0,0%; türetildi"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "8800000",
+        "high_application_retail": "6600000",
+        "domestic_institutional": "11000000"
+      },
+      "source_id": "KAP_971188_EK1",
+      "source_document": "KAP 971188 ek 1",
+      "source_published_at": "2021-10-18T12:10:09+03:00",
+      "source_sha256": "69954619251b569185fbbee59f1b467546f5493fcfd6d3053166ca6bd476d16b",
+      "source_path": "registry/oot/source_docs/GLCVY/KAP_971188_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel Yatırımcılar 8.800.000 40% 82.659 23.322.746 16,1% 80.429 8.800.000 33,3%",
+        "Yurt İçi Yüksek Başvurulu Yatırımcılar 4.400.000 20% 2.662 62.223.843 42,9% 2.616 6.600.000 25,0%",
+        "Yurt İçi Kurumsal Yatırımcılar 6.600.000 30% 4.400.000 168 59.574.680 41,1% 152 11.000.000 41,7%"
+      ],
+      "note": "yurt dışı kurumsal dağıtım '-' (0,0%)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "8.800.000",
+        "Yurt İçi Yüksek Başvurulu": "6.600.000",
+        "Yurt İçi Kurumsal": "11.000.000",
+        "Yurt Dışı Kurumsal": "0"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '8.800.000', 'Yurt İçi Yüksek Başvurulu': '6.600.000', 'Yurt İçi Kurumsal': '11.000.000', 'Yurt Dışı Kurumsal': '0'}",
+        "verdict": "FOUND_SAME",
+        "note": "yurt dışı belgede '-'"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "33.3",
+      "source_id": "KAP_971188_EK1",
+      "source_document": "KAP 971188 ek 1",
+      "source_published_at": "2021-10-18T12:10:09+03:00",
+      "source_sha256": "69954619251b569185fbbee59f1b467546f5493fcfd6d3053166ca6bd476d16b",
+      "source_path": "registry/oot/source_docs/GLCVY/KAP_971188_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılar 8.800.000 40% 82.659 23.322.746 16,1% 80.429 8.800.000 33,3%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yalnız Yurt İçi Bireysel; Yüksek Başvurulu %25,0; planlanan bireysel %40",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "33,3",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "41.7",
+      "source_id": "KAP_971188_EK1",
+      "source_document": "KAP 971188 ek 1",
+      "source_published_at": "2021-10-18T12:10:09+03:00",
+      "source_sha256": "69954619251b569185fbbee59f1b467546f5493fcfd6d3053166ca6bd476d16b",
+      "source_path": "registry/oot/source_docs/GLCVY/KAP_971188_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılar 6.600.000 30% 4.400.000 168 59.574.680 41,1% 152 11.000.000 41,7%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %30",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "41,7",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.0",
+      "source_id": "KAP_971188_EK1",
+      "source_document": "KAP 971188 ek 1",
+      "source_published_at": "2021-10-18T12:10:09+03:00",
+      "source_sha256": "69954619251b569185fbbee59f1b467546f5493fcfd6d3053166ca6bd476d16b",
+      "source_path": "registry/oot/source_docs/GLCVY/KAP_971188_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılar 2.200.000 10% - - 0,0% - - 0,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %10, diğer gruplara aktarıldı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "'sabit fiyat' ifadesi sonuç eklerinde ve TSSD'de yok; ayrıca satış yöntemi, dağıtım yöntemi değil"
+      }
+    },
+    "lead_broker": {
+      "value": "Garanti Yatırım Menkul Kıymetler A.Ş.",
+      "source_id": "KAP_969667_EK1",
+      "source_document": "KAP 969667 ek 1",
+      "source_published_at": "2021-10-11T20:13:37+03:00",
+      "source_sha256": "9224cc4f87c9dc26397d1666d59aaf9a2c2a4347f0d9733dcd4c010a22cc8d2b",
+      "source_path": "registry/oot/source_docs/GLCVY/KAP_969667_ek1.pdf",
+      "quote": "aracılık edecek Garanti Yatırım Menkul Kıymetler A.S.'nin",
+      "note": "TSSD OCR metni; sonuç bildirimini de Garanti Yatırım yayımlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Garanti Yatırım Menkul Kıymetler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_971307",
+      "source_document": "KAP 971307",
+      "source_published_at": "2021-10-18T18:58:58+03:00",
+      "source_sha256": "41b6a87d714a5e2abf280ea11f738d6b93c4f46ff4d34e1317bec3b4fa525a34",
+      "source_path": "registry/oot/source_docs/GLCVY/KAP_971307_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_971307",
+      "source_document": "KAP 971307",
+      "source_published_at": "2021-10-18T18:58:58+03:00",
+      "source_sha256": "41b6a87d714a5e2abf280ea11f738d6b93c4f46ff4d34e1317bec3b4fa525a34",
+      "source_path": "registry/oot/source_docs/GLCVY/KAP_971307_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_971307": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 971307",
+      "published_at": "2021-10-18T18:58:58+03:00",
+      "sha256": "41b6a87d714a5e2abf280ea11f738d6b93c4f46ff4d34e1317bec3b4fa525a34",
+      "path": "registry/oot/source_docs/GLCVY/KAP_971307_bildirim.pdf"
+    },
+    "KAP_971188_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 971188 ek 1",
+      "published_at": "2021-10-18T12:10:09+03:00",
+      "sha256": "69954619251b569185fbbee59f1b467546f5493fcfd6d3053166ca6bd476d16b",
+      "path": "registry/oot/source_docs/GLCVY/KAP_971188_ek1.pdf"
+    },
+    "KAP_969667_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 969667 ek 1",
+      "published_at": "2021-10-11T20:13:37+03:00",
+      "sha256": "9224cc4f87c9dc26397d1666d59aaf9a2c2a4347f0d9733dcd4c010a22cc8d2b",
+      "path": "registry/oot/source_docs/GLCVY/KAP_969667_ek1.pdf"
+    }
+  }
+}

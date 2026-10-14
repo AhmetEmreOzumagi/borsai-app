@@ -1,0 +1,4384 @@
+{
+  "code": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "e0f3d8afc3a0f56ea984da58c07f8dfae1327fbaade0b7e4140bcdf7454310e3",
+    "git_head": "40db62cc4fdc00251bc5b19c914bbe718ecca32a"
+  },
+  "cohort_file_sha256": "7d05b334d73985882debf7f31ecfc81b3eac501b756f9da44f41e3bf893760a7",
+  "cohort_row": {
+    "added_at": "2026-09-24T23:49:51+03:00",
+    "company": "BMS Çelik Hasır Sanayi ve Ticaret A.Ş.",
+    "first_trading_date": "2021-06-08",
+    "listing_source_id": "KAP_939961",
+    "listing_source_sha256": "63ff23afe6acc9f4e7f92e7337f3e2793f5ba006ae4652af2a9ddc02eb0720c1",
+    "market": "ANA",
+    "reason": "",
+    "regime_tags": "ALLOC_REGIME=PRE_20211111|MARGIN_RULE=POST_20200313|MARKET=ANA|SALE_ON_EXCHANGE|SHORT_SELL_BAN_2020_END_NOT_FOUND|TICK_TABLE_EPOCH=T2015",
+    "sale_method": "ON_EXCHANGE",
+    "status": "MEMBER",
+    "ticker": "BMSCH",
+    "vault": "SEALED",
+    "year": "2021"
+  },
+  "comparators": {
+    "base_always_ceiling": {
+      "comparator_note": "FROZEN_H99",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 1.0,
+          "price": 5.357,
+          "return": 0.1,
+          "return_clipped": null,
+          "return_unclipped": 0.1
+        },
+        "D10": {
+          "direction": "UP",
+          "p_up": 1.0,
+          "price": 12.631525780687001,
+          "return": 1.5937424601,
+          "return_clipped": null,
+          "return_unclipped": 1.5937424601
+        },
+        "D3": {
+          "direction": "UP",
+          "p_up": 1.0,
+          "price": 6.48197,
+          "return": 0.331,
+          "return_clipped": null,
+          "return_unclipped": 0.331
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 1.0,
+          "price": 7.843183700000001,
+          "return": 0.61051,
+          "return_clipped": null,
+          "return_unclipped": 0.61051
+        },
+        "model_id": "base_always_ceiling",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "0b27057479bd9244dc70cae6c01200d4fc544c5f65bf8be0c4362be5b5797780",
+      "status": "PREDICTED"
+    },
+    "base_km_expanding": {
+      "comparator_note": "FROZEN_H99",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.18181818181818188,
+          0.11111111111111105,
+          0.04040404040404044,
+          0.13131313131313138,
+          0.12121212121212116,
+          0.08080808080808077,
+          0.06060606060606061,
+          0.06060606060606061,
+          0.04040404040404039,
+          0.030303030303030304,
+          0.1414141414141414
+        ],
+        "P_close_ceiling": [
+          0.8181818181818181,
+          0.7137892688351404,
+          0.6743119266055045,
+          0.5460105643591882,
+          0.4956579368344074,
+          0.42609351432880843,
+          0.3739201974496092,
+          0.32174688057040995,
+          0.2869646693176105,
+          0.2608780108780109
+        ],
+        "S": [
+          0.8181818181818181,
+          0.7070707070707071,
+          0.6666666666666666,
+          0.5353535353535352,
+          0.4141414141414141,
+          0.3333333333333333,
+          0.2727272727272727,
+          0.2121212121212121,
+          0.1717171717171717,
+          0.1414141414141414
+        ],
+        "clipped": null,
+        "hazard": [
+          0.18181818181818182,
+          0.13580246913580246,
+          0.05714285714285714,
+          0.19696969696969696,
+          0.22641509433962265,
+          0.1951219512195122,
+          0.18181818181818182,
+          0.2222222222222222,
+          0.19047619047619047,
+          0.17647058823529413
+        ],
+        "model_id": "base_km_expanding",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "8120c274de6fcf49dd880c9ce8e2639976d6a8a7daaae79e32d2ac6218f39722",
+      "status": "PREDICTED"
+    },
+    "base_km_last10": {
+      "comparator_note": "FROZEN_H99_LAST10_NOT_CHRONOLOGICAL",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.5,
+          0.09999999999999998,
+          0.07999999999999996,
+          0.064,
+          0.051199999999999996,
+          0.040959999999999996,
+          0.03276800000000002,
+          0.0262144,
+          0.03145728000000002,
+          0.014680064000000007,
+          0.058720256000000026
+        ],
+        "P_close_ceiling": [
+          0.5,
+          0.4137614678899083,
+          0.3355963302752294,
+          0.2730642201834863,
+          0.31544434389140275,
+          0.2801835294117648,
+          0.25197487782805433,
+          0.229407956561086,
+          0.20232765104072403,
+          0.18969017513122174
+        ],
+        "S": [
+          0.5,
+          0.4,
+          0.32000000000000006,
+          0.25600000000000006,
+          0.20480000000000007,
+          0.16384000000000007,
+          0.13107200000000005,
+          0.10485760000000005,
+          0.07340032000000003,
+          0.058720256000000026
+        ],
+        "clipped": null,
+        "hazard": [
+          0.5,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.3,
+          0.2
+        ],
+        "model_id": "base_km_last10",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "4bd27e6a5484d5e9161e2c65f5b104f5cad864e9f1cc7307ff2051917ea77537",
+      "status": "PREDICTED"
+    },
+    "base_last10_rate": {
+      "comparator_note": "FROZEN_H99_LAST10_NOT_CHRONOLOGICAL",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 0.6,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D10": {
+          "direction": "DOWN",
+          "p_up": 0.5,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D3": {
+          "direction": "DOWN",
+          "p_up": 0.5,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D5": {
+          "direction": "DOWN",
+          "p_up": 0.4,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "model_id": "base_last10_rate",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "8b0a098d1ad639d7b814f3ff87464330be7872968a4880628cd47abaf2e2ddda",
+      "status": "PREDICTED"
+    },
+    "base_rate": {
+      "comparator_note": "FROZEN_H99",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 0.898989898989899,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.7070707070707071,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D3": {
+          "direction": "UP",
+          "p_up": 0.8080808080808081,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.7777777777777778,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "model_id": "base_rate",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "eb91ae3d429e6ba4567b9affb19b7dcf408123ed30f89a1dea9e3262f9ffd4d9",
+      "status": "PREDICTED"
+    },
+    "base_train_mean": {
+      "comparator_note": "FROZEN_H99",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": null,
+          "p_up": null,
+          "price": 5.247058612328671,
+          "return": 0.07742476639192437,
+          "return_clipped": null,
+          "return_unclipped": 0.07742476639192437
+        },
+        "D10": {
+          "direction": null,
+          "p_up": null,
+          "price": 7.171143901419097,
+          "return": 0.4725141481353383,
+          "return_clipped": null,
+          "return_unclipped": 0.4725141481353383
+        },
+        "D3": {
+          "direction": null,
+          "p_up": null,
+          "price": 5.891207899973668,
+          "return": 0.20969361395763195,
+          "return_clipped": null,
+          "return_unclipped": 0.20969361395763195
+        },
+        "D5": {
+          "direction": null,
+          "p_up": null,
+          "price": 6.389823323419769,
+          "return": 0.31207871117449043,
+          "return_clipped": null,
+          "return_unclipped": 0.31207871117449043
+        },
+        "model_id": "base_train_mean",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "8315d19ee941291a5bc2dab2d900ce8774f5f11a45c1819488168d175221d61a",
+      "status": "PREDICTED"
+    },
+    "base_train_median": {
+      "comparator_note": "FROZEN_H99",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": null,
+          "p_up": null,
+          "price": 5.357,
+          "return": 0.1,
+          "return_clipped": null,
+          "return_unclipped": 0.1
+        },
+        "D10": {
+          "direction": null,
+          "p_up": null,
+          "price": 6.073585714285715,
+          "return": 0.24714285714285714,
+          "return_clipped": null,
+          "return_unclipped": 0.24714285714285714
+        },
+        "D3": {
+          "direction": null,
+          "p_up": null,
+          "price": 6.475494505494505,
+          "return": 0.32967032967032966,
+          "return_clipped": null,
+          "return_unclipped": 0.32967032967032966
+        },
+        "D5": {
+          "direction": null,
+          "p_up": null,
+          "price": 6.69063076923077,
+          "return": 0.37384615384615383,
+          "return_clipped": null,
+          "return_unclipped": 0.37384615384615383
+        },
+        "model_id": "base_train_median",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "56bb6c78671769dd1b47fa64f6520f6bb0c2eb90ff6c9fb14fa9d829a01307fb",
+      "status": "PREDICTED"
+    },
+    "base_zero": {
+      "comparator_note": "FROZEN_H99",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": null,
+          "p_up": null,
+          "price": 4.87,
+          "return": 0.0,
+          "return_clipped": null,
+          "return_unclipped": 0.0
+        },
+        "D10": {
+          "direction": null,
+          "p_up": null,
+          "price": 4.87,
+          "return": 0.0,
+          "return_clipped": null,
+          "return_unclipped": 0.0
+        },
+        "D3": {
+          "direction": null,
+          "p_up": null,
+          "price": 4.87,
+          "return": 0.0,
+          "return_clipped": null,
+          "return_unclipped": 0.0
+        },
+        "D5": {
+          "direction": null,
+          "p_up": null,
+          "price": 4.87,
+          "return": 0.0,
+          "return_clipped": null,
+          "return_unclipped": 0.0
+        },
+        "model_id": "base_zero",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "9d2f8f82a3253291b0656c53b60d000c978af741fdcd7a619200d96fcbc9db9d",
+      "status": "PREDICTED"
+    }
+  },
+  "first_trading_date": "2021-06-08",
+  "inputs": {
+    "path": "registry/oot/inputs/BMSCH.json",
+    "sha256": "b52db1d114ad4aaf7fd8b10140f88cbb85d53f95f90816e5f61a6aa31c2ba7db"
+  },
+  "inputs_sha256": "b52db1d114ad4aaf7fd8b10140f88cbb85d53f95f90816e5f61a6aa31c2ba7db",
+  "market20": {
+    "S0_date": "2021-06-07",
+    "S20_date": "2021-05-05",
+    "calendar": "C",
+    "calendar_file": "data/raw/pay_calendar_c_20200101_20230921.csv",
+    "calendar_sha256": "6dfd6134584a1a14211c3a56b5b274fef321f666bf870ce99605a97bee16fe4e",
+    "close_S0": "1447.08",
+    "close_S20": "1420",
+    "f6": "0.01907042253521126760563380281690140845070422535211267605634",
+    "ref_date": "2021-06-08",
+    "ref_date_rule": "OOT_FIRST_TRADING_DATE_SPEC_MARKET20_V0_4E",
+    "refusal": null,
+    "xu100_file": "data/raw/xu100/xu100_graphic_20260922.json",
+    "xu100_sha256": "04637c911f912e007522790520191ae99ad5cf47f8d38a4360698ea3038397fe"
+  },
+  "model_inputs": {
+    "additional_sale_shares": "0",
+    "capital_increase_shares": "12200000",
+    "existing_share_sale_shares": "3300000",
+    "f6_market20": "0.01907042253521126760563380281690140845070422535211267605634",
+    "f6_market20_refusal": null,
+    "ipo_price_tl": "4.87",
+    "ipo_price_try": "4.87",
+    "ipo_size_tl": "75485000",
+    "planned_additional_sale_ceiling": "0",
+    "planned_base_offer_shares": "15500000",
+    "planned_capital_increase_shares": "12200000",
+    "planned_existing_share_sale": "3300000",
+    "planned_max_offer_shares": "15500000",
+    "planned_post_ipo_capital": "32210000",
+    "planned_pre_ipo_capital": "20010000",
+    "post_ipo_share_capital": "32210000",
+    "shares_offered": "15500000",
+    "total_demand_filter_status": "UNFILTERED",
+    "total_demand_multiple": "1.8"
+  },
+  "models": [
+    {
+      "algorithm": "V1_5_RIDGE_LOGIT",
+      "file": "models/v1_5_h99.json",
+      "kind": "linear",
+      "model_id": "v1_5_h99",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 0.9905951006797272,
+          "price": 5.357,
+          "return": 0.1,
+          "return_clipped": "UPPER",
+          "return_unclipped": 0.12003357471957363
+        },
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.9751936911510756,
+          "price": 10.76698212717625,
+          "return": 1.210879286894507,
+          "return_clipped": null,
+          "return_unclipped": 1.210879286894507
+        },
+        "D3": {
+          "direction": "UP",
+          "p_up": 0.9987163526929187,
+          "price": 6.48197,
+          "return": 0.331,
+          "return_clipped": "UPPER",
+          "return_unclipped": 0.470761698287431
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.9953669857128412,
+          "price": 7.843183700000001,
+          "return": 0.61051,
+          "return_clipped": "UPPER",
+          "return_unclipped": 0.7247826560608526
+        },
+        "model_id": "v1_5_h99",
+        "refused": null,
+        "warnings": [
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f1",
+            "message": "f1 = 75485000.0 eğitim aralığı dışında [290870000.0, 6825000000.0]",
+            "train_max": 6825000000.0,
+            "train_min": 290870000.0,
+            "value": 75485000.0
+          },
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f2",
+            "message": "f2 = 48.121701335 eğitim aralığı dışında [10.0314889789, 40.4749055586]",
+            "train_max": 40.4749055586,
+            "train_min": 10.0314889789,
+            "value": 48.121701335
+          },
+          {
+            "code": "RETURN_CLIPPED_TO_PHYSICAL_BOUND",
+            "horizon": "D1",
+            "message": "D1 getirisi 0.12003357471957363 fiziksel sınıra kırpıldı: 0.1",
+            "used": 0.1,
+            "value": 0.12003357471957363
+          },
+          {
+            "code": "RETURN_CLIPPED_TO_PHYSICAL_BOUND",
+            "horizon": "D3",
+            "message": "D3 getirisi 0.470761698287431 fiziksel sınıra kırpıldı: 0.331",
+            "used": 0.331,
+            "value": 0.470761698287431
+          },
+          {
+            "code": "RETURN_CLIPPED_TO_PHYSICAL_BOUND",
+            "horizon": "D5",
+            "message": "D5 getirisi 0.7247826560608526 fiziksel sınıra kırpıldı: 0.61051",
+            "used": 0.61051,
+            "value": 0.7247826560608526
+          }
+        ]
+      },
+      "params_sha256": "bf809859f61e11180e46cb1e073de2bd792fed1ad434ed8194be60fc5937a854",
+      "refusal": null,
+      "spec_sha256": "a37ab09d4048b5d6b50bd767a950e465c24c716eaf05beb47159bcfb5934bf47",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "ALWAYS_CEILING",
+      "file": "models/base_always_ceiling.json",
+      "kind": "rule",
+      "model_id": "base_always_ceiling",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 1.0,
+          "price": 5.357,
+          "return": 0.1,
+          "return_clipped": null,
+          "return_unclipped": 0.1
+        },
+        "D10": {
+          "direction": "UP",
+          "p_up": 1.0,
+          "price": 12.631525780687001,
+          "return": 1.5937424601,
+          "return_clipped": null,
+          "return_unclipped": 1.5937424601
+        },
+        "D3": {
+          "direction": "UP",
+          "p_up": 1.0,
+          "price": 6.48197,
+          "return": 0.331,
+          "return_clipped": null,
+          "return_unclipped": 0.331
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 1.0,
+          "price": 7.843183700000001,
+          "return": 0.61051,
+          "return_clipped": null,
+          "return_unclipped": 0.61051
+        },
+        "model_id": "base_always_ceiling",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "0b27057479bd9244dc70cae6c01200d4fc544c5f65bf8be0c4362be5b5797780",
+      "refusal": null,
+      "spec_sha256": "ed1815f898c30b8cce6199e48d0788e2cd373fe84db59a4b782269810dc31eb6",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "TRAIN_MEDIAN",
+      "file": "models/base_train_median.json",
+      "kind": "rule",
+      "model_id": "base_train_median",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": null,
+          "p_up": null,
+          "price": 5.357,
+          "return": 0.1,
+          "return_clipped": null,
+          "return_unclipped": 0.1
+        },
+        "D10": {
+          "direction": null,
+          "p_up": null,
+          "price": 6.073585714285715,
+          "return": 0.24714285714285714,
+          "return_clipped": null,
+          "return_unclipped": 0.24714285714285714
+        },
+        "D3": {
+          "direction": null,
+          "p_up": null,
+          "price": 6.475494505494505,
+          "return": 0.32967032967032966,
+          "return_clipped": null,
+          "return_unclipped": 0.32967032967032966
+        },
+        "D5": {
+          "direction": null,
+          "p_up": null,
+          "price": 6.69063076923077,
+          "return": 0.37384615384615383,
+          "return_clipped": null,
+          "return_unclipped": 0.37384615384615383
+        },
+        "model_id": "base_train_median",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "56bb6c78671769dd1b47fa64f6520f6bb0c2eb90ff6c9fb14fa9d829a01307fb",
+      "refusal": null,
+      "spec_sha256": "842a14f529396ec5c9a2ac79463ac91816c89cab05fe6107b60731fab7ce4ea3",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "TRAIN_MEAN",
+      "file": "models/base_train_mean.json",
+      "kind": "rule",
+      "model_id": "base_train_mean",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": null,
+          "p_up": null,
+          "price": 5.247058612328671,
+          "return": 0.07742476639192437,
+          "return_clipped": null,
+          "return_unclipped": 0.07742476639192437
+        },
+        "D10": {
+          "direction": null,
+          "p_up": null,
+          "price": 7.171143901419097,
+          "return": 0.4725141481353383,
+          "return_clipped": null,
+          "return_unclipped": 0.4725141481353383
+        },
+        "D3": {
+          "direction": null,
+          "p_up": null,
+          "price": 5.891207899973668,
+          "return": 0.20969361395763195,
+          "return_clipped": null,
+          "return_unclipped": 0.20969361395763195
+        },
+        "D5": {
+          "direction": null,
+          "p_up": null,
+          "price": 6.389823323419769,
+          "return": 0.31207871117449043,
+          "return_clipped": null,
+          "return_unclipped": 0.31207871117449043
+        },
+        "model_id": "base_train_mean",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "8315d19ee941291a5bc2dab2d900ce8774f5f11a45c1819488168d175221d61a",
+      "refusal": null,
+      "spec_sha256": "f94c2e58d8a4f0607c33fa0c0a12cec8daef39ee0e012c2db1d11d2bb1706119",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "ZERO",
+      "file": "models/base_zero.json",
+      "kind": "rule",
+      "model_id": "base_zero",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": null,
+          "p_up": null,
+          "price": 4.87,
+          "return": 0.0,
+          "return_clipped": null,
+          "return_unclipped": 0.0
+        },
+        "D10": {
+          "direction": null,
+          "p_up": null,
+          "price": 4.87,
+          "return": 0.0,
+          "return_clipped": null,
+          "return_unclipped": 0.0
+        },
+        "D3": {
+          "direction": null,
+          "p_up": null,
+          "price": 4.87,
+          "return": 0.0,
+          "return_clipped": null,
+          "return_unclipped": 0.0
+        },
+        "D5": {
+          "direction": null,
+          "p_up": null,
+          "price": 4.87,
+          "return": 0.0,
+          "return_clipped": null,
+          "return_unclipped": 0.0
+        },
+        "model_id": "base_zero",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "9d2f8f82a3253291b0656c53b60d000c978af741fdcd7a619200d96fcbc9db9d",
+      "refusal": null,
+      "spec_sha256": "1ae0f539e663c6d14bba1ad329a07a332dc1ffca59a3acd4b62cc65e68c994d2",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "BASE_RATE",
+      "file": "models/base_rate.json",
+      "kind": "rule",
+      "model_id": "base_rate",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 0.898989898989899,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.7070707070707071,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D3": {
+          "direction": "UP",
+          "p_up": 0.8080808080808081,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.7777777777777778,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "model_id": "base_rate",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "eb91ae3d429e6ba4567b9affb19b7dcf408123ed30f89a1dea9e3262f9ffd4d9",
+      "refusal": null,
+      "spec_sha256": "d094ba1119803a693ef17dce336f77e8022f88da6e944349a2cb04b8b2e2a6c5",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "LAST10_BASE_RATE",
+      "file": "models/base_last10_rate.json",
+      "kind": "rule",
+      "model_id": "base_last10_rate",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 0.6,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D10": {
+          "direction": "DOWN",
+          "p_up": 0.5,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D3": {
+          "direction": "DOWN",
+          "p_up": 0.5,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D5": {
+          "direction": "DOWN",
+          "p_up": 0.4,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "model_id": "base_last10_rate",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "8b0a098d1ad639d7b814f3ff87464330be7872968a4880628cd47abaf2e2ddda",
+      "refusal": null,
+      "spec_sha256": "ff7dfd4084a16432336eb551958c13403c72ac799d9742f8cbbf324ab98e0ecc",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "V1_5_RIDGE_LOGIT",
+      "file": "models/v1_6_h99.json",
+      "kind": "linear",
+      "model_id": "v1_6_h99",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 0.9905951006797272,
+          "price": 5.357,
+          "return": 0.1,
+          "return_clipped": "UPPER",
+          "return_unclipped": 0.12003357471957363
+        },
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.9751936911510756,
+          "price": 10.769549405115024,
+          "return": 1.2114064486889164,
+          "return_clipped": null,
+          "return_unclipped": 1.2114064486889164
+        },
+        "D3": {
+          "direction": "UP",
+          "p_up": 0.9987163526929187,
+          "price": 6.48197,
+          "return": 0.331,
+          "return_clipped": "UPPER",
+          "return_unclipped": 0.470761698287431
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.9953669857128412,
+          "price": 7.843183700000001,
+          "return": 0.61051,
+          "return_clipped": "UPPER",
+          "return_unclipped": 0.7247826560608526
+        },
+        "model_id": "v1_6_h99",
+        "refused": null,
+        "warnings": [
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f1",
+            "message": "f1 = 75485000.0 eğitim aralığı dışında [290870000.0, 6825000000.0]",
+            "train_max": 6825000000.0,
+            "train_min": 290870000.0,
+            "value": 75485000.0
+          },
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f2",
+            "message": "f2 = 48.121701335 eğitim aralığı dışında [10.0314889789, 40.4749055586]",
+            "train_max": 40.4749055586,
+            "train_min": 10.0314889789,
+            "value": 48.121701335
+          },
+          {
+            "code": "RETURN_CLIPPED_TO_PHYSICAL_BOUND",
+            "horizon": "D1",
+            "message": "D1 getirisi 0.12003357471957363 fiziksel sınıra kırpıldı: 0.1",
+            "used": 0.1,
+            "value": 0.12003357471957363
+          },
+          {
+            "code": "RETURN_CLIPPED_TO_PHYSICAL_BOUND",
+            "horizon": "D3",
+            "message": "D3 getirisi 0.470761698287431 fiziksel sınıra kırpıldı: 0.331",
+            "used": 0.331,
+            "value": 0.470761698287431
+          },
+          {
+            "code": "RETURN_CLIPPED_TO_PHYSICAL_BOUND",
+            "horizon": "D5",
+            "message": "D5 getirisi 0.7247826560608526 fiziksel sınıra kırpıldı: 0.61051",
+            "used": 0.61051,
+            "value": 0.7247826560608526
+          }
+        ]
+      },
+      "params_sha256": "b40b7cb54cde57121788d1be974c2d1eae140b72c3e1849f23eb8145a213e598",
+      "refusal": null,
+      "spec_sha256": "7e3dd5ffe81674b7922904e416845f4212e1b667c60d0c4bdf10b01dfbe8b87a",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "V1_5_RIDGE_LOGIT",
+      "file": "models/v1_5_market20_v0.json",
+      "kind": "market20",
+      "model_id": "v1_5_market20_v0",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 0.9903553144921835,
+          "price": 5.357,
+          "return": 0.1,
+          "return_clipped": "UPPER",
+          "return_unclipped": 0.11935236467932331
+        },
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.9791780301016378,
+          "price": 10.648499522713902,
+          "return": 1.1865502100028544,
+          "return_clipped": null,
+          "return_unclipped": 1.1865502100028544
+        },
+        "D3": {
+          "direction": "UP",
+          "p_up": 0.9994676166369478,
+          "price": 6.48197,
+          "return": 0.331,
+          "return_clipped": "UPPER",
+          "return_unclipped": 0.46950804550656783
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.9951853666637599,
+          "price": 7.843183700000001,
+          "return": 0.61051,
+          "return_clipped": "UPPER",
+          "return_unclipped": 0.7355257639750397
+        },
+        "f6_market20": 0.019070422535211268,
+        "model_id": "v1_5_market20_v0",
+        "refused": null,
+        "warnings": [
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f1",
+            "message": "f1 = 75485000.0 eğitim aralığı dışında [290870000.0, 6825000000.0]",
+            "train_max": 6825000000.0,
+            "train_min": 290870000.0,
+            "value": 75485000.0
+          },
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f2",
+            "message": "f2 = 48.121701335 eğitim aralığı dışında [10.0314889789, 40.4749055586]",
+            "train_max": 40.4749055586,
+            "train_min": 10.0314889789,
+            "value": 48.121701335
+          },
+          {
+            "code": "RETURN_CLIPPED_TO_PHYSICAL_BOUND",
+            "horizon": "D1",
+            "message": "D1 getirisi 0.11935236467932331 fiziksel sınıra kırpıldı: 0.1",
+            "used": 0.1,
+            "value": 0.11935236467932331
+          },
+          {
+            "code": "RETURN_CLIPPED_TO_PHYSICAL_BOUND",
+            "horizon": "D3",
+            "message": "D3 getirisi 0.46950804550656783 fiziksel sınıra kırpıldı: 0.331",
+            "used": 0.331,
+            "value": 0.46950804550656783
+          },
+          {
+            "code": "RETURN_CLIPPED_TO_PHYSICAL_BOUND",
+            "horizon": "D5",
+            "message": "D5 getirisi 0.7355257639750397 fiziksel sınıra kırpıldı: 0.61051",
+            "used": 0.61051,
+            "value": 0.7355257639750397
+          }
+        ]
+      },
+      "params_sha256": "9d6df5ece7151905f33134526604b1f947744b95fc9ef0340500f4eb86fe006a",
+      "refusal": null,
+      "spec_sha256": "4163f65a2ba637ee23521c2b9d7a96f0d5aa41220aa6c9bfd9d127a82c4e3796",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "V1_5_RIDGE_LOGIT",
+      "file": "models/pb_v0.json",
+      "kind": "pb",
+      "model_id": "pb_v0",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 0.9903284379737938,
+          "price": 5.357,
+          "return": 0.1,
+          "return_clipped": "UPPER",
+          "return_unclipped": 0.1572888610600191
+        },
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.9718270444018166,
+          "price": 12.631525780687001,
+          "return": 1.5937424601,
+          "return_clipped": "UPPER",
+          "return_unclipped": 1.616524673000821
+        },
+        "D3": {
+          "direction": "UP",
+          "p_up": 0.9932542697165145,
+          "price": 6.48197,
+          "return": 0.331,
+          "return_clipped": "UPPER",
+          "return_unclipped": 0.5865652776329815
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.9889894888771056,
+          "price": 7.843183700000001,
+          "return": 0.61051,
+          "return_clipped": "UPPER",
+          "return_unclipped": 0.9391193354972875
+        },
+        "features": {
+          "pb1": 18.139444518983975,
+          "pb2": 48.12170133498913,
+          "pb3": 78.70967741935483,
+          "pb4": 0.0
+        },
+        "model_id": "pb_v0",
+        "refused": null,
+        "warnings": [
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "pb1",
+            "message": "pb1 = 18.139444518983975 eğitim aralığı dışında [19.488386989924592, 22.643858178017435]",
+            "train_max": 22.643858178017435,
+            "train_min": 19.488386989924592,
+            "value": 18.139444518983975
+          },
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "pb2",
+            "message": "pb2 = 48.12170133498913 eğitim aralığı dışında [10.012399256044638, 40.474905558553694]",
+            "train_max": 40.474905558553694,
+            "train_min": 10.012399256044638,
+            "value": 48.12170133498913
+          },
+          {
+            "code": "RETURN_CLIPPED_TO_PHYSICAL_BOUND",
+            "horizon": "D1",
+            "message": "D1 getirisi 0.1572888610600191 fiziksel sınıra kırpıldı: 0.1",
+            "used": 0.1,
+            "value": 0.1572888610600191
+          },
+          {
+            "code": "RETURN_CLIPPED_TO_PHYSICAL_BOUND",
+            "horizon": "D10",
+            "message": "D10 getirisi 1.616524673000821 fiziksel sınıra kırpıldı: 1.5937424601",
+            "used": 1.5937424601,
+            "value": 1.616524673000821
+          },
+          {
+            "code": "RETURN_CLIPPED_TO_PHYSICAL_BOUND",
+            "horizon": "D3",
+            "message": "D3 getirisi 0.5865652776329815 fiziksel sınıra kırpıldı: 0.331",
+            "used": 0.331,
+            "value": 0.5865652776329815
+          },
+          {
+            "code": "RETURN_CLIPPED_TO_PHYSICAL_BOUND",
+            "horizon": "D5",
+            "message": "D5 getirisi 0.9391193354972875 fiziksel sınıra kırpıldı: 0.61051",
+            "used": 0.61051,
+            "value": 0.9391193354972875
+          }
+        ]
+      },
+      "params_sha256": "97c3b287f90a586464db7b2bca0777173a8e89aa51d0e4d609e8a672328fd003",
+      "refusal": null,
+      "spec_sha256": "4eb55d4e6ce8c43e8919eedd3e136850215f700de9312731bce767693d165e4f",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/ceiling_hazard_v0.json",
+      "kind": "hazard",
+      "model_id": "ceiling_hazard_v0",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.01964506118170406,
+          0.01381942880553877,
+          0.013624625265566292,
+          0.040775121270138937,
+          0.039030351070525215,
+          0.03736023970587332,
+          0.03576159251958089,
+          0.034231351554617984,
+          0.03276658970414281,
+          0.03136450511241329,
+          0.7016211338098984
+        ],
+        "P_close_ceiling": [
+          0.9803549388182959,
+          0.967022856954319,
+          0.9535966485615521,
+          0.9134153397370949,
+          0.8912542894693142,
+          0.8592374328841647,
+          0.8285905797598261,
+          0.7992551075554616,
+          0.7711749021927252,
+          0.7442962507184827
+        ],
+        "S": [
+          0.9803549388182959,
+          0.9665355100127572,
+          0.9529108847471909,
+          0.9121357634770519,
+          0.8731054124065267,
+          0.8357451727006534,
+          0.7999835801810725,
+          0.7657522286264545,
+          0.7329856389223117,
+          0.7016211338098984
+        ],
+        "clipped": false,
+        "hazard": [
+          0.019645061181704063,
+          0.014096352513097531,
+          0.014096352513097531,
+          0.04279006769972696,
+          0.04279006769972696,
+          0.04279006769972696,
+          0.04279006769972696,
+          0.04279006769972696,
+          0.04279006769972696,
+          0.04279006769972696
+        ],
+        "model_id": "ceiling_hazard_v0",
+        "refused": null,
+        "warnings": [
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f1",
+            "message": "f1 = 75485000.0 eğitim aralığı dışında [290870000.0, 6825000000.0]",
+            "train_max": 6825000000.0,
+            "train_min": 290870000.0,
+            "value": 75485000.0
+          },
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f2",
+            "message": "f2 = 48.121701335 eğitim aralığı dışında [10.0314889789, 40.4749055586]",
+            "train_max": 40.4749055586,
+            "train_min": 10.0314889789,
+            "value": 48.121701335
+          }
+        ]
+      },
+      "params_sha256": "caa4dc867a9fc20d9f57cf6269e157ee1fafc9527c5144e53797bf48af0ffb67",
+      "refusal": null,
+      "spec_sha256": "18949ac747fd9759d63ce2182a12ee0f2b5ab2bb4d56682491270dea853b8623",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/ceiling_hazard_v0@INF.json",
+      "kind": "hazard",
+      "model_id": "ceiling_hazard_v0@INF",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.16836734693877553,
+          0.0848046455424275,
+          0.07615680339829833,
+          0.13594686570010106,
+          0.10839006859872918,
+          0.08641910874763548,
+          0.06890172183933096,
+          0.05493515660162876,
+          0.04379965188508239,
+          0.03492134407053865,
+          0.13735728667745215
+        ],
+        "P_close_ceiling": [
+          0.8316326530612245,
+          0.7505149782830863,
+          0.6754672545459283,
+          0.5415001975696151,
+          0.5083818103006623,
+          0.4343226438506538,
+          0.37527547059997135,
+          0.3281973189541569,
+          0.2906620358851968,
+          0.26073525614102583
+        ],
+        "S": [
+          0.8316326530612245,
+          0.746828007518797,
+          0.6706712041204986,
+          0.5347243384203976,
+          0.4263342698216684,
+          0.3399151610740329,
+          0.27101343923470195,
+          0.2160782826330732,
+          0.1722786307479908,
+          0.13735728667745215
+        ],
+        "clipped": null,
+        "hazard": [
+          0.1683673469387755,
+          0.10197368421052631,
+          0.10197368421052631,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027
+        ],
+        "model_id": "ceiling_hazard_v0@INF",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "c5ac8085fd76b5bcdee328e51a4114ef85d5cae1cab23b51ea9b1232bc660c7e",
+      "refusal": null,
+      "spec_sha256": "db7a951f2578e7b346d292c51507a6102145fd00ed890fa59c454c1937107842",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/pb_ceiling_v0.json",
+      "kind": "hazard",
+      "model_id": "pb_ceiling_v0",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.017762143246722206,
+          0.009717118254533696,
+          0.009620988395026231,
+          0.02461339527812112,
+          0.023984234010759886,
+          0.023371155201583504,
+          0.022773747754940343,
+          0.02219161108349943,
+          0.021624354839640536,
+          0.021071598653708334,
+          0.8032696532814647
+        ],
+        "P_close_ceiling": [
+          0.9822378567532778,
+          0.9731509967900573,
+          0.9637506732664767,
+          0.9397018054029913,
+          0.926226146991053,
+          0.9061068606693279,
+          0.8865018583599278,
+          0.8673979940674583,
+          0.8487824578310709,
+          0.8306427671348355
+        ],
+        "S": [
+          0.9822378567532778,
+          0.9725207384987441,
+          0.9628997501037179,
+          0.9382863548255967,
+          0.9143021208148369,
+          0.8909309656132534,
+          0.868157217858313,
+          0.8459656067748136,
+          0.824341251935173,
+          0.8032696532814647
+        ],
+        "clipped": null,
+        "hazard": [
+          0.01776214324672217,
+          0.009892836228745013,
+          0.009892836228745013,
+          0.025561742305437174,
+          0.025561742305437174,
+          0.025561742305437174,
+          0.025561742305437174,
+          0.025561742305437174,
+          0.025561742305437174,
+          0.025561742305437174
+        ],
+        "model_id": "pb_ceiling_v0",
+        "refused": null,
+        "warnings": [
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "pb1",
+            "message": "pb1 = 18.139444518983975 eğitim aralığı dışında [19.488386989924592, 22.643858178017435]",
+            "train_max": 22.643858178017435,
+            "train_min": 19.488386989924592,
+            "value": 18.139444518983975
+          },
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "pb2",
+            "message": "pb2 = 48.12170133498913 eğitim aralığı dışında [10.012399256044638, 40.474905558553694]",
+            "train_max": 40.474905558553694,
+            "train_min": 10.012399256044638,
+            "value": 48.12170133498913
+          }
+        ]
+      },
+      "params_sha256": "7fb7a41e48ea2259acbbfc754063be3dbdd23525aff34b574278b3f00dcbc5aa",
+      "refusal": null,
+      "spec_sha256": "8acfd7079be6d7dd8074bb87434d1c7c748b0921809d6b6ab0b2143ce65384e0",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/pb_ceiling_v0@INF.json",
+      "kind": "hazard",
+      "model_id": "pb_ceiling_v0@INF",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.18499999999999994,
+          0.08310855263157901,
+          0.07463366733033239,
+          0.13322792838609898,
+          0.10622226722675465,
+          0.08469072657268273,
+          0.06752368740254439,
+          0.053836453469596174,
+          0.04292365884738075,
+          0.0342229171891279,
+          0.13461014094390308
+        ],
+        "P_close_ceiling": [
+          0.8150000000000001,
+          0.7380407260985031,
+          0.6651188401289582,
+          0.534946598173733,
+          0.4988139951895971,
+          0.4259071593051949,
+          0.3677787361000634,
+          0.3214331013824585,
+          0.28448185208058435,
+          0.2550207208804415
+        ],
+        "S": [
+          0.8150000000000001,
+          0.731891447368421,
+          0.6572577800380887,
+          0.5240298516519897,
+          0.417807584425235,
+          0.3331168578525523,
+          0.2655931704500079,
+          0.21175671698041174,
+          0.16883305813303098,
+          0.13461014094390308
+        ],
+        "clipped": null,
+        "hazard": [
+          0.18499999999999997,
+          0.10197368421052631,
+          0.10197368421052631,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027
+        ],
+        "model_id": "pb_ceiling_v0@INF",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "6a5be1b952f5c7e01b0c55d366f6e3b50345ce7fe6021f9f70df60bf43b94aa0",
+      "refusal": null,
+      "spec_sha256": "b1a213bb68e29018247bb39b1adb89e4528a9a38a2eaf877cc6dc675379ac399",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "KM_EXPANDING",
+      "file": "models/base_km_expanding.json",
+      "kind": "km",
+      "model_id": "base_km_expanding",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.18181818181818188,
+          0.11111111111111105,
+          0.04040404040404044,
+          0.13131313131313138,
+          0.12121212121212116,
+          0.08080808080808077,
+          0.06060606060606061,
+          0.06060606060606061,
+          0.04040404040404039,
+          0.030303030303030304,
+          0.1414141414141414
+        ],
+        "P_close_ceiling": [
+          0.8181818181818181,
+          0.7137892688351404,
+          0.6743119266055045,
+          0.5460105643591882,
+          0.4956579368344074,
+          0.42609351432880843,
+          0.3739201974496092,
+          0.32174688057040995,
+          0.2869646693176105,
+          0.2608780108780109
+        ],
+        "S": [
+          0.8181818181818181,
+          0.7070707070707071,
+          0.6666666666666666,
+          0.5353535353535352,
+          0.4141414141414141,
+          0.3333333333333333,
+          0.2727272727272727,
+          0.2121212121212121,
+          0.1717171717171717,
+          0.1414141414141414
+        ],
+        "clipped": null,
+        "hazard": [
+          0.18181818181818182,
+          0.13580246913580246,
+          0.05714285714285714,
+          0.19696969696969696,
+          0.22641509433962265,
+          0.1951219512195122,
+          0.18181818181818182,
+          0.2222222222222222,
+          0.19047619047619047,
+          0.17647058823529413
+        ],
+        "model_id": "base_km_expanding",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "8120c274de6fcf49dd880c9ce8e2639976d6a8a7daaae79e32d2ac6218f39722",
+      "refusal": null,
+      "spec_sha256": "ac6b402914cc5038dd6db29606ae54f2676e3ab299d982f6ae0591a714ba3c01",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "KM_LAST10",
+      "file": "models/base_km_last10.json",
+      "kind": "km",
+      "model_id": "base_km_last10",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.5,
+          0.09999999999999998,
+          0.07999999999999996,
+          0.064,
+          0.051199999999999996,
+          0.040959999999999996,
+          0.03276800000000002,
+          0.0262144,
+          0.03145728000000002,
+          0.014680064000000007,
+          0.058720256000000026
+        ],
+        "P_close_ceiling": [
+          0.5,
+          0.4137614678899083,
+          0.3355963302752294,
+          0.2730642201834863,
+          0.31544434389140275,
+          0.2801835294117648,
+          0.25197487782805433,
+          0.229407956561086,
+          0.20232765104072403,
+          0.18969017513122174
+        ],
+        "S": [
+          0.5,
+          0.4,
+          0.32000000000000006,
+          0.25600000000000006,
+          0.20480000000000007,
+          0.16384000000000007,
+          0.13107200000000005,
+          0.10485760000000005,
+          0.07340032000000003,
+          0.058720256000000026
+        ],
+        "clipped": null,
+        "hazard": [
+          0.5,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.3,
+          0.2
+        ],
+        "model_id": "base_km_last10",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "4bd27e6a5484d5e9161e2c65f5b104f5cad864e9f1cc7307ff2051917ea77537",
+      "refusal": null,
+      "spec_sha256": "b457c4cfc1881aaa7ad5701c9452d8d5be36efe8e06aeefa6801e03a93359389",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "CEILING_PATH_MIXTURE_EQ_V0",
+      "file": "models/ceiling_path_v0.json",
+      "kind": "ceiling_path",
+      "model_id": "ceiling_path_v0",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "S_h": 0.9803549388182959,
+          "limit_path_return": 0.09856262833675565,
+          "mean": 0.09616588788023057,
+          "n_atoms": 19,
+          "p_limit_path": 0.9803549388182959,
+          "p_up": 0.9890860771212755,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 1,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.09856262833675565,
+          "q50": 0.09856262833675565,
+          "q90": 0.09856262833675565,
+          "return": 0.09856262833675565
+        },
+        "D10": {
+          "S_h": 0.7016211338098984,
+          "limit_path_return": 1.5770020533880904,
+          "mean": 1.2617827094954794,
+          "n_atoms": 406,
+          "p_limit_path": 0.7016211338098984,
+          "p_up": 0.9536823056189144,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 10,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    10
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 9,
+                "n": 11,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    9
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 8,
+                "n": 15,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.2034870263207018,
+          "q50": 1.5770020533880904,
+          "q90": 1.5770020533880904,
+          "return": 1.5770020533880904
+        },
+        "D2": {
+          "S_h": 0.9665355100127572,
+          "limit_path_return": 0.20739219712525667,
+          "mean": 0.19975714231879516,
+          "n_atoms": 86,
+          "p_limit_path": 0.9665355100127572,
+          "p_up": 0.9783865355263239,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 2,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.20739219712525667,
+          "q50": 0.20739219712525667,
+          "q90": 0.20739219712525667,
+          "return": 0.20739219712525667
+        },
+        "D3": {
+          "S_h": 0.9529108847471909,
+          "limit_path_return": 0.3264887063655031,
+          "mean": 0.3112194636008343,
+          "n_atoms": 150,
+          "p_limit_path": 0.9529108847471909,
+          "p_up": 0.9762992935414105,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 3,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.3264887063655031,
+          "q50": 0.3264887063655031,
+          "q90": 0.3264887063655031,
+          "return": 0.3264887063655031
+        },
+        "D4": {
+          "S_h": 0.9121357634770519,
+          "limit_path_return": 0.45790554414784396,
+          "mean": 0.42661657472022835,
+          "n_atoms": 210,
+          "p_limit_path": 0.9121357634770519,
+          "p_up": 0.970611205727947,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 4,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.45790554414784396,
+          "q50": 0.45790554414784396,
+          "q90": 0.45790554414784396,
+          "return": 0.45790554414784396
+        },
+        "D5": {
+          "S_h": 0.8731054124065267,
+          "limit_path_return": 0.6036960985626283,
+          "mean": 0.5483417377094459,
+          "n_atoms": 264,
+          "p_limit_path": 0.8731054124065267,
+          "p_up": 0.9697729517177913,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 5,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.32765379490579516,
+          "q50": 0.6036960985626283,
+          "q90": 0.6036960985626283,
+          "return": 0.6036960985626283
+        },
+        "D6": {
+          "S_h": 0.8357451727006534,
+          "limit_path_return": 0.7638603696098563,
+          "mean": 0.6762375810093405,
+          "n_atoms": 312,
+          "p_limit_path": 0.8357451727006534,
+          "p_up": 0.9612615452803199,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 6,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.3445337119872469,
+          "q50": 0.7638603696098563,
+          "q90": 0.7638603696098563,
+          "return": 0.7638603696098563
+        },
+        "D7": {
+          "S_h": 0.7999835801810725,
+          "limit_path_return": 0.9383983572895277,
+          "mean": 0.8103869140164656,
+          "n_atoms": 352,
+          "p_limit_path": 0.7999835801810725,
+          "p_up": 0.9636630353171521,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 7,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.2998378904139196,
+          "q50": 0.9383983572895277,
+          "q90": 0.9383983572895277,
+          "return": 0.9383983572895277
+        },
+        "D8": {
+          "S_h": 0.7657522286264545,
+          "limit_path_return": 1.1314168377823408,
+          "mean": 0.9531458345683398,
+          "n_atoms": 380,
+          "p_limit_path": 0.7657522286264545,
+          "p_up": 0.9555571907378416,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 8,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.26436347640562685,
+          "q50": 1.1314168377823408,
+          "q90": 1.1314168377823408,
+          "return": 1.1314168377823408
+        },
+        "D9": {
+          "S_h": 0.7329856389223117,
+          "limit_path_return": 1.3429158110882957,
+          "mean": 1.1022870362736257,
+          "n_atoms": 395,
+          "p_limit_path": 0.7329856389223117,
+          "p_up": 0.9540271679403095,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 9,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    9
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 8,
+                "n": 15,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.24409416875230128,
+          "q50": 1.3429158110882957,
+          "q90": 1.3429158110882957,
+          "return": 1.3429158110882957
+        },
+        "P_L": [
+          0.01964506118170406,
+          0.01381942880553877,
+          0.013624625265566292,
+          0.040775121270138937,
+          0.039030351070525215,
+          0.03736023970587332,
+          0.03576159251958089,
+          0.034231351554617984,
+          0.03276658970414281,
+          0.03136450511241329,
+          0.7016211338098984
+        ],
+        "P_close_ceiling": [
+          0.9803549388182959,
+          0.967022856954319,
+          0.9535966485615521,
+          0.9134153397370949,
+          0.8912542894693142,
+          0.8592374328841647,
+          0.8285905797598261,
+          0.7992551075554616,
+          0.7711749021927252,
+          0.7442962507184827
+        ],
+        "S": [
+          0.9803549388182959,
+          0.9665355100127572,
+          0.9529108847471909,
+          0.9121357634770519,
+          0.8731054124065267,
+          0.8357451727006534,
+          0.7999835801810725,
+          0.7657522286264545,
+          0.7329856389223117,
+          0.7016211338098984
+        ],
+        "clipped": false,
+        "hazard": [
+          0.019645061181704063,
+          0.014096352513097531,
+          0.014096352513097531,
+          0.04279006769972696,
+          0.04279006769972696,
+          0.04279006769972696,
+          0.04279006769972696,
+          0.04279006769972696,
+          0.04279006769972696,
+          0.04279006769972696
+        ],
+        "limit_path": {
+          "C": [
+            "5.35",
+            "5.88",
+            "6.46",
+            "7.10",
+            "7.81",
+            "8.59",
+            "9.44",
+            "10.38",
+            "11.41",
+            "12.55"
+          ],
+          "ipo_price": "4.87",
+          "rho": [
+            0.09856262833675565,
+            0.20739219712525667,
+            0.3264887063655031,
+            0.45790554414784396,
+            0.6036960985626283,
+            0.7638603696098563,
+            0.9383983572895277,
+            1.1314168377823408,
+            1.3429158110882957,
+            1.5770020533880904
+          ],
+          "snapped_ipo_price": "4.87",
+          "tick": "0.01"
+        },
+        "model_id": "ceiling_path_v0",
+        "refused": null,
+        "warnings": [
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f1",
+            "message": "f1 = 75485000.0 eğitim aralığı dışında [290870000.0, 6825000000.0]",
+            "train_max": 6825000000.0,
+            "train_min": 290870000.0,
+            "value": 75485000.0
+          },
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f2",
+            "message": "f2 = 48.121701335 eğitim aralığı dışında [10.0314889789, 40.4749055586]",
+            "train_max": 40.4749055586,
+            "train_min": 10.0314889789,
+            "value": 48.121701335
+          }
+        ]
+      },
+      "params_sha256": "3e97e8788266f807a06604316d562de939a3e84ab6fcc9c0be1ce87790c6952d",
+      "refusal": null,
+      "spec_sha256": "104f49c4c951ad19d115781552206e82d3575d01f59f43baf8f23cd94a2e77cb",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "CEILING_PATH_MIXTURE_EQ_V0",
+      "file": "models/ceiling_path_v0@INF.json",
+      "kind": "ceiling_path",
+      "model_id": "ceiling_path_v0@INF",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "S_h": 0.8316326530612245,
+          "limit_path_return": 0.09856262833675565,
+          "mean": 0.07802144354565009,
+          "n_atoms": 19,
+          "p_limit_path": 0.8316326530612245,
+          "p_up": 0.9064625850340136,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 1,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.0005,
+          "q50": 0.09856262833675565,
+          "q90": 0.09856262833675565,
+          "return": 0.09856262833675565
+        },
+        "D10": {
+          "S_h": 0.13735728667745215,
+          "limit_path_return": 1.5770020533880904,
+          "mean": 0.4805324801877089,
+          "n_atoms": 406,
+          "p_limit_path": 0.13735728667745215,
+          "p_up": 0.7351262621381756,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 10,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    10
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 9,
+                "n": 11,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    9
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 8,
+                "n": 15,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.14566914586445523,
+          "q50": 0.2665733430691093,
+          "q90": 1.5770020533880904,
+          "return": 0.2665733430691093
+        },
+        "D2": {
+          "S_h": 0.746828007518797,
+          "limit_path_return": 0.20739219712525667,
+          "mean": 0.1480467208055466,
+          "n_atoms": 86,
+          "p_limit_path": 0.746828007518797,
+          "p_up": 0.8328346853273909,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 2,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.011231603857262407,
+          "q50": 0.20739219712525667,
+          "q90": 0.20739219712525667,
+          "return": 0.20739219712525667
+        },
+        "D3": {
+          "S_h": 0.6706712041204986,
+          "limit_path_return": 0.3264887063655031,
+          "mean": 0.21497690215019433,
+          "n_atoms": 150,
+          "p_limit_path": 0.6706712041204986,
+          "p_up": 0.8173697881702022,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 3,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.07272727272727272,
+          "q50": 0.3264887063655031,
+          "q90": 0.3264887063655031,
+          "return": 0.3264887063655031
+        },
+        "D4": {
+          "S_h": 0.5347243384203976,
+          "limit_path_return": 0.45790554414784396,
+          "mean": 0.2672793823565044,
+          "n_atoms": 210,
+          "p_limit_path": 0.5347243384203976,
+          "p_up": 0.7851423374647373,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 4,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.1165121659180921,
+          "q50": 0.45790554414784396,
+          "q90": 0.45790554414784396,
+          "return": 0.45790554414784396
+        },
+        "D5": {
+          "S_h": 0.4263342698216684,
+          "limit_path_return": 0.6036960985626283,
+          "mean": 0.3128609737192363,
+          "n_atoms": 264,
+          "p_limit_path": 0.4263342698216684,
+          "p_up": 0.780176834585452,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 5,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.1298181818181818,
+          "q50": 0.34841413952856914,
+          "q90": 0.6036960985626283,
+          "return": 0.34841413952856914
+        },
+        "D6": {
+          "S_h": 0.3399151610740329,
+          "limit_path_return": 0.7638603696098563,
+          "mean": 0.3519959316924793,
+          "n_atoms": 312,
+          "p_limit_path": 0.3399151610740329,
+          "p_up": 0.751117895094201,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 6,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.15886452624243896,
+          "q50": 0.39720619798111145,
+          "q90": 0.7638603696098563,
+          "return": 0.39720619798111145
+        },
+        "D7": {
+          "S_h": 0.27101343923470195,
+          "limit_path_return": 0.9383983572895277,
+          "mean": 0.3919078700230955,
+          "n_atoms": 352,
+          "p_limit_path": 0.27101343923470195,
+          "p_up": 0.7669045100934262,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 7,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.15035363906000465,
+          "q50": 0.3295869422267763,
+          "q90": 0.9383983572895277,
+          "return": 0.3295869422267763
+        },
+        "D8": {
+          "S_h": 0.2160782826330732,
+          "limit_path_return": 1.1314168377823408,
+          "mean": 0.42811659655720685,
+          "n_atoms": 380,
+          "p_limit_path": 0.2160782826330732,
+          "p_up": 0.7343330314111391,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 8,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.17476952376397237,
+          "q50": 0.3316037013771953,
+          "q90": 1.1314168377823408,
+          "return": 0.3316037013771953
+        },
+        "D9": {
+          "S_h": 0.1722786307479908,
+          "limit_path_return": 1.3429158110882957,
+          "mean": 0.4527558461701495,
+          "n_atoms": 395,
+          "p_limit_path": 0.1722786307479908,
+          "p_up": 0.7180116399678615,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 9,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    9
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 8,
+                "n": 15,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.16413040420803904,
+          "q50": 0.2892222580480932,
+          "q90": 1.3429158110882957,
+          "return": 0.2892222580480932
+        },
+        "P_L": [
+          0.16836734693877553,
+          0.0848046455424275,
+          0.07615680339829833,
+          0.13594686570010106,
+          0.10839006859872918,
+          0.08641910874763548,
+          0.06890172183933096,
+          0.05493515660162876,
+          0.04379965188508239,
+          0.03492134407053865,
+          0.13735728667745215
+        ],
+        "P_close_ceiling": [
+          0.8316326530612245,
+          0.7505149782830863,
+          0.6754672545459283,
+          0.5415001975696151,
+          0.5083818103006623,
+          0.4343226438506538,
+          0.37527547059997135,
+          0.3281973189541569,
+          0.2906620358851968,
+          0.26073525614102583
+        ],
+        "S": [
+          0.8316326530612245,
+          0.746828007518797,
+          0.6706712041204986,
+          0.5347243384203976,
+          0.4263342698216684,
+          0.3399151610740329,
+          0.27101343923470195,
+          0.2160782826330732,
+          0.1722786307479908,
+          0.13735728667745215
+        ],
+        "clipped": null,
+        "hazard": [
+          0.1683673469387755,
+          0.10197368421052631,
+          0.10197368421052631,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027
+        ],
+        "limit_path": {
+          "C": [
+            "5.35",
+            "5.88",
+            "6.46",
+            "7.10",
+            "7.81",
+            "8.59",
+            "9.44",
+            "10.38",
+            "11.41",
+            "12.55"
+          ],
+          "ipo_price": "4.87",
+          "rho": [
+            0.09856262833675565,
+            0.20739219712525667,
+            0.3264887063655031,
+            0.45790554414784396,
+            0.6036960985626283,
+            0.7638603696098563,
+            0.9383983572895277,
+            1.1314168377823408,
+            1.3429158110882957,
+            1.5770020533880904
+          ],
+          "snapped_ipo_price": "4.87",
+          "tick": "0.01"
+        },
+        "model_id": "ceiling_path_v0@INF",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "5e3692a82e254b6c78ec1b82d626f3560ae5568098b111d39979609e41f06abd",
+      "refusal": null,
+      "spec_sha256": "9cc7f016db4b78b75c0aee3ede49f364d58ac9f5964f0d071d4ba650d641dbd1",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "CEILING_PATH_MIXTURE_EQ_V0",
+      "file": "models/pb_ceiling_path_v0.json",
+      "kind": "ceiling_path",
+      "model_id": "pb_ceiling_path_v0",
+      "not_applicable": null,
+      "output": {
+        "D1": {
+          "S_h": 0.9822378567532778,
+          "limit_path_return": 0.09856262833675565,
+          "mean": 0.0963956079889819,
+          "n_atoms": 19,
+          "p_limit_path": 0.9822378567532778,
+          "p_up": 0.9901321426407099,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 1,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.09856262833675565,
+          "q50": 0.09856262833675565,
+          "q90": 0.09856262833675565,
+          "return": 0.09856262833675565
+        },
+        "D10": {
+          "S_h": 0.8032696532814647,
+          "limit_path_return": 1.5770020533880904,
+          "mean": 1.3664925230826337,
+          "n_atoms": 406,
+          "p_limit_path": 0.8032696532814647,
+          "p_up": 0.9661312187764315,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 10,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    10
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 9,
+                "n": 11,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    9
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 8,
+                "n": 15,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.44665790121552984,
+          "q50": 1.5770020533880904,
+          "q90": 1.5770020533880904,
+          "return": 1.5770020533880904
+        },
+        "D2": {
+          "S_h": 0.9725207384987441,
+          "limit_path_return": 0.20739219712525667,
+          "mean": 0.20099193615547348,
+          "n_atoms": 86,
+          "p_limit_path": 0.9725207384987441,
+          "p_up": 0.9819506472663078,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 2,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.20739219712525667,
+          "q50": 0.20739219712525667,
+          "q90": 0.20739219712525667,
+          "return": 0.20739219712525667
+        },
+        "D3": {
+          "S_h": 0.9628997501037179,
+          "limit_path_return": 0.3264887063655031,
+          "mean": 0.3141509775199567,
+          "n_atoms": 150,
+          "p_limit_path": 0.9628997501037179,
+          "p_up": 0.9802636307606374,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 3,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.3264887063655031,
+          "q50": 0.3264887063655031,
+          "q90": 0.3264887063655031,
+          "return": 0.3264887063655031
+        },
+        "D4": {
+          "S_h": 0.9382863548255967,
+          "limit_path_return": 0.45790554414784396,
+          "mean": 0.43460036960036097,
+          "n_atoms": 210,
+          "p_limit_path": 0.9382863548255967,
+          "p_up": 0.9762493781561755,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 4,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.45790554414784396,
+          "q50": 0.45790554414784396,
+          "q90": 0.45790554414784396,
+          "return": 0.45790554414784396
+        },
+        "D5": {
+          "S_h": 0.9143021208148369,
+          "limit_path_return": 0.6036960985626283,
+          "mean": 0.5644948507868537,
+          "n_atoms": 264,
+          "p_limit_path": 0.9143021208148369,
+          "p_up": 0.9756589820405249,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 5,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.6036960985626283,
+          "q50": 0.6036960985626283,
+          "q90": 0.6036960985626283,
+          "return": 0.6036960985626283
+        },
+        "D6": {
+          "S_h": 0.8909309656132534,
+          "limit_path_return": 0.7638603696098563,
+          "mean": 0.7034384375579701,
+          "n_atoms": 312,
+          "p_limit_path": 0.8909309656132534,
+          "p_up": 0.9704839734509035,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 6,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.5568279888429875,
+          "q50": 0.7638603696098563,
+          "q90": 0.7638603696098563,
+          "return": 0.7638603696098563
+        },
+        "D7": {
+          "S_h": 0.868157217858313,
+          "limit_path_return": 0.9383983572895277,
+          "mean": 0.8516074778663446,
+          "n_atoms": 352,
+          "p_limit_path": 0.868157217858313,
+          "p_up": 0.9723313679384002,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 7,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.5879324781994189,
+          "q50": 0.9383983572895277,
+          "q90": 0.9383983572895277,
+          "return": 0.9383983572895277
+        },
+        "D8": {
+          "S_h": 0.8459656067748136,
+          "limit_path_return": 1.1314168377823408,
+          "mean": 1.0115790927360246,
+          "n_atoms": 380,
+          "p_limit_path": 0.8459656067748136,
+          "p_up": 0.9669942001035079,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 8,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.5337916257477011,
+          "q50": 1.1314168377823408,
+          "q90": 1.1314168377823408,
+          "return": 1.1314168377823408
+        },
+        "D9": {
+          "S_h": 0.824341251935173,
+          "limit_path_return": 1.3429158110882957,
+          "mean": 1.1818393365312212,
+          "n_atoms": 395,
+          "p_limit_path": 0.824341251935173,
+          "p_up": 0.9655365951232402,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 9,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    9
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 8,
+                "n": 15,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.5120500003456883,
+          "q50": 1.3429158110882957,
+          "q90": 1.3429158110882957,
+          "return": 1.3429158110882957
+        },
+        "P_L": [
+          0.017762143246722206,
+          0.009717118254533696,
+          0.009620988395026231,
+          0.02461339527812112,
+          0.023984234010759886,
+          0.023371155201583504,
+          0.022773747754940343,
+          0.02219161108349943,
+          0.021624354839640536,
+          0.021071598653708334,
+          0.8032696532814647
+        ],
+        "P_close_ceiling": [
+          0.9822378567532778,
+          0.9731509967900573,
+          0.9637506732664767,
+          0.9397018054029913,
+          0.926226146991053,
+          0.9061068606693279,
+          0.8865018583599278,
+          0.8673979940674583,
+          0.8487824578310709,
+          0.8306427671348355
+        ],
+        "S": [
+          0.9822378567532778,
+          0.9725207384987441,
+          0.9628997501037179,
+          0.9382863548255967,
+          0.9143021208148369,
+          0.8909309656132534,
+          0.868157217858313,
+          0.8459656067748136,
+          0.824341251935173,
+          0.8032696532814647
+        ],
+        "clipped": null,
+        "hazard": [
+          0.01776214324672217,
+          0.009892836228745013,
+          0.009892836228745013,
+          0.025561742305437174,
+          0.025561742305437174,
+          0.025561742305437174,
+          0.025561742305437174,
+          0.025561742305437174,
+          0.025561742305437174,
+          0.025561742305437174
+        ],
+        "limit_path": {
+          "C": [
+            "5.35",
+            "5.88",
+            "6.46",
+            "7.10",
+            "7.81",
+            "8.59",
+            "9.44",
+            "10.38",
+            "11.41",
+            "12.55"
+          ],
+          "ipo_price": "4.87",
+          "rho": [
+            0.09856262833675565,
+            0.20739219712525667,
+            0.3264887063655031,
+            0.45790554414784396,
+            0.6036960985626283,
+            0.7638603696098563,
+            0.9383983572895277,
+            1.1314168377823408,
+            1.3429158110882957,
+            1.5770020533880904
+          ],
+          "snapped_ipo_price": "4.87",
+          "tick": "0.01"
+        },
+        "model_id": "pb_ceiling_path_v0",
+        "refused": null,
+        "warnings": [
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "pb1",
+            "message": "pb1 = 18.139444518983975 eğitim aralığı dışında [19.488386989924592, 22.643858178017435]",
+            "train_max": 22.643858178017435,
+            "train_min": 19.488386989924592,
+            "value": 18.139444518983975
+          },
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "pb2",
+            "message": "pb2 = 48.12170133498913 eğitim aralığı dışında [10.012399256044638, 40.474905558553694]",
+            "train_max": 40.474905558553694,
+            "train_min": 10.012399256044638,
+            "value": 48.12170133498913
+          }
+        ]
+      },
+      "params_sha256": "3d1e2f41f5d098ab228ff9c51ce61a5d31741766b3cdeebd8cc651e7ce34e03d",
+      "refusal": null,
+      "spec_sha256": "b3f723fba37acd2ee62d98c31e008e19298205735f40e45a58fbcf906653f1a9",
+      "status": "PREDICTED"
+    }
+  ],
+  "models_index": {
+    "model_ids": [
+      "v1_5_h99",
+      "base_always_ceiling",
+      "base_train_median",
+      "base_train_mean",
+      "base_zero",
+      "base_rate",
+      "base_last10_rate",
+      "v1_6_h99",
+      "v1_5_market20_v0",
+      "pb_v0",
+      "ceiling_hazard_v0",
+      "ceiling_hazard_v0@INF",
+      "pb_ceiling_v0",
+      "pb_ceiling_v0@INF",
+      "base_km_expanding",
+      "base_km_last10",
+      "ceiling_path_v0",
+      "ceiling_path_v0@INF",
+      "pb_ceiling_path_v0"
+    ],
+    "path": "models/INDEX.json",
+    "sha256": "1bc33791336482b10b71d95baa776e599a778aef5a1487204df33a2585aa8779"
+  },
+  "record_stage": "OOT_PRE_LISTING",
+  "record_type": "PREDICTION",
+  "recorded_at_basis": "LOCAL_CLOCK_SELF_REPORTED: zaman kanıtı bu kaydı içeren commit'in push kanıtıdır; kayıt, kohortun sonucu repoya girmeden push edilir (KARARLAR D3, D6)",
+  "recorded_at_istanbul": "2026-09-25T01:13:07+03:00",
+  "recorded_at_utc": "2026-09-24T22:13:07Z",
+  "regime_tags": {
+    "ALLOC_REGIME": "PRE_20211111",
+    "MARGIN_RULE": "POST_20200313",
+    "MARKET": "ANA",
+    "SALE_ON_EXCHANGE": true,
+    "SHORT_SELL_BAN_2020_END_NOT_FOUND": true,
+    "TICK_TABLE_EPOCH": "T2015"
+  },
+  "scale": "OOT_PRE_H99",
+  "schema_version": "borsai.oot_record/1",
+  "summary": {
+    "n_models": 19,
+    "n_not_applicable_regime": 0,
+    "n_predicted": 19,
+    "n_refused": 0,
+    "not_applicable": {},
+    "refusals": {}
+  },
+  "ticker": "BMSCH",
+  "vault": "SEALED"
+}

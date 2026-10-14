@@ -1,0 +1,322 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "GOKNR",
+  "company": "Göknur Gıda Maddeleri Enerji İmalat İthalat İhracat Ticaret ve Sanayi A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1120552",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "11",
+      "source_id": "KAP_1120552",
+      "source_document": "KAP 1120552",
+      "source_published_at": "2023-03-06T18:11:44+03:00",
+      "source_sha256": "fdf7852c2abebc3690b758327225eddecb2de59c62db0768755fb7550bbe7439",
+      "source_path": "registry/oot/source_docs/GOKNR/KAP_1120552_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 11",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2023_5",
+          "quote": "Göknur Gıda Maddeleri 14.250.000 Enerji İmalat İthalat İhracat 285.000.000 350.000.000 65.000.000 - - 11,00 (1) Ticaret ve Sanayi AŞ",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "79250000",
+      "source_id": "KAP_1120552",
+      "source_document": "KAP 1120552",
+      "source_published_at": "2023-03-06T18:11:44+03:00",
+      "source_sha256": "fdf7852c2abebc3690b758327225eddecb2de59c62db0768755fb7550bbe7439",
+      "source_path": "registry/oot/source_docs/GOKNR/KAP_1120552_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 79.250.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "350000000",
+      "source_id": "KAP_1120552",
+      "source_document": "KAP 1120552",
+      "source_published_at": "2023-03-06T18:11:44+03:00",
+      "source_sha256": "fdf7852c2abebc3690b758327225eddecb2de59c62db0768755fb7550bbe7439",
+      "source_path": "registry/oot/source_docs/GOKNR/KAP_1120552_bildirim.pdf",
+      "quote": "sermayesini temsil eden 350.000.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "65000000",
+      "source_id": "KAP_1120292_EK2",
+      "source_document": "KAP 1120292 ek 2",
+      "source_published_at": "2023-03-06T09:04:36+03:00",
+      "source_sha256": "c0c418855266bbd4502a24098d37fd1b7a384c8cf062bb4da77b9354f1aa19bc",
+      "source_path": "registry/oot/source_docs/GOKNR/KAP_1120292_ek2.pdf",
+      "quote": "sermaye artışı yoluyla halka arz edilen 65.000.000 TL",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "14250000",
+      "source_id": "KAP_1120292_EK2",
+      "source_document": "KAP 1120292 ek 2",
+      "source_published_at": "2023-03-06T09:04:36+03:00",
+      "source_sha256": "c0c418855266bbd4502a24098d37fd1b7a384c8cf062bb4da77b9354f1aa19bc",
+      "source_path": "registry/oot/source_docs/GOKNR/KAP_1120292_ek2.pdf",
+      "quote": "ortak satışı yoluyla halka arz edilen 14.250.000 TL",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "7.93",
+      "source_id": "KAP_1120292_EK2",
+      "source_document": "KAP 1120292 ek 2",
+      "source_published_at": "2023-03-06T09:04:36+03:00",
+      "source_sha256": "c0c418855266bbd4502a24098d37fd1b7a384c8cf062bb4da77b9354f1aa19bc",
+      "source_path": "registry/oot/source_docs/GOKNR/KAP_1120292_ek2.pdf",
+      "quote": "Halka arzda toplam 904.968 yatırımcıdan halka arz edilen 79.250.000 TL nominal değerli payların 7,93 katına denk gelen 628.323.937 TL nominal değerli filtrelenmemiş pay talebi gelmiştir.",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (filtrelenmemiş talep / halka arz edilen 79.250.000 TL nominal)",
+      "denominator_includes_additional_sale": false,
+      "note": "ek satış öngörülmemiş (SPK '-'); 628.323.937 / 79.250.000 = 7,9284",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_1120292_EK2",
+      "source_document": "KAP 1120292 ek 2",
+      "source_published_at": "2023-03-06T09:04:36+03:00",
+      "source_sha256": "c0c418855266bbd4502a24098d37fd1b7a384c8cf062bb4da77b9354f1aa19bc",
+      "source_path": "registry/oot/source_docs/GOKNR/KAP_1120292_ek2.pdf",
+      "quote": "payların 7,93 katına denk gelen 628.323.937 TL nominal değerli filtrelenmemiş pay talebi gelmiştir",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1120292_EK2",
+      "source_document": "KAP 1120292 ek 2",
+      "source_published_at": "2023-03-06T09:04:36+03:00",
+      "source_sha256": "c0c418855266bbd4502a24098d37fd1b7a384c8cf062bb4da77b9354f1aa19bc",
+      "source_path": "registry/oot/source_docs/GOKNR/KAP_1120292_ek2.pdf",
+      "quote": "Halka arz sonucunda 11,00 TL’den sermaye artışı yoluyla halka arz edilen 65.000.000 TL ve ortak satışı yoluyla halka arz edilen 14.250.000 TL olmak üzere toplam 79.250.000 TL nominal payların tamamı satılmıştır.",
+      "zero_from_statement": true,
+      "note": "satılan toplam 79.250.000 = SPK planlanan taban (bedelli 65.000.000 + mevcut pay satışı 14.250.000); SPK satırında ek pay satışı '-'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_size_tl": {
+      "value": null,
+      "missing_reason": "sonuç eki halka arz büyüklüğünü TL tutar olarak yazmıyor (yalnız fiyat 11,00 TL ve nominal 79.250.000; çarpım yapılmadı)",
+      "provenance": "MISSING"
+    },
+    "ipo_price_try": {
+      "value": "11.00",
+      "source_id": "SPK_BULTEN_2023_5",
+      "source_document": "SPK Bülteni 2023/5",
+      "source_published_at": "2023-02-02T23:59:59+03:00",
+      "source_sha256": "210e459aab0980ca01f38c5d70acd25d083ac3e5d48e374f10d77a94d21c357a",
+      "source_path": "registry/oot/source_docs/GOKNR/SPK_BULTEN_2023-5.pdf",
+      "quote": "Göknur Gıda Maddeleri 14.250.000 Enerji İmalat İthalat İhracat 285.000.000 350.000.000 65.000.000 - - 11,00 (1) Ticaret ve Sanayi AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2023-02-02",
+        "bookbuilding_start": "2023-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "285000000",
+      "source_id": "SPK_BULTEN_2023_5",
+      "source_document": "SPK Bülteni 2023/5",
+      "source_published_at": "2023-02-02T23:59:59+03:00",
+      "source_sha256": "210e459aab0980ca01f38c5d70acd25d083ac3e5d48e374f10d77a94d21c357a",
+      "source_path": "registry/oot/source_docs/GOKNR/SPK_BULTEN_2023-5.pdf",
+      "quote": "Göknur Gıda Maddeleri 14.250.000 Enerji İmalat İthalat İhracat 285.000.000 350.000.000 65.000.000 - - 11,00 (1) Ticaret ve Sanayi AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-02-02",
+        "bookbuilding_start": "2023-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "350000000",
+      "source_id": "SPK_BULTEN_2023_5",
+      "source_document": "SPK Bülteni 2023/5",
+      "source_published_at": "2023-02-02T23:59:59+03:00",
+      "source_sha256": "210e459aab0980ca01f38c5d70acd25d083ac3e5d48e374f10d77a94d21c357a",
+      "source_path": "registry/oot/source_docs/GOKNR/SPK_BULTEN_2023-5.pdf",
+      "quote": "Göknur Gıda Maddeleri 14.250.000 Enerji İmalat İthalat İhracat 285.000.000 350.000.000 65.000.000 - - 11,00 (1) Ticaret ve Sanayi AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-02-02",
+        "bookbuilding_start": "2023-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "65000000",
+      "source_id": "SPK_BULTEN_2023_5",
+      "source_document": "SPK Bülteni 2023/5",
+      "source_published_at": "2023-02-02T23:59:59+03:00",
+      "source_sha256": "210e459aab0980ca01f38c5d70acd25d083ac3e5d48e374f10d77a94d21c357a",
+      "source_path": "registry/oot/source_docs/GOKNR/SPK_BULTEN_2023-5.pdf",
+      "quote": "Göknur Gıda Maddeleri 14.250.000 Enerji İmalat İthalat İhracat 285.000.000 350.000.000 65.000.000 - - 11,00 (1) Ticaret ve Sanayi AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2023-02-02",
+        "bookbuilding_start": "2023-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "14250000",
+      "source_id": "SPK_BULTEN_2023_5",
+      "source_document": "SPK Bülteni 2023/5",
+      "source_published_at": "2023-02-02T23:59:59+03:00",
+      "source_sha256": "210e459aab0980ca01f38c5d70acd25d083ac3e5d48e374f10d77a94d21c357a",
+      "source_path": "registry/oot/source_docs/GOKNR/SPK_BULTEN_2023-5.pdf",
+      "quote": "Göknur Gıda Maddeleri 14.250.000 Enerji İmalat İthalat İhracat 285.000.000 350.000.000 65.000.000 - - 11,00 (1) Ticaret ve Sanayi AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-02-02",
+        "bookbuilding_start": "2023-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "79250000",
+      "source_id": "SPK_BULTEN_2023_5",
+      "source_document": "SPK Bülteni 2023/5",
+      "source_published_at": "2023-02-02T23:59:59+03:00",
+      "source_sha256": "210e459aab0980ca01f38c5d70acd25d083ac3e5d48e374f10d77a94d21c357a",
+      "source_path": "registry/oot/source_docs/GOKNR/SPK_BULTEN_2023-5.pdf",
+      "quote": "Göknur Gıda Maddeleri 14.250.000 Enerji İmalat İthalat İhracat 285.000.000 350.000.000 65.000.000 - - 11,00 (1) Ticaret ve Sanayi AŞ",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-02-02",
+        "bookbuilding_start": "2023-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2023_5",
+      "source_document": "SPK Bülteni 2023/5",
+      "source_published_at": "2023-02-02T23:59:59+03:00",
+      "source_sha256": "210e459aab0980ca01f38c5d70acd25d083ac3e5d48e374f10d77a94d21c357a",
+      "source_path": "registry/oot/source_docs/GOKNR/SPK_BULTEN_2023-5.pdf",
+      "quote": "Göknur Gıda Maddeleri 14.250.000 Enerji İmalat İthalat İhracat 285.000.000 350.000.000 65.000.000 - - 11,00 (1) Ticaret ve Sanayi AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2023-02-02",
+        "bookbuilding_start": "2023-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "79250000",
+      "source_id": "SPK_BULTEN_2023_5",
+      "source_document": "SPK Bülteni 2023/5",
+      "source_published_at": "2023-02-02T23:59:59+03:00",
+      "source_sha256": "210e459aab0980ca01f38c5d70acd25d083ac3e5d48e374f10d77a94d21c357a",
+      "source_path": "registry/oot/source_docs/GOKNR/SPK_BULTEN_2023-5.pdf",
+      "quote": "Göknur Gıda Maddeleri 14.250.000 Enerji İmalat İthalat İhracat 285.000.000 350.000.000 65.000.000 - - 11,00 (1) Ticaret ve Sanayi AŞ",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-02-02",
+        "bookbuilding_start": "2023-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2023-03-09",
+      "source_id": "KAP_1120552",
+      "source_document": "KAP 1120552",
+      "source_published_at": "2023-03-06T18:11:44+03:00",
+      "source_sha256": "fdf7852c2abebc3690b758327225eddecb2de59c62db0768755fb7550bbe7439",
+      "source_path": "registry/oot/source_docs/GOKNR/KAP_1120552_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 09/03/2023",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2023-03-01",
+      "source_id": "KAP_1120552",
+      "source_document": "KAP 1120552",
+      "source_published_at": "2023-03-06T18:11:44+03:00",
+      "source_sha256": "fdf7852c2abebc3690b758327225eddecb2de59c62db0768755fb7550bbe7439",
+      "source_path": "registry/oot/source_docs/GOKNR/KAP_1120552_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 1-3/03/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2023-03-03",
+      "source_id": "KAP_1120552",
+      "source_document": "KAP 1120552",
+      "source_published_at": "2023-03-06T18:11:44+03:00",
+      "source_sha256": "fdf7852c2abebc3690b758327225eddecb2de59c62db0768755fb7550bbe7439",
+      "source_path": "registry/oot/source_docs/GOKNR/KAP_1120552_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 1-3/03/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1120552": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1120552",
+      "published_at": "2023-03-06T18:11:44+03:00",
+      "sha256": "fdf7852c2abebc3690b758327225eddecb2de59c62db0768755fb7550bbe7439",
+      "path": "registry/oot/source_docs/GOKNR/KAP_1120552_bildirim.pdf"
+    },
+    "SPK_BULTEN_2023_5": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2023/5",
+      "published_at": "2023-02-02T23:59:59+03:00",
+      "sha256": "210e459aab0980ca01f38c5d70acd25d083ac3e5d48e374f10d77a94d21c357a",
+      "path": "registry/oot/source_docs/GOKNR/SPK_BULTEN_2023-5.pdf"
+    },
+    "KAP_1120292_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1120292 ek 2",
+      "published_at": "2023-03-06T09:04:36+03:00",
+      "sha256": "c0c418855266bbd4502a24098d37fd1b7a384c8cf062bb4da77b9354f1aa19bc",
+      "path": "registry/oot/source_docs/GOKNR/KAP_1120292_ek2.pdf"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+# BORSAI_FAZ7_HAZARD_V1_IMPL_20260925 — test koşuları (ham son satırlar)
+
+## Adım 0 — taban
+HEAD 41b7e7d (= 6a16c16 şartname + push kanıtı commit'i); izinli izlenmeyenler dışında temiz.
+2026-09-25T18:11:36Z .venv/bin/pytest -q
+  638 passed in 386.68s (0:06:26)
+2026-09-25T18:18:03Z bash app/scripts/test.sh  (EXIT 0, 38 s)
+  cargo: 94 passed, 0 failed (test result satırlarının toplamı)
+  npm:   Test Files 16 passed (16); Tests 222 passed (222)
+  parity: 4 passed in 7.02s
+  === golden_unchanged: YEŞİL (U46) ===
+.venv/bin/python app/parity/gen_golden.py --check
+  {"checked": 25, "different": []}
+
+## Commit A öncesi (kod + veri + testler; izlenmeyen yeni data/ dosyalarıyla)
+.venv/bin/pytest -q (deselect yok)
+  3 failed, 684 passed in 657.63s (0:10:57)
+  FAILED tests/test_faz5_post_d1.py::test_14_models_goldens_and_read_only_paths_unchanged      (git status: ?? data/…)
+  FAILED tests/test_guardrails.py::test_legacy_and_data_have_no_working_tree_changes           (git status: ?? data/…)
+  FAILED tests/test_scoring.py::test_faz4_scores_json_existing_blocks_unchanged               (git status: ?? data/…)
+  Üçünün de tek nedeni commit edilmemiş yeni data/ dosyaları (data/raw/tuik/, training_table_v2.csv, data_version_v2.json,
+  build_training_table_v2.py); başka kırmızı yok.
+.venv/bin/python app/parity/gen_golden.py --check  (predict_hazard.py değiştikten sonra, T2 pininden önce)
+  {"checked": 25, "different": ["golden/MANIFEST.json"]}
+T2: .venv/bin/python app/parity/gen_golden.py (yazma) -> git diff app/: yalnız MANIFEST.json'da predict_hazard.py sha satırı
+  a1523ac810a2a800f5583f347f1c248fe9d7fc7eaa567873b9b3d8858e7b2518 -> 6ceeeb46ff8576ee7ee020b2155b19ed8f2fdf38f5a91a80345fb7ddec184cd9
+.venv/bin/python app/parity/gen_golden.py --check  (pin sonrası)
+  {"checked": 25, "different": []}
+bash app/scripts/test.sh  (pin sonrası; EXIT 0, 47 s)
+  cargo: 94 passed, 0 failed; npm: 16 files, 222 passed; parity: 4 passed in 15.11s; golden_unchanged: YEŞİL (U46)
+
+## Commit A öncesi, deselect ile (görev adım 6: temizlik bekçileri yalnız yeni data/ dosyaları yüzünden kırmızı)
+2026-09-25T23:57:37Z .venv/bin/pytest -q --deselect tests/test_faz5_post_d1.py::test_14_models_goldens_and_read_only_paths_unchanged \
+    --deselect tests/test_guardrails.py::test_legacy_and_data_have_no_working_tree_changes \
+    --deselect tests/test_scoring.py::test_faz4_scores_json_existing_blocks_unchanged
+  684 passed, 3 deselected in 714.11s (0:11:54)
+
+## Commit A (2a21a96) sonrası, deselect yok
+2026-09-26T00:10:12Z .venv/bin/pytest -q
+  687 passed in 642.54s (0:10:42)
+
+## B: resmi koşu
+2026-09-26T00:21:04Z .venv/bin/python -m borsai.backtest --suite faz7 --write-golden --context faz7_golden
+  EXIT 0, 65 s (9 süreç); experiments/log.jsonl +4 satır (git_commit 2a21a96, borsai_dirty false);
+  tests/reference/macos_golden_faz7/ 12 dosya (4 ledger, 2 havuz KM ledger'ı, 4 nihai fit önizlemesi, MANIFEST, SHA256SUMS)
+.venv/bin/python -m borsai.report  ->  docs/MODELS.md +135 satır (yalnız Faz 7 bölümü, Faz 4 ile Faz 5 arasına; silme yok)
+
+## B öncesi 1 (altın dizin, günlük, MODELS.md ve tests/test_faz7_golden.py commit'siz)
+2026-09-26T00:31:14Z .venv/bin/pytest -q
+  1 failed, 703 passed in 478.17s (0:07:58)
+  FAILED tests/test_faz5_live.py::test_committed_post_d1_scores_match_recomputation
+  Neden: scores_post_d1.json kartında n_variants_same_data 20, yeniden hesapta 22 (v1_clip ve v1_real'in H99 veri sürümündeki
+  günlük satırları). J16 istisnası (proje sahibi kararı, H22 kalıbı) bu teste de uygulandı; IMPL_RAPOR §9.
+
+## B öncesi 2 (istisna uygulandı)
+2026-09-26T19:35:26Z .venv/bin/pytest -q --durations=15
+  704 passed in 491.71s (0:08:11)
+  en yavaşlar: 143.92s setup test_acceptance_backtest::test_1_fold_plan_counts (run_all oturum fikstürü);
+  45.08s setup test_faz7_golden::test_backtest_byte_identical_to_faz7_golden (dört koşunun yeniden koşusu);
+  7.58s test_faz7_golden::test_deflator_is_the_only_difference_between_clip_and_real;
+  7.57s test_faz7_golden::test_pooled_plan_on_h99_rows_reproduces_real
+2026-09-26T19:43:51Z bash app/scripts/test.sh  (EXIT 0, 38 s)
+  cargo: 94 passed, 0 failed; npm: Test Files 16 passed (16), Tests 222 passed (222); parity: 4 passed in 6.50s
+  === golden_unchanged: YEŞİL (U46) ===
+
+## Commit B (70b67d1) sonrası, deselect yok
+2026-09-26T19:45:18Z .venv/bin/pytest -q
+  704 passed in 507.36s (0:08:27)
+
+## R: beklenen sayıların ölçümü (HEAD 70b67d1)
+PYTHONPATH=. .venv/bin/python docs/faz7/ekler/olcum_beklenen_sayilar.py > docs/faz7/ekler/olcum_beklenen_sayilar.txt
+  42 satır TUTTU, 0 TUTMADI; gen_golden --check {"checked": 25, "different": []}

@@ -1,0 +1,328 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "KTSKR",
+  "company": "Kütahya Şeker Fabrikası A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_947014",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "21",
+      "source_id": "KAP_947014",
+      "source_document": "KAP 947014",
+      "source_published_at": "2021-07-06T18:14:23+03:00",
+      "source_sha256": "b63756b75751285b9b32004ba0b0481b22e0d874e21485a0586407727d6d1a46",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_947014_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 21",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_31",
+          "quote": "11.500.000 Kütahya Şeker Fabrikası A.Ş. 46.000.000 46.000.000 - - - 21 (2)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "9368780",
+      "source_id": "KAP_947014",
+      "source_document": "KAP 947014",
+      "source_published_at": "2021-07-06T18:14:23+03:00",
+      "source_sha256": "b63756b75751285b9b32004ba0b0481b22e0d874e21485a0586407727d6d1a46",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_947014_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 9.368.780",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "46000000",
+      "source_id": "KAP_947014",
+      "source_document": "KAP 947014",
+      "source_published_at": "2021-07-06T18:14:23+03:00",
+      "source_sha256": "b63756b75751285b9b32004ba0b0481b22e0d874e21485a0586407727d6d1a46",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_947014_bildirim.pdf",
+      "quote": "sermayesini temsil eden 46.000.000 TL",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "capital_increase_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_31",
+      "source_document": "SPK Bülteni 2021/31",
+      "source_published_at": "2021-06-24T23:59:59+03:00",
+      "source_sha256": "9af865332e5aa178b916d85c7f96ed7f13d48f1f1184ac739c93cdabba0f6a76",
+      "source_path": "registry/oot/source_docs/KTSKR/SPK_BULTEN_2021-31.pdf",
+      "quote": "11.500.000 Kütahya Şeker Fabrikası A.Ş. 46.000.000 46.000.000 - - - 21 (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli '-': planlanan sermaye artırımı yok; arzda yeni pay çıkarılmaz)",
+      "carry_rule": "SPK_BEDELLI_DASH_NO_CAPITAL_INCREASE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "existing_share_sale_shares": {
+      "value": "9368780",
+      "source_id": "KAP_946159_EK2",
+      "source_document": "KAP 946159 ek 2",
+      "source_published_at": "2021-07-05T14:32:02+03:00",
+      "source_sha256": "c8cd79ef436c4a1bc6a74aa0a6b8989bcb59c2fb001856be72514c1ff10f76c2",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_946159_ek2.pdf",
+      "quote": "mevcut ortaklardan Kiler Holding A.Ş.'nin sahip olduğu 4.684.390 TL nominal değerli toplam 4.684.390 adet payın ve mevcut ortağımız ve Torunlar Gıda San. ve Tic. A.Ş.'nin sahip olduğu 4.684.390 TL nominal değerli toplam 4.684.390 adet pay, olmak üzere toplam 9.368.780 TL nominal değerli 9.368.780 adet pay, halka arz edilmiştir",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "total_demand_multiple": {
+      "value": "1.0146894259",
+      "source_id": "KAP_946159_EK2",
+      "source_document": "KAP 946159 ek 2",
+      "source_published_at": "2021-07-05T14:32:02+03:00",
+      "source_sha256": "c8cd79ef436c4a1bc6a74aa0a6b8989bcb59c2fb001856be72514c1ff10f76c2",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_946159_ek2.pdf",
+      "origin": "CALCULATED_FROM_SOURCE_TOTALS",
+      "numerator": "9506402",
+      "numerator_quote": "toplam filtre edilmemiş 20.148 adet emir ile toplam 9.506.402 pay karşılığı toplam 199.634.442 TL talep toplanmıştır",
+      "denominator": "9368780",
+      "denominator_quote": "olmak üzere toplam 9.368.780 TL nominal değerli 9.368.780 adet pay, halka arz edilmiştir",
+      "definition": "TOPLAM_FILTRE_EDILMEMIS_TALEP_PAY_9506402 / HALKA_ARZ_EDILEN_PAY_9368780 (aynı birim pay adedi; belge katı yazmıyor)",
+      "denominator_includes_additional_sale": false,
+      "note": "DİKKAT: SPK bülteni planlanan mevcut pay satışı 11.500.000; belge 'halka arz edilen' olarak yalnız satılan 9.368.780'i yazıyor (arz tam satılamamış, mükerrer tarama sonrası talep = dağıtım). Planlanan 11.500.000 paydasıyla 0,8266 olurdu (SPK satırı sonuç belgesi değil, yalnız bilgi). Mükerrer tarama sonrası talep 9.368.780 → 1,0.",
+      "derived": true,
+      "formula": "9506402 / 9368780 (10 ondalık ROUND_HALF_UP)",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "1,01",
+      "correction_kind": "PRECISION_ONLY"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_946159_EK2",
+      "source_document": "KAP 946159 ek 2",
+      "source_published_at": "2021-07-05T14:32:02+03:00",
+      "source_sha256": "c8cd79ef436c4a1bc6a74aa0a6b8989bcb59c2fb001856be72514c1ff10f76c2",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_946159_ek2.pdf",
+      "quote": "toplam filtre edilmemiş 20.148 adet emir ile toplam 9.506.402 pay karşılığı toplam 199.634.442 TL talep toplanmıştır",
+      "locator": "mükerrer tarama sonrası: 'Mükerrer tarama yapıldıktan sonra 19.564 adet emir ile talep edilen toplam 9.368.780 pay dağıtıma konu edilmiştir' (filtrelenmiş talep/payda = 1,0)",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_946159_EK2",
+      "source_document": "KAP 946159 ek 2",
+      "source_published_at": "2021-07-05T14:32:02+03:00",
+      "source_sha256": "c8cd79ef436c4a1bc6a74aa0a6b8989bcb59c2fb001856be72514c1ff10f76c2",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_946159_ek2.pdf",
+      "quote": "olmak üzere toplam 9.368.780 TL nominal değerli 9.368.780 adet pay, halka arz edilmiştir",
+      "derived": true,
+      "formula": "SPK satırında ek pay satışı '-' (planlanmamış); satılan toplam 9.368.780 planlanan tabanın (11.500.000) altında → ek satış yok",
+      "note": "belge ek satıştan hiç söz etmiyor; toplam tabana eşit değil (altında), zero_from_statement kuralı birebir uymadığı için derived olarak işaretlendi",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": "196744380",
+      "source_id": "KAP_946159_EK2",
+      "source_document": "KAP 946159 ek 2",
+      "source_published_at": "2021-07-05T14:32:02+03:00",
+      "source_sha256": "c8cd79ef436c4a1bc6a74aa0a6b8989bcb59c2fb001856be72514c1ff10f76c2",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_946159_ek2.pdf",
+      "quote": "belirlenen halka arz fiyatı ile halka arz büyüklüğü 196.744.380 TL olarak gerçekleşmiştir",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "21",
+      "source_id": "SPK_BULTEN_2021_31",
+      "source_document": "SPK Bülteni 2021/31",
+      "source_published_at": "2021-06-24T23:59:59+03:00",
+      "source_sha256": "9af865332e5aa178b916d85c7f96ed7f13d48f1f1184ac739c93cdabba0f6a76",
+      "source_path": "registry/oot/source_docs/KTSKR/SPK_BULTEN_2021-31.pdf",
+      "quote": "11.500.000 Kütahya Şeker Fabrikası A.Ş. 46.000.000 46.000.000 - - - 21 (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-06-24",
+        "bookbuilding_start": "2021-07-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "46000000",
+      "source_id": "SPK_BULTEN_2021_31",
+      "source_document": "SPK Bülteni 2021/31",
+      "source_published_at": "2021-06-24T23:59:59+03:00",
+      "source_sha256": "9af865332e5aa178b916d85c7f96ed7f13d48f1f1184ac739c93cdabba0f6a76",
+      "source_path": "registry/oot/source_docs/KTSKR/SPK_BULTEN_2021-31.pdf",
+      "quote": "11.500.000 Kütahya Şeker Fabrikası A.Ş. 46.000.000 46.000.000 - - - 21 (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-06-24",
+        "bookbuilding_start": "2021-07-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "46000000",
+      "source_id": "SPK_BULTEN_2021_31",
+      "source_document": "SPK Bülteni 2021/31",
+      "source_published_at": "2021-06-24T23:59:59+03:00",
+      "source_sha256": "9af865332e5aa178b916d85c7f96ed7f13d48f1f1184ac739c93cdabba0f6a76",
+      "source_path": "registry/oot/source_docs/KTSKR/SPK_BULTEN_2021-31.pdf",
+      "quote": "11.500.000 Kütahya Şeker Fabrikası A.Ş. 46.000.000 46.000.000 - - - 21 (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-06-24",
+        "bookbuilding_start": "2021-07-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_31",
+      "source_document": "SPK Bülteni 2021/31",
+      "source_published_at": "2021-06-24T23:59:59+03:00",
+      "source_sha256": "9af865332e5aa178b916d85c7f96ed7f13d48f1f1184ac739c93cdabba0f6a76",
+      "source_path": "registry/oot/source_docs/KTSKR/SPK_BULTEN_2021-31.pdf",
+      "quote": "11.500.000 Kütahya Şeker Fabrikası A.Ş. 46.000.000 46.000.000 - - - 21 (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-06-24",
+        "bookbuilding_start": "2021-07-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "11500000",
+      "source_id": "SPK_BULTEN_2021_31",
+      "source_document": "SPK Bülteni 2021/31",
+      "source_published_at": "2021-06-24T23:59:59+03:00",
+      "source_sha256": "9af865332e5aa178b916d85c7f96ed7f13d48f1f1184ac739c93cdabba0f6a76",
+      "source_path": "registry/oot/source_docs/KTSKR/SPK_BULTEN_2021-31.pdf",
+      "quote": "11.500.000 Kütahya Şeker Fabrikası A.Ş. 46.000.000 46.000.000 - - - 21 (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-06-24",
+        "bookbuilding_start": "2021-07-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "11500000",
+      "source_id": "SPK_BULTEN_2021_31",
+      "source_document": "SPK Bülteni 2021/31",
+      "source_published_at": "2021-06-24T23:59:59+03:00",
+      "source_sha256": "9af865332e5aa178b916d85c7f96ed7f13d48f1f1184ac739c93cdabba0f6a76",
+      "source_path": "registry/oot/source_docs/KTSKR/SPK_BULTEN_2021-31.pdf",
+      "quote": "11.500.000 Kütahya Şeker Fabrikası A.Ş. 46.000.000 46.000.000 - - - 21 (2)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-06-24",
+        "bookbuilding_start": "2021-07-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_31",
+      "source_document": "SPK Bülteni 2021/31",
+      "source_published_at": "2021-06-24T23:59:59+03:00",
+      "source_sha256": "9af865332e5aa178b916d85c7f96ed7f13d48f1f1184ac739c93cdabba0f6a76",
+      "source_path": "registry/oot/source_docs/KTSKR/SPK_BULTEN_2021-31.pdf",
+      "quote": "11.500.000 Kütahya Şeker Fabrikası A.Ş. 46.000.000 46.000.000 - - - 21 (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2021-06-24",
+        "bookbuilding_start": "2021-07-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "11500000",
+      "source_id": "SPK_BULTEN_2021_31",
+      "source_document": "SPK Bülteni 2021/31",
+      "source_published_at": "2021-06-24T23:59:59+03:00",
+      "source_sha256": "9af865332e5aa178b916d85c7f96ed7f13d48f1f1184ac739c93cdabba0f6a76",
+      "source_path": "registry/oot/source_docs/KTSKR/SPK_BULTEN_2021-31.pdf",
+      "quote": "11.500.000 Kütahya Şeker Fabrikası A.Ş. 46.000.000 46.000.000 - - - 21 (2)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-06-24",
+        "bookbuilding_start": "2021-07-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2021-07-08",
+      "source_id": "KAP_947014",
+      "source_document": "KAP 947014",
+      "source_published_at": "2021-07-06T18:14:23+03:00",
+      "source_sha256": "b63756b75751285b9b32004ba0b0481b22e0d874e21485a0586407727d6d1a46",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_947014_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 08/07/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-07-01",
+      "source_id": "KAP_947014",
+      "source_document": "KAP 947014",
+      "source_published_at": "2021-07-06T18:14:23+03:00",
+      "source_sha256": "b63756b75751285b9b32004ba0b0481b22e0d874e21485a0586407727d6d1a46",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_947014_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 01-02/07/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-07-02",
+      "source_id": "KAP_947014",
+      "source_document": "KAP 947014",
+      "source_published_at": "2021-07-06T18:14:23+03:00",
+      "source_sha256": "b63756b75751285b9b32004ba0b0481b22e0d874e21485a0586407727d6d1a46",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_947014_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 01-02/07/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_947014": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 947014",
+      "published_at": "2021-07-06T18:14:23+03:00",
+      "sha256": "b63756b75751285b9b32004ba0b0481b22e0d874e21485a0586407727d6d1a46",
+      "path": "registry/oot/source_docs/KTSKR/KAP_947014_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_31": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/31",
+      "published_at": "2021-06-24T23:59:59+03:00",
+      "sha256": "9af865332e5aa178b916d85c7f96ed7f13d48f1f1184ac739c93cdabba0f6a76",
+      "path": "registry/oot/source_docs/KTSKR/SPK_BULTEN_2021-31.pdf"
+    },
+    "KAP_946159_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 946159 ek 2",
+      "published_at": "2021-07-05T14:32:02+03:00",
+      "sha256": "c8cd79ef436c4a1bc6a74aa0a6b8989bcb59c2fb001856be72514c1ff10f76c2",
+      "path": "registry/oot/source_docs/KTSKR/KAP_946159_ek2.pdf"
+    }
+  }
+}

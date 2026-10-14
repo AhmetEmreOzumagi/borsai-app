@@ -1,0 +1,48 @@
+[ÖLÇTÜM] borsai/outcomes.py:SESSIONS_SHA256: kodda var=True dosya sha eşit=True (data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_session_outcomes.csv)
+[ÖLÇTÜM] borsai/market20.py:CALENDAR_A_SHA256: kodda var=True dosya sha eşit=True (data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_pay_session_calendar.csv)
+[ÖLÇTÜM] borsai/market20.py:CALENDAR_B_SHA256: kodda var=True dosya sha eşit=True (data/raw/v2_market20_official_pay_calendar_evidence_r4.csv)
+[ÖLÇTÜM] borsai/market20.py:CALENDAR_B_EXT_SHA256: kodda var=True dosya sha eşit=True (data/raw/pay_calendar_b_extension_20260820_20261231.csv)
+[ÖLÇTÜM] borsai/market20.py:CALENDAR_C_SHA256: kodda var=True dosya sha eşit=True (data/raw/pay_calendar_c_20200101_20230921.csv)
+[ÖLÇTÜM] borsai/market20.py:XU100_SHA256: kodda var=True dosya sha eşit=True (data/raw/official_bist_xu100_graphic_pinned_through_20260819.json)
+[ÖLÇTÜM] borsai/market20.py:XU100_PINNED[1]: kodda var=True dosya sha eşit=True (data/raw/xu100/xu100_graphic_20260922.json)
+[ÖLÇTÜM] borsai/data.py:PB_SHA256: kodda var=True dosya sha eşit=True (data/raw/PREBOOKBUILD_POINT_IN_TIME_EVIDENCE_V1_1_CANONICAL_R2_99.csv)
+[ÖLÇTÜM] borsai/specs.py:H99_DATA_VERSION_SHA256: kodda var=True dosya sha eşit=True (data/data_version.json)
+[ÖLÇTÜM] borsai/specs.py:V2_DATA_VERSION_SHA256: kodda var=True dosya sha eşit=True (data/data_version_v2.json)
+[ÖLÇTÜM] TUFE_PIN prefix(2026-08) sha = 3d61cbcfca2453cf kodda var: True | önek == tam dosya: True | ay sayısı 82 2019-11 … 2026-08
+[ÖLÇTÜM] data/data_version.json: tablo sha eşit=True bayt eşit=True builder sha eşit=True kaynaklar: [('HISTORICAL99_FROZEN_COHORT_V1_', True), ('HISTORICAL99_FROZEN_COHORT_V1_', True), ('HISTORICAL99_FROZEN_COHORT_V1_', True), ('HISTORICAL99_OFFICIAL_BIST_OUT', True), ('HISTORICAL99_OFFICIAL_BIST_OUT', True)]
+[ÖLÇTÜM] data/data_version_v2.json: tablo sha eşit=True bayt eşit=True builder sha eşit=True kaynaklar: [('training_table.csv', True), ('data_version.json', True), ('HISTORICAL99_FROZEN_COHORT_V1_', True), ('PREBOOKBUILD_POINT_IN_TIME_EVI', True)]
+[ÖLÇTÜM] kohort önek pini: True | dosya bayt 47150 pin bayt 47150
+[ÖLÇTÜM] kohort sütunları: ['ticker', 'company', 'first_trading_date', 'listing_source_id', 'listing_source_sha256', 'sale_method', 'market', 'year', 'status', 'reason', 'vault', 'regime_tags', 'added_at']
+[ÖLÇTÜM] kohort satır 136 | kasa etiketi: {'SEALED': 64, 'OPEN': 66, '': 1, 'EXPOSED_CODEX': 1, 'EXPOSED_ARCHIVE': 4} | durum: {'MEMBER': 135, 'OUT_OF_SCOPE': 1}
+[ÖLÇTÜM] oot_inputs: n=71 (pin n=71) birleşik sha eşit=True
+[ÖLÇTÜM] oot_outcomes: n=71 (pin n=71) birleşik sha eşit=True
+[ÖLÇTÜM] TÜİK source.json: xls var True sha eşit True bayt eşit True yayım 2026-09-03T10:00:00+03:00 | fetched 2026-09-25T18:22:51Z
+[ÖLÇTÜM] tufe_genel: source_sha256 == xls sha: True | source_url == download_url: True | bulletin_id farklı: 82 | 2025 ortalaması: 100.0
+[ÖLÇTÜM] tufe_bultenleri satır 82 | tufe_genel ile ay kümesi eşit: True | release_date == bülten tarihi: 0 farklı | bulletin_id eşit: 0 farklı
+[ÖLÇTÜM] TÜFE yayım günü '3'ü ya da sonraki iş günü' kuralına uymayan: 4 [('2020-07', '2020-08-04', '2020-08-03'), ('2022-04', '2022-05-05', '2022-05-03'), ('2023-06', '2023-07-05', '2023-07-03'), ('2026-05', '2026-06-05', '2026-06-03')]
+[ÖLÇTÜM] MANIFEST.csv satır 73 | zip var+sha+bayt eşit 73 | eksik 0 | uyuşmayan 0 | diskteki zip sayısı 73 | manifestte olmayan zip: 0
+[ÖLÇTÜM] H99 pinli bülten (tarih,tür) sayısı 866 | canlı manifestle kesişen 13 | sha farklı: 0
+[ÖLÇTÜM] MANIFEST_OOT satır 1168 | tür: {'thb': 584, 'thm': 584} | tarih aralığı 2020-02-06 … 2023-10-04 | repoda zip var mı: 0
+[ÖLÇTÜM] Takvim C yıl->pdf sha kodda var: {'2020': True, '2021': True, '2022': True, '2023': True} | PDF repoda var: False
+[ÖLÇTÜM] pin? data/raw/HISTORICAL99_FROZEN_COHORT_V1_canonical_feature_readiness.csv sha-in-code=True
+[ÖLÇTÜM] pin? data/raw/HISTORICAL99_FROZEN_COHORT_V1_canonical_membership.csv sha-in-code=False
+[ÖLÇTÜM] pin? data/raw/HISTORICAL99_FROZEN_COHORT_V1_canonical_pretrade_master.csv sha-in-code=True
+[ÖLÇTÜM] pin? data/raw/HISTORICAL99_FROZEN_COHORT_V1_canonical_provenance.csv sha-in-code=True
+[ÖLÇTÜM] pin? data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_pay_session_calendar.csv sha-in-code=True
+[ÖLÇTÜM] pin? data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_session_outcomes.csv sha-in-code=True
+[ÖLÇTÜM] pin? data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_d1_d3_d5_d10_targets.csv sha-in-code=True
+[ÖLÇTÜM] pin? data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_field_provenance.csv sha-in-code=False
+[ÖLÇTÜM] pin? data/raw/PREBOOKBUILD_POINT_IN_TIME_EVIDENCE_V1_1_CANONICAL_R2_99.csv sha-in-code=True
+[ÖLÇTÜM] pin? data/raw/bist/MANIFEST.csv sha-in-code=False
+[ÖLÇTÜM] pin? data/raw/bist/MANIFEST_OOT.csv sha-in-code=False
+[ÖLÇTÜM] pin? data/raw/official_bist_xu100_graphic_pinned_through_20260819.json sha-in-code=True
+[ÖLÇTÜM] pin? data/raw/pay_calendar_b_extension_20260820_20261231.csv sha-in-code=True
+[ÖLÇTÜM] pin? data/raw/pay_calendar_c_20200101_20230921.csv sha-in-code=True
+[ÖLÇTÜM] pin? data/raw/pay_calendar_c_bulletin_evidence_20200101_20230921.csv sha-in-code=False
+[ÖLÇTÜM] pin? data/raw/tuik/build_tufe_csv.py sha-in-code=False
+[ÖLÇTÜM] pin? data/raw/tuik/tufe_bultenleri.csv sha-in-code=False
+[ÖLÇTÜM] pin? data/raw/tuik/tufe_degisim_oranlari_bulten_58290.source.json sha-in-code=False
+[ÖLÇTÜM] pin? data/raw/tuik/tufe_degisim_oranlari_bulten_58290.xls sha-in-code=True
+[ÖLÇTÜM] pin? data/raw/tuik/tufe_genel_2025_100.csv sha-in-code=True
+[ÖLÇTÜM] pin? data/raw/v2_market20_official_pay_calendar_evidence_r4.csv sha-in-code=True
+[ÖLÇTÜM] pin? data/raw/xu100/xu100_graphic_20260922.json sha-in-code=True

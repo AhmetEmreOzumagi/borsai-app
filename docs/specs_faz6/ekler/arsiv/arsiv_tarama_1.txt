@@ -1,0 +1,41 @@
+# Arşiv tarama kanıtı (~/Desktop/Halka_Arz_Modeli), 2026-09-24T13:42:21Z
+
+## 1. Ham günlük bülten dosyaları (yıl bazında sayım; dosya adı kalıbı)
+  71 thb 2023
+ 164 thb 2024
+  86 thb 2025
+ 136 thb 2026
+  71 thm 2023
+ 164 thm 2024
+  86 thm 2025
+ 112 thm 2026
+
+En eski bülten tarihleri (ilk 3):
+20230922
+20230925
+20230926
+
+## 2. Arşivdeki bülten dizinleri
+./inputs/ohlcv/bist_official
+./BorsAi_External_Archive/BIST_OUTCOME
+./work/live_forecast_2026-08-11/bist_history
+./artifacts/outcomes/historical99/HISTORICAL99_FROZEN_COHORT_V1/OFFICIAL_BIST_OUTCOME_V1
+./artifacts/outcomes/historical99/HISTORICAL99_FROZEN_COHORT_V1/OFFICIAL_BIST_OUTCOME_CANDIDATE_V1
+
+## 3. Git geçmişi
+6d11a7c docs: freeze prospective scoring protocol v1
+c2a56fb chore: track primary evidence archive for backup
+d7e8453 chore: establish BORSAI repository forward baseline
+     156
+
+## 4. EXP100 aday listesi özeti
+rows 108
+Counter({'INCLUDED': 99, 'EXCLUDED': 7, 'BUFFER_CANDIDATE': 2})
+Counter({'EXPANSION_PRECEDING': 78, 'FULL20': 20, 'OUT_OF_BOUNDARY': 5, 'EXPANSION_BUFFER': 2, 'EXPANSION_IN_WINDOW': 1, 'IN_WINDOW_EXCLUDED': 1, 'EXPANSION_CANDIDATE': 1})
+buffer/excluded: [('ENPRA', 'EXCLUDED', 'kısmi bölünme from QNB Bank onto PÖİP; shares distributed to'), ('DMLKT', 'EXCLUDED', 'provisional exclusion - real-estate certificate not an equit'), ('ADGYO', 'BUFFER_CANDIDATE', 'buffer beyond provisional 100 boundary'), ('HATSN', 'BUFFER_CANDIDATE', 'buffer beyond provisional 100 boundary'), ('BEWEN', 'EXCLUDED', 'first traded after 2026-08-06 anchor'), ('CITAS', 'EXCLUDED', 'first traded after 2026-08-06 anchor'), ('TKNKA', 'EXCLUDED', 'first traded after 2026-08-06 anchor'), ('KPEKS', 'EXCLUDED', 'first traded after 2026-08-06 anchor'), ('VEYAS', 'EXCLUDED', 'first traded after 2026-08-06 anchor')]
+first_trading_date min (dolu olanlar): 2026-02-11
+
+## 5. H99 kurucu script'te REEDR/MARMR
+tests/test_historical99_frozen_cohort_v1.mjs:23:test("MARMR and REEDR reconciliation is not performed", () => {
+tests/test_historical99_frozen_cohort_v1.mjs:24:  assert.equal(model.masterRows.some((row) => ["MARMR", "REEDR"].includes(row.ticker)), false);
+scripts/build_historical99_frozen_cohort_v1.mjs:563:  assert(!masterRows.some((row) => ["CITAS", "KPEKS", "MARMR", "REEDR"].includes(row.ticker)), "Excluded/unresolved ticker entered cohort");

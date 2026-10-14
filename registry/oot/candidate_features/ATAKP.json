@@ -1,0 +1,215 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "ATAKP",
+  "company": "Atakey Patates Gıda Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "1665576",
+      "source_id": "KAP_1174403_EK1",
+      "source_document": "KAP 1174403 ek 1",
+      "source_published_at": "2023-07-23T17:17:46+03:00",
+      "source_sha256": "0c90b7710915a57bae7387ee63b29245f02c5c6b9257df985e1ae1aef0a1b2b8",
+      "source_path": "registry/oot/source_docs/ATAKP/KAP_1174403_ek1.pdf",
+      "quote": "Halka arz sonucunda, 1.665.366 adedi Yurt İçi Bireysel Yatırımcı olmak üzere, toplam 1.665.576 yatırımcıya dağıtım gerçekleştirilmiştir.",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "başvuru sayısı 1.737.365 (TOPLAM satırı)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "1.665.576",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "1665366",
+        "domestic_institutional": "210"
+      },
+      "source_id": "KAP_1174403_EK1",
+      "source_document": "KAP 1174403 ek 1",
+      "source_published_at": "2023-07-23T17:17:46+03:00",
+      "source_sha256": "0c90b7710915a57bae7387ee63b29245f02c5c6b9257df985e1ae1aef0a1b2b8",
+      "source_path": "registry/oot/source_docs/ATAKP/KAP_1174403_ek1.pdf",
+      "quote": [
+        "Yurt İçi 22.579.200 %80,00 1.737.137 87.237.251 %62,17 1.665.366 22.579.200 %80,00",
+        "Yurt İçi 5.644.800 %20,00 228 53.082.417 %37,83 210 5.644.800 %20,00"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "başvuru: bireysel 1.737.137, kurumsal 228; yurt dışı grup yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "3.86",
+      "source_id": "KAP_1174403_EK1",
+      "source_document": "KAP 1174403 ek 1",
+      "source_published_at": "2023-07-23T17:17:46+03:00",
+      "source_sha256": "0c90b7710915a57bae7387ee63b29245f02c5c6b9257df985e1ae1aef0a1b2b8",
+      "source_path": "registry/oot/source_docs/ATAKP/KAP_1174403_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılar’a tahsis edilen payların 3,86 katı ve",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "3,86",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "9.40",
+      "source_id": "KAP_1174403_EK1",
+      "source_document": "KAP 1174403 ek 1",
+      "source_published_at": "2023-07-23T17:17:46+03:00",
+      "source_sha256": "0c90b7710915a57bae7387ee63b29245f02c5c6b9257df985e1ae1aef0a1b2b8",
+      "source_path": "registry/oot/source_docs/ATAKP/KAP_1174403_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılar’a tahsis edilen payların 9,40 katı talep toplanmıştır.",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "9,40",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "arzda yurt dışı kurumsal grup yok (sonuç tablosunda satır yok)",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "22579200",
+        "domestic_institutional": "5644800"
+      },
+      "source_id": "KAP_1174403_EK1",
+      "source_document": "KAP 1174403 ek 1",
+      "source_published_at": "2023-07-23T17:17:46+03:00",
+      "source_sha256": "0c90b7710915a57bae7387ee63b29245f02c5c6b9257df985e1ae1aef0a1b2b8",
+      "source_path": "registry/oot/source_docs/ATAKP/KAP_1174403_ek1.pdf",
+      "quote": [
+        "Yurt İçi 22.579.200 %80,00 1.737.137 87.237.251 %62,17 1.665.366 22.579.200 %80,00",
+        "Yurt İçi 5.644.800 %20,00 228 53.082.417 %37,83 210 5.644.800 %20,00"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "80.00",
+      "source_id": "KAP_1174403_EK1",
+      "source_document": "KAP 1174403 ek 1",
+      "source_published_at": "2023-07-23T17:17:46+03:00",
+      "source_sha256": "0c90b7710915a57bae7387ee63b29245f02c5c6b9257df985e1ae1aef0a1b2b8",
+      "source_path": "registry/oot/source_docs/ATAKP/KAP_1174403_ek1.pdf",
+      "quote": "Yurt İçi 22.579.200 %80,00 1.737.137 87.237.251 %62,17 1.665.366 22.579.200 %80,00",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "20.00",
+      "source_id": "KAP_1174403_EK1",
+      "source_document": "KAP 1174403 ek 1",
+      "source_published_at": "2023-07-23T17:17:46+03:00",
+      "source_sha256": "0c90b7710915a57bae7387ee63b29245f02c5c6b9257df985e1ae1aef0a1b2b8",
+      "source_path": "registry/oot/source_docs/ATAKP/KAP_1174403_ek1.pdf",
+      "quote": "Yurt İçi 5.644.800 %20,00 228 53.082.417 %37,83 210 5.644.800 %20,00",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "arzda yurt dışı kurumsal grup yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor (TSSD izahnameye atıf yapıyor)",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Ata Yatırım Menkul Kıymetler A.Ş. ve İş Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1172514_EK1",
+      "source_document": "KAP 1172514 ek 1",
+      "source_published_at": "2023-07-14T22:54:18+03:00",
+      "source_sha256": "cb977930fe446904d2b4be4a893b72a630493a9c0d523b886960bd6a5d10d3b8",
+      "source_path": "registry/oot/source_docs/ATAKP/KAP_1172514_ek1.pdf",
+      "quote": [
+        "Halka Arza Aracılık Eden Yetkili Kurulus Sorumlu Olduğu Kısım: Ata Yatırım Menkul Kıymetler Anonim Şirketi",
+        "Halka Arza Aracıık Eden Yetkili Kuruluş Sorumlu Olduğu Kısım: Iş Yatırım Menkul Değerler Anonim Şirketi"
+      ],
+      "note": "TSSD iki aracı kurumu sayıyor, konsorsiyum lideri ayrıca belirtilmiyor; sonuç bildirimini İş Yatırım yayımlamış (OCR metninde 'Iş'/'fş')",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1174704",
+      "source_document": "KAP 1174704",
+      "source_published_at": "2023-07-24T18:02:21+03:00",
+      "source_sha256": "f1931ec9da2ad0a32efbc835215685c38269ef7731215bdafcb5802340ec1bc6",
+      "source_path": "registry/oot/source_docs/ATAKP/KAP_1174704_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1174704",
+      "source_document": "KAP 1174704",
+      "source_published_at": "2023-07-24T18:02:21+03:00",
+      "source_sha256": "f1931ec9da2ad0a32efbc835215685c38269ef7731215bdafcb5802340ec1bc6",
+      "source_path": "registry/oot/source_docs/ATAKP/KAP_1174704_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1174704": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1174704",
+      "published_at": "2023-07-24T18:02:21+03:00",
+      "sha256": "f1931ec9da2ad0a32efbc835215685c38269ef7731215bdafcb5802340ec1bc6",
+      "path": "registry/oot/source_docs/ATAKP/KAP_1174704_bildirim.pdf"
+    },
+    "KAP_1174403_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1174403 ek 1",
+      "published_at": "2023-07-23T17:17:46+03:00",
+      "sha256": "0c90b7710915a57bae7387ee63b29245f02c5c6b9257df985e1ae1aef0a1b2b8",
+      "path": "registry/oot/source_docs/ATAKP/KAP_1174403_ek1.pdf"
+    },
+    "KAP_1172514_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1172514 ek 1",
+      "published_at": "2023-07-14T22:54:18+03:00",
+      "sha256": "cb977930fe446904d2b4be4a893b72a630493a9c0d523b886960bd6a5d10d3b8",
+      "path": "registry/oot/source_docs/ATAKP/KAP_1172514_ek1.pdf"
+    }
+  }
+}

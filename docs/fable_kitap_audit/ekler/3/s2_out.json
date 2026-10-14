@@ -1,0 +1,2094 @@
+{
+ "models": {
+  "v1_5_h99": {
+   "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+   "model_push": "2026-09-22T14:06:00Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "REFUSED_IN_EARLIEST_RECORD",
+     "status": "REFUSED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false,
+     "self_reported": {
+      "record": "INTET_20260831_V1_5_POST_BOOKBUILD_PRE_LISTING",
+      "klass": "LEGACY_SELF_REPORTED"
+     }
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false,
+     "self_reported": {
+      "record": "BKRGY_20260827_V1_5_POST_BOOKBUILD_PRE_LISTING",
+      "klass": "LEGACY_SELF_REPORTED"
+     }
+    },
+    "NETGL": {
+     "klass": "LIVE",
+     "record": "NETGL_20260916_V1_5",
+     "rule": "LATEST_PUSH_PROVEN_BEFORE_D1",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-16T11:32:27Z",
+     "live": true
+    }
+   },
+   "counters": {
+    "n_scored": 6,
+    "n_live": 1,
+    "n_late": 5,
+    "n_refused": 1,
+    "n_rows": 7
+   }
+  },
+  "base_always_ceiling": {
+   "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+   "model_push": "2026-09-22T14:06:00Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 7,
+    "n_live": 0,
+    "n_late": 7,
+    "n_refused": 0,
+    "n_rows": 7
+   }
+  },
+  "base_train_median": {
+   "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+   "model_push": "2026-09-22T14:06:00Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 7,
+    "n_live": 0,
+    "n_late": 7,
+    "n_refused": 0,
+    "n_rows": 7
+   }
+  },
+  "base_train_mean": {
+   "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+   "model_push": "2026-09-22T14:06:00Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 7,
+    "n_live": 0,
+    "n_late": 7,
+    "n_refused": 0,
+    "n_rows": 7
+   }
+  },
+  "base_zero": {
+   "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+   "model_push": "2026-09-22T14:06:00Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 7,
+    "n_live": 0,
+    "n_late": 7,
+    "n_refused": 0,
+    "n_rows": 7
+   }
+  },
+  "base_rate": {
+   "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+   "model_push": "2026-09-22T14:06:00Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 7,
+    "n_live": 0,
+    "n_late": 7,
+    "n_refused": 0,
+    "n_rows": 7
+   }
+  },
+  "base_last10_rate": {
+   "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+   "model_push": "2026-09-22T14:06:00Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "5fa849d27c330786db928edab18888c1f888dfb5",
+     "model_push": "2026-09-22T14:06:00Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 7,
+    "n_live": 0,
+    "n_late": 7,
+    "n_refused": 0,
+    "n_rows": 7
+   }
+  },
+  "v1_6_h99": {
+   "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+   "model_push": "2026-09-22T14:06:03Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "REFUSED_IN_EARLIEST_RECORD",
+     "status": "REFUSED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 6,
+    "n_live": 0,
+    "n_late": 6,
+    "n_refused": 1,
+    "n_rows": 7
+   }
+  },
+  "v1_5_market20_v0": {
+   "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+   "model_push": "2026-09-22T14:06:03Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "REFUSED_IN_EARLIEST_RECORD",
+     "status": "REFUSED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 6,
+    "n_live": 0,
+    "n_late": 6,
+    "n_refused": 1,
+    "n_rows": 7
+   }
+  },
+  "pb_v0": {
+   "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+   "model_push": "2026-09-22T14:06:03Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 7,
+    "n_live": 0,
+    "n_late": 7,
+    "n_refused": 0,
+    "n_rows": 7
+   }
+  },
+  "ceiling_hazard_v0": {
+   "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+   "model_push": "2026-09-22T14:06:03Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "REFUSED_IN_EARLIEST_RECORD",
+     "status": "REFUSED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_LATE_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 6,
+    "n_live": 0,
+    "n_late": 6,
+    "n_refused": 1,
+    "n_rows": 7
+   }
+  },
+  "ceiling_hazard_v0@INF": {
+   "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+   "model_push": "2026-09-22T14:06:03Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 7,
+    "n_live": 0,
+    "n_late": 7,
+    "n_refused": 0,
+    "n_rows": 7
+   }
+  },
+  "pb_ceiling_v0": {
+   "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+   "model_push": "2026-09-22T14:06:03Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 7,
+    "n_live": 0,
+    "n_late": 7,
+    "n_refused": 0,
+    "n_rows": 7
+   }
+  },
+  "pb_ceiling_v0@INF": {
+   "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+   "model_push": "2026-09-22T14:06:03Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 7,
+    "n_live": 0,
+    "n_late": 7,
+    "n_refused": 0,
+    "n_rows": 7
+   }
+  },
+  "base_km_expanding": {
+   "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+   "model_push": "2026-09-22T14:06:03Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 7,
+    "n_live": 0,
+    "n_late": 7,
+    "n_refused": 0,
+    "n_rows": 7
+   }
+  },
+  "base_km_last10": {
+   "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+   "model_push": "2026-09-22T14:06:03Z",
+   "rows": {
+    "CITAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6356b36ec865.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "TKNKA": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_653e87af9823.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "VEYAS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_0f4695ad423c.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "KPEKS": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_4ef4794c6b2b.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "INTET": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121935Z_6dccd49888dc.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "BKRGY": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_459846d44a17.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    },
+    "NETGL": {
+     "klass": "LATE_RECORD",
+     "record": "20260922T121936Z_65a39d7392dd.json",
+     "rule": "EARLIEST_RECORD",
+     "status": "SCORED",
+     "pit": [],
+     "model_commit": "b09cab5c1bc7e2b7dfc3890358b6268a1801febf",
+     "model_push": "2026-09-22T14:06:03Z",
+     "outcome_commit": "f1f9d444132e89f0377b026b76d775a82685c649",
+     "record_push": "2026-09-22T14:06:05Z",
+     "live": false
+    }
+   },
+   "counters": {
+    "n_scored": 7,
+    "n_live": 0,
+    "n_late": 7,
+    "n_refused": 0,
+    "n_rows": 7
+   }
+  },
+  "ceiling_path_v0": {
+   "model_commit": "a0df5b773890d4847bc95793b8ae6b5986f19a0e",
+   "model_push": "2026-09-22T20:17:10Z",
+   "rows": {
+    "CITAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "TKNKA": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "VEYAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "KPEKS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "INTET": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "BKRGY": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "NETGL": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    }
+   },
+   "counters": {
+    "n_scored": 0,
+    "n_live": 0,
+    "n_late": 0,
+    "n_refused": 0,
+    "n_rows": 0
+   }
+  },
+  "ceiling_path_v0@INF": {
+   "model_commit": "a0df5b773890d4847bc95793b8ae6b5986f19a0e",
+   "model_push": "2026-09-22T20:17:10Z",
+   "rows": {
+    "CITAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "TKNKA": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "VEYAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "KPEKS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "INTET": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "BKRGY": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "NETGL": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    }
+   },
+   "counters": {
+    "n_scored": 0,
+    "n_live": 0,
+    "n_late": 0,
+    "n_refused": 0,
+    "n_rows": 0
+   }
+  },
+  "pb_ceiling_path_v0": {
+   "model_commit": "a0df5b773890d4847bc95793b8ae6b5986f19a0e",
+   "model_push": "2026-09-22T20:17:10Z",
+   "rows": {
+    "CITAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "TKNKA": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "VEYAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "KPEKS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "INTET": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "BKRGY": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "NETGL": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    }
+   },
+   "counters": {
+    "n_scored": 0,
+    "n_live": 0,
+    "n_late": 0,
+    "n_refused": 0,
+    "n_rows": 0
+   }
+  },
+  "ceiling_hazard_v1_clip": {
+   "model_commit": "66adbca9d73f1699fea6b44586b3efa50aded486",
+   "model_push": "2026-09-27T15:30:42Z",
+   "rows": {
+    "CITAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "TKNKA": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "VEYAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "KPEKS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "INTET": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "BKRGY": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "NETGL": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    }
+   },
+   "counters": {
+    "n_scored": 0,
+    "n_live": 0,
+    "n_late": 0,
+    "n_refused": 0,
+    "n_rows": 0
+   }
+  },
+  "ceiling_hazard_v1_real": {
+   "model_commit": "66adbca9d73f1699fea6b44586b3efa50aded486",
+   "model_push": "2026-09-27T15:30:42Z",
+   "rows": {
+    "CITAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "TKNKA": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "VEYAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "KPEKS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "INTET": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "BKRGY": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "NETGL": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    }
+   },
+   "counters": {
+    "n_scored": 0,
+    "n_live": 0,
+    "n_late": 0,
+    "n_refused": 0,
+    "n_rows": 0
+   }
+  },
+  "ceiling_hazard_v1_pooled": {
+   "model_commit": "66adbca9d73f1699fea6b44586b3efa50aded486",
+   "model_push": "2026-09-27T15:30:42Z",
+   "rows": {
+    "CITAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "TKNKA": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "VEYAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "KPEKS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "INTET": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "BKRGY": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "NETGL": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    }
+   },
+   "counters": {
+    "n_scored": 0,
+    "n_live": 0,
+    "n_late": 0,
+    "n_refused": 0,
+    "n_rows": 0
+   }
+  },
+  "ceiling_hazard_v1_pooled@INF": {
+   "model_commit": "66adbca9d73f1699fea6b44586b3efa50aded486",
+   "model_push": "2026-09-27T15:30:42Z",
+   "rows": {
+    "CITAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "TKNKA": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "VEYAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "KPEKS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "INTET": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "BKRGY": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "NETGL": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    }
+   },
+   "counters": {
+    "n_scored": 0,
+    "n_live": 0,
+    "n_late": 0,
+    "n_refused": 0,
+    "n_rows": 0
+   }
+  },
+  "fall_d10_v0_h99": {
+   "model_commit": "ce569a8ecf98578af508eb75713da4776ef1a3cc",
+   "model_push": "2026-09-28T19:06:01Z",
+   "rows": {
+    "CITAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "TKNKA": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "VEYAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "KPEKS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "INTET": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "BKRGY": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "NETGL": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    }
+   },
+   "counters": {
+    "n_scored": 0,
+    "n_live": 0,
+    "n_late": 0,
+    "n_refused": 0,
+    "n_rows": 0
+   }
+  },
+  "fall_d10_v0_pooled": {
+   "model_commit": "ce569a8ecf98578af508eb75713da4776ef1a3cc",
+   "model_push": "2026-09-28T19:06:01Z",
+   "rows": {
+    "CITAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "TKNKA": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "VEYAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "KPEKS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "INTET": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "BKRGY": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "NETGL": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    }
+   },
+   "counters": {
+    "n_scored": 0,
+    "n_live": 0,
+    "n_late": 0,
+    "n_refused": 0,
+    "n_rows": 0
+   }
+  },
+  "fall_d10_v0_addsale": {
+   "model_commit": "ce569a8ecf98578af508eb75713da4776ef1a3cc",
+   "model_push": "2026-09-28T19:06:01Z",
+   "rows": {
+    "CITAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "TKNKA": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "VEYAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "KPEKS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "INTET": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "BKRGY": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "NETGL": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    }
+   },
+   "counters": {
+    "n_scored": 0,
+    "n_live": 0,
+    "n_late": 0,
+    "n_refused": 0,
+    "n_rows": 0
+   }
+  },
+  "fall_d10_v0_pooled@ZERO": {
+   "model_commit": "ce569a8ecf98578af508eb75713da4776ef1a3cc",
+   "model_push": "2026-09-28T19:06:01Z",
+   "rows": {
+    "CITAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "TKNKA": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "VEYAS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "KPEKS": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "INTET": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "BKRGY": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    },
+    "NETGL": {
+     "klass": "RETRO",
+     "record": null,
+     "basis": "NO_RECORD"
+    }
+   },
+   "counters": {
+    "n_scored": 0,
+    "n_live": 0,
+    "n_late": 0,
+    "n_refused": 0,
+    "n_rows": 0
+   }
+  }
+ },
+ "retro_pairs": [],
+ "mismatch": []
+}

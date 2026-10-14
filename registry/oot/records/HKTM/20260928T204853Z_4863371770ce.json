@@ -1,0 +1,657 @@
+{
+  "code": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "02623de417a464c1b33cdd76b1bdd5b990bf04c0ba5f66ccbea6c3084eb54f94",
+    "git_head": "f0588ef2434ccfec86353a3655f4c60118a96fef"
+  },
+  "cohort_file_sha256": "7d05b334d73985882debf7f31ecfc81b3eac501b756f9da44f41e3bf893760a7",
+  "cohort_row": {
+    "added_at": "2026-09-24T23:49:51+03:00",
+    "company": "Hidropar Hareket Kontrol Teknolojileri Merkezi Sanayi ve Ticaret A.Ş.",
+    "first_trading_date": "2022-08-18",
+    "listing_source_id": "KAP_1055556",
+    "listing_source_sha256": "380bb58d629f8522c0e28341a62693df271e443821b0ef7af5b4f806fcc7be5a",
+    "market": "ANA",
+    "reason": "",
+    "regime_tags": "ALLOC_REGIME=THRESH100_20211111|MARGIN_RULE=POST_20200313|MARKET=ANA|SHORT_SELL_BAN_2020_END_NOT_FOUND|TICK_TABLE_EPOCH=T2015",
+    "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+    "status": "MEMBER",
+    "ticker": "HKTM",
+    "year": "2022"
+  },
+  "comparators": {},
+  "delta_of": "20260924T221309Z_4668d7632788.json",
+  "delta_of_sha256": "4668d763278846d9b455a731a42f4ec6e56c20f86976976cef3cb7fa845e25a6",
+  "first_trading_date": "2022-08-18",
+  "inputs": {
+    "path": "registry/oot/inputs/HKTM.json",
+    "sha256": "349d3a5d4fe5e28ccd4a85debb54c07c767b1b4a1302ba464fd2a3c1393079fb"
+  },
+  "inputs_sha256": "349d3a5d4fe5e28ccd4a85debb54c07c767b1b4a1302ba464fd2a3c1393079fb",
+  "market20": {
+    "S0_date": "2022-08-17",
+    "S20_date": "2022-07-20",
+    "calendar": "C",
+    "calendar_file": "data/raw/pay_calendar_c_20200101_20230921.csv",
+    "calendar_sha256": "6dfd6134584a1a14211c3a56b5b274fef321f666bf870ce99605a97bee16fe4e",
+    "close_S0": "2980",
+    "close_S20": "2525.2",
+    "f6": "0.18010454617456043085696182480595596388404878821479486773325",
+    "ref_date": "2022-08-18",
+    "ref_date_rule": "OOT_FIRST_TRADING_DATE_SPEC_MARKET20_V0_4E",
+    "refusal": null,
+    "xu100_file": "data/raw/xu100/xu100_graphic_20260922.json",
+    "xu100_sha256": "04637c911f912e007522790520191ae99ad5cf47f8d38a4360698ea3038397fe"
+  },
+  "model_inputs": {
+    "additional_sale_shares": "0",
+    "alloc_regime": "THRESH100_20211111",
+    "capital_increase_shares": "10000000",
+    "existing_share_sale_shares": "2000000",
+    "f6_market20": "0.18010454617456043085696182480595596388404878821479486773325",
+    "f6_market20_refusal": null,
+    "ipo_price_tl": "11",
+    "ipo_price_try": "11.00",
+    "ipo_size_tl": "132000000",
+    "planned_additional_sale_ceiling": "0",
+    "planned_base_offer_shares": "12000000",
+    "planned_capital_increase_shares": "10000000",
+    "planned_existing_share_sale": "2000000",
+    "planned_max_offer_shares": "12000000",
+    "planned_post_ipo_capital": "35000000",
+    "planned_pre_ipo_capital": "25000000",
+    "post_ipo_share_capital": "35000000",
+    "shares_offered": "12000000",
+    "total_demand_filter_status": "UNFILTERED",
+    "total_demand_multiple": "5.59",
+    "tufe_index": "30.720377",
+    "tufe_refusal": null
+  },
+  "models": [
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/ceiling_hazard_v1_clip.json",
+      "kind": "hazard",
+      "model_id": "ceiling_hazard_v1_clip",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.030753125878504983,
+          0.02177352187415682,
+          0.02128439338949284,
+          0.062463827100964986,
+          0.05825115574617923,
+          0.0543225944238247,
+          0.0506589822491017,
+          0.0472424505812864,
+          0.04405633587249691,
+          0.0410850983940938,
+          0.5681085144898976
+        ],
+        "P_close_ceiling": [
+          0.969246874121495,
+          0.9482383034282023,
+          0.9272638769327312,
+          0.8657097172167316,
+          0.8332957213021939,
+          0.7867425211971255,
+          0.7433289515255116,
+          0.7028432700389906,
+          0.6650880147622112,
+          0.6298790409058774
+        ],
+        "S": [
+          0.969246874121495,
+          0.9474733522473382,
+          0.9261889588578454,
+          0.8637251317568804,
+          0.8054739760107011,
+          0.7511513815868764,
+          0.7004923993377747,
+          0.6532499487564883,
+          0.6091936128839914,
+          0.5681085144898976
+        ],
+        "clipped": true,
+        "clipped_features": [
+          "f1"
+        ],
+        "hazard": [
+          0.03075312587850497,
+          0.022464371519270544,
+          0.022464371519270544,
+          0.06744177470868784,
+          0.06744177470868784,
+          0.06744177470868784,
+          0.06744177470868784,
+          0.06744177470868784,
+          0.06744177470868784,
+          0.06744177470868784
+        ],
+        "model_id": "ceiling_hazard_v1_clip",
+        "refused": null,
+        "warnings": [
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f1",
+            "message": "f1 = 132000000.0 eğitim aralığı dışında [290870000.0, 6825000000.0]",
+            "train_max": 6825000000.0,
+            "train_min": 290870000.0,
+            "value": 132000000.0
+          },
+          {
+            "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+            "feature": "f1",
+            "message": "f1 = 132000000.0 eğitim p05/p95 sınırına kırpıldı: 521400000.0",
+            "used": 521400000.0,
+            "value": 132000000.0
+          }
+        ]
+      },
+      "params_sha256": "f3a147535242f8bde381ea68113f295f0a7dcdb5dd8a1046a3c1a55b0308241d",
+      "refusal": null,
+      "spec_sha256": "6103d3c9189cf70dd92e65e0bba62d482e71b4d4e7ac5248aca120069684af19",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/ceiling_hazard_v1_real.json",
+      "kind": "hazard",
+      "model_id": "ceiling_hazard_v1_real",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.042262311718051615,
+          0.028512169902639273,
+          0.027663353110209066,
+          0.07254387660738215,
+          0.06670665956793786,
+          0.06133913210615416,
+          0.05640350081844958,
+          0.05186501333392135,
+          0.047691713618739584,
+          0.043854216969887005,
+          0.5011580522466283
+        ],
+        "P_close_ceiling": [
+          0.9577376882819484,
+          0.930256214713591,
+          0.9029957259690646,
+          0.83150831358412,
+          0.7963065937699022,
+          0.7437403840463724,
+          0.6954038955542825,
+          0.6509567852902126,
+          0.6100860958285719,
+          0.5725040517508897
+        ],
+        "S": [
+          0.9577376882819484,
+          0.9292255183793091,
+          0.9015621652691,
+          0.8290182886617179,
+          0.76231162909378,
+          0.7009724969876259,
+          0.6445689961691763,
+          0.5927039828352549,
+          0.5450122692165154,
+          0.5011580522466283
+        ],
+        "clipped": true,
+        "clipped_features": [
+          "f1r"
+        ],
+        "f1r_raw": 429682226.8815256,
+        "hazard": [
+          0.04226231171805161,
+          0.029770332995651655,
+          0.029770332995651655,
+          0.08046464170968079,
+          0.08046464170968079,
+          0.08046464170968079,
+          0.08046464170968079,
+          0.08046464170968079,
+          0.08046464170968079,
+          0.08046464170968079
+        ],
+        "model_id": "ceiling_hazard_v1_real",
+        "refused": null,
+        "tufe_index_used": "30.720377",
+        "warnings": [
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f1r",
+            "message": "f1r = 429682226.8815256 eğitim aralığı dışında [480375547.171767, 13458096161.912668]",
+            "train_max": 13458096161.912668,
+            "train_min": 480375547.171767,
+            "value": 429682226.8815256
+          },
+          {
+            "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+            "feature": "f1r",
+            "message": "f1r = 429682226.8815256 eğitim p05/p95 sınırına kırpıldı: 731271186.230847",
+            "used": 731271186.230847,
+            "value": 429682226.8815256
+          }
+        ]
+      },
+      "params_sha256": "d81dad3d60c18ba23298d0ca4c4e315b60cc665d34781ca52f06d001d21ba09d",
+      "refusal": null,
+      "spec_sha256": "fea051b617520b9fedcfe2876abbf8f80614250e4fd527e182479e7bf920f327",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/ceiling_hazard_v1_pooled.json",
+      "kind": "hazard",
+      "model_id": "ceiling_hazard_v1_pooled",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.12743817886582987,
+          0.09927738858092139,
+          0.08798191398562416,
+          0.14081427968264604,
+          0.11188010707229723,
+          0.08889125724123059,
+          0.07062609985545121,
+          0.056114022183933604,
+          0.04458385061759795,
+          0.03542287040798525,
+          0.1369700315064827
+        ],
+        "P_close_ceiling": [
+          0.8725618211341701,
+          0.7841719033063413,
+          0.7004151094838686,
+          0.5663630974695982,
+          0.4943677803864414,
+          0.41515218667919307,
+          0.3522136187602552,
+          0.30220751331684803,
+          0.2624765396976544,
+          0.23090938903211133
+        ],
+        "S": [
+          0.8725618211341701,
+          0.7732844325532487,
+          0.6853025185676246,
+          0.5444882388849785,
+          0.4326081318126813,
+          0.3437168745714507,
+          0.2730907747159995,
+          0.21697675253206591,
+          0.17239290191446796,
+          0.1369700315064827
+        ],
+        "clipped": true,
+        "clipped_features": [
+          "f1r"
+        ],
+        "f1r_raw": 429682226.8815256,
+        "hazard": [
+          0.1274381788658298,
+          0.11377691090343493,
+          0.11377691090343493,
+          0.2054775458537159,
+          0.2054775458537159,
+          0.2054775458537159,
+          0.2054775458537159,
+          0.2054775458537159,
+          0.2054775458537159,
+          0.2054775458537159
+        ],
+        "model_id": "ceiling_hazard_v1_pooled",
+        "refused": null,
+        "regime_source": "ALLOC_REGIME_INPUT",
+        "regime_value_used": 1,
+        "tufe_index_used": "30.720377",
+        "warnings": [
+          {
+            "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+            "feature": "f1r",
+            "message": "f1r = 429682226.8815256 eğitim p05/p95 sınırına kırpıldı: 565832560.9794825",
+            "used": 565832560.9794825,
+            "value": 429682226.8815256
+          }
+        ]
+      },
+      "params_sha256": "e03e71e0bb6e7c65ceb9cdf0ee95b25334749362549428077ab670dd3f261402",
+      "refusal": null,
+      "spec_sha256": "2a088b0d86d7c9868558d3004b6b7de9545734cf4155b51a67f8ac2ce0eb6845",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/ceiling_hazard_v1_pooled@INF.json",
+      "kind": "hazard",
+      "model_id": "ceiling_hazard_v1_pooled@INF",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.1742952915853987,
+          0.11490896930161543,
+          0.09891769410189888,
+          0.13102122340378525,
+          0.10296569645329046,
+          0.08091768929250331,
+          0.06359081389216259,
+          0.04997413602420184,
+          0.03927319243940716,
+          0.03086363801538762,
+          0.11327165549034877
+        ],
+        "P_close_ceiling": [
+          0.8257047084146013,
+          0.7246840793250742,
+          0.6305166699681817,
+          0.5057874262193804,
+          0.4456066276828935,
+          0.37349669249175116,
+          0.3168276315162214,
+          0.272293095972182,
+          0.23729472433903054,
+          0.2097905413042504
+        ],
+        "S": [
+          0.8257047084146013,
+          0.7107957391129859,
+          0.611878045011087,
+          0.48085682160730175,
+          0.3778911251540113,
+          0.296973435861508,
+          0.2333826219693454,
+          0.18340848594514356,
+          0.1441352935057364,
+          0.11327165549034877
+        ],
+        "clipped": null,
+        "clipped_features": null,
+        "hazard": [
+          0.1742952915853987,
+          0.13916472575558755,
+          0.13916472575558755,
+          0.21412963657065215,
+          0.21412963657065215,
+          0.21412963657065215,
+          0.21412963657065215,
+          0.21412963657065215,
+          0.21412963657065215,
+          0.21412963657065215
+        ],
+        "model_id": "ceiling_hazard_v1_pooled@INF",
+        "refused": null,
+        "regime_source": "ALLOC_REGIME_INPUT",
+        "regime_value_used": 1,
+        "warnings": []
+      },
+      "params_sha256": "7d7c9d1ee5a6a0c255fcf98103f872239439436a9e2da478601837d5eaf3f361",
+      "refusal": null,
+      "spec_sha256": "f53ad4cf1ba9dd08ab03678e86e5a49b56b1363d8205b27c00113d280ab82872",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "l2_logit_v1_6_grid",
+      "file": "models/fall_d10_v0_h99.json",
+      "kind": "fall",
+      "model_id": "fall_d10_v0_h99",
+      "not_applicable": null,
+      "output": {
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.9822834672537324,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.9965618792864503,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "add_sale_used": 0,
+        "clipped": true,
+        "clipped_features": [
+          "f1r"
+        ],
+        "f1r_raw": 429682226.8815256,
+        "model_id": "fall_d10_v0_h99",
+        "refused": null,
+        "tufe_index_used": "30.720377",
+        "warnings": [
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f1r",
+            "message": "f1r = 429682226.8815256 eğitim aralığı dışında [480375547.171767, 13458096161.912668]",
+            "train_max": 13458096161.912668,
+            "train_min": 480375547.171767,
+            "value": 429682226.8815256
+          },
+          {
+            "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+            "feature": "f1r",
+            "message": "f1r = 429682226.8815256 eğitim p05/p95 sınırına kırpıldı: 730434967.4464037",
+            "used": 730434967.4464037,
+            "value": 429682226.8815256
+          }
+        ]
+      },
+      "params_sha256": "b15eaa8cb1f76441088173e7582f636afe281855d924d23220d6ae076fe89beb",
+      "refusal": null,
+      "spec_sha256": "e21c0a32bb9861db0a6fd0e6ee0086d0c862160556fcac6bcede24a109adb46e",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "l2_logit_v1_6_grid",
+      "file": "models/fall_d10_v0_pooled.json",
+      "kind": "fall",
+      "model_id": "fall_d10_v0_pooled",
+      "not_applicable": null,
+      "output": {
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.9590179048479995,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.9797987314266353,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "add_sale_used": 0,
+        "clipped": true,
+        "clipped_features": [
+          "f1r"
+        ],
+        "f1r_raw": 429682226.8815256,
+        "model_id": "fall_d10_v0_pooled",
+        "refused": null,
+        "tufe_index_used": "30.720377",
+        "warnings": [
+          {
+            "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+            "feature": "f1r",
+            "message": "f1r = 429682226.8815256 eğitim p05/p95 sınırına kırpıldı: 571126233.5184392",
+            "used": 571126233.5184392,
+            "value": 429682226.8815256
+          }
+        ]
+      },
+      "params_sha256": "d2c5d549961173468486c159045c9d4361bd034e2a5c6bb5494aad68477f7c64",
+      "refusal": null,
+      "spec_sha256": "1054f2c2214734effce3cb65a150fbff646f7d1060b750c3d02d3aef3a0ec28f",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "l2_logit_v1_6_grid",
+      "file": "models/fall_d10_v0_addsale.json",
+      "kind": "fall",
+      "model_id": "fall_d10_v0_addsale",
+      "not_applicable": null,
+      "output": {
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.8068759361348089,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.8616918501108343,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "add_sale_used": 0,
+        "clipped": false,
+        "clipped_features": [],
+        "f1r_raw": null,
+        "model_id": "fall_d10_v0_addsale",
+        "refused": null,
+        "tufe_index_used": null,
+        "warnings": []
+      },
+      "params_sha256": "b95fc3ecee262f7b58441215d9c65ba682808c5a2cddd643f2e05f64640b8e09",
+      "refusal": null,
+      "spec_sha256": "b0b04566f98742978a62c44327fc5e5c1389fb7e333a86f4dfd4e0c4ac2172a1",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "l2_logit_v1_6_grid",
+      "file": "models/fall_d10_v0_pooled@ZERO.json",
+      "kind": "fall",
+      "model_id": "fall_d10_v0_pooled@ZERO",
+      "not_applicable": null,
+      "output": {
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.7577639751552795,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.8198757763975155,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "add_sale_used": null,
+        "clipped": null,
+        "clipped_features": null,
+        "f1r_raw": null,
+        "model_id": "fall_d10_v0_pooled@ZERO",
+        "refused": null,
+        "tufe_index_used": null,
+        "warnings": []
+      },
+      "params_sha256": "7c23b9236c0a0ccc4192d8da58f0e1745fbd7443f1a6e78e2a056580fbfd8c3d",
+      "refusal": null,
+      "spec_sha256": "0c96245fb80f6d538199d4fd6d73707ddcb7f5f28c6d8f9f65108f796ef35094",
+      "status": "PREDICTED"
+    }
+  ],
+  "models_index": {
+    "model_ids": [
+      "v1_5_h99",
+      "base_always_ceiling",
+      "base_train_median",
+      "base_train_mean",
+      "base_zero",
+      "base_rate",
+      "base_last10_rate",
+      "v1_6_h99",
+      "v1_5_market20_v0",
+      "pb_v0",
+      "ceiling_hazard_v0",
+      "ceiling_hazard_v0@INF",
+      "pb_ceiling_v0",
+      "pb_ceiling_v0@INF",
+      "base_km_expanding",
+      "base_km_last10",
+      "ceiling_path_v0",
+      "ceiling_path_v0@INF",
+      "pb_ceiling_path_v0",
+      "ceiling_hazard_v1_clip",
+      "ceiling_hazard_v1_real",
+      "ceiling_hazard_v1_pooled",
+      "ceiling_hazard_v1_pooled@INF",
+      "fall_d10_v0_h99",
+      "fall_d10_v0_pooled",
+      "fall_d10_v0_addsale",
+      "fall_d10_v0_pooled@ZERO"
+    ],
+    "path": "models/INDEX.json",
+    "sha256": "7e636e8bf64b25d79bac04f4bf78b9f870cded8d4d1c10009b6926941e4edb59"
+  },
+  "record_scope": "ONLY_MISSING_MODELS",
+  "record_stage": "OOT_PRE_LISTING",
+  "record_type": "PREDICTION",
+  "recorded_at_basis": "LOCAL_CLOCK_SELF_REPORTED: zaman kanıtı bu kaydı içeren commit'in push kanıtıdır; kayıt, kohortun sonucu repoya girmeden push edilir (KARARLAR D3, D6)",
+  "recorded_at_istanbul": "2026-09-28T23:48:53+03:00",
+  "recorded_at_utc": "2026-09-28T20:48:53Z",
+  "regime_tags": {
+    "ALLOC_REGIME": "THRESH100_20211111",
+    "MARGIN_RULE": "POST_20200313",
+    "MARKET": "ANA",
+    "SHORT_SELL_BAN_2020_END_NOT_FOUND": true,
+    "TICK_TABLE_EPOCH": "T2015"
+  },
+  "scale": "OOT_PRE_H99",
+  "schema_version": "borsai.oot_record/1",
+  "summary": {
+    "n_models": 8,
+    "n_not_applicable_regime": 0,
+    "n_predicted": 8,
+    "n_refused": 0,
+    "not_applicable": {},
+    "refusals": {}
+  },
+  "ticker": "HKTM",
+  "tufe": {
+    "bulletin_id": "45795",
+    "file": "data/raw/tuik/tufe_genel_2025_100.csv",
+    "file_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+    "index": "30.720377",
+    "month": "2022-06",
+    "pins": {
+      "ceiling_hazard_v1_pooled": {
+        "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+        "through_month": "2026-08"
+      },
+      "ceiling_hazard_v1_real": {
+        "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+        "through_month": "2026-08"
+      },
+      "fall_d10_v0_h99": {
+        "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+        "through_month": "2026-08"
+      },
+      "fall_d10_v0_pooled": {
+        "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+        "through_month": "2026-08"
+      }
+    },
+    "reason": null,
+    "refusal": null,
+    "release_date": "2022-07-04",
+    "rule": "T_MONTH_MINUS_2",
+    "series": "TUIK_TUFE_GENEL_2025_100"
+  }
+}

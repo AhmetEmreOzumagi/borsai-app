@@ -1,0 +1,73 @@
+BORSAI_FAZ8_FREEZE_20261002 — test koşuları (adım sırasıyla)
+
+== Adım 0: taban (HEAD 6d3f674 = origin/main; ağaçta yalnız docs/prompts/FAZ8_FREEZE.md) ==
+models/: 30 dosya; INDEX.json sha256 7e636e8bf64b25d79bac04f4bf78b9f870cded8d4d1c10009b6926941e4edb59 (27 giriş);
+INDEX_POST_D1.json sha256 94ac36faffac6017d54ff406b97b37623c27633c847bd0117fb51bf42975b820 (1 giriş); INDEX_POST_BREAK.json yok;
+experiments/log.jsonl 2146 satır.
+.venv/bin/pytest -q -n 6 --dist loadgroup        906 passed in 569.19s (0:09:29)
+.venv/bin/python app/parity/gen_golden.py --check {"checked": 35, "different": []} (5 s)
+bash app/scripts/test.sh                          exit 0 (69 s): cargo 151 passed / 0 failed, npm (vitest) 20 dosya 305 passed,
+                                                  parity (app/parity/test_gen_golden.py) 8 passed, golden_unchanged YEŞİL
+
+== Adım 0b: prova (geçici klon, oturumun scratchpad'inde; .venv ve app/node_modules sembolik bağ; CARGO_TARGET_DIR klona özel) ==
+(1) Yalnız K-FRZ-1..3 yönlendirmesi (borsai/freeze.py, borsai/specs.py) → klonda commit → dondurma
+    (.venv/bin/python -m borsai.freeze --models break_floor_v0 break_floor_v0@ZERO; 3.1 s; borsai_dirty false; önizlemeyle
+    yalnız created_at ve code_version farklı) → klonda commit (yalnız üç models/ dosyası)
+    .venv/bin/pytest -q -n 6 --dist loadgroup     901 passed, 5 failed in 645.22s — beşi de (i) K-PIN türü:
+      tests/test_faz8_break.py::test_14b_old_specs_models_and_cutoff_unchanged      (INDEX_POST_BREAK.json var)
+      tests/test_faz8_model.py::test_5c_old_goldens_and_app_pins_unchanged          (git diff 7d78d43 -- models: üç dosya; freeze.py değişti)
+      tests/test_faz5_frozen.py::test_pre_listing_index_and_models_byte_identical   (models/ dosya listesi + 3)
+      tests/test_faz8_golden.py::test_b7_old_outputs_unchanged                      (git diff 5d84e88 -- models: üç dosya)
+      tests/test_faz5_post_d1.py::test_14_models_goldens_and_read_only_paths_unchanged (models/ sayısı 33 ≠ 30)
+    (ii) kod hatası: yok; (iii) başka: yok.
+    bash app/scripts/test.sh                      exit 0 (88 s): cargo 151 / 0, npm 305, parity 8, golden_unchanged YEŞİL
+    gen_golden --check                            {"checked": 35, "different": []}
+    Var olan 28 modelin türü (freeze.model_kind / specs.model_kind) yönlendirmeden önce ve sonra ölçüldü: aynı (28/28).
+(2) Aynı klonda yeni dal 6d3f674'ten: bütün K (kod + tests/test_faz8_freeze.py + faz8_support.frozen_post_break_files + beş K-PIN
+    + SPEC_DEVIATIONS N21–N25) → K'nın hedefli testleri commit öncesi (dondurma öncesi durum a) 13 passed → commit K → dondurma
+    → commit F1 → .venv/bin/pytest -q -n 6 --dist loadgroup   913 passed in 695.96s (0 failed; 906 + 7 yeni)
+(3) Aynı klonda F2 (report_faz8 dondurma notu, MODELS.md yeniden üretimi, tests/test_faz8_frozen.py; commit'siz):
+    .venv/bin/pytest -q -n 6 --dist loadgroup     920 passed, 1 failed in 711.48s — tek kırmızı
+      tests/test_faz7_vault.py::test_real_scores_oot_in_memory_run_equals_committed_file (['/code/borsai_dirty']: commit'siz
+      borsai/report_faz8.py; tanımı gereği; Faz 8 A'daki kalıp) → klonda F2 commit'inden sonra tek başına 1 passed (101 s)
+    Yeni testlerin mutasyon denetimi (8 mutasyon: model_kind dalı, run_model dalı, training_n = n_F2, tek kimlik kabulü,
+    INDEX.json'a yazma, specs.model_kind dalı, REPRO değeri, REPRO kaynağı) → 8/8 kırmızı.
+    bash app/scripts/test.sh                      exit 0: cargo 151 / 0, npm 305, parity 8, golden_unchanged YEŞİL
+    gen_golden --check                            {"checked": 35, "different": []}
+    Bir bulgu düzeltildi (testte): models/ altında .gitkeep de izli (31 dosya; 30 JSON).
+Klon ve cargo hedef dizini silindi.
+
+== Adım 1: K (ana depo, commit öncesi; HEAD 6d3f674 + K değişiklikleri çalışma ağacında) ==
+.venv/bin/pytest -q -n 6 --dist loadgroup --deselect tests/test_faz7_vault.py::test_real_scores_oot_in_memory_run_equals_committed_file
+                                                  912 passed in 693.19s (0:11:33) (906 + 7 yeni − 1 ayrılan)
+    (ayrılan test commit'siz borsai/ ile borsai_dirty = true olduğundan tanımı gereği kırmızıdır; Faz 8 A kalıbı; commit K'dan
+     hemen sonra tek başına koşulur — aşağıda)
+.venv/bin/python app/parity/gen_golden.py --check {"checked": 35, "different": []}
+bash app/scripts/test.sh                          exit 0 (56 s): cargo 151 / 0, npm 305, parity 8, golden_unchanged YEŞİL
+Commit K = 74b851a. Hemen ardından ayrılan test ve K testleri tek başına:
+.venv/bin/pytest -q tests/test_faz7_vault.py::test_real_scores_oot_in_memory_run_equals_committed_file tests/test_faz8_freeze.py
+                    tests/test_faz8_model.py::test_5c_old_goldens_and_app_pins_unchanged      9 passed in 98.80s
+
+== Adım 2: F1 (HEAD 74b851a, git status boş) ==
+.venv/bin/python -m borsai.freeze --models break_floor_v0 break_floor_v0@ZERO   2 s; tam olarak 3 yeni dosya; önizlemeyle yalnız
+                                                  created_at ve code_version farklı (git_commit 74b851a, borsai_dirty false);
+                                                  INDEX.json, INDEX_POST_D1.json, 28 model dosyası ve .gitkeep 31/31 bayt-eşit
+Hızlı kontrol (commit öncesi): .venv/bin/pytest -q tests/test_faz8_freeze.py tests/test_faz8_golden.py tests/test_faz8_model.py
+                    tests/test_faz8_break.py                    43 passed, 3 failed — üçü de commit'siz models/'ten:
+      test_faz8_golden.py::test_b7 ve test_faz8_model.py::test_5c (git diff izlenmeyen dosyayı görmez; yardımcı üç dosya bekler),
+      test_faz8_break.py::test_14b (git status --porcelain -- models: "??" satırları)
+Commit F1 = 4d3c9a2 (yalnız üç dosya); aynı üç test                 3 passed in 4.40s
+
+== Adım 3: tam test, F1'den sonra (HEAD 4d3c9a2, ağaç temiz) ==
+.venv/bin/pytest -q -n 6 --dist loadgroup        913 passed in 669.94s (0:11:09)
+.venv/bin/python app/parity/gen_golden.py --check {"checked": 35, "different": []}
+bash app/scripts/test.sh                          exit 0 (56 s): cargo 151 / 0, npm 305, parity 8, golden_unchanged YEŞİL
+
+== Adım 4: F2 öncesi (HEAD 4d3c9a2; F2 değişiklikleri çalışma ağacında: borsai/report_faz8.py, docs/MODELS.md, tests/test_faz8_frozen.py, docs) ==
+.venv/bin/python -m borsai.report                 docs/MODELS.md: yalnız Faz 8 bölümünün sonuna "### Dondurma" (+24 satır, −0)
+.venv/bin/pytest -q tests/test_faz8_frozen.py tests/test_faz8_break.py::test_14_… tests/test_faz8_golden.py::test_b6_…   10 passed
+.venv/bin/pytest -q --deselect tests/test_faz7_vault.py::test_real_scores_oot_in_memory_run_equals_committed_file   (SIRALI)
+                                                  920 passed, 1 deselected in 970.25s (0:16:10)
+.venv/bin/python app/parity/gen_golden.py --check {"checked": 35, "different": []}
+bash app/scripts/test.sh                          exit 0 (40 s): cargo 151 / 0, npm 305, parity 8, golden_unchanged YEŞİL
+(ayrılan test commit F2'den hemen sonra tek başına koşulur)

@@ -1,0 +1,245 @@
+[
+  {
+    "model_id": "v1_5_h99",
+    "kind": "linear",
+    "params_sha256": "bf809859f61e11180e46cb1e073de2bd792fed1ad434ed8194be60fc5937a854",
+    "description": "V1.5 (BORSAI_V1_5_PREREG_20260814) portu: ufuk başına Ridge (getiri) ve L2-lojistik (P(kapanış > arz)), f1–f5, fold içi V1.3 ön işleme, iç LOOCV ile hiperparametre seçimi.",
+    "algorithm": "V1_5_RIDGE_LOGIT",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "base_always_ceiling",
+    "kind": "rule",
+    "params_sha256": "0b27057479bd9244dc70cae6c01200d4fc544c5f65bf8be0c4362be5b5797780",
+    "description": "Her seans tavan: getiri = 1.1^h − 1; P(kapanış > arz) = 1.",
+    "algorithm": "ALWAYS_CEILING",
+    "training_n": 0,
+    "training_cutoff_date": null
+  },
+  {
+    "model_id": "base_train_median",
+    "kind": "rule",
+    "params_sha256": "56bb6c78671769dd1b47fa64f6520f6bb0c2eb90ff6c9fb14fa9d829a01307fb",
+    "description": "Getiri = eğitimdeki R_h'lerin medyanı (legacy V1_BASE_MEDIAN).",
+    "algorithm": "TRAIN_MEDIAN",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "base_train_mean",
+    "kind": "rule",
+    "params_sha256": "8315d19ee941291a5bc2dab2d900ce8774f5f11a45c1819488168d175221d61a",
+    "description": "Getiri = eğitimdeki R_h'lerin ortalaması (legacy V1_BASE_MEAN).",
+    "algorithm": "TRAIN_MEAN",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "base_zero",
+    "kind": "rule",
+    "params_sha256": "9d2f8f82a3253291b0656c53b60d000c978af741fdcd7a619200d96fcbc9db9d",
+    "description": "Getiri = 0 (legacy V1_BASE_ZERO).",
+    "algorithm": "ZERO",
+    "training_n": 0,
+    "training_cutoff_date": null
+  },
+  {
+    "model_id": "base_rate",
+    "kind": "rule",
+    "params_sha256": "eb91ae3d429e6ba4567b9affb19b7dcf408123ed30f89a1dea9e3262f9ffd4d9",
+    "description": "P(kapanış > arz) = eğitimdeki Y_h ortalaması (legacy V1_BASE_RATE).",
+    "algorithm": "BASE_RATE",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "base_last10_rate",
+    "kind": "rule",
+    "params_sha256": "8b0a098d1ad639d7b814f3ff87464330be7872968a4880628cd47abaf2e2ddda",
+    "description": "P(kapanış > arz) = eğitim sırasındaki (first_trading_date, ticker) son 10 arzın Y_h ortalaması (AUDIT §3b).",
+    "algorithm": "LAST10_BASE_RATE",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "v1_6_h99",
+    "kind": "linear",
+    "params_sha256": "b40b7cb54cde57121788d1be974c2d1eae140b72c3e1849f23eb8145a213e598",
+    "description": "V1.5 + genişletilmiş ızgara (SPEC_V1_6): Ridge α ∈ {0.001 … 10000, INF}, Logit C ∈ {ZERO, 0.0001 … 100}; INF/ZERO kapalı biçim sabit terim; aday başına yakınsamama. Özellikler, ön işleme ve fold planı V1.5 ile aynı.",
+    "algorithm": "V1_5_RIDGE_LOGIT",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "v1_5_market20_v0",
+    "kind": "market20",
+    "params_sha256": "9d6df5ece7151905f33134526604b1f947744b95fc9ef0340500f4eb86fe006a",
+    "description": "V1.5 aynen + f6 = XU100(S0)/XU100(S20) − 1 (20 seanslık endeks getirisi, Takvim B, ref_date = T; SPEC_MARKET20_V0). f6 impute edilmez; hesaplanamıyorsa RET.",
+    "algorithm": "V1_5_RIDGE_LOGIT",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "pb_v0",
+    "kind": "pb",
+    "params_sha256": "97c3b287f90a586464db7b2bca0777173a8e89aa51d0e4d609e8a672328fd003",
+    "description": "Talep toplama öncesi model (SPEC_PB_V0): ufuk başına Ridge (getiri) ve L2-lojistik (P(kapanış > arz)), SPK onaylı planlanan yapıdan pb1–pb3, V1.6 ızgarası; bilgi kesimi ilk talep toplama günü B(k).",
+    "algorithm": "V1_5_RIDGE_LOGIT",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "ceiling_hazard_v0",
+    "kind": "hazard",
+    "params_sha256": "caa4dc867a9fc20d9f57cf6269e157ee1fafc9527c5144e53797bf48af0ffb67",
+    "description": "Tavan serisi, ayrık zamanlı hazard (SPEC_CEILING_V0): 3 gün-grubu sabiti + f1 (ln arz büyüklüğü), f2 (halka açıklık), f3 (talep katı) katsayıları, L2 (λ iç arz-bırak CV ile). Çıktı S_k = P(seri ≥ k), k = 1..10.",
+    "algorithm": "discrete_time_hazard_logit_l2",
+    "training_n": 97,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "ceiling_hazard_v0@INF",
+    "kind": "hazard",
+    "params_sha256": "c5ac8085fd76b5bcdee328e51a4114ef85d5cae1cab23b51ea9b1232bc660c7e",
+    "description": "ceiling_hazard_v0 ızgarasının uç noktası (λ = INF) kural olarak: yalnız 3 gün-grubu sabiti, özellik yok (SPEC_CEILING_V0 §10-4). Eğitim kümesi ve kesim modelinkiyle aynı.",
+    "algorithm": "discrete_time_hazard_logit_l2",
+    "training_n": 97,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "pb_ceiling_v0",
+    "kind": "hazard",
+    "params_sha256": "7fb7a41e48ea2259acbbfc754063be3dbdd23525aff34b574278b3f00dcbc5aa",
+    "description": "Talep toplama öncesi tavan serisi (SPEC_PB_V0 §9): SPEC_CEILING_V0 hazard modeli, özellikler pb1, pb2 (2 katsayı + 3 gün sabiti), 99 arz, bilgi kesimi ilk talep toplama günü B(k).",
+    "algorithm": "discrete_time_hazard_logit_l2",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "pb_ceiling_v0@INF",
+    "kind": "hazard",
+    "params_sha256": "6a5be1b952f5c7e01b0c55d366f6e3b50345ce7fe6021f9f70df60bf43b94aa0",
+    "description": "pb_ceiling_v0 ızgarasının uç noktası (λ = INF) kural olarak: yalnız 3 gün-grubu sabiti, özellik yok (SPEC_PB_V0 §9). Eğitim kümesi ve kesim modelinkiyle aynı.",
+    "algorithm": "discrete_time_hazard_logit_l2",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "base_km_expanding",
+    "kind": "km",
+    "params_sha256": "8120c274de6fcf49dd880c9ce8e2639976d6a8a7daaae79e32d2ac6218f39722",
+    "description": "Tavan serisi Kaplan–Meier (SPEC_CEILING_V0 §10-1): S_k = Π_{d≤k}(1 − olay_d/risk_d), eğitimdeki tüm arzların kişi-dönem satırlarından; risk_d = 0 ise önceki günün hazard'ı.",
+    "algorithm": "KM_EXPANDING",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "base_km_last10",
+    "kind": "km",
+    "params_sha256": "4bd27e6a5484d5e9161e2c65f5b104f5cad864e9f1cc7307ff2051917ea77537",
+    "description": "Tavan serisi son-10 Kaplan–Meier (SPEC_CEILING_V0 §10-2): her d için yalnız (j, d) satırı eğitimde bulunan son 10 arz (first_trading_date, ticker sırasıyla).",
+    "algorithm": "KM_LAST10",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "ceiling_path_v0",
+    "kind": "ceiling_path",
+    "params_sha256": "3e97e8788266f807a06604316d562de939a3e84ab6fcc9c0be1ce87790c6952d",
+    "description": "Tavan yolu (SPEC_CEILING_PATH_V0): dondurulmuş ceiling_hazard_v0'ın S_k'sı + deterministik limit yolu C_h + kırılma sonrası ampirik hücreler; R_h dağılımının medyanı, p_up ve kuantilleri, h = 1..10. Yeni serbest parametre 0.",
+    "algorithm": "CEILING_PATH_MIXTURE_EQ_V0",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "ceiling_path_v0@INF",
+    "kind": "ceiling_path",
+    "params_sha256": "5e3692a82e254b6c78ec1b82d626f3560ae5568098b111d39979609e41f06abd",
+    "description": "Tavan yolu sıfır modeli (MECHANICS_BASE; SPEC_CEILING_PATH_V0): ceiling_hazard_v0@INF'in yalnız gün-grubu sabitleri + aynı limit yolu ve hücreler; özellik yok.",
+    "algorithm": "CEILING_PATH_MIXTURE_EQ_V0",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "pb_ceiling_path_v0",
+    "kind": "ceiling_path",
+    "params_sha256": "3d1e2f41f5d098ab228ff9c51ce61a5d31741766b3cdeebd8cc651e7ce34e03d",
+    "description": "Talep toplama öncesi tavan yolu (SPEC_CEILING_PATH_V0): dondurulmuş pb_ceiling_v0'ın S_k'sı + aynı limit yolu ve hücreler; backtest kesimi ilk talep toplama günü B(k); f3 istemez.",
+    "algorithm": "CEILING_PATH_MIXTURE_EQ_V0",
+    "training_n": 99,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "ceiling_hazard_v1_clip",
+    "kind": "hazard",
+    "params_sha256": "f3a147535242f8bde381ea68113f295f0a7dcdb5dd8a1046a3c1a55b0308241d",
+    "description": "Tavan serisi v1 (a) kırpma (SPEC_HAZARD_V1): ceiling_hazard_v0 aynen, ama f1 (ham TL), f2, f3 üçü de eğitim Type-7 [p05, p95]'ine kırpılır; H99'un f3'lü 97 arzı; 3 gün sabiti + 3 katsayı.",
+    "algorithm": "discrete_time_hazard_logit_l2",
+    "training_n": 97,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "ceiling_hazard_v1_real",
+    "kind": "hazard",
+    "params_sha256": "d81dad3d60c18ba23298d0ca4c4e315b60cc665d34781ca52f06d001d21ba09d",
+    "description": "Tavan serisi v1 (b) reel büyüklük (SPEC_HAZARD_V1): f1 yerine f1r = ln(büyüklük / (TÜFE_{T−2} / 100)) (TÜİK TÜFE 2025=100); f1r, f2, f3 eğitim [p05, p95]'ine kırpılır; H99'un f3'lü 97 arzı; 3 gün sabiti + 3 katsayı.",
+    "algorithm": "discrete_time_hazard_logit_l2",
+    "training_n": 97,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "ceiling_hazard_v1_pooled",
+    "kind": "hazard",
+    "params_sha256": "e03e71e0bb6e7c65ceb9cdf0ee95b25334749362549428077ab670dd3f261402",
+    "description": "Tavan serisi v1 (c) havuz (SPEC_HAZARD_V1): f1r, f2, f3 (kırpmalı) + cezasız rejim terimi r = 1[tahsis rejimi ≠ EQUAL_DIST_20230330]; eğitim H99 + eski kohortun açık kümesi (165 arz, training_table_v2); canlıda r = 0.",
+    "algorithm": "discrete_time_hazard_logit_l2",
+    "training_n": 165,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "ceiling_hazard_v1_pooled@INF",
+    "kind": "hazard",
+    "params_sha256": "7d7c9d1ee5a6a0c255fcf98103f872239439436a9e2da478601837d5eaf3f361",
+    "description": "ceiling_hazard_v1_pooled ızgarasının uç noktası (λ = INF) kural olarak: 3 gün-grubu sabiti + rejim sabiti δ, özellik yok (SPEC_HAZARD_V1 §2); (γ, δ) Newton. Eğitim kümesi ve kesim modelinkiyle aynı.",
+    "algorithm": "discrete_time_hazard_logit_l2",
+    "training_n": 165,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "fall_d10_v0_h99",
+    "kind": "fall",
+    "params_sha256": "b15eaa8cb1f76441088173e7582f636afe281855d924d23220d6ae076fe89beb",
+    "description": "Düşen arz v0 (SPEC_C_V0): D10 ve D5'te P(kapanış > arz) için L2-lojistik (V1.6 C ızgarası, iç LOOCV Brier); özellikler f1r (TÜFE ile reel büyüklük), ln f3 (talep katı), ek satış bayrağı; H99'un f3 ve ek satış alanı dolu 94 arzı. Düşme olasılığı = 1 − p_up.",
+    "algorithm": "l2_logit_v1_6_grid",
+    "training_n": 94,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "fall_d10_v0_pooled",
+    "kind": "fall",
+    "params_sha256": "d2c5d549961173468486c159045c9d4361bd034e2a5c6bb5494aad68477f7c64",
+    "description": "Düşen arz v0 (SPEC_C_V0): h99 ile aynı özellikler ve model (f1r, ln f3, ek satış bayrağı; L2-lojistik, V1.6 C ızgarası); eğitim H99 + eski kohortun açık kümesi (161 arz, training_table_v2); rejim terimi yok.",
+    "algorithm": "l2_logit_v1_6_grid",
+    "training_n": 161,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "fall_d10_v0_addsale",
+    "kind": "fall",
+    "params_sha256": "b95fc3ecee262f7b58441215d9c65ba682808c5a2cddd643f2e05f64640b8e09",
+    "description": "Düşen arz v0 (SPEC_C_V0): yalnız ek satış bayrağı (1[additional_sale_shares > 0]) ile L2-lojistik (V1.6 C ızgarası); eğitim H99 + açık küme, ek satış alanı dolu 165 arz; f3 istemez.",
+    "algorithm": "l2_logit_v1_6_grid",
+    "training_n": 165,
+    "training_cutoff_date": "2026-08-19"
+  },
+  {
+    "model_id": "fall_d10_v0_pooled@ZERO",
+    "kind": "fall",
+    "params_sha256": "7c23b9236c0a0ccc4192d8da58f0e1745fbd7443f1a6e78e2a056580fbfd8c3d",
+    "description": "fall_d10_v0_pooled ızgarasının uç noktası (C = ZERO) kural olarak: ufuk başına sabit p_up = eğitim oranı (kapalı biçim), özellik yok (SPEC_C_V0 §2). Eğitim kümesi, plan ve f3 filtre dışlaması modelinkiyle aynı.",
+    "algorithm": "l2_logit_v1_6_grid",
+    "training_n": 161,
+    "training_cutoff_date": "2026-08-19"
+  }
+]

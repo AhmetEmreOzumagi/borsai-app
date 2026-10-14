@@ -1,0 +1,216 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "KTLEV",
+  "company": "Katılımevim Tasarruf Finansman A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "474210",
+      "source_id": "KAP_1157126_EK1",
+      "source_document": "KAP 1157126 ek 1",
+      "source_published_at": "2023-06-08T12:25:11+03:00",
+      "source_sha256": "9a4a97bc6d1e46e44b885b9a0803bc7ae385a86bdb7ca10ca3704b392cf1f105",
+      "source_path": "registry/oot/source_docs/KTLEV/KAP_1157126_ek1.pdf",
+      "quote": "olmak üzere toplam 474.210 yatırımcı 60.000.000 TL nominal değerli payın alımını gerçekleştirmiştir.",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "belge 'halka arza toplamda 474.210 yatırımcı katılmıştır' da diyor; tabloda dağıtılan yatırımcı sayısı da 474.210",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "474.210",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "473340",
+        "domestic_institutional": "30",
+        "foreign_retail": "839",
+        "foreign_institutional": "1"
+      },
+      "source_id": "KAP_1157126_EK1",
+      "source_document": "KAP 1157126 ek 1",
+      "source_published_at": "2023-06-08T12:25:11+03:00",
+      "source_sha256": "9a4a97bc6d1e46e44b885b9a0803bc7ae385a86bdb7ca10ca3704b392cf1f105",
+      "source_path": "registry/oot/source_docs/KTLEV/KAP_1157126_ek1.pdf",
+      "quote": [
+        "- Bireysel Yatırımcı (*) 473.340 33.967.240 56,61",
+        "- Kurumsal Yatırımcı (**) 30 25.793.129 42,99",
+        "- Bireysel Yatırımcı (*) 839 64.631 0,11",
+        "- Kurumsal Yatırımcı (**) 1 175.000 0,29"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "retail = yurt içi bireysel (gerçek ve tüzel kişiler); ilk iki satır Yurt İçi, son iki satır Yurt Dışı başlığı altında",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "Borsa'da satış; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır', grup katı yok",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "Borsa'da satış; grup tahsisatı ve grup katı yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "Borsa'da satış; grup tahsisatı ve grup katı yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "33967240",
+        "domestic_institutional": "25793129",
+        "foreign_retail": "64631",
+        "foreign_institutional": "175000"
+      },
+      "source_id": "KAP_1157126_EK1",
+      "source_document": "KAP 1157126 ek 1",
+      "source_published_at": "2023-06-08T12:25:11+03:00",
+      "source_sha256": "9a4a97bc6d1e46e44b885b9a0803bc7ae385a86bdb7ca10ca3704b392cf1f105",
+      "source_path": "registry/oot/source_docs/KTLEV/KAP_1157126_ek1.pdf",
+      "quote": [
+        "- Bireysel Yatırımcı (*) 473.340 33.967.240 56,61",
+        "- Kurumsal Yatırımcı (**) 30 25.793.129 42,99",
+        "- Bireysel Yatırımcı (*) 839 64.631 0,11",
+        "- Kurumsal Yatırımcı (**) 1 175.000 0,29"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "56.61",
+      "source_id": "KAP_1157126_EK1",
+      "source_document": "KAP 1157126 ek 1",
+      "source_published_at": "2023-06-08T12:25:11+03:00",
+      "source_sha256": "9a4a97bc6d1e46e44b885b9a0803bc7ae385a86bdb7ca10ca3704b392cf1f105",
+      "source_path": "registry/oot/source_docs/KTLEV/KAP_1157126_ek1.pdf",
+      "quote": "- Bireysel Yatırımcı (*) 473.340 33.967.240 56,61",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "42.99",
+      "source_id": "KAP_1157126_EK1",
+      "source_document": "KAP 1157126 ek 1",
+      "source_published_at": "2023-06-08T12:25:11+03:00",
+      "source_sha256": "9a4a97bc6d1e46e44b885b9a0803bc7ae385a86bdb7ca10ca3704b392cf1f105",
+      "source_path": "registry/oot/source_docs/KTLEV/KAP_1157126_ek1.pdf",
+      "quote": "- Kurumsal Yatırımcı (**) 30 25.793.129 42,99",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.29",
+      "source_id": "KAP_1157126_EK1",
+      "source_document": "KAP 1157126 ek 1",
+      "source_published_at": "2023-06-08T12:25:11+03:00",
+      "source_sha256": "9a4a97bc6d1e46e44b885b9a0803bc7ae385a86bdb7ca10ca3704b392cf1f105",
+      "source_path": "registry/oot/source_docs/KTLEV/KAP_1157126_ek1.pdf",
+      "quote": "- Kurumsal Yatırımcı (**) 1 175.000 0,29",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "İnfo Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1155790_EK1",
+      "source_document": "KAP 1155790 ek 1",
+      "source_published_at": "2023-06-02T18:16:39+03:00",
+      "source_sha256": "4270fe1595370e30c80e89ebb788fcfe2391440419f3b553359dfa4bfd2ebd1c",
+      "source_path": "registry/oot/source_docs/KTLEV/KAP_1155790_ek1.pdf",
+      "quote": "aracılk edecek İnfo Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "TSSD OCR metni ('aracılk' OCR hatası); sonuç bildirimini yayımlayan kurum da İNFO YATIRIM MENKUL DEĞERLER A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1157361",
+      "source_document": "KAP 1157361",
+      "source_published_at": "2023-06-08T18:10:18+03:00",
+      "source_sha256": "d46cc05760f48441ba5d77d4acb3a4ab06bc35b81256b82bf77bdaf885f40675",
+      "source_path": "registry/oot/source_docs/KTLEV/KAP_1157361_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_1157361",
+      "source_document": "KAP 1157361",
+      "source_published_at": "2023-06-08T18:10:18+03:00",
+      "source_sha256": "d46cc05760f48441ba5d77d4acb3a4ab06bc35b81256b82bf77bdaf885f40675",
+      "source_path": "registry/oot/source_docs/KTLEV/KAP_1157361_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1157361": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1157361",
+      "published_at": "2023-06-08T18:10:18+03:00",
+      "sha256": "d46cc05760f48441ba5d77d4acb3a4ab06bc35b81256b82bf77bdaf885f40675",
+      "path": "registry/oot/source_docs/KTLEV/KAP_1157361_bildirim.pdf"
+    },
+    "KAP_1157126_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1157126 ek 1",
+      "published_at": "2023-06-08T12:25:11+03:00",
+      "sha256": "9a4a97bc6d1e46e44b885b9a0803bc7ae385a86bdb7ca10ca3704b392cf1f105",
+      "path": "registry/oot/source_docs/KTLEV/KAP_1157126_ek1.pdf"
+    },
+    "KAP_1155790_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1155790 ek 1",
+      "published_at": "2023-06-02T18:16:39+03:00",
+      "sha256": "4270fe1595370e30c80e89ebb788fcfe2391440419f3b553359dfa4bfd2ebd1c",
+      "path": "registry/oot/source_docs/KTLEV/KAP_1155790_ek1.pdf"
+    }
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "MEDTR",
+  "company": "Meditera Tıbbi Malzeme Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "23590",
+      "source_id": "KAP_944472",
+      "source_document": "KAP 944472",
+      "source_published_at": "2021-06-28T14:37:45+03:00",
+      "source_sha256": "2f6639066faad510b9e9efc84651546a3f642f8159cee185f5e2a79a11f7a124",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944472_bildirim.pdf",
+      "quote": "toplamda 23.590 yatırımcıya dağıtım gerçekleştirilmiştir",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden sayısı yazılmıyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "23.590",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "22865",
+        "company_employees": "589",
+        "domestic_institutional": "130",
+        "foreign_institutional": "6"
+      },
+      "source_id": "KAP_944472",
+      "source_document": "KAP 944472",
+      "source_published_at": "2021-06-28T14:37:45+03:00",
+      "source_sha256": "2f6639066faad510b9e9efc84651546a3f642f8159cee185f5e2a79a11f7a124",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944472_bildirim.pdf",
+      "quote": "22.865 adet yurtiçi bireysel yatırımcıya, 589 adet çalışanlardan olan yatırımcıya, 130 adet yurtiçi kurumsal yatırımcıya ve 6 adet yurtdışı kurumsal yatırımcıya olmak üzere toplamda 23.590 yatırımcıya dağıtım gerçekleştirilmiştir",
+      "semantic": "ALLOCATED",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "22.865",
+        "Çalışanlar": "589",
+        "Yurtiçi Kurumsal": "130",
+        "Yurtdışı Kurumsal": "6"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '22.865', 'Çalışanlar': '589', 'Yurtiçi Kurumsal': '130', 'Yurtdışı Kurumsal': '6'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "8.79",
+      "source_id": "KAP_944472",
+      "source_document": "KAP 944472",
+      "source_published_at": "2021-06-28T14:37:45+03:00",
+      "source_sha256": "2f6639066faad510b9e9efc84651546a3f642f8159cee185f5e2a79a11f7a124",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944472_bildirim.pdf",
+      "quote": "bireysel yatırımcı kategorisinde tahsisatın 8,79 katı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "15.78",
+      "source_id": "KAP_944472",
+      "source_document": "KAP 944472",
+      "source_published_at": "2021-06-28T14:37:45+03:00",
+      "source_sha256": "2f6639066faad510b9e9efc84651546a3f642f8159cee185f5e2a79a11f7a124",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944472_bildirim.pdf",
+      "quote": "yurtiçi kurumsal yatırımcı kategorisinde tahsisatın 15,78 katı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "4.32",
+      "source_id": "KAP_944472",
+      "source_document": "KAP 944472",
+      "source_published_at": "2021-06-28T14:37:45+03:00",
+      "source_sha256": "2f6639066faad510b9e9efc84651546a3f642f8159cee185f5e2a79a11f7a124",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944472_bildirim.pdf",
+      "quote": "yurtdışı kurumsal yatırımcı kategorisinde ise tahsisatın 4,32 katı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "4130000",
+        "company_employees": "70000",
+        "domestic_institutional": "2100000",
+        "foreign_institutional": "700000"
+      },
+      "source_id": "KAP_944472_EK1",
+      "source_document": "KAP 944472 ek 1",
+      "source_published_at": "2021-06-28T14:37:45+03:00",
+      "source_sha256": "56d2c2d9b40ef85a8142750aa38e3925c16c88c0317e0a19b968ddeae5971da1",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944472_ek1.pdf",
+      "quote": [
+        "4.130.000 %59,0 36.312.757,00 %50,1 22.865 4.130.000 %59,0",
+        "70.000 %1,0 72.952,00 %0,1 589 70.000 %1,0",
+        "2.100.000 %30,0 33.140.717,00 %45,7 130 2.100.000 %30,0",
+        "700.000 %10,0 3.022.157,00 %4,2 6 700.000 %10,0"
+      ],
+      "unit": "lot",
+      "note": "çalışanlar grubu katı 1,04 (belgede)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "4.130.000",
+        "Çalışanlar": "70.000",
+        "Yurtiçi Kurumsal": "2.100.000",
+        "Yurtdışı Kurumsal": "700.000"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '4.130.000', 'Çalışanlar': '70.000', 'Yurtiçi Kurumsal': '2.100.000', 'Yurtdışı Kurumsal': '700.000'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "59.0",
+      "source_id": "KAP_944472_EK1",
+      "source_document": "KAP 944472 ek 1",
+      "source_published_at": "2021-06-28T14:37:45+03:00",
+      "source_sha256": "56d2c2d9b40ef85a8142750aa38e3925c16c88c0317e0a19b968ddeae5971da1",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944472_ek1.pdf",
+      "quote": "4.130.000 %59,0 36.312.757,00 %50,1 22.865 4.130.000 %59,0",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "59,0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "30.0",
+      "source_id": "KAP_944472_EK1",
+      "source_document": "KAP 944472 ek 1",
+      "source_published_at": "2021-06-28T14:37:45+03:00",
+      "source_sha256": "56d2c2d9b40ef85a8142750aa38e3925c16c88c0317e0a19b968ddeae5971da1",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944472_ek1.pdf",
+      "quote": "2.100.000 %30,0 33.140.717,00 %45,7 130 2.100.000 %30,0",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "30,0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "10.0",
+      "source_id": "KAP_944472_EK1",
+      "source_document": "KAP 944472 ek 1",
+      "source_published_at": "2021-06-28T14:37:45+03:00",
+      "source_sha256": "56d2c2d9b40ef85a8142750aa38e3925c16c88c0317e0a19b968ddeae5971da1",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944472_ek1.pdf",
+      "quote": "700.000 %10,0 3.022.157,00 %4,2 6 700.000 %10,0",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "10,0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç bildirimi ve eki dağıtım yöntemini adlandırmıyor; TSSD penceresi başvuru ayrıntısını izahnameye atfediyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Gedik Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_944472",
+      "source_document": "KAP 944472",
+      "source_published_at": "2021-06-28T14:37:45+03:00",
+      "source_sha256": "2f6639066faad510b9e9efc84651546a3f642f8159cee185f5e2a79a11f7a124",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944472_bildirim.pdf",
+      "quote": "Gedik Yatırım Menkul Değerler A.Ş. liderliğindeki konsorsiyum aracılığı ile",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": "GEDİK YATIRIM MENKUL DEĞERLER A.Ş.",
+      "codex_check": {
+        "codex_value": "GEDİK YATIRIM MENKUL DEĞERLER A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "bildirimde konsorsiyum lideri olarak yazılı"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR) penceresinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_944905",
+      "source_document": "KAP 944905",
+      "source_published_at": "2021-06-29T18:10:47+03:00",
+      "source_sha256": "daf82b556c57862d2f21a0a2a056aea170d12fa1b1c5aa30921b0adfdbbb8388",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944905_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_944905",
+      "source_document": "KAP 944905",
+      "source_published_at": "2021-06-29T18:10:47+03:00",
+      "source_sha256": "daf82b556c57862d2f21a0a2a056aea170d12fa1b1c5aa30921b0adfdbbb8388",
+      "source_path": "registry/oot/source_docs/MEDTR/KAP_944905_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_944905": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 944905",
+      "published_at": "2021-06-29T18:10:47+03:00",
+      "sha256": "daf82b556c57862d2f21a0a2a056aea170d12fa1b1c5aa30921b0adfdbbb8388",
+      "path": "registry/oot/source_docs/MEDTR/KAP_944905_bildirim.pdf"
+    },
+    "KAP_944472": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 944472",
+      "published_at": "2021-06-28T14:37:45+03:00",
+      "sha256": "2f6639066faad510b9e9efc84651546a3f642f8159cee185f5e2a79a11f7a124",
+      "path": "registry/oot/source_docs/MEDTR/KAP_944472_bildirim.pdf"
+    },
+    "KAP_944472_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 944472 ek 1",
+      "published_at": "2021-06-28T14:37:45+03:00",
+      "sha256": "56d2c2d9b40ef85a8142750aa38e3925c16c88c0317e0a19b968ddeae5971da1",
+      "path": "registry/oot/source_docs/MEDTR/KAP_944472_ek1.pdf"
+    }
+  }
+}

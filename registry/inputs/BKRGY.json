@@ -1,0 +1,332 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "BKRGY",
+  "company": "Bakırcı Gayrimenkul Yatırım Ortaklığı A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-22T14:48:03+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul ve aracı kurum) ve SPK bülteni; hepsi ilk işlem gününden önce yayımlanmış.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok.",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok.",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0) (H99 PB CSV tanımı), resmi belgede açıkça yazan toplamla çapraz denetlendi.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı."
+  ],
+  "first_trading_date_source": "KAP_1655891",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "12.93",
+      "source_id": "KAP_1655292",
+      "source_document": "KAP 1655292",
+      "source_published_at": "2026-08-27T11:34:59+03:00",
+      "source_sha256": "43a07a80cd945fe9cc9138d9a296c76878d57e0a3460c474e8d750389471545d",
+      "source_path": "registry/source_docs/BKRGY/KAP_1655292_bildirim.pdf",
+      "quote": "HALKA ARZ FİYATI 12,93",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1655263",
+          "quote": "HALKA ARZ FİYATI 12,93"
+        },
+        {
+          "source_id": "SPK_BULTEN_2026_52",
+          "quote": "12,93 TL sabit fiyat"
+        },
+        {
+          "source_id": "KAP_1655891",
+          "quote": "Baz Fiyat (TL) 12,93"
+        }
+      ],
+      "note": "birincil kaynak 1655292 (Düzeltme; yalnız dağıtıma esas tahsisat oranları düzeltildi); özgün 1655263 aynı değeri taşır"
+    },
+    "shares_offered": {
+      "value": "167000000",
+      "source_id": "KAP_1655292",
+      "source_document": "KAP 1655292",
+      "source_published_at": "2026-08-27T11:34:59+03:00",
+      "source_sha256": "43a07a80cd945fe9cc9138d9a296c76878d57e0a3460c474e8d750389471545d",
+      "source_path": "registry/source_docs/BKRGY/KAP_1655292_bildirim.pdf",
+      "quote": "SATIŞA SUNULAN PAY ADEDİ 167.000.000",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1655292_EK1",
+          "quote": "satışa sunulan 167.000.000 TL nominal değerli payların tamamı dağıtıma konu edilerek"
+        },
+        {
+          "source_id": "KAP_1655263",
+          "quote": "SATIŞA SUNULAN PAY ADEDİ 167.000.000"
+        },
+        {
+          "source_id": "KAP_1655891",
+          "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 167.000.000"
+        }
+      ],
+      "note": "birincil kaynak 1655292 (Düzeltme; yalnız dağıtıma esas tahsisat oranları düzeltildi); özgün 1655263 aynı değeri taşır"
+    },
+    "ipo_size_tl": {
+      "value": "2159310000",
+      "source_id": "KAP_1655292",
+      "source_document": "KAP 1655292",
+      "source_published_at": "2026-08-27T11:34:59+03:00",
+      "source_sha256": "43a07a80cd945fe9cc9138d9a296c76878d57e0a3460c474e8d750389471545d",
+      "source_path": "registry/source_docs/BKRGY/KAP_1655292_bildirim.pdf",
+      "quote": "HALKA ARZ BÜYÜKLÜĞÜ (TL) 2.159.310.000",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1655263",
+          "quote": "HALKA ARZ BÜYÜKLÜĞÜ (TL) 2.159.310.000"
+        },
+        {
+          "source_id": "KAP_1655292_EK1",
+          "quote": "2.159.310.000,00 TL halka arz büyüklüğüne sahip"
+        }
+      ],
+      "note": "birincil kaynak 1655292 (Düzeltme; yalnız dağıtıma esas tahsisat oranları düzeltildi); özgün 1655263 aynı değeri taşır"
+    },
+    "post_ipo_share_capital": {
+      "value": "668000000",
+      "source_id": "KAP_1655891",
+      "source_document": "KAP 1655891",
+      "source_published_at": "2026-08-28T18:11:04+03:00",
+      "source_sha256": "4fd3d93128c6cc83bb34ba36275f8f7e673094d896aaff99ad39221d312a3b36",
+      "source_path": "registry/source_docs/BKRGY/KAP_1655891_bildirim.pdf",
+      "quote": "sermayesini temsil eden 668.000.000 TL nominal değerli payları",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2026_52",
+          "quote": "Yatırım Ortaklığı AŞ 501.000.000 668.000.000 167.000.000 - - - 12,93"
+        }
+      ]
+    },
+    "capital_increase_shares": {
+      "value": "167000000",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/BKRGY/SPK_BULTEN_2026-52.pdf",
+      "quote": "Yatırım Ortaklığı AŞ 501.000.000 668.000.000 167.000.000 - - - 12,93",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1655292_EK1",
+          "quote": "satışa sunulan 167.000.000 TL nominal değerli payların tamamı dağıtıma konu edilerek"
+        }
+      ],
+      "locator": "SPK tablosu Bedelli sütunu; Mevcut Pay Satışı '-'; sonuç belgesi tamamının dağıtıldığını yazar"
+    },
+    "existing_share_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/BKRGY/SPK_BULTEN_2026-52.pdf",
+      "quote": "Yatırım Ortaklığı AŞ 501.000.000 668.000.000 167.000.000 - - - 12,93",
+      "locator": "SPK tablosu Mevcut Pay Satışı sütunu '-'"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/BKRGY/SPK_BULTEN_2026-52.pdf",
+      "quote": "Yatırım Ortaklığı AŞ 501.000.000 668.000.000 167.000.000 - - - 12,93",
+      "locator": "SPK tablosu Ek Pay Satışı sütunu '-': onaylı ek satış yok"
+    },
+    "total_demand_multiple": {
+      "value": "1.77",
+      "source_id": "KAP_1655292_EK1",
+      "source_document": "KAP 1655292 ek 1",
+      "source_published_at": "2026-08-27T11:34:59+03:00",
+      "source_sha256": "4f766ab307b12ec8966d291761b292e52ad3b4b907f7564d6c88eed30c700c78",
+      "source_path": "registry/source_docs/BKRGY/KAP_1655292_ek1.pdf",
+      "quote": "toplam halka arz büyüklüğünün 1,77 katı talep toplanmıştır",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1655263_EK1",
+          "quote": "toplam halka arz büyüklüğünün 1,77 katı talep toplanmıştır"
+        }
+      ],
+      "origin": "SOURCE_REPORTED",
+      "note": "birincil kaynak 1655292 (Düzeltme; yalnız dağıtıma esas tahsisat oranları düzeltildi); özgün 1655263 aynı değeri taşır"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_1655292_EK1",
+      "source_document": "KAP 1655292 ek 1",
+      "source_published_at": "2026-08-27T11:34:59+03:00",
+      "source_sha256": "4f766ab307b12ec8966d291761b292e52ad3b4b907f7564d6c88eed30c700c78",
+      "source_path": "registry/source_docs/BKRGY/KAP_1655292_ek1.pdf",
+      "locator": "belgede 'filtre' ifadesi yok (H99 kuralı: açık ifade yoksa NOT_SPECIFIED)"
+    },
+    "first_trading_date": {
+      "value": "2026-09-02",
+      "source_id": "KAP_1655891",
+      "source_document": "KAP 1655891",
+      "source_published_at": "2026-08-28T18:11:04+03:00",
+      "source_sha256": "4fd3d93128c6cc83bb34ba36275f8f7e673094d896aaff99ad39221d312a3b36",
+      "source_path": "registry/source_docs/BKRGY/KAP_1655891_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 02/09/2026"
+    },
+    "bookbuilding_start": {
+      "value": "2026-08-24",
+      "source_id": "KAP_1655891",
+      "source_document": "KAP 1655891",
+      "source_published_at": "2026-08-28T18:11:04+03:00",
+      "source_sha256": "4fd3d93128c6cc83bb34ba36275f8f7e673094d896aaff99ad39221d312a3b36",
+      "source_path": "registry/source_docs/BKRGY/KAP_1655891_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 24-25-26/08/2026",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1655292_EK1",
+          "quote": "24-26 Ağustos 2026"
+        }
+      ]
+    },
+    "bookbuilding_end": {
+      "value": "2026-08-26",
+      "source_id": "KAP_1655891",
+      "source_document": "KAP 1655891",
+      "source_published_at": "2026-08-28T18:11:04+03:00",
+      "source_sha256": "4fd3d93128c6cc83bb34ba36275f8f7e673094d896aaff99ad39221d312a3b36",
+      "source_path": "registry/source_docs/BKRGY/KAP_1655891_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 24-25-26/08/2026",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1655292_EK1",
+          "quote": "24-26 Ağustos 2026"
+        }
+      ]
+    },
+    "ipo_price_try": {
+      "value": "12.93",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/BKRGY/SPK_BULTEN_2026-52.pdf",
+      "quote": "12,93 TL sabit fiyat",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "501000000",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/BKRGY/SPK_BULTEN_2026-52.pdf",
+      "quote": "Yatırım Ortaklığı AŞ 501.000.000 668.000.000 167.000.000 - - - 12,93",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)"
+    },
+    "planned_post_ipo_capital": {
+      "value": "668000000",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/BKRGY/SPK_BULTEN_2026-52.pdf",
+      "quote": "Yatırım Ortaklığı AŞ 501.000.000 668.000.000 167.000.000 - - - 12,93",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)"
+    },
+    "planned_capital_increase_shares": {
+      "value": "167000000",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/BKRGY/SPK_BULTEN_2026-52.pdf",
+      "quote": "Yatırım Ortaklığı AŞ 501.000.000 668.000.000 167.000.000 - - - 12,93",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)"
+    },
+    "planned_existing_share_sale": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/BKRGY/SPK_BULTEN_2026-52.pdf",
+      "quote": "Yatırım Ortaklığı AŞ 501.000.000 668.000.000 167.000.000 - - - 12,93",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/BKRGY/SPK_BULTEN_2026-52.pdf",
+      "quote": "Yatırım Ortaklığı AŞ 501.000.000 668.000.000 167.000.000 - - - 12,93",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)"
+    },
+    "planned_base_offer_shares": {
+      "value": "167000000",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/BKRGY/SPK_BULTEN_2026-52.pdf",
+      "quote": "Yatırım Ortaklığı AŞ 501.000.000 668.000.000 167.000.000 - - - 12,93",
+      "cross_checks": [
+        {
+          "source_id": "KAP_1655292_EK1",
+          "quote": "Toplam 167.000.000 100,00%"
+        }
+      ],
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz); çapraz denetim açıkça yazan resmi toplamla"
+    },
+    "planned_max_offer_shares": {
+      "value": "167000000",
+      "source_id": "SPK_BULTEN_2026_52",
+      "source_document": "SPK Bülteni 2026/52",
+      "source_published_at": "2026-08-20T20:44:05+03:00",
+      "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "source_path": "registry/source_docs/BKRGY/SPK_BULTEN_2026-52.pdf",
+      "quote": "Yatırım Ortaklığı AŞ 501.000.000 668.000.000 167.000.000 - - - 12,93",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı"
+    }
+  },
+  "sources": {
+    "KAP_1655263": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1655263",
+      "published_at": "2026-08-27T09:35:29+03:00",
+      "sha256": "91c0f676762e140d2a98e78a288e106441e4b6082afcaacda1e9fd1a0014ae61",
+      "path": "registry/source_docs/BKRGY/KAP_1655263_bildirim.pdf"
+    },
+    "KAP_1655263_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1655263 ek 1",
+      "published_at": "2026-08-27T09:35:29+03:00",
+      "sha256": "fdbe76a51bf032193e33a99057a5bcb1458ec6415c21cf4a786bd7d4e026da10",
+      "path": "registry/source_docs/BKRGY/KAP_1655263_ek1.pdf"
+    },
+    "KAP_1655292": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1655292",
+      "published_at": "2026-08-27T11:34:59+03:00",
+      "sha256": "43a07a80cd945fe9cc9138d9a296c76878d57e0a3460c474e8d750389471545d",
+      "path": "registry/source_docs/BKRGY/KAP_1655292_bildirim.pdf"
+    },
+    "KAP_1655292_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1655292 ek 1",
+      "published_at": "2026-08-27T11:34:59+03:00",
+      "sha256": "4f766ab307b12ec8966d291761b292e52ad3b4b907f7564d6c88eed30c700c78",
+      "path": "registry/source_docs/BKRGY/KAP_1655292_ek1.pdf"
+    },
+    "KAP_1655891": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1655891",
+      "published_at": "2026-08-28T18:11:04+03:00",
+      "sha256": "4fd3d93128c6cc83bb34ba36275f8f7e673094d896aaff99ad39221d312a3b36",
+      "path": "registry/source_docs/BKRGY/KAP_1655891_bildirim.pdf"
+    },
+    "SPK_BULTEN_2026_52": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2026/52",
+      "published_at": "2026-08-20T20:44:05+03:00",
+      "sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+      "path": "registry/source_docs/BKRGY/SPK_BULTEN_2026-52.pdf"
+    }
+  }
+}

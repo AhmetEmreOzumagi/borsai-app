@@ -1,0 +1,261 @@
+{
+  "algorithm": "KM_LAST10",
+  "code_version": {
+    "borsai_dirty": true,
+    "borsai_source_sha256": "c873f64bf27bb6c0c1f6c0da343672b7f615d051beca8b59707ea4a1a6bf5ea8",
+    "git_commit": "d3fabada3a4b3b7ada1b03681c57c29a7e303be5"
+  },
+  "created_at": "2026-09-22T13:05:41+03:00",
+  "description": "Tavan serisi son-10 Kaplan–Meier (SPEC_CEILING_V0 §10-2): her d için yalnız (j, d) satırı eğitimde bulunan son 10 arz (first_trading_date, ticker sırasıyla).",
+  "feature_definitions": {},
+  "feature_ranges": {},
+  "features": [],
+  "horizons": {
+    "D1": {
+      "p_up": null,
+      "return": null
+    },
+    "D10": {
+      "p_up": null,
+      "return": null
+    },
+    "D3": {
+      "p_up": null,
+      "return": null
+    },
+    "D5": {
+      "p_up": null,
+      "return": null
+    }
+  },
+  "input_policy": {
+    "required_inputs": []
+  },
+  "model_id": "base_km_last10",
+  "preprocessing": null,
+  "reclose_rates": {
+    "a_a": 2,
+    "a_b": 61,
+    "n_a": 108,
+    "n_b": 441,
+    "r_a": 0.022935779816513763,
+    "r_b": 0.13914027149321267
+  },
+  "schema_version": "borsai.model/1",
+  "spec": {
+    "algorithm": "KM_LAST10",
+    "days": 10,
+    "description": "Tavan serisi son-10 Kaplan–Meier (SPEC_CEILING_V0 §10-2): her d için yalnız (j, d) satırı eğitimde bulunan son 10 arz (first_trading_date, ticker sırasıyla).",
+    "features": [],
+    "input_policy": {
+      "required_inputs": []
+    },
+    "last_n": 10,
+    "model_id": "base_km_last10",
+    "outputs": [
+      "hazard",
+      "S",
+      "P_L",
+      "P_close_ceiling"
+    ],
+    "plan_id": "H99_CEILING_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_MIN10IPO_5EV_5SV",
+    "reclose": {
+      "P_close": "k = 1: S_1; k >= 2: S_k + (1 − S_k)·r_{b(k)}",
+      "groups": {
+        "a": [
+          2,
+          3,
+          4
+        ],
+        "b": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "rate": "(a + 0.5)/(n + 1)"
+    },
+    "spec_document": {
+      "path": "docs/specs/SPEC_CEILING_V0.md",
+      "sha256": "d78cb234f6b3fedfd451ea5aafd31f14022d225ff4b981770868d45a963fc731"
+    },
+    "training": {
+      "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+      "description": "data/training_table.csv'nin 99 satırının hepsi, tablo sırasıyla (first_trading_date, ticker)",
+      "n": 99,
+      "set": "H99_ALL_ROWS"
+    }
+  },
+  "spec_sha256": "b457c4cfc1881aaa7ad5701c9452d8d5be36efe8e06aeefa6801e03a93359389",
+  "survival": {
+    "P_L": [
+      0.5,
+      0.09999999999999998,
+      0.07999999999999996,
+      0.064,
+      0.051199999999999996,
+      0.040959999999999996,
+      0.03276800000000002,
+      0.0262144,
+      0.03145728000000002,
+      0.014680064000000007,
+      0.058720256000000026
+    ],
+    "P_close_ceiling": [
+      0.5,
+      0.4137614678899083,
+      0.3355963302752294,
+      0.2730642201834863,
+      0.31544434389140275,
+      0.2801835294117648,
+      0.25197487782805433,
+      0.229407956561086,
+      0.20232765104072403,
+      0.18969017513122174
+    ],
+    "S": [
+      0.5,
+      0.4,
+      0.32000000000000006,
+      0.25600000000000006,
+      0.20480000000000007,
+      0.16384000000000007,
+      0.13107200000000005,
+      0.10485760000000005,
+      0.07340032000000003,
+      0.058720256000000026
+    ],
+    "hazard": [
+      0.5,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.3,
+      0.2
+    ]
+  },
+  "training": {
+    "cutoff_date": "2026-08-19",
+    "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+    "first_trading_date_range": [
+      "2023-09-22",
+      "2026-08-06"
+    ],
+    "labels_sha256": "9a69fc4c0bb483ca90a6fc1261cc48aac7a8f3e12dd8ef30731c9302037c0632",
+    "n": 99,
+    "n_events": 85,
+    "n_ipo": 99,
+    "n_pp_rows": 508,
+    "n_survivals": 423,
+    "set": "H99_ALL_ROWS",
+    "tickers": [
+      "HATSN",
+      "DMRGD",
+      "MEKAG",
+      "DOFER",
+      "MHRGY",
+      "BORLS",
+      "TABGD",
+      "VRGYO",
+      "MARBL",
+      "BINHO",
+      "EKOS",
+      "AGROT",
+      "SKYMD",
+      "CATES",
+      "BEGYO",
+      "KBORU",
+      "SURGY",
+      "MEGMT",
+      "AVPGY",
+      "PATEK",
+      "BORSK",
+      "LMKDC",
+      "ALVES",
+      "OBAMS",
+      "ARTMS",
+      "MOGAN",
+      "ODINE",
+      "ENTRA",
+      "RGYAS",
+      "LILAK",
+      "KOTON",
+      "ALTNY",
+      "KOCMT",
+      "HRKET",
+      "ONRYT",
+      "OZYSR",
+      "ALKLC",
+      "YIGIT",
+      "HOROZ",
+      "SEGMN",
+      "EFORC",
+      "DCTTR",
+      "BAHKM",
+      "TCKRC",
+      "GUNDG",
+      "AHSGY",
+      "OZATD",
+      "CEMZY",
+      "DURKN",
+      "BINBN",
+      "CGCAM",
+      "SMRVA",
+      "ARMGD",
+      "EGEGY",
+      "GLRMK",
+      "AKFIS",
+      "MOPAS",
+      "SERNT",
+      "BIGEN",
+      "DSTKF",
+      "VSNMD",
+      "ENDAE",
+      "KLYPV",
+      "BALSU",
+      "BULGS",
+      "DOFRB",
+      "ECOGR",
+      "VAKFA",
+      "PAHOL",
+      "ZERGY",
+      "ARFYE",
+      "MEYSU",
+      "FRMPL",
+      "ZGYO",
+      "UCAYM",
+      "NETCD",
+      "AKHAN",
+      "BESTE",
+      "ATATR",
+      "EMPAE",
+      "GENKM",
+      "SVGYO",
+      "LXGYO",
+      "MCARD",
+      "AAGYO",
+      "EKDMR",
+      "BETAE",
+      "SOHOE",
+      "ORZAX",
+      "GOLDA",
+      "EKIM",
+      "ISVEA",
+      "SSAAT",
+      "SARAE",
+      "METEN",
+      "ALBTN",
+      "MASFN",
+      "KARCL",
+      "QUICK"
+    ],
+    "tickers_sha256": "dca11401234cc3a66a155fd1b546ff1f26ac09b519278011b1ee84a47896174f"
+  }
+}

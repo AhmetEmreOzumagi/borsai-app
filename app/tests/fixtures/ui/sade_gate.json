@@ -1,0 +1,215 @@
+{
+  "entries": [
+    {
+      "model_id": "ceiling_hazard_v0",
+      "output": "S",
+      "horizon_or_k": null,
+      "question": "CEILING_DAYS",
+      "source": "scores.json",
+      "status": "OK",
+      "is_primary": true,
+      "featured": true,
+      "primary_metric": "RPS",
+      "primary_rules": [
+        "base_km_last10",
+        "base_km_expanding"
+      ],
+      "verdicts": [
+        "geçiyor",
+        "geçiyor"
+      ],
+      "label": null,
+      "live_n": 0
+    },
+    {
+      "model_id": "v1_5_h99",
+      "output": "return",
+      "horizon_or_k": "D1",
+      "question": "RETURN",
+      "source": "scores.json",
+      "status": "OK",
+      "is_primary": false,
+      "featured": false,
+      "primary_metric": "MAE",
+      "primary_rules": [
+        "base_train_median"
+      ],
+      "verdicts": [],
+      "label": null,
+      "live_n": 1
+    },
+    {
+      "model_id": "v1_5_h99",
+      "output": "return",
+      "horizon_or_k": "D3",
+      "question": "RETURN",
+      "source": "scores.json",
+      "status": "OK",
+      "is_primary": false,
+      "featured": false,
+      "primary_metric": "MAE",
+      "primary_rules": [
+        "base_train_median"
+      ],
+      "verdicts": [],
+      "label": null,
+      "live_n": 1
+    },
+    {
+      "model_id": "v1_5_h99",
+      "output": "return",
+      "horizon_or_k": "D5",
+      "question": "RETURN",
+      "source": "scores.json",
+      "status": "OK",
+      "is_primary": true,
+      "featured": true,
+      "primary_metric": "MAE",
+      "primary_rules": [
+        "base_train_median"
+      ],
+      "verdicts": [
+        "geçiyor"
+      ],
+      "label": null,
+      "live_n": 1
+    },
+    {
+      "model_id": "v1_5_h99",
+      "output": "return",
+      "horizon_or_k": "D10",
+      "question": "RETURN",
+      "source": "scores.json",
+      "status": "OK",
+      "is_primary": false,
+      "featured": false,
+      "primary_metric": "MAE",
+      "primary_rules": [
+        "base_train_median"
+      ],
+      "verdicts": [],
+      "label": null,
+      "live_n": 1
+    },
+    {
+      "model_id": "v1_5_h99",
+      "output": "p_up",
+      "horizon_or_k": "D1",
+      "question": "ABOVE_IPO",
+      "source": "scores.json",
+      "status": "OK",
+      "is_primary": false,
+      "featured": false,
+      "primary_metric": "MAE",
+      "primary_rules": [
+        "base_train_median"
+      ],
+      "verdicts": [],
+      "label": null,
+      "live_n": 1
+    },
+    {
+      "model_id": "v1_5_h99",
+      "output": "p_up",
+      "horizon_or_k": "D3",
+      "question": "ABOVE_IPO",
+      "source": "scores.json",
+      "status": "OK",
+      "is_primary": false,
+      "featured": false,
+      "primary_metric": "MAE",
+      "primary_rules": [
+        "base_train_median"
+      ],
+      "verdicts": [],
+      "label": null,
+      "live_n": 1
+    },
+    {
+      "model_id": "v1_5_h99",
+      "output": "p_up",
+      "horizon_or_k": "D5",
+      "question": "ABOVE_IPO",
+      "source": "scores.json",
+      "status": "OK",
+      "is_primary": false,
+      "featured": false,
+      "primary_metric": "MAE",
+      "primary_rules": [
+        "base_train_median"
+      ],
+      "verdicts": [],
+      "label": null,
+      "live_n": 1
+    },
+    {
+      "model_id": "v1_5_h99",
+      "output": "p_up",
+      "horizon_or_k": "D10",
+      "question": "ABOVE_IPO",
+      "source": "scores.json",
+      "status": "OK",
+      "is_primary": false,
+      "featured": false,
+      "primary_metric": "MAE",
+      "primary_rules": [
+        "base_train_median"
+      ],
+      "verdicts": [],
+      "label": null,
+      "live_n": 1
+    },
+    {
+      "model_id": "post_d1_hazard_v0",
+      "output": "S_cond",
+      "horizon_or_k": null,
+      "question": "POST_D1_BREAK",
+      "source": "scores_post_d1.json",
+      "status": "OK",
+      "is_primary": true,
+      "featured": false,
+      "primary_metric": "RPS",
+      "primary_rules": [
+        "ceiling_hazard_v0"
+      ],
+      "verdicts": [],
+      "label": null,
+      "live_n": 0
+    },
+    {
+      "model_id": "break_floor_v0",
+      "output": "p_floor",
+      "horizon_or_k": "F1",
+      "question": "BREAK_FLOOR",
+      "source": "scores_break.json",
+      "status": "OK",
+      "is_primary": true,
+      "featured": true,
+      "primary_metric": "Brier",
+      "primary_rules": [
+        "PRODUCT_BREAK_FLOOR"
+      ],
+      "verdicts": [],
+      "label": "ön eleme (yakın dönem backtest'i, tasarıma maruz); canlı n = 0",
+      "live_n": 0
+    },
+    {
+      "model_id": "break_floor_v0",
+      "output": "p_floor",
+      "horizon_or_k": "F2",
+      "question": "BREAK_FLOOR",
+      "source": "scores_break.json",
+      "status": "OK",
+      "is_primary": false,
+      "featured": false,
+      "primary_metric": "Brier",
+      "primary_rules": [
+        "PRODUCT_BREAK_FLOOR"
+      ],
+      "verdicts": [],
+      "label": "ön eleme (yakın dönem backtest'i, tasarıma maruz); canlı n = 0",
+      "live_n": 0
+    }
+  ],
+  "scores_source": "REPO"
+}

@@ -1,0 +1,213 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "KZBGY",
+  "company": "Kızılbük Gayrimenkul Yatırım Ortaklığı A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "33070",
+      "source_id": "KAP_955803_EK1",
+      "source_document": "KAP 955803 ek 1",
+      "source_published_at": "2021-08-09T09:46:26+03:00",
+      "source_sha256": "392ef013cf7247cb1dc91e9b559b4093d0051cbc57ca3badf8b00545aca4a4a5",
+      "source_path": "registry/oot/source_docs/KZBGY/KAP_955803_ek1.pdf",
+      "quote": "Toplam 60.000.000 %100 33.070 60.000.000 %100 33.070 60.000.000 %100",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden ve dağıtım yapılan sayısı aynı (33.070)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "33.070",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "33030",
+        "institutional": "40"
+      },
+      "source_id": "KAP_955803_EK1",
+      "source_document": "KAP 955803 ek 1",
+      "source_published_at": "2021-08-09T09:46:26+03:00",
+      "source_sha256": "392ef013cf7247cb1dc91e9b559b4093d0051cbc57ca3badf8b00545aca4a4a5",
+      "source_path": "registry/oot/source_docs/KZBGY/KAP_955803_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 36.000.000 %60 33.030 9.941.702 %16,57 33.030 9.941.702 %16,57",
+        "Kurumsal 24.000.000 %40 40 50.058.298 %83,43 40 50.058.298 %83,43"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "belgede tek 'Kurumsal' grup (yurt içi/yurt dışı ayrımı yok)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "33.030",
+        "Kurumsal": "40"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '33.030', 'Kurumsal': '40'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "0.2761583889",
+      "source_id": "KAP_955803_EK1",
+      "source_document": "KAP 955803 ek 1",
+      "source_published_at": "2021-08-09T09:46:26+03:00",
+      "source_sha256": "392ef013cf7247cb1dc91e9b559b4093d0051cbc57ca3badf8b00545aca4a4a5",
+      "source_path": "registry/oot/source_docs/KZBGY/KAP_955803_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 36.000.000 %60 33.030 9.941.702 %16,57 33.030 9.941.702 %16,57",
+      "derived": true,
+      "formula": "Yurt İçi Bireysel talep 9.941.702 / planlanan tahsisat 36.000.000 (aynı satır, TL nominal)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belgede yurt içi kurumsal ayrı grup yok; tek 'Kurumsal' grup: talep 50.058.298 / tahsisat 24.000.000 = 2,0857624167 (talep sütunu dağıtımla aynı)",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belgede yurt dışı kurumsal ayrı grup yok; tek 'Kurumsal' grup",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "9941702",
+        "institutional": "50058298"
+      },
+      "source_id": "KAP_955803_EK1",
+      "source_document": "KAP 955803 ek 1",
+      "source_published_at": "2021-08-09T09:46:26+03:00",
+      "source_sha256": "392ef013cf7247cb1dc91e9b559b4093d0051cbc57ca3badf8b00545aca4a4a5",
+      "source_path": "registry/oot/source_docs/KZBGY/KAP_955803_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 36.000.000 %60 33.030 9.941.702 %16,57 33.030 9.941.702 %16,57",
+        "Kurumsal 24.000.000 %40 40 50.058.298 %83,43 40 50.058.298 %83,43"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "9.941.702",
+        "Kurumsal": "50.058.298"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '9.941.702', 'Kurumsal': '50.058.298'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "16.57",
+      "source_id": "KAP_955803_EK1",
+      "source_document": "KAP 955803 ek 1",
+      "source_published_at": "2021-08-09T09:46:26+03:00",
+      "source_sha256": "392ef013cf7247cb1dc91e9b559b4093d0051cbc57ca3badf8b00545aca4a4a5",
+      "source_path": "registry/oot/source_docs/KZBGY/KAP_955803_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 36.000.000 %60 33.030 9.941.702 %16,57 33.030 9.941.702 %16,57",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %60",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "16,57",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "belgede yurt içi kurumsal ayrı grup yok; tek 'Kurumsal' grup %83,43",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "belgede yurt dışı kurumsal ayrı grup yok; tek 'Kurumsal' grup %83,43",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "'sabit fiyat' ifadesi sonuç ekinde ve TSSD'de yok; ayrıca satış yöntemi, dağıtım yöntemi değil"
+      }
+    },
+    "lead_broker": {
+      "value": null,
+      "missing_reason": "TSSD iki 'Halka Arza Aracılık Eden Yetkili Kuruluş' (Türkiye Kalkınma ve Yatırım Bankası A.Ş., Halk Yatırım Menkul Değerler A.Ş.) ve bir 'Konsorsiyum Eş Lideri' (Ziraat Yatırım Menkul Değerler A.Ş.) sayıyor; tek lider belirtilmiyor. Sonuç bildirimini Halk Yatırım yayımlamış",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Halk Yatırım Menkul Değerler A.Ş.",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Halk Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "TSSD Halk Yatırım'la birlikte Türkiye Kalkınma ve Yatırım Bankası'nı yetkili kuruluş, Ziraat Yatırım'ı konsorsiyum eş lideri olarak sayıyor; tek lider yok; alan null"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok (GYO unvanı dışında)",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_957001",
+      "source_document": "KAP 957001",
+      "source_published_at": "2021-08-10T18:12:28+03:00",
+      "source_sha256": "ee46fc36b22c8af51f3334b7d80c64fdc4e91163742749cd6ca80830a9831102",
+      "source_path": "registry/oot/source_docs/KZBGY/KAP_957001_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_957001",
+      "source_document": "KAP 957001",
+      "source_published_at": "2021-08-10T18:12:28+03:00",
+      "source_sha256": "ee46fc36b22c8af51f3334b7d80c64fdc4e91163742749cd6ca80830a9831102",
+      "source_path": "registry/oot/source_docs/KZBGY/KAP_957001_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_957001": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 957001",
+      "published_at": "2021-08-10T18:12:28+03:00",
+      "sha256": "ee46fc36b22c8af51f3334b7d80c64fdc4e91163742749cd6ca80830a9831102",
+      "path": "registry/oot/source_docs/KZBGY/KAP_957001_bildirim.pdf"
+    },
+    "KAP_955803_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 955803 ek 1",
+      "published_at": "2021-08-09T09:46:26+03:00",
+      "sha256": "392ef013cf7247cb1dc91e9b559b4093d0051cbc57ca3badf8b00545aca4a4a5",
+      "path": "registry/oot/source_docs/KZBGY/KAP_955803_ek1.pdf"
+    }
+  }
+}

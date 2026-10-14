@@ -1,0 +1,223 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "MIATK",
+ "company": "Mia Teknoloji A.Ş.",
+ "first_trading_date": "2021-11-22",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Borsa İstanbul Birincil Piyasa; yatırımcı grubu bazında tahsisat ve dağıtım yapılmadı",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_977365_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017d13f204dc37a7",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "977365",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/977365",
+   "published_at": "2021-11-12T14:55:24+03:00",
+   "source_sha256": "0cab850403ab25d660c621d8f68a7c3ce6e9f7c96210ea784b799720fb32c1ed",
+   "source_file": "source_docs/MIATK/KAP_977365_ek1.pdf",
+   "page": 40,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "25.2.3. Halka arzda yatırımcılara tahsis ve dağıtım esasları: \"Borsada Satış* yöntemi ile Borsa Istanbul Birincil Piyasada \"Borsa'da Satuış - Sabit Fiyatla Talep Toplama ve Satış Yöntemiạne göre paylar satışa sunulacağı için herhangi bir yatırımcı grubuna tahsisat ve dağıtım yapılmayacaktır.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "Borsa'da satış (Borsa Birincil Piyasa, Sabit Fiyatla Talep Toplama ve Satış, 15-16/11/2021, Metro Yatırım); 'Yatırımcı grubu bazında tahsisat eranları: Yoktur'; bireysel/çalışan dağıtım yöntemi 'Yoktur'. Belge eşit/oransal adlandırmıyor; dağıtımı Borsa sistemi yapar.",
+   "codex_value": "Borsa'da Satış - Sabit Fiyatla Talep Toplama ve Satış",
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_planned": {
+   "value": "FALSE",
+   "unit": "boolean",
+   "status": "FILLED",
+   "source_id": "KAP_977365_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017d13f204dc37a7",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "977365",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/977365",
+   "published_at": "2021-11-12T14:55:24+03:00",
+   "source_sha256": "0cab850403ab25d660c621d8f68a7c3ce6e9f7c96210ea784b799720fb32c1ed",
+   "source_file": "source_docs/MIATK/KAP_977365_ek1.pdf",
+   "page": 45,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: Yoktur.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "İzahname/TSSD/BIST duyurusunda fiyat istikrarı ya da günlük alım emri taahhüdü yok."
+  },
+  "price_stability_days": {
+   "value": "0",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_977365_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017d13f204dc37a7",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "977365",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/977365",
+   "published_at": "2021-11-12T14:55:24+03:00",
+   "source_sha256": "0cab850403ab25d660c621d8f68a7c3ce6e9f7c96210ea784b799720fb32c1ed",
+   "source_file": "source_docs/MIATK/KAP_977365_ek1.pdf",
+   "page": 45,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: Yoktur.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Planlanmadığı için 0 (H99 biçimi)."
+  },
+  "issuer_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_977365_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017d13f204dc37a7",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "977365",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/977365",
+   "published_at": "2021-11-12T14:55:24+03:00",
+   "source_sha256": "0cab850403ab25d660c621d8f68a7c3ce6e9f7c96210ea784b799720fb32c1ed",
+   "source_file": "source_docs/MIATK/KAP_977365_ek1.pdf",
+   "page": 46,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Ihraççı tarafından verilen taahhüt: Şirket Yönetim Kurulu'nun 21/09/2021 tarih ve 2021/13 sayılı kararı ile; Şirket paylarının birincil halka arzını takiben. Şirket paylarının borsada işlemı görmeye başlamasından itibaren bir yıl süreyle; Herhangi bir bedelli sermaye artırımı yapılmamasına",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "1 yıl = 365 gün. Kapsam: bedelli sermaye artırımı yapmama, yeni satış/halka arz ya da dolaşımdaki payı artıracak karar almama ve açıklama yapmama. Başlangıç: borsada işlem görmeye başlama."
+  },
+  "shareholder_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_977365_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017d13f204dc37a7",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "977365",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/977365",
+   "published_at": "2021-11-12T14:55:24+03:00",
+   "source_sha256": "0cab850403ab25d660c621d8f68a7c3ce6e9f7c96210ea784b799720fb32c1ed",
+   "source_file": "source_docs/MIATK/KAP_977365_ek1.pdf",
+   "page": 46,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "b) Ortaklar tarafından verilen taahhütler: 1 2 Kasım gatket in mevcut ortakları, halka arz öncesinde sahip oldukları payları, Şirket paylarının Borsada işlem görmeye başlamasından itibaren bir yıl süreyle borsada satmamayı, bu payların borsada satılması sonucunu doğuracak şekilde herhangi bir işleme tabi tutmamayı",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_977365_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017d13f204dc37a7",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "977365",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/977365",
+     "published_at": "2021-11-12T14:55:24+03:00",
+     "source_sha256": "0cab850403ab25d660c621d8f68a7c3ce6e9f7c96210ea784b799720fb32c1ed",
+     "source_file": "source_docs/MIATK/KAP_977365_ek1.pdf",
+     "page": 47,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Şirket'in mevcut ortakları, Ali Gökhan Beltekin, İhsan Ünal ve Mehmet Cengiz Bağmancı verdikleri beyanlar ile; SPK'nun VII-128.1 sayılı Pay tebliğinin 8. maddesinin 1. fıkrası çerçevesinde; Mia Teknoloji paylarının halka arzına ilişkin izahnamenin onaylandığı tarih itibarıyla mevcut sermayede sahip oldukları payları, Ortaklık paylarının borsada işlem görmeye başlamasından itibaren bir yıl süreyle halka arz fıyatının altındaki bir fiyattan borsada satmamayı"
+    }
+   ],
+   "components": [
+    {
+     "who": "Ali Gökhan Beltekin",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "borsada işlem görmeye başlama"
+    },
+    {
+     "who": "İhsan Ünal",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "borsada işlem görmeye başlama"
+    },
+    {
+     "who": "Mehmet Cengiz Bağmancı",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "borsada işlem görmeye başlama"
+    },
+    {
+     "who": "Ali Gökhan Beltekin",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "borsada işlem görmeye başlama"
+    },
+    {
+     "who": "İhsan Ünal",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "borsada işlem görmeye başlama"
+    },
+    {
+     "who": "Mehmet Cengiz Bağmancı",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "borsada işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "b) Tüm mevcut ortaklar (Beltekin %34, Ünal %33, Bağmancı %33; hepsi halka arz eden) halka arz öncesi paylarını 1 yıl borsada satmama (mutlak). c) Pay Tebliği 8/1: 1 yıl halka arz fiyatının altında borsada satmama. d) Yetkili kuruluşlar tarafından verilen taahhütler: Yoktur. En kısa süre 365. Özet (KAP_977362_EK1 s.31) ve risk faktörleri (s.41) de 1 yıl diyor.",
+   "codex_value": "365",
+   "codex_verdict": "VERIFIED"
+  },
+  "sector": {
+   "value": "Ar-Ge, yazılım geliştirme, entegrasyon ve çözüm sağlama",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_977362_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017d13f8c6813859",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "977362",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/977362",
+   "published_at": "2021-11-12T14:54:41+03:00",
+   "source_sha256": "573f3a276373b8f24f166a9fa7e2e1821fa5f03dc5865a849e1742be5cc9c83d",
+   "source_file": "source_docs/MIATK/KAP_977362_ek1.pdf",
+   "page": 47,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Şirket, 2006 yıhından bu yana Gazi Teknopark bünyesinde Ar-Ge, İnovasyon, Yazılım Geliştirme, Entegrasyon ve Çözüm Sağlama alanlanında faaliyetlerini sürdürmektedir.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "İzahname §6.1 ve §7.1.1 (s.63) aynı cümle. Kamu kurumlarına yönelik bilişim çözümleri (sağlık bilgi sistemi, biyometrik kimlik, güvenlik vb.); gelirler lisans satışı, yazılım geliştirme, danışmanlık ve donanım.",
+   "codex_value": "yazılım ve teknoloji çözümleri",
+   "codex_verdict": "VERIFIED"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahname (3 parça), TSSD ve Borsa birincil piyasa duyurusunda katılım endeksi / faizsiz finans uygunluk beyanı yok; qfind 'katılım endeks|faizsiz|islami|icazet|katılım finans|katılım bank' yalnız ilgisiz 'Danışma Kurulu' eşleşmesi verdi.",
+   "looked_at": [
+    "KAP_977237",
+    "KAP_977362_EK1",
+    "KAP_977363_EK1",
+    "KAP_977365_EK1",
+    "KAP_977369_EK1",
+    "KAP_977369"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_977362_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "977362",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017d13f8c6813859",
+   "published_at": "2021-11-12T14:54:41+03:00",
+   "sha256": "573f3a276373b8f24f166a9fa7e2e1821fa5f03dc5865a849e1742be5cc9c83d",
+   "file": "source_docs/MIATK/KAP_977362_ek1.pdf"
+  },
+  "KAP_977365_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "977365",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7bf4b81d017d13f204dc37a7",
+   "published_at": "2021-11-12T14:55:24+03:00",
+   "sha256": "0cab850403ab25d660c621d8f68a7c3ce6e9f7c96210ea784b799720fb32c1ed",
+   "file": "source_docs/MIATK/KAP_977365_ek1.pdf"
+  }
+ }
+}

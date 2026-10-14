@@ -1,0 +1,12 @@
+{
+  "case": "NETGL_20260916_V1_5",
+  "github_response_created_at": "2026-09-16T11:32:27Z",
+  "github_response_id": 54278564325,
+  "github_status_context": "borsai/true-live-freeze-proof",
+  "note": "github_response_created_at is the authoritative A4 timestamp -- it is a server-side value GitHub could only have produced if this commit already existed on origin, since POST /repos/{owner}/{repo}/statuses/{sha} returns 404 for an unknown sha. Deliberately no local wall-clock field is recorded here: it would carry no evidentiary weight (any clock the local operator controls is exactly what A4 exists to not rely on) and, being different on every invocation, would defeat this manifest's own byte-identical rerun check below -- a legitimate retry after e.g. a network timeout must be able to reproduce byte-identical content, not conflict with itself. This manifest is an ADDITIVE artifact: it does not modify, and was never written into, the case's original *_prediction_freeze_manifest.json, which remains exactly as committed at freeze time (CLAUDE.md Sec. 8 immutability).",
+  "proven_commit_sha": "5f70acedcd1e31cc9045ad073a0b317a5691b44e",
+  "push_proof_file": "push_proof.json",
+  "push_proof_sha256": "276851c15083e8d18e8b5469bf6ca885d353f46bdb1805406ab40364194f4a07",
+  "repo_slug": "AhmetEmreOzumagi/borsai-halka-arz-modeli",
+  "task_id": "BORSAI_TRUE_LIVE_PUSH_PROOF_EMISSION_01"
+}

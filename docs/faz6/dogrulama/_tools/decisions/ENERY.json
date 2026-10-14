@@ -1,0 +1,168 @@
+{
+ "ticker": "ENERY",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_1186369",
+  "KAP_1186369_EK1",
+  "KAP_1184082_EK1",
+  "KAP_1184130_EK1",
+  "KAP_1187228"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "2.71",
+   "origin": "SOURCE_REPORTED",
+   "source_id": "KAP_1186369_EK1",
+   "quote": "Halka arz edilen toplam 39.000.000 TL nominal değerli payların 2,71 katına denk gelen 105.705.253 TL nominal değerli pay talebi gelmiştir.",
+   "definition": "belgedeki toplam kat (toplam talep nominali 105.705.253 / halka arz edilen 39.000.000 TL nominal)",
+   "denominator_includes_additional_sale": false,
+   "note": "SPK satırında ek pay satışı hücresi boş; TSSD yalnız 25.000.000 + 14.000.000 = 39.000.000 anıyor; 105.705.253 / 39.000.000 = 2,7104 (belge 2,71)"
+  },
+  "total_demand_filter_status": {
+   "value": "NOT_SPECIFIED",
+   "source_id": "KAP_1186369_EK1",
+   "note": "toplam kat cümlesinde filtre ifadesi yok; grup katı cümleleri 'filtrelenmemiş talep' diyor ve toplam talep 105.705.253 tablo toplamına eşit, ancak toplam için açık beyan yok"
+  },
+  "ipo_size_tl": {
+   "value": "3461640000",
+   "source_id": "KAP_1186369_EK1",
+   "quote": "Toplam halka arz büyüklüğü 3.461.640.000 TL olarak gerçekleşmiştir."
+  },
+  "capital_increase_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (yalnız toplam 39.000.000 nominal; ayrım yalnız TSSD/SPK planında: 25.000.000 + 14.000.000)"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok"
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_1186369_EK1",
+   "zero_from_statement": true,
+   "quote": "Halka arz edilen 39.000.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir.",
+   "note": "satılan toplam 39.000.000 = SPK planlanan taban (bedelli 25.000.000 + mevcut pay satışı 14.000.000); SPK satırında ek pay satışı hücresi boş; TSSD'de ek satışa dair açık beyan yok"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_1186369_EK1",
+   "quote": "Halka arz edilen 39.000.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir."
+  },
+  "additional_sale_usage_statement": null,
+  "investor_count": {
+   "value": "2637008",
+   "source_id": "KAP_1186369_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "Toplam 39.000.000 100,0% 2.808.290 105.705.253 100,0% 2.637.008 39.000.000 100,0%",
+   "note": "başvuru sayısı 2.808.290; talebi karşılanan 2.637.008"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "2636849",
+    "domestic_institutional": "149",
+    "foreign_institutional": "10"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_1186369_EK1",
+   "quote": [
+    "27.300.000 70,0% 2.808.131 67.098.562 63,5% 2.636.849 27.300.000 70,0%",
+    "9.750.000 25,0% 149 34.367.600 32,5% 149 9.750.000 25,0%",
+    "1.950.000 5,0% 10 4.239.091 4,0% 10 1.950.000 5,0%"
+   ],
+   "note": "başvuru: bireysel 2.808.131, yurt içi kurumsal 149, yurt dışı kurumsal 10"
+  },
+  "retail_demand_multiple": {
+   "value": "2.46",
+   "source_id": "KAP_1186369_EK1",
+   "quote": "Yurt İçi Bireysel Yatırımcılara tahsis edilen toplam 27.300.000 TL nominal değerli payların 2,46 katı filtrelenmemiş talep gelmiştir.",
+   "note": "filtrelenmemiş"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": "3.52",
+   "source_id": "KAP_1186369_EK1",
+   "quote": "Yurt İçi Kurumsal Yatırımcılara tahsis edilen 9.750.000 TL nominal değerli payların 3,52 katı",
+   "note": "filtrelenmemiş"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": "2.17",
+   "source_id": "KAP_1186369_EK1",
+   "quote": "Yurt Dışı Kurumlar Yatırımcılara tahsis edilen 1.950.000 TL nominal değerli payların ise 2,17 katı filtrelenmemiş talep gelmiştir.",
+   "note": "filtrelenmemiş"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "27300000",
+    "domestic_institutional": "9750000",
+    "foreign_institutional": "1950000"
+   },
+   "source_id": "KAP_1186369_EK1",
+   "quote": [
+    "27.300.000 70,0% 2.808.131 67.098.562 63,5% 2.636.849 27.300.000 70,0%",
+    "9.750.000 25,0% 149 34.367.600 32,5% 149 9.750.000 25,0%",
+    "1.950.000 5,0% 10 4.239.091 4,0% 10 1.950.000 5,0%"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "70.0",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1186369_EK1",
+   "quote": "27.300.000 70,0% 2.808.131 67.098.562 63,5% 2.636.849 27.300.000 70,0%"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "25.0",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1186369_EK1",
+   "quote": "9.750.000 25,0% 149 34.367.600 32,5% 149 9.750.000 25,0%"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": "5.0",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1186369_EK1",
+   "quote": "1.950.000 5,0% 10 4.239.091 4,0% 10 1.950.000 5,0%"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor (TSSD izahnameye atıf yapıyor)"
+  },
+  "lead_broker": {
+   "value": "Ahlatcı Yatırım Menkul Değerler A.Ş. ve Vakıf Yatırım Menkul Değerler A.Ş.",
+   "source_id": "KAP_1184130_EK1",
+   "quote": "halka arzda satışa aracılık edecek Ahlatcı Yatırım Menkul Değerler A.Ş. ve Vakıf Yatırım Menkul Değerler A.Ş.'nin",
+   "note": "TSSD iki aracı kurumu birlikte sayıyor, konsorsiyum lideri ayrıca belirtilmiyor; sonuç bildirimini Ahlatcı Yatırım yayımlamış"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {},
+ "notes": "Borsa dışı talep toplama (88,76 TL). Sonuç eki toplam katı (2,71) yazıyor; Codex hiçbir sonuç alanını bulamamıştı. Ayrım yalnız TSSD/SPK planında. SPK ek pay satışı hücresi boş; iki TSSD ekinin tam metninde ek satışa dair açık beyan yok, pb_notes yazılmadı.",
+ "needs_search": false,
+ "pb_notes": {
+  "additional_sale_statement": {
+   "source_id": "KAP_1184080_EK1",
+   "quote": "ek satışa konu olup olmayacağı hakkında bilgi: Ek satış planlanmamaktadır.",
+   "meaning": "NONE",
+   "note": "Doğrulayıcı: SPK tablosunda Ek Pay Satışı hücresi boş; onaylı izahname §25.2.5 beyanı (H99 BESTE emsali)"
+  }
+ }
+}

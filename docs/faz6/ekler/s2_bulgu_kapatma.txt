@@ -1,0 +1,215 @@
+BORSAI_FAZ6_S2_RECORDS adım 1 — Fable bulguları F1, F2, F3, F6: yeni testlerin mutasyon gösterimi
+Tarih: 2026-09-25 01:06 +03. Klon: git clone --local + commit'lenmemiş fark; mutasyon uygulanır, yeni 4 test koşar, yedekten geri alınır.
+Bülten dosya adı kalıbı maskeli. Ağ kullanılmadı.
+
+Yeni testler (tests/test_faz6_oot.py):
+  F1a  test_download_gate_covers_sealed_members
+  F1b+F3  test_cohort_gate_covers_sealed_members_and_record_ancestor_term
+  F2   test_extraction_never_requests_a_bulletin_after_d10
+  F6   test_download_gate_ignores_s3_outputs_only
+
+---------------------------------------------------------------- özet (pytest çıktısı)
+klon HEAD: af915b8b8ce856aff50cebdaf3eeb6126301c2db + commit'lenmemiş fark:  M borsai/outcomes_oot.py  M tests/test_faz6_oot.py 
+borsai kaynağı: /private/tmp/claude-501/-Users-ahmet-Desktop-BorsAi/da9c2043-5b97-4306-ad57-5f32a539c1a9/scratchpad/mut/clone/borsai
+
+== b_gate_skips_sealed  rc=1  :: Fable (b): s2_gate_problems SEALED üyeleri atlar
+  FAILED test_download_gate_covers_sealed_members - Ass...
+  1 failed, 3 passed in 2.31s
+== b2_cohort_gate_skips_sealed  rc=1  :: (b') cohort_gate_ok SEALED üyeleri atlar
+  FAILED test_cohort_gate_covers_sealed_members_and_record_ancestor_term
+  1 failed, 3 passed in 2.78s
+== i_cohort_gate_always_open  rc=1  :: Fable (i): cohort_gate_ok hep (True, [])
+  FAILED test_cohort_gate_covers_sealed_members_and_record_ancestor_term
+  1 failed, 3 passed in 2.77s
+== i2_record_ancestor_ignored  rc=1  :: Fable (i2): class_oot record_ok = True
+  FAILED test_cohort_gate_covers_sealed_members_and_record_ancestor_term
+  1 failed, 3 passed in 3.05s
+== d_extractor_reads_past_d10  rc=1  :: Fable (d): resolve_member durma koşulu N_SESSIONS + 1
+  FAILED test_extraction_never_requests_a_bulletin_after_d10
+  1 failed, 3 passed in 2.34s
+== d2_window_bound_defense_removed  rc=1  :: (d') assert_window_bound boş
+  FAILED test_extraction_never_requests_a_bulletin_after_d10
+  1 failed, 3 passed in 2.59s
+== f6_exclusion_removed  rc=1  :: (f6) S2_GATE_DIRT_EXCLUDED = ()
+  FAILED test_download_gate_ignores_s3_outputs_only - A...
+  1 failed, 3 passed in 2.59s
+== f6b_exclusion_too_wide  rc=1  :: (f6b) dışlama inputs/ ve benzer adlı yolları da kapsar
+  FAILED test_download_gate_ignores_s3_outputs_only - A...
+  1 failed, 3 passed in 2.67s
+
+== zz_no_mutation  rc=0  :: mutasyonsuz (geri alındıktan sonra)
+  4 passed in 2.85s
+son durum: 2 değişiklik (= yalnız görevin commit'lenmemiş farkı: 2)
+
+---------------------------------------------------------------- kırmızının yeri (ilk hata satırı, test dosyası satırı)
+== b_gate_skips_sealed
+  >       assert oo.s2_gate_problems(root=root) == ["SYNB: S2 kaydı yok"]           # (i)
+  E       AssertionError: assert [] == ['SYNB: S2 kaydı yok']
+  tests/test_faz6_oot.py:821: AssertionError
+== b2_cohort_gate_skips_sealed
+  >       assert sc.cohort_gate_ok(ctx, c_out) == (False, ["SYNZ"])
+  E       AssertionError: assert (True, []) == (False, ['SYNZ'])
+  tests/test_faz6_oot.py:866: AssertionError
+== i_cohort_gate_always_open
+  >       assert sc.cohort_gate_ok(ctx, c_out) == (False, ["SYNZ"])
+  E       AssertionError: assert (True, []) == (False, ['SYNZ'])
+  tests/test_faz6_oot.py:866: AssertionError
+== i2_record_ancestor_ignored
+  >       assert (klass, ev["record_before_ingest"]) == ("OOT_RETRO", False)             # F3: yalnız kayıt-atası terimi
+  E       AssertionError: assert ('OOT_BLIND', True) == ('OOT_RETRO', False)
+  tests/test_faz6_oot.py:874: AssertionError
+== d_extractor_reads_past_d10
+  >           pytest.fail(f"D_10'dan ({last}) sonraki seansın bülteni istendi: {k} {s}")
+  E           Failed: D_10'dan (2021-03-12) sonraki seansın bülteni istendi: thb 2021-03-15
+  tests/test_faz6_oot.py:881: Failed
+== d2_window_bound_defense_removed
+  >       with pytest.raises(oo.OotOutcomeError, match="D_10"):
+  E       Failed: DID NOT RAISE OotOutcomeError
+  tests/test_faz6_oot.py:920: Failed
+== f6_exclusion_removed
+  >       assert oo.s2_gate_problems(root=root) == []
+  E       AssertionError: assert ['registry/oo...A/kayit.json'] == []
+  tests/test_faz6_oot.py:949: AssertionError
+== f6b_exclusion_too_wide
+  >           assert any(q.startswith("registry/oot temiz değil") and f"registry/oot/{rel}" in q for q in problems), rel
+  E           AssertionError: d1_rows_x.json
+  tests/test_faz6_oot.py:957: AssertionError
+
+Okuma:
+  (b)  Fable'ın mutasyonu -> F1a kırmızı (kasadaki üyenin kaydı silinince kapı açık kalıyor).
+  (b') (b)'nin skor tarafındaki eşi (cohort_gate_ok SEALED'i atlar) -> F1b kırmızı. (b) yalnız indirme kapısını değiştirdiğinden F1b'yi etkilemez; F1b için (b'), (i) gösterildi.
+  (i)  Fable'ın mutasyonu -> F1b kırmızı.
+  (i2) Fable'ın eşdeğer mutantı -> F1b'nin F3 assert'i kırmızı: kohort kapısı açık, model ve kanıt sırası tamam, kayıt yan dalda (HEAD geçmişinde değil) iken sınıf OOT_BLIND oluyor.
+  (d)  Fable'ın mutasyonu -> F2 kırmızı, doğrudan: 40 seanslık piyasada D_10'dan sonraki seansın bülteni istendiği anda (piyasa bitmeden).
+  (d') F2 savunması (assert_window_bound) boşaltılınca -> F2 kırmızı (DID NOT RAISE).
+  (f6) dışlama kaldırılınca -> F6 kırmızı; (f6b) dışlama fazla genişleyince (inputs/, benzer adlı yollar) -> F6 kırmızı.
+
+---------------------------------------------------------------- sürücü (scratchpad/mutate_s2.sh; W=<çalışma dizini>)
+#!/usr/bin/env bash
+# BORSAI_FAZ6_S2_RECORDS adım 1: Fable bulguları F1, F2, F3, F6 için yeni testlerin mutasyon gösterimi.
+# Klon: git clone --local (HEAD) + çalışma ağacındaki commit'lenmemiş fark (git diff HEAD --binary); .venv sembolik bağ.
+# Her mutasyon klonda uygulanır, yeni testler koşar, yedekten geri alınır. Sonda mutasyonsuz koşu (yeşil beklenir).
+# Bülten dosya adı kalıbı çıktılarda maskelenir.
+set -u
+REPO=/Users/ahmet/Desktop/BorsAi
+W=${W:?}
+C=$W/clone
+rm -rf "$C"; git clone -q --local "$REPO" "$C"
+git -C "$REPO" diff HEAD --binary | git -C "$C" apply
+ln -s "$REPO/.venv" "$C/.venv"
+PY="$C/.venv/bin/python"
+OUT=$W/out.txt; : > "$OUT"
+cd "$C"
+export GIT_OPTIONAL_LOCKS=0
+MASK='s/th([bm])(20[0-9]{6})/th\1_[tarih-maskeli]/g'
+T6=tests/test_faz6_oot.py
+A="$T6::test_download_gate_covers_sealed_members"
+B="$T6::test_cohort_gate_covers_sealed_members_and_record_ancestor_term"
+F2="$T6::test_extraction_never_requests_a_bulletin_after_d10"
+F6="$T6::test_download_gate_ignores_s3_outputs_only"
+NEW=("$A" "$B" "$F2" "$F6")
+echo "klon HEAD: $(git rev-parse HEAD) + commit'lenmemiş fark: $(git status --porcelain | grep -v '^?? .venv$' | tr '\n' ' ')" >> "$OUT"
+echo "borsai kaynağı: $($PY -c 'import borsai,os; print(os.path.dirname(borsai.__file__))')" >> "$OUT"
+echo >> "$OUT"
+
+run() { # run <ad> <açıklama> <pytest hedefleri...>
+  local name=$1 desc=$2; shift 2
+  local log=$W/$name.log
+  "$PY" -m pytest -q -p no:cacheprovider --no-header -rfE "$@" 2>&1 | sed -E "$MASK" > "$log"; local rc=${PIPESTATUS[0]}
+  echo "== $name  rc=$rc  :: $desc" >> "$OUT"
+  grep -E '^(FAILED|ERROR) ' "$log" | sed -E 's/^(FAILED|ERROR) tests\/test_faz6_oot.py::/  \1 /' | cut -c1-230 >> "$OUT"
+  grep -E '^[0-9]+ (passed|failed)|^[0-9]+ failed|passed in|failed in' "$log" | tail -1 | sed 's/^/  /' >> "$OUT"
+}
+mutate() { # mutate <dosya> <ad>; stdin: python (s -> s)
+  cp "$C/$1" "$W/backup"
+  "$PY" - "$C/$1" "$2" || { echo "MUTASYON UYGULANAMADI: $2" >> "$OUT"; exit 1; }
+}
+restore() { cp "$W/backup" "$C/$1"; }
+
+OO=borsai/outcomes_oot.py
+SC=borsai/scoring.py
+
+# (b) Fable: indirme kapısı SEALED üyelerin S2 kaydını aramaz
+mutate $OO b <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='    for r in reg.cohort_members(rows):\n        recs = fz.active_records(r["ticker"], root / "registry" / "oot" / "records")'
+new='    for r in reg.cohort_members(rows):\n        if not reg.is_open(r["vault"]):\n            continue\n        recs = fz.active_records(r["ticker"], root / "registry" / "oot" / "records")'
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run b_gate_skips_sealed "Fable (b): s2_gate_problems SEALED üyeleri atlar" "${NEW[@]}"
+restore $OO
+
+# (b') (b)'nin skor tarafındaki eşi (bu görev): cohort_gate_ok SEALED üyeleri atlar
+mutate $SC b2 <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='    missing = [r["ticker"] for r in ctx.members\n               if ctx.record_commit'
+new='    missing = [r["ticker"] for r in ctx.members\n               if reg.is_open(r["vault"]) and ctx.record_commit'
+assert s.count(old)==1; s=s.replace(old,new)
+old2='ctx.record_commit(r["ticker"]) is None or not ctx.git.is_ancestor(ctx.record_commit(r["ticker"]), target)]'
+new2='(ctx.record_commit(r["ticker"]) is None or not ctx.git.is_ancestor(ctx.record_commit(r["ticker"]), target))]'
+assert s.count(old2)==1; open(p,"w",encoding="utf-8").write(s.replace(old2,new2))
+PYEOF
+run b2_cohort_gate_skips_sealed "(b') cohort_gate_ok SEALED üyeleri atlar" "${NEW[@]}"
+restore $SC
+
+# (i) Fable: kohort kapısı hep açık
+mutate $SC i <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='    return not missing, missing\n'; new='    return True, []\n'
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run i_cohort_gate_always_open "Fable (i): cohort_gate_ok hep (True, [])" "${NEW[@]}"
+restore $SC
+
+# (i2) Fable: class_oot kayıt-atası terimi kaldırılır
+mutate $SC i2 <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='    record_ok = rc is not None and git.is_ancestor(rc, target)\n'; new='    record_ok = True\n'
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run i2_record_ancestor_ignored "Fable (i2): class_oot record_ok = True" "${NEW[@]}"
+restore $SC
+
+# (d) Fable: ayıklayıcı D_10'da durmaz
+mutate $OO d <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='        if (d1_only and res.sessions) or len(res.sessions) == oc.N_SESSIONS or res.exhausted:'
+new='        if (d1_only and res.sessions) or len(res.sessions) == oc.N_SESSIONS + 1 or res.exhausted:'
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run d_extractor_reads_past_d10 "Fable (d): resolve_member durma koşulu N_SESSIONS + 1" "${NEW[@]}"
+restore $OO
+
+# (d') F2 savunması kaldırılır (assert_window_bound hiçbir şey denetlemez)
+mutate $OO d2 <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='    sessions = ext.resolution.sessions\n    if len(sessions) > oc.N_SESSIONS:'
+new='    return\n    sessions = ext.resolution.sessions\n    if len(sessions) > oc.N_SESSIONS:'
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run d2_window_bound_defense_removed "(d') assert_window_bound boş" "${NEW[@]}"
+restore $OO
+
+# (f6) F6 dışlaması kaldırılır (kapı d1_rows/post_d1 kirliliğini de sayar)
+mutate $OO f6 <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='S2_GATE_DIRT_EXCLUDED = ("registry/oot/d1_rows", "registry/oot/post_d1")'
+new='S2_GATE_DIRT_EXCLUDED = ()'
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run f6_exclusion_removed "(f6) S2_GATE_DIRT_EXCLUDED = ()" "${NEW[@]}"
+restore $OO
+
+# (f6b) dışlama fazla geniş: registry/oot'un tamamı dışlanır
+mutate $OO f6b <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='S2_GATE_DIRT_EXCLUDED = ("registry/oot/d1_rows", "registry/oot/post_d1")'
+new='S2_GATE_DIRT_EXCLUDED = ("registry/oot/d1_rows", "registry/oot/post_d1", "registry/oot/inputs", "registry/oot/d1_rows_x.json", "registry/oot/post_d1x")'
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run f6b_exclusion_too_wide "(f6b) dışlama inputs/ ve benzer adlı yolları da kapsar" "${NEW[@]}"
+restore $OO
+
+echo >> "$OUT"
+run zz_no_mutation "mutasyonsuz (geri alındıktan sonra)" "${NEW[@]}"
+echo "son durum: $(git status --porcelain | grep -v '^?? .venv$' | wc -l | tr -d ' ') değişiklik (= yalnız görevin commit'lenmemiş farkı: $(git -C "$REPO" status --porcelain | grep -v '^??' | wc -l | tr -d ' '))" >> "$OUT"

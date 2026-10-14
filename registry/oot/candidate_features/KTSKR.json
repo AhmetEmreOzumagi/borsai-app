@@ -1,0 +1,225 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "KTSKR",
+  "company": "Kütahya Şeker Fabrikası A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "19564",
+      "source_id": "KAP_946159_EK2",
+      "source_document": "KAP 946159 ek 2",
+      "source_published_at": "2021-07-05T14:32:02+03:00",
+      "source_sha256": "c8cd79ef436c4a1bc6a74aa0a6b8989bcb59c2fb001856be72514c1ff10f76c2",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_946159_ek2.pdf",
+      "quote": "TOPLAM 9.368.780 19.564 100",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "tablo sütunu 'Talebi Karşılanan Başvuru Sayısı'; filtre edilmemiş emir sayısı 20.148 (yatırımcı değil emir)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "19.564",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "19484",
+        "domestic_institutional": "40",
+        "foreign_retail": "40"
+      },
+      "source_id": "KAP_946159_EK2",
+      "source_document": "KAP 946159 ek 2",
+      "source_published_at": "2021-07-05T14:32:02+03:00",
+      "source_sha256": "c8cd79ef436c4a1bc6a74aa0a6b8989bcb59c2fb001856be72514c1ff10f76c2",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_946159_ek2.pdf",
+      "quote": [
+        "Yurtiçi Bireysel 7.055.908 19.484 75,31",
+        "Yurtiçi Kurumsal 2.282.692 40 24,36",
+        "Yabancı Bireysel 30.180 40 0,32"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "19.484",
+        "Yurtiçi Kurumsal": "40",
+        "Yabancı Bireysel": "40"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '19.484', 'Yurtiçi Kurumsal': '40', 'Yabancı Bireysel': '40'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır', grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; yabancı kurumsal satırı yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "7055908",
+        "domestic_institutional": "2282692",
+        "foreign_retail": "30180"
+      },
+      "source_id": "KAP_946159_EK2",
+      "source_document": "KAP 946159 ek 2",
+      "source_published_at": "2021-07-05T14:32:02+03:00",
+      "source_sha256": "c8cd79ef436c4a1bc6a74aa0a6b8989bcb59c2fb001856be72514c1ff10f76c2",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_946159_ek2.pdf",
+      "quote": [
+        "Yurtiçi Bireysel 7.055.908 19.484 75,31",
+        "Yurtiçi Kurumsal 2.282.692 40 24,36",
+        "Yabancı Bireysel 30.180 40 0,32"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "7.055.908",
+        "Yurtiçi Kurumsal": "2.282.692",
+        "Yabancı Bireysel": "30.180"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '7.055.908', 'Yurtiçi Kurumsal': '2.282.692', 'Yabancı Bireysel': '30.180'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "75.31",
+      "source_id": "KAP_946159_EK2",
+      "source_document": "KAP 946159 ek 2",
+      "source_published_at": "2021-07-05T14:32:02+03:00",
+      "source_sha256": "c8cd79ef436c4a1bc6a74aa0a6b8989bcb59c2fb001856be72514c1ff10f76c2",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_946159_ek2.pdf",
+      "quote": "Yurtiçi Bireysel 7.055.908 19.484 75,31",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "75,31",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "24.36",
+      "source_id": "KAP_946159_EK2",
+      "source_document": "KAP 946159 ek 2",
+      "source_published_at": "2021-07-05T14:32:02+03:00",
+      "source_sha256": "c8cd79ef436c4a1bc6a74aa0a6b8989bcb59c2fb001856be72514c1ff10f76c2",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_946159_ek2.pdf",
+      "quote": "Yurtiçi Kurumsal 2.282.692 40 24,36",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "24,36",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "tabloda yabancı kurumsal satırı yok (yalnız yurtiçi bireysel, yurtiçi kurumsal, yabancı bireysel)",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (\"Sabit Fiyatla Talep Toplama ve Satış Yöntemi\") ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa Birincil Piyasada sabit fiyatla talep toplama ve satış yöntemi",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa Birincil Piyasada sabit fiyatla talep toplama ve satış yöntemi",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "belgede benzer ifade satış yöntemi olarak geçiyor (\"Sabit Fiyatla Talep Toplama ve Satış Yöntemi\"), dağıtım yöntemi değil; Codex alıntısı indirilmemiş KAP satırı başlığı; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Tacirler Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_946159_EK2",
+      "source_document": "KAP 946159 ek 2",
+      "source_published_at": "2021-07-05T14:32:02+03:00",
+      "source_sha256": "c8cd79ef436c4a1bc6a74aa0a6b8989bcb59c2fb001856be72514c1ff10f76c2",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_946159_ek2.pdf",
+      "quote": "Saygılarımızla, Tacirler Yatırım Menkul Değerler A.Ş.",
+      "basis": "RESULT_NOTICE_PUBLISHER",
+      "note": "sonuç ekini imzalayan/yayımlayan kurum; belge 'aracılık' rolünü açıkça yazmıyor; TSSD pencereleri boş",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": "TACİRLER YATIRIM MENKUL DEĞERLER  A.Ş.",
+      "codex_check": {
+        "codex_value": "TACİRLER YATIRIM MENKUL DEĞERLER  A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "sonuç ekini imzalayan kurum"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş; sonuç belgesinde yok",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_947014",
+      "source_document": "KAP 947014",
+      "source_published_at": "2021-07-06T18:14:23+03:00",
+      "source_sha256": "b63756b75751285b9b32004ba0b0481b22e0d874e21485a0586407727d6d1a46",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_947014_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_947014",
+      "source_document": "KAP 947014",
+      "source_published_at": "2021-07-06T18:14:23+03:00",
+      "source_sha256": "b63756b75751285b9b32004ba0b0481b22e0d874e21485a0586407727d6d1a46",
+      "source_path": "registry/oot/source_docs/KTSKR/KAP_947014_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_947014": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 947014",
+      "published_at": "2021-07-06T18:14:23+03:00",
+      "sha256": "b63756b75751285b9b32004ba0b0481b22e0d874e21485a0586407727d6d1a46",
+      "path": "registry/oot/source_docs/KTSKR/KAP_947014_bildirim.pdf"
+    },
+    "KAP_946159_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 946159 ek 2",
+      "published_at": "2021-07-05T14:32:02+03:00",
+      "sha256": "c8cd79ef436c4a1bc6a74aa0a6b8989bcb59c2fb001856be72514c1ff10f76c2",
+      "path": "registry/oot/source_docs/KTSKR/KAP_946159_ek2.pdf"
+    }
+  }
+}

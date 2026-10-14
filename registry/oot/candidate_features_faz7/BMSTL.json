@@ -1,0 +1,258 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "BMSTL",
+ "company": "BMS Birleşik Metal Sanayi ve Ticaret A.Ş.",
+ "first_trading_date": "2022-04-27",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Borsa İstanbul Birincil Piyasa; yatırımcı grubu bazında tahsisat ve dağıtım yapılmadı",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_1021285_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8029244901802d9ca3831ca0",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1021285",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1021285",
+   "published_at": "2022-04-15T18:56:11+03:00",
+   "source_sha256": "6662a283eec8caf22611286c28d24625d8220b7b2ea7c5a40f27fbe955d7f20e",
+   "source_file": "source_docs/BMSTL/KAP_1021285_ek1.pdf",
+   "page": 84,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "25.2.3. Halka arzda yatırımcilara tabşis ve dağıtım esasları: \"Borsada Satış\" yöntemi ilę Bors iIstanbul Birincil Piyasa' da \"Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Sațış Yöntemi\", ne göre paylar satışa sunulacağı için herhangi bir yatırımcı ihibuna tahsisat ve dağıtım yapilmayącakur.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "Borsa'da Satış - Sabit Fiyatla Talep Toplama ve Satış Yöntemi (Borsa İstanbul duyurusu KAP_1021538: Halka Arz Yöntemi Borsada). a) Yatırımcı grubu bazında tahsisat oranları: Yoktur; dağıtım yöntemi: Yoktur (s.84). Belge eşit/oransal adlandırmıyor. OCR: 'ihibuna' = grubuna, 'yapilmayącakur' = yapılmayacaktır.",
+   "codex_value": "borsada satış",
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_planned": {
+   "value": "TRUE",
+   "unit": "boolean",
+   "status": "VERIFIED",
+   "source_id": "KAP_1021285_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8029244901802d9ca3831ca0",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1021285",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1021285",
+   "published_at": "2022-04-15T18:56:11+03:00",
+   "source_sha256": "6662a283eec8caf22611286c28d24625d8220b7b2ea7c5a40f27fbe955d7f20e",
+   "source_file": "source_docs/BMSTL/KAP_1021285_ek1.pdf",
+   "page": 89,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: Planinmaktadır.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1021285_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8029244901802d9ca3831ca0",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1021285",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1021285",
+     "published_at": "2022-04-15T18:56:11+03:00",
+     "source_sha256": "6662a283eec8caf22611286c28d24625d8220b7b2ea7c5a40f27fbe955d7f20e",
+     "source_file": "source_docs/BMSTL/KAP_1021285_ek1.pdf",
+     "page": 89,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Galaeti Yatırım Menkul Kıymetler A.Ş., Şirket paylarına yöreijk olarak fiyat istikrarı işlemlerinde bulüunayı planlamaktadır."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "OCR 'Planinmaktadır' (Planlanmaktadır); 26.5.1'de Garanti Yatırım'ın fiyat istikrarı işlemlerinde bulunmayı planladığı yazılı. Kaynak: halka arz eden ortakların satış hasılatından 50.000.000 TL Garanti Yatırım'ın göstereceği hesaba aktarılacak (26.5.6, s.90).",
+   "codex_value": true,
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_days": {
+   "value": "30",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1021285_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8029244901802d9ca3831ca0",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1021285",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1021285",
+   "published_at": "2022-04-15T18:56:11+03:00",
+   "source_sha256": "6662a283eec8caf22611286c28d24625d8220b7b2ea7c5a40f27fbe955d7f20e",
+   "source_file": "source_docs/BMSTL/KAP_1021285_ek1.pdf",
+   "page": 89,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Flyat iştikrarı işlemlerinin gerçekleştirilebileceği zaman aralığı: Paylauın borsada işlem görmeye başlamasından itibaren 30 gündür.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Madde numarası OCR'da bozuk ('2645%' = 26.5.2)."
+  },
+  "issuer_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_1021285_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8029244901802d9ca3831ca0",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1021285",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1021285",
+   "published_at": "2022-04-15T18:56:11+03:00",
+   "source_sha256": "6662a283eec8caf22611286c28d24625d8220b7b2ea7c5a40f27fbe955d7f20e",
+   "source_file": "source_docs/BMSTL/KAP_1021285_ek1.pdf",
+   "page": 92,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "a) İhraççı tarafındanverilen taahhüt: Şirket, 08.04.2022 tarih ve 2022-07 Sayılı yönetim kurulu kararı ile, Şirket paylarintilrincil halka arzını takiben, paylarımızın Dorsa Istanbul A.Ş.'de işlem görneye başladığı tarihten iökaren 1 (bir) yıl süreyle Şirket paylarma herhangi bir bedelli sermaye artırımı gerçekleşthilmemesinc,",
+   "provenance": "CODEX_VERIFIED",
+   "note": "1 yıl = 365. Kapsam: bedelli sermaye artırımı yapmama, dolaşımdaki pay miktarını iç kaynaklardan ve kâr payından yapılacak sermaye artırımları hariç artırmama, yeni satış/halka arz kararı almama; başlangıç Borsa İstanbul'da işlem görmeye başlama.",
+   "codex_value": "365",
+   "codex_verdict": "VERIFIED"
+  },
+  "shareholder_lockup_days": {
+   "value": "540",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_1021285_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8029244901802d9ca3831ca0",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1021285",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1021285",
+   "published_at": "2022-04-15T18:56:11+03:00",
+   "source_sha256": "6662a283eec8caf22611286c28d24625d8220b7b2ea7c5a40f27fbe955d7f20e",
+   "source_file": "source_docs/BMSTL/KAP_1021285_ek1.pdf",
+   "page": 92,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "b) Ortakdar tarafundauverilen taahhütler: Halka Arz Eden Ortal tar, 11.04.2022 tarihinde verdiği taahhütleri ile Şirket paylanının Borsa Iştanbul'da işlem görmeye byrladığı tarihten itibaren 18 (onsekiz) ay boyunca, sahipriduğu halka arza konu olmayan Şirket pay airının, dolaşımdaki pay miktarıın artmasına yol açacakıökilde satışa veya halka arza konu edilnryeceğine",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1021285_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8029244901802d9ca3831ca0",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1021285",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1021285",
+     "published_at": "2022-04-15T18:56:11+03:00",
+     "source_sha256": "6662a283eec8caf22611286c28d24625d8220b7b2ea7c5a40f27fbe955d7f20e",
+     "source_file": "source_docs/BMSTL/KAP_1021285_ek1.pdf",
+     "page": 93,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "c) Sermaye piyasası mevzuatı kapsamında verilen taahhütler: Ahmet Bauf MOLLAOGLU, Mustafa ZONTUR, Ali ZONTUR; Ve Şirket, SPK'mn VII- 128.1 sayılı Payflebliği'nin 8'inci maddesi çerçevesinde, Şirket paylarıın Porsa İstanbul'da işlem görmeye başlamasından itibaren 18 (onsekiz) ay boyurica maliki oldukları halka arza konu olmayan Şirket paylarımı halka arz fiyatının altındaki bir fiyattan Borsa İstanbul dıasatmayacağını"
+    }
+   ],
+   "components": [
+    {
+     "who": "Ahmet Rauf MOLLAOĞLU (halka arz eden ortak)",
+     "days": "540",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Mustafa ZONTUR (halka arz eden ortak)",
+     "days": "540",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Ali ZONTUR (halka arz eden ortak)",
+     "days": "540",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Ahmet Rauf MOLLAOĞLU",
+     "days": "540",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8 (c)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Mustafa ZONTUR",
+     "days": "540",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8 (c)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Ali ZONTUR",
+     "days": "540",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8 (c)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Belgede '18 (onsekiz) ay' = 18 × 30 = 540 gün. b) Halka Arz Eden Ortaklar (Ahmet Rauf Mollaoğlu, Mustafa Zontur, Ali Zontur; halka arz öncesi sermayenin tamamı, s.92 tablo) halka arza konu olmayan paylarını dolaşımdaki pay miktarını artıracak şekilde satışa/halka arza konu etmeme. c) Aynı ortaklar 18 ay halka arz fiyatının altında Borsa İstanbul'da satmama (c'de Şirket de taahhütte). Fiyat istikrarı işlemleri sonucu ya da başka suretle Halka Arz Edilecek Paylar'dan edinilebilecek paylar hariç. d) Yetkili kuruluşlar tarafından verilen taahhütler: Yoktur. En kısa süre 540.",
+   "codex_value": "540",
+   "codex_verdict": "VERIFIED"
+  },
+  "sector": {
+   "value": "Demir-çelik; kaplamalı ve kaplamasız çelik tel üretimi",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_1021283_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8029244901802d9b4d341c73",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1021283",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1021283",
+   "published_at": "2022-04-15T18:55:46+03:00",
+   "source_sha256": "7826fcfe40ef4c37f28e065d0b11b59b1ca5478f20024b28b93539e3df01e576",
+   "source_file": "source_docs/BMSTL/KAP_1021283_ek1.pdf",
+   "page": 15,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Şirket demir çelik sektöründe düşük ve yüksek karbonlu kaplamalı veya kaplamasız tel üretmektedir.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1021283_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8029244901802d9b4d341c73",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1021283",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1021283",
+     "published_at": "2022-04-15T18:55:46+03:00",
+     "source_sha256": "7826fcfe40ef4c37f28e065d0b11b59b1ca5478f20024b28b93539e3df01e576",
+     "source_file": "source_docs/BMSTL/KAP_1021283_ek1.pdf",
+     "page": 68,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Şirket, 2012 ile 2017 yıllarında 30.000 ton kapasitefi tek üretim hattıyla galvanizli tel dretimi yaparak sektörde kendinc yer cdinmiştir."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Ana ürünler: galvanizli çelik tel, çinko-alüminyum kaplamalı çelik tel, çelik halat, tavlı çelik tel (Özet B.3, s.15). Üretim Kocaeli Dilovası.",
+   "codex_value": "galvanizli tel üretimi",
+   "codex_verdict": "VERIFIED"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahname (iki parça) ve TSSD'de katılım endeksi / faizsiz finans uygunluk beyanı yok; qfind 'katılım (endeks|finans|bank)|faizsiz|islami|icazet|fıkıh|danışma kurulu' yalnız katılım bankalarıyla kredi sözleşmeleri eşleşmesi verdi (KAP_1021285_EK1 s.13, s.63). İzahname '35. EKLER' listesinde (KAP_1021285_EK1 s.104-105, EK 1-9) Katılım Finans İlkeleri Bilgi Formu yok.",
+   "looked_at": [
+    "KAP_1021283_EK1",
+    "KAP_1021285_EK1",
+    "KAP_1021298_EK1",
+    "KAP_1021298",
+    "KAP_1021538"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_1021283_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1021283",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c8029244901802d9b4d341c73",
+   "published_at": "2022-04-15T18:55:46+03:00",
+   "sha256": "7826fcfe40ef4c37f28e065d0b11b59b1ca5478f20024b28b93539e3df01e576",
+   "file": "source_docs/BMSTL/KAP_1021283_ek1.pdf"
+  },
+  "KAP_1021285_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1021285",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c8029244901802d9ca3831ca0",
+   "published_at": "2022-04-15T18:56:11+03:00",
+   "sha256": "6662a283eec8caf22611286c28d24625d8220b7b2ea7c5a40f27fbe955d7f20e",
+   "file": "source_docs/BMSTL/KAP_1021285_ek1.pdf"
+  }
+ }
+}

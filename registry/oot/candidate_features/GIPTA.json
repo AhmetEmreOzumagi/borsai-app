@@ -1,0 +1,217 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "GIPTA",
+  "company": "Gıpta Ofis Kırtasiye ve Promosyon Ürünleri İmalat Sanayi A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "3364933",
+      "source_id": "KAP_1193570_EK1",
+      "source_document": "KAP 1193570 ek 1",
+      "source_published_at": "2023-09-11T08:59:12+03:00",
+      "source_sha256": "6f17fd5e517d65cede402c26afffaa2dd8192fcf48fdc7864e1443f3f5c6e88c",
+      "source_path": "registry/oot/source_docs/GIPTA/KAP_1193570_ek1.pdf",
+      "quote": "Toplam 40.000.000 %100,00 3.570.921 281.282.289 100,00% 3.364.933 40.000.000 100,00%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 3.570.921; dağıtım yapılan 3.364.933",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "3364768",
+        "domestic_institutional": "165"
+      },
+      "source_id": "KAP_1193570_EK1",
+      "source_document": "KAP 1193570 ek 1",
+      "source_published_at": "2023-09-11T08:59:12+03:00",
+      "source_sha256": "6f17fd5e517d65cede402c26afffaa2dd8192fcf48fdc7864e1443f3f5c6e88c",
+      "source_path": "registry/oot/source_docs/GIPTA/KAP_1193570_ek1.pdf",
+      "quote": [
+        "28.000.000 %70,00 3.570.756 144.998.398 51,55% 3.364.768 28.000.000 70,00%",
+        "12.000.000 %30,00 165 136.283.891 48,45% 165 12.000.000 30,00%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 3.570.756, kurumsal 165; yurt dışı grup yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "5.18",
+      "source_id": "KAP_1193570_EK1",
+      "source_document": "KAP 1193570 ek 1",
+      "source_published_at": "2023-09-11T08:59:12+03:00",
+      "source_sha256": "6f17fd5e517d65cede402c26afffaa2dd8192fcf48fdc7864e1443f3f5c6e88c",
+      "source_path": "registry/oot/source_docs/GIPTA/KAP_1193570_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 5,18 katı",
+      "note": "belgede 'yaklaşık'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "5,18",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "11.36",
+      "source_id": "KAP_1193570_EK1",
+      "source_document": "KAP 1193570 ek 1",
+      "source_published_at": "2023-09-11T08:59:12+03:00",
+      "source_sha256": "6f17fd5e517d65cede402c26afffaa2dd8192fcf48fdc7864e1443f3f5c6e88c",
+      "source_path": "registry/oot/source_docs/GIPTA/KAP_1193570_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara ise yaklaşık 11,36 katı oranında talep gelmiştir.",
+      "note": "belgede 'yaklaşık'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "11,36",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "arzda yurt dışı kurumsal grup yok (sonuç tablosunda satır yok)",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "28000000",
+        "domestic_institutional": "12000000"
+      },
+      "source_id": "KAP_1193570_EK1",
+      "source_document": "KAP 1193570 ek 1",
+      "source_published_at": "2023-09-11T08:59:12+03:00",
+      "source_sha256": "6f17fd5e517d65cede402c26afffaa2dd8192fcf48fdc7864e1443f3f5c6e88c",
+      "source_path": "registry/oot/source_docs/GIPTA/KAP_1193570_ek1.pdf",
+      "quote": [
+        "28.000.000 %70,00 3.570.756 144.998.398 51,55% 3.364.768 28.000.000 70,00%",
+        "12.000.000 %30,00 165 136.283.891 48,45% 165 12.000.000 30,00%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "70.00",
+      "source_id": "KAP_1193570_EK1",
+      "source_document": "KAP 1193570 ek 1",
+      "source_published_at": "2023-09-11T08:59:12+03:00",
+      "source_sha256": "6f17fd5e517d65cede402c26afffaa2dd8192fcf48fdc7864e1443f3f5c6e88c",
+      "source_path": "registry/oot/source_docs/GIPTA/KAP_1193570_ek1.pdf",
+      "quote": "28.000.000 %70,00 3.570.756 144.998.398 51,55% 3.364.768 28.000.000 70,00%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "30.00",
+      "source_id": "KAP_1193570_EK1",
+      "source_document": "KAP 1193570 ek 1",
+      "source_published_at": "2023-09-11T08:59:12+03:00",
+      "source_sha256": "6f17fd5e517d65cede402c26afffaa2dd8192fcf48fdc7864e1443f3f5c6e88c",
+      "source_path": "registry/oot/source_docs/GIPTA/KAP_1193570_ek1.pdf",
+      "quote": "12.000.000 %30,00 165 136.283.891 48,45% 165 12.000.000 30,00%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "arzda yurt dışı kurumsal grup yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız talep toplama (satış) yöntemini ('Sabit Fiyatla Talep Toplama') adlandırıyor, dağıtım yöntemini adlandırmıyor; TSSD izahnameye atıf yapıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede talep toplama (satış) yöntemi olarak geçiyor, dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Halk Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1191134_EK1",
+      "source_document": "KAP 1191134 ek 1",
+      "source_published_at": "2023-09-01T22:02:31+03:00",
+      "source_sha256": "09810b896aaaac85ce136ba77efc3849384bdc74e215c43c3ed8d920d41112ab",
+      "source_path": "registry/oot/source_docs/GIPTA/KAP_1191134_ek1.pdf",
+      "quote": "Halka Arza Aracılık Eden Yetkili Kuruluş Sorumlu Olduğu Kısım: Halk Yatırım Menkul Değerler A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1193926",
+      "source_document": "KAP 1193926",
+      "source_published_at": "2023-09-11T18:10:25+03:00",
+      "source_sha256": "8172507196a00904cce8ac10283bb787442a950bdc2d0a3fc0430b18267e4f29",
+      "source_path": "registry/oot/source_docs/GIPTA/KAP_1193926_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1193926",
+      "source_document": "KAP 1193926",
+      "source_published_at": "2023-09-11T18:10:25+03:00",
+      "source_sha256": "8172507196a00904cce8ac10283bb787442a950bdc2d0a3fc0430b18267e4f29",
+      "source_path": "registry/oot/source_docs/GIPTA/KAP_1193926_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1193926": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1193926",
+      "published_at": "2023-09-11T18:10:25+03:00",
+      "sha256": "8172507196a00904cce8ac10283bb787442a950bdc2d0a3fc0430b18267e4f29",
+      "path": "registry/oot/source_docs/GIPTA/KAP_1193926_bildirim.pdf"
+    },
+    "KAP_1193570_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1193570 ek 1",
+      "published_at": "2023-09-11T08:59:12+03:00",
+      "sha256": "6f17fd5e517d65cede402c26afffaa2dd8192fcf48fdc7864e1443f3f5c6e88c",
+      "path": "registry/oot/source_docs/GIPTA/KAP_1193570_ek1.pdf"
+    },
+    "KAP_1191134_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1191134 ek 1",
+      "published_at": "2023-09-01T22:02:31+03:00",
+      "sha256": "09810b896aaaac85ce136ba77efc3849384bdc74e215c43c3ed8d920d41112ab",
+      "path": "registry/oot/source_docs/GIPTA/KAP_1191134_ek1.pdf"
+    }
+  }
+}

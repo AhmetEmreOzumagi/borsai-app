@@ -1,0 +1,7 @@
+# repro_run — 2026-10-02T09:49:29Z
+komut: .venv/bin/python -v docs/fable_faz8_audit/ekler/repro_break.py /tmp/borsai_faz8_audit/repro  (stdout → repro_stdout.txt; stderr = -v import izi, 630 KB, eklenmedi)
+betik sha256: 69fa70e8057c5cd04d1f921f0b10b0f6c67cc31a5be672757608baff63e31695
+çıkış kodu: 0
+import izinde 'import ''borsai' satırı: 0  (alt süreç kanıtı: -v izi ve betiğin sonundaki sys.modules denetimi: [])
+betikte import satırı araması: yok
+ortam: 3.12.14 sklearn 1.9.0 numpy 2.5.2 scipy 1.18.0

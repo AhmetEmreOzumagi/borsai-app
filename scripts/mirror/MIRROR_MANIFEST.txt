@@ -1,0 +1,72 @@
+# MIRROR_MANIFEST — herkese açık ayna (AhmetEmreOzumagi/borsai-app) için nihai yol listesi (FAZ9_PUBLIC_MIRROR K-MIR-1)
+# Kaynak: docs/public_mirror/MIRROR_MANIFEST.txt (Fable envanteri, e6c2e07) + proje sahibi kararları (13 Ekim; INVENTORY §7 soruları).
+# Biçim: DURUM<TAB>KALIP<TAB>GEREKÇE. DURUM yalnız GİRER ya da GİRMEZ (KARAR kalmadı).
+# Kalıp: `/` ayraçlı repo-göreli yol; `**` sıfır ya da daha çok dizin, `*` tek yol parçası içinde.
+# Sınıflama (scripts/mirror/build_mirror.py): HEAD'de izlenen her dosya için önce GİRMEZ kalıpları (GİRMEZ önceliklidir), sonra
+# GİRER kalıpları. Hiçbir kurala uymayan dosya ya da hiçbir dosyaya uymayan kural betiği durdurur: yeni bir dosya türü açık karar ister.
+# Overlay (scripts/mirror/overlay/**) GİRER dosyaların bir kısmının yerine geçer (README.md, .gitattributes, .gitignore, iş akışı);
+# betik özetinde "yerine geçen" diye listelenir.
+
+## GİRMEZ — ham bültenler, resmi belgeler, şirket adresli günlükler
+GİRMEZ	**/*.pdf	KAP/SPK PDF'leri (registry/source_docs, registry/oot/source_docs); resmi belge yeniden dağıtılmaz (karar; soru 7)
+GİRMEZ	**/*.zip	BIST THB/THM bülten zip'leri (data/raw/bist); ham bülten yeniden dağıtılmaz (karar; soru 7)
+GİRMEZ	registry/source_docs/_ENUMERATION/kap_byCriteria_*.json	KAP API yanıtı (bildirim listesi; resmi kaynak verisi, manifest değil; soru 7 listesinde yok → dışarıda)
+GİRMEZ	docs/specs_faz6/ekler/spk_tablolar/*.xlsx	SPK yıllık tabloları; PDF kararıyla tutarlı, türetilmiş CSV'ler kalır (soru 2)
+GİRMEZ	docs/faz6/dogrulama/_tools/logs/**	doğrulama günlükleri: SPK bülten satır metinleri ve şirket adresleri; REPORT.md yeter (soru 8)
+
+## GİRER — kök
+GİRER	CLAUDE.md	proje kuralları
+GİRER	README.md	özel repo README'si; aynada overlay README'si yerine geçer
+GİRER	LICENSE	Apache-2.0 (soru 12); overlay ile bayt-eşit
+GİRER	NOTICE	telif satırı ve veri beyanına yönlendirme (soru 12); overlay ile bayt-eşit
+GİRER	DATA_NOTICE.md	veri kaynakları ve yeniden dağıtım beyanı (soru 1, 15); overlay ile bayt-eşit
+GİRER	pyproject.toml	Python paketi tanımı
+GİRER	requirements.lock	Python bağımlılık kilidi
+GİRER	.gitattributes	satır sonu kuralı (eol=lf; gömülü dosya sha'ları buna dayanır); aynada overlay sürümü (linguist işaretleri eklenmiş)
+GİRER	.gitignore	aynada overlay sürümü
+GİRER	.github/workflows/build.yml	CI; aynada overlay sürümü (pytest işi ve v* etiketinde Release eklenmiş)
+
+## GİRER — kod, testler, belgeler
+GİRER	borsai/**	Python paketi
+GİRER	app/**	Tauri uygulaması: kaynak, testler, fikstürler, betikler, ekran görüntüleri; app/parity/golden (soru 1); ikonlar (soru 11: Tauri şablon ikonu)
+GİRER	models/**	dondurulmuş model JSON'ları ve INDEX'ler
+GİRER	tests/**	pytest takımı; tests/reference altın ledger'ları dahil (soru 1)
+GİRER	legacy/**	eski repodan birebir kopya (soru 10)
+GİRER	experiments/**	deney günlüğü log.jsonl ve README (soru 1)
+GİRER	scripts/**	ayna betiği, bu manifest ve overlay (ayna nasıl üretildi)
+GİRER	docs/**	belgeler, şartnameler, denetim raporları ve ekleri, görev dosyaları, tasarım panoları (xlsx ve doğrulama günlükleri hariç: GİRMEZ önceliklidir)
+
+## GİRER — skorlar ve türetilmiş veri (soru 1, 2, 3)
+GİRER	scores/*.json	skor dosyaları (uygulama scores.json'u zaten gömülü dağıtıyor; soru 1, 3)
+GİRER	data/*.py	veri üreticileri
+GİRER	data/training_table*.csv	eğitim tabloları (soru 1)
+GİRER	data/data_version*.json	veri sürümü ve sha'lar (soru 1)
+GİRER	data/outcomes/**	canlı arz sonuç satırları (soru 1)
+GİRER	data/outcomes_oot/**	zaman-dışı kohort sonuç satırları ve bülten satırı kopyaları (soru 1)
+GİRER	data/raw/*.csv	H99 kanonik tablolar, takvimler, PB kanıtı (soru 1)
+GİRER	data/raw/*.json	XU100 kapanış serisi (soru 1)
+GİRER	data/raw/xu100/**	XU100 kaynak pini (soru 1)
+GİRER	data/raw/tuik/**	TÜİK TÜFE serisi, xls ve kaynak pini (açık veri; soru 2)
+GİRER	data/raw/bist/MANIFEST.csv	bülten indirme manifesti: URL, sha256, bayt (zip'siz; soru 7)
+GİRER	data/raw/bist/MANIFEST_OOT.csv	zaman-dışı bülten manifesti: URL, sha256, bayt (zip'siz; soru 7)
+
+## GİRER — sicil (soru 4, 5, 6, 7, 9; "dondurulmuş kayıt silinmez" aynada da geçerli)
+GİRER	registry/ipos.csv	payda
+GİRER	registry/records/**	canlı dondurulmuş tahmin kayıtları
+GİRER	registry/post_break/**	makine sıralı kırılma akşamı kayıtları
+GİRER	registry/inputs/**	listeleme öncesi girdi belgeleri
+GİRER	registry/legacy_frozen/**	eski repodan dondurulmuş kayıtlar
+GİRER	registry/legacy_roles.json	eski kayıtların rolleri
+GİRER	registry/push_proofs/**	GitHub status API yanıtları; zaman kanıtının kaydı (soru 5: olduğu gibi)
+GİRER	registry/source_docs/*/MANIFEST.json	canlı arz belge manifestleri: URL, sha256, bayt (PDF'siz; soru 7)
+GİRER	registry/source_docs/_ENUMERATION/ENUMERATION.json	arz sayımı manifesti (soru 7)
+GİRER	registry/oot/cohort_pre_h99.csv	zaman-dışı kohort (kasa harcandı; soru 6)
+GİRER	registry/oot/VAULT_OPEN.json	kasa açılış kaydı (soru 6)
+GİRER	registry/oot/records/**	zaman-dışı dondurulmuş kayıtlar (soru 4, 6)
+GİRER	registry/oot/post_d1/**	zaman-dışı D1 sonrası makine kayıtları (soru 4)
+GİRER	registry/oot/inputs/**	zaman-dışı girdi belgeleri; KAP alıntıları (soru 4, 9)
+GİRER	registry/oot/candidate_features/**	aday özellikler (soru 4, 9)
+GİRER	registry/oot/candidate_features_faz7/**	Faz 7 izahname alanları; KAP alıntıları (soru 4, 9)
+GİRER	registry/oot/d1_rows/**	D1 bülten satırları (soru 1, 4)
+GİRER	registry/oot/source_docs/*/MANIFEST.json	zaman-dışı belge manifestleri (PDF'siz; soru 7)
+GİRER	registry/oot/source_docs_faz7/**/*.json	Faz 7 belge manifestleri (yalnız JSON; soru 7)

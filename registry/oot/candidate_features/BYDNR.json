@@ -1,0 +1,197 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "BYDNR",
+  "company": "Baydöner Restoranları A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "1264215",
+      "source_id": "KAP_1186348_EK1",
+      "source_document": "KAP 1186348 ek 1",
+      "source_published_at": "2023-08-17T13:00:43+03:00",
+      "source_sha256": "dbdc77a2664f7621ad232116c51657178c838c2005c7c3c3b5ff6e82a73c3264",
+      "source_path": "registry/oot/source_docs/BYDNR/KAP_1186348_ek1.pdf",
+      "quote": "Toplam 1.264.215 18.000.000 %100,000",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "dağıtım sonuçları tablosu; talep eden sayısı yazılmıyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "1262310",
+        "domestic_institutional": "54",
+        "foreign_retail": "1851"
+      },
+      "source_id": "KAP_1186348_EK1",
+      "source_document": "KAP 1186348 ek 1",
+      "source_published_at": "2023-08-17T13:00:43+03:00",
+      "source_sha256": "dbdc77a2664f7621ad232116c51657178c838c2005c7c3c3b5ff6e82a73c3264",
+      "source_path": "registry/oot/source_docs/BYDNR/KAP_1186348_ek1.pdf",
+      "quote": [
+        "Yurt İçi Yatırımcı - Gerçek Kişi 1.262.310 17.973.637 %99,854",
+        "- Kurumsal 54 723 %0,004",
+        "Yurt Dışı Yatırımcı - Gerçek Kişi 1.851 25.640 %0,142",
+        "- Kurumsal - - -"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "yurt dışı kurumsal satırı '-' (dağıtım yok)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "sonuç eki grup bazında talep/kat vermiyor (Borsa Birincil Piyasa)",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "sonuç eki grup bazında talep/kat vermiyor",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "sonuç eki grup bazında talep/kat vermiyor",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "17973637",
+        "domestic_institutional": "723",
+        "foreign_retail": "25640"
+      },
+      "source_id": "KAP_1186348_EK1",
+      "source_document": "KAP 1186348 ek 1",
+      "source_published_at": "2023-08-17T13:00:43+03:00",
+      "source_sha256": "dbdc77a2664f7621ad232116c51657178c838c2005c7c3c3b5ff6e82a73c3264",
+      "source_path": "registry/oot/source_docs/BYDNR/KAP_1186348_ek1.pdf",
+      "quote": [
+        "Yurt İçi Yatırımcı - Gerçek Kişi 1.262.310 17.973.637 %99,854",
+        "- Kurumsal 54 723 %0,004",
+        "Yurt Dışı Yatırımcı - Gerçek Kişi 1.851 25.640 %0,142",
+        "- Kurumsal - - -"
+      ],
+      "note": "yurt dışı kurumsal '-'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.854",
+      "source_id": "KAP_1186348_EK1",
+      "source_document": "KAP 1186348 ek 1",
+      "source_published_at": "2023-08-17T13:00:43+03:00",
+      "source_sha256": "dbdc77a2664f7621ad232116c51657178c838c2005c7c3c3b5ff6e82a73c3264",
+      "source_path": "registry/oot/source_docs/BYDNR/KAP_1186348_ek1.pdf",
+      "quote": "Yurt İçi Yatırımcı - Gerçek Kişi 1.262.310 17.973.637 %99,854",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.004",
+      "source_id": "KAP_1186348_EK1",
+      "source_document": "KAP 1186348 ek 1",
+      "source_published_at": "2023-08-17T13:00:43+03:00",
+      "source_sha256": "dbdc77a2664f7621ad232116c51657178c838c2005c7c3c3b5ff6e82a73c3264",
+      "source_path": "registry/oot/source_docs/BYDNR/KAP_1186348_ek1.pdf",
+      "quote": "- Kurumsal 54 723 %0,004",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "tabloda yurt dışı kurumsal satırı '-' (sayı yazılmamış)",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor (TSSD izahnameye atıf yapıyor)",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Halk Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1184402_EK1",
+      "source_document": "KAP 1184402 ek 1",
+      "source_published_at": "2023-08-11T12:15:52+03:00",
+      "source_sha256": "fddc797cf2a744cc308518fc081ee50b7cd298b7c2e1577d77f1fd3bd0346d40",
+      "source_path": "registry/oot/source_docs/BYDNR/KAP_1184402_ek1.pdf",
+      "quote": "Halka Arza Aracılık Eden Yetkili Kuruluş Sorumla Olduğu Kısım: Halk Yatırım Menkul Değerler A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1186515",
+      "source_document": "KAP 1186515",
+      "source_published_at": "2023-08-17T18:10:34+03:00",
+      "source_sha256": "5f878f81209b1e4a0789bbdbed5eb51a0a4acf3b1c1eb8c274d8b394dd1192ad",
+      "source_path": "registry/oot/source_docs/BYDNR/KAP_1186515_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_1186515",
+      "source_document": "KAP 1186515",
+      "source_published_at": "2023-08-17T18:10:34+03:00",
+      "source_sha256": "5f878f81209b1e4a0789bbdbed5eb51a0a4acf3b1c1eb8c274d8b394dd1192ad",
+      "source_path": "registry/oot/source_docs/BYDNR/KAP_1186515_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1186515": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1186515",
+      "published_at": "2023-08-17T18:10:34+03:00",
+      "sha256": "5f878f81209b1e4a0789bbdbed5eb51a0a4acf3b1c1eb8c274d8b394dd1192ad",
+      "path": "registry/oot/source_docs/BYDNR/KAP_1186515_bildirim.pdf"
+    },
+    "KAP_1186348_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1186348 ek 1",
+      "published_at": "2023-08-17T13:00:43+03:00",
+      "sha256": "dbdc77a2664f7621ad232116c51657178c838c2005c7c3c3b5ff6e82a73c3264",
+      "path": "registry/oot/source_docs/BYDNR/KAP_1186348_ek1.pdf"
+    },
+    "KAP_1184402_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1184402 ek 1",
+      "published_at": "2023-08-11T12:15:52+03:00",
+      "sha256": "fddc797cf2a744cc308518fc081ee50b7cd298b7c2e1577d77f1fd3bd0346d40",
+      "path": "registry/oot/source_docs/BYDNR/KAP_1184402_ek1.pdf"
+    }
+  }
+}

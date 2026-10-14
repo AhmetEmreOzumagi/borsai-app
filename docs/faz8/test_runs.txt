@@ -1,0 +1,36 @@
+BORSAI_FAZ8_BREAK_IMPL_20261001 — test koşuları (adım sırasıyla)
+
+== Adım 0: taban (HEAD 7d78d43 = origin/main; ağaçta yalnız docs/prompts/FAZ8_BREAK_IMPL.md) ==
+.venv/bin/pytest -q -n 6 --dist loadgroup        866 passed in 535.48s (0:08:55)
+bash app/scripts/test.sh                          exit 0 (1:00): cargo 151 passed / 0 failed (21 test ikilisi), npm (vitest)
+                                                  20 dosya 305 passed, parity (app/parity/test_gen_golden.py) 8 passed,
+                                                  golden_unchanged YEŞİL
+.venv/bin/python app/parity/gen_golden.py --check {"checked": 35, "different": []}
+
+== Adım A (kod ve testler; gerçek veride backtest koşulmadı) ==
+.venv/bin/pytest -q tests/test_faz8_break.py tests/test_faz8_model.py   16 + 16 passed (sentetik ve tablo düzeyi)
+İlk paralel koşu (proje sahibi kararından önce)    897 passed, 1 failed: tests/test_faz7_vault.py::test_real_scores_oot_in_memory_run_equals_committed_file
+                                                  (code.borsai_source_sha256 pini; borsai/'ye eklenen her dosya kırar) → N19 sorusu
+Geçici klonda ölçüm (A + sahte Faz 8 günlük satırları) 8 failed (kasa pini + 7 varyant sayacı / duyarlılık testi) → N19 sorusu
+Proje sahibi kararları (N19) uygulandıktan sonra:
+  geçici klon, commit'li A, paralel              899 passed (0 failed)
+  geçici klon, A + sentetik verili B yan etkileri (1 backtest + 3 sensitivity satırı, docs/faz8/backtest/, MODELS.md bölümü),
+  paralel                                        899 passed (0 failed)
+  ana depo, commit öncesi son kabul, SIRALI      898 passed, 1 deselected in 911.20s (0:15:11)
+    (deselect: tests/test_faz7_vault.py::test_real_scores_oot_in_memory_run_equals_committed_file — commit'siz borsai/ ile
+     borsai_dirty = true olduğundan tanımı gereği kırmızı; commit A'dan hemen sonra tek başına koşulur)
+  ana depo, commit A'dan sonra, deselect edilen test tek başına   1 passed (84.93s)
+
+== Adım B (resmi koşu; HEAD fa623df, borsai/ temiz) ==
+.venv/bin/python -m borsai.post_break --official  25.3 s (9 süreç); 82 fold (F1 yetersiz 13; F2 yetersiz 26, tanımsız 4); ürün
+                                                  POST_BREAK_INSUFFICIENT 5; Faz 4 hücre paritesi 87/87; numpy ↔ stdlib parite
+                                                  F1 1.1e-16, F2 5.6e-17 (@ZERO 0); günlük 2142 → 2146 satır (1 backtest + 3 sensitivity)
+.venv/bin/python -m borsai.report                 docs/MODELS.md: yalnız Faz 8 bölümü eklendi (+131 satır)
+.venv/bin/pytest -q tests/test_faz8_golden.py     7 passed in 11.18s (ledger bit-eşit yeniden üretim dahil)
+.venv/bin/pytest -q -n 6 --dist loadgroup         906 passed in 541.69s (0:09:01)
+
+== Adım 3: son kabul (B çıktıları ağaçta, commit B öncesi) ==
+.venv/bin/pytest -q (SIRALI)                      906 passed in 1126.52s (0:18:46)
+bash app/scripts/test.sh                          exit 0 (1:04): cargo 151 passed / 0 failed, npm (vitest) 20 dosya 305 passed,
+                                                  parity 8 passed, golden_unchanged YEŞİL
+.venv/bin/python app/parity/gen_golden.py --check {"checked": 35, "different": []}

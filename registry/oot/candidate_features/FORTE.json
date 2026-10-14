@@ -1,0 +1,213 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "FORTE",
+  "company": "Forte Bilgi İletişim Teknolojileri ve Savunma Sanayi A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "660379",
+      "source_id": "KAP_1158053_EK1",
+      "source_document": "KAP 1158053 ek 1",
+      "source_published_at": "2023-06-12T17:43:38+03:00",
+      "source_sha256": "60582979bd476421dd7b7e185a79518c7bbf27d1b51e63518ae331e64c4d1890",
+      "source_path": "registry/oot/source_docs/FORTE/KAP_1158053_ek1.pdf",
+      "quote": "olmak üzere toplam 660.379 yatırımcı 22.000.000 TL nominal değerli payın alımını gerçekleştirmiştir.",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "belgede ayrıca 'Halka arza toplamda 660.379 yatırımcı katılmıştır.'; talep eden sayısı ayrıca yazılmıyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "660.379",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "659270",
+        "domestic_institutional": "29",
+        "foreign_retail": "1078",
+        "foreign_institutional": "2"
+      },
+      "source_id": "KAP_1158053_EK1",
+      "source_document": "KAP 1158053 ek 1",
+      "source_published_at": "2023-06-12T17:43:38+03:00",
+      "source_sha256": "60582979bd476421dd7b7e185a79518c7bbf27d1b51e63518ae331e64c4d1890",
+      "source_path": "registry/oot/source_docs/FORTE/KAP_1158053_ek1.pdf",
+      "quote": "Forte halka arzı kapsamında toplam 659.270 yerli gerçek ve tüzel kişi yatırımcı, 1.078 yabancı gerçek kişi yatırımcı, 29 yerli kurumsal yatırımcı, 2 yabancı kurumsal yatırımcı olmak üzere toplam 660.379 yatırımcı",
+      "semantic": "ALLOCATED",
+      "note": "belgedeki 'bireysel' = gerçek ve tüzel kişi; 'kurumsal' = aracı kurum, GSYO ve yatırım fonları",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "Borsa Birincil Piyasa; belge 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor, grup katı yok",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "grup tahsisatı yok, grup katı yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "grup tahsisatı yok, grup katı yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "21963882",
+        "domestic_institutional": "957",
+        "foreign_retail": "35088",
+        "foreign_institutional": "73"
+      },
+      "source_id": "KAP_1158053_EK1",
+      "source_document": "KAP 1158053 ek 1",
+      "source_published_at": "2023-06-12T17:43:38+03:00",
+      "source_sha256": "60582979bd476421dd7b7e185a79518c7bbf27d1b51e63518ae331e64c4d1890",
+      "source_path": "registry/oot/source_docs/FORTE/KAP_1158053_ek1.pdf",
+      "quote": [
+        "- Bireysel Yatırımcı (*) 659.270 21.963.882 99,84",
+        "- Kurumsal Yatırımcı (**) 29 957 0,00",
+        "- Bireysel Yatırımcı (*) 1.078 35.088 0,16",
+        "- Kurumsal Yatırımcı (**) 2 73 0,00"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.84",
+      "source_id": "KAP_1158053_EK1",
+      "source_document": "KAP 1158053 ek 1",
+      "source_published_at": "2023-06-12T17:43:38+03:00",
+      "source_sha256": "60582979bd476421dd7b7e185a79518c7bbf27d1b51e63518ae331e64c4d1890",
+      "source_path": "registry/oot/source_docs/FORTE/KAP_1158053_ek1.pdf",
+      "quote": "- Bireysel Yatırımcı (*) 659.270 21.963.882 99,84",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.00",
+      "source_id": "KAP_1158053_EK1",
+      "source_document": "KAP 1158053 ek 1",
+      "source_published_at": "2023-06-12T17:43:38+03:00",
+      "source_sha256": "60582979bd476421dd7b7e185a79518c7bbf27d1b51e63518ae331e64c4d1890",
+      "source_path": "registry/oot/source_docs/FORTE/KAP_1158053_ek1.pdf",
+      "quote": "- Kurumsal Yatırımcı (**) 29 957 0,00",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "belgede yuvarlanmış 0,00 (957 TL nominal)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.00",
+      "source_id": "KAP_1158053_EK1",
+      "source_document": "KAP 1158053 ek 1",
+      "source_published_at": "2023-06-12T17:43:38+03:00",
+      "source_sha256": "60582979bd476421dd7b7e185a79518c7bbf27d1b51e63518ae331e64c4d1890",
+      "source_path": "registry/oot/source_docs/FORTE/KAP_1158053_ek1.pdf",
+      "quote": "- Kurumsal Yatırımcı (**) 2 73 0,00",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "belgede yuvarlanmış 0,00 (73 TL nominal)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini ('Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış') adlandırıyor ve grup tahsisatı yapılmadığını söylüyor; dağıtım yöntemini adlandırmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede satış yöntemi olarak geçiyor, dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "İnfo Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1155847_EK1",
+      "source_document": "KAP 1155847 ek 1",
+      "source_published_at": "2023-06-02T19:11:00+03:00",
+      "source_sha256": "df1d15fa3748bd2a760df5a5f9f253f4cbfb8898c27b5ee6c139590a0b82399f",
+      "source_path": "registry/oot/source_docs/FORTE/KAP_1155847_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Info Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "OCR 'Info'; sonuç bildirimini İnfo Yatırım yayımlamış",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_1158081",
+      "source_document": "KAP 1158081",
+      "source_published_at": "2023-06-12T18:10:12+03:00",
+      "source_sha256": "6b66606637ca7bf04000c96758c4c3fe4aa03e477cc3303974bc558ce3909878",
+      "source_path": "registry/oot/source_docs/FORTE/KAP_1158081_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_1158081",
+      "source_document": "KAP 1158081",
+      "source_published_at": "2023-06-12T18:10:12+03:00",
+      "source_sha256": "6b66606637ca7bf04000c96758c4c3fe4aa03e477cc3303974bc558ce3909878",
+      "source_path": "registry/oot/source_docs/FORTE/KAP_1158081_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1158081": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1158081",
+      "published_at": "2023-06-12T18:10:12+03:00",
+      "sha256": "6b66606637ca7bf04000c96758c4c3fe4aa03e477cc3303974bc558ce3909878",
+      "path": "registry/oot/source_docs/FORTE/KAP_1158081_bildirim.pdf"
+    },
+    "KAP_1158053_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1158053 ek 1",
+      "published_at": "2023-06-12T17:43:38+03:00",
+      "sha256": "60582979bd476421dd7b7e185a79518c7bbf27d1b51e63518ae331e64c4d1890",
+      "path": "registry/oot/source_docs/FORTE/KAP_1158053_ek1.pdf"
+    },
+    "KAP_1155847_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1155847 ek 1",
+      "published_at": "2023-06-02T19:11:00+03:00",
+      "sha256": "df1d15fa3748bd2a760df5a5f9f253f4cbfb8898c27b5ee6c139590a0b82399f",
+      "path": "registry/oot/source_docs/FORTE/KAP_1155847_ek1.pdf"
+    }
+  }
+}

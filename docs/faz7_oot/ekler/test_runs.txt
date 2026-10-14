@@ -1,0 +1,58 @@
+# BORSAI_FAZ7_OOT_RECORDS_20260928 — test koşuları (sayılar)
+
+## Adım 0 · taban (HEAD 696a04d = proje sahibinin Faz 7C kanıt commit'i, fdb15c6'nın torunu; izlenmeyen yalnız görev dosyası)
+
+- .venv/bin/pytest -q -p no:cacheprovider: 829 passed in 651.05s (0:10:51)
+- bash app/scripts/test.sh: exit 0, 32.9 s; cargo 94 passed / 0 failed (16 + 5 + 1 + 4 + 1 + 14 + 15 + 5 + 12 + 2 + 11 + 7 + 1),
+  npm (vitest) 16 dosya / 222 test passed, parity 4 passed, golden_unchanged YEŞİL (U46)
+- .venv/bin/python app/parity/gen_golden.py --check: {"checked": 25, "different": []}
+
+## Adım 1 · commit C öncesi (değişiklikler çalışma ağacında)
+
+- İlk tam koşu: 847 passed, 1 failed, 836.5 s — `tests/test_scoring.py::test_backtest_primary_cells_and_verdicts` (yeni kartların
+  `primary_cell`'i Faz 7/7C canlı hücresi; test yalnız `PRIMARY_CELLS`'i bekliyordu). Test iki durumda geçecek biçimde uyarlandı (L12).
+- Geçici klon provası (scratchpad; C + R1 [`--only-missing-models`, 135 kayıt] + S [skorlar ve MODELS.md] commit'li): 846 passed,
+  2 failed, 933.0 s — yukarıdaki test ve `tests/test_faz4_ceiling_path.py::test_scores_json_faz1_blocks_unchanged_since_f1f9d44`
+  (model listesi dondurulmuş kuyrukla bitmeli). İkisi uyarlandı; klonda ikisi + `test_report.py` 11 passed.
+- Son tam koşu (commit C'nin içeriği): 848 passed in 751.06s (0:12:31) (829 + 19 yeni `tests/test_faz7_oot.py`).
+- gen_golden --check: {"checked": 25, "different": []} (pinli tahmin kaynakları değişmedi).
+
+## Adım 2a · ilk R1 yazımı (commit C'nin koduyla) ve geri alınması
+
+- `--only-missing-models`: 135 yazıldı; denetim sayıları doğru, 1080/1080 hücre `model_inputs`'tan yeniden hesapla bit-eşit.
+- Commit'ten önce fark edildi: ek kayıtlar ilk kayıttan `vault` alanını ve `cohort_row.vault` sütununu kopyalıyordu (görev hijyen
+  kuralına aykırı). Başlamış tam koşu (kayıtlar commit'lenmemiş, 5 temizlik bekçisi dışarıda) durduruldu; 135 izlenmeyen dosya
+  `git clean -f -- registry/oot/records` ile silindi (izlenen 135 S2 kaydı aynen); kod düzeltmesi commit C2 (SPEC_DEVIATIONS L3).
+- C2 öncesi hedefli koşu: tests/test_faz7_oot.py + tests/test_outcome_guard.py 48 passed.
+- C2 öncesi tam koşu: 848 passed in 759.83s (0:12:39).
+
+## Adım 2 · R1 (C2'nin koduyla, temiz ağaç)
+
+- `--only-missing-models`: {"written": 135, "complete": 0, "skipped": 0}; denetim `r1_denetim.txt` (1 080 hücre; 1 080/1 080 bit-eşit;
+  `vault` taşıyan ek kayıt 0; ilk 135 kayıt bayt-eşit).
+- Kayıtlar commit'lenmemişken tam koşu, 5 temizlik bekçisi dışarıda (`test_faz4_ceiling_path.py::test_new_models_are_retro_with_no_record_and_no_metric`,
+  `test_faz5_post_d1.py::test_14_models_goldens_and_read_only_paths_unchanged`, `test_scoring.py::test_faz4_scores_json_existing_blocks_unchanged`,
+  `test_faz7c_golden.py::test_models_dir_registry_scores_unchanged`, `test_faz7c_model.py::test_tables_and_data_versions_unchanged`):
+  843 passed, 5 deselected in 751.73s (0:12:31).
+- R1 commit'inden (28aaa3b) sonra dışarıdaki 5 test: 5 passed. Gerçek depoda indirme kapısı: 135 sorun, hepsi "push kanıtı yok".
+
+## Adım 3 · S (skorlar 27 modelle, MODELS.md)
+
+- `gen_golden --check`: {"checked": 25, "different": []}.
+- `bash app/scripts/test.sh` (S commit'lenmeden): exit 101; cargo `--no-fail-fast` 93 passed / 1 failed
+  (`stage4::real_scores_file_passes_integrity`, model sayısı 19 → 27).
+- Skorlar commit'lenmemişken tam koşu, `scores/` temizliğini denetleyen 2 bekçi dışarıda (`test_faz7c_golden.py::test_models_dir_registry_scores_unchanged`,
+  `test_faz7c_model.py::test_tables_and_data_versions_unchanged`): 846 passed, 2 deselected in 758.85s (0:12:38).
+- S commit'inden (cd22222) sonra dışarıdaki 2 test: 2 passed.
+
+## APPPIN_S (1246b15) ve uygulama
+
+- Önceden onaylı pinler: `stage4.rs` (19 → 27 model), `app/tests/accuracy.test.ts` (27 blok, 11 RETRO grubu / 77 satır, gizlemeden
+  sonra 26 blok).
+- Son `bash app/scripts/test.sh`: exit 1; cargo 94 passed / 0 failed; npm (vitest) 16 dosyadan 15 / 222 testten 221 passed, 1 failed:
+  `tests/stage5.test.ts` A5-4 (`KIND_TEXT`'te `fall` türünün karşılığı yok; pin değil, uygulama metni — RAPOR §6). Ayrı koşu: parity 4
+  passed, golden_unchanged YEŞİL, `gen_golden --check` 25/0.
+
+## Son durum (HEAD 1246b15 = APPPIN_S; bütün commit'ler, deselect yok)
+
+- .venv/bin/pytest -q -p no:cacheprovider: 848 passed in 698.42s (0:11:38).

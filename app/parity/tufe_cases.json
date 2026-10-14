@@ -1,0 +1,485 @@
+{
+ "append_command": ".venv/bin/python data/raw/tuik/build_tufe_csv.py --append-month {month} --bulletin-id <bülten sayısı> --release <YYYY-MM-DDT10:00:00+03:00> --xls <indirilen tablo .xls> --download-url '<indirme bağlantısı>' --sha256 <indirilen tablonun sha256'sı>",
+ "append_command_example": ".venv/bin/python data/raw/tuik/build_tufe_csv.py --append-month 2026-09 --bulletin-id <bülten sayısı> --release <YYYY-MM-DDT10:00:00+03:00> --xls <indirilen tablo .xls> --download-url '<indirme bağlantısı>' --sha256 <indirilen tablonun sha256'sı>",
+ "base": {
+  "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+  "through_month": "2026-08"
+ },
+ "file": "data/raw/tuik/tufe_genel_2025_100.csv",
+ "index_for": [
+  {
+   "index": "132.31",
+   "month": "2026-07",
+   "release_date": "2026-08-03",
+   "result": "ok",
+   "t": "2026-09-17",
+   "variant": "base"
+  },
+  {
+   "index": "134.75",
+   "month": "2026-08",
+   "release_date": "2026-09-03",
+   "result": "ok",
+   "t": "2026-10-15",
+   "variant": "base"
+  },
+  {
+   "month": "2026-09",
+   "result": "TUFE_MISSING",
+   "t": "2026-11-10",
+   "variant": "base"
+  },
+  {
+   "month": "2026-10",
+   "result": "TUFE_MISSING",
+   "t": "2026-12-01",
+   "variant": "base"
+  },
+  {
+   "index": "13.736052",
+   "month": "2019-11",
+   "release_date": "2019-12-03",
+   "result": "ok",
+   "t": "2020-01-06",
+   "variant": "base"
+  },
+  {
+   "month": "2019-10",
+   "result": "TUFE_MISSING",
+   "t": "2019-12-31",
+   "variant": "base"
+  },
+  {
+   "index": "132.31",
+   "month": "2026-07",
+   "release_date": "2026-08-03",
+   "result": "ok",
+   "t": "2026-09-17",
+   "variant": "append_2026_09"
+  },
+  {
+   "index": "134.75",
+   "month": "2026-08",
+   "release_date": "2026-09-03",
+   "result": "ok",
+   "t": "2026-10-15",
+   "variant": "append_2026_09"
+  },
+  {
+   "index": "136.5",
+   "month": "2026-09",
+   "release_date": "2026-10-05",
+   "result": "ok",
+   "t": "2026-11-10",
+   "variant": "append_2026_09"
+  },
+  {
+   "month": "2026-10",
+   "result": "TUFE_MISSING",
+   "t": "2026-12-01",
+   "variant": "append_2026_09"
+  },
+  {
+   "index": "13.736052",
+   "month": "2019-11",
+   "release_date": "2019-12-03",
+   "result": "ok",
+   "t": "2020-01-06",
+   "variant": "append_2026_09"
+  },
+  {
+   "month": "2019-10",
+   "result": "TUFE_MISSING",
+   "t": "2019-12-31",
+   "variant": "append_2026_09"
+  },
+  {
+   "index": "132.31",
+   "month": "2026-07",
+   "release_date": "2026-08-03",
+   "result": "ok",
+   "t": "2026-09-17",
+   "variant": "append_2026_09_10"
+  },
+  {
+   "index": "134.75",
+   "month": "2026-08",
+   "release_date": "2026-09-03",
+   "result": "ok",
+   "t": "2026-10-15",
+   "variant": "append_2026_09_10"
+  },
+  {
+   "index": "136.5",
+   "month": "2026-09",
+   "release_date": "2026-10-05",
+   "result": "ok",
+   "t": "2026-11-10",
+   "variant": "append_2026_09_10"
+  },
+  {
+   "index": "138.1",
+   "month": "2026-10",
+   "release_date": "2026-11-03",
+   "result": "ok",
+   "t": "2026-12-01",
+   "variant": "append_2026_09_10"
+  },
+  {
+   "index": "13.736052",
+   "month": "2019-11",
+   "release_date": "2019-12-03",
+   "result": "ok",
+   "t": "2020-01-06",
+   "variant": "append_2026_09_10"
+  },
+  {
+   "month": "2019-10",
+   "result": "TUFE_MISSING",
+   "t": "2019-12-31",
+   "variant": "append_2026_09_10"
+  },
+  {
+   "index": "132.31",
+   "month": "2026-07",
+   "release_date": "2026-08-03",
+   "result": "ok",
+   "t": "2026-09-17",
+   "variant": "old_row_changed"
+  },
+  {
+   "index": "134.75",
+   "month": "2026-08",
+   "release_date": "2026-09-03",
+   "result": "ok",
+   "t": "2026-10-15",
+   "variant": "old_row_changed"
+  },
+  {
+   "month": "2026-09",
+   "result": "TUFE_MISSING",
+   "t": "2026-11-10",
+   "variant": "old_row_changed"
+  },
+  {
+   "month": "2026-10",
+   "result": "TUFE_MISSING",
+   "t": "2026-12-01",
+   "variant": "old_row_changed"
+  },
+  {
+   "index": "13.736052",
+   "month": "2019-11",
+   "release_date": "2019-12-03",
+   "result": "ok",
+   "t": "2020-01-06",
+   "variant": "old_row_changed"
+  },
+  {
+   "month": "2019-10",
+   "result": "TUFE_MISSING",
+   "t": "2019-12-31",
+   "variant": "old_row_changed"
+  }
+ ],
+ "index_for_guard": [
+  {
+   "month": "2026-07",
+   "release_date": "2026-09-17",
+   "result": "TUFE_NOT_PIT",
+   "t": "2026-09-17"
+  },
+  {
+   "month": "2026-07",
+   "release_date": "2026-09-16",
+   "result": "ok",
+   "t": "2026-09-17"
+  },
+  {
+   "month": "2026-07",
+   "release_date": "2026-09-18",
+   "result": "TUFE_NOT_PIT",
+   "t": "2026-09-17"
+  }
+ ],
+ "month_for": [
+  {
+   "month": "2026-07",
+   "t": "2026-09-25"
+  },
+  {
+   "month": "2026-08",
+   "t": "2026-10-01"
+  },
+  {
+   "month": "2019-11",
+   "t": "2020-01-06"
+  },
+  {
+   "month": "2025-11",
+   "t": "2026-01-15"
+  },
+  {
+   "month": "2025-12",
+   "t": "2026-02-01"
+  },
+  {
+   "month": "2026-01",
+   "t": "2026-03-31"
+  },
+  {
+   "month": "2026-10",
+   "t": "2026-12-31"
+  },
+  {
+   "month": "2023-09",
+   "t": "2023-11-02"
+  }
+ ],
+ "parse": [
+  {
+   "file_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+   "last_month": "2026-08",
+   "months": 82,
+   "name": "base",
+   "ops": [],
+   "result": "ok"
+  },
+  {
+   "file_sha256": "7035f69a5a9cc0995b3267b56f85114cffd4acdf9e96fd5abcb848a865dcb405",
+   "last_month": "2026-09",
+   "months": 83,
+   "name": "append_2026_09",
+   "ops": [
+    [
+     "append",
+     "2026-09,136.5,2026-10-05,99999,https://example.invalid/tufe,0000000000000000000000000000000000000000000000000000000000000000"
+    ]
+   ],
+   "result": "ok"
+  },
+  {
+   "file_sha256": "b34c5716b9d637a33b8c68bbcbf29f36716290d2d5605668f53169b564c228b3",
+   "last_month": "2026-10",
+   "months": 84,
+   "name": "append_2026_09_10",
+   "ops": [
+    [
+     "append",
+     "2026-09,136.5,2026-10-05,99999,https://example.invalid/tufe,0000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+     "append",
+     "2026-10,138.1,2026-11-03,99998,https://example.invalid/tufe,0000000000000000000000000000000000000000000000000000000000000000"
+    ]
+   ],
+   "result": "ok"
+  },
+  {
+   "file_sha256": "2d44ff6b595dab24c3cc986eb0f701684695bff02d821fd1e3d4ea5cfab8b408",
+   "last_month": "2026-08",
+   "months": 82,
+   "name": "old_row_changed",
+   "ops": [
+    [
+     "replace",
+     "2020-01,14.025066,",
+     "2020-01,14.025067,"
+    ]
+   ],
+   "result": "ok"
+  },
+  {
+   "name": "crlf",
+   "ops": [
+    [
+     "crlf"
+    ]
+   ],
+   "result": "error"
+  },
+  {
+   "name": "missing_month",
+   "ops": [
+    [
+     "delete_line",
+     "2020-02,"
+    ]
+   ],
+   "result": "error"
+  },
+  {
+   "name": "bad_index_three_dots",
+   "ops": [
+    [
+     "replace",
+     "2019-11,13.736052,",
+     "2019-11,13.736.052,"
+    ]
+   ],
+   "result": "error"
+  },
+  {
+   "name": "bad_index_space",
+   "ops": [
+    [
+     "replace",
+     "2019-11,13.736052,",
+     "2019-11, 13.736052,"
+    ]
+   ],
+   "result": "error"
+  },
+  {
+   "name": "bad_index_zero",
+   "ops": [
+    [
+     "replace",
+     "2019-11,13.736052,",
+     "2019-11,0,"
+    ]
+   ],
+   "result": "error"
+  },
+  {
+   "name": "release_day_2",
+   "ops": [
+    [
+     "replace",
+     "2019-11,13.736052,2019-12-03,",
+     "2019-11,13.736052,2019-12-02,"
+    ]
+   ],
+   "result": "error"
+  },
+  {
+   "name": "release_wrong_month",
+   "ops": [
+    [
+     "replace",
+     "2019-11,13.736052,2019-12-03,",
+     "2019-11,13.736052,2020-01-03,"
+    ]
+   ],
+   "result": "error"
+  },
+  {
+   "name": "bulletin_not_digit",
+   "ops": [
+    [
+     "replace",
+     ",30859,",
+     ",3085A,"
+    ]
+   ],
+   "result": "error"
+  },
+  {
+   "name": "url_http",
+   "ops": [
+    [
+     "replace",
+     "2019-11,13.736052,2019-12-03,30859,https://",
+     "2019-11,13.736052,2019-12-03,30859,http://"
+    ]
+   ],
+   "result": "error"
+  },
+  {
+   "name": "header",
+   "ops": [
+    [
+     "replace",
+     "month,index,",
+     "month,endeks,"
+    ]
+   ],
+   "result": "error"
+  },
+  {
+   "name": "append_gap",
+   "ops": [
+    [
+     "append",
+     "2026-10,138.1,2026-11-03,99998,https://example.invalid/tufe,0000000000000000000000000000000000000000000000000000000000000000"
+    ]
+   ],
+   "result": "error"
+  }
+ ],
+ "prefix": [
+  {
+   "month": "2019-11",
+   "prefix_sha256": "6fce4a08420872b3ea5e335f6a55f0eb97f55f8e663376af2ae10215f09c046a",
+   "variant": "base"
+  },
+  {
+   "month": "2026-08",
+   "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+   "variant": "base"
+  },
+  {
+   "pin": {
+    "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+    "through_month": "2026-08"
+   },
+   "result": "ok",
+   "variant": "base"
+  },
+  {
+   "month": "2019-11",
+   "prefix_sha256": "6fce4a08420872b3ea5e335f6a55f0eb97f55f8e663376af2ae10215f09c046a",
+   "variant": "append_2026_09"
+  },
+  {
+   "month": "2026-08",
+   "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+   "variant": "append_2026_09"
+  },
+  {
+   "pin": {
+    "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+    "through_month": "2026-08"
+   },
+   "result": "ok",
+   "variant": "append_2026_09"
+  },
+  {
+   "month": "2019-11",
+   "prefix_sha256": "6fce4a08420872b3ea5e335f6a55f0eb97f55f8e663376af2ae10215f09c046a",
+   "variant": "append_2026_09_10"
+  },
+  {
+   "month": "2026-08",
+   "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+   "variant": "append_2026_09_10"
+  },
+  {
+   "pin": {
+    "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+    "through_month": "2026-08"
+   },
+   "result": "ok",
+   "variant": "append_2026_09_10"
+  },
+  {
+   "month": "2019-11",
+   "prefix_sha256": "6fce4a08420872b3ea5e335f6a55f0eb97f55f8e663376af2ae10215f09c046a",
+   "variant": "old_row_changed"
+  },
+  {
+   "month": "2026-08",
+   "prefix_sha256": "2d44ff6b595dab24c3cc986eb0f701684695bff02d821fd1e3d4ea5cfab8b408",
+   "variant": "old_row_changed"
+  },
+  {
+   "pin": {
+    "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+    "through_month": "2026-08"
+   },
+   "result": "TUFE_FILE_MISMATCH",
+   "variant": "old_row_changed"
+  }
+ ],
+ "schema_version": "borsai.app_tufe_cases/1"
+}

@@ -1,0 +1,353 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "PENTA",
+ "company": "Penta Teknoloji Ürünleri Dağıtım Ticaret A.Ş.",
+ "first_trading_date": "2021-05-17",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Yurt içi bireysele eşit; kurumsala takdire bağlı dağıtım",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_933740_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b24c6817ef",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "933740",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933740",
+   "published_at": "2021-04-30T20:29:11+03:00",
+   "source_sha256": "e378144de293281241e95745ad12e1289855049450c2e551745f25425ecd2c40",
+   "source_file": "source_docs/PENTA/KAP_933740_ek1.pdf",
+   "page": 8,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Her bir tahsisat grubuna dağıtım, aşağıda belirtilen şekilde kendi içinde ayrı ayrı yapılacakuır: • Yurt İçi Bireysel Vatırımcılar'a Dağıtım: Eşit Dağıtım Vöntemi kullanılacaktır.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_933740_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b24c6817ef",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "933740",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933740",
+     "published_at": "2021-04-30T20:29:11+03:00",
+     "source_sha256": "e378144de293281241e95745ad12e1289855049450c2e551745f25425ecd2c40",
+     "source_file": "source_docs/PENTA/KAP_933740_ek1.pdf",
+     "page": 8,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Yurt Içi Kurumsal Yatırımcılar'a Dağıtım: Her bir Yurt Içi Kurumsal Yatırımcı'ya verilecek pay miktarına, İş Yatırım'ın önerileri de dikkate alınarak Halka Arz Edenler tarafindan karar verilecektir. • Yurt Dışı Kurumsal Yatırımcılar'a Dağıtım: Her bir Yurt Dışı Kurumsal Yatırımer'ya verilccek pay miktarına, Iş Yatırım'ın önerileri de dikkate alınarak Halka Arz Edenler tarafindan karar verilecektir"
+    },
+    {
+     "source_id": "KAP_933740_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b24c6817ef",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "933740",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933740",
+     "published_at": "2021-04-30T20:29:11+03:00",
+     "source_sha256": "e378144de293281241e95745ad12e1289855049450c2e551745f25425ecd2c40",
+     "source_file": "source_docs/PENTA/KAP_933740_ek1.pdf",
+     "page": 33,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Halka arz edilecek toplam 18.378.752 TL. nominal değerli payların; 11.027.251 TL. nominal değerdeki (%60) kısmı Yurt Içi Bireysel Yatırımcılar'a, 5.513.626 TL. nominal değerdeki (%30) kısmı Yurt İçi Kurumsal Yatırımcılar'a, 1.837.875 TL nominal değerdeki (%10) kısmı Yurt Dışı Kurumsal Yatırımcılar'a, gerçekleştirilecek satışlar için tahsis edilmiştir."
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Talep toplama (borsa dışı; İş Yatırım konsorsiyum lideri; TSSD'ye göre 32,00-38,00 TL fiyat aralığı). Tahsisat: yurt içi bireysel %60, yurt içi kurumsal %30, yurt dışı kurumsal %10; çalışan grubu yok. Yurt içi bireysel: 'Eşit Dağıtım Yöntemi'; yurt içi ve yurt dışı kurumsal: her kurumsal yatırımcıya verilecek pay miktarına İş Yatırım'ın önerileri dikkate alınarak Halka Arz Edenler (Şirket ve halka arz eden pay sahipleri: Gözde Girişim, Mustafa Ergün, Sinan Güçlü, Bülent Koray Aksoy, Mürsel Özçelik; tanım KAP_933733_EK1 s.7) karar verir; belge kurumsal için 'oransal' demiyor, kanonik kalıba uymadığından kısa metin. Ek satış paylarının gruplar arası dağılımını Halka Arz Edenler belirler. [yazım normalize edildi; ajan değeri: 'Yurt içi bireysele eşit; kurumsala halka arz edenlerin takdiriyle dağıtım']"
+  },
+  "price_stability_planned": {
+   "value": "TRUE",
+   "unit": "boolean",
+   "status": "FILLED",
+   "source_id": "KAP_933741_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b4a341181a",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "933741",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933741",
+   "published_at": "2021-04-30T20:29:27+03:00",
+   "source_sha256": "1f61254fede90aa4aac6e470c0209bbf5b48df37aae5643476d5a5c48b506dd3",
+   "source_file": "source_docs/PENTA/KAP_933741_ek1.pdf",
+   "page": 5,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: Konsorsiyum Lideri Iş Yatırım tarafından kendi hesabına fiıyat istikrarı işlemlerinin gerçekleştirilmesi planlanmaktadır.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Fiyat istikrarı işlemlerini İş Yatırım yapabilir; kaynak: halka arz eden pay sahiplerinin ek satış paylarının (2.756.809 TL nominal) satış hasılatı (s.6)."
+  },
+  "price_stability_days": {
+   "value": "30",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_933741_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b4a341181a",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "933741",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933741",
+   "published_at": "2021-04-30T20:29:27+03:00",
+   "source_sha256": "1f61254fede90aa4aac6e470c0209bbf5b48df37aae5643476d5a5c48b506dd3",
+   "source_file": "source_docs/PENTA/KAP_933741_ek1.pdf",
+   "page": 5,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5.2. Fiyat istikrarı işlemlerinin gerçekleştirilebileceği zaman aralığı: Payların borsada işlem görmeye başlamasından itibaren 30 gündür.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": ""
+  },
+  "issuer_lockup_days": {
+   "value": "180",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_933741_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b4a341181a",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "933741",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933741",
+   "published_at": "2021-04-30T20:29:27+03:00",
+   "source_sha256": "1f61254fede90aa4aac6e470c0209bbf5b48df37aae5643476d5a5c48b506dd3",
+   "source_file": "source_docs/PENTA/KAP_933741_ek1.pdf",
+   "page": 8,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "a) İhraççı tarafindan verilen taahhüt: Şirket, 12 Mart 2021 tarihli ve 2021/05 sayılı yönetim kurulu kararına binaen verdiği taahhüdü ile Şirket paylarıın Borsa Istanbul da işlem görmeyc başladığı tarihten itibaren 180 gün boyunca, herhangi bir bedelli sermaye artırımı yapmayacağını, dolaşımdaki pay miktarının artmasına sebep olmayacağını",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "180 gün (belgede gün olarak). Kapsam: bedelli sermaye artırımı yapmama, dolaşımdaki payı artırmama ve bu sonucu doğuracak işlem yapmama. Başlangıç: Borsa İstanbul'da işlem görmeye başlama."
+  },
+  "shareholder_lockup_days": {
+   "value": "180",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_933741_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b4a341181a",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "933741",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933741",
+   "published_at": "2021-04-30T20:29:27+03:00",
+   "source_sha256": "1f61254fede90aa4aac6e470c0209bbf5b48df37aae5643476d5a5c48b506dd3",
+   "source_file": "source_docs/PENTA/KAP_933741_ek1.pdf",
+   "page": 8,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Mustafa Ergün 12 Mart 2021 tarihli beyanıyla, (i) sahibi olduğu halka arza ve ek satışa konu olmayan Şirket paylarını, payların Borsa Istanbul*da işlem görmeye başlamasıdan itibaren, 180 güin boyunca satmayacağını veya payların satılması sonucunu doğuracak şekilde herhangi bir işleme tabi tutmayacağını",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_933741_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b4a341181a",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "933741",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933741",
+     "published_at": "2021-04-30T20:29:27+03:00",
+     "source_sha256": "1f61254fede90aa4aac6e470c0209bbf5b48df37aae5643476d5a5c48b506dd3",
+     "source_file": "source_docs/PENTA/KAP_933741_ek1.pdf",
+     "page": 8,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Sinan Güçlü 12 Mart 2021 tarihli beyamıyla, (i) sahibi olduğu halka arza ve ek satışa konu olmayan Şirket paylarını, payların Borsa Istanbul'da işlem görmeye başlamasından itibaren, 180 gün boyunca satmayacağını"
+    },
+    {
+     "source_id": "KAP_933741_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b4a341181a",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "933741",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933741",
+     "published_at": "2021-04-30T20:29:27+03:00",
+     "source_sha256": "1f61254fede90aa4aac6e470c0209bbf5b48df37aae5643476d5a5c48b506dd3",
+     "source_file": "source_docs/PENTA/KAP_933741_ek1.pdf",
+     "page": 8,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Bülent Koray Aksoy 12 Mart 2021 tarihli beyanıyla. (i) sahibi olduğu halka arza ve ek satışa konu olmayan Şirket paylarıı, payların Borsa İstanbul'da işlem görmeye başlamasından itibaren, 180 gün boyunca satmayacağım"
+    },
+    {
+     "source_id": "KAP_933741_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b4a341181a",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "933741",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933741",
+     "published_at": "2021-04-30T20:29:27+03:00",
+     "source_sha256": "1f61254fede90aa4aac6e470c0209bbf5b48df37aae5643476d5a5c48b506dd3",
+     "source_file": "source_docs/PENTA/KAP_933741_ek1.pdf",
+     "page": 8,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Mürsel Özçelik 12 Mart 2021 tarihli beyanıyla, (i) sahibi olduğu halka arza ve ek satışa konu olmayan Şirket paylarını, payların Borsa Istanbul' da işlem görmeyc başlamasından itibaren, 180 gün boyunca satmayacağımı"
+    },
+    {
+     "source_id": "KAP_933741_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b4a341181a",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "933741",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933741",
+     "published_at": "2021-04-30T20:29:27+03:00",
+     "source_sha256": "1f61254fede90aa4aac6e470c0209bbf5b48df37aae5643476d5a5c48b506dd3",
+     "source_file": "source_docs/PENTA/KAP_933741_ek1.pdf",
+     "page": 9,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Gözde Girişim, 12 Mart 2021 tarihli ve 2021/03 sayılı yönetim kurulu karariyla, () sahibi olduğu halka arza ve ek satışa konu olmayan Şirket paylarını, payların Borsa İstanbul'da işlem görmeye başlamasından itibaren. 180 gün boyunca satmayacağımı"
+    },
+    {
+     "source_id": "KAP_933741_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b4a341181a",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "933741",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933741",
+     "published_at": "2021-04-30T20:29:27+03:00",
+     "source_sha256": "1f61254fede90aa4aac6e470c0209bbf5b48df37aae5643476d5a5c48b506dd3",
+     "source_file": "source_docs/PENTA/KAP_933741_ek1.pdf",
+     "page": 9,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "c) Sermaye piyasası mevzuatı kapsamında verilen taahhütler: Mustafa Ergün 12 Mart 2021 tarihli beyanıyla, sahibi olduğu Şirket paylarımı, payların Borsa Istanbul'da işlem görmeye başladıkları tarihten itibaren 1 yıl boyunca halka arz fiyatının altında bir fiyattan borsada satmayacağımı"
+    },
+    {
+     "source_id": "KAP_933741_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b4a341181a",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "933741",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933741",
+     "published_at": "2021-04-30T20:29:27+03:00",
+     "source_sha256": "1f61254fede90aa4aac6e470c0209bbf5b48df37aae5643476d5a5c48b506dd3",
+     "source_file": "source_docs/PENTA/KAP_933741_ek1.pdf",
+     "page": 9,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Gözde Girişim, Şirket'te sahibi olduğu paylanı 27 Mart 2014 tarihinde iktisap ettiğinden, VII-128.1 sayılı Pay Tebliği'nin 8'inci maddesinin Z'nci fikrasında yer alan"
+    }
+   ],
+   "components": [
+    {
+     "who": "Gözde Girişim Sermayesi Yatırım Ortaklığı A.Ş. (%54,30; A+B grubu)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Mustafa Ergün (%14,70)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Sinan Güçlü (%10,34)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Bülent Koray Aksoy (%10,33)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Mürsel Özçelik (%10,33)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Mustafa Ergün, Sinan Güçlü, Bülent Koray Aksoy, Mürsel Özçelik (her biri)",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "En kısa süre 180 (beş ortağın halka arza/ek satışa konu olmayan paylar için gönüllü mutlak satmama taahhüdü). Gözde Girişim (GSYO) payları 27.03.2014'te edindiğinden Pay Tebliği 8/2 gereği 8/1 kapsamında taahhüt vermiyor. Her ortağın (ii) fiyat istikrarı işlemleri kapsamında sonradan alınan paylar için 180 gün fiyat altı satmama beyanı mevcut paylara ilişkin değil; bileşenlere katılmadı. d) Yetkili kuruluşlar tarafından verilen taahhütler: Yoktur (s.9)."
+  },
+  "sector": {
+   "value": "Bilgi teknolojileri ürünlerinin B2B dağıtımı (distribütörlüğü)",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_933735_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7902c29f017923a9c02d5ba4",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "933735",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933735",
+   "published_at": "2021-04-30T20:27:41+03:00",
+   "source_sha256": "3ab7ba1389ed0297c4565b93294532b6002dedd2747f68f732e13c14ecaff139",
+   "source_file": "source_docs/PENTA/KAP_933735_ek1.pdf",
+   "page": 12,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Şirket. Türkiye'de, teknoloji scktöründe, bilgi teknolojileri pazarında, teknoloji ürünlerinin B2B dağıtımı (distribütörlüğü) sektöründe faaliyet göstermektedir.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_933734_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923a7de241711",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "933734",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/933734",
+     "published_at": "2021-04-30T20:27:12+03:00",
+     "source_sha256": "cccf1b90b5740db6d8f3f7d96edb7b3aa196d16b45707c1a35eb5deacf9c89af",
+     "source_file": "source_docs/PENTA/KAP_933734_ek1.pdf",
+     "page": 28,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Genel Bakış Türkiye'nin önde gelen katma değerli B2B teknoloji distribütörlerinden biri olan Şirket, yurt içinde dağıtımını yürüttliğü 40°tan fazla global marka ile teknoloji sağlayıcılarının ürünlerini piyasaya sunmakta"
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "§7.1.1: donanım, yazılım, veri depolama, aksesuar, yazıcı-sarf ve çevre birimleri dağıtım ve pazarlaması; Exper markasıyla PC/tablet üretimi de var."
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahname 1-8. kısımlar ve TSSD'de katılım endeksi / faizsiz finans uygunluk beyanı yok. qfind 'katılım|faizsiz|islam|icazet|helal' yalnız katılım bankalarıyla kredi sözleşmeleri, başvuru yeri/teminat tablosu (Türkiye Finans Katılım Bankası, Kira Sertifikaları Katılım Fonu), bir yöneticinin özgeçmişi ve genel kurula katılım eşleşmelerini verdi; bunlar uygunluk beyanı değil.",
+   "looked_at": [
+    "KAP_933733_EK1",
+    "KAP_933734_EK1",
+    "KAP_933735_EK1",
+    "KAP_933737_EK1",
+    "KAP_933738_EK1",
+    "KAP_933739_EK1",
+    "KAP_933740_EK1",
+    "KAP_933741_EK1",
+    "KAP_933746_EK1",
+    "KAP_933746"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_933734_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "933734",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923a7de241711",
+   "published_at": "2021-04-30T20:27:12+03:00",
+   "sha256": "cccf1b90b5740db6d8f3f7d96edb7b3aa196d16b45707c1a35eb5deacf9c89af",
+   "file": "source_docs/PENTA/KAP_933734_ek1.pdf"
+  },
+  "KAP_933735_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "933735",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c7902c29f017923a9c02d5ba4",
+   "published_at": "2021-04-30T20:27:41+03:00",
+   "sha256": "3ab7ba1389ed0297c4565b93294532b6002dedd2747f68f732e13c14ecaff139",
+   "file": "source_docs/PENTA/KAP_933735_ek1.pdf"
+  },
+  "KAP_933740_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "933740",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b24c6817ef",
+   "published_at": "2021-04-30T20:29:11+03:00",
+   "sha256": "e378144de293281241e95745ad12e1289855049450c2e551745f25425ecd2c40",
+   "file": "source_docs/PENTA/KAP_933740_ek1.pdf"
+  },
+  "KAP_933741_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "933741",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7902c29e017923b4a341181a",
+   "published_at": "2021-04-30T20:29:27+03:00",
+   "sha256": "1f61254fede90aa4aac6e470c0209bbf5b48df37aae5643476d5a5c48b506dd3",
+   "file": "source_docs/PENTA/KAP_933741_ek1.pdf"
+  }
+ }
+}

@@ -1,0 +1,226 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "ATATP",
+  "company": "ATP Ticari Bilgisayar Ağı ve Elektrik Güç Kaynakları Üretim Pazarlama ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "37233",
+      "source_id": "KAP_938872_EK2",
+      "source_document": "KAP 938872 ek 2",
+      "source_published_at": "2021-05-30T18:48:36+03:00",
+      "source_sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf",
+      "quote": "TOPLAM 7.500.000 100,00 37.244 12.024.403 100,00 37.233 7.500.000 100,00",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 37.244; dağıtım yapılan 37.233",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "37168",
+        "domestic_institutional": "64",
+        "foreign_institutional": "1"
+      },
+      "source_id": "KAP_938872_EK2",
+      "source_document": "KAP 938872 ek 2",
+      "source_published_at": "2021-05-30T18:48:36+03:00",
+      "source_sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 5.250.000 70,00 37.168 4.835.789 40,22 37.168 4.835.789 64,48",
+        "Yurt İçi Kurumsal 1.500.000 20,00 75 7.121.614 59,23 64 2.597.211 34,63",
+        "Yurt Dışı Kurumsal 750.000 10,00 1 67.000 0,56 1 67.000 0,89"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 37.168, yurt içi kurumsal 75, yurt dışı kurumsal 1",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "0.9211026667",
+      "source_id": "KAP_938872_EK2",
+      "source_document": "KAP 938872 ek 2",
+      "source_published_at": "2021-05-30T18:48:36+03:00",
+      "source_sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf",
+      "quote": "Yurt İçi Bireysel 5.250.000 70,00 37.168 4.835.789 40,22 37.168 4.835.789 64,48",
+      "derived": true,
+      "formula": "grup talebi 4.835.789 / planlanan tahsisat 5.250.000",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "4.7477426667",
+      "source_id": "KAP_938872_EK2",
+      "source_document": "KAP 938872 ek 2",
+      "source_published_at": "2021-05-30T18:48:36+03:00",
+      "source_sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf",
+      "quote": "Yurt İçi Kurumsal 1.500.000 20,00 75 7.121.614 59,23 64 2.597.211 34,63",
+      "derived": true,
+      "formula": "grup talebi 7.121.614 / planlanan tahsisat 1.500.000",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "0.0893333333",
+      "source_id": "KAP_938872_EK2",
+      "source_document": "KAP 938872 ek 2",
+      "source_published_at": "2021-05-30T18:48:36+03:00",
+      "source_sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf",
+      "quote": "Yurt Dışı Kurumsal 750.000 10,00 1 67.000 0,56 1 67.000 0,89",
+      "derived": true,
+      "formula": "grup talebi 67.000 / planlanan tahsisat 750.000",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "4835789",
+        "domestic_institutional": "2597211",
+        "foreign_institutional": "67000"
+      },
+      "source_id": "KAP_938872_EK2",
+      "source_document": "KAP 938872 ek 2",
+      "source_published_at": "2021-05-30T18:48:36+03:00",
+      "source_sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 5.250.000 70,00 37.168 4.835.789 40,22 37.168 4.835.789 64,48",
+        "Yurt İçi Kurumsal 1.500.000 20,00 75 7.121.614 59,23 64 2.597.211 34,63",
+        "Yurt Dışı Kurumsal 750.000 10,00 1 67.000 0,56 1 67.000 0,89"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "64.48",
+      "source_id": "KAP_938872_EK2",
+      "source_document": "KAP 938872 ek 2",
+      "source_published_at": "2021-05-30T18:48:36+03:00",
+      "source_sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf",
+      "quote": "Yurt İçi Bireysel 5.250.000 70,00 37.168 4.835.789 40,22 37.168 4.835.789 64,48",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "34.63",
+      "source_id": "KAP_938872_EK2",
+      "source_document": "KAP 938872 ek 2",
+      "source_published_at": "2021-05-30T18:48:36+03:00",
+      "source_sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf",
+      "quote": "Yurt İçi Kurumsal 1.500.000 20,00 75 7.121.614 59,23 64 2.597.211 34,63",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.89",
+      "source_id": "KAP_938872_EK2",
+      "source_document": "KAP 938872 ek 2",
+      "source_published_at": "2021-05-30T18:48:36+03:00",
+      "source_sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf",
+      "quote": "Yurt Dışı Kurumsal 750.000 10,00 1 67.000 0,56 1 67.000 0,89",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız satış yöntemini (“Sabit Fiyatla Talep Toplama”) yazıyor; dağıtım yöntemi adlandırılmıyor; TSSD pencerelerinde yok",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Ata Yatırım Menkul Kıymetler A.Ş. ve İş Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_937350_EK1",
+      "source_document": "KAP 937350 ek 1",
+      "source_published_at": "2021-05-21T21:04:39+03:00",
+      "source_sha256": "fff90e2293ebe9d8b3333c38096bbad349096d18e335c07d52f77a58c7167491",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_937350_ek1.pdf",
+      "quote": "aracılık edecek Ata Yatırım Menkul Kıymetler A.Ş.'nin www.atayatirim.com.tr ve Iş Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "TSSD (OCR) imza sayfasında her iki kurum 'Konsorsiyum Lideri' olarak geçiyor; sonuç bildirimini İş Yatırım yayımladı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD anahtar sözcük pencerelerinde fiyat istikrarı yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_939094",
+      "source_document": "KAP 939094",
+      "source_published_at": "2021-05-31T18:00:37+03:00",
+      "source_sha256": "64b61bb83a04cbb7a5798f1f93c851b957d11c8e388e0a242da0b5192c975675",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_939094_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_939094",
+      "source_document": "KAP 939094",
+      "source_published_at": "2021-05-31T18:00:37+03:00",
+      "source_sha256": "64b61bb83a04cbb7a5798f1f93c851b957d11c8e388e0a242da0b5192c975675",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_939094_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_939094": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 939094",
+      "published_at": "2021-05-31T18:00:37+03:00",
+      "sha256": "64b61bb83a04cbb7a5798f1f93c851b957d11c8e388e0a242da0b5192c975675",
+      "path": "registry/oot/source_docs/ATATP/KAP_939094_bildirim.pdf"
+    },
+    "KAP_938872_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 938872 ek 2",
+      "published_at": "2021-05-30T18:48:36+03:00",
+      "sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf"
+    },
+    "KAP_937350_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 937350 ek 1",
+      "published_at": "2021-05-21T21:04:39+03:00",
+      "sha256": "fff90e2293ebe9d8b3333c38096bbad349096d18e335c07d52f77a58c7167491",
+      "path": "registry/oot/source_docs/ATATP/KAP_937350_ek1.pdf"
+    }
+  }
+}

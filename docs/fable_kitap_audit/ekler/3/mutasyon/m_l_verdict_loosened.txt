@@ -1,0 +1,20 @@
+### m_l_verdict_loosened :: tests/test_scoring.py::test_9a_interval_including_zero_says_indistinguishable tests/test_scoring.py::test_9e_verdict_vocabulary tests/test_scoring.py::test_backtest_primary_cells_and_verdicts tests/test_metrics.py
+.F.....                                                                  [100%]
+=================================== FAILURES ===================================
+__________________________ test_9e_verdict_vocabulary __________________________
+
+scores = {'schema_version': 'borsai.scores/1', 'generated_at_utc': '2026-10-11T23:26:37Z', 'as_of_session': '2026-09-30', 'code...borsai_source_sha256': '00264d91b78200c8c14cf3142042401caae1bacf406b1626a386ffddbb2ed19c', 'borsai_dirty': False}, ...}
+
+    def test_9e_verdict_vocabulary(scores):
+        for m in scores["models"]:
+            for c in m["backtest"]["cells"] + m["live"]["cells"]:
+                assert c["verdict"] in sc.VERDICTS
+                if c["verdict"] in ("geçiyor", "geçemiyor"):
+>                   assert c["n"] >= 30 and c["ci95"] is not None and not (c["ci95"][0] <= 0 <= c["ci95"][1])
+E                   assert (88 >= 30 and [-0.05314376438529629, 0.018457319983665083] is not None and not 0 <= 0.018457319983665083)
+
+tests/test_scoring.py:288: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_scoring.py::test_9e_verdict_vocabulary - assert (88 >= 30 a...
+1 failed, 6 passed in 9.07s
+exit=1

@@ -1,0 +1,216 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "SNICA",
+  "company": "Sanica Isı Sanayi A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "166700",
+      "source_id": "KAP_1081256",
+      "source_document": "KAP 1081256",
+      "source_published_at": "2022-11-21T09:44:38+03:00",
+      "source_sha256": "e1ae36a6b42082306c24412af5f656e6f93958d746cb652b892e6d75dfb5a419",
+      "source_path": "registry/oot/source_docs/SNICA/KAP_1081256_bildirim.pdf",
+      "quote": "toplamda 166.700 yatırımcıya dağıtım gerçekleştirilmiştir.",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden sayısı yazılmıyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "166571",
+        "domestic_institutional": "121",
+        "foreign_institutional": "8"
+      },
+      "source_id": "KAP_1081256",
+      "source_document": "KAP 1081256",
+      "source_published_at": "2022-11-21T09:44:38+03:00",
+      "source_sha256": "e1ae36a6b42082306c24412af5f656e6f93958d746cb652b892e6d75dfb5a419",
+      "source_path": "registry/oot/source_docs/SNICA/KAP_1081256_bildirim.pdf",
+      "quote": "166.571 adet yurt içi bireysel yatırımcıya, 121 adet yurt içi kurumsal yatırımcıya ve 8 adet yurt dışı kurumsal yatırımcıya olmak üzere toplamda 166.700 yatırımcıya dağıtım gerçekleştirilmiştir.",
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "13.7",
+      "source_id": "KAP_1081256",
+      "source_document": "KAP 1081256",
+      "source_published_at": "2022-11-21T09:44:38+03:00",
+      "source_sha256": "e1ae36a6b42082306c24412af5f656e6f93958d746cb652b892e6d75dfb5a419",
+      "source_path": "registry/oot/source_docs/SNICA/KAP_1081256_bildirim.pdf",
+      "quote": "yurt içi bireysel yatırımcı kategorisinde tahsisatın 13,7 katı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "9.3",
+      "source_id": "KAP_1081256",
+      "source_document": "KAP 1081256",
+      "source_published_at": "2022-11-21T09:44:38+03:00",
+      "source_sha256": "e1ae36a6b42082306c24412af5f656e6f93958d746cb652b892e6d75dfb5a419",
+      "source_path": "registry/oot/source_docs/SNICA/KAP_1081256_bildirim.pdf",
+      "quote": "yurt içi kurumsal yatırımcı kategorisinde tahsisatın 9,3 katı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "3.4",
+      "source_id": "KAP_1081256",
+      "source_document": "KAP 1081256",
+      "source_published_at": "2022-11-21T09:44:38+03:00",
+      "source_sha256": "e1ae36a6b42082306c24412af5f656e6f93958d746cb652b892e6d75dfb5a419",
+      "source_path": "registry/oot/source_docs/SNICA/KAP_1081256_bildirim.pdf",
+      "quote": "yurt dışı kurumsal yatırımcı kategorisinde ise tahsisatın 3,4 katı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "20000000",
+        "domestic_institutional": "16000000",
+        "foreign_institutional": "4000000"
+      },
+      "source_id": "KAP_1081256_EK1",
+      "source_document": "KAP 1081256 ek 1",
+      "source_published_at": "2022-11-21T09:44:38+03:00",
+      "source_sha256": "3b7d44589eeac07f0649b3fb61fbfd3915334e540fbc8cd7c8d72190146098d4",
+      "source_path": "registry/oot/source_docs/SNICA/KAP_1081256_ek1.pdf",
+      "quote": [
+        "Yurt içi Bireysel 274.567.811 62,87% 20.000.000 50,00% 166.571 20.000.000 50% Yatırımcılar",
+        "Yurt içi Kurumsal 148.692.012 34,05% 16.000.000 40,00% 121 16.000.000 40% Yatırımcılar",
+        "Yurt dışı 13.475.000 3,08% Kurumsal 4.000.000 10,00% 8 4.000.000 10% Yatırımcılar"
+      ],
+      "note": "ek tablo metni sütun sırası karışık çıkarılmış; dağıtım sütunu satır sonundaki nominal",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "50",
+      "source_id": "KAP_1081256",
+      "source_document": "KAP 1081256",
+      "source_published_at": "2022-11-21T09:44:38+03:00",
+      "source_sha256": "e1ae36a6b42082306c24412af5f656e6f93958d746cb652b892e6d75dfb5a419",
+      "source_path": "registry/oot/source_docs/SNICA/KAP_1081256_bildirim.pdf",
+      "quote": "Dağıtıma esas tahsisat oranları ise yurt içi bireysel yatırımcılar için %50, yurt içi kurumsal yatırımcılar için %40 ve yurt dışı kurumsal yatırımcılar için ise %10 olarak gerçekleşmiştir",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "40",
+      "source_id": "KAP_1081256",
+      "source_document": "KAP 1081256",
+      "source_published_at": "2022-11-21T09:44:38+03:00",
+      "source_sha256": "e1ae36a6b42082306c24412af5f656e6f93958d746cb652b892e6d75dfb5a419",
+      "source_path": "registry/oot/source_docs/SNICA/KAP_1081256_bildirim.pdf",
+      "quote": "yurt içi kurumsal yatırımcılar için %40",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "10",
+      "source_id": "KAP_1081256",
+      "source_document": "KAP 1081256",
+      "source_published_at": "2022-11-21T09:44:38+03:00",
+      "source_sha256": "e1ae36a6b42082306c24412af5f656e6f93958d746cb652b892e6d75dfb5a419",
+      "source_path": "registry/oot/source_docs/SNICA/KAP_1081256_bildirim.pdf",
+      "quote": "yurt dışı kurumsal yatırımcılar için ise %10 olarak gerçekleşmiştir",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç bildirimi ve TSSD penceresi dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Gedik Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1081256",
+      "source_document": "KAP 1081256",
+      "source_published_at": "2022-11-21T09:44:38+03:00",
+      "source_sha256": "e1ae36a6b42082306c24412af5f656e6f93958d746cb652b892e6d75dfb5a419",
+      "source_path": "registry/oot/source_docs/SNICA/KAP_1081256_bildirim.pdf",
+      "quote": "Gedik Yatırım Menkul Değerler A.Ş. liderliğindeki konsorsiyum aracılığı ile",
+      "note": "TSSD ayrıca İntegral Yatırım Menkul Değerler A.Ş.'yi aracı olarak sayıyor (OCR bozuk)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim, OCR) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1081456",
+      "source_document": "KAP 1081456",
+      "source_published_at": "2022-11-21T18:01:45+03:00",
+      "source_sha256": "764cb981503153509dd8bf2ef646d57dceb6ad72ce5c5db8fe9341178361cdb4",
+      "source_path": "registry/oot/source_docs/SNICA/KAP_1081456_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1081456",
+      "source_document": "KAP 1081456",
+      "source_published_at": "2022-11-21T18:01:45+03:00",
+      "source_sha256": "764cb981503153509dd8bf2ef646d57dceb6ad72ce5c5db8fe9341178361cdb4",
+      "source_path": "registry/oot/source_docs/SNICA/KAP_1081456_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1081456": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1081456",
+      "published_at": "2022-11-21T18:01:45+03:00",
+      "sha256": "764cb981503153509dd8bf2ef646d57dceb6ad72ce5c5db8fe9341178361cdb4",
+      "path": "registry/oot/source_docs/SNICA/KAP_1081456_bildirim.pdf"
+    },
+    "KAP_1081256": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1081256",
+      "published_at": "2022-11-21T09:44:38+03:00",
+      "sha256": "e1ae36a6b42082306c24412af5f656e6f93958d746cb652b892e6d75dfb5a419",
+      "path": "registry/oot/source_docs/SNICA/KAP_1081256_bildirim.pdf"
+    },
+    "KAP_1081256_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1081256 ek 1",
+      "published_at": "2022-11-21T09:44:38+03:00",
+      "sha256": "3b7d44589eeac07f0649b3fb61fbfd3915334e540fbc8cd7c8d72190146098d4",
+      "path": "registry/oot/source_docs/SNICA/KAP_1081256_ek1.pdf"
+    }
+  }
+}

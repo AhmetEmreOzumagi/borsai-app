@@ -1,0 +1,212 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "OYYAT",
+  "company": "Oyak Yatırım Menkul Değerler A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "50814",
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "quote": "Toplam 28.200.000 100% 50.834 58.031.418 100% 50.814 28.200.000 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 50.834; dağıtım yapılan 50.814",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "50714",
+        "domestic_institutional": "93",
+        "foreign_institutional": "7"
+      },
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 9.870.000 35% 50.714 12.918.960 22% 50.714 9.870.000 35%",
+        "Yurt İçi Kurumsal 9.870.000 35% 112 37.700.765 65% 93 11.562.000 41%",
+        "Yurt Dışı Kurumsal 8.460.000 30% 8 7.411.693 13% 7 6.768.000 24%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 50.714, yurt içi kurumsal 112, yurt dışı kurumsal 8",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "1.3089118541",
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "quote": "Yurt İçi Bireysel 9.870.000 35% 50.714 12.918.960 22% 50.714 9.870.000 35%",
+      "derived": true,
+      "formula": "grup talebi 12.918.960 / planlanan tahsisat 9.870.000 (aynı satır, lot)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "3.8197330294",
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "quote": "Yurt İçi Kurumsal 9.870.000 35% 112 37.700.765 65% 93 11.562.000 41%",
+      "derived": true,
+      "formula": "grup talebi 37.700.765 / planlanan tahsisat 9.870.000 (aynı satır, lot)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "0.876086643",
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "quote": "Yurt Dışı Kurumsal 8.460.000 30% 8 7.411.693 13% 7 6.768.000 24%",
+      "derived": true,
+      "formula": "grup talebi 7.411.693 / planlanan tahsisat 8.460.000 (aynı satır, lot)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "9870000",
+        "domestic_institutional": "11562000",
+        "foreign_institutional": "6768000"
+      },
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 9.870.000 35% 50.714 12.918.960 22% 50.714 9.870.000 35%",
+        "Yurt İçi Kurumsal 9.870.000 35% 112 37.700.765 65% 93 11.562.000 41%",
+        "Yurt Dışı Kurumsal 8.460.000 30% 8 7.411.693 13% 7 6.768.000 24%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "35",
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "quote": "Yurt İçi Bireysel 9.870.000 35% 50.714 12.918.960 22% 50.714 9.870.000 35%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "41",
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "quote": "Yurt İçi Kurumsal 9.870.000 35% 112 37.700.765 65% 93 11.562.000 41%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "24",
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "quote": "Yurt Dışı Kurumsal 8.460.000 30% 8 7.411.693 13% 7 6.768.000 24%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç bildirimi (KAP_940320 ve ekleri) dağıtım yöntemini adlandırmıyor; TSSD yok",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": null,
+      "missing_reason": "sonuç bildirimi ve listeleme bildirimi aracı kurum/konsorsiyum lideri yazmıyor; TSSD yok",
+      "provenance": "MISSING"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD/izahname yok; sonuç bildirimi fiyat istikrarından söz etmiyor",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD/izahname yok",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD/izahname yok",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD/izahname yok",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız",
+      "source_id": "KAP_941172",
+      "source_document": "KAP 941172",
+      "source_published_at": "2021-06-08T18:03:02+03:00",
+      "source_sha256": "f33e89c48d3a194112f51ceba214825524411e99f104a1897f1004170e06dd7b",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_941172_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_941172",
+      "source_document": "KAP 941172",
+      "source_published_at": "2021-06-08T18:03:02+03:00",
+      "source_sha256": "f33e89c48d3a194112f51ceba214825524411e99f104a1897f1004170e06dd7b",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_941172_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_941172": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 941172",
+      "published_at": "2021-06-08T18:03:02+03:00",
+      "sha256": "f33e89c48d3a194112f51ceba214825524411e99f104a1897f1004170e06dd7b",
+      "path": "registry/oot/source_docs/OYYAT/KAP_941172_bildirim.pdf"
+    },
+    "KAP_940320_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 940320 ek 2",
+      "published_at": "2021-06-06T21:09:25+03:00",
+      "sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf"
+    }
+  }
+}

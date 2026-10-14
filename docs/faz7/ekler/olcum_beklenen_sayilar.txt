@@ -1,0 +1,66 @@
+# Beklenen sayılar — ölçüm
+HEAD 70b67d1; şartname commit'i 6a16c16
+
+## training_table_v2.csv
+- satır: ölçülen 170 | beklenen 170 | TUTTU
+- kohort: ölçülen {'OOT_OPEN': 71, 'H99': 99} | beklenen {'H99': 99, 'OOT_OPEN': 71} | TUTTU
+- H99 satırları paylaşılan 31 sütunda training_table.csv ile bayt-eşit: ölçülen 99/99 | beklenen 99/99 | TUTTU
+- data/training_table.csv sha256 6a16c16'dakiyle aynı: ölçülen b307cd0e3a01… | beklenen değişmez | TUTTU
+- data/data_version.json sha256 6a16c16'dakiyle aynı: ölçülen a0c7d082dacd… | beklenen değişmez | TUTTU
+- data/build_training_table.py sha256 6a16c16'dakiyle aynı: ölçülen 0d0626db87c7… | beklenen değişmez | TUTTU
+
+## Açık kümenin L dağılımı (71 üye)
+- L dağılımı: ölçülen {0: 9, 1: 11, 2: 5, 3: 4, 4: 3, 5: 8, 6: 5, 7: 6, 8: 5, 9: 6, 10: 9} | beklenen {0: 9, 1: 11, 2: 5, 3: 4, 4: 3, 5: 8, 6: 5, 7: 6, 8: 5, 9: 6, 10: 9} | TUTTU
+
+## alloc_regime
+- v2 satırlarında alloc_regime = data.alloc_regime(talep toplama başlangıcı): ölçülen 170/170 | beklenen 170/170 | TUTTU
+- açık küme: kohort etiketiyle eşit: ölçülen 71/71 | beklenen 71/71 | TUTTU
+- H99: EQUAL_DIST_20230330: ölçülen 99/99 | beklenen 99/99 | TUTTU
+- data.alloc_regime ≡ registry.compute_regime_tags (2019-01-01…2026-12-31, her gün): ölçülen 2922/2922 | beklenen 2922/2922 | TUTTU
+- 135 kohort üyesi (yalnız kohort listesi): ilk işlem günü okumasında etiketi farklı 4 (2021-11-11 sınırı); ikili r aynı 135/135 (SPEC_DEVIATIONS J2)
+- 135/135 = (yukarıdaki her gün eşdeğerliği) + (tests/test_faz6_oot.py::test_real_cohort_validates_and_reproduces_from_code: kohort etiketleri compute_regime_tags(bookbuilding_start)'tan yeniden üretilir); kasa girdileri bu ölçümde okunmadı
+
+## Kasa kodu (data/)
+- T4 bekçisinin bulduğu sorun (kasa 64 kod; bütün data/): ölçülen 0 | beklenen 0 | TUTTU
+- data/training_table_v2.csv: kasa kodu: ölçülen 0 | beklenen 0 | TUTTU
+- data/data_version_v2.json: kasa kodu: ölçülen 0 | beklenen 0 | TUTTU
+- data/build_training_table_v2.py: kasa kodu: ölçülen 0 | beklenen 0 | TUTTU
+- data/raw/tuik/tufe_genel_2025_100.csv: kasa kodu: ölçülen 0 | beklenen 0 | TUTTU
+- data/raw/tuik/tufe_bultenleri.csv: kasa kodu: ölçülen 0 | beklenen 0 | TUTTU
+- data/raw/tuik/build_tufe_csv.py: kasa kodu: ölçülen 0 | beklenen 0 | TUTTU
+- önceden var olan istisna (SPEC_DEVIATIONS J18): data/outcomes/COMPLETENESS.csv 1 satır (first_seen ≥ 2026-08-07, ipos_status ['OUT_OF_SCOPE']); pin 1
+
+## TÜFE (data/raw/tuik/tufe_genel_2025_100.csv)
+- aylar: ölçülen 2019-11…2026-08 (82 ay, kesintisiz: True) | beklenen 2019-11'den güncele kesintisiz | TUTTU
+- 2025 ortalaması: ölçülen 100.0000 | beklenen 100.00 ± 0.05 | TUTTU
+- release_date ≥ izleyen ayın 3'ü: ölçülen 82/82 | beklenen 82/82 | TUTTU
+- month_for örnekleri: ölçülen {'2026-09-02': '2026-07', '2026-09-25': '2026-07', '2026-10-01': '2026-08', '2020-01-06': '2019-11'} | beklenen {'2026-09-02': '2026-07', '2026-09-25': '2026-07', '2026-10-01': '2026-08', '2020-01-06': '2019-11'} | TUTTU
+- release_date < T (v2 satırları): ölçülen 170/170 | beklenen 170/170 | TUTTU
+- v2'nin tufe_month/tufe_index = tufe.index_for(T): ölçülen 170/170 | beklenen 170/170 | TUTTU
+- dosya sha256 3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b; ham xls sha256 6f7ee8e4ce7e8a7ac79a332db375c4a3179d02162a5d72f684d352aa6c70ff86
+
+## PP sayımı
+- H99 f3'lü satır / olay: ölçülen 506 / 83 | beklenen 506 / 83 | TUTTU
+- açık f3'lü satır / olay: ölçülen 374 / 59 | beklenen 374 / 59 | TUTTU
+- havuz satır / olay: ölçülen 880 / 142 | beklenen 880 / 142 | TUTTU
+- havuz grup olay/risk (g1, g2, g3): ölçülen 25/165, 31/258, 86/457 | beklenen 25/165, 31/258, 86/457 | TUTTU
+- havuz arz (f3'lü): ölçülen 165 ({'OOT_OPEN': 68, 'H99': 97}) | beklenen 165 | TUTTU
+
+## Fold planları (tests/reference/macos_golden_faz7/)
+- ceiling_hazard_v1_clip: fold, v0 ile aynı ticker (sıra dahil): ölçülen 87, True | beklenen 87, True | TUTTU
+- ceiling_hazard_v1_real: fold, v0 ile aynı ticker (sıra dahil): ölçülen 87, True | beklenen 87, True | TUTTU
+- ceiling_hazard_v1_pooled: fold, 87'nin hepsini içerir: ölçülen 97, True | beklenen 97 (ölçülmedi), True | TUTTU
+- yakın dönem fold / blok / dört koşuda aynı ticker'lar: ölçülen 78 / 22 / True | beklenen 78 / 22 / True | TUTTU
+- sızıntı: max(eğitim seans tarihi) ≥ T olan fold: ölçülen 0 | beklenen 0 | TUTTU
+
+## v0 karşılaştırıcısı
+- ledger sha256: ölçülen 976b4dcea981… | beklenen 976b4dcea981… | TUTTU
+- 87-fold ortalama RPS (ledger'daki S_1..S_10'dan): ölçülen 0.1503154629 (|Δ| günlükteki Faz 1B değerine 2.8e-17) | beklenen 0.1503 (|Δ| ≤ 1e-9) | TUTTU
+
+## Bayt-eşitlik
+- tests/reference/macos_golden (9 dosya) 6a16c16'dan beri: ölçülen değişen 0 | beklenen 0 | TUTTU
+- tests/reference/macos_golden_faz1b (21 dosya) 6a16c16'dan beri: ölçülen değişen 0 | beklenen 0 | TUTTU
+- tests/reference/macos_golden_faz4 (5 dosya) 6a16c16'dan beri: ölçülen değişen 0 | beklenen 0 | TUTTU
+- tests/reference/macos_golden_faz5 (4 dosya) 6a16c16'dan beri: ölçülen değişen 0 | beklenen 0 | TUTTU
+- app/parity/golden: değişen dosya: ölçülen ['app/parity/golden/MANIFEST.json'] | beklenen ['app/parity/golden/MANIFEST.json'] (T2) | TUTTU
+- gen_golden --check: ölçülen {"checked": 25, "different": []} | beklenen {"checked": 25, "different": []} | TUTTU

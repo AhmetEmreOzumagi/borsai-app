@@ -1,0 +1,165 @@
+{
+  "break_day": {
+    "b_floor": 0,
+    "band_ratio": {
+      "lower_over_reference": "0.9",
+      "rule_ok": true,
+      "upper_over_reference": "1.1"
+    },
+    "fields_raw": {
+      "aof": "136.109",
+      "close": "135.9",
+      "halt": "0",
+      "high": "137.1",
+      "low": "135.9",
+      "lower_limit": "122.4",
+      "open": "136",
+      "reference_price": "136",
+      "special_trade_turnover": "0",
+      "special_trade_volume": "0",
+      "trade_count": "132227",
+      "turnover": "8141988818.2",
+      "upper_limit": "149.6",
+      "volume": "59819442"
+    },
+    "h": 1,
+    "half_day": 0,
+    "halt_flag": 0,
+    "session_date": "2026-08-20",
+    "warnings": []
+  },
+  "code": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "3dcef9955cf82cd02be96f1fc1209ed6413ffa79d92e18f96ed765c4cab1fb30",
+    "git_head": "71cf0791d53d3b48e5914f760fa075a7626c6a15",
+    "predict_break_sha256": "848818a56094ceb5123327a65da04ff44c8fa54c97515ea2ff3e821a0b3e265a"
+  },
+  "comparators": {
+    "PRODUCT_BREAK_FLOOR": {
+      "F1": null,
+      "F2": null,
+      "source_model_id": null,
+      "source_record": null,
+      "status": "NOT_AVAILABLE"
+    },
+    "base_floor_by_type": null
+  },
+  "exposure_class": "MACHINE_SEQUENCED",
+  "features": {
+    "b_floor": 0,
+    "b_turnover_ln": 0.2986544773787643,
+    "b_turnover_ratio": "1.34804376338028169014084507042253521126760563380281690140845",
+    "clipped": {
+      "F1": false,
+      "F2": false
+    },
+    "z": {
+      "F1": {
+        "b_floor": -0.8629489272626913,
+        "b_turnover": 0.27231071715082417
+      },
+      "F2": {
+        "b_floor": -0.8563488385776753,
+        "b_turnover": 0.2870004192989509
+      }
+    }
+  },
+  "inputs_ref": {
+    "file": "registry/inputs/VEYAS.json",
+    "inputs_pit_ok": true,
+    "ipo_price_tl": "136",
+    "sha256": "c5f8022a2ec8c66015afe6ab0378e92d398fb319b4e19a6188574a51bb7f8bfc",
+    "shares_offered": {
+      "source_published_at": "2026-08-17T09:38:51+03:00",
+      "value": "44375000"
+    }
+  },
+  "models": [
+    {
+      "file": "models/break_floor_v0.json",
+      "model_id": "break_floor_v0",
+      "not_applicable": null,
+      "output": {
+        "F1": {
+          "p_floor": 0.1376436522563838
+        },
+        "F2": {
+          "p_floor": 0.09715847417357594
+        },
+        "warnings": []
+      },
+      "params_sha256": "81f07e7810ca5b9513ebc577e14182798ea0b227f105df1551950d6ce40a3eab",
+      "refused": null,
+      "spec_sha256": "8ada9ccf77dc12caa5e9ea00b5bd028456dc8ce7d6857665358737c4b7a84e50",
+      "status": "PREDICTED"
+    },
+    {
+      "file": "models/break_floor_v0@ZERO.json",
+      "model_id": "break_floor_v0@ZERO",
+      "not_applicable": null,
+      "output": {
+        "F1": {
+          "p_floor": 0.3048780487804878
+        },
+        "F2": {
+          "p_floor": 0.14102564102564102
+        },
+        "warnings": []
+      },
+      "params_sha256": "f460acc84717fb489eb81d96fce01ff44f4eb850b9fc66f0c50fb8858000bd3b",
+      "refused": null,
+      "spec_sha256": "73d719f0124063e19079dcb0a4158b98b4095196dbebe53be55339c309f54e3c",
+      "status": "PREDICTED"
+    }
+  ],
+  "models_index": {
+    "model_ids": [
+      "break_floor_v0",
+      "break_floor_v0@ZERO"
+    ],
+    "path": "models/INDEX_POST_BREAK.json",
+    "sha256": "899cf90c805d45313e187e2297f9207229d119f57c1ca56b009ace24ff8e8c5e"
+  },
+  "produced_at_utc": "2026-10-02T16:17:30Z",
+  "record_stage": "POST_BREAK",
+  "record_type": "MACHINE",
+  "schema_version": "borsai.post_break_machine_record/1",
+  "streak": {
+    "L": 0,
+    "b": 1,
+    "break_date": "2026-08-20",
+    "sessions": [
+      {
+        "ceiling_close": 0,
+        "close_raw": "135.9",
+        "date": "2026-08-20",
+        "h": 1,
+        "thb": {
+          "file": "data/raw/bist/thb/2026/thb202608201.zip",
+          "sha256": "953f1846ec5bc6f3bca91887067a575fe121f834ee6ac0d13d72758d0ef4f7ec"
+        },
+        "thm": {
+          "file": "data/raw/bist/thm/2026/thm202608201.zip",
+          "sha256": "d0351735043934344dfc1a4dc0350ea83eb6863cd1423a879d1170e990c478a6"
+        },
+        "upper_limit_raw": "149.6"
+      }
+    ]
+  },
+  "structural_zero_D10": {
+    "P": "136",
+    "band_rule_ok": true,
+    "impossible": false,
+    "k_b": -0.0069814064060091975,
+    "min10": "52.85",
+    "r_b": 9
+  },
+  "summary": {
+    "n_models": 2,
+    "n_not_applicable": 0,
+    "n_predicted": 2,
+    "n_refused": 0
+  },
+  "t_open": "2026-08-21T09:40:00+03:00",
+  "ticker": "VEYAS"
+}

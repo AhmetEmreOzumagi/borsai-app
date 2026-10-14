@@ -1,0 +1,316 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "ESCAR",
+  "company": "Escar Turizm Taşımacılık Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_950059",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "15",
+      "source_id": "KAP_950059",
+      "source_document": "KAP 950059",
+      "source_published_at": "2021-07-09T18:12:03+03:00",
+      "source_sha256": "249f39b160d4062c59b45f91fee0ad2a50c791269c15574cccf6cb9e8fff5a4d",
+      "source_path": "registry/oot/source_docs/ESCAR/KAP_950059_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 15",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_32",
+          "quote": "Escar Turizm Taşımacılık Ticaret 45.480.000 54.300.000 8.820.000 - 2.180.000 (2) - 15,00 A.Ş.",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "11000000",
+      "source_id": "KAP_950059",
+      "source_document": "KAP 950059",
+      "source_published_at": "2021-07-09T18:12:03+03:00",
+      "source_sha256": "249f39b160d4062c59b45f91fee0ad2a50c791269c15574cccf6cb9e8fff5a4d",
+      "source_path": "registry/oot/source_docs/ESCAR/KAP_950059_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 11.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "54300000",
+      "source_id": "KAP_950059",
+      "source_document": "KAP 950059",
+      "source_published_at": "2021-07-09T18:12:03+03:00",
+      "source_sha256": "249f39b160d4062c59b45f91fee0ad2a50c791269c15574cccf6cb9e8fff5a4d",
+      "source_path": "registry/oot/source_docs/ESCAR/KAP_950059_bildirim.pdf",
+      "quote": "sermayesini temsil eden 54.300.000 TL",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "capital_increase_shares": {
+      "value": "8820000",
+      "source_id": "KAP_949948_EK2",
+      "source_document": "KAP 949948 ek 2",
+      "source_published_at": "2021-07-09T12:18:53+03:00",
+      "source_sha256": "bfde0bbfa434f5f79acdf04e1210a47929f0314c34bb5d05a23d3f3996caa826",
+      "source_path": "registry/oot/source_docs/ESCAR/KAP_949948_ek2.pdf",
+      "quote": "Escar’ın sermayesinin 45.480.000 TL’den 54.300.000 TL’ye çıkarılması nedeniyle artırılan 8.820.000 TL nominal değerli 8.820.000 adet pay",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "existing_share_sale_shares": {
+      "value": "2180000",
+      "source_id": "KAP_949948_EK2",
+      "source_document": "KAP 949948 ek 2",
+      "source_published_at": "2021-07-09T12:18:53+03:00",
+      "source_sha256": "bfde0bbfa434f5f79acdf04e1210a47929f0314c34bb5d05a23d3f3996caa826",
+      "source_path": "registry/oot/source_docs/ESCAR/KAP_949948_ek2.pdf",
+      "quote": "mevcut ortakların sahip olduğu 2.180.000 TL nominal değerli 2.180.000 adet pay",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "total_demand_multiple": {
+      "value": "2.5",
+      "source_id": "KAP_949948_EK2",
+      "source_document": "KAP 949948 ek 2",
+      "source_published_at": "2021-07-09T12:18:53+03:00",
+      "source_sha256": "bfde0bbfa434f5f79acdf04e1210a47929f0314c34bb5d05a23d3f3996caa826",
+      "source_path": "registry/oot/source_docs/ESCAR/KAP_949948_ek2.pdf",
+      "quote": "halka arz büyüklüğünün toplamda 2,5 katına denk gelen 416,1 milyon TL karşılığı filtre edilmemiş 27.737.600 TL nominal değerli talep gelmiştir",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (filtre edilmemiş talep / halka arz büyüklüğü)",
+      "note": "aynı belgedeki nominaller: 27.737.600 / 11.000.000 = 2,5216 (belge 2,5'e yuvarlamış); borsada satış yöntemi ama belge katı yazıyor",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_949948_EK2",
+      "source_document": "KAP 949948 ek 2",
+      "source_published_at": "2021-07-09T12:18:53+03:00",
+      "source_sha256": "bfde0bbfa434f5f79acdf04e1210a47929f0314c34bb5d05a23d3f3996caa826",
+      "source_path": "registry/oot/source_docs/ESCAR/KAP_949948_ek2.pdf",
+      "quote": "halka arz büyüklüğünün toplamda 2,5 katına denk gelen 416,1 milyon TL karşılığı filtre edilmemiş 27.737.600 TL nominal değerli talep gelmiştir",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_949948_EK2",
+      "source_document": "KAP 949948 ek 2",
+      "source_published_at": "2021-07-09T12:18:53+03:00",
+      "source_sha256": "bfde0bbfa434f5f79acdf04e1210a47929f0314c34bb5d05a23d3f3996caa826",
+      "source_path": "registry/oot/source_docs/ESCAR/KAP_949948_ek2.pdf",
+      "quote": "olmak üzere toplam 11.000.000 TL nominal değerli 11.000.000 adet pay halka arz edilmiştir",
+      "zero_from_statement": true,
+      "note": "halka arz edilen toplam 11.000.000 = SPK planlanan taban (bedelli 8.820.000 + mevcut pay satışı 2.180.000); SPK satırında ek pay satışı '-'",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": "165000000",
+      "source_id": "KAP_949948_EK2",
+      "source_document": "KAP 949948 ek 2",
+      "source_published_at": "2021-07-09T12:18:53+03:00",
+      "source_sha256": "bfde0bbfa434f5f79acdf04e1210a47929f0314c34bb5d05a23d3f3996caa826",
+      "source_path": "registry/oot/source_docs/ESCAR/KAP_949948_ek2.pdf",
+      "quote": "belirlenen halka arz fiyatı ile halka arz büyüklüğü 165.000.000 TL olarak gerçekleşmiştir",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "15.00",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/ESCAR/SPK_BULTEN_2021-32.pdf",
+      "quote": "Escar Turizm Taşımacılık Ticaret 45.480.000 54.300.000 8.820.000 - 2.180.000 (2) - 15,00 A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-07",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "45480000",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/ESCAR/SPK_BULTEN_2021-32.pdf",
+      "quote": "Escar Turizm Taşımacılık Ticaret 45.480.000 54.300.000 8.820.000 - 2.180.000 (2) - 15,00 A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-07",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "54300000",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/ESCAR/SPK_BULTEN_2021-32.pdf",
+      "quote": "Escar Turizm Taşımacılık Ticaret 45.480.000 54.300.000 8.820.000 - 2.180.000 (2) - 15,00 A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-07",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "8820000",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/ESCAR/SPK_BULTEN_2021-32.pdf",
+      "quote": "Escar Turizm Taşımacılık Ticaret 45.480.000 54.300.000 8.820.000 - 2.180.000 (2) - 15,00 A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-07",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "2180000",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/ESCAR/SPK_BULTEN_2021-32.pdf",
+      "quote": "Escar Turizm Taşımacılık Ticaret 45.480.000 54.300.000 8.820.000 - 2.180.000 (2) - 15,00 A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-07",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "11000000",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/ESCAR/SPK_BULTEN_2021-32.pdf",
+      "quote": "Escar Turizm Taşımacılık Ticaret 45.480.000 54.300.000 8.820.000 - 2.180.000 (2) - 15,00 A.Ş.",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-07",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/ESCAR/SPK_BULTEN_2021-32.pdf",
+      "quote": "Escar Turizm Taşımacılık Ticaret 45.480.000 54.300.000 8.820.000 - 2.180.000 (2) - 15,00 A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-07",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "11000000",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/ESCAR/SPK_BULTEN_2021-32.pdf",
+      "quote": "Escar Turizm Taşımacılık Ticaret 45.480.000 54.300.000 8.820.000 - 2.180.000 (2) - 15,00 A.Ş.",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-07",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2021-07-13",
+      "source_id": "KAP_950059",
+      "source_document": "KAP 950059",
+      "source_published_at": "2021-07-09T18:12:03+03:00",
+      "source_sha256": "249f39b160d4062c59b45f91fee0ad2a50c791269c15574cccf6cb9e8fff5a4d",
+      "source_path": "registry/oot/source_docs/ESCAR/KAP_950059_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 13/07/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-07-07",
+      "source_id": "KAP_950059",
+      "source_document": "KAP 950059",
+      "source_published_at": "2021-07-09T18:12:03+03:00",
+      "source_sha256": "249f39b160d4062c59b45f91fee0ad2a50c791269c15574cccf6cb9e8fff5a4d",
+      "source_path": "registry/oot/source_docs/ESCAR/KAP_950059_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 07-08/07/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-07-08",
+      "source_id": "KAP_950059",
+      "source_document": "KAP 950059",
+      "source_published_at": "2021-07-09T18:12:03+03:00",
+      "source_sha256": "249f39b160d4062c59b45f91fee0ad2a50c791269c15574cccf6cb9e8fff5a4d",
+      "source_path": "registry/oot/source_docs/ESCAR/KAP_950059_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 07-08/07/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_950059": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 950059",
+      "published_at": "2021-07-09T18:12:03+03:00",
+      "sha256": "249f39b160d4062c59b45f91fee0ad2a50c791269c15574cccf6cb9e8fff5a4d",
+      "path": "registry/oot/source_docs/ESCAR/KAP_950059_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_32": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/32",
+      "published_at": "2021-07-01T23:59:59+03:00",
+      "sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "path": "registry/oot/source_docs/ESCAR/SPK_BULTEN_2021-32.pdf"
+    },
+    "KAP_949948_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 949948 ek 2",
+      "published_at": "2021-07-09T12:18:53+03:00",
+      "sha256": "bfde0bbfa434f5f79acdf04e1210a47929f0314c34bb5d05a23d3f3996caa826",
+      "path": "registry/oot/source_docs/ESCAR/KAP_949948_ek2.pdf"
+    }
+  }
+}

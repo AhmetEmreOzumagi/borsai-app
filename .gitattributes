@@ -1,0 +1,39 @@
+# Ayna (borsai-app): özel repodaki kural aynen (eol=lf: gömülü model ve skor dosyalarının sha'ları LF baytları üzerindedir).
+# Sondaki linguist işaretleri yalnız GitHub'ın dil istatistiğini ve diff görünümünü etkiler; dosya baytlarını değiştirmez.
+* text=auto eol=lf
+
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.icns binary
+*.webp binary
+*.zip binary
+*.gz binary
+*.tar binary
+*.7z binary
+*.xlsx binary
+*.xls binary
+*.docx binary
+*.pptx binary
+*.pkl binary
+*.joblib binary
+*.npy binary
+*.npz binary
+*.parquet binary
+*.sqlite binary
+*.db binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.whl binary
+
+# GitHub görünümü (linguist)
+docs/** linguist-documentation=true
+legacy/** linguist-vendored=true
+scores/*.json linguist-generated=true
+app/parity/golden/** linguist-generated=true
+tests/reference/** linguist-generated=true

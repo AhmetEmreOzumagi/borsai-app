@@ -1,0 +1,77 @@
+{
+  "record_rel_path": "registry/records/SNTA1/20300105T100000Z_aaaaaaaaaaaa.json",
+  "record_file": "20300105T100000Z_aaaaaaaaaaaa.json",
+  "ticker": "SNTA1",
+  "recorded_at_utc": "2030-01-05T10:00:00Z",
+  "recorded_at_istanbul": "2030-01-05T13:00:00+03:00",
+  "n_models": 27,
+  "model_ids": [
+    "v1_5_h99",
+    "base_always_ceiling",
+    "base_train_median",
+    "base_train_mean",
+    "base_zero",
+    "base_rate",
+    "base_last10_rate",
+    "v1_6_h99",
+    "v1_5_market20_v0",
+    "pb_v0",
+    "ceiling_hazard_v0",
+    "ceiling_hazard_v0@INF",
+    "pb_ceiling_v0",
+    "pb_ceiling_v0@INF",
+    "base_km_expanding",
+    "base_km_last10",
+    "ceiling_path_v0",
+    "ceiling_path_v0@INF",
+    "pb_ceiling_path_v0",
+    "ceiling_hazard_v1_clip",
+    "ceiling_hazard_v1_real",
+    "ceiling_hazard_v1_pooled",
+    "ceiling_hazard_v1_pooled@INF",
+    "fall_d10_v0_h99",
+    "fall_d10_v0_pooled",
+    "fall_d10_v0_addsale",
+    "fall_d10_v0_pooled@ZERO"
+  ],
+  "summary": {
+    "n_models": 16,
+    "n_predicted": 16,
+    "n_refused": 0,
+    "refusals": {}
+  },
+  "input_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "models_index_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "parity": {
+    "n_record_models": 27,
+    "n_supported": 27,
+    "n_matched": 26,
+    "max_abs": 0.4230453119112837,
+    "n_bit_equal": 26,
+    "unsupported": [],
+    "missing_in_record": [],
+    "mismatches": [
+      {
+        "model_id": "v1_5_h99",
+        "ok": false,
+        "bit_equal": false,
+        "max_abs": 0.4230453119112837,
+        "n_numbers": 16,
+        "failures": [
+          "D1.return: kayıt 0.5, uygulama 0.07695468808871628, |Δ| = 4.230453119112837e-1"
+        ]
+      }
+    ],
+    "incident_rel_path": "app/parity/incidents/20300105T100500Z.json"
+  },
+  "todo": [
+    "cd /tmp/borsai_repo",
+    "git add registry/inputs/SNTA1.json registry/source_docs/SNTA1/ registry/records/SNTA1/20300105T100000Z_aaaaaaaaaaaa.json",
+    "git commit -m \"BORSAI_RECORD_SNTA1: prediction record before first trading day\" -- registry/inputs/SNTA1.json registry/source_docs/SNTA1/ registry/records/SNTA1/20300105T100000Z_aaaaaaaaaaaa.json",
+    "git push origin main",
+    ".venv/bin/python -m borsai.push_proof $(git rev-parse HEAD)",
+    "git add registry/push_proofs/",
+    "git commit -m \"BORSAI_PUSH_PROOF: $(git rev-parse HEAD)\" -- registry/push_proofs/",
+    "git push origin main"
+  ]
+}

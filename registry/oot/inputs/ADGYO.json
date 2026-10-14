@@ -1,0 +1,328 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "ADGYO",
+  "company": "Adra Gayrimenkul Yatırım Ortaklığı A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1196007",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "22.66",
+      "source_id": "KAP_1196007",
+      "source_document": "KAP 1196007",
+      "source_published_at": "2023-09-18T19:01:10+03:00",
+      "source_sha256": "1fb52b933943ce55500ad793b1ee98c90ce374efead81137dd264fffa31ee74d",
+      "source_path": "registry/oot/source_docs/ADGYO/KAP_1196007_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 22,66",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2023_53",
+          "quote": "Adra Gayrimenkul Yatırım 22,66 220.000.000 293.700.000 73.700.000 - - - Ortaklığı AŞ (5)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "73700000",
+      "source_id": "KAP_1196007",
+      "source_document": "KAP 1196007",
+      "source_published_at": "2023-09-18T19:01:10+03:00",
+      "source_sha256": "1fb52b933943ce55500ad793b1ee98c90ce374efead81137dd264fffa31ee74d",
+      "source_path": "registry/oot/source_docs/ADGYO/KAP_1196007_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 73.700.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "293700000",
+      "source_id": "KAP_1196007",
+      "source_document": "KAP 1196007",
+      "source_published_at": "2023-09-18T19:01:10+03:00",
+      "source_sha256": "1fb52b933943ce55500ad793b1ee98c90ce374efead81137dd264fffa31ee74d",
+      "source_path": "registry/oot/source_docs/ADGYO/KAP_1196007_bildirim.pdf",
+      "quote": "sermayesini temsil eden 293.700.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "73700000",
+      "source_id": "KAP_1196004_EK1",
+      "source_document": "KAP 1196004 ek 1",
+      "source_published_at": "2023-09-18T18:43:05+03:00",
+      "source_sha256": "2822347d4dab2d7431311e56ec09617fe2d4f5565e04e6f0845dbcadad71472e",
+      "source_path": "registry/oot/source_docs/ADGYO/KAP_1196004_ek1.pdf",
+      "quote": "Halka arz sonucunda sermaye artırımı yoluyla satışa sunulan 73.700.000 TL nominal değerli payların satışı gerçekleşmiştir.",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "existing_share_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/ADGYO/SPK_BULTEN_2023-53.pdf",
+      "quote": "Adra Gayrimenkul Yatırım 22,66 220.000.000 293.700.000 73.700.000 - - - Ortaklığı AŞ (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1196004_EK1",
+          "quote": "Halka arz sonucunda sermaye artırımı yoluyla satışa sunulan 73.700.000 TL nominal değerli payların satışı gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_planned_base": "73700000 = 73700000 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "1.24",
+      "source_id": "KAP_1196004_EK1",
+      "source_document": "KAP 1196004 ek 1",
+      "source_published_at": "2023-09-18T18:43:05+03:00",
+      "source_sha256": "2822347d4dab2d7431311e56ec09617fe2d4f5565e04e6f0845dbcadad71472e",
+      "source_path": "registry/oot/source_docs/ADGYO/KAP_1196004_ek1.pdf",
+      "quote": "Borsa İstanbul tarafından paylaşılan verilere göre, nominal halka arz büyüklüğü olan 73.700.000 TL’nin 1,24 katına denk gelen filtrelenmemiş 91.133.137 TL nominal değerli talep gelmiştir.",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (filtrelenmemiş toplam talep nominali 91.133.137 / nominal halka arz büyüklüğü 73.700.000)",
+      "denominator_includes_additional_sale": false,
+      "note": "Borsa Birincil Piyasa satışı; ek satış öngörülmemiş (SPK satırında '-'); 91.133.137 / 73.700.000 = 1,2365 (belge 1,24)",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_1196004_EK1",
+      "source_document": "KAP 1196004 ek 1",
+      "source_published_at": "2023-09-18T18:43:05+03:00",
+      "source_sha256": "2822347d4dab2d7431311e56ec09617fe2d4f5565e04e6f0845dbcadad71472e",
+      "source_path": "registry/oot/source_docs/ADGYO/KAP_1196004_ek1.pdf",
+      "quote": "1,24 katına denk gelen filtrelenmemiş 91.133.137 TL nominal değerli talep gelmiştir",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1196004_EK1",
+      "source_document": "KAP 1196004 ek 1",
+      "source_published_at": "2023-09-18T18:43:05+03:00",
+      "source_sha256": "2822347d4dab2d7431311e56ec09617fe2d4f5565e04e6f0845dbcadad71472e",
+      "source_path": "registry/oot/source_docs/ADGYO/KAP_1196004_ek1.pdf",
+      "quote": "Halka arz sonucunda sermaye artırımı yoluyla satışa sunulan 73.700.000 TL nominal değerli payların satışı gerçekleşmiştir.",
+      "zero_from_statement": true,
+      "note": "satılan toplam 73.700.000 = SPK planlanan taban (bedelli 73.700.000 + mevcut pay satışı '-'); SPK satırında ek pay satışı '-'",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": null,
+      "missing_reason": "sonuç eki TL arz büyüklüğü yazmıyor (yalnız nominal 73.700.000 ve fiyat 22,66); fiyat × pay hesaplanmadı",
+      "provenance": "MISSING"
+    },
+    "ipo_price_try": {
+      "value": "22.66",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/ADGYO/SPK_BULTEN_2023-53.pdf",
+      "quote": "Adra Gayrimenkul Yatırım 22,66 220.000.000 293.700.000 73.700.000 - - - Ortaklığı AŞ (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-14",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "220000000",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/ADGYO/SPK_BULTEN_2023-53.pdf",
+      "quote": "Adra Gayrimenkul Yatırım 22,66 220.000.000 293.700.000 73.700.000 - - - Ortaklığı AŞ (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-14",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "293700000",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/ADGYO/SPK_BULTEN_2023-53.pdf",
+      "quote": "Adra Gayrimenkul Yatırım 22,66 220.000.000 293.700.000 73.700.000 - - - Ortaklığı AŞ (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-14",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "73700000",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/ADGYO/SPK_BULTEN_2023-53.pdf",
+      "quote": "Adra Gayrimenkul Yatırım 22,66 220.000.000 293.700.000 73.700.000 - - - Ortaklığı AŞ (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-14",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/ADGYO/SPK_BULTEN_2023-53.pdf",
+      "quote": "Adra Gayrimenkul Yatırım 22,66 220.000.000 293.700.000 73.700.000 - - - Ortaklığı AŞ (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-14",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "73700000",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/ADGYO/SPK_BULTEN_2023-53.pdf",
+      "quote": "Adra Gayrimenkul Yatırım 22,66 220.000.000 293.700.000 73.700.000 - - - Ortaklığı AŞ (5)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-14",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/ADGYO/SPK_BULTEN_2023-53.pdf",
+      "quote": "Adra Gayrimenkul Yatırım 22,66 220.000.000 293.700.000 73.700.000 - - - Ortaklığı AŞ (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-14",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "73700000",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/ADGYO/SPK_BULTEN_2023-53.pdf",
+      "quote": "Adra Gayrimenkul Yatırım 22,66 220.000.000 293.700.000 73.700.000 - - - Ortaklığı AŞ (5)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-14",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2023-09-20",
+      "source_id": "KAP_1196007",
+      "source_document": "KAP 1196007",
+      "source_published_at": "2023-09-18T19:01:10+03:00",
+      "source_sha256": "1fb52b933943ce55500ad793b1ee98c90ce374efead81137dd264fffa31ee74d",
+      "source_path": "registry/oot/source_docs/ADGYO/KAP_1196007_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 20/09/2023",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2023-09-14",
+      "source_id": "KAP_1196007",
+      "source_document": "KAP 1196007",
+      "source_published_at": "2023-09-18T19:01:10+03:00",
+      "source_sha256": "1fb52b933943ce55500ad793b1ee98c90ce374efead81137dd264fffa31ee74d",
+      "source_path": "registry/oot/source_docs/ADGYO/KAP_1196007_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 14-15/09/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2023-09-15",
+      "source_id": "KAP_1196007",
+      "source_document": "KAP 1196007",
+      "source_published_at": "2023-09-18T19:01:10+03:00",
+      "source_sha256": "1fb52b933943ce55500ad793b1ee98c90ce374efead81137dd264fffa31ee74d",
+      "source_path": "registry/oot/source_docs/ADGYO/KAP_1196007_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 14-15/09/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1196007": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1196007",
+      "published_at": "2023-09-18T19:01:10+03:00",
+      "sha256": "1fb52b933943ce55500ad793b1ee98c90ce374efead81137dd264fffa31ee74d",
+      "path": "registry/oot/source_docs/ADGYO/KAP_1196007_bildirim.pdf"
+    },
+    "SPK_BULTEN_2023_53": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2023/53",
+      "published_at": "2023-09-07T23:59:59+03:00",
+      "sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "path": "registry/oot/source_docs/ADGYO/SPK_BULTEN_2023-53.pdf"
+    },
+    "KAP_1196004_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1196004 ek 1",
+      "published_at": "2023-09-18T18:43:05+03:00",
+      "sha256": "2822347d4dab2d7431311e56ec09617fe2d4f5565e04e6f0845dbcadad71472e",
+      "path": "registry/oot/source_docs/ADGYO/KAP_1196004_ek1.pdf"
+    }
+  }
+}

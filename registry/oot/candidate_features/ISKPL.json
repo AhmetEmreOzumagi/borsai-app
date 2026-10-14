@@ -1,0 +1,206 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "ISKPL",
+  "company": "Işık Plastik Sanayi ve Dış Ticaret Pazarlama A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "401153",
+      "source_id": "KAP_904444_EK1",
+      "source_document": "KAP 904444 ek 1",
+      "source_published_at": "2021-01-26T15:35:59+03:00",
+      "source_sha256": "f1701efa9b20908e8be9377693d8eed03858930c2da444e34e5b93ef965137ef",
+      "source_path": "registry/oot/source_docs/ISKPL/KAP_904444_ek1.pdf",
+      "quote": "Toplam 11.286.293 100,000 401.153",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "tablo sütunu 'Talebi Karşılanan Başvuru Sayısı'; metin: 'Halka arza toplamda 401.153 adet yatırımcı katılmıştır'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "401.153",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "401100",
+        "domestic_institutional": "53"
+      },
+      "source_id": "KAP_904444_EK1",
+      "source_document": "KAP 904444 ek 1",
+      "source_published_at": "2021-01-26T15:35:59+03:00",
+      "source_sha256": "f1701efa9b20908e8be9377693d8eed03858930c2da444e34e5b93ef965137ef",
+      "source_path": "registry/oot/source_docs/ISKPL/KAP_904444_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel* 11.284.801 99,987 401.100",
+        "Yurtiçi Kurumsal** 1.492 0,013 53"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "belge dipnotu: bireysel = gerçek ve tüzel kişiler; kurumsal = yatırım ortaklığı, fon ve diğer",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; belge 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor, grup katı yok",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "grup tahsisatı yok; grup katı yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "grup tahsisatı yok; yurt dışı kurumsal grup yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "11284801",
+        "domestic_institutional": "1492"
+      },
+      "source_id": "KAP_904444_EK1",
+      "source_document": "KAP 904444 ek 1",
+      "source_published_at": "2021-01-26T15:35:59+03:00",
+      "source_sha256": "f1701efa9b20908e8be9377693d8eed03858930c2da444e34e5b93ef965137ef",
+      "source_path": "registry/oot/source_docs/ISKPL/KAP_904444_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel* 11.284.801 99,987 401.100",
+        "Yurtiçi Kurumsal** 1.492 0,013 53"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.987",
+      "source_id": "KAP_904444_EK1",
+      "source_document": "KAP 904444 ek 1",
+      "source_published_at": "2021-01-26T15:35:59+03:00",
+      "source_sha256": "f1701efa9b20908e8be9377693d8eed03858930c2da444e34e5b93ef965137ef",
+      "source_path": "registry/oot/source_docs/ISKPL/KAP_904444_ek1.pdf",
+      "quote": "Yurtiçi Bireysel* 11.284.801 99,987 401.100",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.013",
+      "source_id": "KAP_904444_EK1",
+      "source_document": "KAP 904444 ek 1",
+      "source_published_at": "2021-01-26T15:35:59+03:00",
+      "source_sha256": "f1701efa9b20908e8be9377693d8eed03858930c2da444e34e5b93ef965137ef",
+      "source_path": "registry/oot/source_docs/ISKPL/KAP_904444_ek1.pdf",
+      "quote": "Yurtiçi Kurumsal** 1.492 0,013 53",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "tabloda yurt dışı grup yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa Birincil Piyasada sabit fiyatla talep toplama ve satış yöntemi",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa Birincil Piyasada sabit fiyatla talep toplama ve satış yöntemi",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "belgede benzer ifade satış yöntemi olarak geçiyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”), dağıtım yöntemi değil; Codex alıntısı indirilmemiş KAP satırı başlığı; alan null bırakıldı"
+      }
+    },
+    "lead_broker": {
+      "value": "GARANTİ YATIRIM MENKUL KIYMETLER A.Ş.",
+      "source_id": "KAP_904444",
+      "source_document": "KAP 904444",
+      "source_published_at": "2021-01-26T15:35:59+03:00",
+      "source_sha256": "5fb5e7044a2c56251f088a1ce431fe2958581f08d3c22c950829bff7a7128a60",
+      "source_path": "registry/oot/source_docs/ISKPL/KAP_904444_bildirim.pdf",
+      "quote": "KAMUYU AYDINLATMA PLATFORMU GARANTİ YATIRIM MENKUL KIYMETLER A.Ş. Özel Durum Açıklaması (Genel)",
+      "basis": "RESULT_NOTICE_PUBLISHER",
+      "note": "belge 'aracılık' rolünü açıkça yazmıyor; ad, sonuç bildirimini yayımlayan kurumdur",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "GARANTİ YATIRIM MENKUL KIYMETLER A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "yalnız yayımlayan kurum olarak geçiyor"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD ve izahname indirilmedi; sonuç belgesinde yok",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD ve izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD ve izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD ve izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_904453",
+      "source_document": "KAP 904453",
+      "source_published_at": "2021-01-26T16:18:25+03:00",
+      "source_sha256": "fae230dc49597e86afa07a90f08b5ed912c95791c0066636605e35183ee3a87f",
+      "source_path": "registry/oot/source_docs/ISKPL/KAP_904453_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (In the Exchange)",
+      "source_id": "KAP_904453",
+      "source_document": "KAP 904453",
+      "source_published_at": "2021-01-26T16:18:25+03:00",
+      "source_sha256": "fae230dc49597e86afa07a90f08b5ed912c95791c0066636605e35183ee3a87f",
+      "source_path": "registry/oot/source_docs/ISKPL/KAP_904453_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (In the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_904453": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 904453",
+      "published_at": "2021-01-26T16:18:25+03:00",
+      "sha256": "fae230dc49597e86afa07a90f08b5ed912c95791c0066636605e35183ee3a87f",
+      "path": "registry/oot/source_docs/ISKPL/KAP_904453_bildirim.pdf"
+    },
+    "KAP_904444_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 904444 ek 1",
+      "published_at": "2021-01-26T15:35:59+03:00",
+      "sha256": "f1701efa9b20908e8be9377693d8eed03858930c2da444e34e5b93ef965137ef",
+      "path": "registry/oot/source_docs/ISKPL/KAP_904444_ek1.pdf"
+    },
+    "KAP_904444": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 904444",
+      "published_at": "2021-01-26T15:35:59+03:00",
+      "sha256": "5fb5e7044a2c56251f088a1ce431fe2958581f08d3c22c950829bff7a7128a60",
+      "path": "registry/oot/source_docs/ISKPL/KAP_904444_bildirim.pdf"
+    }
+  }
+}

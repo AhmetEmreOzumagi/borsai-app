@@ -1,0 +1,90 @@
+{
+  "algorithm": "ZERO",
+  "code_version": {
+    "borsai_dirty": true,
+    "borsai_source_sha256": "17e7374070328e7dbb3a887605167f4670315bb15a4c5d819a4feaf65a4ca004",
+    "git_commit": "ff3eee64eadd70c61e8b2eff657fd98cb94a0d04"
+  },
+  "created_at": "2026-09-21T21:10:30+03:00",
+  "description": "Getiri = 0 (legacy V1_BASE_ZERO).",
+  "feature_definitions": {},
+  "feature_ranges": {},
+  "features": [],
+  "horizons": {
+    "D1": {
+      "p_up": null,
+      "return": {
+        "kind": "constant",
+        "value": 0.0
+      }
+    },
+    "D10": {
+      "p_up": null,
+      "return": {
+        "kind": "constant",
+        "value": 0.0
+      }
+    },
+    "D3": {
+      "p_up": null,
+      "return": {
+        "kind": "constant",
+        "value": 0.0
+      }
+    },
+    "D5": {
+      "p_up": null,
+      "return": {
+        "kind": "constant",
+        "value": 0.0
+      }
+    }
+  },
+  "input_policy": {
+    "required_inputs": [
+      "ipo_price_tl"
+    ],
+    "return_output": "CLIP_TO_PHYSICAL_BOUNDS_AND_FLAG"
+  },
+  "model_id": "base_zero",
+  "preprocessing": null,
+  "schema_version": "borsai.model/1",
+  "spec": {
+    "algorithm": "ZERO",
+    "description": "Getiri = 0 (legacy V1_BASE_ZERO).",
+    "features": [],
+    "horizons": [
+      "D1",
+      "D3",
+      "D5",
+      "D10"
+    ],
+    "input_policy": {
+      "required_inputs": [
+        "ipo_price_tl"
+      ],
+      "return_output": "CLIP_TO_PHYSICAL_BOUNDS_AND_FLAG"
+    },
+    "min_train_n": 10,
+    "model_id": "base_zero",
+    "outputs": [
+      "return"
+    ],
+    "training": {
+      "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+      "description": "kural eğitim verisi kullanmaz",
+      "n": 0,
+      "set": "NONE"
+    }
+  },
+  "spec_sha256": "1ae0f539e663c6d14bba1ad329a07a332dc1ffca59a3acd4b62cc65e68c994d2",
+  "training": {
+    "cutoff_date": null,
+    "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+    "first_trading_date_range": null,
+    "n": 0,
+    "set": "NONE",
+    "tickers": [],
+    "tickers_sha256": null
+  }
+}

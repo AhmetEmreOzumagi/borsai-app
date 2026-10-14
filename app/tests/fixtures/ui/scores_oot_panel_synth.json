@@ -1,0 +1,2201 @@
+{
+  "ok": {
+    "view": {
+      "status": "OK",
+      "source": "REPO",
+      "path": null,
+      "sha12": "2609787227ef",
+      "generated_at_utc": "2030-01-01T00:00:00Z",
+      "git_head12": "0123456789ab",
+      "cohort_sha12": "fedcba987654",
+      "unsupported_version": null,
+      "integrity": null,
+      "rows_present": true,
+      "vault_open": true,
+      "class_definition": "OOT_BLIND = kayıt ve model sonuçtan önce push kanıtlı (sentetik tanım)",
+      "blocks": [
+        {
+          "key": "oot_pre_h99",
+          "title": "Zaman-dışı test: H99 öncesi kohort (sentetik)",
+          "scale": "OOT_PRE_H99",
+          "subset": null,
+          "counters": {
+            "n_member": 135,
+            "n_open": 71,
+            "n_sealed": 64,
+            "n_out_of_scope": 1,
+            "n_pending_membership": 0,
+            "n_exposed_archive": 4,
+            "n_exposed_codex": 1,
+            "n_in_table": 71,
+            "n_spk_corporate_action_seen": 14,
+            "n_spk_corporate_action_seen_cohort_total": 28
+          },
+          "excluded_models": [],
+          "models": [
+            {
+              "model_id": "ceiling_hazard_v0",
+              "kind": "hazard",
+              "scale": "OOT_PRE_H99",
+              "subset": "oot_pre_h99",
+              "primary_cell": {
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "base_km_expanding"
+                ]
+              },
+              "primary": {
+                "label": "birincil",
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_id": "base_km_expanding",
+                "n": 35,
+                "n_blocks": 12,
+                "model_value": 0.25,
+                "rule_value": 0.28,
+                "diff": -0.030000000000000002,
+                "ci95": [
+                  -0.05,
+                  -0.01
+                ],
+                "verdict": "geçiyor",
+                "wins": 20,
+                "losses": 15,
+                "ties": 0,
+                "n_live": 0,
+                "n_late": 0,
+                "scale": "OOT_PRE_H99"
+              },
+              "counters": {
+                "n_oot_retro": 0,
+                "n_scored": 35,
+                "n_refused": 1,
+                "n_skipped": 0,
+                "n_target_unavailable": 0,
+                "n_pending": 0,
+                "n_not_applicable_regime": 0
+              },
+              "exposure_class": null
+            },
+            {
+              "model_id": "v1_5_h99",
+              "kind": "linear",
+              "scale": "OOT_PRE_H99",
+              "subset": "oot_pre_h99",
+              "primary_cell": {
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "base_km_expanding"
+                ]
+              },
+              "primary": null,
+              "counters": {
+                "n_oot_retro": 0,
+                "n_scored": 8,
+                "n_refused": 1,
+                "n_skipped": 0,
+                "n_target_unavailable": 0,
+                "n_pending": 0,
+                "n_not_applicable_regime": 0
+              },
+              "exposure_class": null
+            },
+            {
+              "model_id": "ceiling_hazard_v1_clip",
+              "kind": "hazard",
+              "scale": "OOT_PRE_H99",
+              "subset": "oot_pre_h99",
+              "primary_cell": {
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "base_km_expanding"
+                ]
+              },
+              "primary": null,
+              "counters": {
+                "n_oot_retro": 2,
+                "n_scored": 0,
+                "n_refused": 1,
+                "n_skipped": 0,
+                "n_target_unavailable": 0,
+                "n_pending": 0,
+                "n_not_applicable_regime": 0
+              },
+              "exposure_class": null
+            }
+          ]
+        },
+        {
+          "key": "oot_pre_h99_sealed",
+          "title": "Zaman-dışı test, kasa (sentetik)",
+          "scale": "OOT_PRE_H99",
+          "subset": null,
+          "counters": {
+            "n_member": 135,
+            "n_open": 71,
+            "n_sealed": 64,
+            "n_out_of_scope": 1,
+            "n_pending_membership": 0,
+            "n_exposed_archive": 4,
+            "n_exposed_codex": 1,
+            "n_in_table": 64,
+            "n_spk_corporate_action_seen": 14,
+            "n_spk_corporate_action_seen_cohort_total": 28
+          },
+          "excluded_models": [],
+          "models": [
+            {
+              "model_id": "ceiling_hazard_v0",
+              "kind": "hazard",
+              "scale": "OOT_PRE_H99",
+              "subset": "oot_pre_h99",
+              "primary_cell": {
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "base_km_expanding"
+                ]
+              },
+              "primary": {
+                "label": "birincil",
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_id": "base_km_expanding",
+                "n": 34,
+                "n_blocks": 12,
+                "model_value": 0.27,
+                "rule_value": 0.26,
+                "diff": 0.005,
+                "ci95": [
+                  -0.01,
+                  0.02
+                ],
+                "verdict": "ayırt edilemiyor",
+                "wins": 20,
+                "losses": 15,
+                "ties": 0,
+                "n_live": 0,
+                "n_late": 0,
+                "scale": "OOT_PRE_H99"
+              },
+              "counters": {
+                "n_oot_retro": 0,
+                "n_scored": 34,
+                "n_refused": 1,
+                "n_skipped": 0,
+                "n_target_unavailable": 0,
+                "n_pending": 0,
+                "n_not_applicable_regime": 0
+              },
+              "exposure_class": null
+            }
+          ]
+        },
+        {
+          "key": "oot_pre_h99_all",
+          "title": "Zaman-dışı test, toplam (sentetik)",
+          "scale": "OOT_PRE_H99",
+          "subset": null,
+          "counters": {
+            "n_member": 135,
+            "n_open": 71,
+            "n_sealed": 64,
+            "n_out_of_scope": 1,
+            "n_pending_membership": 0,
+            "n_exposed_archive": 4,
+            "n_exposed_codex": 1,
+            "n_in_table": 135,
+            "n_spk_corporate_action_seen": 14,
+            "n_spk_corporate_action_seen_cohort_total": 28
+          },
+          "excluded_models": [
+            {
+              "model_id": "ceiling_hazard_v1_clip",
+              "n_open_oot_blind": 0,
+              "n_open_oot_retro": 2,
+              "reason": "açık küme satırları OOT_RETRO (sentetik)"
+            }
+          ],
+          "models": [
+            {
+              "model_id": "ceiling_hazard_v0",
+              "kind": "hazard",
+              "scale": "OOT_PRE_H99",
+              "subset": "oot_pre_h99",
+              "primary_cell": {
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "base_km_expanding"
+                ]
+              },
+              "primary": {
+                "label": "birincil",
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_id": "base_km_expanding",
+                "n": 69,
+                "n_blocks": 12,
+                "model_value": 0.26,
+                "rule_value": 0.24,
+                "diff": 0.055,
+                "ci95": [
+                  0.01,
+                  0.1
+                ],
+                "verdict": "geçemiyor",
+                "wins": 20,
+                "losses": 15,
+                "ties": 0,
+                "n_live": 0,
+                "n_late": 0,
+                "scale": "OOT_PRE_H99"
+              },
+              "counters": {
+                "n_oot_retro": 0,
+                "n_scored": 69,
+                "n_refused": 1,
+                "n_skipped": 0,
+                "n_target_unavailable": 0,
+                "n_pending": 0,
+                "n_not_applicable_regime": 0
+              },
+              "exposure_class": null
+            }
+          ]
+        },
+        {
+          "key": "post_d1",
+          "title": "Zaman-dışı test, D1 sonrası (sentetik; makine sıralı)",
+          "scale": "OOT_PRE_H99_POST_D1_MACHINE_SEQUENCED",
+          "subset": null,
+          "counters": {},
+          "excluded_models": [],
+          "models": [
+            {
+              "model_id": "post_d1_hazard_v0",
+              "kind": null,
+              "scale": "OOT_PRE_H99_POST_D1_MACHINE_SEQUENCED",
+              "subset": null,
+              "primary_cell": {
+                "output": "S_cond",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "ceiling_hazard_v0"
+                ]
+              },
+              "primary": null,
+              "counters": {
+                "n_rows": 3,
+                "n_scored": 3,
+                "n_refused": 0,
+                "n_not_applicable": 1,
+                "n_d1_label_na": 0,
+                "n_no_record": 0,
+                "n_oot_retro": 0,
+                "n_pending": 0,
+                "n_skipped": 0,
+                "n_target_unavailable": 0
+              },
+              "exposure_class": "MACHINE_SEQUENCED"
+            }
+          ]
+        },
+        {
+          "key": "post_d1_sealed",
+          "title": "Zaman-dışı test, D1 sonrası, kasa (sentetik)",
+          "scale": "OOT_PRE_H99_POST_D1_MACHINE_SEQUENCED",
+          "subset": null,
+          "counters": {},
+          "excluded_models": [],
+          "models": [
+            {
+              "model_id": "post_d1_hazard_v0",
+              "kind": null,
+              "scale": "OOT_PRE_H99_POST_D1_MACHINE_SEQUENCED",
+              "subset": null,
+              "primary_cell": {
+                "output": "S_cond",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "ceiling_hazard_v0"
+                ]
+              },
+              "primary": null,
+              "counters": {
+                "n_rows": 2,
+                "n_scored": 2,
+                "n_refused": 0,
+                "n_not_applicable": 1,
+                "n_d1_label_na": 0,
+                "n_no_record": 0,
+                "n_oot_retro": 0,
+                "n_pending": 0,
+                "n_skipped": 0,
+                "n_target_unavailable": 0
+              },
+              "exposure_class": "MACHINE_SEQUENCED"
+            }
+          ]
+        },
+        {
+          "key": "post_d1_all",
+          "title": "Zaman-dışı test, D1 sonrası, toplam (sentetik)",
+          "scale": "OOT_PRE_H99_POST_D1_MACHINE_SEQUENCED",
+          "subset": null,
+          "counters": {},
+          "excluded_models": [],
+          "models": [
+            {
+              "model_id": "post_d1_hazard_v0",
+              "kind": null,
+              "scale": "OOT_PRE_H99_POST_D1_MACHINE_SEQUENCED",
+              "subset": null,
+              "primary_cell": {
+                "output": "S_cond",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "ceiling_hazard_v0"
+                ]
+              },
+              "primary": null,
+              "counters": {
+                "n_rows": 5,
+                "n_scored": 5,
+                "n_refused": 0,
+                "n_not_applicable": 1,
+                "n_d1_label_na": 0,
+                "n_no_record": 0,
+                "n_oot_retro": 0,
+                "n_pending": 0,
+                "n_skipped": 0,
+                "n_target_unavailable": 0
+              },
+              "exposure_class": "MACHINE_SEQUENCED"
+            }
+          ]
+        }
+      ],
+      "retro": {
+        "groups": [
+          {
+            "model_id": "ceiling_hazard_v1_clip",
+            "n": 2,
+            "tickers": [
+              "SNTO1"
+            ],
+            "n_not_drawn": 1
+          }
+        ],
+        "n": 2,
+        "n_not_drawn": 1
+      }
+    },
+    "details": {
+      "oot_pre_h99/ceiling_hazard_v0": {
+        "block": "oot_pre_h99",
+        "model_id": "ceiling_hazard_v0",
+        "kind": "hazard",
+        "primary_cell": {
+          "output": "S",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "base_km_expanding"
+          ]
+        },
+        "cells": [
+          {
+            "label": "birincil",
+            "output": "S",
+            "horizon_or_k": null,
+            "metric": "RPS",
+            "rule_id": "base_km_expanding",
+            "n": 35,
+            "n_blocks": 12,
+            "model_value": 0.25,
+            "rule_value": 0.28,
+            "diff": -0.030000000000000002,
+            "ci95": [
+              -0.05,
+              -0.01
+            ],
+            "verdict": "geçiyor",
+            "wins": 20,
+            "losses": 15,
+            "ties": 0,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          },
+          {
+            "label": "keşif",
+            "output": "S",
+            "horizon_or_k": null,
+            "metric": "RPS",
+            "rule_id": "ceiling_hazard_v0@INF",
+            "n": 35,
+            "n_blocks": 12,
+            "model_value": 0.25,
+            "rule_value": 0.2,
+            "diff": 0.0655,
+            "ci95": [
+              0.001,
+              0.13
+            ],
+            "verdict": "geçemiyor",
+            "wins": 20,
+            "losses": 15,
+            "ties": 0,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          },
+          {
+            "label": "keşif",
+            "output": "S",
+            "horizon_or_k": null,
+            "metric": "RPS",
+            "rule_id": "base_km_last10",
+            "n": 35,
+            "n_blocks": 12,
+            "model_value": 0.25,
+            "rule_value": 0.25,
+            "diff": -0.001,
+            "ci95": [
+              -0.006,
+              0.004
+            ],
+            "verdict": "ayırt edilemiyor",
+            "wins": 20,
+            "losses": 15,
+            "ties": 0,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          }
+        ],
+        "by_year": [
+          {
+            "subset": "2020",
+            "label": "ikincil",
+            "n": 1,
+            "n_blocks": 3,
+            "rule_id": "base_km_expanding",
+            "model_value": null,
+            "rule_value": null,
+            "diff": null,
+            "ci95": null,
+            "verdict": null,
+            "wins": null,
+            "losses": null,
+            "ties": null,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          },
+          {
+            "subset": "2021",
+            "label": "ikincil",
+            "n": 26,
+            "n_blocks": 3,
+            "rule_id": "base_km_expanding",
+            "model_value": 0.27,
+            "rule_value": 0.2,
+            "diff": -0.03,
+            "ci95": [
+              -0.08,
+              0.02
+            ],
+            "verdict": "yetersiz örnek",
+            "wins": null,
+            "losses": null,
+            "ties": null,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          }
+        ],
+        "by_regime": [
+          {
+            "subset": "ALLOC_REGIME=PRE_20211111",
+            "label": "keşif",
+            "n": 34,
+            "n_blocks": 3,
+            "rule_id": "base_km_expanding",
+            "model_value": 0.27,
+            "rule_value": 0.2,
+            "diff": 0.004999999999999999,
+            "ci95": [
+              -0.02,
+              0.03
+            ],
+            "verdict": "ayırt edilemiyor",
+            "wins": null,
+            "losses": null,
+            "ties": null,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          }
+        ],
+        "info": [],
+        "rows": [
+          {
+            "ticker": "SNTO1",
+            "d1": "2021-03-04",
+            "year": 2021,
+            "alloc_regime": "PRE_20211111",
+            "class": "OOT_BLIND",
+            "class_evidence": {
+              "model_push_proof_created_at": "2026-09-22T14:06:03Z",
+              "oot_ingest_push_proof_created_at": "2026-09-25T13:05:56Z"
+            },
+            "status": "SCORED",
+            "cell_status": "PREDICTED",
+            "record_id": "20260924T221306Z_aaaaaaaaaaaa.json",
+            "pred_kind": "S",
+            "pred_s": [
+              0.9,
+              0.5,
+              0.1
+            ],
+            "pred_d5_return": null,
+            "pred_d5_p_up": null,
+            "refused_code": null,
+            "realized_l": 3,
+            "realized_d5_r": "0.61051"
+          },
+          {
+            "ticker": "SNTO2",
+            "d1": "2021-03-04",
+            "year": 2021,
+            "alloc_regime": "PRE_20211111",
+            "class": "OOT_BLIND",
+            "class_evidence": {
+              "model_push_proof_created_at": "2026-09-22T14:06:03Z",
+              "oot_ingest_push_proof_created_at": "2026-09-25T13:05:56Z"
+            },
+            "status": "SCORED",
+            "cell_status": "PREDICTED",
+            "record_id": "20260924T221306Z_aaaaaaaaaaaa.json",
+            "pred_kind": "REFUSED",
+            "pred_s": null,
+            "pred_d5_return": null,
+            "pred_d5_p_up": null,
+            "refused_code": "F3_MISSING",
+            "realized_l": 3,
+            "realized_d5_r": "0.61051"
+          }
+        ],
+        "rows_block": true,
+        "rows_available": true
+      },
+      "oot_pre_h99/v1_5_h99": {
+        "block": "oot_pre_h99",
+        "model_id": "v1_5_h99",
+        "kind": "linear",
+        "primary_cell": {
+          "output": "S",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "base_km_expanding"
+          ]
+        },
+        "cells": [],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [
+          {
+            "ticker": "SNTO1",
+            "d1": "2021-03-04",
+            "year": 2021,
+            "alloc_regime": "PRE_20211111",
+            "class": "OOT_BLIND",
+            "class_evidence": {
+              "model_push_proof_created_at": "2026-09-22T14:06:03Z",
+              "oot_ingest_push_proof_created_at": "2026-09-25T13:05:56Z"
+            },
+            "status": "SCORED",
+            "cell_status": "PREDICTED",
+            "record_id": "20260924T221306Z_aaaaaaaaaaaa.json",
+            "pred_kind": "RETURN",
+            "pred_s": null,
+            "pred_d5_return": 0.2,
+            "pred_d5_p_up": 0.7,
+            "refused_code": null,
+            "realized_l": 3,
+            "realized_d5_r": "0.61051"
+          }
+        ],
+        "rows_block": true,
+        "rows_available": true
+      },
+      "oot_pre_h99/ceiling_hazard_v1_clip": {
+        "block": "oot_pre_h99",
+        "model_id": "ceiling_hazard_v1_clip",
+        "kind": "hazard",
+        "primary_cell": {
+          "output": "S",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "base_km_expanding"
+          ]
+        },
+        "cells": [],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": true,
+        "rows_available": true
+      },
+      "oot_pre_h99_sealed/ceiling_hazard_v0": {
+        "block": "oot_pre_h99_sealed",
+        "model_id": "ceiling_hazard_v0",
+        "kind": "hazard",
+        "primary_cell": {
+          "output": "S",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "base_km_expanding"
+          ]
+        },
+        "cells": [
+          {
+            "label": "birincil",
+            "output": "S",
+            "horizon_or_k": null,
+            "metric": "RPS",
+            "rule_id": "base_km_expanding",
+            "n": 34,
+            "n_blocks": 12,
+            "model_value": 0.27,
+            "rule_value": 0.26,
+            "diff": 0.005,
+            "ci95": [
+              -0.01,
+              0.02
+            ],
+            "verdict": "ayırt edilemiyor",
+            "wins": 20,
+            "losses": 15,
+            "ties": 0,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          }
+        ],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": false,
+        "rows_available": false
+      },
+      "oot_pre_h99_all/ceiling_hazard_v0": {
+        "block": "oot_pre_h99_all",
+        "model_id": "ceiling_hazard_v0",
+        "kind": "hazard",
+        "primary_cell": {
+          "output": "S",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "base_km_expanding"
+          ]
+        },
+        "cells": [
+          {
+            "label": "birincil",
+            "output": "S",
+            "horizon_or_k": null,
+            "metric": "RPS",
+            "rule_id": "base_km_expanding",
+            "n": 69,
+            "n_blocks": 12,
+            "model_value": 0.26,
+            "rule_value": 0.24,
+            "diff": 0.055,
+            "ci95": [
+              0.01,
+              0.1
+            ],
+            "verdict": "geçemiyor",
+            "wins": 20,
+            "losses": 15,
+            "ties": 0,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          }
+        ],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": false,
+        "rows_available": false
+      },
+      "post_d1/post_d1_hazard_v0": {
+        "block": "post_d1",
+        "model_id": "post_d1_hazard_v0",
+        "kind": null,
+        "primary_cell": {
+          "output": "S_cond",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "ceiling_hazard_v0"
+          ]
+        },
+        "cells": [],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": false,
+        "rows_available": false
+      },
+      "post_d1_sealed/post_d1_hazard_v0": {
+        "block": "post_d1_sealed",
+        "model_id": "post_d1_hazard_v0",
+        "kind": null,
+        "primary_cell": {
+          "output": "S_cond",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "ceiling_hazard_v0"
+          ]
+        },
+        "cells": [],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": false,
+        "rows_available": false
+      },
+      "post_d1_all/post_d1_hazard_v0": {
+        "block": "post_d1_all",
+        "model_id": "post_d1_hazard_v0",
+        "kind": null,
+        "primary_cell": {
+          "output": "S_cond",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "ceiling_hazard_v0"
+          ]
+        },
+        "cells": [],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": false,
+        "rows_available": false
+      }
+    }
+  },
+  "closed": {
+    "view": {
+      "status": "OK",
+      "source": "REPO",
+      "path": null,
+      "sha12": "dfc27545f579",
+      "generated_at_utc": "2030-01-01T00:00:00Z",
+      "git_head12": "0123456789ab",
+      "cohort_sha12": "fedcba987654",
+      "unsupported_version": null,
+      "integrity": null,
+      "rows_present": true,
+      "vault_open": false,
+      "class_definition": "OOT_BLIND = kayıt ve model sonuçtan önce push kanıtlı (sentetik tanım)",
+      "blocks": [
+        {
+          "key": "oot_pre_h99",
+          "title": "Zaman-dışı test: H99 öncesi kohort (sentetik)",
+          "scale": "OOT_PRE_H99",
+          "subset": null,
+          "counters": {
+            "n_member": 135,
+            "n_open": 71,
+            "n_sealed": 64,
+            "n_out_of_scope": 1,
+            "n_pending_membership": 0,
+            "n_exposed_archive": 4,
+            "n_exposed_codex": 1,
+            "n_in_table": 71,
+            "n_spk_corporate_action_seen": 14,
+            "n_spk_corporate_action_seen_cohort_total": 28
+          },
+          "excluded_models": [],
+          "models": [
+            {
+              "model_id": "ceiling_hazard_v0",
+              "kind": "hazard",
+              "scale": "OOT_PRE_H99",
+              "subset": "oot_pre_h99",
+              "primary_cell": {
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "base_km_expanding"
+                ]
+              },
+              "primary": {
+                "label": "birincil",
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_id": "base_km_expanding",
+                "n": 35,
+                "n_blocks": 12,
+                "model_value": 0.25,
+                "rule_value": 0.28,
+                "diff": -0.030000000000000002,
+                "ci95": [
+                  -0.05,
+                  -0.01
+                ],
+                "verdict": "geçiyor",
+                "wins": 20,
+                "losses": 15,
+                "ties": 0,
+                "n_live": 0,
+                "n_late": 0,
+                "scale": "OOT_PRE_H99"
+              },
+              "counters": {
+                "n_oot_retro": 0,
+                "n_scored": 35,
+                "n_refused": 1,
+                "n_skipped": 0,
+                "n_target_unavailable": 0,
+                "n_pending": 0,
+                "n_not_applicable_regime": 0
+              },
+              "exposure_class": null
+            },
+            {
+              "model_id": "v1_5_h99",
+              "kind": "linear",
+              "scale": "OOT_PRE_H99",
+              "subset": "oot_pre_h99",
+              "primary_cell": {
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "base_km_expanding"
+                ]
+              },
+              "primary": null,
+              "counters": {
+                "n_oot_retro": 0,
+                "n_scored": 8,
+                "n_refused": 1,
+                "n_skipped": 0,
+                "n_target_unavailable": 0,
+                "n_pending": 0,
+                "n_not_applicable_regime": 0
+              },
+              "exposure_class": null
+            },
+            {
+              "model_id": "ceiling_hazard_v1_clip",
+              "kind": "hazard",
+              "scale": "OOT_PRE_H99",
+              "subset": "oot_pre_h99",
+              "primary_cell": {
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "base_km_expanding"
+                ]
+              },
+              "primary": null,
+              "counters": {
+                "n_oot_retro": 2,
+                "n_scored": 0,
+                "n_refused": 1,
+                "n_skipped": 0,
+                "n_target_unavailable": 0,
+                "n_pending": 0,
+                "n_not_applicable_regime": 0
+              },
+              "exposure_class": null
+            }
+          ]
+        },
+        {
+          "key": "post_d1",
+          "title": "Zaman-dışı test, D1 sonrası (sentetik; makine sıralı)",
+          "scale": "OOT_PRE_H99_POST_D1_MACHINE_SEQUENCED",
+          "subset": null,
+          "counters": {},
+          "excluded_models": [],
+          "models": [
+            {
+              "model_id": "post_d1_hazard_v0",
+              "kind": null,
+              "scale": "OOT_PRE_H99_POST_D1_MACHINE_SEQUENCED",
+              "subset": null,
+              "primary_cell": {
+                "output": "S_cond",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "ceiling_hazard_v0"
+                ]
+              },
+              "primary": null,
+              "counters": {
+                "n_rows": 3,
+                "n_scored": 3,
+                "n_refused": 0,
+                "n_not_applicable": 1,
+                "n_d1_label_na": 0,
+                "n_no_record": 0,
+                "n_oot_retro": 0,
+                "n_pending": 0,
+                "n_skipped": 0,
+                "n_target_unavailable": 0
+              },
+              "exposure_class": "MACHINE_SEQUENCED"
+            }
+          ]
+        }
+      ],
+      "retro": {
+        "groups": [
+          {
+            "model_id": "ceiling_hazard_v1_clip",
+            "n": 2,
+            "tickers": [
+              "SNTO1"
+            ],
+            "n_not_drawn": 1
+          }
+        ],
+        "n": 2,
+        "n_not_drawn": 1
+      }
+    },
+    "details": {
+      "oot_pre_h99/ceiling_hazard_v0": {
+        "block": "oot_pre_h99",
+        "model_id": "ceiling_hazard_v0",
+        "kind": "hazard",
+        "primary_cell": {
+          "output": "S",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "base_km_expanding"
+          ]
+        },
+        "cells": [
+          {
+            "label": "birincil",
+            "output": "S",
+            "horizon_or_k": null,
+            "metric": "RPS",
+            "rule_id": "base_km_expanding",
+            "n": 35,
+            "n_blocks": 12,
+            "model_value": 0.25,
+            "rule_value": 0.28,
+            "diff": -0.030000000000000002,
+            "ci95": [
+              -0.05,
+              -0.01
+            ],
+            "verdict": "geçiyor",
+            "wins": 20,
+            "losses": 15,
+            "ties": 0,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          },
+          {
+            "label": "keşif",
+            "output": "S",
+            "horizon_or_k": null,
+            "metric": "RPS",
+            "rule_id": "ceiling_hazard_v0@INF",
+            "n": 35,
+            "n_blocks": 12,
+            "model_value": 0.25,
+            "rule_value": 0.2,
+            "diff": 0.0655,
+            "ci95": [
+              0.001,
+              0.13
+            ],
+            "verdict": "geçemiyor",
+            "wins": 20,
+            "losses": 15,
+            "ties": 0,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          },
+          {
+            "label": "keşif",
+            "output": "S",
+            "horizon_or_k": null,
+            "metric": "RPS",
+            "rule_id": "base_km_last10",
+            "n": 35,
+            "n_blocks": 12,
+            "model_value": 0.25,
+            "rule_value": 0.25,
+            "diff": -0.001,
+            "ci95": [
+              -0.006,
+              0.004
+            ],
+            "verdict": "ayırt edilemiyor",
+            "wins": 20,
+            "losses": 15,
+            "ties": 0,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          }
+        ],
+        "by_year": [
+          {
+            "subset": "2020",
+            "label": "ikincil",
+            "n": 1,
+            "n_blocks": 3,
+            "rule_id": "base_km_expanding",
+            "model_value": null,
+            "rule_value": null,
+            "diff": null,
+            "ci95": null,
+            "verdict": null,
+            "wins": null,
+            "losses": null,
+            "ties": null,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          },
+          {
+            "subset": "2021",
+            "label": "ikincil",
+            "n": 26,
+            "n_blocks": 3,
+            "rule_id": "base_km_expanding",
+            "model_value": 0.27,
+            "rule_value": 0.2,
+            "diff": -0.03,
+            "ci95": [
+              -0.08,
+              0.02
+            ],
+            "verdict": "yetersiz örnek",
+            "wins": null,
+            "losses": null,
+            "ties": null,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          }
+        ],
+        "by_regime": [
+          {
+            "subset": "ALLOC_REGIME=PRE_20211111",
+            "label": "keşif",
+            "n": 34,
+            "n_blocks": 3,
+            "rule_id": "base_km_expanding",
+            "model_value": 0.27,
+            "rule_value": 0.2,
+            "diff": 0.004999999999999999,
+            "ci95": [
+              -0.02,
+              0.03
+            ],
+            "verdict": "ayırt edilemiyor",
+            "wins": null,
+            "losses": null,
+            "ties": null,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          }
+        ],
+        "info": [],
+        "rows": [
+          {
+            "ticker": "SNTO1",
+            "d1": "2021-03-04",
+            "year": 2021,
+            "alloc_regime": "PRE_20211111",
+            "class": "OOT_BLIND",
+            "class_evidence": {
+              "model_push_proof_created_at": "2026-09-22T14:06:03Z",
+              "oot_ingest_push_proof_created_at": "2026-09-25T13:05:56Z"
+            },
+            "status": "SCORED",
+            "cell_status": "PREDICTED",
+            "record_id": "20260924T221306Z_aaaaaaaaaaaa.json",
+            "pred_kind": "S",
+            "pred_s": [
+              0.9,
+              0.5,
+              0.1
+            ],
+            "pred_d5_return": null,
+            "pred_d5_p_up": null,
+            "refused_code": null,
+            "realized_l": 3,
+            "realized_d5_r": "0.61051"
+          },
+          {
+            "ticker": "SNTO2",
+            "d1": "2021-03-04",
+            "year": 2021,
+            "alloc_regime": "PRE_20211111",
+            "class": "OOT_BLIND",
+            "class_evidence": {
+              "model_push_proof_created_at": "2026-09-22T14:06:03Z",
+              "oot_ingest_push_proof_created_at": "2026-09-25T13:05:56Z"
+            },
+            "status": "SCORED",
+            "cell_status": "PREDICTED",
+            "record_id": "20260924T221306Z_aaaaaaaaaaaa.json",
+            "pred_kind": "REFUSED",
+            "pred_s": null,
+            "pred_d5_return": null,
+            "pred_d5_p_up": null,
+            "refused_code": "F3_MISSING",
+            "realized_l": 3,
+            "realized_d5_r": "0.61051"
+          }
+        ],
+        "rows_block": true,
+        "rows_available": true
+      },
+      "oot_pre_h99/v1_5_h99": {
+        "block": "oot_pre_h99",
+        "model_id": "v1_5_h99",
+        "kind": "linear",
+        "primary_cell": {
+          "output": "S",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "base_km_expanding"
+          ]
+        },
+        "cells": [],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [
+          {
+            "ticker": "SNTO1",
+            "d1": "2021-03-04",
+            "year": 2021,
+            "alloc_regime": "PRE_20211111",
+            "class": "OOT_BLIND",
+            "class_evidence": {
+              "model_push_proof_created_at": "2026-09-22T14:06:03Z",
+              "oot_ingest_push_proof_created_at": "2026-09-25T13:05:56Z"
+            },
+            "status": "SCORED",
+            "cell_status": "PREDICTED",
+            "record_id": "20260924T221306Z_aaaaaaaaaaaa.json",
+            "pred_kind": "RETURN",
+            "pred_s": null,
+            "pred_d5_return": 0.2,
+            "pred_d5_p_up": 0.7,
+            "refused_code": null,
+            "realized_l": 3,
+            "realized_d5_r": "0.61051"
+          }
+        ],
+        "rows_block": true,
+        "rows_available": true
+      },
+      "oot_pre_h99/ceiling_hazard_v1_clip": {
+        "block": "oot_pre_h99",
+        "model_id": "ceiling_hazard_v1_clip",
+        "kind": "hazard",
+        "primary_cell": {
+          "output": "S",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "base_km_expanding"
+          ]
+        },
+        "cells": [],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": true,
+        "rows_available": true
+      },
+      "post_d1/post_d1_hazard_v0": {
+        "block": "post_d1",
+        "model_id": "post_d1_hazard_v0",
+        "kind": null,
+        "primary_cell": {
+          "output": "S_cond",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "ceiling_hazard_v0"
+          ]
+        },
+        "cells": [],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": false,
+        "rows_available": false
+      }
+    }
+  },
+  "embedded": {
+    "view": {
+      "status": "OK",
+      "source": "REPO",
+      "path": null,
+      "sha12": "df48b1fdcdca",
+      "generated_at_utc": "2030-01-01T00:00:00Z",
+      "git_head12": "0123456789ab",
+      "cohort_sha12": "fedcba987654",
+      "unsupported_version": null,
+      "integrity": null,
+      "rows_present": false,
+      "vault_open": true,
+      "class_definition": "OOT_BLIND = kayıt ve model sonuçtan önce push kanıtlı (sentetik tanım)",
+      "blocks": [
+        {
+          "key": "oot_pre_h99",
+          "title": "Zaman-dışı test: H99 öncesi kohort (sentetik)",
+          "scale": "OOT_PRE_H99",
+          "subset": null,
+          "counters": {
+            "n_member": 135,
+            "n_open": 71,
+            "n_sealed": 64,
+            "n_out_of_scope": 1,
+            "n_pending_membership": 0,
+            "n_exposed_archive": 4,
+            "n_exposed_codex": 1,
+            "n_in_table": 71,
+            "n_spk_corporate_action_seen": 14,
+            "n_spk_corporate_action_seen_cohort_total": 28
+          },
+          "excluded_models": [],
+          "models": [
+            {
+              "model_id": "ceiling_hazard_v0",
+              "kind": "hazard",
+              "scale": "OOT_PRE_H99",
+              "subset": "oot_pre_h99",
+              "primary_cell": {
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "base_km_expanding"
+                ]
+              },
+              "primary": {
+                "label": "birincil",
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_id": "base_km_expanding",
+                "n": 35,
+                "n_blocks": 12,
+                "model_value": 0.25,
+                "rule_value": 0.28,
+                "diff": -0.030000000000000002,
+                "ci95": [
+                  -0.05,
+                  -0.01
+                ],
+                "verdict": "geçiyor",
+                "wins": 20,
+                "losses": 15,
+                "ties": 0,
+                "n_live": 0,
+                "n_late": 0,
+                "scale": "OOT_PRE_H99"
+              },
+              "counters": {
+                "n_oot_retro": 0,
+                "n_scored": 35,
+                "n_refused": 1,
+                "n_skipped": 0,
+                "n_target_unavailable": 0,
+                "n_pending": 0,
+                "n_not_applicable_regime": 0
+              },
+              "exposure_class": null
+            },
+            {
+              "model_id": "v1_5_h99",
+              "kind": "linear",
+              "scale": "OOT_PRE_H99",
+              "subset": "oot_pre_h99",
+              "primary_cell": {
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "base_km_expanding"
+                ]
+              },
+              "primary": null,
+              "counters": {
+                "n_oot_retro": 0,
+                "n_scored": 8,
+                "n_refused": 1,
+                "n_skipped": 0,
+                "n_target_unavailable": 0,
+                "n_pending": 0,
+                "n_not_applicable_regime": 0
+              },
+              "exposure_class": null
+            },
+            {
+              "model_id": "ceiling_hazard_v1_clip",
+              "kind": "hazard",
+              "scale": "OOT_PRE_H99",
+              "subset": "oot_pre_h99",
+              "primary_cell": {
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "base_km_expanding"
+                ]
+              },
+              "primary": null,
+              "counters": {
+                "n_oot_retro": 2,
+                "n_scored": 0,
+                "n_refused": 1,
+                "n_skipped": 0,
+                "n_target_unavailable": 0,
+                "n_pending": 0,
+                "n_not_applicable_regime": 0
+              },
+              "exposure_class": null
+            }
+          ]
+        },
+        {
+          "key": "oot_pre_h99_sealed",
+          "title": "Zaman-dışı test, kasa (sentetik)",
+          "scale": "OOT_PRE_H99",
+          "subset": null,
+          "counters": {
+            "n_member": 135,
+            "n_open": 71,
+            "n_sealed": 64,
+            "n_out_of_scope": 1,
+            "n_pending_membership": 0,
+            "n_exposed_archive": 4,
+            "n_exposed_codex": 1,
+            "n_in_table": 64,
+            "n_spk_corporate_action_seen": 14,
+            "n_spk_corporate_action_seen_cohort_total": 28
+          },
+          "excluded_models": [],
+          "models": [
+            {
+              "model_id": "ceiling_hazard_v0",
+              "kind": "hazard",
+              "scale": "OOT_PRE_H99",
+              "subset": "oot_pre_h99",
+              "primary_cell": {
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "base_km_expanding"
+                ]
+              },
+              "primary": {
+                "label": "birincil",
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_id": "base_km_expanding",
+                "n": 34,
+                "n_blocks": 12,
+                "model_value": 0.27,
+                "rule_value": 0.26,
+                "diff": 0.005,
+                "ci95": [
+                  -0.01,
+                  0.02
+                ],
+                "verdict": "ayırt edilemiyor",
+                "wins": 20,
+                "losses": 15,
+                "ties": 0,
+                "n_live": 0,
+                "n_late": 0,
+                "scale": "OOT_PRE_H99"
+              },
+              "counters": {
+                "n_oot_retro": 0,
+                "n_scored": 34,
+                "n_refused": 1,
+                "n_skipped": 0,
+                "n_target_unavailable": 0,
+                "n_pending": 0,
+                "n_not_applicable_regime": 0
+              },
+              "exposure_class": null
+            }
+          ]
+        },
+        {
+          "key": "oot_pre_h99_all",
+          "title": "Zaman-dışı test, toplam (sentetik)",
+          "scale": "OOT_PRE_H99",
+          "subset": null,
+          "counters": {
+            "n_member": 135,
+            "n_open": 71,
+            "n_sealed": 64,
+            "n_out_of_scope": 1,
+            "n_pending_membership": 0,
+            "n_exposed_archive": 4,
+            "n_exposed_codex": 1,
+            "n_in_table": 135,
+            "n_spk_corporate_action_seen": 14,
+            "n_spk_corporate_action_seen_cohort_total": 28
+          },
+          "excluded_models": [
+            {
+              "model_id": "ceiling_hazard_v1_clip",
+              "n_open_oot_blind": 0,
+              "n_open_oot_retro": 2,
+              "reason": "açık küme satırları OOT_RETRO (sentetik)"
+            }
+          ],
+          "models": [
+            {
+              "model_id": "ceiling_hazard_v0",
+              "kind": "hazard",
+              "scale": "OOT_PRE_H99",
+              "subset": "oot_pre_h99",
+              "primary_cell": {
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "base_km_expanding"
+                ]
+              },
+              "primary": {
+                "label": "birincil",
+                "output": "S",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_id": "base_km_expanding",
+                "n": 69,
+                "n_blocks": 12,
+                "model_value": 0.26,
+                "rule_value": 0.24,
+                "diff": 0.055,
+                "ci95": [
+                  0.01,
+                  0.1
+                ],
+                "verdict": "geçemiyor",
+                "wins": 20,
+                "losses": 15,
+                "ties": 0,
+                "n_live": 0,
+                "n_late": 0,
+                "scale": "OOT_PRE_H99"
+              },
+              "counters": {
+                "n_oot_retro": 0,
+                "n_scored": 69,
+                "n_refused": 1,
+                "n_skipped": 0,
+                "n_target_unavailable": 0,
+                "n_pending": 0,
+                "n_not_applicable_regime": 0
+              },
+              "exposure_class": null
+            }
+          ]
+        },
+        {
+          "key": "post_d1",
+          "title": "Zaman-dışı test, D1 sonrası (sentetik; makine sıralı)",
+          "scale": "OOT_PRE_H99_POST_D1_MACHINE_SEQUENCED",
+          "subset": null,
+          "counters": {},
+          "excluded_models": [],
+          "models": [
+            {
+              "model_id": "post_d1_hazard_v0",
+              "kind": null,
+              "scale": "OOT_PRE_H99_POST_D1_MACHINE_SEQUENCED",
+              "subset": null,
+              "primary_cell": {
+                "output": "S_cond",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "ceiling_hazard_v0"
+                ]
+              },
+              "primary": null,
+              "counters": {
+                "n_rows": 3,
+                "n_scored": 3,
+                "n_refused": 0,
+                "n_not_applicable": 1,
+                "n_d1_label_na": 0,
+                "n_no_record": 0,
+                "n_oot_retro": 0,
+                "n_pending": 0,
+                "n_skipped": 0,
+                "n_target_unavailable": 0
+              },
+              "exposure_class": "MACHINE_SEQUENCED"
+            }
+          ]
+        },
+        {
+          "key": "post_d1_sealed",
+          "title": "Zaman-dışı test, D1 sonrası, kasa (sentetik)",
+          "scale": "OOT_PRE_H99_POST_D1_MACHINE_SEQUENCED",
+          "subset": null,
+          "counters": {},
+          "excluded_models": [],
+          "models": [
+            {
+              "model_id": "post_d1_hazard_v0",
+              "kind": null,
+              "scale": "OOT_PRE_H99_POST_D1_MACHINE_SEQUENCED",
+              "subset": null,
+              "primary_cell": {
+                "output": "S_cond",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "ceiling_hazard_v0"
+                ]
+              },
+              "primary": null,
+              "counters": {
+                "n_rows": 2,
+                "n_scored": 2,
+                "n_refused": 0,
+                "n_not_applicable": 1,
+                "n_d1_label_na": 0,
+                "n_no_record": 0,
+                "n_oot_retro": 0,
+                "n_pending": 0,
+                "n_skipped": 0,
+                "n_target_unavailable": 0
+              },
+              "exposure_class": "MACHINE_SEQUENCED"
+            }
+          ]
+        },
+        {
+          "key": "post_d1_all",
+          "title": "Zaman-dışı test, D1 sonrası, toplam (sentetik)",
+          "scale": "OOT_PRE_H99_POST_D1_MACHINE_SEQUENCED",
+          "subset": null,
+          "counters": {},
+          "excluded_models": [],
+          "models": [
+            {
+              "model_id": "post_d1_hazard_v0",
+              "kind": null,
+              "scale": "OOT_PRE_H99_POST_D1_MACHINE_SEQUENCED",
+              "subset": null,
+              "primary_cell": {
+                "output": "S_cond",
+                "horizon_or_k": null,
+                "metric": "RPS",
+                "rule_ids": [
+                  "ceiling_hazard_v0"
+                ]
+              },
+              "primary": null,
+              "counters": {
+                "n_rows": 5,
+                "n_scored": 5,
+                "n_refused": 0,
+                "n_not_applicable": 1,
+                "n_d1_label_na": 0,
+                "n_no_record": 0,
+                "n_oot_retro": 0,
+                "n_pending": 0,
+                "n_skipped": 0,
+                "n_target_unavailable": 0
+              },
+              "exposure_class": "MACHINE_SEQUENCED"
+            }
+          ]
+        }
+      ],
+      "retro": {
+        "groups": [],
+        "n": 0,
+        "n_not_drawn": 0
+      }
+    },
+    "details": {
+      "oot_pre_h99/ceiling_hazard_v0": {
+        "block": "oot_pre_h99",
+        "model_id": "ceiling_hazard_v0",
+        "kind": "hazard",
+        "primary_cell": {
+          "output": "S",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "base_km_expanding"
+          ]
+        },
+        "cells": [
+          {
+            "label": "birincil",
+            "output": "S",
+            "horizon_or_k": null,
+            "metric": "RPS",
+            "rule_id": "base_km_expanding",
+            "n": 35,
+            "n_blocks": 12,
+            "model_value": 0.25,
+            "rule_value": 0.28,
+            "diff": -0.030000000000000002,
+            "ci95": [
+              -0.05,
+              -0.01
+            ],
+            "verdict": "geçiyor",
+            "wins": 20,
+            "losses": 15,
+            "ties": 0,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          },
+          {
+            "label": "keşif",
+            "output": "S",
+            "horizon_or_k": null,
+            "metric": "RPS",
+            "rule_id": "ceiling_hazard_v0@INF",
+            "n": 35,
+            "n_blocks": 12,
+            "model_value": 0.25,
+            "rule_value": 0.2,
+            "diff": 0.0655,
+            "ci95": [
+              0.001,
+              0.13
+            ],
+            "verdict": "geçemiyor",
+            "wins": 20,
+            "losses": 15,
+            "ties": 0,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          },
+          {
+            "label": "keşif",
+            "output": "S",
+            "horizon_or_k": null,
+            "metric": "RPS",
+            "rule_id": "base_km_last10",
+            "n": 35,
+            "n_blocks": 12,
+            "model_value": 0.25,
+            "rule_value": 0.25,
+            "diff": -0.001,
+            "ci95": [
+              -0.006,
+              0.004
+            ],
+            "verdict": "ayırt edilemiyor",
+            "wins": 20,
+            "losses": 15,
+            "ties": 0,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          }
+        ],
+        "by_year": [
+          {
+            "subset": "2020",
+            "label": "ikincil",
+            "n": 1,
+            "n_blocks": 3,
+            "rule_id": "base_km_expanding",
+            "model_value": null,
+            "rule_value": null,
+            "diff": null,
+            "ci95": null,
+            "verdict": null,
+            "wins": null,
+            "losses": null,
+            "ties": null,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          },
+          {
+            "subset": "2021",
+            "label": "ikincil",
+            "n": 26,
+            "n_blocks": 3,
+            "rule_id": "base_km_expanding",
+            "model_value": 0.27,
+            "rule_value": 0.2,
+            "diff": -0.03,
+            "ci95": [
+              -0.08,
+              0.02
+            ],
+            "verdict": "yetersiz örnek",
+            "wins": null,
+            "losses": null,
+            "ties": null,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          }
+        ],
+        "by_regime": [
+          {
+            "subset": "ALLOC_REGIME=PRE_20211111",
+            "label": "keşif",
+            "n": 34,
+            "n_blocks": 3,
+            "rule_id": "base_km_expanding",
+            "model_value": 0.27,
+            "rule_value": 0.2,
+            "diff": 0.004999999999999999,
+            "ci95": [
+              -0.02,
+              0.03
+            ],
+            "verdict": "ayırt edilemiyor",
+            "wins": null,
+            "losses": null,
+            "ties": null,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          }
+        ],
+        "info": [],
+        "rows": [],
+        "rows_block": true,
+        "rows_available": false
+      },
+      "oot_pre_h99/v1_5_h99": {
+        "block": "oot_pre_h99",
+        "model_id": "v1_5_h99",
+        "kind": "linear",
+        "primary_cell": {
+          "output": "S",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "base_km_expanding"
+          ]
+        },
+        "cells": [],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": true,
+        "rows_available": false
+      },
+      "oot_pre_h99/ceiling_hazard_v1_clip": {
+        "block": "oot_pre_h99",
+        "model_id": "ceiling_hazard_v1_clip",
+        "kind": "hazard",
+        "primary_cell": {
+          "output": "S",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "base_km_expanding"
+          ]
+        },
+        "cells": [],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": true,
+        "rows_available": false
+      },
+      "oot_pre_h99_sealed/ceiling_hazard_v0": {
+        "block": "oot_pre_h99_sealed",
+        "model_id": "ceiling_hazard_v0",
+        "kind": "hazard",
+        "primary_cell": {
+          "output": "S",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "base_km_expanding"
+          ]
+        },
+        "cells": [
+          {
+            "label": "birincil",
+            "output": "S",
+            "horizon_or_k": null,
+            "metric": "RPS",
+            "rule_id": "base_km_expanding",
+            "n": 34,
+            "n_blocks": 12,
+            "model_value": 0.27,
+            "rule_value": 0.26,
+            "diff": 0.005,
+            "ci95": [
+              -0.01,
+              0.02
+            ],
+            "verdict": "ayırt edilemiyor",
+            "wins": 20,
+            "losses": 15,
+            "ties": 0,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          }
+        ],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": false,
+        "rows_available": false
+      },
+      "oot_pre_h99_all/ceiling_hazard_v0": {
+        "block": "oot_pre_h99_all",
+        "model_id": "ceiling_hazard_v0",
+        "kind": "hazard",
+        "primary_cell": {
+          "output": "S",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "base_km_expanding"
+          ]
+        },
+        "cells": [
+          {
+            "label": "birincil",
+            "output": "S",
+            "horizon_or_k": null,
+            "metric": "RPS",
+            "rule_id": "base_km_expanding",
+            "n": 69,
+            "n_blocks": 12,
+            "model_value": 0.26,
+            "rule_value": 0.24,
+            "diff": 0.055,
+            "ci95": [
+              0.01,
+              0.1
+            ],
+            "verdict": "geçemiyor",
+            "wins": 20,
+            "losses": 15,
+            "ties": 0,
+            "n_live": 0,
+            "n_late": 0,
+            "scale": "OOT_PRE_H99"
+          }
+        ],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": false,
+        "rows_available": false
+      },
+      "post_d1/post_d1_hazard_v0": {
+        "block": "post_d1",
+        "model_id": "post_d1_hazard_v0",
+        "kind": null,
+        "primary_cell": {
+          "output": "S_cond",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "ceiling_hazard_v0"
+          ]
+        },
+        "cells": [],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": false,
+        "rows_available": false
+      },
+      "post_d1_sealed/post_d1_hazard_v0": {
+        "block": "post_d1_sealed",
+        "model_id": "post_d1_hazard_v0",
+        "kind": null,
+        "primary_cell": {
+          "output": "S_cond",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "ceiling_hazard_v0"
+          ]
+        },
+        "cells": [],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": false,
+        "rows_available": false
+      },
+      "post_d1_all/post_d1_hazard_v0": {
+        "block": "post_d1_all",
+        "model_id": "post_d1_hazard_v0",
+        "kind": null,
+        "primary_cell": {
+          "output": "S_cond",
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "rule_ids": [
+            "ceiling_hazard_v0"
+          ]
+        },
+        "cells": [],
+        "by_year": [],
+        "by_regime": [],
+        "info": [],
+        "rows": [],
+        "rows_block": false,
+        "rows_available": false
+      }
+    }
+  },
+  "integrity_row_not_open": {
+    "view": {
+      "status": "INTEGRITY",
+      "source": "REPO",
+      "path": null,
+      "sha12": "a680eba0deba",
+      "generated_at_utc": "2030-01-01T00:00:00Z",
+      "git_head12": null,
+      "cohort_sha12": null,
+      "unsupported_version": null,
+      "integrity": {
+        "rule": "OOT_ROW_NOT_OPEN",
+        "model_id": null,
+        "detail": "oot_pre_h99: 1 satır açık küme değil"
+      },
+      "rows_present": true,
+      "vault_open": true,
+      "class_definition": null,
+      "blocks": [],
+      "retro": {
+        "groups": [],
+        "n": 0,
+        "n_not_drawn": 0
+      }
+    }
+  },
+  "integrity_min_n": {
+    "view": {
+      "status": "INTEGRITY",
+      "source": "REPO",
+      "path": null,
+      "sha12": "aff50279fe95",
+      "generated_at_utc": "2030-01-01T00:00:00Z",
+      "git_head12": null,
+      "cohort_sha12": null,
+      "unsupported_version": null,
+      "integrity": {
+        "rule": "OOT_CELLS_BELOW_MIN_N",
+        "model_id": "v1_5_h99",
+        "detail": "oot_pre_h99: n_scored = 8 < 10, cells = 1"
+      },
+      "rows_present": true,
+      "vault_open": true,
+      "class_definition": null,
+      "blocks": [],
+      "retro": {
+        "groups": [],
+        "n": 0,
+        "n_not_drawn": 0
+      }
+    }
+  },
+  "integrity_verdict_n20": {
+    "view": {
+      "status": "INTEGRITY",
+      "source": "REPO",
+      "path": null,
+      "sha12": "69f922603586",
+      "generated_at_utc": "2030-01-01T00:00:00Z",
+      "git_head12": null,
+      "cohort_sha12": null,
+      "unsupported_version": null,
+      "integrity": {
+        "rule": "VERDICT_WITHOUT_INTERVAL",
+        "model_id": "ceiling_hazard_v0",
+        "detail": "oot_pre_h99.cells · S null RPS vs base_km_expanding: verdict = \"geçiyor\", n = 20, ci95 = [-0.05,-0.01]"
+      },
+      "rows_present": true,
+      "vault_open": true,
+      "class_definition": null,
+      "blocks": [],
+      "retro": {
+        "groups": [],
+        "n": 0,
+        "n_not_drawn": 0
+      }
+    }
+  },
+  "integrity_live": {
+    "view": {
+      "status": "INTEGRITY",
+      "source": "REPO",
+      "path": null,
+      "sha12": "464afde6d032",
+      "generated_at_utc": "2030-01-01T00:00:00Z",
+      "git_head12": null,
+      "cohort_sha12": null,
+      "unsupported_version": null,
+      "integrity": {
+        "rule": "OOT_LIVE_COUNTS_NONZERO",
+        "model_id": "ceiling_hazard_v0",
+        "detail": "oot_pre_h99_sealed.cells: n_live = 1, n_late = 0"
+      },
+      "rows_present": true,
+      "vault_open": true,
+      "class_definition": null,
+      "blocks": [],
+      "retro": {
+        "groups": [],
+        "n": 0,
+        "n_not_drawn": 0
+      }
+    }
+  },
+  "unsupported": {
+    "view": {
+      "status": "UNSUPPORTED",
+      "source": "REPO",
+      "path": null,
+      "sha12": "7e0e4177580a",
+      "generated_at_utc": "2030-01-01T00:00:00Z",
+      "git_head12": null,
+      "cohort_sha12": null,
+      "unsupported_version": "borsai.scores_oot/2",
+      "integrity": null,
+      "rows_present": true,
+      "vault_open": true,
+      "class_definition": null,
+      "blocks": [],
+      "retro": {
+        "groups": [],
+        "n": 0,
+        "n_not_drawn": 0
+      }
+    }
+  },
+  "no_file": {
+    "view": {
+      "status": "NO_FILE",
+      "source": null,
+      "path": null,
+      "sha12": null,
+      "generated_at_utc": null,
+      "git_head12": null,
+      "cohort_sha12": null,
+      "unsupported_version": null,
+      "integrity": null,
+      "rows_present": false,
+      "vault_open": false,
+      "class_definition": null,
+      "blocks": [],
+      "retro": {
+        "groups": [],
+        "n": 0,
+        "n_not_drawn": 0
+      }
+    }
+  },
+  "repo_only": {
+    "view": {
+      "status": "REPO_ONLY",
+      "source": null,
+      "path": null,
+      "sha12": null,
+      "generated_at_utc": null,
+      "git_head12": null,
+      "cohort_sha12": null,
+      "unsupported_version": null,
+      "integrity": null,
+      "rows_present": false,
+      "vault_open": false,
+      "class_definition": null,
+      "blocks": [],
+      "retro": {
+        "groups": [],
+        "n": 0,
+        "n_not_drawn": 0
+      }
+    }
+  }
+}

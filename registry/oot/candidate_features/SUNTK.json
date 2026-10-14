@@ -1,0 +1,201 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "SUNTK",
+  "company": "Sun Tekstil Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "33178",
+      "source_id": "KAP_1030468_EK1",
+      "source_document": "KAP 1030468 ek 1",
+      "source_published_at": "2022-05-16T09:49:24+03:00",
+      "source_sha256": "ee982150b456b5e9413017774ea6f71697a572cb3758d32ecdcc02b3a0a10b21",
+      "source_path": "registry/oot/source_docs/SUNTK/KAP_1030468_ek1.pdf",
+      "quote": "23.400.000 %100,0 33.230 58.167.042 %100,00 33.178 28.080.000 %100,00",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 33.230; dağıtım yapılan 33.178",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "employees": "223",
+        "retail": "30704",
+        "retail_high_application": "2177",
+        "domestic_institutional": "74"
+      },
+      "source_id": "KAP_1030468_EK1",
+      "source_document": "KAP 1030468 ek 1",
+      "source_published_at": "2022-05-16T09:49:24+03:00",
+      "source_sha256": "ee982150b456b5e9413017774ea6f71697a572cb3758d32ecdcc02b3a0a10b21",
+      "source_path": "registry/oot/source_docs/SUNTK/KAP_1030468_ek1.pdf",
+      "quote": [
+        "Çalışanları 117.000 %0,5 223 233.194 %0,40 223 233.194 %0,83",
+        "7.020.000 %30,0 30.736 3.446.525 %5,93 30.704 3.435.792 %12,24",
+        "Başvurulu 10.413.000 %44,5 2.197 40.748.857 %70,05 2.177 17.071.014 %60,79",
+        "Kurumsal 5.850.000 %25,0 74 13.738.466 %23,62 74 7.340.000 %26,14"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: çalışan 223, bireysel 30.736, yüksek başvurulu 2.197, yurt içi kurumsal 74",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "0.49",
+      "source_id": "KAP_1030468_EK1",
+      "source_document": "KAP 1030468 ek 1",
+      "source_published_at": "2022-05-16T09:49:24+03:00",
+      "source_sha256": "ee982150b456b5e9413017774ea6f71697a572cb3758d32ecdcc02b3a0a10b21",
+      "source_path": "registry/oot/source_docs/SUNTK/KAP_1030468_ek1.pdf",
+      "quote": "Bireysel Yatırımcılara tahsis edilen payların 0,49 katı",
+      "note": "ek satış hariç; ayrıca Yüksek Başvurulu 3,91 katı, Grup Çalışanları 1,99 katı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "2.35",
+      "source_id": "KAP_1030468_EK1",
+      "source_document": "KAP 1030468 ek 1",
+      "source_published_at": "2022-05-16T09:49:24+03:00",
+      "source_sha256": "ee982150b456b5e9413017774ea6f71697a572cb3758d32ecdcc02b3a0a10b21",
+      "source_path": "registry/oot/source_docs/SUNTK/KAP_1030468_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara tahsis edilen payların 2,35 katı",
+      "note": "ek satış hariç",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belgede yurt dışı kurumsal yatırımcı grubu yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "employees": "233194",
+        "retail": "3435792",
+        "retail_high_application": "17071014",
+        "domestic_institutional": "7340000"
+      },
+      "source_id": "KAP_1030468_EK1",
+      "source_document": "KAP 1030468 ek 1",
+      "source_published_at": "2022-05-16T09:49:24+03:00",
+      "source_sha256": "ee982150b456b5e9413017774ea6f71697a572cb3758d32ecdcc02b3a0a10b21",
+      "source_path": "registry/oot/source_docs/SUNTK/KAP_1030468_ek1.pdf",
+      "quote": [
+        "Çalışanları 117.000 %0,5 223 233.194 %0,40 223 233.194 %0,83",
+        "7.020.000 %30,0 30.736 3.446.525 %5,93 30.704 3.435.792 %12,24",
+        "Başvurulu 10.413.000 %44,5 2.197 40.748.857 %70,05 2.177 17.071.014 %60,79",
+        "Kurumsal 5.850.000 %25,0 74 13.738.466 %23,62 74 7.340.000 %26,14"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "12.24",
+      "source_id": "KAP_1030468_EK1",
+      "source_document": "KAP 1030468 ek 1",
+      "source_published_at": "2022-05-16T09:49:24+03:00",
+      "source_sha256": "ee982150b456b5e9413017774ea6f71697a572cb3758d32ecdcc02b3a0a10b21",
+      "source_path": "registry/oot/source_docs/SUNTK/KAP_1030468_ek1.pdf",
+      "quote": "7.020.000 %30,0 30.736 3.446.525 %5,93 30.704 3.435.792 %12,24",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "ayrıca Yüksek Başvurulu %60,79 ve Grup Çalışanları %0,83; planlanan bireysel %30,0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "26.14",
+      "source_id": "KAP_1030468_EK1",
+      "source_document": "KAP 1030468 ek 1",
+      "source_published_at": "2022-05-16T09:49:24+03:00",
+      "source_sha256": "ee982150b456b5e9413017774ea6f71697a572cb3758d32ecdcc02b3a0a10b21",
+      "source_path": "registry/oot/source_docs/SUNTK/KAP_1030468_ek1.pdf",
+      "quote": "Kurumsal 5.850.000 %25,0 74 13.738.466 %23,62 74 7.340.000 %26,14",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %25,0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "belgede yurt dışı kurumsal yatırımcı grubu yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki dağıtım yöntemini adlandırmıyor; dossier'de TSSD yok",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": null,
+      "missing_reason": "dossier'de TSSD yok; sonuç bildirimini QNB FİNANS YATIRIM MENKUL DEĞERLER A.Ş. yayımlamış ama bildirim ve ek metninde aracılık/liderlik ifadesi yok",
+      "provenance": "MISSING"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "dossier'de TSSD yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "dossier'de TSSD yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "dossier'de TSSD yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "dossier'de TSSD yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1030619",
+      "source_document": "KAP 1030619",
+      "source_published_at": "2022-05-16T18:04:45+03:00",
+      "source_sha256": "971e573424b0317b47edd90b45b519a2c6e91a626c8960da81ca62a57d94ce2f",
+      "source_path": "registry/oot/source_docs/SUNTK/KAP_1030619_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1030619",
+      "source_document": "KAP 1030619",
+      "source_published_at": "2022-05-16T18:04:45+03:00",
+      "source_sha256": "971e573424b0317b47edd90b45b519a2c6e91a626c8960da81ca62a57d94ce2f",
+      "source_path": "registry/oot/source_docs/SUNTK/KAP_1030619_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1030619": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1030619",
+      "published_at": "2022-05-16T18:04:45+03:00",
+      "sha256": "971e573424b0317b47edd90b45b519a2c6e91a626c8960da81ca62a57d94ce2f",
+      "path": "registry/oot/source_docs/SUNTK/KAP_1030619_bildirim.pdf"
+    },
+    "KAP_1030468_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1030468 ek 1",
+      "published_at": "2022-05-16T09:49:24+03:00",
+      "sha256": "ee982150b456b5e9413017774ea6f71697a572cb3758d32ecdcc02b3a0a10b21",
+      "path": "registry/oot/source_docs/SUNTK/KAP_1030468_ek1.pdf"
+    }
+  }
+}

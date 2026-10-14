@@ -1,0 +1,107 @@
+# Mutasyon çıktıları (BORSAI_FAZ7C_FABLE_REPRO_AUDIT adım 3) — klon /tmp/borsai_faz7c_audit/clone, HEAD 197a741
+# Her mutasyon ayrı uygulandı, hedef testler koştu, rc kaydedildi, geri alındı. (e), (f), (p) ilk sürücüde çapa tek olmadığı için uygulanmadı (rc=0, mutasyonsuz kod); çapalar düzeltilip mutate_efp.sh ile yeniden koşuldu (aşağıda).
+
+## mutate.sh özeti
+klon HEAD: 197a741; borsai kaynağı: /private/tmp/borsai_faz7c_audit/clone/borsai
+0_taban_yesil rc=0 dur=372s :: tests/test_faz7c_model.py::test_additional_sale_flag_values tests/test_faz7c_model.py::test_additional_sale_flag_refusals tests/test_faz7c_model.py::test_additional_sale_flag_counts_on_real_tables tests/test_faz7c_model.py::test_training_sets_counts_match_spec_and_measured_numbers tests/test_faz7c_model.py::test_winsor_bounds_type7_and_log_after_winsor tests/test_faz7c_model.py::test_zero_rule_is_training_rate_bit_equal_fraction tests/test_faz7c_backtest.py::test_fold_plans_test_sets_near_era_and_no_leakage tests/test_faz7c_backtest.py::test_comparator_ledgers_pinned_and_v15_d10_brier_reproduced tests/test_faz7c_backtest.py::test_near_era_tolerance_constant tests/test_faz7c_backtest.py::test_near_era_sentinel_intervals tests/test_faz7c_backtest.py::test_near_era_rule_text_from_constant tests/test_faz7c_backtest.py::test_exploration_entries_and_counter tests/test_faz7c_golden.py::test_near_era_primary_cell_and_label tests/test_faz7c_golden.py::test_ledger_fold_sets_statuses_and_leakage tests/test_faz7_tufe.py::test_month_for_examples tests/test_v1_6.py::test_5_ties_choose_inf_and_zero tests/test_outcome_guard.py::test_cohort_codes_appear_in_data_only_as_outcomes tests/test_faz7c_golden.py::test_final_fit_preview_reproducible_and_stdlib_parity[fall_d10_v0_h99] tests/test_faz7c_golden.py::test_backtest_byte_identical_to_faz7c_golden :: 31 passed in 369.72s (0:06:09)
+a_addsale_missing_as_zero rc=1 dur=13s :: tests/test_faz7c_model.py::test_additional_sale_flag_refusals tests/test_faz7c_model.py::test_additional_sale_flag_counts_on_real_tables tests/test_faz7c_model.py::test_predict_refusal_paths :: 5 failed, 4 passed in 10.90s
+b_flag_ge_zero rc=1 dur=3s :: tests/test_faz7c_model.py::test_additional_sale_flag_values tests/test_faz7c_model.py::test_additional_sale_flag_counts_on_real_tables :: 5 failed, 3 passed in 0.63s
+c_log_before_clip rc=1 dur=15s :: tests/test_faz7c_model.py::test_winsor_bounds_type7_and_log_after_winsor tests/test_faz7c_golden.py::test_final_fit_preview_reproducible_and_stdlib_parity[fall_d10_v0_h99] :: 2 failed in 12.29s
+d_clip_bounds_include_test_ipo rc=1 dur=187s :: tests/test_faz7c_golden.py::test_backtest_byte_identical_to_faz7c_golden :: 1 failed in 185.98s (0:03:05)
+e_d5_fold_uses_d10_cut rc=0 dur=167s :: tests/test_faz7c_backtest.py::test_fold_plans_test_sets_near_era_and_no_leakage tests/test_faz7c_golden.py::test_backtest_byte_identical_to_faz7c_golden :: 2 passed in 164.53s (0:02:44)
+f_cutoff_le rc=0 dur=173s :: tests/test_faz7c_backtest.py::test_fold_plans_test_sets_near_era_and_no_leakage tests/test_faz7c_golden.py::test_ledger_fold_sets_statuses_and_leakage tests/test_faz7c_golden.py::test_backtest_byte_identical_to_faz7c_golden :: 3 passed in 172.37s (0:02:52)
+g_tufe_month_T_minus_1 rc=1 dur=2s :: tests/test_faz7_tufe.py::test_month_for_examples tests/test_faz7_tufe.py::test_index_for_is_pit_on_all_170_rows tests/test_faz7c_golden.py::test_final_fit_preview_reproducible_and_stdlib_parity[fall_d10_v0_h99] :: 3 failed in 0.25s
+h_tolerance_0_015 rc=1 dur=15s :: tests/test_faz7c_backtest.py::test_near_era_tolerance_constant tests/test_faz7c_backtest.py::test_near_era_sentinel_intervals tests/test_faz7c_backtest.py::test_near_era_rule_text_from_constant tests/test_faz7c_golden.py::test_models_md_faz7c_section :: 4 failed in 13.72s
+i_near_era_start_2023_12_01 rc=1 dur=2s :: tests/test_faz7c_backtest.py::test_fold_plans_test_sets_near_era_and_no_leakage tests/test_faz7c_golden.py::test_ledger_fold_sets_statuses_and_leakage tests/test_faz7c_golden.py::test_near_era_primary_cell_and_label :: 3 failed in 0.53s
+j_zero_from_94_rows rc=1 dur=2s :: tests/test_faz7c_model.py::test_zero_rule_is_training_rate_bit_equal_fraction tests/test_faz7c_golden.py::test_final_fit_preview_reproducible_and_stdlib_parity[fall_d10_v0_pooled@ZERO] :: 2 failed in 0.77s
+k_tie_to_largest_C rc=1 dur=5s :: tests/test_v1_6.py::test_5_ties_choose_inf_and_zero tests/test_faz7c_model.py::test_fit_path_is_v1_6_logit_without_ridge :: 1 failed, 1 passed in 3.47s
+l_base_rate_pin_skipped rc=1 dur=2s :: tests/test_faz7c_backtest.py::test_comparator_ledgers_pinned_and_v15_d10_brier_reproduced :: 1 failed in 0.24s
+m_exploration_count_2053 rc=1 dur=2s :: tests/test_faz7c_backtest.py::test_exploration_entries_and_counter :: 1 failed in 0.28s
+n_vault_code_in_data rc=1 dur=2s :: tests/test_outcome_guard.py::test_cohort_codes_appear_in_data_only_as_outcomes tests/test_faz7c_model.py::test_no_sealed_code_in_training_tables_or_new_files tests/test_faz7c_model.py::test_tables_and_data_versions_unchanged :: 3 failed in 1.66s
+o_bootstrap_seed rc=1 dur=12s :: tests/test_faz7c_golden.py::test_near_era_primary_cell_and_label tests/test_faz7c_golden.py::test_models_md_faz7c_section :: 2 failed in 11.64s
+p_label_direction_flipped rc=0 dur=220s :: tests/test_faz7c_golden.py::test_backtest_byte_identical_to_faz7c_golden tests/test_faz7c_golden.py::test_final_fit_preview_reproducible_and_stdlib_parity[fall_d10_v0_h99] :: 2 passed in 218.11s (0:03:38)
+=== klon durumu (mutasyonlar geri alındı) ===
+DONE_FAZ7C
+
+## mutate_efp.sh özeti (e, f, p düzeltilmiş çapalarla)
+klon HEAD: 197a741; borsai kaynağı: /private/tmp/borsai_faz7c_audit/clone/borsai
+e_d5_fold_uses_d10_cut rc=1 dur=228s :: tests/test_faz7c_backtest.py::test_fold_plans_test_sets_near_era_and_no_leakage tests/test_faz7c_golden.py::test_backtest_byte_identical_to_faz7c_golden :: 2 failed in 225.89s (0:03:45)
+f_cutoff_le rc=1 dur=1s :: tests/test_faz7c_backtest.py::test_fold_plans_test_sets_near_era_and_no_leakage tests/test_faz7c_golden.py::test_ledger_fold_sets_statuses_and_leakage tests/test_faz7c_golden.py::test_backtest_byte_identical_to_faz7c_golden :: 1 passed, 2 errors in 0.23s
+p_label_direction_flipped rc=1 dur=174s :: tests/test_faz7c_golden.py::test_backtest_byte_identical_to_faz7c_golden tests/test_faz7c_golden.py::test_final_fit_preview_reproducible_and_stdlib_parity[fall_d10_v0_h99] :: 2 failed in 173.32s (0:02:53)
+=== klon durumu (mutasyonlar geri alındı) ===
+DONE_FAZ7C_EFP
+
+## mutasyon başına son satırlar
+--- 0_taban_yesil.log ---
+31 passed in 369.72s (0:06:09)
+--- a_addsale_missing_as_zero.log ---
+FAILED tests/test_faz7c_model.py::test_additional_sale_flag_refusals[-ADDITIONAL_SALE_MISSING]
+FAILED tests/test_faz7c_model.py::test_additional_sale_flag_refusals[None-ADDITIONAL_SALE_MISSING]
+FAILED tests/test_faz7c_model.py::test_additional_sale_flag_refusals[DATA_NOT_FOUND-ADDITIONAL_SALE_MISSING]
+FAILED tests/test_faz7c_model.py::test_additional_sale_flag_refusals[  -ADDITIONAL_SALE_MISSING]
+FAILED tests/test_faz7c_model.py::test_predict_refusal_paths - AssertionError...
+5 failed, 4 passed in 10.90s
+--- b_flag_ge_zero.log ---
+FAILED tests/test_faz7c_model.py::test_additional_sale_flag_values[0-0_0] - A...
+FAILED tests/test_faz7c_model.py::test_additional_sale_flag_values[0-0_1] - a...
+FAILED tests/test_faz7c_model.py::test_additional_sale_flag_values[0.0-0] - a...
+FAILED tests/test_faz7c_model.py::test_additional_sale_flag_values[ 0 -0] - A...
+FAILED tests/test_faz7c_model.py::test_additional_sale_flag_counts_on_real_tables
+5 failed, 3 passed in 0.63s
+--- c_log_before_clip.log ---
+FAILED tests/test_faz7c_model.py::test_winsor_bounds_type7_and_log_after_winsor
+FAILED tests/test_faz7c_golden.py::test_final_fit_preview_reproducible_and_stdlib_parity[fall_d10_v0_h99]
+2 failed in 12.29s
+--- d_clip_bounds_include_test_ipo.log ---
+FAILED tests/test_faz7c_golden.py::test_backtest_byte_identical_to_faz7c_golden
+1 failed in 185.98s (0:03:05)
+--- e_d5_fold_uses_d10_cut.log ---
+FAILED tests/test_faz7c_backtest.py::test_fold_plans_test_sets_near_era_and_no_leakage
+FAILED tests/test_faz7c_golden.py::test_backtest_byte_identical_to_faz7c_golden
+2 failed in 225.89s (0:03:45)
+--- f_cutoff_le.log ---
+ERROR tests/test_faz7c_backtest.py::test_fold_plans_test_sets_near_era_and_no_leakage
+ERROR tests/test_faz7c_golden.py::test_backtest_byte_identical_to_faz7c_golden
+1 passed, 2 errors in 0.23s
+--- g_tufe_month_T_minus_1.log ---
+FAILED tests/test_faz7_tufe.py::test_month_for_examples - AssertionError: ass...
+FAILED tests/test_faz7_tufe.py::test_index_for_is_pit_on_all_170_rows - borsa...
+FAILED tests/test_faz7c_golden.py::test_final_fit_preview_reproducible_and_stdlib_parity[fall_d10_v0_h99]
+3 failed in 0.25s
+--- h_tolerance_0_015.log ---
+FAILED tests/test_faz7c_backtest.py::test_near_era_tolerance_constant - asser...
+FAILED tests/test_faz7c_backtest.py::test_near_era_sentinel_intervals - Asser...
+FAILED tests/test_faz7c_backtest.py::test_near_era_rule_text_from_constant - ...
+FAILED tests/test_faz7c_golden.py::test_models_md_faz7c_section - assert "# M...
+4 failed in 13.72s
+--- i_near_era_start_2023_12_01.log ---
+FAILED tests/test_faz7c_backtest.py::test_fold_plans_test_sets_near_era_and_no_leakage
+FAILED tests/test_faz7c_golden.py::test_ledger_fold_sets_statuses_and_leakage
+FAILED tests/test_faz7c_golden.py::test_near_era_primary_cell_and_label - Ass...
+3 failed in 0.53s
+--- j_zero_from_94_rows.log ---
+FAILED tests/test_faz7c_model.py::test_zero_rule_is_training_rate_bit_equal_fraction
+FAILED tests/test_faz7c_golden.py::test_final_fit_preview_reproducible_and_stdlib_parity[fall_d10_v0_pooled@ZERO]
+2 failed in 0.77s
+--- k_tie_to_largest_C.log ---
+FAILED tests/test_v1_6.py::test_5_ties_choose_inf_and_zero - assert [1.0, 0.0...
+1 failed, 1 passed in 3.47s
+--- l_base_rate_pin_skipped.log ---
+FAILED tests/test_faz7c_backtest.py::test_comparator_ledgers_pinned_and_v15_d10_brier_reproduced
+1 failed in 0.24s
+--- m_exploration_count_2053.log ---
+FAILED tests/test_faz7c_backtest.py::test_exploration_entries_and_counter - b...
+1 failed in 0.28s
+--- n_vault_code_in_data.log ---
+FAILED tests/test_outcome_guard.py::test_cohort_codes_appear_in_data_only_as_outcomes
+FAILED tests/test_faz7c_model.py::test_no_sealed_code_in_training_tables_or_new_files
+FAILED tests/test_faz7c_model.py::test_tables_and_data_versions_unchanged - A...
+3 failed in 1.66s
+--- o_bootstrap_seed.log ---
+FAILED tests/test_faz7c_golden.py::test_near_era_primary_cell_and_label - Ass...
+FAILED tests/test_faz7c_golden.py::test_models_md_faz7c_section - assert "# M...
+2 failed in 11.64s
+--- p_label_direction_flipped.log ---
+FAILED tests/test_faz7c_golden.py::test_backtest_byte_identical_to_faz7c_golden
+FAILED tests/test_faz7c_golden.py::test_final_fit_preview_reproducible_and_stdlib_parity[fall_d10_v0_h99]
+2 failed in 173.32s (0:02:53)

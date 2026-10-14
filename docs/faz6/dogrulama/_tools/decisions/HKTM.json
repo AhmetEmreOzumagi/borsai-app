@@ -1,0 +1,166 @@
+{
+ "ticker": "HKTM",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_1055283",
+  "KAP_1055283_EK1",
+  "KAP_1055283_EK2",
+  "KAP_1052598_EK1",
+  "KAP_1055556"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "5.59",
+   "origin": "SOURCE_REPORTED",
+   "source_id": "KAP_1055283_EK2",
+   "quote": "Halka arzda, toplam filtre edilmemiş veriler baz alındığında, 317.951 adet emir ile satışa sunulan adedin 5,59 katına denk gelen 67.030.285 pay karşılığı toplam 737.333.135 TL tutarlı talep gelmiştir.",
+   "definition": "belgedeki toplam kat (filtre edilmemiş talep adedi / satışa sunulan adet)",
+   "denominator_includes_additional_sale": false,
+   "note": "satışa sunulan 12.000.000 = bedelli 10.000.000 + ortak satışı 2.000.000; SPK satırında ek pay satışı hücresi boş, TSSD'de ek satıştan söz edilmiyor. Filtre edildikten sonra dağıtıma konu talep 65.338.325 TL nominal (303.681 yatırımcı)"
+  },
+  "total_demand_filter_status": {
+   "value": "UNFILTERED",
+   "source_id": "KAP_1055283_EK2",
+   "quote": "Halka arzda, toplam filtre edilmemiş veriler baz alındığında, 317.951 adet emir ile satışa sunulan adedin 5,59 katına denk gelen",
+   "note": "filtrelenmiş talep: 'Filtre edildikten sonra, 303.681 adet yatırımcıdan gelen 65.338.325 TL nominal değerli talep miktarı dağıtıma konu edilmiş'"
+  },
+  "ipo_size_tl": {
+   "value": "132000000",
+   "source_id": "KAP_1055283_EK2",
+   "quote": "Toplam halka arz büyüklüğü 132.000.000 TL olarak gerçekleşmiştir."
+  },
+  "capital_increase_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (yalnız 'Halka arz edilen 12.000.000 TL nominal değerli payların tamamının satışı'; SPK planı bedelli 10.000.000 + mevcut pay satışı 2.000.000, taşınmadı)"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok"
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_1055283_EK2",
+   "zero_from_statement": true,
+   "quote": "Halka arz edilen 12.000.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir.",
+   "note": "satılan toplam 12.000.000 = SPK planlanan taban (bedelli 10.000.000 + mevcut pay satışı 2.000.000); SPK satırında ek pay satışı hücresi boş; TSSD'de ek satış beyanı yok"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_1055283_EK2",
+   "quote": "Halka arz edilen 12.000.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir."
+  },
+  "additional_sale_usage_statement": null,
+  "investor_count": {
+   "value": "303681",
+   "source_id": "KAP_1055283_EK2",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "TOPLAM 12.000.000 %100 317.951 67.030.285 %100 303.681 12.000.000 %100",
+   "note": "talep kişi sayısı 317.951 (metinde 'adet emir'); dağıtım kişi sayısı 303.681"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "303609",
+    "employees": "46",
+    "domestic_institutional": "26"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_1055283_EK2",
+   "quote": [
+    "Yurt İçi Bireysel 5.640.000 %47 317.867 41.830.814 %62,40 303.609 5.640.000 %47",
+    "Çalışanlardan Oluşan 360.000 %3 46 360.108 %0,54 46 360.000 %3 Yatırımcılar",
+    "Yurt İçi 6.000.000 %50 38 24.839.363 %37,06 26 6.000.000 %50 Kurumsal"
+   ]
+  },
+  "retail_demand_multiple": {
+   "value": "7.4168109929",
+   "derived": true,
+   "formula": "Yurt İçi Bireysel talep 41.830.814 / planlanan tahsisat 5.640.000",
+   "source_id": "KAP_1055283_EK2",
+   "quote": "Yurt İçi Bireysel 5.640.000 %47 317.867 41.830.814 %62,40 303.609 5.640.000 %47"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": "4.1398938333",
+   "derived": true,
+   "formula": "Yurt İçi Kurumsal talep 24.839.363 / planlanan tahsisat 6.000.000",
+   "source_id": "KAP_1055283_EK2",
+   "quote": "Yurt İçi 6.000.000 %50 38 24.839.363 %37,06 26 6.000.000 %50 Kurumsal"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "yurt dışı kurumsal grup tabloda yok"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "5640000",
+    "employees": "360000",
+    "domestic_institutional": "6000000"
+   },
+   "source_id": "KAP_1055283_EK2",
+   "quote": [
+    "Yurt İçi Bireysel 5.640.000 %47 317.867 41.830.814 %62,40 303.609 5.640.000 %47",
+    "Çalışanlardan Oluşan 360.000 %3 46 360.108 %0,54 46 360.000 %3 Yatırımcılar",
+    "Yurt İçi 6.000.000 %50 38 24.839.363 %37,06 26 6.000.000 %50 Kurumsal"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "47",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1055283_EK2",
+   "quote": "Yurt İçi Bireysel 5.640.000 %47 317.867 41.830.814 %62,40 303.609 5.640.000 %47",
+   "note": "çalışanlar %3 ayrı"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "50",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1055283_EK2",
+   "quote": "Yurt İçi 6.000.000 %50 38 24.839.363 %37,06 26 6.000.000 %50 Kurumsal"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": null,
+   "missing_reason": "yurt dışı kurumsal grup tabloda yok"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor"
+  },
+  "lead_broker": {
+   "value": "A1 Capital Yatırım Menkul Değerler A.Ş.",
+   "source_id": "KAP_1052598_EK1",
+   "quote": "Halka Arza Aracılık Eden Yetkili Kuruluş A1 Capital Yatırım Menkul Değerler A.Ş."
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD (kısa biçim, OCR) fiyat istikrarından söz etmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "eldeki belgelerde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "eldeki belgelerde yok"
+  }
+ },
+ "codex_check": {},
+ "notes": "Codex sonuç ekini görmemişti (tüm alanlar BULUNAMADI). Sonuç eki filtre edilmemiş toplam katı (5,59) açıkça yazıyor. TSSD pencerelerinde ek satış yapılıp yapılmayacağına dair beyan yok (pb_notes yazılmadı).",
+ "needs_search": false,
+ "pb_notes": {
+  "additional_sale_statement": {
+   "source_id": "KAP_1052597_EK1",
+   "quote": "25.2.5. Ek satış işlemlerine ilişkin bilgi: Yoktur.",
+   "meaning": "NONE",
+   "note": "Doğrulayıcı: SPK tablosunda Ek Pay Satışı hücresi boş; onaylı izahname §25.2.5 beyanı (H99 BESTE emsali)"
+  }
+ }
+}

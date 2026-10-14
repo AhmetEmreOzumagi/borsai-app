@@ -1,0 +1,396 @@
+{
+  "schema_version": "borsai.ipo_enumeration/1",
+  "purpose": "SPEC_SCORING §4 payda ve tamlık denetimi: 2026-08-07'den bugüne Pay Piyasası'nda halka arzla ilk kez işlem görmeye başlayan paylar",
+  "checked_at": "2026-09-22T14:35:00+03:00",
+  "checked_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "queries": [
+    {
+      "url": "https://www.kap.org.tr/tr/api/disclosure/members/byCriteria",
+      "method": "POST",
+      "body": {
+        "fromDate": "2026-08-01",
+        "toDate": "2026-09-22",
+        "subjectList": [
+          "8aca490d4ff02191014ff03637790093"
+        ],
+        "memberType": "IGS"
+      },
+      "subject": "Payların İşlem Görmeye Başlaması",
+      "response_file": "kap_byCriteria_subject_paylarin_islem_gormeye_baslamasi_20260801_20260922.json",
+      "response_sha256": "5bedac31427fd796412fdb4eccf89cb5e2cdf040ab528bd2ae33986c2579c80a",
+      "records_returned": 8,
+      "note": "memberType DDK ile aynı 8 kayıt; YK/FON/PYS 0 kayıt"
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/api/disclosure/members/byCriteria",
+      "method": "POST",
+      "body": {
+        "fromDate": "2026-08-01…2026-09-22 (7 günlük parçalar)",
+        "mkkMemberOidList": [
+          "4028e4a14bcf2a06014be4d7e6e256b6"
+        ],
+        "memberType": ""
+      },
+      "subject": "BORSA İSTANBUL A.Ş.'nin bütün bildirimleri; yalnız konu sayıları ve listeleme benzeri konular saklandı (fiyat hareketi ima edebilecek bildirimler okunmadı ve saklanmadı)",
+      "records_returned": 302
+    },
+    {
+      "url": "https://www.kap.org.tr/tr/api/disclosure/members/byCriteria",
+      "method": "POST",
+      "body": {
+        "fromDate": "2026-07-01…2026-09-16 (3 günlük parçalar)",
+        "memberType": ""
+      },
+      "subject": "bütün bildirimler; yalnız 7 arzın ilgili-şirket alanı eşleşen ve ilk işlem gününden önce yayımlanan kayıtları tutuldu (kaynak belge seçimi için)"
+    }
+  ],
+  "bist_subject_counts_20260801_20260922": {
+    "BISTECH Pay Piyasası Alım Satım Sistemi Duyurusu": 102,
+    "İşlem İptali": 38,
+    "Hak Kullanımı": 36,
+    "Borçlanma Araçlarının / Kira Sertifikalarının İşlem Görmeye Başlaması": 35,
+    "Endeks Şirketlerinde Değişiklik": 14,
+    "Varantların veya Sertifikaların İşlem Görmeye Başlaması": 10,
+    "Endekslerde Kullanılan Fiili Dolaşımdaki Pay Oranı Değişiklikleri": 8,
+    "Payların İşlem Görmeye Başlaması": 8,
+    "Borsa İstanbul A.Ş. Duyurusu": 7,
+    "Toptan Alış Satış İşlemi ": 6,
+    "VİOP Gün İçi Fiyat Limiti Değişikliği Duyuruları": 5,
+    "Pay İşlem Sırası Kapatma / Açma": 4,
+    "Birincil Piyasa Duyurusu - Kalan Paylar": 3,
+    "BIST Pay Endeksleri": 3,
+    "VİOP İşlem İptali Duyuruları": 3,
+    "Özsermaye Hallerine İlişkin Borsa Duyurusu": 3,
+    "Borsa Yatırım Fonlarının İşlem Görmeye Başlaması": 3,
+    "Piyasa Yapıcı Atanması": 3,
+    "Yabancı Yatırımcı İşlemleri": 2,
+    "Likidite Sağlayıcı Atanması": 2,
+    "Toptan Alış Satış İşlemi Duyurusu": 2,
+    "Rüçhan Hakkı Referans Fiyatı": 1,
+    "Payların Borsa Birincil Piyasada Halka Arzı": 1,
+    "Kod Değişikliği": 1,
+    "VİOP Son İşlem Günü ve Vade Sonu Duyuruları": 1,
+    "Pazar Değişikliği": 1
+  },
+  "paylarin_islem_gormeye_baslamasi": [
+    {
+      "kap_id": 1663155,
+      "published_at": "2026-09-15T18:10:17+03:00",
+      "related_stocks": "NETGL"
+    },
+    {
+      "kap_id": 1655891,
+      "published_at": "2026-08-28T18:11:04+03:00",
+      "related_stocks": "BKRGY"
+    },
+    {
+      "kap_id": 1655890,
+      "published_at": "2026-08-28T18:10:50+03:00",
+      "related_stocks": "INTET"
+    },
+    {
+      "kap_id": 1652131,
+      "published_at": "2026-08-18T18:11:04+03:00",
+      "related_stocks": "KPEKS"
+    },
+    {
+      "kap_id": 1652127,
+      "published_at": "2026-08-18T18:10:48+03:00",
+      "related_stocks": "TKNKA"
+    },
+    {
+      "kap_id": 1652124,
+      "published_at": "2026-08-18T18:10:27+03:00",
+      "related_stocks": "VEYAS"
+    },
+    {
+      "kap_id": 1649391,
+      "published_at": "2026-08-13T18:10:51+03:00",
+      "related_stocks": "CITAS"
+    },
+    {
+      "kap_id": 1642280,
+      "published_at": "2026-08-03T18:10:48+03:00",
+      "related_stocks": "QUICK"
+    }
+  ],
+  "listing_like_bist_notices": [
+    {
+      "kap_id": 1642280,
+      "published_at": "2026-08-03T18:10:48+03:00",
+      "subject": "Payların İşlem Görmeye Başlaması",
+      "related_stocks": "QUICK",
+      "summary": "Payların İşlem Görmeye Başlaması",
+      "decision": "IN_SCOPE_IPO (08-07 öncesi ilk işlem hariç: QUICK H99'dadır)"
+    },
+    {
+      "kap_id": 1644127,
+      "published_at": "2026-08-06T11:12:47+03:00",
+      "subject": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "related_stocks": "GRYAT",
+      "summary": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "decision": "OUT_OF_SCOPE: varant/sertifika"
+    },
+    {
+      "kap_id": 1645133,
+      "published_at": "2026-08-07T14:42:37+03:00",
+      "subject": "Birincil Piyasa Duyurusu - Kalan Paylar",
+      "related_stocks": "SEKFK",
+      "summary": "Birincil Piyasa Duyurusu",
+      "decision": "OUT_OF_SCOPE: bedelli sermaye artırımı kalan payları (var olan pay)"
+    },
+    {
+      "kap_id": 1648967,
+      "published_at": "2026-08-13T10:38:34+03:00",
+      "subject": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "related_stocks": "BNPPI",
+      "summary": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "decision": "OUT_OF_SCOPE: varant/sertifika"
+    },
+    {
+      "kap_id": 1649391,
+      "published_at": "2026-08-13T18:10:51+03:00",
+      "subject": "Payların İşlem Görmeye Başlaması",
+      "related_stocks": "CITAS",
+      "summary": "Payların İşlem Görmeye Başlaması",
+      "decision": "IN_SCOPE_IPO (08-07 öncesi ilk işlem hariç: QUICK H99'dadır)"
+    },
+    {
+      "kap_id": 1651948,
+      "published_at": "2026-08-18T13:20:20+03:00",
+      "subject": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "related_stocks": "AKMEN",
+      "summary": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "decision": "OUT_OF_SCOPE: varant/sertifika"
+    },
+    {
+      "kap_id": 1652041,
+      "published_at": "2026-08-18T16:43:03+03:00",
+      "subject": "Birincil Piyasa Duyurusu - Kalan Paylar",
+      "related_stocks": "KRTEK",
+      "summary": "Birincil Piyasa Duyurusu - Kalan Paylar",
+      "decision": "OUT_OF_SCOPE: bedelli sermaye artırımı kalan payları (var olan pay)"
+    },
+    {
+      "kap_id": 1652124,
+      "published_at": "2026-08-18T18:10:27+03:00",
+      "subject": "Payların İşlem Görmeye Başlaması",
+      "related_stocks": "VEYAS",
+      "summary": "Payların İşlem Görmeye Başlaması",
+      "decision": "IN_SCOPE_IPO (08-07 öncesi ilk işlem hariç: QUICK H99'dadır)"
+    },
+    {
+      "kap_id": 1652127,
+      "published_at": "2026-08-18T18:10:48+03:00",
+      "subject": "Payların İşlem Görmeye Başlaması",
+      "related_stocks": "TKNKA",
+      "summary": "Payların İşlem Görmeye Başlaması",
+      "decision": "IN_SCOPE_IPO (08-07 öncesi ilk işlem hariç: QUICK H99'dadır)"
+    },
+    {
+      "kap_id": 1652131,
+      "published_at": "2026-08-18T18:11:04+03:00",
+      "subject": "Payların İşlem Görmeye Başlaması",
+      "related_stocks": "KPEKS",
+      "summary": "Payların İşlem Görmeye Başlaması",
+      "decision": "IN_SCOPE_IPO (08-07 öncesi ilk işlem hariç: QUICK H99'dadır)"
+    },
+    {
+      "kap_id": 1652496,
+      "published_at": "2026-08-19T11:41:48+03:00",
+      "subject": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "related_stocks": "GSIPD",
+      "summary": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "decision": "OUT_OF_SCOPE: varant/sertifika"
+    },
+    {
+      "kap_id": 1653572,
+      "published_at": "2026-08-20T17:52:12+03:00",
+      "subject": "Birincil Piyasa Duyurusu - Kalan Paylar",
+      "related_stocks": "CVKMD",
+      "summary": "Birincil Piyasa Duyurusu - Kalan Paylar",
+      "decision": "OUT_OF_SCOPE: bedelli sermaye artırımı kalan payları (var olan pay)"
+    },
+    {
+      "kap_id": 1654174,
+      "published_at": "2026-08-21T18:10:18+03:00",
+      "subject": "Payların Borsa Birincil Piyasada Halka Arzı",
+      "related_stocks": "INTET",
+      "summary": "Payların Borsa Birincil Piyasada Halka Arzı",
+      "decision": "AYNI_ARZ (INTET; ilk işlem bildirimi 1655890 ile satır)"
+    },
+    {
+      "kap_id": 1654788,
+      "published_at": "2026-08-25T14:22:35+03:00",
+      "subject": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "related_stocks": "ISMEN",
+      "summary": "-",
+      "decision": "OUT_OF_SCOPE: varant/sertifika"
+    },
+    {
+      "kap_id": 1655287,
+      "published_at": "2026-08-27T11:19:07+03:00",
+      "subject": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "related_stocks": "INFO",
+      "summary": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "decision": "OUT_OF_SCOPE: varant/sertifika"
+    },
+    {
+      "kap_id": 1655890,
+      "published_at": "2026-08-28T18:10:50+03:00",
+      "subject": "Payların İşlem Görmeye Başlaması",
+      "related_stocks": "INTET",
+      "summary": "Payların İşlem Görmeye Başlaması",
+      "decision": "IN_SCOPE_IPO (08-07 öncesi ilk işlem hariç: QUICK H99'dadır)"
+    },
+    {
+      "kap_id": 1655891,
+      "published_at": "2026-08-28T18:11:04+03:00",
+      "subject": "Payların İşlem Görmeye Başlaması",
+      "related_stocks": "BKRGY",
+      "summary": "Payların İşlem Görmeye Başlaması",
+      "decision": "IN_SCOPE_IPO (08-07 öncesi ilk işlem hariç: QUICK H99'dadır)"
+    },
+    {
+      "kap_id": 1656124,
+      "published_at": "2026-08-31T12:04:08+03:00",
+      "subject": "Kod Değişikliği",
+      "related_stocks": "MARKA",
+      "summary": "İşlem Kodu Değişen Pay",
+      "decision": "OUT_OF_SCOPE: işlem kodu değişikliği (var olan pay)"
+    },
+    {
+      "kap_id": 1659130,
+      "published_at": "2026-09-04T18:10:52+03:00",
+      "subject": "Borsa Yatırım Fonlarının İşlem Görmeye Başlaması",
+      "related_stocks": "ISP, ISX30",
+      "summary": "Borsa Yatırım Fonu Katılma Paylarının İşlem Görmeye Başlaması",
+      "decision": "OUT_OF_SCOPE: fon (BYF katılma payı)"
+    },
+    {
+      "kap_id": 1660522,
+      "published_at": "2026-09-08T21:47:02+03:00",
+      "subject": "Pazar Değişikliği",
+      "related_stocks": "ALVES",
+      "summary": "Payların Yakın İzleme Pazarına Alınması",
+      "decision": "OUT_OF_SCOPE: pazar değişimi (var olan pay)"
+    },
+    {
+      "kap_id": 1662048,
+      "published_at": "2026-09-11T18:11:22+03:00",
+      "subject": "Borsa Yatırım Fonlarının İşlem Görmeye Başlaması",
+      "related_stocks": "ISMDL, ISP",
+      "summary": "Borsa Yatırım Fonu Katılma Paylarının İşlem Görmeye Başlaması",
+      "decision": "OUT_OF_SCOPE: fon (BYF katılma payı)"
+    },
+    {
+      "kap_id": 1662050,
+      "published_at": "2026-09-11T18:11:42+03:00",
+      "subject": "Borsa Yatırım Fonlarının İşlem Görmeye Başlaması",
+      "related_stocks": "ZPMDK, ZPMDL",
+      "summary": "Borsa Yatırım Fonu Katılma Paylarının İşlem Görmeye Başlaması",
+      "decision": "OUT_OF_SCOPE: fon (BYF katılma payı)"
+    },
+    {
+      "kap_id": 1662855,
+      "published_at": "2026-09-15T13:42:47+03:00",
+      "subject": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "related_stocks": "AKMEN",
+      "summary": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "decision": "OUT_OF_SCOPE: varant/sertifika"
+    },
+    {
+      "kap_id": 1662856,
+      "published_at": "2026-09-15T13:43:00+03:00",
+      "subject": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "related_stocks": "BNPPI",
+      "summary": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "decision": "OUT_OF_SCOPE: varant/sertifika"
+    },
+    {
+      "kap_id": 1663155,
+      "published_at": "2026-09-15T18:10:17+03:00",
+      "subject": "Payların İşlem Görmeye Başlaması",
+      "related_stocks": "NETGL",
+      "summary": "Payların İşlem Görmeye Başlaması",
+      "decision": "IN_SCOPE_IPO (08-07 öncesi ilk işlem hariç: QUICK H99'dadır)"
+    },
+    {
+      "kap_id": 1664625,
+      "published_at": "2026-09-17T14:25:38+03:00",
+      "subject": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "related_stocks": "GRYAT",
+      "summary": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "decision": "OUT_OF_SCOPE: varant/sertifika"
+    },
+    {
+      "kap_id": 1665181,
+      "published_at": "2026-09-18T11:49:13+03:00",
+      "subject": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "related_stocks": "GSIPD",
+      "summary": "Varantların veya Sertifikaların İşlem Görmeye Başlaması",
+      "decision": "OUT_OF_SCOPE: varant/sertifika"
+    }
+  ],
+  "not_rows": "Borçlanma aracı / kira sertifikası işlem başlama bildirimleri (pay değil, Pay Piyasası dışı) satır almadı; sayısı bist_subject_counts içinde.",
+  "spk_bulletins_checked": [
+    "2026/44",
+    "2026/45",
+    "2026/46",
+    "2026/47",
+    "2026/48",
+    "2026/49",
+    "2026/50",
+    "2026/51",
+    "2026/52",
+    "2026/53",
+    "2026/54",
+    "2026/55",
+    "2026/56",
+    "2026/57",
+    "2026/58",
+    "2026/59",
+    "2026/60",
+    "2026/61"
+  ],
+  "spk_ilk_halka_arz_onaylari": {
+    "2026/45": [
+      "Albayrak Hazır Beton (ALBTN, H99)",
+      "Masfen Enerji (MASFN, H99)",
+      "Metgün Enerji (METEN, H99)",
+      "Kardemir Çelik (KARCL, H99)"
+    ],
+    "2026/47": [
+      "Quick Sigorta (QUICK, H99, ilk işlem 2026-08-06)",
+      "Bewen Enerji (BEWEN): talep toplama sırasında ertelendi, işlem görmedi"
+    ],
+    "2026/49": [
+      "Çitlekçi (CITAS)",
+      "Teknika Plast (TKNKA)",
+      "Türker Vangölü (VEYAS)",
+      "Kapeks (KPEKS)"
+    ],
+    "2026/52": [
+      "İntetra (INTET)",
+      "Bakırcı GYO (BKRGY)"
+    ],
+    "2026/56": [
+      "Net Global (NETGL)"
+    ],
+    "diğer bültenler (44, 46, 48, 50, 51, 53, 54, 55, 57–61)": "İlk Halka Arzlar bölümü yok"
+  },
+  "result": "2026-08-07…2026-09-22 aralığında halka arzla ilk kez işlem görmeye başlayan pay: CITAS, VEYAS, TKNKA, KPEKS, INTET, BKRGY, NETGL (bilinen 7). Başka arz yok. SPK onaylı ama ertelenen Bewen Enerji işlem görmedi.",
+  "postponed_ipos": [
+    {
+      "ticker": "BEWEN",
+      "company": "Bewen Enerji A.Ş.",
+      "spk_approval": "SPK Bülteni 2026/47 (2026-07-23)",
+      "notice": "KAP 1641554",
+      "published_at": "2026-07-31T18:39:25+03:00",
+      "file": "KAP_1641554_bildirim.pdf",
+      "sha256": "3f67be8e41f74d540401648cbcb042a70a71edcec4837eecba1e8d009ad47bac",
+      "text": "29-30-31 Temmuz 2026 talep toplama döneminde piyasa koşulları nedeniyle halka arzın ileri bir tarihe ertelenmesine karar verilmiştir",
+      "decision": "OUT_OF_SCOPE satırı (işlem görmedi); ileride işlem görürse yeni satır alır"
+    }
+  ]
+}

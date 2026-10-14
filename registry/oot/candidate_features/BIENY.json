@@ -1,0 +1,237 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "BIENY",
+  "company": "Bien Yapı Ürünleri Sanayi Turizm ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "1446140",
+      "source_id": "KAP_1151614_EK1",
+      "source_document": "KAP 1151614 ek 1",
+      "source_published_at": "2023-05-16T10:45:23+03:00",
+      "source_sha256": "d4dd16e2b2b9622d852a76b8d646db9f0fad83991f46168aec38bd00c260ef86",
+      "source_path": "registry/oot/source_docs/BIENY/KAP_1151614_ek1.pdf",
+      "quote": "TOPLAM 72.326.119 100% 1.469.512 72.844.630 100% 1.446.140 72.326.119 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep yatırımcı sayısı 1.469.512; dağıtım yatırımcı sayısı 1.446.140",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "1445610",
+        "domestic_institutional": "68",
+        "foreign_institutional": "1",
+        "employees": "461"
+      },
+      "source_id": "KAP_1151614_EK1",
+      "source_document": "KAP 1151614 ek 1",
+      "source_published_at": "2023-05-16T10:45:23+03:00",
+      "source_sha256": "d4dd16e2b2b9622d852a76b8d646db9f0fad83991f46168aec38bd00c260ef86",
+      "source_path": "registry/oot/source_docs/BIENY/KAP_1151614_ek1.pdf",
+      "quote": [
+        "Bireysel 39.779.365 55,0% 1.468.969 53.247.273 73,1% 1.445.610 52.731.008 72,9%",
+        "Kurumsal 25.314.142 35,0% 68 18.711.553 25,7% 68 18.711.553 25,9%",
+        "Kurumsal 3.616.306 5,0% 1 115.000 0,2% 1 115.000 0,2%",
+        "3.616.306 5,0% 474 770.804 1,1% 461 768.558 1,1%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "employees = Şirket Çalışanları; talep eden: bireysel 1.468.969, yurt içi kurumsal 68, yurt dışı kurumsal 1, çalışanlar 474",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "1.3385651832",
+      "source_id": "KAP_1151614_EK1",
+      "source_document": "KAP 1151614 ek 1",
+      "source_published_at": "2023-05-16T10:45:23+03:00",
+      "source_sha256": "d4dd16e2b2b9622d852a76b8d646db9f0fad83991f46168aec38bd00c260ef86",
+      "source_path": "registry/oot/source_docs/BIENY/KAP_1151614_ek1.pdf",
+      "quote": "Bireysel 39.779.365 55,0% 1.468.969 53.247.273 73,1% 1.445.610 52.731.008 72,9%",
+      "derived": true,
+      "formula": "yurt içi bireysel talep 53.247.273 / planlanan bireysel tahsisat 39.779.365 (aynı satır, TL nominal)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "0.7391738973",
+      "source_id": "KAP_1151614_EK1",
+      "source_document": "KAP 1151614 ek 1",
+      "source_published_at": "2023-05-16T10:45:23+03:00",
+      "source_sha256": "d4dd16e2b2b9622d852a76b8d646db9f0fad83991f46168aec38bd00c260ef86",
+      "source_path": "registry/oot/source_docs/BIENY/KAP_1151614_ek1.pdf",
+      "quote": "Kurumsal 25.314.142 35,0% 68 18.711.553 25,7% 68 18.711.553 25,9%",
+      "derived": true,
+      "formula": "yurt içi kurumsal talep 18.711.553 / planlanan tahsisat 25.314.142",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "0.0318004063",
+      "source_id": "KAP_1151614_EK1",
+      "source_document": "KAP 1151614 ek 1",
+      "source_published_at": "2023-05-16T10:45:23+03:00",
+      "source_sha256": "d4dd16e2b2b9622d852a76b8d646db9f0fad83991f46168aec38bd00c260ef86",
+      "source_path": "registry/oot/source_docs/BIENY/KAP_1151614_ek1.pdf",
+      "quote": "Kurumsal 3.616.306 5,0% 1 115.000 0,2% 1 115.000 0,2%",
+      "derived": true,
+      "formula": "yurt dışı kurumsal talep 115.000 / planlanan tahsisat 3.616.306",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "52731008",
+        "domestic_institutional": "18711553",
+        "foreign_institutional": "115000",
+        "employees": "768558"
+      },
+      "source_id": "KAP_1151614_EK1",
+      "source_document": "KAP 1151614 ek 1",
+      "source_published_at": "2023-05-16T10:45:23+03:00",
+      "source_sha256": "d4dd16e2b2b9622d852a76b8d646db9f0fad83991f46168aec38bd00c260ef86",
+      "source_path": "registry/oot/source_docs/BIENY/KAP_1151614_ek1.pdf",
+      "quote": [
+        "Bireysel 39.779.365 55,0% 1.468.969 53.247.273 73,1% 1.445.610 52.731.008 72,9%",
+        "Kurumsal 25.314.142 35,0% 68 18.711.553 25,7% 68 18.711.553 25,9%",
+        "Kurumsal 3.616.306 5,0% 1 115.000 0,2% 1 115.000 0,2%",
+        "3.616.306 5,0% 474 770.804 1,1% 461 768.558 1,1%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "72.9",
+      "source_id": "KAP_1151614_EK1",
+      "source_document": "KAP 1151614 ek 1",
+      "source_published_at": "2023-05-16T10:45:23+03:00",
+      "source_sha256": "d4dd16e2b2b9622d852a76b8d646db9f0fad83991f46168aec38bd00c260ef86",
+      "source_path": "registry/oot/source_docs/BIENY/KAP_1151614_ek1.pdf",
+      "quote": "Bireysel 39.779.365 55,0% 1.468.969 53.247.273 73,1% 1.445.610 52.731.008 72,9%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %55,0; kurumsal talep eksikliği bireysele kaydırılmış",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "25.9",
+      "source_id": "KAP_1151614_EK1",
+      "source_document": "KAP 1151614 ek 1",
+      "source_published_at": "2023-05-16T10:45:23+03:00",
+      "source_sha256": "d4dd16e2b2b9622d852a76b8d646db9f0fad83991f46168aec38bd00c260ef86",
+      "source_path": "registry/oot/source_docs/BIENY/KAP_1151614_ek1.pdf",
+      "quote": "Kurumsal 25.314.142 35,0% 68 18.711.553 25,7% 68 18.711.553 25,9%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %35,0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.2",
+      "source_id": "KAP_1151614_EK1",
+      "source_document": "KAP 1151614 ek 1",
+      "source_published_at": "2023-05-16T10:45:23+03:00",
+      "source_sha256": "d4dd16e2b2b9622d852a76b8d646db9f0fad83991f46168aec38bd00c260ef86",
+      "source_path": "registry/oot/source_docs/BIENY/KAP_1151614_ek1.pdf",
+      "quote": "Kurumsal 3.616.306 5,0% 1 115.000 0,2% 1 115.000 0,2%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %5,0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç ekleri ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Ak Yatırım Menkul Değerler Anonim Şirketi; Garanti Yatırım Menkul Kıymetler Anonim Şirketi; Yapı Kredi Yatırım Menkul Değerler Anonim Şirketi",
+      "source_id": "KAP_1148359_EK1",
+      "source_document": "KAP 1148359 ek 1",
+      "source_published_at": "2023-05-08T21:03:16+03:00",
+      "source_sha256": "b473b0bfb5007852b55bc7dfcc19f0a50da59a01e54ba5393f579374d1723ae8",
+      "source_path": "registry/oot/source_docs/BIENY/KAP_1148359_ek1.pdf",
+      "quote": [
+        "Halka Arza Aracılık Eden Yetkili Kuruluş Ak Yatırım Menkul Değerler Anonim Şirketi",
+        "Halka Arza Aracılık Eden Yetkili Kuruluş Sorumlu Olduğu Kısım: Garanti Yatırım Menkul Kıymetler Anonim Şirketi",
+        "Halka Arza Aracılık Eden Yetkili Kuruluş Sorumlu Olduğu Kısım: Yapı Kredi Yatırım Menkul Değerler Anonim Şirketi"
+      ],
+      "note": "TSSD üç yetkili kuruluşu sayıyor; konsorsiyum lideri belirtilmiyor. Sonuç bildirimini Garanti Yatırım, TSSD bildirimini Ak Yatırım yayımlamış.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1151760",
+      "source_document": "KAP 1151760",
+      "source_published_at": "2023-05-16T18:12:21+03:00",
+      "source_sha256": "b1966ca0cf3f82dae9778faea7f8ed6bfbc0033555a6e5c7fda0099f81704906",
+      "source_path": "registry/oot/source_docs/BIENY/KAP_1151760_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1151760",
+      "source_document": "KAP 1151760",
+      "source_published_at": "2023-05-16T18:12:21+03:00",
+      "source_sha256": "b1966ca0cf3f82dae9778faea7f8ed6bfbc0033555a6e5c7fda0099f81704906",
+      "source_path": "registry/oot/source_docs/BIENY/KAP_1151760_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1151760": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1151760",
+      "published_at": "2023-05-16T18:12:21+03:00",
+      "sha256": "b1966ca0cf3f82dae9778faea7f8ed6bfbc0033555a6e5c7fda0099f81704906",
+      "path": "registry/oot/source_docs/BIENY/KAP_1151760_bildirim.pdf"
+    },
+    "KAP_1151614_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1151614 ek 1",
+      "published_at": "2023-05-16T10:45:23+03:00",
+      "sha256": "d4dd16e2b2b9622d852a76b8d646db9f0fad83991f46168aec38bd00c260ef86",
+      "path": "registry/oot/source_docs/BIENY/KAP_1151614_ek1.pdf"
+    },
+    "KAP_1148359_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1148359 ek 1",
+      "published_at": "2023-05-08T21:03:16+03:00",
+      "sha256": "b473b0bfb5007852b55bc7dfcc19f0a50da59a01e54ba5393f579374d1723ae8",
+      "path": "registry/oot/source_docs/BIENY/KAP_1148359_ek1.pdf"
+    }
+  }
+}

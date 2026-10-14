@@ -1,0 +1,427 @@
+{
+  "source": "EMBEDDED",
+  "unsupported_version": null,
+  "generated_at_utc": "2026-09-22T21:57:19Z",
+  "as_of_session": "2026-09-21",
+  "sha12": "FIXTURE",
+  "index_mismatch": false,
+  "models": {
+    "v1_5_h99": {
+      "card": {
+        "n_runs_same_data": 2,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "bf809859",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": {
+        "horizon_or_k": "D5",
+        "metric": "MAE",
+        "output": "return",
+        "rule_ids": [
+          "base_train_median"
+        ]
+      },
+      "mae": {
+        "D1": {
+          "model_value": 0.02970448869658594,
+          "n": 89
+        },
+        "D3": {
+          "model_value": 0.12007453605906018,
+          "n": 88
+        },
+        "D5": {
+          "model_value": 0.22203575470086492,
+          "n": 87
+        },
+        "D10": {
+          "model_value": 0.4477362239966257,
+          "n": 87
+        }
+      },
+      "live_n_scored": 6,
+      "live_primary_verdict": null
+    },
+    "base_always_ceiling": {
+      "card": {
+        "n_runs_same_data": 8,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "0b270574",
+        "training_cutoff": null,
+        "training_n": 0
+      },
+      "primary_cell": null,
+      "mae": {},
+      "live_n_scored": 7,
+      "live_primary_verdict": null
+    },
+    "base_train_median": {
+      "card": {
+        "n_runs_same_data": 4,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "56bb6c78",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": null,
+      "mae": {},
+      "live_n_scored": 7,
+      "live_primary_verdict": null
+    },
+    "base_train_mean": {
+      "card": {
+        "n_runs_same_data": 4,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "8315d19e",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": null,
+      "mae": {},
+      "live_n_scored": 7,
+      "live_primary_verdict": null
+    },
+    "base_zero": {
+      "card": {
+        "n_runs_same_data": 4,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "9d2f8f82",
+        "training_cutoff": null,
+        "training_n": 0
+      },
+      "primary_cell": null,
+      "mae": {},
+      "live_n_scored": 7,
+      "live_primary_verdict": null
+    },
+    "base_rate": {
+      "card": {
+        "n_runs_same_data": 4,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "eb91ae3d",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": null,
+      "mae": {},
+      "live_n_scored": 7,
+      "live_primary_verdict": null
+    },
+    "base_last10_rate": {
+      "card": {
+        "n_runs_same_data": 4,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "8b0a098d",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": null,
+      "mae": {},
+      "live_n_scored": 7,
+      "live_primary_verdict": null
+    },
+    "v1_6_h99": {
+      "card": {
+        "n_runs_same_data": 2,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "b40b7cb5",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": {
+        "horizon_or_k": "D10",
+        "metric": "MAE",
+        "output": "return",
+        "rule_ids": [
+          "v1_5_h99"
+        ]
+      },
+      "mae": {
+        "D1": {
+          "model_value": 0.029662636242439828,
+          "n": 89
+        },
+        "D3": {
+          "model_value": 0.12007453605906018,
+          "n": 88
+        },
+        "D5": {
+          "model_value": 0.2221831510876879,
+          "n": 87
+        },
+        "D10": {
+          "model_value": 0.44854966294551857,
+          "n": 87
+        }
+      },
+      "live_n_scored": 6,
+      "live_primary_verdict": null
+    },
+    "v1_5_market20_v0": {
+      "card": {
+        "n_runs_same_data": 2,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "9d6df5ec",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": {
+        "horizon_or_k": "D5",
+        "metric": "MAE",
+        "output": "return",
+        "rule_ids": [
+          "v1_5_h99"
+        ]
+      },
+      "mae": {
+        "D1": {
+          "model_value": 0.029613267265742472,
+          "n": 89
+        },
+        "D3": {
+          "model_value": 0.12003490711075283,
+          "n": 88
+        },
+        "D5": {
+          "model_value": 0.2212016652953216,
+          "n": 87
+        },
+        "D10": {
+          "model_value": 0.4468037989703549,
+          "n": 87
+        }
+      },
+      "live_n_scored": 6,
+      "live_primary_verdict": null
+    },
+    "pb_v0": {
+      "card": {
+        "n_runs_same_data": 2,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "97c3b287",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": {
+        "horizon_or_k": "D5",
+        "metric": "MAE",
+        "output": "return",
+        "rule_ids": [
+          "base_train_median"
+        ]
+      },
+      "mae": {
+        "D1": {
+          "model_value": 0.033958924650072476,
+          "n": 87
+        },
+        "D3": {
+          "model_value": 0.14439607597398255,
+          "n": 87
+        },
+        "D5": {
+          "model_value": 0.2750512885440116,
+          "n": 87
+        },
+        "D10": {
+          "model_value": 0.5177888451922764,
+          "n": 84
+        }
+      },
+      "live_n_scored": 7,
+      "live_primary_verdict": null
+    },
+    "ceiling_hazard_v0": {
+      "card": {
+        "n_runs_same_data": 2,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "caa4dc86",
+        "training_cutoff": "2026-08-19",
+        "training_n": 97
+      },
+      "primary_cell": {
+        "horizon_or_k": null,
+        "metric": "RPS",
+        "output": "S",
+        "rule_ids": [
+          "base_km_last10",
+          "base_km_expanding"
+        ]
+      },
+      "mae": {},
+      "live_n_scored": 6,
+      "live_primary_verdict": null
+    },
+    "ceiling_hazard_v0@INF": {
+      "card": {
+        "n_runs_same_data": 2,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "c5ac8085",
+        "training_cutoff": "2026-08-19",
+        "training_n": 97
+      },
+      "primary_cell": null,
+      "mae": {},
+      "live_n_scored": 7,
+      "live_primary_verdict": null
+    },
+    "pb_ceiling_v0": {
+      "card": {
+        "n_runs_same_data": 2,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "7fb7a41e",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": {
+        "horizon_or_k": null,
+        "metric": "RPS",
+        "output": "S",
+        "rule_ids": [
+          "base_km_last10",
+          "base_km_expanding"
+        ]
+      },
+      "mae": {},
+      "live_n_scored": 7,
+      "live_primary_verdict": null
+    },
+    "pb_ceiling_v0@INF": {
+      "card": {
+        "n_runs_same_data": 2,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "6a5be1b9",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": null,
+      "mae": {},
+      "live_n_scored": 7,
+      "live_primary_verdict": null
+    },
+    "base_km_expanding": {
+      "card": {
+        "n_runs_same_data": 4,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "8120c274",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": null,
+      "mae": {},
+      "live_n_scored": 7,
+      "live_primary_verdict": null
+    },
+    "base_km_last10": {
+      "card": {
+        "n_runs_same_data": 4,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "4bd27e6a",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": null,
+      "mae": {},
+      "live_n_scored": 7,
+      "live_primary_verdict": null
+    },
+    "ceiling_path_v0": {
+      "card": {
+        "n_runs_same_data": 2,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "3e97e878",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": {
+        "horizon_or_k": "D5",
+        "metric": "MAE",
+        "output": "return",
+        "rule_ids": [
+          "base_train_median"
+        ]
+      },
+      "mae": {
+        "D1": {
+          "model_value": 0.022522547564150085,
+          "n": 87
+        },
+        "D3": {
+          "model_value": 0.10905395827933563,
+          "n": 86
+        },
+        "D5": {
+          "model_value": 0.1841963954639765,
+          "n": 85
+        },
+        "D10": {
+          "model_value": 0.3921286444173787,
+          "n": 85
+        }
+      },
+      "live_n_scored": 0,
+      "live_primary_verdict": null
+    },
+    "ceiling_path_v0@INF": {
+      "card": {
+        "n_runs_same_data": 2,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "5e3692a8",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": null,
+      "mae": {
+        "D1": {
+          "model_value": 0.022161582027335692,
+          "n": 87
+        },
+        "D3": {
+          "model_value": 0.12811614565066476,
+          "n": 86
+        },
+        "D5": {
+          "model_value": 0.2898994607221003,
+          "n": 85
+        },
+        "D10": {
+          "model_value": 0.5301659369732187,
+          "n": 85
+        }
+      },
+      "live_n_scored": 0,
+      "live_primary_verdict": null
+    },
+    "pb_ceiling_path_v0": {
+      "card": {
+        "n_runs_same_data": 2,
+        "n_variants_same_data": 19,
+        "params_sha256_8": "3d1e2f41",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "primary_cell": null,
+      "mae": {
+        "D1": {
+          "model_value": 0.02550374353915477,
+          "n": 87
+        },
+        "D3": {
+          "model_value": 0.12752671354157552,
+          "n": 87
+        },
+        "D5": {
+          "model_value": 0.2626912345052434,
+          "n": 87
+        },
+        "D10": {
+          "model_value": 0.47751527274116146,
+          "n": 84
+        }
+      },
+      "live_n_scored": 0,
+      "live_primary_verdict": null
+    }
+  }
+}

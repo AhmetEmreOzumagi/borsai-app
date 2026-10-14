@@ -1,0 +1,333 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "ZRGYO",
+  "company": "Ziraat Gayrimenkul Yatırım Ortaklığı A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_934472",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "1.6",
+      "source_id": "KAP_934472",
+      "source_document": "KAP 934472",
+      "source_published_at": "2021-05-04T18:02:13+03:00",
+      "source_sha256": "3444d3ab0a5ef0e65de6e0d6473421152ecdbed2cb6144a36f0e1f13d86fb2cf",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_934472_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 1,6",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_21",
+          "quote": "Ziraat Gayrimenkul 1,60 3.520.215.000 4.693.620.000 1.173.405.000 - - - Yatırım Ortaklığı A.Ş. (1)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "1173405000",
+      "source_id": "KAP_934472",
+      "source_document": "KAP 934472",
+      "source_published_at": "2021-05-04T18:02:13+03:00",
+      "source_sha256": "3444d3ab0a5ef0e65de6e0d6473421152ecdbed2cb6144a36f0e1f13d86fb2cf",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_934472_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 1.173.405.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "4693620000",
+      "source_id": "KAP_934472",
+      "source_document": "KAP 934472",
+      "source_published_at": "2021-05-04T18:02:13+03:00",
+      "source_sha256": "3444d3ab0a5ef0e65de6e0d6473421152ecdbed2cb6144a36f0e1f13d86fb2cf",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_934472_bildirim.pdf",
+      "quote": "sermayesini temsil eden 4.693.620.000 TL",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "capital_increase_shares": {
+      "value": "1173405000",
+      "source_id": "KAP_933977_EK2",
+      "source_document": "KAP 933977 ek 2",
+      "source_published_at": "2021-05-03T08:20:08+03:00",
+      "source_sha256": "734f6d4b52c933d005915bb0b120d5df1f81af0880d0b23ff2e41d78ed88eddb",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_933977_ek2.pdf",
+      "quote": "sermayesinin 3.520.215.000,-TL’den 4.693.620.000,-TL’ye çıkarılması nedeniyle ihraç edilen 1.173.405.000,-TL nominal değerli toplam 1.173.405.000 adet pay",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "existing_share_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_21",
+      "source_document": "SPK Bülteni 2021/21",
+      "source_published_at": "2021-04-22T23:59:59+03:00",
+      "source_sha256": "c144e436da42b681d7145cb0dd46203ff4956dcfbe6a294e1f35d17336f27a57",
+      "source_path": "registry/oot/source_docs/ZRGYO/SPK_BULTEN_2021-21.pdf",
+      "quote": "Ziraat Gayrimenkul 1,60 3.520.215.000 4.693.620.000 1.173.405.000 - - - Yatırım Ortaklığı A.Ş. (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_933977_EK2",
+          "quote": "ihraç edilen 1.173.405.000,-TL nominal değerli toplam 1.173.405.000 adet pay 1,60 TL’den satılmıştır"
+        },
+        "b_shares_offered_equals_planned_base": "1173405000 = 1173405000 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "total_demand_multiple": {
+      "value": "2.6633554033",
+      "source_id": "KAP_933977_EK2",
+      "source_document": "KAP 933977 ek 2",
+      "source_published_at": "2021-05-03T08:20:08+03:00",
+      "source_sha256": "734f6d4b52c933d005915bb0b120d5df1f81af0880d0b23ff2e41d78ed88eddb",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_933977_ek2.pdf",
+      "origin": "CALCULATED_FROM_SOURCE_TOTALS",
+      "numerator": "3125194547",
+      "numerator_quote": "Halka arzda, toplam 277.511 başvuru sayısı ile 3.125.194.547 adet pay talep edilmiş olup",
+      "denominator": "1173405000",
+      "denominator_quote": "ihraç edilen 1.173.405.000,-TL nominal değerli toplam 1.173.405.000 adet pay 1,60 TL’den satılmıştır",
+      "definition": "TOPLAM_TALEP_PAY_ADEDI_3125194547 / SATILAN_TOPLAM_PAY_ADEDI_1173405000 (aynı birim pay adedi; ek satış yok; belge toplam katı yazmıyor)",
+      "denominator_includes_additional_sale": false,
+      "derived": true,
+      "formula": "3125194547 / 1173405000 (10 ondalık ROUND_HALF_UP)",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "2,66",
+      "correction_kind": "PRECISION_ONLY"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_933977_EK2",
+      "source_document": "KAP 933977 ek 2",
+      "source_published_at": "2021-05-03T08:20:08+03:00",
+      "source_sha256": "734f6d4b52c933d005915bb0b120d5df1f81af0880d0b23ff2e41d78ed88eddb",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_933977_ek2.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_933977_EK2",
+      "source_document": "KAP 933977 ek 2",
+      "source_published_at": "2021-05-03T08:20:08+03:00",
+      "source_sha256": "734f6d4b52c933d005915bb0b120d5df1f81af0880d0b23ff2e41d78ed88eddb",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_933977_ek2.pdf",
+      "quote": "ihraç edilen 1.173.405.000,-TL nominal değerli toplam 1.173.405.000 adet pay 1,60 TL’den satılmıştır",
+      "zero_from_statement": true,
+      "note": "satılan toplam 1.173.405.000 = SPK planlanan taban (bedelli 1.173.405.000; mevcut pay satışı '-'); SPK satırında ek pay satışı '-'",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": "1877448000",
+      "source_id": "KAP_933977_EK2",
+      "source_document": "KAP 933977 ek 2",
+      "source_published_at": "2021-05-03T08:20:08+03:00",
+      "source_sha256": "734f6d4b52c933d005915bb0b120d5df1f81af0880d0b23ff2e41d78ed88eddb",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_933977_ek2.pdf",
+      "quote": "Buna göre halka arz büyüklüğü 1.877.448.000,-TL olarak gerçekleşmiştir.",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "1.60",
+      "source_id": "SPK_BULTEN_2021_21",
+      "source_document": "SPK Bülteni 2021/21",
+      "source_published_at": "2021-04-22T23:59:59+03:00",
+      "source_sha256": "c144e436da42b681d7145cb0dd46203ff4956dcfbe6a294e1f35d17336f27a57",
+      "source_path": "registry/oot/source_docs/ZRGYO/SPK_BULTEN_2021-21.pdf",
+      "quote": "Ziraat Gayrimenkul 1,60 3.520.215.000 4.693.620.000 1.173.405.000 - - - Yatırım Ortaklığı A.Ş. (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-04-22",
+        "bookbuilding_start": "2021-04-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "3520215000",
+      "source_id": "SPK_BULTEN_2021_21",
+      "source_document": "SPK Bülteni 2021/21",
+      "source_published_at": "2021-04-22T23:59:59+03:00",
+      "source_sha256": "c144e436da42b681d7145cb0dd46203ff4956dcfbe6a294e1f35d17336f27a57",
+      "source_path": "registry/oot/source_docs/ZRGYO/SPK_BULTEN_2021-21.pdf",
+      "quote": "Ziraat Gayrimenkul 1,60 3.520.215.000 4.693.620.000 1.173.405.000 - - - Yatırım Ortaklığı A.Ş. (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-22",
+        "bookbuilding_start": "2021-04-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "4693620000",
+      "source_id": "SPK_BULTEN_2021_21",
+      "source_document": "SPK Bülteni 2021/21",
+      "source_published_at": "2021-04-22T23:59:59+03:00",
+      "source_sha256": "c144e436da42b681d7145cb0dd46203ff4956dcfbe6a294e1f35d17336f27a57",
+      "source_path": "registry/oot/source_docs/ZRGYO/SPK_BULTEN_2021-21.pdf",
+      "quote": "Ziraat Gayrimenkul 1,60 3.520.215.000 4.693.620.000 1.173.405.000 - - - Yatırım Ortaklığı A.Ş. (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-22",
+        "bookbuilding_start": "2021-04-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "1173405000",
+      "source_id": "SPK_BULTEN_2021_21",
+      "source_document": "SPK Bülteni 2021/21",
+      "source_published_at": "2021-04-22T23:59:59+03:00",
+      "source_sha256": "c144e436da42b681d7145cb0dd46203ff4956dcfbe6a294e1f35d17336f27a57",
+      "source_path": "registry/oot/source_docs/ZRGYO/SPK_BULTEN_2021-21.pdf",
+      "quote": "Ziraat Gayrimenkul 1,60 3.520.215.000 4.693.620.000 1.173.405.000 - - - Yatırım Ortaklığı A.Ş. (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-22",
+        "bookbuilding_start": "2021-04-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_21",
+      "source_document": "SPK Bülteni 2021/21",
+      "source_published_at": "2021-04-22T23:59:59+03:00",
+      "source_sha256": "c144e436da42b681d7145cb0dd46203ff4956dcfbe6a294e1f35d17336f27a57",
+      "source_path": "registry/oot/source_docs/ZRGYO/SPK_BULTEN_2021-21.pdf",
+      "quote": "Ziraat Gayrimenkul 1,60 3.520.215.000 4.693.620.000 1.173.405.000 - - - Yatırım Ortaklığı A.Ş. (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-22",
+        "bookbuilding_start": "2021-04-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "1173405000",
+      "source_id": "SPK_BULTEN_2021_21",
+      "source_document": "SPK Bülteni 2021/21",
+      "source_published_at": "2021-04-22T23:59:59+03:00",
+      "source_sha256": "c144e436da42b681d7145cb0dd46203ff4956dcfbe6a294e1f35d17336f27a57",
+      "source_path": "registry/oot/source_docs/ZRGYO/SPK_BULTEN_2021-21.pdf",
+      "quote": "Ziraat Gayrimenkul 1,60 3.520.215.000 4.693.620.000 1.173.405.000 - - - Yatırım Ortaklığı A.Ş. (1)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-22",
+        "bookbuilding_start": "2021-04-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_21",
+      "source_document": "SPK Bülteni 2021/21",
+      "source_published_at": "2021-04-22T23:59:59+03:00",
+      "source_sha256": "c144e436da42b681d7145cb0dd46203ff4956dcfbe6a294e1f35d17336f27a57",
+      "source_path": "registry/oot/source_docs/ZRGYO/SPK_BULTEN_2021-21.pdf",
+      "quote": "Ziraat Gayrimenkul 1,60 3.520.215.000 4.693.620.000 1.173.405.000 - - - Yatırım Ortaklığı A.Ş. (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-22",
+        "bookbuilding_start": "2021-04-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "1173405000",
+      "source_id": "SPK_BULTEN_2021_21",
+      "source_document": "SPK Bülteni 2021/21",
+      "source_published_at": "2021-04-22T23:59:59+03:00",
+      "source_sha256": "c144e436da42b681d7145cb0dd46203ff4956dcfbe6a294e1f35d17336f27a57",
+      "source_path": "registry/oot/source_docs/ZRGYO/SPK_BULTEN_2021-21.pdf",
+      "quote": "Ziraat Gayrimenkul 1,60 3.520.215.000 4.693.620.000 1.173.405.000 - - - Yatırım Ortaklığı A.Ş. (1)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-22",
+        "bookbuilding_start": "2021-04-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2021-05-06",
+      "source_id": "KAP_934472",
+      "source_document": "KAP 934472",
+      "source_published_at": "2021-05-04T18:02:13+03:00",
+      "source_sha256": "3444d3ab0a5ef0e65de6e0d6473421152ecdbed2cb6144a36f0e1f13d86fb2cf",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_934472_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 06/05/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-04-28",
+      "source_id": "KAP_934472",
+      "source_document": "KAP 934472",
+      "source_published_at": "2021-05-04T18:02:13+03:00",
+      "source_sha256": "3444d3ab0a5ef0e65de6e0d6473421152ecdbed2cb6144a36f0e1f13d86fb2cf",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_934472_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 28-29-30/04/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-04-30",
+      "source_id": "KAP_934472",
+      "source_document": "KAP 934472",
+      "source_published_at": "2021-05-04T18:02:13+03:00",
+      "source_sha256": "3444d3ab0a5ef0e65de6e0d6473421152ecdbed2cb6144a36f0e1f13d86fb2cf",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_934472_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 28-29-30/04/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_934472": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 934472",
+      "published_at": "2021-05-04T18:02:13+03:00",
+      "sha256": "3444d3ab0a5ef0e65de6e0d6473421152ecdbed2cb6144a36f0e1f13d86fb2cf",
+      "path": "registry/oot/source_docs/ZRGYO/KAP_934472_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_21": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/21",
+      "published_at": "2021-04-22T23:59:59+03:00",
+      "sha256": "c144e436da42b681d7145cb0dd46203ff4956dcfbe6a294e1f35d17336f27a57",
+      "path": "registry/oot/source_docs/ZRGYO/SPK_BULTEN_2021-21.pdf"
+    },
+    "KAP_933977_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 933977 ek 2",
+      "published_at": "2021-05-03T08:20:08+03:00",
+      "sha256": "734f6d4b52c933d005915bb0b120d5df1f81af0880d0b23ff2e41d78ed88eddb",
+      "path": "registry/oot/source_docs/ZRGYO/KAP_933977_ek2.pdf"
+    }
+  }
+}

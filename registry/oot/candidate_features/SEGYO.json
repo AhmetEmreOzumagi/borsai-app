@@ -1,0 +1,212 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "SEGYO",
+  "company": "Şeker Gayrimenkul Yatırım Ortaklığı A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "151717",
+      "source_id": "KAP_1034528_EK1",
+      "source_document": "KAP 1034528 ek 1",
+      "source_published_at": "2022-06-03T14:27:28+03:00",
+      "source_sha256": "e0c23d554f8b4bacfcd8759af6cf81a10e68ceaa205a566bd97fc5d6e12ddc75",
+      "source_path": "registry/oot/source_docs/SEGYO/KAP_1034528_ek1.pdf",
+      "quote": "toplam 151.717 yatırımcı 203.388.821 TL nominal değerli payın alımını gerçekleştirmiştir",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "filtre edilmemiş 154.284 emir; mükerrer tarama sonrası 151.717 emir",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "151458",
+        "domestic_institutional": "13",
+        "foreign_retail": "246",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_1034528_EK1",
+      "source_document": "KAP 1034528 ek 1",
+      "source_published_at": "2022-06-03T14:27:28+03:00",
+      "source_sha256": "e0c23d554f8b4bacfcd8759af6cf81a10e68ceaa205a566bd97fc5d6e12ddc75",
+      "source_path": "registry/oot/source_docs/SEGYO/KAP_1034528_ek1.pdf",
+      "quote": [
+        "toplam 151.458 yerli bireysel yatırımcı, 13 yerli kurumsal yatırımcı 246 yabancı bireysel yatırımcı olmak üzere toplam 151.717 yatırımcı",
+        "Kurumsal Yatırımcı (**) 0 0,0% 0"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "belge grup bazında talep/kat vermiyor; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belge grup bazında talep/kat vermiyor; grup tahsisatı yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belge grup bazında talep/kat vermiyor; grup tahsisatı yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "202986537",
+        "domestic_institutional": "76382",
+        "foreign_retail": "325902",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_1034528_EK1",
+      "source_document": "KAP 1034528 ek 1",
+      "source_published_at": "2022-06-03T14:27:28+03:00",
+      "source_sha256": "e0c23d554f8b4bacfcd8759af6cf81a10e68ceaa205a566bd97fc5d6e12ddc75",
+      "source_path": "registry/oot/source_docs/SEGYO/KAP_1034528_ek1.pdf",
+      "quote": [
+        "Bireysel Yatırımcı (*) 202.986.537 99,8% 151.458",
+        "Kurumsal Yatırımcı (**) 76.382 0,0% 13",
+        "Bireysel Yatırımcı (*) 325.902 0,2% 246",
+        "Kurumsal Yatırımcı (**) 0 0,0% 0"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.8",
+      "source_id": "KAP_1034528_EK1",
+      "source_document": "KAP 1034528 ek 1",
+      "source_published_at": "2022-06-03T14:27:28+03:00",
+      "source_sha256": "e0c23d554f8b4bacfcd8759af6cf81a10e68ceaa205a566bd97fc5d6e12ddc75",
+      "source_path": "registry/oot/source_docs/SEGYO/KAP_1034528_ek1.pdf",
+      "quote": "Bireysel Yatırımcı (*) 202.986.537 99,8% 151.458",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yurt içi bireysel; yurt dışı bireysel %0,2",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.0",
+      "source_id": "KAP_1034528_EK1",
+      "source_document": "KAP 1034528 ek 1",
+      "source_published_at": "2022-06-03T14:27:28+03:00",
+      "source_sha256": "e0c23d554f8b4bacfcd8759af6cf81a10e68ceaa205a566bd97fc5d6e12ddc75",
+      "source_path": "registry/oot/source_docs/SEGYO/KAP_1034528_ek1.pdf",
+      "quote": "Kurumsal Yatırımcı (**) 76.382 0,0% 13",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "belge bir ondalığa yuvarlıyor (76.382 / 203.388.821)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.0",
+      "source_id": "KAP_1034528_EK1",
+      "source_document": "KAP 1034528 ek 1",
+      "source_published_at": "2022-06-03T14:27:28+03:00",
+      "source_sha256": "e0c23d554f8b4bacfcd8759af6cf81a10e68ceaa205a566bd97fc5d6e12ddc75",
+      "source_path": "registry/oot/source_docs/SEGYO/KAP_1034528_ek1.pdf",
+      "quote": "Kurumsal Yatırımcı (**) 0 0,0% 0",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Şeker Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1033160_EK1",
+      "source_document": "KAP 1033160 ek 1",
+      "source_published_at": "2022-05-27T23:05:31+03:00",
+      "source_sha256": "62160c2ed34df8a84951f532d817886d63bd59e87621139f4ef1b19a27df9520",
+      "source_path": "registry/oot/source_docs/SEGYO/KAP_1033160_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Şeker Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "TSSD OCR metni; sonuç bildirimini yayımlayan kurum da ŞEKER YATIRIM MENKUL DEĞERLER A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde fiyat istikrarı yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_1034640",
+      "source_document": "KAP 1034640",
+      "source_published_at": "2022-06-03T18:16:08+03:00",
+      "source_sha256": "041be68c95f6c5a57853c668bacc72e9a08d422d8586f096e2f0f6da4c8cd861",
+      "source_path": "registry/oot/source_docs/SEGYO/KAP_1034640_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_1034640",
+      "source_document": "KAP 1034640",
+      "source_published_at": "2022-06-03T18:16:08+03:00",
+      "source_sha256": "041be68c95f6c5a57853c668bacc72e9a08d422d8586f096e2f0f6da4c8cd861",
+      "source_path": "registry/oot/source_docs/SEGYO/KAP_1034640_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1034640": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1034640",
+      "published_at": "2022-06-03T18:16:08+03:00",
+      "sha256": "041be68c95f6c5a57853c668bacc72e9a08d422d8586f096e2f0f6da4c8cd861",
+      "path": "registry/oot/source_docs/SEGYO/KAP_1034640_bildirim.pdf"
+    },
+    "KAP_1034528_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1034528 ek 1",
+      "published_at": "2022-06-03T14:27:28+03:00",
+      "sha256": "e0c23d554f8b4bacfcd8759af6cf81a10e68ceaa205a566bd97fc5d6e12ddc75",
+      "path": "registry/oot/source_docs/SEGYO/KAP_1034528_ek1.pdf"
+    },
+    "KAP_1033160_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1033160 ek 1",
+      "published_at": "2022-05-27T23:05:31+03:00",
+      "sha256": "62160c2ed34df8a84951f532d817886d63bd59e87621139f4ef1b19a27df9520",
+      "path": "registry/oot/source_docs/SEGYO/KAP_1033160_ek1.pdf"
+    }
+  }
+}

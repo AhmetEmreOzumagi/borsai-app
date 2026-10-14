@@ -1,0 +1,240 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "RNPOL",
+  "company": "Rainbow Polikarbonat Sanayi Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "240637",
+      "source_id": "KAP_980635_EK1",
+      "source_document": "KAP 980635 ek 1",
+      "source_published_at": "2021-12-02T11:57:33+03:00",
+      "source_sha256": "b9b096b3b3f7266f88d6767f0f79828af3d704d55c0bddb06a153a380f808e86",
+      "source_path": "registry/oot/source_docs/RNPOL/KAP_980635_ek1.pdf",
+      "quote": "toplam 240.637 yatırımcı 12.000.000 TL nominal değerli payın alımını gerçekleştirmiştir",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "240.637",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "240223",
+        "domestic_institutional": "43",
+        "foreign_retail": "368",
+        "foreign_institutional": "3"
+      },
+      "source_id": "KAP_980635_EK1",
+      "source_document": "KAP 980635 ek 1",
+      "source_published_at": "2021-12-02T11:57:33+03:00",
+      "source_sha256": "b9b096b3b3f7266f88d6767f0f79828af3d704d55c0bddb06a153a380f808e86",
+      "source_path": "registry/oot/source_docs/RNPOL/KAP_980635_ek1.pdf",
+      "quote": "toplam 240.223 yerli gerçek ve tüzel kişi yatırımcı, 368 yabancı gerçek ve tüzel kişi yatırımcı, 43 yerli kurumsal yatırımcı ve 3 yabancı kurumsal yatırımcı olmak üzere toplam 240.637 yatırımcı",
+      "semantic": "ALLOCATED",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "240.223",
+        "Yurtiçi Kurumsal": "43",
+        "Yabancı Bireysel": "368",
+        "Yabancı Kurumsal": "3"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '240.223', 'Yurtiçi Kurumsal': '43', 'Yabancı Bireysel': '368', 'Yabancı Kurumsal': '3'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı yok ('herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'), grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "11979514",
+        "domestic_institutional": "2020",
+        "foreign_retail": "18316",
+        "foreign_institutional": "150"
+      },
+      "source_id": "KAP_980635_EK1",
+      "source_document": "KAP 980635 ek 1",
+      "source_published_at": "2021-12-02T11:57:33+03:00",
+      "source_sha256": "b9b096b3b3f7266f88d6767f0f79828af3d704d55c0bddb06a153a380f808e86",
+      "source_path": "registry/oot/source_docs/RNPOL/KAP_980635_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar (*) 11.979.514 99,83 240.223",
+        "Yurtiçi Kurumsal Yatırımcılar (**) 2.020 0,02 43",
+        "Yabancı Bireysel Yatırımcılar (*) 18.316 0,15 368",
+        "Yabancı Kurumsal Yatırımcılar (**) 150 0,00 3"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "11.979.514",
+        "Yurtiçi Kurumsal": "2.020",
+        "Yabancı Bireysel": "18.316",
+        "Yabancı Kurumsal": "150"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '11.979.514', 'Yurtiçi Kurumsal': '2.020', 'Yabancı Bireysel': '18.316', 'Yabancı Kurumsal': '150'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "99.83",
+      "source_id": "KAP_980635_EK1",
+      "source_document": "KAP 980635 ek 1",
+      "source_published_at": "2021-12-02T11:57:33+03:00",
+      "source_sha256": "b9b096b3b3f7266f88d6767f0f79828af3d704d55c0bddb06a153a380f808e86",
+      "source_path": "registry/oot/source_docs/RNPOL/KAP_980635_ek1.pdf",
+      "quote": "Yurtiçi Bireysel Yatırımcılar (*) 11.979.514 99,83 240.223",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "99,83",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.02",
+      "source_id": "KAP_980635_EK1",
+      "source_document": "KAP 980635 ek 1",
+      "source_published_at": "2021-12-02T11:57:33+03:00",
+      "source_sha256": "b9b096b3b3f7266f88d6767f0f79828af3d704d55c0bddb06a153a380f808e86",
+      "source_path": "registry/oot/source_docs/RNPOL/KAP_980635_ek1.pdf",
+      "quote": "Yurtiçi Kurumsal Yatırımcılar (**) 2.020 0,02 43",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,02",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.00",
+      "source_id": "KAP_980635_EK1",
+      "source_document": "KAP 980635 ek 1",
+      "source_published_at": "2021-12-02T11:57:33+03:00",
+      "source_sha256": "b9b096b3b3f7266f88d6767f0f79828af3d704d55c0bddb06a153a380f808e86",
+      "source_path": "registry/oot/source_docs/RNPOL/KAP_980635_ek1.pdf",
+      "quote": "Yabancı Kurumsal Yatırımcılar (**) 150 0,00 3",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "150 / 12.000.000 = %0,00125; belge 0,00'a yuvarlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,00",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (\"Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış\") ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "İnfo Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_979932_EK1",
+      "source_document": "KAP 979932 ek 1",
+      "source_published_at": "2021-11-26T20:21:40+03:00",
+      "source_sha256": "fd669cdd09b30eb90ed28243e303560b995ca08236710b2200d60e7fd63bf7c0",
+      "source_path": "registry/oot/source_docs/RNPOL/KAP_979932_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Info Yatırım Menkul Değerler",
+      "note": "TSSD OCR 'Info'; sonuç bildirimini de İnfo Yatırım yayımlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "İnfo Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_980714",
+      "source_document": "KAP 980714",
+      "source_published_at": "2021-12-02T17:48:46+03:00",
+      "source_sha256": "934dd7516bedce95269c54208befe7aac2b0925caf22aa5e18b310229df9bec7",
+      "source_path": "registry/oot/source_docs/RNPOL/KAP_980714_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_980714",
+      "source_document": "KAP 980714",
+      "source_published_at": "2021-12-02T17:48:46+03:00",
+      "source_sha256": "934dd7516bedce95269c54208befe7aac2b0925caf22aa5e18b310229df9bec7",
+      "source_path": "registry/oot/source_docs/RNPOL/KAP_980714_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_980714": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 980714",
+      "published_at": "2021-12-02T17:48:46+03:00",
+      "sha256": "934dd7516bedce95269c54208befe7aac2b0925caf22aa5e18b310229df9bec7",
+      "path": "registry/oot/source_docs/RNPOL/KAP_980714_bildirim.pdf"
+    },
+    "KAP_980635_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 980635 ek 1",
+      "published_at": "2021-12-02T11:57:33+03:00",
+      "sha256": "b9b096b3b3f7266f88d6767f0f79828af3d704d55c0bddb06a153a380f808e86",
+      "path": "registry/oot/source_docs/RNPOL/KAP_980635_ek1.pdf"
+    },
+    "KAP_979932_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 979932 ek 1",
+      "published_at": "2021-11-26T20:21:40+03:00",
+      "sha256": "fd669cdd09b30eb90ed28243e303560b995ca08236710b2200d60e7fd63bf7c0",
+      "path": "registry/oot/source_docs/RNPOL/KAP_979932_ek1.pdf"
+    }
+  }
+}

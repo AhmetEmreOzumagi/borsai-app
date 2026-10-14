@@ -1,0 +1,17 @@
+# T4 mutasyon gösterimi (2026-09-25T23:55:33Z)
+önce: data/training_table_v2.csv sha256 5adda8b2003d0d10a7245e06cb6bc3b126260c3a84dabc27cac966b781da3e6a
+
+## 1) mutasyonsuz bekçi
+1 passed, 28 deselected in 1.41s
+mutasyon: v2'nin sonuna bir kasa kodu satırı eklendi (kod yazdırılmadı)
+
+## 2) mutasyonlu bekçi (kırmızı beklenir)
+E       AssertionError: assert ['data/traini...u (1 farklı)'] == []
+E         
+E         Left contains one more item: 'data/training_table_v2.csv: kasa kodu (1 farklı)'
+E         Use -v to get more diff
+1 failed, 28 deselected in 1.40s
+
+## 3) geri yükleme
+sonra: data/training_table_v2.csv sha256 5adda8b2003d0d10a7245e06cb6bc3b126260c3a84dabc27cac966b781da3e6a (önceyle aynı: evet)
+1 passed, 28 deselected in 1.35s

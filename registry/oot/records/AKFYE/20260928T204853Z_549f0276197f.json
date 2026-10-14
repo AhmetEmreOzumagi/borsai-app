@@ -1,0 +1,690 @@
+{
+  "code": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "02623de417a464c1b33cdd76b1bdd5b990bf04c0ba5f66ccbea6c3084eb54f94",
+    "git_head": "f0588ef2434ccfec86353a3655f4c60118a96fef"
+  },
+  "cohort_file_sha256": "7d05b334d73985882debf7f31ecfc81b3eac501b756f9da44f41e3bf893760a7",
+  "cohort_row": {
+    "added_at": "2026-09-24T23:49:51+03:00",
+    "company": "Akfen Yenilenebilir Enerji A.Ş.",
+    "first_trading_date": "2023-03-16",
+    "listing_source_id": "KAP_1124554",
+    "listing_source_sha256": "6ba614d778606cf9b3e2773cf387b286a213cf17097c15a77458c41606e9df3f",
+    "market": "YILDIZ",
+    "reason": "",
+    "regime_tags": "ALLOC_REGIME=THRESH100_20211111|MARGIN_RULE=POST_20200313|MARKET=YILDIZ|SHORT_SELL_BAN|SHORT_SELL_BAN_2020_END_NOT_FOUND|TICK_TABLE_EPOCH=T2015",
+    "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+    "status": "MEMBER",
+    "ticker": "AKFYE",
+    "year": "2023"
+  },
+  "comparators": {},
+  "delta_of": "20260924T221309Z_afbb99311ae5.json",
+  "delta_of_sha256": "afbb99311ae55466d49a1d134df57b373b98f1319ecb55a25970877b25c86d8e",
+  "first_trading_date": "2023-03-16",
+  "inputs": {
+    "path": "registry/oot/inputs/AKFYE.json",
+    "sha256": "627ca58703e6823c7d9a64ed803f34194a1e06ebc754de4bc3d06513d9b312a2"
+  },
+  "inputs_sha256": "627ca58703e6823c7d9a64ed803f34194a1e06ebc754de4bc3d06513d9b312a2",
+  "market20": {
+    "S0_date": "2023-03-15",
+    "S20_date": "2023-02-15",
+    "calendar": "C",
+    "calendar_file": "data/raw/pay_calendar_c_20200101_20230921.csv",
+    "calendar_sha256": "6dfd6134584a1a14211c3a56b5b274fef321f666bf870ce99605a97bee16fe4e",
+    "close_S0": "5121.57",
+    "close_S20": "4950.47",
+    "f6": "0.03456237488561692122162138140418990520092031665680228341955",
+    "ref_date": "2023-03-16",
+    "ref_date_rule": "OOT_FIRST_TRADING_DATE_SPEC_MARKET20_V0_4E",
+    "refusal": null,
+    "xu100_file": "data/raw/xu100/xu100_graphic_20260922.json",
+    "xu100_sha256": "04637c911f912e007522790520191ae99ad5cf47f8d38a4360698ea3038397fe"
+  },
+  "model_inputs": {
+    "additional_sale_shares": "0",
+    "alloc_regime": "THRESH100_20211111",
+    "capital_increase_shares": "0",
+    "existing_share_sale_shares": "340370703",
+    "f6_market20": "0.03456237488561692122162138140418990520092031665680228341955",
+    "f6_market20_refusal": null,
+    "ipo_price_tl": "9.8",
+    "ipo_price_try": "9.80",
+    "ipo_size_tl": "3335632889.4",
+    "planned_additional_sale_ceiling": "0",
+    "planned_base_offer_shares": "340370703",
+    "planned_capital_increase_shares": "0",
+    "planned_existing_share_sale": "340370703",
+    "planned_max_offer_shares": "340370703",
+    "planned_post_ipo_capital": null,
+    "planned_pre_ipo_capital": "1016031947",
+    "post_ipo_share_capital": "1016031947",
+    "shares_offered": "340370703",
+    "total_demand_filter_status": "NOT_SPECIFIED",
+    "total_demand_multiple": "22.84",
+    "tufe_index": "37.806892",
+    "tufe_refusal": null
+  },
+  "models": [
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/ceiling_hazard_v1_clip.json",
+      "kind": "hazard",
+      "model_id": "ceiling_hazard_v1_clip",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.05350669100825822,
+          0.03722950563857785,
+          0.0357651148426521,
+          0.09970438321710307,
+          0.08832375475885745,
+          0.07824215348402674,
+          0.06931130360718807,
+          0.0613998540915488,
+          0.05439144679530328,
+          0.048183005126937406,
+          0.373942787429547
+        ],
+        "P_close_ceiling": [
+          0.9464933089917418,
+          0.9105852042752052,
+          0.875340940619582,
+          0.7770885629833105,
+          0.7304555764464701,
+          0.663403870495624,
+          0.6040056951950453,
+          0.5513874481421716,
+          0.504775243155964,
+          0.46348352829718154
+        ],
+        "S": [
+          0.9464933089917418,
+          0.9092638033531639,
+          0.8734986885105118,
+          0.7737943052934088,
+          0.6854705505345513,
+          0.6072283970505246,
+          0.5379170934433365,
+          0.4765172393517877,
+          0.4221257925564844,
+          0.373942787429547
+        ],
+        "clipped": true,
+        "clipped_features": [
+          "f3"
+        ],
+        "hazard": [
+          0.05350669100825824,
+          0.039334145614021106,
+          0.039334145614021106,
+          0.1141437125533855,
+          0.1141437125533855,
+          0.1141437125533855,
+          0.1141437125533855,
+          0.1141437125533855,
+          0.1141437125533855,
+          0.1141437125533855
+        ],
+        "model_id": "ceiling_hazard_v1_clip",
+        "refused": null,
+        "warnings": [
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f3",
+            "message": "f3 = 22.84 eğitim aralığı dışında [1.0, 14.6]",
+            "train_max": 14.6,
+            "train_min": 1.0,
+            "value": 22.84
+          },
+          {
+            "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+            "feature": "f3",
+            "message": "f3 = 22.84 eğitim p05/p95 sınırına kırpıldı: 8.332",
+            "used": 8.332,
+            "value": 22.84
+          }
+        ]
+      },
+      "params_sha256": "f3a147535242f8bde381ea68113f295f0a7dcdb5dd8a1046a3c1a55b0308241d",
+      "refusal": null,
+      "spec_sha256": "6103d3c9189cf70dd92e65e0bba62d482e71b4d4e7ac5248aca120069684af19",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/ceiling_hazard_v1_real.json",
+      "kind": "hazard",
+      "model_id": "ceiling_hazard_v1_real",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.051998203758936934,
+          0.03482850656551062,
+          0.03354894689126364,
+          0.08629088603013646,
+          0.07782577581240802,
+          0.07019109038569693,
+          0.06330536532534758,
+          0.05709512784249815,
+          0.051494112806990844,
+          0.046442555678198716,
+          0.4269794289030121
+        ],
+        "P_close_ceiling": [
+          0.9480017962410631,
+          0.9144377563307629,
+          0.881377386335974,
+          0.7963431636946259,
+          0.7561966986675182,
+          0.696044566557915,
+          0.6417933406918904,
+          0.5928641439245402,
+          0.5487348867864562,
+          0.5089346966296743
+        ],
+        "S": [
+          0.9480017962410631,
+          0.9131732896755524,
+          0.8796243427842888,
+          0.7933334567541523,
+          0.7155076809417443,
+          0.6453165905560474,
+          0.5820112252306998,
+          0.5249160973882017,
+          0.4734219845812108,
+          0.4269794289030121
+        ],
+        "clipped": true,
+        "clipped_features": [
+          "f1r",
+          "f3"
+        ],
+        "f1r_raw": 8822816986.384388,
+        "hazard": [
+          0.05199820375893694,
+          0.03673886136461946,
+          0.03673886136461946,
+          0.0980997021489862,
+          0.0980997021489862,
+          0.0980997021489862,
+          0.0980997021489862,
+          0.0980997021489862,
+          0.0980997021489862,
+          0.0980997021489862
+        ],
+        "model_id": "ceiling_hazard_v1_real",
+        "refused": null,
+        "tufe_index_used": "37.806892",
+        "warnings": [
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f3",
+            "message": "f3 = 22.84 eğitim aralığı dışında [1.0, 14.6]",
+            "train_max": 14.6,
+            "train_min": 1.0,
+            "value": 22.84
+          },
+          {
+            "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+            "feature": "f1r",
+            "message": "f1r = 8822816986.384388 eğitim p05/p95 sınırına kırpıldı: 6091887354.826926",
+            "used": 6091887354.826926,
+            "value": 8822816986.384388
+          },
+          {
+            "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+            "feature": "f3",
+            "message": "f3 = 22.84 eğitim p05/p95 sınırına kırpıldı: 8.332",
+            "used": 8.332,
+            "value": 22.84
+          }
+        ]
+      },
+      "params_sha256": "d81dad3d60c18ba23298d0ca4c4e315b60cc665d34781ca52f06d001d21ba09d",
+      "refusal": null,
+      "spec_sha256": "fea051b617520b9fedcfe2876abbf8f80614250e4fd527e182479e7bf920f327",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/ceiling_hazard_v1_pooled.json",
+      "kind": "hazard",
+      "model_id": "ceiling_hazard_v1_pooled",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.06966239185091272,
+          0.0574541985932332,
+          0.05390604047614067,
+          0.0958763754434695,
+          0.0846522809626824,
+          0.07474217333560074,
+          0.06599222621528239,
+          0.05826662146007827,
+          0.05144544094173692,
+          0.04542280515617503,
+          0.34257944556468817
+        ],
+        "P_close_ceiling": [
+          0.9303376081490873,
+          0.8789878785884826,
+          0.8276705462708006,
+          0.7363984035463678,
+          0.6778029609429421,
+          0.6111963472049664,
+          0.5523872635903644,
+          0.5004628656740446,
+          0.45461717427301646,
+          0.41413856490280143
+        ],
+        "S": [
+          0.9303376081490873,
+          0.8728834095558541,
+          0.8189773690797134,
+          0.7231009936362439,
+          0.6384487126735615,
+          0.5637065393379608,
+          0.4977143131226784,
+          0.4394476916626001,
+          0.3880022507208632,
+          0.34257944556468817
+        ],
+        "clipped": true,
+        "clipped_features": [
+          "f1r",
+          "f3"
+        ],
+        "f1r_raw": 8822816986.384388,
+        "hazard": [
+          0.06966239185091275,
+          0.06175628942652196,
+          0.06175628942652196,
+          0.1170684063604908,
+          0.1170684063604908,
+          0.1170684063604908,
+          0.1170684063604908,
+          0.1170684063604908,
+          0.1170684063604908,
+          0.1170684063604908
+        ],
+        "model_id": "ceiling_hazard_v1_pooled",
+        "refused": null,
+        "regime_source": "ALLOC_REGIME_INPUT",
+        "regime_value_used": 1,
+        "tufe_index_used": "37.806892",
+        "warnings": [
+          {
+            "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+            "feature": "f1r",
+            "message": "f1r = 8822816986.384388 eğitim p05/p95 sınırına kırpıldı: 6237217020.463887",
+            "used": 6237217020.463887,
+            "value": 8822816986.384388
+          },
+          {
+            "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+            "feature": "f3",
+            "message": "f3 = 22.84 eğitim p05/p95 sınırına kırpıldı: 18.02",
+            "used": 18.02,
+            "value": 22.84
+          }
+        ]
+      },
+      "params_sha256": "e03e71e0bb6e7c65ceb9cdf0ee95b25334749362549428077ab670dd3f261402",
+      "refusal": null,
+      "spec_sha256": "2a088b0d86d7c9868558d3004b6b7de9545734cf4155b51a67f8ac2ce0eb6845",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/ceiling_hazard_v1_pooled@INF.json",
+      "kind": "hazard",
+      "model_id": "ceiling_hazard_v1_pooled@INF",
+      "not_applicable": null,
+      "output": {
+        "P_L": [
+          0.1742952915853987,
+          0.11490896930161543,
+          0.09891769410189888,
+          0.13102122340378525,
+          0.10296569645329046,
+          0.08091768929250331,
+          0.06359081389216259,
+          0.04997413602420184,
+          0.03927319243940716,
+          0.03086363801538762,
+          0.11327165549034877
+        ],
+        "P_close_ceiling": [
+          0.8257047084146013,
+          0.7246840793250742,
+          0.6305166699681817,
+          0.5057874262193804,
+          0.4456066276828935,
+          0.37349669249175116,
+          0.3168276315162214,
+          0.272293095972182,
+          0.23729472433903054,
+          0.2097905413042504
+        ],
+        "S": [
+          0.8257047084146013,
+          0.7107957391129859,
+          0.611878045011087,
+          0.48085682160730175,
+          0.3778911251540113,
+          0.296973435861508,
+          0.2333826219693454,
+          0.18340848594514356,
+          0.1441352935057364,
+          0.11327165549034877
+        ],
+        "clipped": null,
+        "clipped_features": null,
+        "hazard": [
+          0.1742952915853987,
+          0.13916472575558755,
+          0.13916472575558755,
+          0.21412963657065215,
+          0.21412963657065215,
+          0.21412963657065215,
+          0.21412963657065215,
+          0.21412963657065215,
+          0.21412963657065215,
+          0.21412963657065215
+        ],
+        "model_id": "ceiling_hazard_v1_pooled@INF",
+        "refused": null,
+        "regime_source": "ALLOC_REGIME_INPUT",
+        "regime_value_used": 1,
+        "warnings": []
+      },
+      "params_sha256": "7d7c9d1ee5a6a0c255fcf98103f872239439436a9e2da478601837d5eaf3f361",
+      "refusal": null,
+      "spec_sha256": "f53ad4cf1ba9dd08ab03678e86e5a49b56b1363d8205b27c00113d280ab82872",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "l2_logit_v1_6_grid",
+      "file": "models/fall_d10_v0_h99.json",
+      "kind": "fall",
+      "model_id": "fall_d10_v0_h99",
+      "not_applicable": null,
+      "output": {
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.8714059342542707,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.9667616176338015,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "add_sale_used": 0,
+        "clipped": true,
+        "clipped_features": [
+          "f1r",
+          "f3"
+        ],
+        "f1r_raw": 8822816986.384388,
+        "model_id": "fall_d10_v0_h99",
+        "refused": null,
+        "tufe_index_used": "37.806892",
+        "warnings": [
+          {
+            "code": "OUT_OF_TRAINING_RANGE",
+            "feature": "f3",
+            "message": "f3 = 22.84 eğitim aralığı dışında [1.0, 14.6]",
+            "train_max": 14.6,
+            "train_min": 1.0,
+            "value": 22.84
+          },
+          {
+            "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+            "feature": "f1r",
+            "message": "f1r = 8822816986.384388 eğitim p05/p95 sınırına kırpıldı: 6111945836.045466",
+            "used": 6111945836.045466,
+            "value": 8822816986.384388
+          },
+          {
+            "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+            "feature": "f3",
+            "message": "f3 = 22.84 eğitim p05/p95 sınırına kırpıldı: 8.3635",
+            "used": 8.3635,
+            "value": 22.84
+          }
+        ]
+      },
+      "params_sha256": "b15eaa8cb1f76441088173e7582f636afe281855d924d23220d6ae076fe89beb",
+      "refusal": null,
+      "spec_sha256": "e21c0a32bb9861db0a6fd0e6ee0086d0c862160556fcac6bcede24a109adb46e",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "l2_logit_v1_6_grid",
+      "file": "models/fall_d10_v0_pooled.json",
+      "kind": "fall",
+      "model_id": "fall_d10_v0_pooled",
+      "not_applicable": null,
+      "output": {
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.9388951426415627,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.9684874935163752,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "add_sale_used": 0,
+        "clipped": true,
+        "clipped_features": [
+          "f1r",
+          "f3"
+        ],
+        "f1r_raw": 8822816986.384388,
+        "model_id": "fall_d10_v0_pooled",
+        "refused": null,
+        "tufe_index_used": "37.806892",
+        "warnings": [
+          {
+            "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+            "feature": "f1r",
+            "message": "f1r = 8822816986.384388 eğitim p05/p95 sınırına kırpıldı: 6246804795.248407",
+            "used": 6246804795.248407,
+            "value": 8822816986.384388
+          },
+          {
+            "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+            "feature": "f3",
+            "message": "f3 = 22.84 eğitim p05/p95 sınırına kırpıldı: 18.1",
+            "used": 18.1,
+            "value": 22.84
+          }
+        ]
+      },
+      "params_sha256": "d2c5d549961173468486c159045c9d4361bd034e2a5c6bb5494aad68477f7c64",
+      "refusal": null,
+      "spec_sha256": "1054f2c2214734effce3cb65a150fbff646f7d1060b750c3d02d3aef3a0ec28f",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "l2_logit_v1_6_grid",
+      "file": "models/fall_d10_v0_addsale.json",
+      "kind": "fall",
+      "model_id": "fall_d10_v0_addsale",
+      "not_applicable": null,
+      "output": {
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.8068759361348089,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.8616918501108343,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "add_sale_used": 0,
+        "clipped": false,
+        "clipped_features": [],
+        "f1r_raw": null,
+        "model_id": "fall_d10_v0_addsale",
+        "refused": null,
+        "tufe_index_used": null,
+        "warnings": []
+      },
+      "params_sha256": "b95fc3ecee262f7b58441215d9c65ba682808c5a2cddd643f2e05f64640b8e09",
+      "refusal": null,
+      "spec_sha256": "b0b04566f98742978a62c44327fc5e5c1389fb7e333a86f4dfd4e0c4ac2172a1",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "l2_logit_v1_6_grid",
+      "file": "models/fall_d10_v0_pooled@ZERO.json",
+      "kind": "fall",
+      "model_id": "fall_d10_v0_pooled@ZERO",
+      "not_applicable": null,
+      "output": {
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.7577639751552795,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.8198757763975155,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "add_sale_used": null,
+        "clipped": null,
+        "clipped_features": null,
+        "f1r_raw": null,
+        "model_id": "fall_d10_v0_pooled@ZERO",
+        "refused": null,
+        "tufe_index_used": null,
+        "warnings": []
+      },
+      "params_sha256": "7c23b9236c0a0ccc4192d8da58f0e1745fbd7443f1a6e78e2a056580fbfd8c3d",
+      "refusal": null,
+      "spec_sha256": "0c96245fb80f6d538199d4fd6d73707ddcb7f5f28c6d8f9f65108f796ef35094",
+      "status": "PREDICTED"
+    }
+  ],
+  "models_index": {
+    "model_ids": [
+      "v1_5_h99",
+      "base_always_ceiling",
+      "base_train_median",
+      "base_train_mean",
+      "base_zero",
+      "base_rate",
+      "base_last10_rate",
+      "v1_6_h99",
+      "v1_5_market20_v0",
+      "pb_v0",
+      "ceiling_hazard_v0",
+      "ceiling_hazard_v0@INF",
+      "pb_ceiling_v0",
+      "pb_ceiling_v0@INF",
+      "base_km_expanding",
+      "base_km_last10",
+      "ceiling_path_v0",
+      "ceiling_path_v0@INF",
+      "pb_ceiling_path_v0",
+      "ceiling_hazard_v1_clip",
+      "ceiling_hazard_v1_real",
+      "ceiling_hazard_v1_pooled",
+      "ceiling_hazard_v1_pooled@INF",
+      "fall_d10_v0_h99",
+      "fall_d10_v0_pooled",
+      "fall_d10_v0_addsale",
+      "fall_d10_v0_pooled@ZERO"
+    ],
+    "path": "models/INDEX.json",
+    "sha256": "7e636e8bf64b25d79bac04f4bf78b9f870cded8d4d1c10009b6926941e4edb59"
+  },
+  "record_scope": "ONLY_MISSING_MODELS",
+  "record_stage": "OOT_PRE_LISTING",
+  "record_type": "PREDICTION",
+  "recorded_at_basis": "LOCAL_CLOCK_SELF_REPORTED: zaman kanıtı bu kaydı içeren commit'in push kanıtıdır; kayıt, kohortun sonucu repoya girmeden push edilir (KARARLAR D3, D6)",
+  "recorded_at_istanbul": "2026-09-28T23:48:53+03:00",
+  "recorded_at_utc": "2026-09-28T20:48:53Z",
+  "regime_tags": {
+    "ALLOC_REGIME": "THRESH100_20211111",
+    "MARGIN_RULE": "POST_20200313",
+    "MARKET": "YILDIZ",
+    "SHORT_SELL_BAN": true,
+    "SHORT_SELL_BAN_2020_END_NOT_FOUND": true,
+    "TICK_TABLE_EPOCH": "T2015"
+  },
+  "scale": "OOT_PRE_H99",
+  "schema_version": "borsai.oot_record/1",
+  "summary": {
+    "n_models": 8,
+    "n_not_applicable_regime": 0,
+    "n_predicted": 8,
+    "n_refused": 0,
+    "not_applicable": {},
+    "refusals": {}
+  },
+  "ticker": "AKFYE",
+  "tufe": {
+    "bulletin_id": "49655",
+    "file": "data/raw/tuik/tufe_genel_2025_100.csv",
+    "file_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+    "index": "37.806892",
+    "month": "2023-01",
+    "pins": {
+      "ceiling_hazard_v1_pooled": {
+        "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+        "through_month": "2026-08"
+      },
+      "ceiling_hazard_v1_real": {
+        "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+        "through_month": "2026-08"
+      },
+      "fall_d10_v0_h99": {
+        "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+        "through_month": "2026-08"
+      },
+      "fall_d10_v0_pooled": {
+        "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+        "through_month": "2026-08"
+      }
+    },
+    "reason": null,
+    "refusal": null,
+    "release_date": "2023-02-03",
+    "rule": "T_MONTH_MINUS_2",
+    "series": "TUIK_TUFE_GENEL_2025_100"
+  }
+}

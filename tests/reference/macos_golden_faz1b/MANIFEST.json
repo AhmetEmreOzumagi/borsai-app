@@ -1,0 +1,153 @@
+{
+  "borsai_dirty": true,
+  "borsai_source_sha256": "c873f64bf27bb6c0c1f6c0da343672b7f615d051beca8b59707ea4a1a6bf5ea8",
+  "created_at": "2026-09-22T13:05:20+03:00",
+  "description": "Faz 1B: yeni modellerin ve karşılaştırıldıkları basit kuralların bu makinedeki H99 walk-forward fold ledger'ları. Regresyon testi bunlara karşı BİREBİR (bayt) çalışır; docs/MODELS.md bunlardan üretilir.",
+  "git_commit": "d3fabada3a4b3b7ada1b03681c57c29a7e303be5",
+  "machine": {
+    "platform": "Darwin 27.0.0 arm64 / CPython 3.12.14"
+  },
+  "runs": {
+    "base_always_ceiling__ceiling": {
+      "file": "base_always_ceiling__ceiling_fold_ledger.csv",
+      "ledger_sha256": "f03bf949afa2074044431a12d3821efc9f801caa1744255c076dbb3439d3b08b",
+      "model_id": "base_always_ceiling",
+      "plan_id": "H99_CEILING_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_MIN10IPO_5EV_5SV",
+      "spec_sha256": "ed1815f898c30b8cce6199e48d0788e2cd373fe84db59a4b782269810dc31eb6"
+    },
+    "base_always_ceiling__pb": {
+      "file": "base_always_ceiling__pb_fold_ledger.csv",
+      "ledger_sha256": "bd4c84a71dfb127b5fa9cf3997ab831615afa42a6986b2c334f6f07af5980315",
+      "model_id": "base_always_ceiling",
+      "plan_id": "H99_PB_WALK_FORWARD_BOOKBUILD_CUTOFF_MIN_TRAIN_10",
+      "spec_sha256": "ed1815f898c30b8cce6199e48d0788e2cd373fe84db59a4b782269810dc31eb6"
+    },
+    "base_always_ceiling__pb_ceiling": {
+      "file": "base_always_ceiling__pb_ceiling_fold_ledger.csv",
+      "ledger_sha256": "0fa306e3c7f0a834c539ba9051ba7dc06d3cdbe88604743ae4a690cac66b1446",
+      "model_id": "base_always_ceiling",
+      "plan_id": "H99_PB_CEILING_PP_WALK_FORWARD_B_CUTOFF_MIN10IPO_5EV_5SV",
+      "spec_sha256": "ed1815f898c30b8cce6199e48d0788e2cd373fe84db59a4b782269810dc31eb6"
+    },
+    "base_km_expanding": {
+      "file": "base_km_expanding_fold_ledger.csv",
+      "ledger_sha256": "ed1b8821a0c5faac6a068402d545aa67810d53d2e523f8062100cec81c45017f",
+      "model_id": "base_km_expanding",
+      "plan_id": "H99_CEILING_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_MIN10IPO_5EV_5SV",
+      "spec_sha256": "ac6b402914cc5038dd6db29606ae54f2676e3ab299d982f6ae0591a714ba3c01"
+    },
+    "base_km_expanding__pb_ceiling": {
+      "file": "base_km_expanding__pb_ceiling_fold_ledger.csv",
+      "ledger_sha256": "720cad51f85c41e7f3365c97269df9cc26a74ae00c5ffa8a36384a3a3fd57d09",
+      "model_id": "base_km_expanding",
+      "plan_id": "H99_PB_CEILING_PP_WALK_FORWARD_B_CUTOFF_MIN10IPO_5EV_5SV",
+      "spec_sha256": "ac6b402914cc5038dd6db29606ae54f2676e3ab299d982f6ae0591a714ba3c01"
+    },
+    "base_km_last10": {
+      "file": "base_km_last10_fold_ledger.csv",
+      "ledger_sha256": "6d605dd02b7c1a4232a1299bac91a266cc4ee1df2e9446ce995fcea15fa7c26d",
+      "model_id": "base_km_last10",
+      "plan_id": "H99_CEILING_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_MIN10IPO_5EV_5SV",
+      "spec_sha256": "b457c4cfc1881aaa7ad5701c9452d8d5be36efe8e06aeefa6801e03a93359389"
+    },
+    "base_km_last10__pb_ceiling": {
+      "file": "base_km_last10__pb_ceiling_fold_ledger.csv",
+      "ledger_sha256": "9ce48925224fc6d80ccb9d0881b08d4d57fb1d82a05c955759f4a68ef5546ed9",
+      "model_id": "base_km_last10",
+      "plan_id": "H99_PB_CEILING_PP_WALK_FORWARD_B_CUTOFF_MIN10IPO_5EV_5SV",
+      "spec_sha256": "b457c4cfc1881aaa7ad5701c9452d8d5be36efe8e06aeefa6801e03a93359389"
+    },
+    "base_last10_rate__pb": {
+      "file": "base_last10_rate__pb_fold_ledger.csv",
+      "ledger_sha256": "a0b959fc28a870cc555ff5fdc737a97432a5b8908467341681f76c78de775fbd",
+      "model_id": "base_last10_rate",
+      "plan_id": "H99_PB_WALK_FORWARD_BOOKBUILD_CUTOFF_MIN_TRAIN_10",
+      "spec_sha256": "ff7dfd4084a16432336eb551958c13403c72ac799d9742f8cbbf324ab98e0ecc"
+    },
+    "base_rate__pb": {
+      "file": "base_rate__pb_fold_ledger.csv",
+      "ledger_sha256": "ba4466a50d183f432d3b3b3614bfec78c9716252d2789a0299059ae47cf56cb2",
+      "model_id": "base_rate",
+      "plan_id": "H99_PB_WALK_FORWARD_BOOKBUILD_CUTOFF_MIN_TRAIN_10",
+      "spec_sha256": "d094ba1119803a693ef17dce336f77e8022f88da6e944349a2cb04b8b2e2a6c5"
+    },
+    "base_train_mean__pb": {
+      "file": "base_train_mean__pb_fold_ledger.csv",
+      "ledger_sha256": "9b85eb6a707e80c91c8269b45282748cbdc49062cbac72718162835b62b01d75",
+      "model_id": "base_train_mean",
+      "plan_id": "H99_PB_WALK_FORWARD_BOOKBUILD_CUTOFF_MIN_TRAIN_10",
+      "spec_sha256": "f94c2e58d8a4f0607c33fa0c0a12cec8daef39ee0e012c2db1d11d2bb1706119"
+    },
+    "base_train_median__pb": {
+      "file": "base_train_median__pb_fold_ledger.csv",
+      "ledger_sha256": "9f76e3c251d97ec3c0c8e6a3d5f558ddd6890e8679c58536afc0b2f19194d992",
+      "model_id": "base_train_median",
+      "plan_id": "H99_PB_WALK_FORWARD_BOOKBUILD_CUTOFF_MIN_TRAIN_10",
+      "spec_sha256": "842a14f529396ec5c9a2ac79463ac91816c89cab05fe6107b60731fab7ce4ea3"
+    },
+    "base_zero__pb": {
+      "file": "base_zero__pb_fold_ledger.csv",
+      "ledger_sha256": "3d500e1702a2df5bf68f80580700ba73023bcb4c30ce1f305fbfd6c56b41c252",
+      "model_id": "base_zero",
+      "plan_id": "H99_PB_WALK_FORWARD_BOOKBUILD_CUTOFF_MIN_TRAIN_10",
+      "spec_sha256": "1ae0f539e663c6d14bba1ad329a07a332dc1ffca59a3acd4b62cc65e68c994d2"
+    },
+    "ceiling_hazard_v0": {
+      "file": "ceiling_hazard_v0_fold_ledger.csv",
+      "ledger_sha256": "976b4dcea9819160bf863873a0a3e3a639942bdfeec6f9229e015047c904665b",
+      "model_id": "ceiling_hazard_v0",
+      "plan_id": "H99_CEILING_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_MIN10IPO_5EV_5SV",
+      "spec_sha256": "18949ac747fd9759d63ce2182a12ee0f2b5ab2bb4d56682491270dea853b8623"
+    },
+    "ceiling_hazard_v0@INF": {
+      "file": "ceiling_hazard_v0@INF_fold_ledger.csv",
+      "ledger_sha256": "90b610463de417c702cfae8032957aa4745aefcb4814a2745459da90bddb2f93",
+      "model_id": "ceiling_hazard_v0@INF",
+      "plan_id": "H99_CEILING_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_MIN10IPO_5EV_5SV",
+      "spec_sha256": "db7a951f2578e7b346d292c51507a6102145fd00ed890fa59c454c1937107842"
+    },
+    "pb_ceiling_v0": {
+      "file": "pb_ceiling_v0_fold_ledger.csv",
+      "ledger_sha256": "c92ce859ac67dfca4984cbd248c53379771f9bed50194bef2825f2d8d2b3cf16",
+      "model_id": "pb_ceiling_v0",
+      "plan_id": "H99_PB_CEILING_PP_WALK_FORWARD_B_CUTOFF_MIN10IPO_5EV_5SV",
+      "spec_sha256": "8acfd7079be6d7dd8074bb87434d1c7c748b0921809d6b6ab0b2143ce65384e0"
+    },
+    "pb_ceiling_v0@INF": {
+      "file": "pb_ceiling_v0@INF_fold_ledger.csv",
+      "ledger_sha256": "cd7d7312777c9a103a67134d949758197b4fc34fda64af89def0f6f9c18843df",
+      "model_id": "pb_ceiling_v0@INF",
+      "plan_id": "H99_PB_CEILING_PP_WALK_FORWARD_B_CUTOFF_MIN10IPO_5EV_5SV",
+      "spec_sha256": "b1a213bb68e29018247bb39b1adb89e4528a9a38a2eaf877cc6dc675379ac399"
+    },
+    "pb_v0": {
+      "file": "pb_v0_fold_ledger.csv",
+      "ledger_sha256": "0f5c484eafbcfc506dc6d1a3a5a490bf2739df840e6efd842532fdc9c5011875",
+      "model_id": "pb_v0",
+      "plan_id": "H99_PB_WALK_FORWARD_BOOKBUILD_CUTOFF_MIN_TRAIN_10",
+      "spec_sha256": "4eb55d4e6ce8c43e8919eedd3e136850215f700de9312731bce767693d165e4f"
+    },
+    "v1_5_market20_v0": {
+      "file": "v1_5_market20_v0_fold_ledger.csv",
+      "ledger_sha256": "552d8975fea1477bf5d312694031b75dc69aa74f7b225b1dd3460ec9e849c918",
+      "model_id": "v1_5_market20_v0",
+      "plan_id": "H99_WALK_FORWARD_STRICT_PRIOR_DATE_MIN_TRAIN_10",
+      "spec_sha256": "4163f65a2ba637ee23521c2b9d7a96f0d5aa41220aa6c9bfd9d127a82c4e3796"
+    },
+    "v1_6_h99": {
+      "file": "v1_6_h99_fold_ledger.csv",
+      "ledger_sha256": "94570b7d3b9ebca4fd39183bd069416862fe4d4ee4b7a77304f37ff7b2b7c512",
+      "model_id": "v1_6_h99",
+      "plan_id": "H99_WALK_FORWARD_STRICT_PRIOR_DATE_MIN_TRAIN_10",
+      "spec_sha256": "7e3dd5ffe81674b7922904e416845f4212e1b667c60d0c4bdf10b01dfbe8b87a"
+    }
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  }
+}

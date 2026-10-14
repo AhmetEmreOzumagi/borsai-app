@@ -1,0 +1,230 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "DAPGM",
+  "company": "DAP GAYRİMENKUL GELİŞTİRME A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "45436",
+      "source_id": "KAP_1003074_EK1",
+      "source_document": "KAP 1003074 ek 1",
+      "source_published_at": "2022-02-21T10:35:37+03:00",
+      "source_sha256": "c6e2f6a5d884517a2f27fa32c8b28ac8480a648b4fef27509140599988f0d8d7",
+      "source_path": "registry/oot/source_docs/DAPGM/KAP_1003074_ek1.pdf",
+      "quote": "TOPLAM 30.020.000 100% 50.658 42.048.924 100% 45.436 30.020.000 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 50.658; dağıtım yapılan 45.436",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "45390",
+        "domestic_institutional": "46",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_1003074_EK1",
+      "source_document": "KAP 1003074 ek 1",
+      "source_published_at": "2022-02-21T10:35:37+03:00",
+      "source_sha256": "c6e2f6a5d884517a2f27fa32c8b28ac8480a648b4fef27509140599988f0d8d7",
+      "source_path": "registry/oot/source_docs/DAPGM/KAP_1003074_ek1.pdf",
+      "quote": [
+        "15.010.000 50% 50.612 37.844.730 90,0% 45.390 25.815.806 86,0%",
+        "12.008.000 40% 46 4.204.194 10,0% 46 4.204.194 14,0%",
+        "3.002.000 10% 0 0 0,0% 0 0 0,00%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 50.612, yurt içi kurumsal 46, yurt dışı kurumsal 0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "2.5",
+      "source_id": "KAP_1003074_EK1",
+      "source_document": "KAP 1003074 ek 1",
+      "source_published_at": "2022-02-21T10:35:37+03:00",
+      "source_sha256": "c6e2f6a5d884517a2f27fa32c8b28ac8480a648b4fef27509140599988f0d8d7",
+      "source_path": "registry/oot/source_docs/DAPGM/KAP_1003074_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara planlanan tahsisat tutarının yaklaşık 2,5 katı, dağıtım yapılan tutarın ise 1,5 katı talep gelmiştir.",
+      "note": "belge 'yaklaşık' diyor; planlanan tahsisata göre 2,5, dağıtılan tutara göre 1,5 (tablodan 37.844.730 / 15.010.000 = 2,5213)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "0.3501160893",
+      "source_id": "KAP_1003074_EK1",
+      "source_document": "KAP 1003074 ek 1",
+      "source_published_at": "2022-02-21T10:35:37+03:00",
+      "source_sha256": "c6e2f6a5d884517a2f27fa32c8b28ac8480a648b4fef27509140599988f0d8d7",
+      "source_path": "registry/oot/source_docs/DAPGM/KAP_1003074_ek1.pdf",
+      "quote": "12.008.000 40% 46 4.204.194 10,0% 46 4.204.194 14,0%",
+      "derived": true,
+      "formula": "grup talebi 4.204.194 / planlanan tahsisat 12.008.000",
+      "note": "belge grup katı yazmıyor; talep planlanan tahsisatın altında",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "0",
+      "source_id": "KAP_1003074_EK1",
+      "source_document": "KAP 1003074 ek 1",
+      "source_published_at": "2022-02-21T10:35:37+03:00",
+      "source_sha256": "c6e2f6a5d884517a2f27fa32c8b28ac8480a648b4fef27509140599988f0d8d7",
+      "source_path": "registry/oot/source_docs/DAPGM/KAP_1003074_ek1.pdf",
+      "quote": "3.002.000 10% 0 0 0,0% 0 0 0,00%",
+      "derived": true,
+      "formula": "grup talebi 0 / planlanan tahsisat 3.002.000",
+      "note": "yurt dışı kurumsal talep yok; tahsisat bireysele aktarıldı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "25815806",
+        "domestic_institutional": "4204194",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_1003074_EK1",
+      "source_document": "KAP 1003074 ek 1",
+      "source_published_at": "2022-02-21T10:35:37+03:00",
+      "source_sha256": "c6e2f6a5d884517a2f27fa32c8b28ac8480a648b4fef27509140599988f0d8d7",
+      "source_path": "registry/oot/source_docs/DAPGM/KAP_1003074_ek1.pdf",
+      "quote": [
+        "15.010.000 50% 50.612 37.844.730 90,0% 45.390 25.815.806 86,0%",
+        "12.008.000 40% 46 4.204.194 10,0% 46 4.204.194 14,0%",
+        "3.002.000 10% 0 0 0,0% 0 0 0,00%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "86.0",
+      "source_id": "KAP_1003074_EK1",
+      "source_document": "KAP 1003074 ek 1",
+      "source_published_at": "2022-02-21T10:35:37+03:00",
+      "source_sha256": "c6e2f6a5d884517a2f27fa32c8b28ac8480a648b4fef27509140599988f0d8d7",
+      "source_path": "registry/oot/source_docs/DAPGM/KAP_1003074_ek1.pdf",
+      "quote": "15.010.000 50% 50.612 37.844.730 90,0% 45.390 25.815.806 86,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %50",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "14.0",
+      "source_id": "KAP_1003074_EK1",
+      "source_document": "KAP 1003074 ek 1",
+      "source_published_at": "2022-02-21T10:35:37+03:00",
+      "source_sha256": "c6e2f6a5d884517a2f27fa32c8b28ac8480a648b4fef27509140599988f0d8d7",
+      "source_path": "registry/oot/source_docs/DAPGM/KAP_1003074_ek1.pdf",
+      "quote": "12.008.000 40% 46 4.204.194 10,0% 46 4.204.194 14,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %40",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.00",
+      "source_id": "KAP_1003074_EK1",
+      "source_document": "KAP 1003074 ek 1",
+      "source_published_at": "2022-02-21T10:35:37+03:00",
+      "source_sha256": "c6e2f6a5d884517a2f27fa32c8b28ac8480a648b4fef27509140599988f0d8d7",
+      "source_path": "registry/oot/source_docs/DAPGM/KAP_1003074_ek1.pdf",
+      "quote": "3.002.000 10% 0 0 0,0% 0 0 0,00%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %10; bireysele aktarıldı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD penceresi dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Garanti Yatırım Menkul Kıymetler Anonim Şirketi",
+      "source_id": "KAP_1001332_EK1",
+      "source_document": "KAP 1001332 ek 1",
+      "source_published_at": "2022-02-11T20:36:36+03:00",
+      "source_sha256": "4fad7e4a491a4a94d1e3905cc9e68d16ce09d1cc9df1c5ce7ff944c64cf133dd",
+      "source_path": "registry/oot/source_docs/DAPGM/KAP_1001332_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Garanti Yatırım Menkul Kıymetler Anonim Şirketi'nin",
+      "note": "TSSD OCR metni",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde fiyat istikrarı yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1003254",
+      "source_document": "KAP 1003254",
+      "source_published_at": "2022-02-21T18:44:04+03:00",
+      "source_sha256": "250f4d97abfce04b260cdf6cd4872470774d50a9263d8555a2f1741097ab472c",
+      "source_path": "registry/oot/source_docs/DAPGM/KAP_1003254_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1003254",
+      "source_document": "KAP 1003254",
+      "source_published_at": "2022-02-21T18:44:04+03:00",
+      "source_sha256": "250f4d97abfce04b260cdf6cd4872470774d50a9263d8555a2f1741097ab472c",
+      "source_path": "registry/oot/source_docs/DAPGM/KAP_1003254_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1003254": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1003254",
+      "published_at": "2022-02-21T18:44:04+03:00",
+      "sha256": "250f4d97abfce04b260cdf6cd4872470774d50a9263d8555a2f1741097ab472c",
+      "path": "registry/oot/source_docs/DAPGM/KAP_1003254_bildirim.pdf"
+    },
+    "KAP_1003074_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1003074 ek 1",
+      "published_at": "2022-02-21T10:35:37+03:00",
+      "sha256": "c6e2f6a5d884517a2f27fa32c8b28ac8480a648b4fef27509140599988f0d8d7",
+      "path": "registry/oot/source_docs/DAPGM/KAP_1003074_ek1.pdf"
+    },
+    "KAP_1001332_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1001332 ek 1",
+      "published_at": "2022-02-11T20:36:36+03:00",
+      "sha256": "4fad7e4a491a4a94d1e3905cc9e68d16ce09d1cc9df1c5ce7ff944c64cf133dd",
+      "path": "registry/oot/source_docs/DAPGM/KAP_1001332_ek1.pdf"
+    }
+  }
+}

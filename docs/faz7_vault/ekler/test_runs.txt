@@ -1,0 +1,48 @@
+BORSAI_FAZ7_VAULT_OPEN_20260929 — test koşuları (yalnız sayılar)
+
+Bölüm A
+- Taban (HEAD 1d659da, ağaçta yalnız görev dosyası izlenmiyor; 2026-09-29):
+  - .venv/bin/pytest -q: 848 geçti (11 dk 41 sn)
+  - bash app/scripts/test.sh: yeşil (cargo 94 geçti, npm/vitest 222/222, parity 4 geçti, golden_unchanged YEŞİL)
+  - .venv/bin/python app/parity/gen_golden.py --check: 25 dosya, fark 0
+- C öncesi (kod + testler + SPEC_DEVIATIONS M, commit'lenmemiş):
+  - .venv/bin/pytest -q: 863 geçti (848 + 15 yeni; 15 dk 15 sn)
+  - bash app/scripts/test.sh: yeşil (cargo 94 geçti, vitest 222/222, parity 4 geçti, golden_unchanged YEŞİL)
+  - gen_golden.py --check: 25 dosya, fark 0
+- Prova (geçici klon; C commit'li, gerçek kasa kodlarıyla SENTETİK değerli kasa dosyaları; ağ yok):
+  - VA1 commit'siz durum: 857 geçti, 6 kırmızı (hepsi temizlik bekçisi; SPEC_DEVIATIONS M13)
+  - VA1 → VA2 → kanıt → VB → kanıt commit'li durum: 862 geçti, 1 kırmızı (keşif aracı testi; iki kipli yapıldı, klonda yeniden: geçti)
+- C = 1b2fe00. Prob temiz. İlk vault-d1: DUR (2020-06-04 THB bülteninde TARIH d.mm.yyyy; repoya hiçbir şey yazılmadı).
+- C2 öncesi (TARIH düzeltmesi M14 + testi, commit'lenmemiş):
+  - .venv/bin/pytest -q: 864 geçti (20 dk 58 sn); ardından güçlendirilen tests/test_faz7_vault.py (M-I: işaret kanıtlı, POST_D1
+    kanıtsızken vault-s5 hiçbir HEAD/zip açmaz) tek başına: 16 geçti
+  - bash app/scripts/test.sh: yeşil (cargo 94 geçti, vitest 222/222, parity 4 geçti, golden_unchanged YEŞİL)
+  - gen_golden.py --check: 25 dosya, fark 0
+- C2 = 439a808. vault-d1 TAMAM (15:29–15:44).
+- VA1 öncesi (6 temizlik bekçisi deselect): 858 geçti, 6 deselect (30 dk 33 sn)
+  deselect: test_faz4_ceiling_path::test_new_models_are_retro_with_no_record_and_no_metric,
+            test_faz5_post_d1::test_14_models_goldens_and_read_only_paths_unchanged,
+            test_faz7c_golden::test_models_dir_registry_scores_unchanged,
+            test_faz7c_model::test_tables_and_data_versions_unchanged,
+            test_guardrails::test_legacy_and_data_have_no_working_tree_changes,
+            test_scoring::test_faz4_scores_json_existing_blocks_unchanged
+- VA1 = 2f914dd. VA1 sonrası, deselect'siz: 864 geçti (30 dk 55 sn)
+- VA2 öncesi: aynı altı bekçi tek başına koşuldu: 5 kırmızı, test_guardrails yeşil (data/ değişmedi); beşi deselect:
+  859 geçti, 5 deselect (30 dk 49 sn)
+- VA2 = 5a96e25. VA2 sonrası, deselect'siz: 864 geçti (25 dk 17 sn); bash app/scripts/test.sh yeşil (cargo 94 geçti, vitest 222/222, parity 4 geçti,
+  golden_unchanged YEŞİL); gen_golden.py --check 25 dosya, fark 0
+
+Bölüm B
+- Taban (HEAD 93c672b = origin/main, ağaç temiz; s2 ve B kapısı 0 0; 2026-09-29):
+  - .venv/bin/pytest -q: 864 geçti (27 dk 29 sn)
+  - bash app/scripts/test.sh: yeşil (cargo 94 geçti, vitest 222/222, parity 4 geçti, golden_unchanged YEŞİL)
+  - .venv/bin/python app/parity/gen_golden.py --check: 25 dosya, fark 0
+- vault-s5 TAMAM (19:00–19:14).
+- VB öncesi: Bölüm A'nın altı temizlik bekçisi tek başına: 4 kırmızı (commit'lenmemiş data/), 2 yeşil; dördü deselect:
+  860 geçti, 4 deselect (31 dk 45 sn)
+  deselect: test_faz5_post_d1::test_14_models_goldens_and_read_only_paths_unchanged,
+            test_faz7c_model::test_tables_and_data_versions_unchanged,
+            test_guardrails::test_legacy_and_data_have_no_working_tree_changes,
+            test_scoring::test_faz4_scores_json_existing_blocks_unchanged
+- VB = 71b9071. VB sonrası, deselect'siz: 864 geçti (19 dk 33 sn); bash app/scripts/test.sh yeşil (cargo 94 geçti, vitest 222/222,
+  parity 4 geçti, golden_unchanged YEŞİL); gen_golden.py --check 25 dosya, fark 0

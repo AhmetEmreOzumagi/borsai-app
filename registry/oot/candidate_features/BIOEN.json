@@ -1,0 +1,250 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "BIOEN",
+  "company": "Biotrend Çevre ve Enerji Yatırımları A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "252834",
+      "source_id": "KAP_930338_EK1",
+      "source_document": "KAP 930338 ek 1",
+      "source_published_at": "2021-04-22T09:58:16+03:00",
+      "source_sha256": "ac609506f6ae4635c8ba5e27ebb1d37282a21b3dd4bf5f6f238824e05bf65dea",
+      "source_path": "registry/oot/source_docs/BIOEN/KAP_930338_ek1.pdf",
+      "quote": "Toplam 36.666.666 100,0% 271.450 744.076.378 100,0% 252.834 41.666.666 100,0%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "toplam başvuru 271.450; talebi karşılanan 252.834",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "271.450",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "271.450",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "271.450 toplam başvuru sayısı; talebi karşılanan 252.834 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "252698",
+        "domestic_institutional": "136"
+      },
+      "source_id": "KAP_930338_EK1",
+      "source_document": "KAP 930338 ek 1",
+      "source_published_at": "2021-04-22T09:58:16+03:00",
+      "source_sha256": "ac609506f6ae4635c8ba5e27ebb1d37282a21b3dd4bf5f6f238824e05bf65dea",
+      "source_path": "registry/oot/source_docs/BIOEN/KAP_930338_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 29.333.333 80,0% 271.225 668.794.262 89,9% 252.698 33.333.333 80,0%",
+        "Yurt İçi Kurumsal 7,333,333 20,0% 225 75.282.116 10,1% 136 8.333.333 20,0%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "başvuru: bireysel 271.225, kurumsal 225",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "271.225",
+        "Yurt İçi Kurumsal": "225"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '271.225', 'Yurt İçi Kurumsal': '225'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex başvuru sayılarını almış; talebi karşılanan bireysel 252.698, kurumsal 136"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "20",
+      "source_id": "KAP_930338_EK1",
+      "source_document": "KAP 930338 ek 1",
+      "source_published_at": "2021-04-22T09:58:16+03:00",
+      "source_sha256": "ac609506f6ae4635c8ba5e27ebb1d37282a21b3dd4bf5f6f238824e05bf65dea",
+      "source_path": "registry/oot/source_docs/BIOEN/KAP_930338_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara ayrılan tahsisat tutarının yaklaşık 20 katı",
+      "approx": true,
+      "note": "belge 'yaklaşık' diyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": "yaklaşık 20",
+      "codex_check": {
+        "codex_value": "yaklaşık 20",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "9",
+      "source_id": "KAP_930338_EK1",
+      "source_document": "KAP 930338 ek 1",
+      "source_published_at": "2021-04-22T09:58:16+03:00",
+      "source_sha256": "ac609506f6ae4635c8ba5e27ebb1d37282a21b3dd4bf5f6f238824e05bf65dea",
+      "source_path": "registry/oot/source_docs/BIOEN/KAP_930338_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara ayrılan tahsisat tutarının yaklaşık 9 katı",
+      "approx": true,
+      "note": "belge 'yaklaşık' diyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": "yaklaşık 9",
+      "codex_check": {
+        "codex_value": "yaklaşık 9",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok (tabloda yalnız yurt içi bireysel ve kurumsal)",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "33333333",
+        "domestic_institutional": "8333333"
+      },
+      "source_id": "KAP_930338_EK1",
+      "source_document": "KAP 930338 ek 1",
+      "source_published_at": "2021-04-22T09:58:16+03:00",
+      "source_sha256": "ac609506f6ae4635c8ba5e27ebb1d37282a21b3dd4bf5f6f238824e05bf65dea",
+      "source_path": "registry/oot/source_docs/BIOEN/KAP_930338_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 29.333.333 80,0% 271.225 668.794.262 89,9% 252.698 33.333.333 80,0%",
+        "Yurt İçi Kurumsal 7,333,333 20,0% 225 75.282.116 10,1% 136 8.333.333 20,0%"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "33.333.333",
+        "Yurt İçi Kurumsal": "8.333.333"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '33.333.333', 'Yurt İçi Kurumsal': '8.333.333'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "80.0",
+      "source_id": "KAP_930338_EK1",
+      "source_document": "KAP 930338 ek 1",
+      "source_published_at": "2021-04-22T09:58:16+03:00",
+      "source_sha256": "ac609506f6ae4635c8ba5e27ebb1d37282a21b3dd4bf5f6f238824e05bf65dea",
+      "source_path": "registry/oot/source_docs/BIOEN/KAP_930338_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 29.333.333 80,0% 271.225 668.794.262 89,9% 252.698 33.333.333 80,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %80,0",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "80,0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "20.0",
+      "source_id": "KAP_930338_EK1",
+      "source_document": "KAP 930338 ek 1",
+      "source_published_at": "2021-04-22T09:58:16+03:00",
+      "source_sha256": "ac609506f6ae4635c8ba5e27ebb1d37282a21b3dd4bf5f6f238824e05bf65dea",
+      "source_path": "registry/oot/source_docs/BIOEN/KAP_930338_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 7,333,333 20,0% 225 75.282.116 10,1% 136 8.333.333 20,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %20,0",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "20,0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD pencereleri dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Deniz Yatırım Menkul Kıymetler A.Ş.",
+      "source_id": "KAP_928932_EK1",
+      "source_document": "KAP 928932 ek 1",
+      "source_published_at": "2021-04-16T18:22:21+03:00",
+      "source_sha256": "e4ddb74466ab274a6a9ec6bd541c70913ca06864afd11855ced7637863027320",
+      "source_path": "registry/oot/source_docs/BIOEN/KAP_928932_ek1.pdf",
+      "quote": "halka arzda satişa aracılık edecek Deniz Yatırım Menkul Kıymetler A.Ş.'nin",
+      "note": "TSSD aracı kurum olarak Türkiye Sınai Kalkınma Bankası A.Ş.'yi de anıyor; sonuçları Deniz Yatırım yayımlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": "DENİZ YATIRIM MENKUL KIYMETLER A.Ş.",
+      "codex_check": {
+        "codex_value": "DENİZ YATIRIM MENKUL KIYMETLER A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "yazım farkı"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR) metninde fiyat istikrarı geçmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_930962",
+      "source_document": "KAP 930962",
+      "source_published_at": "2021-04-26T18:13:30+03:00",
+      "source_sha256": "0d350fb78fa12dad3074a01fb5cb8b5ca87f6c5a294c2da40a2e0e8698c01e73",
+      "source_path": "registry/oot/source_docs/BIOEN/KAP_930962_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_930962",
+      "source_document": "KAP 930962",
+      "source_published_at": "2021-04-26T18:13:30+03:00",
+      "source_sha256": "0d350fb78fa12dad3074a01fb5cb8b5ca87f6c5a294c2da40a2e0e8698c01e73",
+      "source_path": "registry/oot/source_docs/BIOEN/KAP_930962_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_930962": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 930962",
+      "published_at": "2021-04-26T18:13:30+03:00",
+      "sha256": "0d350fb78fa12dad3074a01fb5cb8b5ca87f6c5a294c2da40a2e0e8698c01e73",
+      "path": "registry/oot/source_docs/BIOEN/KAP_930962_bildirim.pdf"
+    },
+    "KAP_930338_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 930338 ek 1",
+      "published_at": "2021-04-22T09:58:16+03:00",
+      "sha256": "ac609506f6ae4635c8ba5e27ebb1d37282a21b3dd4bf5f6f238824e05bf65dea",
+      "path": "registry/oot/source_docs/BIOEN/KAP_930338_ek1.pdf"
+    },
+    "KAP_928932_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 928932 ek 1",
+      "published_at": "2021-04-16T18:22:21+03:00",
+      "sha256": "e4ddb74466ab274a6a9ec6bd541c70913ca06864afd11855ced7637863027320",
+      "path": "registry/oot/source_docs/BIOEN/KAP_928932_ek1.pdf"
+    }
+  }
+}

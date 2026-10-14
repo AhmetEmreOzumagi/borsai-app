@@ -1,0 +1,28 @@
+BORSAI_FAZ6_S3_S5_EXTRACT — test koşuları (Bölüm A ve EK1). Komutlar: `.venv/bin/pytest -q` (pyproject addopts: -p no:cacheprovider),
+`bash app/scripts/test.sh`, `.venv/bin/python app/parity/gen_golden.py --check`. Zamanlar UTC; süreler pytest'in kendi ölçümü.
+
+| # | Durum (HEAD; çalışma ağacı) | pytest | test.sh | Not |
+|---|---|---|---|---|
+| 0 | Taban: f57ce50; yalnız görev dosyası izlenmiyor | 598 geçti (602,6 s) | yeşil: cargo 94, npm 222, parity 4, golden_unchanged YEŞİL | gen_golden --check: 25 dosya, fark yok; s2_gate_problems() == []; karantina yok |
+| 1 | T1 önce kırmızı: yeni testler, borsai/outcomes_oot.py = HEAD | T1 testi: 1 kırmızı (FileExistsError) | — | docs/faz6/ekler/s3_s5_mutasyon.txt |
+| 2 | C öncesi: T1–T3 kodu + 5 yeni test | 603 geçti (1042,5 s; mutasyon klonu aynı anda koştu) | yeşil: cargo 94, npm 222, parity 4, golden YEŞİL | commit C 1c0803e |
+| 3 | Prob (ilk ağ işi) | — | — | DUR: CalendarConflict (5/5 XU100-boşluk günü HEAD 200) -> EK1 |
+| 4 | E1 öncesi: EK1 kodu + 4 yeni test, 2 test uyarlandı | 607 geçti (422,7 s) | yeşil: cargo 94, npm 222, parity 4, golden YEŞİL | commit E1 5975cd8 |
+| 5 | E2 öncesi: ?? kanıt dosyası | 3 kırmızı, hepsi temizlik bekçisi ve yalnız bu dosya yüzünden: test_guardrails::test_legacy_and_data_have_no_working_tree_changes, test_faz5_post_d1::test_14_models_goldens_and_read_only_paths_unchanged, test_scoring::test_faz4_scores_json_existing_blocks_unchanged | — | eski kohort ve takvim testleri (test_faz6_oot, test_outcome_guard) 82/82 yeşil |
+| 6 | Aynı, üçü deselect | 604 geçti, 3 deselect (451,8 s) | — | commit E2 ae42f85 |
+| 7 | E2 sonrası, deselect'siz | 607 geçti (471,1 s) | — | prob yeşil (EVIDENCE, 42 gün) |
+| 8 | S3a öncesi: ?? d1_rows + MANIFEST_OOT | 4 kırmızı, hepsi temizlik bekçisi ve yalnız bu dosyalar yüzünden: yukarıdaki üçü + test_faz4_ceiling_path::test_new_models_are_retro_with_no_record_and_no_metric | — | eski kohort bekçileri yeşil (SEALED yokluğu dahil) |
+| 9 | Aynı, dördü deselect | 603 geçti, 4 deselect (430,0 s) | — | commit S3a 9e1e992 |
+| 10 | S3a sonrası, deselect'siz | 607 geçti (474,4 s) | — | |
+| 11 | S3b öncesi: ?? post_d1 | 3 kırmızı, hepsi yalnız ?? registry/oot/post_d1/ yüzünden: test_faz5_post_d1::test_14…, test_scoring::test_faz4_scores_json…, test_faz4_ceiling_path::test_new_models_are_retro… (test_guardrails yeşil: data/ temiz) | — | test_faz6_oot + test_outcome_guard 82/82 yeşil |
+| 12 | Aynı, üçü deselect | 604 geçti, 3 deselect (586,9 s) | — | commit S3b 7ade6a8 |
+| 13 | S3b sonrası, deselect'siz | 607 geçti (1139,3 s; makine yüklü) | yeşil: cargo 94, npm 222, parity 4, golden_unchanged YEŞİL | s2_gate_problems() == []; s3_gate_problems(): 142, hepsi "push kanıtı yok" |
+
+Bölüm B (S5)
+
+| # | Durum (HEAD; çalışma ağacı) | pytest | test.sh | Not |
+|---|---|---|---|---|
+| B0 | Taban: 3c82378 (S3 kanıtları); ağaç temiz | 607 geçti (373,5 s) | yeşil: cargo 94, npm 222, parity 4, golden_unchanged YEŞİL | gen_golden --check 25/0; s2_gate_problems(), s3_gate_problems() -> [] [] |
+| B1 | S5 öncesi: ?? data/outcomes_oot, M MANIFEST_OOT | 3 kırmızı, hepsi temizlik bekçisi ve yalnız bu data/ değişikliği yüzünden: test_guardrails::test_legacy_and_data_have_no_working_tree_changes, test_faz5_post_d1::test_14_models_goldens_and_read_only_paths_unchanged, test_scoring::test_faz4_scores_json_existing_blocks_unchanged (test_faz4_ceiling_path yeşil: registry/ temiz) | — | test_faz6_oot + test_outcome_guard 82/82 yeşil |
+| B2 | Aynı, üçü deselect | 604 geçti, 3 deselect (391,0 s) | — | commit S5 77b54f7 |
+| B3 | S5 sonrası, deselect'siz | 607 geçti (473,4 s) | yeşil: cargo 94, npm 222, parity 4, golden_unchanged YEŞİL | |

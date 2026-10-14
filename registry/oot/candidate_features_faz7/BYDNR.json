@@ -1,0 +1,241 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "BYDNR",
+ "company": "Baydöner Restoranları A.Ş.",
+ "first_trading_date": "2023-08-21",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Borsa'da satış; yatırımcı grubu tahsisatı yok; eşit dağıtım",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_1184379_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189e3bc1047733a",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1184379",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1184379",
+   "published_at": "2023-08-11T11:36:08+03:00",
+   "source_sha256": "74d1f26b07f69a09591ffaeb8ee59d0083ae79238ebb0d2902c3640c9de0ece1",
+   "source_file": "source_docs/BYDNR/KAP_1184379_ek1.pdf",
+   "page": 11,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Halka arzda yatırımcılara tahsis ve dağıtım esasları: \"Borsada Satış\" yöntemi ile Borsa Istanbul Birincil Piyasa'da *Borsa'da Satış- Sabit Fiyatla Talep Toplama ve Satış Yöntemi\" ne göre paylar satışa sunulacağı için herhangi bir yatırımcı grubuna tahsisal ve dağıtım yapılımayacaktır. Dağıtım eşit dağıtım yöntemine göre yapılacaktır.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1184379_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189e3bc1047733a",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1184379",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1184379",
+     "published_at": "2023-08-11T11:36:08+03:00",
+     "source_sha256": "74d1f26b07f69a09591ffaeb8ee59d0083ae79238ebb0d2902c3640c9de0ece1",
+     "source_file": "source_docs/BYDNR/KAP_1184379_ek1.pdf",
+     "page": 12,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "c) Bireysel yatırımcılar ve ihraççının çahşanlarına ilişkin tahsisat grubunda tahsis edilen nominal değerden daha fazla talep gelmesi durumunda uygulanacak dağıtım yönteml/yöntemleri: Yoktur."
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Borsa İstanbul Birincil Piyasa'da Borsa'da Satış - Sabit Fiyatla Talep Toplama ve Satış Yöntemi (Halk Yatırım, 15-16/08/2023). Yatırımcı grubu tahsisatı yok; izahname dağıtımın eşit dağıtım yöntemine göre yapılacağını yazıyor; dağıtımı Borsa sistemi otomatik yapar (s.12). BIST birincil piyasa duyurusu (KAP_1184599) aynı yöntemi teyit ediyor."
+  },
+  "price_stability_planned": {
+   "value": "TRUE",
+   "unit": "boolean",
+   "status": "FILLED",
+   "source_id": "KAP_1184379_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189e3bc1047733a",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1184379",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1184379",
+   "published_at": "2023-08-11T11:36:08+03:00",
+   "source_sha256": "74d1f26b07f69a09591ffaeb8ee59d0083ae79238ebb0d2902c3640c9de0ece1",
+   "source_file": "source_docs/BYDNR/KAP_1184379_ek1.pdf",
+   "page": 16,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: Fiyat istikrarı işlemlerinin gerçekleştirilmesi planlanmaktadır.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Fiyat istikrarını Halk Yatırım yapar; brüt halka arz gelirinin %10'u (Fon Tutarı), halka arz eden pay sahiplerinin gelirinden karşılanır. Garanti yok (26.5.1)."
+  },
+  "price_stability_days": {
+   "value": "15",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1184379_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189e3bc1047733a",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1184379",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1184379",
+   "published_at": "2023-08-11T11:36:08+03:00",
+   "source_sha256": "74d1f26b07f69a09591ffaeb8ee59d0083ae79238ebb0d2902c3640c9de0ece1",
+   "source_file": "source_docs/BYDNR/KAP_1184379_ek1.pdf",
+   "page": 16,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5.2. Fiyat istikrarı işlemlerinin gerçekleştirilebileceği zaman aralığı: Payların borsada işlem göreye başlamasından itibaren 15 gündür.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Özet (KAP_1184374_EK1 s.29) de 'en fazla 15 gündür' diyor."
+  },
+  "issuer_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1184379_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189e3bc1047733a",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1184379",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1184379",
+   "published_at": "2023-08-11T11:36:08+03:00",
+   "source_sha256": "74d1f26b07f69a09591ffaeb8ee59d0083ae79238ebb0d2902c3640c9de0ece1",
+   "source_file": "source_docs/BYDNR/KAP_1184379_ek1.pdf",
+   "page": 17,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "a) İbraççı tarafiadan verllen taahbüt: Şirket, 24 Nisan 2023 tarih ve 2023/014 sayılı yönetim kurulu kararına istinaden,Şirket'in paylarınm Borse Istanbul'da işlem görmeye başladığı tarihten itibaren 1 (bir) yıl sürevlę, bedelli veya bedelsiz sermave artırıms yapılmayacağı",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "1 yıl = 365. Kapsam: bedelli veya bedelsiz sermaye artırımı yapmama, dolaşımdaki pay miktarını iç kaynaklardan artırımlar dahil artırmama, maliki olunabilecek Şirket paylarını satmama/tasarrufta bulunmama; Borsa dışı satışlar da kapsamda. Başlangıç: Borsa İstanbul'da işlem görmeye başlama."
+  },
+  "shareholder_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1184379_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189e3bc1047733a",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1184379",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1184379",
+   "published_at": "2023-08-11T11:36:08+03:00",
+   "source_sha256": "74d1f26b07f69a09591ffaeb8ee59d0083ae79238ebb0d2902c3640c9de0ece1",
+   "source_file": "source_docs/BYDNR/KAP_1184379_ek1.pdf",
+   "page": 17,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "b) Ortaklar tarafiudan verilen taahhütler: Mevcut ortaklar Ferudun Tunçer ve Levent Yılmaz, ayrı ayrı verdikleri taahhümameier ile, SPKn ve SPK'nın tebliğ ve diğer düzenlemeleri dahil olmak üzere ilgili mevzuat kapsammda Baydöner'in paylarının Borsa Istanbul'da işlem görmeye başladığı tarihten itibaren J.ťbirlaıl sürevle maliki oldukları ve olabilecekleri, halke. arz edilen paylar dışında kalan Baydöner paylarını, hiçbir şekilde Borsa İstanbul'da veva Borsa İstanbul dışında satmayacaklarını",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1184379_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189e3bc1047733a",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1184379",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1184379",
+     "published_at": "2023-08-11T11:36:08+03:00",
+     "source_sha256": "74d1f26b07f69a09591ffaeb8ee59d0083ae79238ebb0d2902c3640c9de0ece1",
+     "source_file": "source_docs/BYDNR/KAP_1184379_ek1.pdf",
+     "page": 17,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "c) Sermaye plyasası mevzuatı kapsammda verileo tasbbüdler: Mevcut ortaklar Ferudun Tunçer ve Levent Yılmaz, ayrı ayrı verdikieri taahhümameler ile, SPKn ve SPK'nm tebliğ ve diğer düzenlemeleri dahil olmak üzere ilgili mevzuat kapsamında Baydöner'in paylarının Borsa İstanbul'da işlem görmeye başladığı tarihten itibaren Libirıyıl süreyle"
+    },
+    {
+     "source_id": "KAP_1184374_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189e3b7efba72ba",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1184374",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1184374",
+     "published_at": "2023-08-11T11:33:05+03:00",
+     "source_sha256": "ef4cfc017b1156d58273414d0cfc624ee8a92c6e19f5af29da8d19e9add0401d",
+     "source_file": "source_docs/BYDNR/KAP_1184374_ek1.pdf",
+     "page": 53,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Mevcut ortaklar Ferudun Tunçer ve Levent Yılmaz, ayrı ayrı verdikleri taahhütnameler ile, SPKn ve SPK'nın tebliğ ve diğer düzenlemeleri dahil olmak üzere ilgili mevzuat kapsamında Baydöner'in paylarıın Borsa Istanbul'da işlem görmeye başladığı tarihten itibaren 1 (bir) yıl süreyle maliki oldukları ve olabilecekleri, halka arz edilen paylar dışında kalan Baydöner paylarını, hiçbir şekilde Borsa Istanbul'da veya Borsa İstanbul dışında satmayacaklarını"
+    }
+   ],
+   "components": [
+    {
+     "who": "Ferudun Tunçer (halka arz eden, YK başkan yardımcısı)",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Levent Yılmaz (halka arz eden, YK başkanı)",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Ferudun Tunçer",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "MEVZUAT (c) SPKn ve SPK düzenlemeleri kapsamında",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Levent Yılmaz",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "MEVZUAT (c) SPKn ve SPK düzenlemeleri kapsamında",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "b) ve c) aynı metin: iki ortak halka arz edilen paylar dışındaki paylarını 1 yıl hiçbir şekilde Borsa İstanbul'da veya dışında satmama/devretmeme. §27.3 (s.17) OCR'da süre 'J.ťbirlaıl' / 'Libirıyıl' (1 (bir) yıl) bozuk; süre risk faktörleri bölümündeki aynı taahhüt cümlesinden (KAP_1184374_EK1 s.53, '1 (bir) yıl süreyle') ve Özet s.31'den ('1 yıf süreyle') okunuyor. En kısa süre 365. d) Yetkili kuruluşlar: Yoktur. [20/412 uyumlaştırma: değişiklik yok; belgelerde mevcut ortaklara ilişkin ayrı bir i-SPK.128.21 (20/412) 180 günlük kısıt yazılı değil (qfind '20/412|128.21|borsada satışı da kapsayacak|virman|özel emir|180 gün' yalnız yatırımcı kısıtına atıf, KAP_1184379_EK1 s.7); iki ortağın 1 yıllık 'Borsa İstanbul'da veya Borsa İstanbul dışında satmayacaklarını' taahhüdü zaten MUTLAK. Değer 365.]"
+  },
+  "sector": {
+   "value": "Restoran işletmeciliği",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_1184376_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189e3ba133c72f6",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1184376",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1184376",
+   "published_at": "2023-08-11T11:35:11+03:00",
+   "source_sha256": "95a27d2bad71cdb54dbb8f9c6e99639082acd727d66ad041a0b0214558e9932f",
+   "source_file": "source_docs/BYDNR/KAP_1184376_ek1.pdf",
+   "page": 73,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Şirket'in esas faaliyet konusunu restoran işletmeciliği oluşturmaktadır.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Baydöner, Bursa İshakbey ve Pide by Pide markalarıyla şube ve franchise restoranlar (yeme-içme sektörü; Özet B.3, KAP_1184374_EK1 s.11)."
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahname Borsa Görüşü (KAP_1184374_EK1 s.7, Borsa İstanbul 11.04.2023 yazısı) yalnız Yıldız Pazar ve hukukçu raporu şartlarını içeriyor, BIST Katılım Tüm Endeksi değerlendirmesi yok. qfind 'Katılım Tüm Endeks|yer alma şartlarını|katılım endeks|katılım finans|faizsiz|icazet|Bilgi Formu' bütün belgelerde eşleşme vermedi ('katılım' yalnız franchise katılım bedeli, genel kurula katılım vb.). §35 Ekler listesi (KAP_1184379_EK1 s.31, son sayfa) Ek-1..Ek-7'de Katılım Finans İlkeleri Bilgi Formu anmıyor; liste 'Ek-8 Şirket tarafında' ifadesinde sayfa sonunda kesiliyor (devamı belge setinde yok) — doğrulayıcı Ek-8 adını kontrol edebilir. TSSD ve BIST birincil piyasa duyurusunda da beyan yok.",
+   "looked_at": [
+    "KAP_1184374_EK1",
+    "KAP_1184376_EK1",
+    "KAP_1184379_EK1",
+    "KAP_1184402_EK1",
+    "KAP_1184402",
+    "KAP_1184599"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_1184374_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1184374",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189e3b7efba72ba",
+   "published_at": "2023-08-11T11:33:05+03:00",
+   "sha256": "ef4cfc017b1156d58273414d0cfc624ee8a92c6e19f5af29da8d19e9add0401d",
+   "file": "source_docs/BYDNR/KAP_1184374_ek1.pdf"
+  },
+  "KAP_1184376_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1184376",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189e3ba133c72f6",
+   "published_at": "2023-08-11T11:35:11+03:00",
+   "sha256": "95a27d2bad71cdb54dbb8f9c6e99639082acd727d66ad041a0b0214558e9932f",
+   "file": "source_docs/BYDNR/KAP_1184376_ek1.pdf"
+  },
+  "KAP_1184379_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1184379",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189e3bc1047733a",
+   "published_at": "2023-08-11T11:36:08+03:00",
+   "sha256": "74d1f26b07f69a09591ffaeb8ee59d0083ae79238ebb0d2902c3640c9de0ece1",
+   "file": "source_docs/BYDNR/KAP_1184379_ek1.pdf"
+  }
+ }
+}

@@ -1,0 +1,202 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "OBASE",
+  "company": "Obase Bilgisayar ve Danışmanlık Hizmetleri Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "305665",
+      "source_id": "KAP_1050170_EK1",
+      "source_document": "KAP 1050170 ek 1",
+      "source_published_at": "2022-08-01T11:13:09+03:00",
+      "source_sha256": "1d6143e6852fefe7977a2578aff28d06d4974ee1a7296a55f424cf0e06dbede9",
+      "source_path": "registry/oot/source_docs/OBASE/KAP_1050170_ek1.pdf",
+      "quote": "Toplam 305.665 14.000.000 100,00%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talepte 312.620 adet emir; mükerrer tarama sonrası 305.665 yatırımcıya satış",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "305224",
+        "domestic_institutional": "22",
+        "foreign_retail": "419",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_1050170_EK1",
+      "source_document": "KAP 1050170 ek 1",
+      "source_published_at": "2022-08-01T11:13:09+03:00",
+      "source_sha256": "1d6143e6852fefe7977a2578aff28d06d4974ee1a7296a55f424cf0e06dbede9",
+      "source_path": "registry/oot/source_docs/OBASE/KAP_1050170_ek1.pdf",
+      "quote": [
+        "Yurt içi Yatırımcı 305.246 13.980.878 99,86% Bireysel Yatırımcı(*) 305.224 13.979.998 99,86% Kurumsal Yatırımcı(**) 22 880 0,01%",
+        "Yurt dışı Yatırımcı 419 19.122 0,14% Bireysel Yatırımcı(*) 419 19.122 0,14% Kurumsal Yatırımcı(**) 0 0 0,00%"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır', grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "13979998",
+        "domestic_institutional": "880",
+        "foreign_retail": "19122",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_1050170_EK1",
+      "source_document": "KAP 1050170 ek 1",
+      "source_published_at": "2022-08-01T11:13:09+03:00",
+      "source_sha256": "1d6143e6852fefe7977a2578aff28d06d4974ee1a7296a55f424cf0e06dbede9",
+      "source_path": "registry/oot/source_docs/OBASE/KAP_1050170_ek1.pdf",
+      "quote": [
+        "Yurt içi Yatırımcı 305.246 13.980.878 99,86% Bireysel Yatırımcı(*) 305.224 13.979.998 99,86% Kurumsal Yatırımcı(**) 22 880 0,01%",
+        "Yurt dışı Yatırımcı 419 19.122 0,14% Bireysel Yatırımcı(*) 419 19.122 0,14% Kurumsal Yatırımcı(**) 0 0 0,00%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.86",
+      "source_id": "KAP_1050170_EK1",
+      "source_document": "KAP 1050170 ek 1",
+      "source_published_at": "2022-08-01T11:13:09+03:00",
+      "source_sha256": "1d6143e6852fefe7977a2578aff28d06d4974ee1a7296a55f424cf0e06dbede9",
+      "source_path": "registry/oot/source_docs/OBASE/KAP_1050170_ek1.pdf",
+      "quote": "Yurt içi Yatırımcı 305.246 13.980.878 99,86% Bireysel Yatırımcı(*) 305.224 13.979.998 99,86%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yurt içi bireysel (gerçek ve tüzel kişiler); yurt dışı bireysel 0,14",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.01",
+      "source_id": "KAP_1050170_EK1",
+      "source_document": "KAP 1050170 ek 1",
+      "source_published_at": "2022-08-01T11:13:09+03:00",
+      "source_sha256": "1d6143e6852fefe7977a2578aff28d06d4974ee1a7296a55f424cf0e06dbede9",
+      "source_path": "registry/oot/source_docs/OBASE/KAP_1050170_ek1.pdf",
+      "quote": "Kurumsal Yatırımcı(**) 22 880 0,01%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.00",
+      "source_id": "KAP_1050170_EK1",
+      "source_document": "KAP 1050170 ek 1",
+      "source_published_at": "2022-08-01T11:13:09+03:00",
+      "source_sha256": "1d6143e6852fefe7977a2578aff28d06d4974ee1a7296a55f424cf0e06dbede9",
+      "source_path": "registry/oot/source_docs/OBASE/KAP_1050170_ek1.pdf",
+      "quote": "Kurumsal Yatırımcı(**) 0 0 0,00%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”, Borsa İstanbul Birincil Piyasa) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Türkiye Kalkınma ve Yatırım Bankası A.Ş.",
+      "source_id": "KAP_1047475_EK1",
+      "source_document": "KAP 1047475 ek 1",
+      "source_published_at": "2022-07-22T23:16:05+03:00",
+      "source_sha256": "04d79622cad27593929722d50fb0c198a7bdfe79e62792d8c793f1294b758475",
+      "source_path": "registry/oot/source_docs/OBASE/KAP_1047475_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Türkiye Kalkınma ve Yatırım Bankası A.Ş.'nin",
+      "note": "TSSD iki aracı kurum sayıyor: ayrıca 'halka arzda satışa aracılık edecek Zıraat Yahırım Menkul Değerler A.Ş.'nin' (OCR; imza bölümünde 'Ziraat Yatırım Menkul Değerler A.Ş.'); konsorsiyum lideri ayrıca belirtilmiyor; TSSD'yi TSKB, sonucu Ziraat Yatırım yayımladı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim, OCR) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "ANA PAZAR",
+      "source_id": "KAP_1050472",
+      "source_document": "KAP 1050472",
+      "source_published_at": "2022-08-01T18:02:17+03:00",
+      "source_sha256": "4dc0656d9c4e649437a1fa890f208c8c0cdcb83450fff8b4e0fe6a9f13ac85ae",
+      "source_path": "registry/oot/source_docs/OBASE/KAP_1050472_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar ANA PAZAR",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_1050472",
+      "source_document": "KAP 1050472",
+      "source_published_at": "2022-08-01T18:02:17+03:00",
+      "source_sha256": "4dc0656d9c4e649437a1fa890f208c8c0cdcb83450fff8b4e0fe6a9f13ac85ae",
+      "source_path": "registry/oot/source_docs/OBASE/KAP_1050472_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1050472": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1050472",
+      "published_at": "2022-08-01T18:02:17+03:00",
+      "sha256": "4dc0656d9c4e649437a1fa890f208c8c0cdcb83450fff8b4e0fe6a9f13ac85ae",
+      "path": "registry/oot/source_docs/OBASE/KAP_1050472_bildirim.pdf"
+    },
+    "KAP_1050170_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1050170 ek 1",
+      "published_at": "2022-08-01T11:13:09+03:00",
+      "sha256": "1d6143e6852fefe7977a2578aff28d06d4974ee1a7296a55f424cf0e06dbede9",
+      "path": "registry/oot/source_docs/OBASE/KAP_1050170_ek1.pdf"
+    },
+    "KAP_1047475_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1047475 ek 1",
+      "published_at": "2022-07-22T23:16:05+03:00",
+      "sha256": "04d79622cad27593929722d50fb0c198a7bdfe79e62792d8c793f1294b758475",
+      "path": "registry/oot/source_docs/OBASE/KAP_1047475_ek1.pdf"
+    }
+  }
+}

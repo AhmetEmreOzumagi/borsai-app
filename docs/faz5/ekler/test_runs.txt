@@ -1,0 +1,31 @@
+## Taban (adım 0) — HEAD 72a000f, 2026-09-24T11:02:49Z → 11:07:54Z (UTC)
+$ .venv/bin/pytest -q -p no:cacheprovider
+........................................................................ [ 80%]
+........................................................................ [ 96%]
+................                                                         [100%]
+448 passed in 303.59s (0:05:03)
+
+## Commit A öncesi — HEAD 72a000f + A değişiklikleri (commit edilmemiş), 2026-09-24T11:41:33Z → 2026-09-24T11:53:19Z (UTC)
+$ .venv/bin/pytest -q -p no:cacheprovider
+........................................................................ [ 74%]
+........................................................................ [ 89%]
+..................................................                       [100%]
+482 passed in 704.77s (0:11:44)
+
+## Commit B öncesi — HEAD 7ce0593 (A) + B dosyaları (commit edilmemiş), 2026-09-24T12:01:39Z → 2026-09-24T12:11:53Z (UTC)
+$ .venv/bin/pytest -q -p no:cacheprovider --durations=12
+============================= slowest 12 durations =============================
+371.23s setup    tests/test_acceptance_backtest.py::test_1_fold_plan_counts
+55.53s call     tests/test_market20.py::test_9_constant_f6_reproduces_v1_5_golden
+20.59s call     tests/test_faz5_post_d1.py::test_t4_scores_unchanged_with_post_d1_index
+10.97s setup    tests/test_faz5_golden.py::test_backtest_byte_identical_to_faz5_golden
+10.14s call     tests/test_faz1b_models.py::test_refit_reproduces_frozen_parameters[v1_6_h99]
+9.18s call     tests/test_faz1b_models.py::test_refit_reproduces_frozen_parameters[v1_5_market20_v0]
+8.88s call     tests/test_faz5_post_d1.py::test_8b_test_ipo_d1_fields_do_not_touch_training
+8.83s setup    tests/test_faz5_post_d1.py::test_t2_t7_pipeline_inf_ledger_equals_comparator
+8.57s call     tests/test_faz4_ceiling_path.py::test_6_predict_parity_with_backtest_final_freeze
+7.71s call     tests/test_faz1b_models.py::test_refit_reproduces_frozen_parameters[pb_v0]
+7.61s setup    tests/test_faz5_post_d1.py::test_3_offset_parity_every_fold_and_final
+5.28s setup    tests/test_scoring.py::test_5j_every_class_in_scores_is_recomputed_from_evidence
+490 passed in 612.25s (0:10:12)
+

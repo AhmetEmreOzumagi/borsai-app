@@ -1,0 +1,200 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "PLTUR",
+  "company": "Platform Turizm Taşımacılık Gıda İnşaat Temizlik Hizmetleri Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "630866",
+      "source_id": "KAP_1086587_EK1",
+      "source_document": "KAP 1086587 ek 1",
+      "source_published_at": "2022-12-12T12:18:59+03:00",
+      "source_sha256": "ce88eda02dc500a1214f886d509d7327a04a0a5fd6c2a13c8da86174e3482acc",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086587_ek1.pdf",
+      "quote": "toplam 630.866 yatırımcı 49.500.000 TL nominal değerli payın alımını gerçekleştirmiştir.",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "belge ayrıca 'Halka arza toplamda 630.866 yatırımcı katılmıştır' diyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "630.866",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "629921",
+        "domestic_institutional": "57",
+        "foreign_retail": "888"
+      },
+      "source_id": "KAP_1086587_EK1",
+      "source_document": "KAP 1086587 ek 1",
+      "source_published_at": "2022-12-12T12:18:59+03:00",
+      "source_sha256": "ce88eda02dc500a1214f886d509d7327a04a0a5fd6c2a13c8da86174e3482acc",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086587_ek1.pdf",
+      "quote": "toplam 629.921 yerli gerçek ve tüzel kişi yatırımcı, 888 yabancı gerçek kişi yatırımcı, 57 yerli kurumsal yatırımcı olmak üzere toplam 630.866 yatırımcı 49.500.000 TL nominal değerli payın alımını gerçekleştirmiştir.",
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır', grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "49426543",
+        "domestic_institutional": "4390",
+        "foreign_retail": "69067"
+      },
+      "source_id": "KAP_1086587_EK1",
+      "source_document": "KAP 1086587 ek 1",
+      "source_published_at": "2022-12-12T12:18:59+03:00",
+      "source_sha256": "ce88eda02dc500a1214f886d509d7327a04a0a5fd6c2a13c8da86174e3482acc",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086587_ek1.pdf",
+      "quote": [
+        "Yurt İçi Yatırımcı 629.978 49.430.933 99,86 - Bireysel Yatırımcı (*) 629.921 49.426.543 99,85 - Kurumsal Yatırımcı (**) 57 4.390 0,01",
+        "Yurt Dışı Yatırımcı 888 69.067 0,14 - Bireysel Yatırımcı (*) 888 69.067 0,14"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.85",
+      "source_id": "KAP_1086587_EK1",
+      "source_document": "KAP 1086587 ek 1",
+      "source_published_at": "2022-12-12T12:18:59+03:00",
+      "source_sha256": "ce88eda02dc500a1214f886d509d7327a04a0a5fd6c2a13c8da86174e3482acc",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086587_ek1.pdf",
+      "quote": "Yurt İçi Yatırımcı 629.978 49.430.933 99,86 - Bireysel Yatırımcı (*) 629.921 49.426.543 99,85",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yurt içi bireysel (gerçek ve tüzel kişiler); yurt dışı bireysel ayrıca 0,14",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.01",
+      "source_id": "KAP_1086587_EK1",
+      "source_document": "KAP 1086587 ek 1",
+      "source_published_at": "2022-12-12T12:18:59+03:00",
+      "source_sha256": "ce88eda02dc500a1214f886d509d7327a04a0a5fd6c2a13c8da86174e3482acc",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086587_ek1.pdf",
+      "quote": "- Kurumsal Yatırımcı (**) 57 4.390 0,01",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "dağıtım tablosunda yurt dışı kurumsal satırı yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”, Borsa İstanbul Birincil Piyasa) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede satış yöntemi olarak geçiyor, dağıtım yöntemi değil ('herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'); alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "İnfo Yatırım Menkul Degerler A.Ş.",
+      "source_id": "KAP_1084563_EK1",
+      "source_document": "KAP 1084563 ek 1",
+      "source_published_at": "2022-12-05T23:57:25+03:00",
+      "source_sha256": "0ed11b398a9b95dac480154584ed3b1594d46cab9caa63021ebc43cb617f5b37",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1084563_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek İnfo Yatırım Menkul Degerler A.Ş.'nin",
+      "note": "TSSD OCR metni; sonuç bildirimini İNFO YATIRIM MENKUL DEĞERLER A.Ş. yayımladı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim, OCR) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1086666",
+      "source_document": "KAP 1086666",
+      "source_published_at": "2022-12-12T18:10:33+03:00",
+      "source_sha256": "be7540992fda1d22076f30ba92f8091946b0c1080182f01a40808938a30666e3",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086666_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_1086666",
+      "source_document": "KAP 1086666",
+      "source_published_at": "2022-12-12T18:10:33+03:00",
+      "source_sha256": "be7540992fda1d22076f30ba92f8091946b0c1080182f01a40808938a30666e3",
+      "source_path": "registry/oot/source_docs/PLTUR/KAP_1086666_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1086666": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1086666",
+      "published_at": "2022-12-12T18:10:33+03:00",
+      "sha256": "be7540992fda1d22076f30ba92f8091946b0c1080182f01a40808938a30666e3",
+      "path": "registry/oot/source_docs/PLTUR/KAP_1086666_bildirim.pdf"
+    },
+    "KAP_1086587_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1086587 ek 1",
+      "published_at": "2022-12-12T12:18:59+03:00",
+      "sha256": "ce88eda02dc500a1214f886d509d7327a04a0a5fd6c2a13c8da86174e3482acc",
+      "path": "registry/oot/source_docs/PLTUR/KAP_1086587_ek1.pdf"
+    },
+    "KAP_1084563_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1084563 ek 1",
+      "published_at": "2022-12-05T23:57:25+03:00",
+      "sha256": "0ed11b398a9b95dac480154584ed3b1594d46cab9caa63021ebc43cb617f5b37",
+      "path": "registry/oot/source_docs/PLTUR/KAP_1084563_ek1.pdf"
+    }
+  }
+}

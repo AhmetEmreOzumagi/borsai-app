@@ -1,0 +1,19 @@
+[ÖLÇTÜM] SESSIONS satır 990 TARGETS satır 396 tablo satır 99 v2 H99 satır 99
+[ÖLÇTÜM] ham≠normalleştirilmiş (metin): 0 | (Decimal): 0
+[ÖLÇTÜM] security_trading_status: {'ACTIVE_NOT_SUSPENDED': 990}
+[ÖLÇTÜM] session_type: {'OPEN_FULL_DAY': 984, 'OPEN_HALF_DAY': 6}
+[ÖLÇTÜM] yarım gün seansları: [('ENTRA', 4, '2024-04-09'), ('MCARD', 7, '2026-03-19'), ('LXGYO', 8, '2026-03-19'), ('GENKM', 10, '2026-03-19'), ('SVGYO', 10, '2026-03-19'), ('EKDMR', 3, '2026-05-26')]
+[ÖLÇTÜM] kapanış > üst limit: 0 | kapanış < alt limit: 0
+[ÖLÇTÜM] üst limit/referans aralığı: 1.096045…1.100000
+[ÖLÇTÜM] seans başına tavan (D1..D10): [81, 70, 67, 54, 48, 46, 39, 30, 26, 25]
+[ÖLÇTÜM] L dağılımı 0..10: [18, 11, 4, 13, 12, 8, 6, 6, 4, 3, 14] | L≥1/3/5/10: [81, 66, 41, 14]
+[ÖLÇTÜM] tavan/L uyuşmazlığı tabloyla: 0 []
+[ÖLÇTÜM] R_h metin uyuşmazlığı: 0 [] | Y_h uyuşmazlığı: 0 []
+[ÖLÇTÜM] v2 H99 satırlarında 31 sütun v1'den farklı olan arz: 0
+[ÖLÇTÜM] Y=1 sayıları D1/D3/D5/D10: {1: 89, 3: 80, 5: 77, 10: 70}
+[ÖLÇTÜM] D1 referans ≠ arz fiyatı: [('LILAK', '37.39', '37.4'), ('ARTMS', '25.35', '25.36'), ('AVPGY', '55.08', '55.1'), ('BORLS', '25.29', '25.3')]
+[ÖLÇTÜM] D1 tavan kapatan: 81 | R_D1 tam 0.1: 50 | min: 0.098901098901098901098901098901098901098901098901099 | max: 0.10029419630917357582241240973522332174378175982883 | >0.1: [('LILAK', '0.1002941'), ('BORLS', '0.1000395')]
+[ÖLÇTÜM] TARGETS ↔ SESSIONS/MASTER/kesin kesir uyuşmazlığı: 0 (396 hedef)
+[ÖLÇTÜM] üst/alt limit = ref×1.1 / ref×0.9 adıma yuvarlama varyantlarının tuttuğu seans sayısı (990): {'adım(ref)/floor': 931, 'adım(ref)/round': 594, 'adım(ham üst)/floor': 990, 'adım(ham üst)/round': 623, 'alt: adım(ham alt)/ceil': 990, 'alt: adım(ham alt)/round': 624}
+[ÖLÇTÜM] 'adım(ham üst)/floor' tutmayan seanslar (ilk 10): [] toplam 0
+[ÖLÇTÜM] NETGL: L = 3 | R_D10 = -0.3616771159874608150470219435736677115987460815047 | Y_D10 = 0 | R_D1 = 0.099529780564 | 1629/2552-1 = -923/2552 | dosya R_D10 eşit: True | D4 alt limit = 37.32 (ref 33.94 )

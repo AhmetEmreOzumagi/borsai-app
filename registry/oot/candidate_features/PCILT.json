@@ -1,0 +1,238 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "PCILT",
+  "company": "PC İletişim ve Medya Hizmetleri Sanayi Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "178514",
+      "source_id": "KAP_979759_EK1",
+      "source_document": "KAP 979759 ek 1",
+      "source_published_at": "2021-11-26T12:09:33+03:00",
+      "source_sha256": "e7488c4962cf3c3eb938d49da42958ff78f22acdc9214a55df45347a6a377fa4",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979759_ek1.pdf",
+      "quote": "olmak üzere toplam 178.514 yatırımcıya 11.490.659 TL nominal değerli paylar dağıtılmıştır",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "filtrelenmemiş talep 181.181 adet emir (kişi değil)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "178.514",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "178204",
+        "domestic_legal_entity": "41",
+        "domestic_institutional": "18",
+        "foreign_retail": "250",
+        "foreign_legal_entity": "1"
+      },
+      "source_id": "KAP_979759_EK1",
+      "source_document": "KAP 979759 ek 1",
+      "source_published_at": "2021-11-26T12:09:33+03:00",
+      "source_sha256": "e7488c4962cf3c3eb938d49da42958ff78f22acdc9214a55df45347a6a377fa4",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979759_ek1.pdf",
+      "quote": "Yurt İçi Gerçek 178.204 11.470.898 %99,83 Tüzel 41 2.721 %0,02 Kurumsal 18 889 %0,01 Yurt Dışı Gerçek 250 16.084 %0,14 Tüzel 1 67 %0,00",
+      "semantic": "ALLOCATED",
+      "note": "tablo: Yurt İçi (Gerçek, Tüzel, Kurumsal), Yurt Dışı (Gerçek, Tüzel); retail = Yurt İçi Gerçek; metinde 'yurt içi gerçek ve tüzel kişi olarak 178.245 yatırımcı'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Gerçek": "178.204",
+        "Yurt İçi Tüzel": "41",
+        "Yurt İçi Kurumsal": "18",
+        "Yurt Dışı Gerçek": "250",
+        "Yurt Dışı Tüzel": "1"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Gerçek': '178.204', 'Yurt İçi Tüzel': '41', 'Yurt İçi Kurumsal': '18', 'Yurt Dışı Gerçek': '250', 'Yurt Dışı Tüzel': '1'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı yok ('Halka arzda herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'), grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "11470898",
+        "domestic_legal_entity": "2721",
+        "domestic_institutional": "889",
+        "foreign_retail": "16084",
+        "foreign_legal_entity": "67"
+      },
+      "source_id": "KAP_979759_EK1",
+      "source_document": "KAP 979759 ek 1",
+      "source_published_at": "2021-11-26T12:09:33+03:00",
+      "source_sha256": "e7488c4962cf3c3eb938d49da42958ff78f22acdc9214a55df45347a6a377fa4",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979759_ek1.pdf",
+      "quote": "Yurt İçi Gerçek 178.204 11.470.898 %99,83 Tüzel 41 2.721 %0,02 Kurumsal 18 889 %0,01 Yurt Dışı Gerçek 250 16.084 %0,14 Tüzel 1 67 %0,00",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Gerçek": "11.470.898",
+        "Yurt İçi Tüzel": "2.721",
+        "Yurt İçi Kurumsal": "889",
+        "Yurt Dışı Gerçek": "16.084",
+        "Yurt Dışı Tüzel": "67"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Gerçek': '11.470.898', 'Yurt İçi Tüzel': '2.721', 'Yurt İçi Kurumsal': '889', 'Yurt Dışı Gerçek': '16.084', 'Yurt Dışı Tüzel': '67'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "99.83",
+      "source_id": "KAP_979759_EK1",
+      "source_document": "KAP 979759 ek 1",
+      "source_published_at": "2021-11-26T12:09:33+03:00",
+      "source_sha256": "e7488c4962cf3c3eb938d49da42958ff78f22acdc9214a55df45347a6a377fa4",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979759_ek1.pdf",
+      "quote": "Yurt İçi Gerçek 178.204 11.470.898 %99,83",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yalnız Yurt İçi Gerçek; Yurt İçi Tüzel %0,02 ayrı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "99,83",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.01",
+      "source_id": "KAP_979759_EK1",
+      "source_document": "KAP 979759 ek 1",
+      "source_published_at": "2021-11-26T12:09:33+03:00",
+      "source_sha256": "e7488c4962cf3c3eb938d49da42958ff78f22acdc9214a55df45347a6a377fa4",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979759_ek1.pdf",
+      "quote": "Kurumsal 18 889 %0,01",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,01",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok; tabloda Yurt Dışı Gerçek %0,14 ve Yurt Dışı Tüzel %0,00 (tüzel kişi, kurumsal olarak adlandırılmıyor)",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "0",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "0",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "belgede yurt dışı kurumsal grup yok; Yurt Dışı Tüzel %0,00; alan null"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "belgede benzer ifade satış yöntemi olarak geçiyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”), dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Global Menkul Değerler A.Ş.",
+      "source_id": "KAP_978808_EK1",
+      "source_document": "KAP 978808 ek 1",
+      "source_published_at": "2021-11-19T18:30:47+03:00",
+      "source_sha256": "df64aca583f40145b9e1d1e0904c73c2e4dcc73e7d0ec8744f7aa6d1bc54cf3a",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_978808_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Global Menkul Değerler A.Ş.'nin",
+      "note": "sonuç bildirimini de Global Menkul Değerler yayımlamış; KAP_978837_EK1 aynı TSSD",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Global Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_979917",
+      "source_document": "KAP 979917",
+      "source_published_at": "2021-11-26T18:33:04+03:00",
+      "source_sha256": "126e810812a7acadb579c93335062fd205fe27cbeebab418eb365aa9b9b7f15e",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979917_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_979917",
+      "source_document": "KAP 979917",
+      "source_published_at": "2021-11-26T18:33:04+03:00",
+      "source_sha256": "126e810812a7acadb579c93335062fd205fe27cbeebab418eb365aa9b9b7f15e",
+      "source_path": "registry/oot/source_docs/PCILT/KAP_979917_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_979917": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 979917",
+      "published_at": "2021-11-26T18:33:04+03:00",
+      "sha256": "126e810812a7acadb579c93335062fd205fe27cbeebab418eb365aa9b9b7f15e",
+      "path": "registry/oot/source_docs/PCILT/KAP_979917_bildirim.pdf"
+    },
+    "KAP_979759_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 979759 ek 1",
+      "published_at": "2021-11-26T12:09:33+03:00",
+      "sha256": "e7488c4962cf3c3eb938d49da42958ff78f22acdc9214a55df45347a6a377fa4",
+      "path": "registry/oot/source_docs/PCILT/KAP_979759_ek1.pdf"
+    },
+    "KAP_978808_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 978808 ek 1",
+      "published_at": "2021-11-19T18:30:47+03:00",
+      "sha256": "df64aca583f40145b9e1d1e0904c73c2e4dcc73e7d0ec8744f7aa6d1bc54cf3a",
+      "path": "registry/oot/source_docs/PCILT/KAP_978808_ek1.pdf"
+    }
+  }
+}

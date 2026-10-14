@@ -1,0 +1,65 @@
+# Tam test (BORSAI_FAZ7_FABLE_V1_REPRO_AUDIT_20260926); HEAD 4e081d8 (paralel oturumun BORSAI_FAZ7_PROSPECTUS commit'i dahil); başlangıç 2026-09-26T20:33:15Z
+## .venv/bin/pytest -q
+........................................................................ [ 10%]
+........................................................................ [ 20%]
+........................................................................ [ 30%]
+........................................................................ [ 40%]
+........................................................................ [ 50%]
+........................................................................ [ 60%]
+........................................................................ [ 70%]
+........................................................................ [ 80%]
+........................................................................ [ 91%]
+................................................................         [100%]
+712 passed in 726.90s (0:12:06)
+pytest exit:   bitiş 2026-09-26T20:45:23Z
+
+## bash app/scripts/test.sh
+OK   base_always_ceiling        392 satır
+OK   base_train_median          392 satır
+OK   base_train_mean            392 satır
+OK   base_zero                  392 satır
+OK   base_rate                  392 satır
+OK   base_last10_rate           392 satır
+OK   v1_6_h99                   392 satır
+OK   v1_5_market20_v0           395 satır
+OK   pb_v0                      392 satır
+OK   ceiling_hazard_v0          392 satır
+OK   ceiling_hazard_v0@INF      392 satır
+OK   pb_ceiling_v0              392 satır
+OK   pb_ceiling_v0@INF          392 satır
+OK   base_km_expanding          392 satır
+OK   base_km_last10             392 satır
+=== 2. _patched_params.jsonl ilk 19 satır bayt-eşit ===
+OK   ilk 19 satır aynı; bugün 31 satır
+=== 3. dec_cases.json eski bölümleri bayt-eşit ===
+OK   9 eski bölüm aynı; yeni bölüm: ['limit_path']
+=== 4. beklenen değişiklikler (bilgi) ===
+MANIFEST.json:  1 file changed, 27 insertions(+), 5 deletions(-)
+  yeni ceiling_path_v0          468 satır · koşullu 40 taban satır
+  yeni ceiling_path_v0@INF      468 satır · koşullu 40 taban satır
+  yeni pb_ceiling_path_v0       468 satır · koşullu 40 taban satır
+=== golden_unchanged: YEŞİL (U46) ===
+test.sh exit:   bitiş 2026-09-26T20:46:04Z
+
+## bash app/scripts/test.sh (yeniden; özet satırları) 2026-09-26T20:52:34Z
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 3 filtered out; finished in 0.00s
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.21s
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.87s
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.29s
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.89s
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+ Test Files  16 passed (16)
+      Tests  222 passed (222)
+4 passed in 6.66s
+=== golden_unchanged: YEŞİL (U46) ===
+test.sh pipestatus: 0

@@ -1,0 +1,403 @@
+{
+  "featured": {
+    "model_id": null,
+    "reason": "RULE_5_5_NONE_ELIGIBLE",
+    "candidates": [
+      {
+        "model_id": "fall_d10_v0_addsale",
+        "in_index": true,
+        "primary_verdict": "ayırt edilemiyor",
+        "model_value": 0.1601407412369922,
+        "v15_ci95_hi": 0.07803138018688249,
+        "near_era_label": "belirsiz",
+        "near_era_comparator": "base_rate",
+        "near_era_ci95_lo": -0.03005450329111933,
+        "k1": false,
+        "k2": false,
+        "k3": true,
+        "eligible": false,
+        "first_failed": "k1"
+      },
+      {
+        "model_id": "fall_d10_v0_h99",
+        "in_index": true,
+        "primary_verdict": "ayırt edilemiyor",
+        "model_value": 0.1288220681278293,
+        "v15_ci95_hi": 0.030223835400444526,
+        "near_era_label": "tolerans içinde",
+        "near_era_comparator": "base_rate",
+        "near_era_ci95_lo": -0.07734149227660944,
+        "k1": false,
+        "k2": false,
+        "k3": true,
+        "eligible": false,
+        "first_failed": "k1"
+      },
+      {
+        "model_id": "fall_d10_v0_pooled",
+        "in_index": true,
+        "primary_verdict": "geçiyor",
+        "model_value": 0.12341710595047123,
+        "v15_ci95_hi": 0.03199117438009696,
+        "near_era_label": "belirsiz",
+        "near_era_comparator": "fall_d10_v0_h99",
+        "near_era_ci95_lo": -0.0340113623121249,
+        "k1": true,
+        "k2": false,
+        "k3": true,
+        "eligible": false,
+        "first_failed": "k2"
+      }
+    ]
+  },
+  "official": false,
+  "record_file": null,
+  "rows": [
+    {
+      "model_id": "fall_d10_v0_addsale",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.8068759361348089,
+        "p_fall": 0.1931240638651911,
+        "pct_fall": 19,
+        "pct_up": 81
+      },
+      "d5": {
+        "p_up": 0.8616918501108343,
+        "p_fall": 0.13830814988916573,
+        "pct_fall": 14,
+        "pct_up": 86
+      },
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "belirsiz",
+        "comparator": "base_rate",
+        "metric": "D10 Brier",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": -0.0065440538266839,
+        "ci95": [
+          -0.03005450329111933,
+          0.01605147941484046
+        ],
+        "n": 76,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "OPEN",
+        "verdict": "ayırt edilemiyor",
+        "diff": -0.005823232156111192,
+        "ci95": [
+          -0.05406475378683719,
+          0.035836330620997864
+        ],
+        "n": 62,
+        "rule_id": "base_rate"
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      },
+      "first_failed": "k1",
+      "card": {
+        "description": "Düşen arz v0 (SPEC_C_V0): yalnız ek satış bayrağı (1[additional_sale_shares > 0]) ile L2-lojistik (V1.6 C ızgarası); eğitim H99 + açık küme, ek satış alanı dolu 165 arz; f3 istemez.",
+        "training_n": 165,
+        "training_cutoff": "2026-08-19",
+        "params_sha256_8": "b95fc3ec",
+        "n_variants_same_data": 2059,
+        "primary_cell": {
+          "horizon_or_k": "D10",
+          "metric": "Brier",
+          "output": "p_up",
+          "rule_ids": [
+            "base_rate"
+          ]
+        }
+      }
+    },
+    {
+      "model_id": "fall_d10_v0_h99",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "REFUSED",
+      "refused": {
+        "code": "F3_MISSING",
+        "field": "total_demand_multiple",
+        "reason": "Toplam talep katı (f3) yok; bu model f3'süz tahmin vermez. f3'süz düşüş tahmini fall_d10_v0_addsale'den gelir."
+      },
+      "d10": {
+        "p_up": null,
+        "p_fall": null,
+        "pct_fall": null,
+        "pct_up": null
+      },
+      "d5": {
+        "p_up": null,
+        "p_fall": null,
+        "pct_fall": null,
+        "pct_up": null
+      },
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "tolerans içinde",
+        "comparator": "base_rate",
+        "metric": "D10 Brier",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": -0.04339712167049663,
+        "ci95": [
+          -0.07734149227660944,
+          -0.0048460449834255665
+        ],
+        "n": 75,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "OPEN",
+        "verdict": "ayırt edilemiyor",
+        "diff": -0.03981378535650905,
+        "ci95": [
+          -0.08782831953749368,
+          0.004259735197427414
+        ],
+        "n": 60,
+        "rule_id": "base_rate"
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      },
+      "first_failed": "k1",
+      "card": {
+        "description": "Düşen arz v0 (SPEC_C_V0): D10 ve D5'te P(kapanış > arz) için L2-lojistik (V1.6 C ızgarası, iç LOOCV Brier); özellikler f1r (TÜFE ile reel büyüklük), ln f3 (talep katı), ek satış bayrağı; H99'un f3 ve ek satış alanı dolu 94 arzı. Düşme olasılığı = 1 − p_up.",
+        "training_n": 94,
+        "training_cutoff": "2026-08-19",
+        "params_sha256_8": "b15eaa8c",
+        "n_variants_same_data": 23,
+        "primary_cell": {
+          "horizon_or_k": "D10",
+          "metric": "Brier",
+          "output": "p_up",
+          "rule_ids": [
+            "base_rate"
+          ]
+        }
+      }
+    },
+    {
+      "model_id": "fall_d10_v0_pooled",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "REFUSED",
+      "refused": {
+        "code": "F3_MISSING",
+        "field": "total_demand_multiple",
+        "reason": "Toplam talep katı (f3) yok; bu model f3'süz tahmin vermez. f3'süz düşüş tahmini fall_d10_v0_addsale'den gelir."
+      },
+      "d10": {
+        "p_up": null,
+        "p_fall": null,
+        "pct_fall": null,
+        "pct_up": null
+      },
+      "d5": {
+        "p_up": null,
+        "p_fall": null,
+        "pct_fall": null,
+        "pct_up": null
+      },
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "belirsiz",
+        "comparator": "fall_d10_v0_h99",
+        "metric": "D10 Brier",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": -0.0058105773188655745,
+        "ci95": [
+          -0.0340113623121249,
+          0.021946778453096543
+        ],
+        "n": 75,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "OPEN",
+        "verdict": "geçiyor",
+        "diff": -0.0452187475338671,
+        "ci95": [
+          -0.09227044575161869,
+          -0.002028762643776505
+        ],
+        "n": 60,
+        "rule_id": "base_rate"
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      },
+      "first_failed": "k2",
+      "card": {
+        "description": "Düşen arz v0 (SPEC_C_V0): h99 ile aynı özellikler ve model (f1r, ln f3, ek satış bayrağı; L2-lojistik, V1.6 C ızgarası); eğitim H99 + eski kohortun açık kümesi (161 arz, training_table_v2); rejim terimi yok.",
+        "training_n": 161,
+        "training_cutoff": "2026-08-19",
+        "params_sha256_8": "d2c5d549",
+        "n_variants_same_data": 2059,
+        "primary_cell": {
+          "horizon_or_k": "D10",
+          "metric": "Brier",
+          "output": "p_up",
+          "rule_ids": [
+            "base_rate"
+          ]
+        }
+      }
+    },
+    {
+      "model_id": "fall_d10_v0_pooled@ZERO",
+      "role": "RULE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.7577639751552795,
+        "p_fall": 0.2422360248447205,
+        "pct_fall": 24,
+        "pct_up": 76
+      },
+      "d5": {
+        "p_up": 0.8198757763975155,
+        "p_fall": 0.18012422360248448,
+        "pct_fall": 18,
+        "pct_up": 82
+      },
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "tolerans içinde",
+        "comparator": "base_rate",
+        "metric": "D10 Brier",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": -0.004297447339931758,
+        "ci95": [
+          -0.016239696233634502,
+          0.007972603605917521
+        ],
+        "n": 75,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "OPEN",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": {
+        "description": "fall_d10_v0_pooled ızgarasının uç noktası (C = ZERO) kural olarak: ufuk başına sabit p_up = eğitim oranı (kapalı biçim), özellik yok (SPEC_C_V0 §2). Eğitim kümesi, plan ve f3 filtre dışlaması modelinkiyle aynı.",
+        "training_n": 161,
+        "training_cutoff": "2026-08-19",
+        "params_sha256_8": "7c23b923",
+        "n_variants_same_data": 2059,
+        "primary_cell": null
+      }
+    },
+    {
+      "model_id": "base_rate",
+      "role": "COMPARATOR",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.7070707070707071,
+        "p_fall": 0.29292929292929293,
+        "pct_fall": 29,
+        "pct_up": 71
+      },
+      "d5": {
+        "p_up": 0.7777777777777778,
+        "p_fall": 0.2222222222222222,
+        "pct_fall": 22,
+        "pct_up": 78
+      },
+      "near_era": null,
+      "vault": {
+        "status": "NONE",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": null
+    },
+    {
+      "model_id": "v1_5_h99",
+      "role": "COMPARATOR",
+      "in_record": true,
+      "status": "REFUSED",
+      "refused": {
+        "code": "F3_MISSING",
+        "field": "total_demand_multiple",
+        "reason": "Toplam talep katı (f3) yok; bu model f3'süz tahmin vermez. f3'süz tahmin PB sütunlarındadır."
+      },
+      "d10": {
+        "p_up": null,
+        "p_fall": null,
+        "pct_fall": null,
+        "pct_up": null
+      },
+      "d5": {
+        "p_up": null,
+        "p_fall": null,
+        "pct_fall": null,
+        "pct_up": null
+      },
+      "near_era": null,
+      "vault": {
+        "status": "NONE",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": null
+    }
+  ],
+  "integrity": null,
+  "scores": {
+    "source": "REPO",
+    "sha12": "FIXTURE",
+    "generated_at_utc": "2026-10-01T13:15:09Z"
+  },
+  "oot": {
+    "source": "REPO",
+    "generated_at_utc": "2026-09-29T18:08:37Z",
+    "sha12": "12852121309c",
+    "vault_open": true,
+    "rows_present": true,
+    "unsupported_version": null,
+    "integrity": null
+  },
+  "tufe": null
+}

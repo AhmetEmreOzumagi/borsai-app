@@ -1,0 +1,223 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "KLSYN",
+  "company": "Koleksiyon Mobilya Sanayi A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "34037",
+      "source_id": "KAP_1004936_EK1",
+      "source_document": "KAP 1004936 ek 1",
+      "source_published_at": "2022-02-27T13:23:29+03:00",
+      "source_sha256": "a8c2ca764d4a669a01a4d09da72dfba0f6eaadf8c03a7eb2181a5349b1b716a6",
+      "source_path": "registry/oot/source_docs/KLSYN/KAP_1004936_ek1.pdf",
+      "quote": "Toplam 107.854.952 100% 34.862* 456.492.807 100,00% 34.037 107.854.952 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden (tekil kişi) 34.862; dağıtım yapılan 34.037",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "34.862",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "34.862",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "34.862 talep eden tekil kişi sayısı; dağıtım yapılan 34.037 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "29819",
+        "retail_high_application": "4134",
+        "domestic_institutional": "84"
+      },
+      "source_id": "KAP_1004936_EK1",
+      "source_document": "KAP 1004936 ek 1",
+      "source_published_at": "2022-02-27T13:23:29+03:00",
+      "source_sha256": "a8c2ca764d4a669a01a4d09da72dfba0f6eaadf8c03a7eb2181a5349b1b716a6",
+      "source_path": "registry/oot/source_docs/KLSYN/KAP_1004936_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 21.570.990 20% 30.616 40.443.164 8,86% 29.819 21.570.990 20%",
+        "32.356.486 30% 4.236 270.759.084 59,31% 4.134 32.356.486 30%",
+        "Yurt İçi Kurumsal 53.927.476 50% 90 145.290.559 31,83% 84 53.927.476 50%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 30.616, yüksek başvurulu 4.236, yurt içi kurumsal 90; yurt dışı kurumsal grup yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "1.9",
+      "source_id": "KAP_1004936_EK1",
+      "source_document": "KAP 1004936 ek 1",
+      "source_published_at": "2022-02-27T13:23:29+03:00",
+      "source_sha256": "a8c2ca764d4a669a01a4d09da72dfba0f6eaadf8c03a7eb2181a5349b1b716a6",
+      "source_path": "registry/oot/source_docs/KLSYN/KAP_1004936_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara tahsis edilen payların 1,9 katı",
+      "note": "ayrıca Yurt İçi Yüksek Başvurulu Yatırımcılar 8,4 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "1,9",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "2.7",
+      "source_id": "KAP_1004936_EK1",
+      "source_document": "KAP 1004936 ek 1",
+      "source_published_at": "2022-02-27T13:23:29+03:00",
+      "source_sha256": "a8c2ca764d4a669a01a4d09da72dfba0f6eaadf8c03a7eb2181a5349b1b716a6",
+      "source_path": "registry/oot/source_docs/KLSYN/KAP_1004936_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara tahsis edilen payların 2,7 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,7",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belgede yurt dışı kurumsal yatırımcı grubu yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "21570990",
+        "retail_high_application": "32356486",
+        "domestic_institutional": "53927476"
+      },
+      "source_id": "KAP_1004936_EK1",
+      "source_document": "KAP 1004936 ek 1",
+      "source_published_at": "2022-02-27T13:23:29+03:00",
+      "source_sha256": "a8c2ca764d4a669a01a4d09da72dfba0f6eaadf8c03a7eb2181a5349b1b716a6",
+      "source_path": "registry/oot/source_docs/KLSYN/KAP_1004936_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 21.570.990 20% 30.616 40.443.164 8,86% 29.819 21.570.990 20%",
+        "32.356.486 30% 4.236 270.759.084 59,31% 4.134 32.356.486 30%",
+        "Yurt İçi Kurumsal 53.927.476 50% 90 145.290.559 31,83% 84 53.927.476 50%"
+      ],
+      "note": "tablo birimi 'Lot'; metinde TL nominal olarak aynı tutarlar",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "20",
+      "source_id": "KAP_1004936_EK1",
+      "source_document": "KAP 1004936 ek 1",
+      "source_published_at": "2022-02-27T13:23:29+03:00",
+      "source_sha256": "a8c2ca764d4a669a01a4d09da72dfba0f6eaadf8c03a7eb2181a5349b1b716a6",
+      "source_path": "registry/oot/source_docs/KLSYN/KAP_1004936_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 21.570.990 20% 30.616 40.443.164 8,86% 29.819 21.570.990 20%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "ayrıca Yurt İçi Yüksek Başvurulu %30 (bireysel toplam %50); planlanan ile aynı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "50",
+      "source_id": "KAP_1004936_EK1",
+      "source_document": "KAP 1004936 ek 1",
+      "source_published_at": "2022-02-27T13:23:29+03:00",
+      "source_sha256": "a8c2ca764d4a669a01a4d09da72dfba0f6eaadf8c03a7eb2181a5349b1b716a6",
+      "source_path": "registry/oot/source_docs/KLSYN/KAP_1004936_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 53.927.476 50% 90 145.290.559 31,83% 84 53.927.476 50%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %50",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "belgede yurt dışı kurumsal yatırımcı grubu yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD penceresi dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "OYAK Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1002903_EK1",
+      "source_document": "KAP 1002903 ek 1",
+      "source_published_at": "2022-02-18T18:57:39+03:00",
+      "source_sha256": "58a3698be6f99e54d6cb4561eeb0ac8d94234b6bf17dbc7ec75340e6c309d54d",
+      "source_path": "registry/oot/source_docs/KLSYN/KAP_1002903_ek1.pdf",
+      "quote": "satışa aracılık edecek OYAK Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "TSSD OCR metni; sonuç bildirimini yayımlayan kurum da OYAK YATIRIM MENKUL DEĞERLER A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde fiyat istikrarı yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_1005287",
+      "source_document": "KAP 1005287",
+      "source_published_at": "2022-02-28T18:25:32+03:00",
+      "source_sha256": "777248b5bba1e53a27a08e7cebf7e9b0a6e06d51f7ab4bbd9466499c65f6de68",
+      "source_path": "registry/oot/source_docs/KLSYN/KAP_1005287_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1005287",
+      "source_document": "KAP 1005287",
+      "source_published_at": "2022-02-28T18:25:32+03:00",
+      "source_sha256": "777248b5bba1e53a27a08e7cebf7e9b0a6e06d51f7ab4bbd9466499c65f6de68",
+      "source_path": "registry/oot/source_docs/KLSYN/KAP_1005287_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1005287": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1005287",
+      "published_at": "2022-02-28T18:25:32+03:00",
+      "sha256": "777248b5bba1e53a27a08e7cebf7e9b0a6e06d51f7ab4bbd9466499c65f6de68",
+      "path": "registry/oot/source_docs/KLSYN/KAP_1005287_bildirim.pdf"
+    },
+    "KAP_1004936_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1004936 ek 1",
+      "published_at": "2022-02-27T13:23:29+03:00",
+      "sha256": "a8c2ca764d4a669a01a4d09da72dfba0f6eaadf8c03a7eb2181a5349b1b716a6",
+      "path": "registry/oot/source_docs/KLSYN/KAP_1004936_ek1.pdf"
+    },
+    "KAP_1002903_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1002903 ek 1",
+      "published_at": "2022-02-18T18:57:39+03:00",
+      "sha256": "58a3698be6f99e54d6cb4561eeb0ac8d94234b6bf17dbc7ec75340e6c309d54d",
+      "path": "registry/oot/source_docs/KLSYN/KAP_1002903_ek1.pdf"
+    }
+  }
+}

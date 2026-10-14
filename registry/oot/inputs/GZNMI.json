@@ -1,0 +1,333 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "GZNMI",
+  "company": "Gezinomi Seyahat Turizm Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1006991",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "14",
+      "source_id": "KAP_1006991",
+      "source_document": "KAP 1006991",
+      "source_published_at": "2022-03-03T18:18:53+03:00",
+      "source_sha256": "076e81cf68224dbdd1bc5e0f8f0fccfb1b35af3402e64e274c9775d6c4f07f1b",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006991_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 14",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2022_10",
+          "quote": "Gezinomi Seyahat Turizm 14,00 15.000.000 25.000.000 10.000.000 - - - Ticaret A.Ş. (3)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "10000000",
+      "source_id": "KAP_1006991",
+      "source_document": "KAP 1006991",
+      "source_published_at": "2022-03-03T18:18:53+03:00",
+      "source_sha256": "076e81cf68224dbdd1bc5e0f8f0fccfb1b35af3402e64e274c9775d6c4f07f1b",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006991_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 10.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "25000000",
+      "source_id": "KAP_1006991",
+      "source_document": "KAP 1006991",
+      "source_published_at": "2022-03-03T18:18:53+03:00",
+      "source_sha256": "076e81cf68224dbdd1bc5e0f8f0fccfb1b35af3402e64e274c9775d6c4f07f1b",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006991_bildirim.pdf",
+      "quote": "sermayesini temsil eden 25.000.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "10000000",
+      "source_id": "KAP_1006715_EK1",
+      "source_document": "KAP 1006715 ek 1",
+      "source_published_at": "2022-03-03T07:49:05+03:00",
+      "source_sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf",
+      "quote": "Gezinomi’nin sermayesinin 15.000.000 TL’den 25.000.000 TL’ye çıkarılması nedeniyle artırılan 10.000.000 TL nominal değerli pay halka arz edilmiş ve tamamı satılmıştır.",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "existing_share_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2022_10",
+      "source_document": "SPK Bülteni 2022/10",
+      "source_published_at": "2022-02-24T23:59:59+03:00",
+      "source_sha256": "5ba010967cd82ea3b4cbcfbe4bcf8d434965650831bd349ffc8e120e26f8fe5c",
+      "source_path": "registry/oot/source_docs/GZNMI/SPK_BULTEN_2022-10.pdf",
+      "quote": "Gezinomi Seyahat Turizm 14,00 15.000.000 25.000.000 10.000.000 - - - Ticaret A.Ş. (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1006715_EK1",
+          "quote": "artırılan 10.000.000 TL nominal değerli pay halka arz edilmiş ve tamamı satılmıştır"
+        },
+        "b_shares_offered_equals_planned_base": "10000000 = 10000000 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_multiple": {
+      "value": "11",
+      "source_id": "KAP_1006715_EK1",
+      "source_document": "KAP 1006715 ek 1",
+      "source_published_at": "2022-03-03T07:49:05+03:00",
+      "source_sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf",
+      "quote": "halka arz edilen 10.000.000 TL nominal değerli payların 11 katına denk gelen 110.807.780 TL nominal değerli filtrelenmemiş pay talebi gelmiştir",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (halka arz edilen 10.000.000 TL nominal paya göre; filtrelenmemiş)",
+      "denominator_includes_additional_sale": false,
+      "note": "planlanan ek satış yok; 110.807.780 / 10.000.000 = 11,0808 (belge katı alındı)",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_1006715_EK1",
+      "source_document": "KAP 1006715 ek 1",
+      "source_published_at": "2022-03-03T07:49:05+03:00",
+      "source_sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf",
+      "quote": "110.807.780 TL nominal değerli filtrelenmemiş pay talebi gelmiştir",
+      "locator": "belgede filtrelenmiş toplam verilmiyor",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1006715_EK1",
+      "source_document": "KAP 1006715 ek 1",
+      "source_published_at": "2022-03-03T07:49:05+03:00",
+      "source_sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf",
+      "quote": "artırılan 10.000.000 TL nominal değerli pay halka arz edilmiş ve tamamı satılmıştır",
+      "zero_from_statement": true,
+      "note": "SPK satırında ek satış '-'; satılan toplam 10.000.000 = planlanan taban (bedelli 10.000.000)",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": "140000000",
+      "source_id": "KAP_1006715_EK1",
+      "source_document": "KAP 1006715 ek 1",
+      "source_published_at": "2022-03-03T07:49:05+03:00",
+      "source_sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf",
+      "quote": "halka arz büyüklüğü 140.000.000 TL olarak gerçekleşmiştir",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "14.00",
+      "source_id": "SPK_BULTEN_2022_10",
+      "source_document": "SPK Bülteni 2022/10",
+      "source_published_at": "2022-02-24T23:59:59+03:00",
+      "source_sha256": "5ba010967cd82ea3b4cbcfbe4bcf8d434965650831bd349ffc8e120e26f8fe5c",
+      "source_path": "registry/oot/source_docs/GZNMI/SPK_BULTEN_2022-10.pdf",
+      "quote": "Gezinomi Seyahat Turizm 14,00 15.000.000 25.000.000 10.000.000 - - - Ticaret A.Ş. (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2022-02-24",
+        "bookbuilding_start": "2022-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "15000000",
+      "source_id": "SPK_BULTEN_2022_10",
+      "source_document": "SPK Bülteni 2022/10",
+      "source_published_at": "2022-02-24T23:59:59+03:00",
+      "source_sha256": "5ba010967cd82ea3b4cbcfbe4bcf8d434965650831bd349ffc8e120e26f8fe5c",
+      "source_path": "registry/oot/source_docs/GZNMI/SPK_BULTEN_2022-10.pdf",
+      "quote": "Gezinomi Seyahat Turizm 14,00 15.000.000 25.000.000 10.000.000 - - - Ticaret A.Ş. (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-02-24",
+        "bookbuilding_start": "2022-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "25000000",
+      "source_id": "SPK_BULTEN_2022_10",
+      "source_document": "SPK Bülteni 2022/10",
+      "source_published_at": "2022-02-24T23:59:59+03:00",
+      "source_sha256": "5ba010967cd82ea3b4cbcfbe4bcf8d434965650831bd349ffc8e120e26f8fe5c",
+      "source_path": "registry/oot/source_docs/GZNMI/SPK_BULTEN_2022-10.pdf",
+      "quote": "Gezinomi Seyahat Turizm 14,00 15.000.000 25.000.000 10.000.000 - - - Ticaret A.Ş. (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-02-24",
+        "bookbuilding_start": "2022-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "10000000",
+      "source_id": "SPK_BULTEN_2022_10",
+      "source_document": "SPK Bülteni 2022/10",
+      "source_published_at": "2022-02-24T23:59:59+03:00",
+      "source_sha256": "5ba010967cd82ea3b4cbcfbe4bcf8d434965650831bd349ffc8e120e26f8fe5c",
+      "source_path": "registry/oot/source_docs/GZNMI/SPK_BULTEN_2022-10.pdf",
+      "quote": "Gezinomi Seyahat Turizm 14,00 15.000.000 25.000.000 10.000.000 - - - Ticaret A.Ş. (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2022-02-24",
+        "bookbuilding_start": "2022-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2022_10",
+      "source_document": "SPK Bülteni 2022/10",
+      "source_published_at": "2022-02-24T23:59:59+03:00",
+      "source_sha256": "5ba010967cd82ea3b4cbcfbe4bcf8d434965650831bd349ffc8e120e26f8fe5c",
+      "source_path": "registry/oot/source_docs/GZNMI/SPK_BULTEN_2022-10.pdf",
+      "quote": "Gezinomi Seyahat Turizm 14,00 15.000.000 25.000.000 10.000.000 - - - Ticaret A.Ş. (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-02-24",
+        "bookbuilding_start": "2022-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "10000000",
+      "source_id": "SPK_BULTEN_2022_10",
+      "source_document": "SPK Bülteni 2022/10",
+      "source_published_at": "2022-02-24T23:59:59+03:00",
+      "source_sha256": "5ba010967cd82ea3b4cbcfbe4bcf8d434965650831bd349ffc8e120e26f8fe5c",
+      "source_path": "registry/oot/source_docs/GZNMI/SPK_BULTEN_2022-10.pdf",
+      "quote": "Gezinomi Seyahat Turizm 14,00 15.000.000 25.000.000 10.000.000 - - - Ticaret A.Ş. (3)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-02-24",
+        "bookbuilding_start": "2022-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2022_10",
+      "source_document": "SPK Bülteni 2022/10",
+      "source_published_at": "2022-02-24T23:59:59+03:00",
+      "source_sha256": "5ba010967cd82ea3b4cbcfbe4bcf8d434965650831bd349ffc8e120e26f8fe5c",
+      "source_path": "registry/oot/source_docs/GZNMI/SPK_BULTEN_2022-10.pdf",
+      "quote": "Gezinomi Seyahat Turizm 14,00 15.000.000 25.000.000 10.000.000 - - - Ticaret A.Ş. (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2022-02-24",
+        "bookbuilding_start": "2022-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "10000000",
+      "source_id": "SPK_BULTEN_2022_10",
+      "source_document": "SPK Bülteni 2022/10",
+      "source_published_at": "2022-02-24T23:59:59+03:00",
+      "source_sha256": "5ba010967cd82ea3b4cbcfbe4bcf8d434965650831bd349ffc8e120e26f8fe5c",
+      "source_path": "registry/oot/source_docs/GZNMI/SPK_BULTEN_2022-10.pdf",
+      "quote": "Gezinomi Seyahat Turizm 14,00 15.000.000 25.000.000 10.000.000 - - - Ticaret A.Ş. (3)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-02-24",
+        "bookbuilding_start": "2022-03-01",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2022-03-08",
+      "source_id": "KAP_1006991",
+      "source_document": "KAP 1006991",
+      "source_published_at": "2022-03-03T18:18:53+03:00",
+      "source_sha256": "076e81cf68224dbdd1bc5e0f8f0fccfb1b35af3402e64e274c9775d6c4f07f1b",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006991_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 08/03/2022",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2022-03-01",
+      "source_id": "KAP_1006991",
+      "source_document": "KAP 1006991",
+      "source_published_at": "2022-03-03T18:18:53+03:00",
+      "source_sha256": "076e81cf68224dbdd1bc5e0f8f0fccfb1b35af3402e64e274c9775d6c4f07f1b",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006991_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 01-02/03/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2022-03-02",
+      "source_id": "KAP_1006991",
+      "source_document": "KAP 1006991",
+      "source_published_at": "2022-03-03T18:18:53+03:00",
+      "source_sha256": "076e81cf68224dbdd1bc5e0f8f0fccfb1b35af3402e64e274c9775d6c4f07f1b",
+      "source_path": "registry/oot/source_docs/GZNMI/KAP_1006991_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 01-02/03/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1006991": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1006991",
+      "published_at": "2022-03-03T18:18:53+03:00",
+      "sha256": "076e81cf68224dbdd1bc5e0f8f0fccfb1b35af3402e64e274c9775d6c4f07f1b",
+      "path": "registry/oot/source_docs/GZNMI/KAP_1006991_bildirim.pdf"
+    },
+    "SPK_BULTEN_2022_10": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2022/10",
+      "published_at": "2022-02-24T23:59:59+03:00",
+      "sha256": "5ba010967cd82ea3b4cbcfbe4bcf8d434965650831bd349ffc8e120e26f8fe5c",
+      "path": "registry/oot/source_docs/GZNMI/SPK_BULTEN_2022-10.pdf"
+    },
+    "KAP_1006715_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1006715 ek 1",
+      "published_at": "2022-03-03T07:49:05+03:00",
+      "sha256": "61a712157e5a8d82cc9d67aeb3894cf572dfee5a6d08c82adc4f4e798f823c0a",
+      "path": "registry/oot/source_docs/GZNMI/KAP_1006715_ek1.pdf"
+    }
+  }
+}

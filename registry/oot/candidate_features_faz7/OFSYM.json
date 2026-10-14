@@ -1,0 +1,297 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "OFSYM",
+ "company": "Ofis Yem Gıda Sanayi Ticaret A.Ş.",
+ "first_trading_date": "2023-08-16",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Borsa İstanbul Birincil Piyasa; yatırımcı grubu bazında tahsisat ve dağıtım yapılmadı",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_1181114_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1b39e6664ba",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1181114",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1181114",
+   "published_at": "2023-08-04T22:19:29+03:00",
+   "source_sha256": "5e380518d4d82111f2d045935556b5e71b26229ac4c54eae2f0714ec2b100dca",
+   "source_file": "source_docs/OFSYM/KAP_1181114_ek1.pdf",
+   "page": 1,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "25.2.3. Halka arzda yatırımcılara tahsis ve dağıtım esasları: \"Borsada Satış\" yöntemi ile Borsa Istanbul Birincil Piyasa'da \"Borsa'da Satış- Sabit Fiyatla Talep Toplama ve Satış Yöntemi\" ne göre paylar satışa sunulacağı için herhangi bir yatırımcı grubuna tahsisat ve dağıtım yapılmayacaktır.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1181114_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1b39e6664ba",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1181114",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1181114",
+     "published_at": "2023-08-04T22:19:29+03:00",
+     "source_sha256": "5e380518d4d82111f2d045935556b5e71b26229ac4c54eae2f0714ec2b100dca",
+     "source_file": "source_docs/OFSYM/KAP_1181114_ek1.pdf",
+     "page": 2,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "a) Yatırımcı grubu bazında tahsisat oranları: Yoktur."
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Borsa'da satış (Borsa İstanbul Birincil Piyasa, Sabit Fiyatla Talep Toplama ve Satış; Garanti Yatırım, en iyi gayret). Yatırımcı grubu tahsisatı yok; 25.2.3 (c) grup içi dağıtım yöntemi 'Yoktur'; tahsis ve dağıtımı Borsa yönetimi otomatik yapar (s.2, 25.2.3.h). Belge eşit/oransal adlandırmıyor. Borsa İstanbul birincil piyasa duyurusu (KAP_1181602) de 'Borsada' yöntemi ve sabit fiyatla talep toplama yazıyor."
+  },
+  "price_stability_planned": {
+   "value": "TRUE",
+   "unit": "boolean",
+   "status": "FILLED",
+   "source_id": "KAP_1181114_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1b39e6664ba",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1181114",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1181114",
+   "published_at": "2023-08-04T22:19:29+03:00",
+   "source_sha256": "5e380518d4d82111f2d045935556b5e71b26229ac4c54eae2f0714ec2b100dca",
+   "source_file": "source_docs/OFSYM/KAP_1181114_ek1.pdf",
+   "page": 6,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmaung Fiyat istikrarı işlemlerinin gerçekleştirilmesi planlarmaktar",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1181114_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1b39e6664ba",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1181114",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1181114",
+     "published_at": "2023-08-04T22:19:29+03:00",
+     "source_sha256": "5e380518d4d82111f2d045935556b5e71b26229ac4c54eae2f0714ec2b100dca",
+     "source_file": "source_docs/OFSYM/KAP_1181114_ek1.pdf",
+     "page": 7,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Garanti Yatınım, Şirket paylarına yönelik olarak fiyat istikrarı işlemlerinde bulunmayı planlamaktadır."
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "26.5 başlığı ve cevabı s.6'nın en altında mühür/damga altında; sayfa reocr.py ile yeniden okundu (OCR 'planlanmaung ... planlarmaktar' = planlanmadığı ... planlanmaktadır). Fiyat istikrarını Garanti Yatırım yabancı kaynakla, 200.000.000 TL fonla yapar (26.5.6); garanti yok (26.5.1)."
+  },
+  "price_stability_days": {
+   "value": "30",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1181114_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1b39e6664ba",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1181114",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1181114",
+   "published_at": "2023-08-04T22:19:29+03:00",
+   "source_sha256": "5e380518d4d82111f2d045935556b5e71b26229ac4c54eae2f0714ec2b100dca",
+   "source_file": "source_docs/OFSYM/KAP_1181114_ek1.pdf",
+   "page": 7,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5.2. Fiyat istikrarı işlemlerinin gerçekleştirilebileceği zaman aralığı: Payların borsada işlem görmeye başlamasından itibaren 30 gündür.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": ""
+  },
+  "issuer_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1181114_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1b39e6664ba",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1181114",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1181114",
+   "published_at": "2023-08-04T22:19:29+03:00",
+   "source_sha256": "5e380518d4d82111f2d045935556b5e71b26229ac4c54eae2f0714ec2b100dca",
+   "source_file": "source_docs/OFSYM/KAP_1181114_ek1.pdf",
+   "page": 9,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "a) Ihraççı tarafından verilen taahhüt: Şirket, 24.07.2023 tarih ve 2023/012 sayılı yönetim kurulu kararı ile Halka Arz Edilen payların Borsa İstanbul'da işlem görmeye başladığı tarihten itibaren 1 (bir) yıl boyunca, herhangi bir bedelli ve bedelsiz sermaye artırımı yapılmamasına ve dolaşımdaki pay miktarının bu suretle artırılmamasına",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "1 (bir) yıl = 365. Kapsam: bedelli ve bedelsiz sermaye artırımı yapmama, dolaşımdaki payı bu suretle artırmama, yeni satış/halka arz için başvuru/açıklama yapmama. Başlangıç: Borsa İstanbul'da işlem görmeye başlama."
+  },
+  "shareholder_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1181114_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1b39e6664ba",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1181114",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1181114",
+   "published_at": "2023-08-04T22:19:29+03:00",
+   "source_sha256": "5e380518d4d82111f2d045935556b5e71b26229ac4c54eae2f0714ec2b100dca",
+   "source_file": "source_docs/OFSYM/KAP_1181114_ek1.pdf",
+   "page": 9,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "b) Ortaklar tarafından verilen taahhütler: Tüm Ortaklar, 21.07.2023 tarihinde verdiği taahhütleri ile paylarının Borsa'da işlem görmeye başlacığı tarihten itibaren 1 yıl süreyle sahibi olduğu Şirket paylarını Borsa'da satmayacağına, bu payların Borsa'da satılması sonucunu doğuracak şekilde herhangi bir işleme tabi tutmayacağına,",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1181114_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1b39e6664ba",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1181114",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1181114",
+     "published_at": "2023-08-04T22:19:29+03:00",
+     "source_sha256": "5e380518d4d82111f2d045935556b5e71b26229ac4c54eae2f0714ec2b100dca",
+     "source_file": "source_docs/OFSYM/KAP_1181114_ek1.pdf",
+     "page": 9,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "olduğu Şirket paylarını halka arza ilişkin İzahnamenin onaylandığı tarihten itibaren 180 gün boyunca Borsa dışında satmayacağına, başka yatırımcı hesaplarına virmanlamayacağına veya Borsa'da özel emir ile ve/veya toptan satış işlemlerine konu etmeyeceğine dair taahhütte bulunmuşlardır."
+    },
+    {
+     "source_id": "KAP_1181114_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1b39e6664ba",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1181114",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1181114",
+     "published_at": "2023-08-04T22:19:29+03:00",
+     "source_sha256": "5e380518d4d82111f2d045935556b5e71b26229ac4c54eae2f0714ec2b100dca",
+     "source_file": "source_docs/OFSYM/KAP_1181114_ek1.pdf",
+     "page": 9,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "c) Sermaye piyasası mevzuatı kapsamında verilen taahhütler: Izahname'nin 27.3 (b) numaralı bölümünde belirtildiği üzere, Pay Tebliği'nin 8'inci maddesine uygun olarak, Halka Arz Eden Pay Sahipleri, paylarının Borsa'da işlem görmeye başladığı tarihten itibaren 1 yıl süreyle sahibi olduğu Şirket paylarını Borsa'da satmayacağımı,"
+    },
+    {
+     "source_id": "KAP_1181114_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1b39e6664ba",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1181114",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1181114",
+     "published_at": "2023-08-04T22:19:29+03:00",
+     "source_sha256": "5e380518d4d82111f2d045935556b5e71b26229ac4c54eae2f0714ec2b100dca",
+     "source_file": "source_docs/OFSYM/KAP_1181114_ek1.pdf",
+     "page": 10,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "d) Yetkili kuruluşlar tarafından verilen taahhütler: Yoktur."
+    },
+    {
+     "source_id": "KAP_1181110_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1afe3f76406",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1181110",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1181110",
+     "published_at": "2023-08-04T22:15:10+03:00",
+     "source_sha256": "f20819dec91e01d499479599e0d1545f533974837ad29e31fd64222b14096c02",
+     "source_file": "source_docs/OFSYM/KAP_1181110_ek1.pdf",
+     "page": 6,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Şirket'in halihazırdaki ortakları, izahnamenin onaylanmasından Şirket paylarının Bors Istanbul'da işlem görmeye başladığı tarihe kadar ve bu tarihten itibaren 180 (yüzseksen gün boyunca, Şirket sermayesinde sahip olduğu halka arza konu olmayan payların 4 - Ağsles 202ztamamını veya bir kısmını Borsa'da ve/veya Borsa dışında herhangi bir koşulda čağıga, başka yatırımcı hesaplarına virmanlamayacağına veya Borsada özel emir h topsan satış işlemine konu etmeyeceğine,"
+    }
+   ],
+   "components": [
+    {
+     "who": "Tüm ortaklar (Salih Yeşilbaş, Galip Yeşilbaş, Selim Yeşilbaş, Agah Mamaloğlu, Bekir Taşkaldıran, Muzaffer Daşkın, Ofis Holding A.Ş.)",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Halka Arz Eden Pay Sahipleri (Galip Yeşilbaş, Salih Yeşilbaş, Selim Yeşilbaş)",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "MEVZUAT Pay Tebliği 8 (c; b'deki taahhütle aynı metin)",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Tüm ortaklar",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b) (i-SPK.128.21 ilke kararı yapısı; risk faktörlerinde 'Borsa'da ve/veya Borsa dışında' satmama)",
+     "start": "izahname onay tarihi"
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "b) Tüm ortaklar 21.07.2023 taahhüdüyle 1 yıl paylarını Borsa'da satmama, Borsa'da satış sonucunu doğuracak işleme tabi tutmama (MUTLAK); 1 yıl içinde borsa dışı satış/devirde özel durum açıklaması ve alıcıya bildirim; izahname onayından itibaren 180 gün borsa dışında satmama/virmanlamama/özel emir-toptan satışa konu etmeme (DIGER). c) Halka Arz Eden Pay Sahipleri için Pay Tebliği 8 kapsamında aynı 1 yıl metni. d) Yetkili kuruluş: Yoktur. Çelişki notu: risk faktörlerinde (KAP_1181110_EK1 s.6-7) aynı taahhüt '180 gün Borsa'da ve/veya Borsa dışında' satmama ve '1 (bir) yıl halka arz fiyatının altındaki bir fiyattan' satmama olarak özetlenmiş (FIYAT_ALTI); 27.3 taahhüt bölümü 1 yıl mutlak Borsa'da satmama diyor, esas alındı. Her iki okumada da borsada satışı kısıtlayan en kısa süre 365 (180 günlük kısım i-SPK.128.21 yapısı, DIGER). Ortak isimleri halka arz öncesi ortaklık tablosundan (s.8-9, bozuk OCR). [20/412 uyumlaştırma: tüm ortakların 180 günlük i-SPK.128.21 yapısındaki taahhüdü, risk faktörlerinde (KAP_1181110_EK1 s.6) 'Borsa'da ve/veya Borsa dışında herhangi bir koşulda' satmama/virmanlamama/özel emir-toptan satışa konu etmeme olarak yazıldığı için DIGER→MUTLAK yapıldı (alıntı extra_quotes'a eklendi; satış fiili OCR'da mühür altında 'čağıga'); yukarıdaki DIGER sınıflaması ve 'en kısa süre 365' ifadesi geçersiz. Değer 365→180 (en kısa MUTLAK/FIYAT_ALTI). Çelişki: §27.3 b)-c) (KAP_1181114_EK1 s.9) ve Özet E.5 (KAP_1181109_EK1 s.38) aynı 180 günü yalnız 'Borsa dışında satmayacağına' diye yazıyor; başlangıç §27.3'te izahname onay tarihi, risk faktörlerinde onaydan işlem başlangıcına kadar ve işlem başlangıcından itibaren 180 gün.] [kapsanan bileşen kuralı (doğrulayıcı): 180 -> 365; bütün ortaklar: MUTLAK 365 MUTLAK 180'i kapsıyor. Değer = herhangi bir ortağın borsada satış kısıtının ilk gevşediği gün.]"
+  },
+  "sector": {
+   "value": "Karma yem üretimi",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_1181109_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1aedb0d63d8",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1181109",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1181109",
+   "published_at": "2023-08-04T22:12:54+03:00",
+   "source_sha256": "07bdc468718f6ec3cc4d1ca8d239a1c0dd893f3178c3a399e9259bb5e49ede34",
+   "source_file": "source_docs/OFSYM/KAP_1181109_ek1.pdf",
+   "page": 44,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Şirket, karma yem sektöründe faaliyet göstermektedir.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1181109_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1aedb0d63d8",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1181109",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1181109",
+     "published_at": "2023-08-04T22:12:54+03:00",
+     "source_sha256": "07bdc468718f6ec3cc4d1ca8d239a1c0dd893f3178c3a399e9259bb5e49ede34",
+     "source_file": "source_docs/OFSYM/KAP_1181109_ek1.pdf",
+     "page": 46,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Şirket, karma yem üretimi yapmakta olup, işbu üretim sürecine yem ülretimi için kullandığı ham maddelerini tedarik ederek başlamaktadır."
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Ankara-Çubuk ve Manisa-Salihli fabrikaları, Sincan ve Adana'da fason üretim; besi, süt, küçükbaş ve kanatlı yem grupları; ayrıca hammadde ticareti. Kars fabrikası bağlı ortaklık Ofis Acay'a ait (sektör ihraççının kendi cümlesinden)."
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahname Borsa Görüşü (KAP_1181109_EK1 s.8; Borsa İstanbul 21.07.2023 tarih 18582 sayılı yazı) yalnız Yıldız Pazar, hukukçu raporu ve sorumluluk ifadesini içeriyor; BIST Katılım Tüm Endeksi cümlesi yok. qfind 'Katılım Tüm Endeks|yer alma şartlarını|katılım endeks|katılım finans|faizsiz|icazet|islami|Bilgi Formu' hiç eşleşme vermedi. İzahname 35. EKLER listesinde (KAP_1181114_EK1 s.24, EK 1-9) Katılım Finans İlkeleri Bilgi Formu yok. TSSD'ler (iki sürüm, aynı içerik) ve Borsa birincil piyasa duyurusu (KAP_1181602) katılım ifadesi içermiyor.",
+   "looked_at": [
+    "KAP_1181109_EK1",
+    "KAP_1181110_EK1",
+    "KAP_1181111_EK1",
+    "KAP_1181112_EK1",
+    "KAP_1181113_EK1",
+    "KAP_1181114_EK1",
+    "KAP_1181138_EK1",
+    "KAP_1181253_EK1",
+    "KAP_1181602"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_1181109_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1181109",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1aedb0d63d8",
+   "published_at": "2023-08-04T22:12:54+03:00",
+   "sha256": "07bdc468718f6ec3cc4d1ca8d239a1c0dd893f3178c3a399e9259bb5e49ede34",
+   "file": "source_docs/OFSYM/KAP_1181109_ek1.pdf"
+  },
+  "KAP_1181110_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1181110",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1afe3f76406",
+   "published_at": "2023-08-04T22:15:10+03:00",
+   "sha256": "f20819dec91e01d499479599e0d1545f533974837ad29e31fd64222b14096c02",
+   "file": "source_docs/OFSYM/KAP_1181110_ek1.pdf"
+  },
+  "KAP_1181114_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1181114",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c89555ba90189c1b39e6664ba",
+   "published_at": "2023-08-04T22:19:29+03:00",
+   "sha256": "5e380518d4d82111f2d045935556b5e71b26229ac4c54eae2f0714ec2b100dca",
+   "file": "source_docs/OFSYM/KAP_1181114_ek1.pdf"
+  }
+ }
+}

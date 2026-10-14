@@ -1,0 +1,259 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "BASGZ",
+  "company": "Başkent Doğalgaz Dağıtım Gayrimenkul Yatırım Ortaklığı A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "50888",
+      "source_id": "KAP_940358_EK1",
+      "source_document": "KAP 940358 ek 1",
+      "source_published_at": "2021-06-07T09:34:04+03:00",
+      "source_sha256": "1ea4c8390b309157135084616015293fa6349470056e2eefad8c0948ebf9c311",
+      "source_path": "registry/oot/source_docs/BASGZ/KAP_940358_ek1.pdf",
+      "quote": "TOPLAM 175.000.000,00 %100,00 50.888 175.000.000,00 %100,00 50.888 175.000.000,00 %100,00",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden ve dağıtım yapılan yatırımcı sayısı aynı (50.888)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "50.888",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "50696",
+        "domestic_institutional": "59",
+        "foreign_institutional": "2",
+        "issuer_group_and_employees": "131"
+      },
+      "source_id": "KAP_940358_EK1",
+      "source_document": "KAP 940358 ek 1",
+      "source_published_at": "2021-06-07T09:34:04+03:00",
+      "source_sha256": "1ea4c8390b309157135084616015293fa6349470056e2eefad8c0948ebf9c311",
+      "source_path": "registry/oot/source_docs/BASGZ/KAP_940358_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 63.000.000,00 %36,00 50.696 46.926.413 %26,82 50.696 46.926.413 %26,82",
+        "Yurt İçi Kurumsal 31.500.000,00 %18,00 59 23.454.644 %13,40 59 23.454.644 %13,40",
+        "Yurt Dışı Kurumsal 10.500.000,00 %6,00 2 2.000.000 %1,14 2 2.000.000 %1,14",
+        "İhraççı 70.000.000,00 %40,00 131 102.618.943 %58,64 131 102.618.943 %58,64"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "issuer_group_and_employees = 'Torunlar Grubu ve İhraççı Çalışanlarından Oluşan Yatırımcılar'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "50.696",
+        "Yurt İçi Kurumsal": "59",
+        "Yurt Dışı Kurumsal": "2",
+        "Torunlar Grubu ve İhraççı Çalışanları": "131"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '50.696', 'Yurt İçi Kurumsal': '59', 'Yurt Dışı Kurumsal': '2', 'Torunlar Grubu ve İhraççı Çalışanları': '131'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "0.7448636984",
+      "source_id": "KAP_940358_EK1",
+      "source_document": "KAP 940358 ek 1",
+      "source_published_at": "2021-06-07T09:34:04+03:00",
+      "source_sha256": "1ea4c8390b309157135084616015293fa6349470056e2eefad8c0948ebf9c311",
+      "source_path": "registry/oot/source_docs/BASGZ/KAP_940358_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 63.000.000,00 %36,00 50.696 46.926.413 %26,82 50.696 46.926.413 %26,82",
+      "derived": true,
+      "formula": "grup talebi 46.926.413 / planlanan tahsisat 63.000.000",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "0.744591873",
+      "source_id": "KAP_940358_EK1",
+      "source_document": "KAP 940358 ek 1",
+      "source_published_at": "2021-06-07T09:34:04+03:00",
+      "source_sha256": "1ea4c8390b309157135084616015293fa6349470056e2eefad8c0948ebf9c311",
+      "source_path": "registry/oot/source_docs/BASGZ/KAP_940358_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 31.500.000,00 %18,00 59 23.454.644 %13,40 59 23.454.644 %13,40",
+      "derived": true,
+      "formula": "grup talebi 23.454.644 / planlanan tahsisat 31.500.000",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "0.1904761905",
+      "source_id": "KAP_940358_EK1",
+      "source_document": "KAP 940358 ek 1",
+      "source_published_at": "2021-06-07T09:34:04+03:00",
+      "source_sha256": "1ea4c8390b309157135084616015293fa6349470056e2eefad8c0948ebf9c311",
+      "source_path": "registry/oot/source_docs/BASGZ/KAP_940358_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal 10.500.000,00 %6,00 2 2.000.000 %1,14 2 2.000.000 %1,14",
+      "derived": true,
+      "formula": "grup talebi 2.000.000 / planlanan tahsisat 10.500.000",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "46926413",
+        "domestic_institutional": "23454644",
+        "foreign_institutional": "2000000",
+        "issuer_group_and_employees": "102618943"
+      },
+      "source_id": "KAP_940358_EK1",
+      "source_document": "KAP 940358 ek 1",
+      "source_published_at": "2021-06-07T09:34:04+03:00",
+      "source_sha256": "1ea4c8390b309157135084616015293fa6349470056e2eefad8c0948ebf9c311",
+      "source_path": "registry/oot/source_docs/BASGZ/KAP_940358_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 63.000.000,00 %36,00 50.696 46.926.413 %26,82 50.696 46.926.413 %26,82",
+        "Yurt İçi Kurumsal 31.500.000,00 %18,00 59 23.454.644 %13,40 59 23.454.644 %13,40",
+        "Yurt Dışı Kurumsal 10.500.000,00 %6,00 2 2.000.000 %1,14 2 2.000.000 %1,14",
+        "İhraççı 70.000.000,00 %40,00 131 102.618.943 %58,64 131 102.618.943 %58,64"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "46.926.413",
+        "Yurt İçi Kurumsal": "23.454.644",
+        "Yurt Dışı Kurumsal": "2.000.000",
+        "Torunlar Grubu ve İhraççı Çalışanları": "102.618.943"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '46.926.413', 'Yurt İçi Kurumsal': '23.454.644', 'Yurt Dışı Kurumsal': '2.000.000', 'Torunlar Grubu ve İhraççı Çalışanları': '102.618.943'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "26.82",
+      "source_id": "KAP_940358_EK1",
+      "source_document": "KAP 940358 ek 1",
+      "source_published_at": "2021-06-07T09:34:04+03:00",
+      "source_sha256": "1ea4c8390b309157135084616015293fa6349470056e2eefad8c0948ebf9c311",
+      "source_path": "registry/oot/source_docs/BASGZ/KAP_940358_ek1.pdf",
+      "quote": "nihai halka arz büyüklüğünün %26,82’sine denk paylar Yurtiçi Bireysel Yatırımcılar’a satılmıştır",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "26,82",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "13.40",
+      "source_id": "KAP_940358_EK1",
+      "source_document": "KAP 940358 ek 1",
+      "source_published_at": "2021-06-07T09:34:04+03:00",
+      "source_sha256": "1ea4c8390b309157135084616015293fa6349470056e2eefad8c0948ebf9c311",
+      "source_path": "registry/oot/source_docs/BASGZ/KAP_940358_ek1.pdf",
+      "quote": "nihai halka arz büyüklüğünün %13,40’ına denk paylar Yurtiçi Kurumsal Yatırımcılar’a satılmıştır",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "13,40",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "1.14",
+      "source_id": "KAP_940358_EK1",
+      "source_document": "KAP 940358 ek 1",
+      "source_published_at": "2021-06-07T09:34:04+03:00",
+      "source_sha256": "1ea4c8390b309157135084616015293fa6349470056e2eefad8c0948ebf9c311",
+      "source_path": "registry/oot/source_docs/BASGZ/KAP_940358_ek1.pdf",
+      "quote": "nihai halka arz büyüklüğünün %1,14’üne denk paylar Yurtdışı Kurumsal Yatırımcılar’a satılmıştır",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "1,14",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki dağıtım yöntemini adlandırmıyor; TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Garanti Yatırım Menkul Kıymetler A.Ş.",
+      "source_id": "KAP_940358_EK1",
+      "source_document": "KAP 940358 ek 1",
+      "source_published_at": "2021-06-07T09:34:04+03:00",
+      "source_sha256": "1ea4c8390b309157135084616015293fa6349470056e2eefad8c0948ebf9c311",
+      "source_path": "registry/oot/source_docs/BASGZ/KAP_940358_ek1.pdf",
+      "quote": "Saygılarımızla; Garanti Yatırım Menkul Kıymetler A.Ş.",
+      "basis": "RESULT_NOTICE_PUBLISHER",
+      "note": "sonuç ekini imzalayan/yayımlayan kurum; belge 'aracılık' rolünü açıkça yazmıyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": "GARANTİ YATIRIM MENKUL KIYMETLER A.Ş.",
+      "codex_check": {
+        "codex_value": "GARANTİ YATIRIM MENKUL KIYMETLER A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "sonuç bildirimini yayımlayan kurum"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş; sonuç belgesinde yok",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş; sonuç belgesinde yok",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş; sonuç belgesinde yok",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "satıcı ortağın (Torunlar Enerji) satmama süresi eldeki belgelerde yok. KAP_940499: halka arzdan pay alan Torunlar Gıda ve Torun Kağıt'ın 180 günlük satmama taahhüdü var (arz öncesi ortak kilidi değil, arzda alıcı grup şirketleri)",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_941465",
+      "source_document": "KAP 941465",
+      "source_published_at": "2021-06-09T18:12:01+03:00",
+      "source_sha256": "9ce59a19bb644b3cdfa5e5aac3b47fc892032526df5f8f8482dc8eeb2b1ef574",
+      "source_path": "registry/oot/source_docs/BASGZ/KAP_941465_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_941465",
+      "source_document": "KAP 941465",
+      "source_published_at": "2021-06-09T18:12:01+03:00",
+      "source_sha256": "9ce59a19bb644b3cdfa5e5aac3b47fc892032526df5f8f8482dc8eeb2b1ef574",
+      "source_path": "registry/oot/source_docs/BASGZ/KAP_941465_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_941465": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 941465",
+      "published_at": "2021-06-09T18:12:01+03:00",
+      "sha256": "9ce59a19bb644b3cdfa5e5aac3b47fc892032526df5f8f8482dc8eeb2b1ef574",
+      "path": "registry/oot/source_docs/BASGZ/KAP_941465_bildirim.pdf"
+    },
+    "KAP_940358_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 940358 ek 1",
+      "published_at": "2021-06-07T09:34:04+03:00",
+      "sha256": "1ea4c8390b309157135084616015293fa6349470056e2eefad8c0948ebf9c311",
+      "path": "registry/oot/source_docs/BASGZ/KAP_940358_ek1.pdf"
+    }
+  }
+}

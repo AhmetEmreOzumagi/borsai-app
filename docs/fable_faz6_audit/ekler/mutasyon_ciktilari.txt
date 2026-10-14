@@ -1,0 +1,178 @@
+# Mutasyon çıktıları (adım 4). Klon: /tmp/borsai_faz6_audit/clone (git clone --local, HEAD cec77dc). Sürücü: ekler/mutate.sh
+# Bülten dosya adları maskelidir (th?_[tarih-maskeli]).
+
+## Özet (summary.txt)
+borsai kaynağı: /private/tmp/borsai_faz6_audit/clone/borsai
+HEAD: cec77dcdb8ce9e28ab936de3d0b8d76ec2756eb7
+a_gate_no_proof rc=1 dur=1s :: tests/test_faz6_oot.py::test_download_gate_requires_committed_and_pushed_s2_records :: 1 failed in 0.90s
+b_gate_skips_sealed rc=0 dur=2s :: tests/test_faz6_oot.py::test_download_gate_requires_committed_and_pushed_s2_records tests/test_faz6_oot.py::test_class_oot_cohort_gate_and_outcome_before_record tests/test_faz6_oot.py::test_extractor_reads_only_open_codes_and_never_opens_sealed tests/test_faz6_oot.py::test_d1_rows_and_oot_post_d1_record tests/test_outcome_guard.py::test_oot_outcomes_follow_every_s2_record_and_its_push_proof :: 5 passed in 1.77s
+c_extractor_accepts_sealed rc=1 dur=1s :: tests/test_faz6_oot.py::test_extractor_reads_only_open_codes_and_never_opens_sealed :: 1 failed in 0.86s
+d_extractor_reads_d11 rc=1 dur=3s :: tests/test_faz6_oot.py::test_extractor_reads_only_open_codes_and_never_opens_sealed tests/test_faz6_oot.py::test_extracted_rows_equal_outcomes_definitions tests/test_faz6_oot.py::test_d1_rows_and_oot_post_d1_record tests/test_faz6_oot.py::test_build_oot_scores_synthetic tests/test_faz6_oot.py::test_oot_post_d1_block_machine_sequenced_rows :: 3 failed, 1 passed, 1 error in 2.70s
+e_vault_seed rc=1 dur=0s :: tests/test_faz6_oot.py::test_vault_draw_is_deterministic_stratified_and_exposed_stay_open tests/test_faz6_oot.py::test_vault_draw_on_universe_counts tests/test_faz6_oot.py::test_real_cohort_validates_and_reproduces_from_code :: 2 failed, 1 passed in 0.10s
+e2_vault_year_order rc=1 dur=1s :: tests/test_faz6_oot.py::test_vault_draw_is_deterministic_stratified_and_exposed_stay_open tests/test_faz6_oot.py::test_real_cohort_validates_and_reproduces_from_code :: 2 failed in 0.10s
+f_margin_date_shift rc=1 dur=1s :: tests/test_faz6_oot.py::test_regime_tags_follow_rule_dates tests/test_faz6_oot.py::test_real_cohort_validates_and_reproduces_from_code :: 1 failed, 1 passed in 0.09s
+g_tick_threshold_c5 rc=1 dur=0s :: tests/test_faz6_oot.py::test_tick_table_mismatch_only_where_path_reaches_250 tests/test_faz6_oot.py::test_real_cohort_validates_and_reproduces_from_code :: 2 failed in 0.10s
+g2_t2015_table_250_tier rc=1 dur=1s :: tests/test_faz6_oot.py::test_tick_table_mismatch_only_where_path_reaches_250 tests/test_faz6_oot.py::test_real_cohort_validates_and_reproduces_from_code :: 2 failed in 0.10s
+h_g1_outcome_key_in_inputs rc=1 dur=0s :: tests/test_outcome_guard.py::test_oot_registry_carries_no_outcome_fields tests/test_faz6_oot.py::test_real_inputs_validate_and_are_byte_equal_imports :: 2 failed in 0.20s
+i_cohort_gate_always_open rc=1 dur=4s :: tests/test_faz6_oot.py::test_class_oot_cohort_gate_and_outcome_before_record tests/test_faz6_oot.py::test_class_oot_requires_dag_order_and_proof_order :: 1 failed, 1 passed in 4.09s
+i2_record_ancestor_ignored rc=0 dur=6s :: tests/test_faz6_oot.py::test_class_oot_requires_dag_order_and_proof_order tests/test_faz6_oot.py::test_class_oot_cohort_gate_and_outcome_before_record tests/test_faz6_oot.py::test_build_oot_scores_synthetic :: 3 passed in 5.63s
+j_scale_mix_accepts_oot rc=1 dur=1s :: tests/test_faz6_oot.py::test_scale_mixing_with_oot_is_rejected :: 1 failed in 0.08s
+k_class_oot_ignores_proof_order rc=1 dur=3s :: tests/test_faz6_oot.py::test_class_oot_requires_dag_order_and_proof_order :: 1 failed in 3.12s
+l_freeze_oot_skips_model rc=1 dur=1s :: tests/test_faz6_oot.py::test_oot_batch_one_record_per_member_with_every_model tests/test_faz6_oot.py::test_real_dry_run_builds_every_member_without_writing tests/test_faz6_oot.py::test_download_gate_requires_committed_and_pushed_s2_records :: 3 failed in 0.73s
+MUT(m) uygulandı: /tmp/borsai_faz6_audit/clone/data/raw/bist/thb/2021/thb_[tarih-maskeli]1.zip
+m_cohort_window_zip_in_repo rc=1 dur=0s :: tests/test_outcome_guard.py::test_no_cohort_window_bulletin_anywhere_in_repo :: 1 failed in 0.10s
+son durum: 0 değişiklik (0 beklenir)
+
+## a_gate_no_proof
+E       Failed: DID NOT RAISE GateError
+FAILED tests/test_faz6_oot.py::test_download_gate_requires_committed_and_pushed_s2_records
+1 failed in 0.90s
+
+## b_gate_skips_sealed
+5 passed in 1.77s
+
+## c_extractor_accepts_sealed
+E           TypeError: cannot unpack non-iterable NoneType object
+FAILED tests/test_faz6_oot.py::test_extractor_reads_only_open_codes_and_never_opens_sealed
+1 failed in 0.86s
+
+## d_extractor_reads_d11
+E           borsai.outcomes.NotPublished: https://www.borsaistanbul.com/data/thb/2021/06/thb_[tarih-maskeli]1.zip
+E           borsai.outcomes.NotPublished: https://www.borsaistanbul.com/data/thb/2021/03/thb_[tarih-maskeli]1.zip
+E   KeyError: 'https://www.borsaistanbul.com/data/thb/2021/03/thb_[tarih-maskeli]1.zip'
+E           borsai.outcomes.NotPublished: https://www.borsaistanbul.com/data/thb/2021/04/thb_[tarih-maskeli]1.zip
+FAILED tests/test_faz6_oot.py::test_extractor_reads_only_open_codes_and_never_opens_sealed
+FAILED tests/test_faz6_oot.py::test_extracted_rows_equal_outcomes_definitions
+FAILED tests/test_faz6_oot.py::test_oot_post_d1_block_machine_sequenced_rows
+ERROR tests/test_faz6_oot.py::test_build_oot_scores_synthetic - borsai.outcom...
+3 failed, 1 passed, 1 error in 2.70s
+
+## e2_vault_year_order
+E       AssertionError: assert 'fa8d30bfd7d3...95964989567e4' == 'c944e4281ee8...cb33f283f4ba6'
+E         
+E         - c944e4281ee8c91bef254851c4d9108af2355d487caa12df770cb33f283f4ba6
+E         + fa8d30bfd7d35e1cf37b6d75bdcfedb5ca81e81682bebc620d495964989567e4
+E       AssertionError: assert [{'ticker': '...9', ...}, ...] == [{'ticker': '...9', ...}, ...]
+E         
+E         At index 2 diff: {'ticker': 'FADE', 'company': 'Fade Gıda Yatırım Sanayi Ticaret A.Ş.', 'first_trading_date': '2020-08-06', 'listing_source_id': 'KAP_864942', 'listing_source_sha256': '9fffebcc7a96c259321d6bb85512b12a4cb798c17720a6e10010dabce8343ef4', 'sale_method': 'ON_EXCHANGE', 'market': 'ANA', 'year': '2020', 'status': 'MEMBER', 'reason': '', 'vault': 'OPEN', 'regime_tags': 'ALLOC_REGIME=PRE_20211111|MARGIN_RULE=POST_20200313|MARKET=ANA|SALE_ON_EXCHANGE|SHORT_SELL_BAN_2020_END_NOT_FOUND|TICK_TABLE_EPOCH=T2015', 'added_at': '2026-09-24T23:49:51+03:00'} != {'ticker': ...
+E         
+E         ...Full output truncated (2 lines hidden), use '-vv' to show
+FAILED tests/test_faz6_oot.py::test_vault_draw_is_deterministic_stratified_and_exposed_stay_open
+FAILED tests/test_faz6_oot.py::test_real_cohort_validates_and_reproduces_from_code
+2 failed in 0.10s
+
+## e_vault_seed
+E       AssertionError: assert '80826c69ded0...6a567b2a8fd9b' == 'c944e4281ee8...cb33f283f4ba6'
+E         
+E         - c944e4281ee8c91bef254851c4d9108af2355d487caa12df770cb33f283f4ba6
+E         + 80826c69ded04880388812d2caefb4d0d9d8b3c2f32b58a58586a567b2a8fd9b
+E       AssertionError: assert [{'ticker': '...9', ...}, ...] == [{'ticker': '...9', ...}, ...]
+E         
+E         At index 3 diff: {'ticker': 'DNISI', 'company': 'Dinamik Isı Makina Yalıtım Malzemeleri Sanayi ve Ticaret A.Ş.', 'first_trading_date': '2020-09-03', 'listing_source_id': 'KAP_872784', 'listing_source_sha256': 'e2285b3516869b9a6bfad6aa522ad296adfb5d4930e3c1a29894b8af093de876', 'sale_method': 'ON_EXCHANGE', 'market': 'ANA', 'year': '2020', 'status': 'MEMBER', 'reason': '', 'vault': 'OPEN', 'regime_tags': 'ALLOC_REGIME=PRE_20211111|MARGIN_RULE=POST_20200313|MARKET=ANA|SALE_ON_EXCHANGE|SHORT_SELL_BAN_2020_END_NOT_FOUND|TICK_TABLE_EPOCH=T2015', 'added_at': '2026-09-24T23:49:...
+E         
+E         ...Full output truncated (2 lines hidden), use '-vv' to show
+FAILED tests/test_faz6_oot.py::test_vault_draw_is_deterministic_stratified_and_exposed_stay_open
+FAILED tests/test_faz6_oot.py::test_real_cohort_validates_and_reproduces_from_code
+2 failed, 1 passed in 0.10s
+
+## f_margin_date_shift
+E       AssertionError: assert ('PRE_20200313' == 'POST_20200313'
+E         
+E         - POST_20200313
+E         ?  ^^^
+E         + PRE_20200313
+E         ?  ^^)
+FAILED tests/test_faz6_oot.py::test_regime_tags_follow_rule_dates - Assertion...
+1 failed, 1 passed in 0.09s
+
+## g2_t2015_table_250_tier
+E       AssertionError: assert (False)
+E        +  where False = <function tick_table_mismatch at 0x10da83e20>('107.5', 'T2015')
+E        +    where <function tick_table_mismatch at 0x10da83e20> = reg.tick_table_mismatch
+E       AssertionError: assert [{'ticker': '...9', ...}, ...] == [{'ticker': '...9', ...}, ...]
+E         
+E         At index 50 diff: {'ticker': 'ARASE', 'company': 'Doğu Aras Enerji Yatırımları A.Ş.', 'first_trading_date': '2021-11-11', 'listing_source_id': 'KAP_976327', 'listing_source_sha256': '19f95ad8b1f9d0df23b28c02c63b2b23051af0079a8a29b2a18bded5912b23aa', 'sale_method': 'OFF_EXCHANGE_BOOKBUILD', 'market': 'YILDIZ', 'year': '2021', 'status': 'MEMBER', 'reason': '', 'vault': 'SEALED', 'regime_tags': 'ALLOC_REGIME=PRE_20211111|MARGIN_RULE=POST_20200313|MARKET=YILDIZ|SHORT_SELL_BAN_2020_END_NOT_FOUND|TICK_TABLE_EPOCH=T2015|TICK_TABLE_MISMATCH', 'added_at': '2026-09-24T23:49:51+03...
+E         
+E         ...Full output truncated (2 lines hidden), use '-vv' to show
+FAILED tests/test_faz6_oot.py::test_tick_table_mismatch_only_where_path_reaches_250
+FAILED tests/test_faz6_oot.py::test_real_cohort_validates_and_reproduces_from_code
+2 failed in 0.10s
+
+## g_tick_threshold_c5
+E       AssertionError: assert (False)
+E        +  where False = <function tick_table_mismatch at 0x10f7a3ec0>('107.5', 'T2015')
+E        +    where <function tick_table_mismatch at 0x10f7a3ec0> = reg.tick_table_mismatch
+E       AssertionError: assert [{'ticker': '...9', ...}, ...] == [{'ticker': '...9', ...}, ...]
+E         
+E         At index 50 diff: {'ticker': 'ARASE', 'company': 'Doğu Aras Enerji Yatırımları A.Ş.', 'first_trading_date': '2021-11-11', 'listing_source_id': 'KAP_976327', 'listing_source_sha256': '19f95ad8b1f9d0df23b28c02c63b2b23051af0079a8a29b2a18bded5912b23aa', 'sale_method': 'OFF_EXCHANGE_BOOKBUILD', 'market': 'YILDIZ', 'year': '2021', 'status': 'MEMBER', 'reason': '', 'vault': 'SEALED', 'regime_tags': 'ALLOC_REGIME=PRE_20211111|MARGIN_RULE=POST_20200313|MARKET=YILDIZ|SHORT_SELL_BAN_2020_END_NOT_FOUND|TICK_TABLE_EPOCH=T2015|TICK_TABLE_MISMATCH', 'added_at': '2026-09-24T23:49:51+03...
+E         
+E         ...Full output truncated (2 lines hidden), use '-vv' to show
+FAILED tests/test_faz6_oot.py::test_tick_table_mismatch_only_where_path_reaches_250
+FAILED tests/test_faz6_oot.py::test_real_cohort_validates_and_reproduces_from_code
+2 failed in 0.10s
+
+## h_g1_outcome_key_in_inputs
+E       assert ["registry/oo...nı ['close']"] == []
+E         
+E         Left contains one more item: "registry/oot/inputs/FADE.json: sonuç alanı ['close']"
+E         Use -v to get more diff
+E           AssertionError: registry/oot/inputs/FADE.json
+E           assert '1866d576b9ab...7c6d8b776d323' == 'e0c4cc749525...45085ef07ddf0'
+E             
+E             - e0c4cc749525db7aeb01808f9425fb0ad8e8b30643e08c0b45345085ef07ddf0
+E             + 1866d576b9ab84586443d3f5129754878a9bee677ca0d3729fc7c6d8b776d323
+FAILED tests/test_outcome_guard.py::test_oot_registry_carries_no_outcome_fields
+FAILED tests/test_faz6_oot.py::test_real_inputs_validate_and_are_byte_equal_imports
+2 failed in 0.20s
+
+## i2_record_ancestor_ignored
+3 passed in 5.63s
+
+## i_cohort_gate_always_open
+E       AssertionError: assert ('OOT_RETRO' == 'OOT_RETRO'
+E         
+E           OOT_RETRO and not True)
+FAILED tests/test_faz6_oot.py::test_class_oot_cohort_gate_and_outcome_before_record
+1 failed, 1 passed in 4.09s
+
+## j_scale_mix_accepts_oot
+E           Failed: DID NOT RAISE ScaleMixError
+FAILED tests/test_faz6_oot.py::test_scale_mixing_with_oot_is_rejected - Faile...
+1 failed in 0.08s
+
+## k_class_oot_ignores_proof_order
+E           AssertionError: assert ([{'ticker': '...ue, ...}, ...] == []
+E             
+E             Left contains 12 more items, first extra item: {'ticker': 'SYNA', 'year': '2021', 'vault': 'OPEN', 'open': True, ...}
+E             Use -v to get more diff)
+FAILED tests/test_faz6_oot.py::test_class_oot_requires_dag_order_and_proof_order
+1 failed in 3.12s
+
+## l_freeze_oot_skips_model
+E           AssertionError: assert ['base_always...10_rate', ...] == ['v1_5_h99', ...se_rate', ...]
+E             
+E             At index 0 diff: 'base_always_ceiling' != 'v1_5_h99'
+E             Right contains one more item: 'pb_ceiling_path_v0'
+E             Use -v to get more diff
+E           AssertionError: assert (18 == 19)
+E            +  where 18 = len([{'model_id': 'base_always_ceiling', 'file': 'models/base_always_ceiling.json', 'params_sha256': '0b27057479bd9244dc70...a4880628cd47abaf2e2ddda', 'spec_sha256': 'ff7dfd4084a16432336eb551958c13403c72ac799d9742f8cbbf324ab98e0ecc', ...}, ...])
+E           borsai.outcomes_oot.GateError: karantina indirmesi başlamaz (KARARLAR D6-5): registry/oot/records/SYNA/20260925T090000Z_b7a9587536c4.json: INDEX.json'daki bütün modelleri içermiyor; registry/oot/records/SYNB/20260925T090000Z_c40db90531ee.json: INDEX.json'daki bütün modelleri içermiyor
+FAILED tests/test_faz6_oot.py::test_oot_batch_one_record_per_member_with_every_model
+FAILED tests/test_faz6_oot.py::test_real_dry_run_builds_every_member_without_writing
+FAILED tests/test_faz6_oot.py::test_download_gate_requires_committed_and_pushed_s2_records
+3 failed in 0.73s
+
+## m_cohort_window_zip_in_repo
+E           AssertionError: data/raw/bist/thb/2021/thb_[tarih-maskeli]1.zip
+E           assert not (<re.Match object; span=(0, 16), match='thb_[tarih-maskeli]1.zip'> and '20210301' <= '20231231')
+E            +  where '20210301' = <built-in method group of re.Match object at 0x1105562a0>(1)
+E            +    where <built-in method group of re.Match object at 0x1105562a0> = <re.Match object; span=(0, 16), match='thb_[tarih-maskeli]1.zip'>.group
+FAILED tests/test_outcome_guard.py::test_no_cohort_window_bulletin_anywhere_in_repo
+1 failed in 0.10s
+
+## (d) sondası: uzun sentetik piyasada okunan seans sayısı (ekler/mutate.sh dışı; mut_d_probe.py)
+mutasyonsuz : {"okunan_seans": 10, "ham_kopya_seans": 10, "d10": "2021-03-12", "son_okunan": "2021-03-12", "sonuc_satir": 10, "durum": ["OK"]}
+mutasyon (d): resolve_member D_10'da durmuyor; 60 seanslık sentetik piyasanın SONUNA kadar okumaya devam edip 61. seansın bültenini
+              istedi (KeyError/NotPublished). Yani mutate.sh'taki kırmızılık tesadüfidir: testler, sentetik piyasa dosyası bittiği için
+              NotPublished ile kırmızı oluyor; "ham kopyada yalnız D_1…D_10 seansları var" ya da "D_10'dan sonra bülten istenmez"
+              koşulunu doğrudan denetleyen bir test yok (bulgu, AUDIT.md).

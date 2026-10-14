@@ -1,0 +1,224 @@
+# Mutasyon çıktıları — BORSAI_FAZ5_FABLE_REPRO_AUDIT_20260924
+# Klon: git clone --local /Users/ahmet/Desktop/BorsAi -> /tmp/borsai_faz5_audit/clone (HEAD 7d08169), .venv sembolik bağ; sürücüler ekler/mutate.sh (Faz 5, a–l) ve ekler/mutate_faz2c.sh (Faz 2C, m1–m5).
+# Her mutasyon: uygula -> ilgili test(ler) -> rc kaydet -> git checkout ile geri al. rc=1 = KIRMIZI (beklenen), rc=0 = testler yeşil kaldı (bulgu).
+
+## Sürücü stdout (uygulanan mutasyonlar)
+mutate_faz2c_run.log:MUT(m1) uygulandı
+mutate_faz2c_run.log:MUT(m2) uygulandı
+mutate_faz2c_run.log:MUT(m3) uygulandı
+mutate_faz2c_run.log:MUT(m4) uygulandı
+mutate_faz2c_run.log:MUT(m5) uygulandı
+mutate_run.log:MUT(a1) uygulandı
+mutate_run.log:MUT(a2) uygulandı
+mutate_run.log:MUT(b) uygulandı
+mutate_run.log:MUT(c) uygulandı
+mutate_run.log:MUT(d) uygulandı
+mutate_run.log:MUT(e) uygulandı
+mutate_run.log:MUT(f) uygulandı
+mutate_run.log:MUT(g1) uygulandı
+mutate_run.log:MUT(g2) uygulandı
+mutate_run.log:MUT(h) uygulandı
+mutate_run.log:MUT(i1) uygulandı
+mutate_run.log:MUT(i2) uygulandı
+mutate_run.log:MUT(j) uygulandı
+mutate_run.log:MUT(k1) uygulandı
+mutate_run.log:MUT(k2) uygulandı
+mutate_run.log:MUT(k3) uygulandı
+mutate_run.log:MUT(l1) uygulandı
+mutate_run.log:MUT(l2) uygulandı
+
+## Özet (Faz 5)
+borsai kaynağı: /private/tmp/borsai_faz5_audit/clone/borsai
+a1_logit_roundtrip_predict rc=1 dur=3s :: tests/test_faz5_post_d1.py::test_5_t2_inf_endpoint_bit_equal tests/test_faz5_post_d1.py::test_10_numpy_final_model_vs_stdlib_predict_fixed_delta :: 2 failed in 1.95s
+a2_logit_roundtrip_fold rc=1 dur=27s :: tests/test_faz5_post_d1.py::test_t2_t7_pipeline_inf_ledger_equals_comparator tests/test_faz5_golden.py::test_backtest_byte_identical_to_faz5_golden :: 2 failed in 25.39s
+b_zero_delta_branch rc=1 dur=2s :: tests/test_faz5_post_d1.py::test_5b_no_special_branch_for_zero_delta tests/test_faz5_post_d1.py::test_5_t2_inf_endpoint_bit_equal :: 1 failed, 1 passed in 0.69s
+c_test_ipo_in_prep rc=1 dur=34s :: tests/test_faz5_post_d1.py::test_8b_test_ipo_d1_fields_do_not_touch_training tests/test_faz5_golden.py::test_backtest_byte_identical_to_faz5_golden :: 2 failed in 31.87s
+d_loader_reads_session2_volume rc=1 dur=2s :: tests/test_faz5_post_d1.py::test_8_sessions_loader_whitelist :: 1 failed in 0.26s
+e_tie_to_smallest_lambda rc=1 dur=1s :: tests/test_faz5_post_d1.py::test_7_selection_ties_to_largest_and_drops_nonconverged :: 1 failed in 0.26s
+f_cutoff_le rc=1 dur=1s :: tests/test_faz5_post_d1.py::test_4_fold_set_and_leakage_dates tests/test_faz5_golden.py::test_backtest_byte_identical_to_faz5_golden :: ERROR tests/test_faz5_golden.py::test_backtest_byte_identical_to_faz5_golden
+g1_lock_from_corrected_columns rc=1 dur=1s :: tests/test_faz5_post_d1.py::test_8_sessions_loader_whitelist tests/test_faz5_post_d1.py::test_2_feature_definitions :: 1 failed, 1 passed in 0.12s
+g2_lock_float_compare rc=0 dur=8s :: tests/test_faz5_post_d1.py::test_2_feature_definitions tests/test_faz5_post_d1.py::test_9_refusals_warnings_scope tests/test_faz5_golden.py::test_backtest_byte_identical_to_faz5_golden :: 3 passed in 7.40s
+h_h1_updated rc=1 dur=8s :: tests/test_faz5_post_d1.py::test_5_t2_inf_endpoint_bit_equal tests/test_faz5_post_d1.py::test_10_numpy_final_model_vs_stdlib_predict_fixed_delta tests/test_faz5_golden.py::test_backtest_byte_identical_to_faz5_golden :: 2 failed, 1 passed in 7.37s
+i1_sequence_guard_ignores_post_index rc=1 dur=1s :: tests/test_faz5_post_d1.py::test_t4_sequence_guard_reads_post_d1_index :: 1 failed in 0.20s
+i2_sequence_violations_ignore_post_index rc=1 dur=2s :: tests/test_outcome_guard.py::test_10e_post_d1_model_listed_but_not_committed_is_red tests/test_outcome_guard.py::test_10f_post_d1_model_then_outcome_is_green_parallel_branch_is_red :: 2 failed in 1.25s
+j_freeze_writes_index_json rc=1 dur=0s :: tests/test_faz5_post_d1.py::test_t4_freeze_post_d1_writes_only_the_separate_index :: 1 failed in 0.16s
+k1_expectation_bound_shift rc=1 dur=1s :: tests/test_faz5_post_d1.py::test_15_expectation_rows_verbatim_and_rules :: 1 failed in 0.09s
+k2_too_good_threshold rc=1 dur=1s :: tests/test_faz5_post_d1.py::test_15_expectation_rows_verbatim_and_rules tests/test_faz5_golden.py::test_models_md_faz5_section :: 2 failed in 0.09s
+k3_lambda_final_range rc=1 dur=6s :: tests/test_faz5_post_d1.py::test_15_expectation_rows_verbatim_and_rules tests/test_faz5_golden.py::test_models_md_faz5_section tests/test_report.py::test_models_md_is_up_to_date :: 1 failed, 2 passed in 4.91s
+l1_bootstrap_seed rc=1 dur=0s :: tests/test_faz5_post_d1.py::test_t6_comparator_reproduces_models_md_j1 :: 1 failed in 0.13s
+l2_block_key_year rc=1 dur=1s :: tests/test_faz5_post_d1.py::test_t6_comparator_reproduces_models_md_j1 :: 1 failed in 0.12s
+=== klon durumu ===
+DONE_FAZ5
+
+## Özet (Faz 2C)
+m1_cells_below_ten rc=1 dur=6s :: tests/test_scoring_conditional.py::test_t1_small_n_rules_per_j tests/test_scoring_conditional.py::test_real_no_conditional_cell_or_verdict_below_ten :: 2 failed in 5.36s
+m2_class_not_inherited rc=1 dur=6s :: tests/test_scoring_conditional.py::test_t3_class_is_inherited_per_j tests/test_scoring_conditional.py::test_real_blocks_only_for_s_kinds_and_ek2_integrity :: 2 failed in 5.05s
+m3_L_below_j_in_denominator rc=1 dur=3s :: tests/test_scoring_conditional.py::test_t5_arz_with_L_below_j_is_not_in_the_denominator tests/test_scoring_conditional.py::test_real_blocks_only_for_s_kinds_and_ek2_integrity :: 1 failed, 1 error in 2.46s
+m4_pending_not_simultaneous rc=1 dur=5s :: tests/test_scoring_conditional.py::test_t4_missing_horizon_drops_pair_for_all_models_at_once tests/test_scoring_conditional.py::test_real_pair_status_is_the_same_for_every_model :: 2 failed in 5.06s
+m5_undefined_scored rc=1 dur=1s :: tests/test_scoring_conditional.py::test_t5b_zero_S_j_is_undefined_not_scored :: 1 failed in 0.10s
+=== klon durumu ===
+DONE_FAZ2C
+
+## Test çıktılarından hata satırları (her mutasyon için ilk kanıt satırları)
+### a1_logit_roundtrip_predict
+E           assert ([0.0850127036...00909508, ...] == [0.0850127036...00909505, ...]
+E             At index 3 diff: 0.17168423700909508 != 0.17168423700909505
+E             Use -v to get more diff)
+E           assert 0.14618545263827948 == 0.1461854526382795
+FAILED tests/test_faz5_post_d1.py::test_5_t2_inf_endpoint_bit_equal - assert ...
+FAILED tests/test_faz5_post_d1.py::test_10_numpy_final_model_vs_stdlib_predict_fixed_delta
+2 failed in 1.95s
+### a2_logit_roundtrip_fold
+E           assert [0.0619481908...93273008, ...] == [0.0619481908...93273008, ...]
+E             At index 1 diff: 0.03500976854124883 != 0.03500976854124881
+E             Use -v to get more diff
+E       AssertionError: assert b'model_id,fo..._APPLICABLE\n' == b'model_id,fo..._APPLICABLE\n'
+E         At index 2292 diff: b'4' != b'2'
+E         Use -v to get more diff
+FAILED tests/test_faz5_post_d1.py::test_t2_t7_pipeline_inf_ledger_equals_comparator
+FAILED tests/test_faz5_golden.py::test_backtest_byte_identical_to_faz5_golden
+### b_zero_delta_branch
+E       assert [] == [1]
+E         Right contains one more item: 1
+E         Use -v to get more diff
+FAILED tests/test_faz5_post_d1.py::test_5b_no_special_branch_for_zero_delta
+1 failed, 1 passed in 0.69s
+### c_test_ipo_in_prep
+E       AssertionError: assert ({'columns': [...3019643}, ...} == {'columns': [...1007672}, ...}
+E         Omitting 4 identical items, use -vv to show
+E         Differing items:
+E         {'clip': {'d1_turnover': {'p05': -6.904866573022192, 'p95': -0.9314645213806969}}} != {'clip': {'d1_turnover': {'p05': -6.904866573022192, 'p95': -0.8079506284647321}}}
+E         {'std': {'d1_lock': 0.31125697963644244, 'd1_turnover': 1.7540824263019643}} != {'std': {'d1_lock': 0.31125697963644244, 'd1_turnover': 1.7735732061007672}}
+E         {'mean': {'d1_lock': 0.8913043478260869, 'd1_turnover': -5.141555937979944}} != {'mean': {'d1_lock': 0.8913043478260869, 'd1_turnover': -5.13350068409412}}
+E         Use -v to get more diff)
+E       AssertionError: assert b'model_id,fo..._APPLICABLE\n' == b'model_id,fo..._APPLICABLE\n'
+### d_loader_reads_session2_volume
+E       AssertionError: assert {'session_num...me', 'ticker'} == {'session_num...te', 'ticker'}
+E         Extra items in the left set:
+E         'thb_raw_volume'
+E         Use -v to get more diff
+FAILED tests/test_faz5_post_d1.py::test_8_sessions_loader_whitelist - Asserti...
+1 failed in 0.26s
+### e_tie_to_smallest_lambda
+E       AssertionError: assert 1.0 == 10.0
+E        +  where 1.0 = <function choose_lambda at 0x10b999260>([{'lambda': 1.0, 'score': 0.5, 'status': 'SCORED'}, {'lambda': 10.0, 'score': 0.5, 'status': 'SCORED'}, {'lambda': 'INF', 'score': 0.6, 'status': 'SCORED'}])
+E        +    where <function choose_lambda at 0x10b999260> = hz.choose_lambda
+FAILED tests/test_faz5_post_d1.py::test_7_selection_ties_to_largest_and_drops_nonconverged
+1 failed in 0.26s
+### f_cutoff_le
+E               borsai.backtest.BacktestStop: gelecek sızıntısı: DMRGD
+E               borsai.backtest.BacktestStop: gelecek sızıntısı: DMRGD
+ERROR tests/test_faz5_post_d1.py::test_4_fold_set_and_leakage_dates - borsai....
+ERROR tests/test_faz5_golden.py::test_backtest_byte_identical_to_faz5_golden
+2 errors in 0.17s
+### g1_lock_from_corrected_columns
+E       AssertionError: assert not ({'low', 'security_trading_status', 'session_number', 'session_type', 'target_session_date', 'thb_raw_close', ...} & {'aof', 'close', 'high', 'low', 'lower_limit', 'open', ...})
+FAILED tests/test_faz5_post_d1.py::test_8_sessions_loader_whitelist - Asserti...
+1 failed, 1 passed in 0.12s
+### g2_lock_float_compare
+3 passed in 7.40s
+### h_h1_updated
+E           assert 0.04713418912027632 == 0.07209956393755777
+E       AssertionError: assert b'model_id,fo..._APPLICABLE\n' == b'model_id,fo..._APPLICABLE\n'
+E         At index 4600 diff: b'1' != b'5'
+E         Use -v to get more diff
+FAILED tests/test_faz5_post_d1.py::test_10_numpy_final_model_vs_stdlib_predict_fixed_delta
+FAILED tests/test_faz5_golden.py::test_backtest_byte_identical_to_faz5_golden
+2 failed, 1 passed in 7.37s
+### i1_sequence_guard_ignores_post_index
+E       Failed: DID NOT RAISE SequenceRuleError
+FAILED tests/test_faz5_post_d1.py::test_t4_sequence_guard_reads_post_d1_index
+1 failed in 0.20s
+### i2_sequence_violations_ignore_post_index
+E       assert (0 == 2)
+E        +  where 0 = len([])
+E       assert (0 == 1)
+E        +  where 0 = len([])
+FAILED tests/test_outcome_guard.py::test_10e_post_d1_model_listed_but_not_committed_is_red
+FAILED tests/test_outcome_guard.py::test_10f_post_d1_model_then_outcome_is_green_parallel_branch_is_red
+2 failed in 1.25s
+### j_freeze_writes_index_json
+E       assert b'{\n  "model...index/1"\n}\n' == b'{\n  "model...index/1"\n}\n'
+E         At index 15297 diff: b',' != b'\n'
+E         Use -v to get more diff
+FAILED tests/test_faz5_post_d1.py::test_t4_freeze_post_d1_writes_only_the_separate_index
+1 failed in 0.16s
+### k1_expectation_bound_shift
+E       AssertionError: assert (12 == 12 and (-0.019, 0.004) == (-0.02, 0.003)
+E        +  where 12 = len([{'raw': {'hucre': '**RPS_1 (BİRİNCİL)**', 'karsilastirilan': '`ceiling_hazard_v0` koşullu', 'beklenen': '**−0.020 … +...*kazanç en olası bu hücrede**', ...}, 'kind': 'diff', 'metric': 'brier2', 'comparator': 'ceiling_hazard_v0', ...}, ...])
+E         At index 0 diff: -0.019 != -0.02
+E         Use -v to get more diff)
+FAILED tests/test_faz5_post_d1.py::test_15_expectation_rows_verbatim_and_rules
+1 failed in 0.09s
+### k2_too_good_threshold
+E       assert (-0.04, -0.02, -0.06) == (-0.04, -0.02, -0.04)
+E         At index 2 diff: -0.06 != -0.04
+E         Use -v to get more diff
+E           assert "Beklentiden çok iyi (§5): birincil fark < -0.040 ya da birincil aralığın üst ucu < -0.020 ya da Brier k = 2 farkı (`c...u) < -0.060. Tetiklense de tetiklenmese de sıradaki adım Fable'ın sıfırdan yeniden üretimidir (ledger'lar |Δ| ≤ 1e-9)." in ' (Fable şartnamesi, docs/specs_faz5/)\n\n**Terazi ve ölçek:** aşağıdaki her sayı **backtest**tir (retrospektif walk-f...k 12) | Günlükteki koşu sayısı |\n|---|---|---|---|---|\n| `post_d1_hazard_v0` | post_d1 | 87 | `579cf2ae4a35` | 1 |\n'
+FAILED tests/test_faz5_post_d1.py::test_15_expectation_rows_verbatim_and_rules
+FAILED tests/test_faz5_golden.py::test_models_md_faz5_section - assert "Bekle...
+2 failed in 0.09s
+### k3_lambda_final_range
+E       AssertionError: assert '# Modeller v...4a35` | 1 |\n' == '# Modeller v...4a35` | 1 |\n'
+E         Skipping 113293 identical leading characters in diff, use -v to show
+E         - — |  | tutmadı (daha büyük λ) | — |
+E         + — |  | tuttu | — |
+E           | λ | fold'lar | erken fold'larda INF; fold'ların %20–50'sinde INF | — | INF 2/70 FIT_OK fold (%3); ilk 20 fold'da INF 2 (%10) | — |  | tutmadı | — |
+E           | δ_lock işareti | nihai fit ve λ < INF fold'ları | < 0 (fold'ların ≥ %80'inde) | — | nihai δ_lock = -0.3279; λ < INF fold'larında < 0: 63/63 (d1_lock düşen: 5) | — |  | tuttu | — |
+E           | δ_turn işareti | nihai fit | > 0 (düşük güven; ters çıkabilir) | — | nihai δ_turn = +0.2511; λ < INF fold'larında > 0 / < 0: 68 / 0 | — |  | tuttu | — |...
+E         ...Full output truncated (81 lines hidden), use '-vv' to show
+### l1_bootstrap_seed
+E           AssertionError: ceiling_hazard_v0@INF
+E           assert (71 == 71 and '-0.0301 [-0.0592, -0.0004]' == '-0.0301 [-0.0574, -0.0008]'
+E             - -0.0301 [-0.0574, -0.0008]
+E             ?               ^^        ^
+E             + -0.0301 [-0.0592, -0.0004]
+E             ?               ^^        ^)
+FAILED tests/test_faz5_post_d1.py::test_t6_comparator_reproduces_models_md_j1
+1 failed in 0.13s
+### l2_block_key_year
+E           AssertionError: ceiling_hazard_v0@INF
+E           assert (71 == 71 and '-0.0301 [-0.0592, -0.0004]' == '-0.0301 [-0.0574, -0.0008]'
+E             - -0.0301 [-0.0574, -0.0008]
+E             ?               ^^        ^
+E             + -0.0301 [-0.0592, -0.0004]
+E             ?               ^^        ^)
+FAILED tests/test_faz5_post_d1.py::test_t6_comparator_reproduces_models_md_j1
+1 failed in 0.12s
+### m1_cells_below_ten
+E       AssertionError: assert ([{'output': '...g', ...}, ...] == []
+E         Left contains 12 more items, first extra item: {'output': 'S_cond', 'horizon_or_k': None, 'metric': 'RPS', 'rule_id': 'ceiling_hazard_v0@INF', ...}
+E         Use -v to get more diff)
+E                   AssertionError: assert [{'output': '...g', ...}, ...] == []
+E                     Left contains 12 more items, first extra item: {'output': 'S_cond', 'horizon_or_k': None, 'metric': 'RPS', 'rule_id': 'ceiling_hazard_v0@INF', ...}
+E                     Use -v to get more diff
+FAILED tests/test_scoring_conditional.py::test_t1_small_n_rules_per_j - Asser...
+FAILED tests/test_scoring_conditional.py::test_real_no_conditional_cell_or_verdict_below_ten
+### m2_class_not_inherited
+E           AssertionError: assert {'CL': 'LIVE', 'CT': 'LIVE'} == {'CL': 'LIVE'...'LATE_RECORD'}
+E             Omitting 1 identical items, use -vv to show
+E             Differing items:
+E             {'CT': 'LIVE'} != {'CT': 'LATE_RECORD'}
+E             Use -v to get more diff
+E                   AssertionError: assert ('LIVE', '202...36ec865.json') == ('LATE_RECORD...36ec865.json')
+E                     At index 0 diff: 'LIVE' != 'LATE_RECORD'
+E                     Use -v to get more diff
+### m3_L_below_j_in_denominator
+E           ValueError: koşullu RPS yalnız L ≥ j ve j ≤ 9 için tanımlı
+E           ValueError: koşullu RPS yalnız L ≥ j ve j ≤ 9 için tanımlı
+FAILED tests/test_scoring_conditional.py::test_t5_arz_with_L_below_j_is_not_in_the_denominator
+ERROR tests/test_scoring_conditional.py::test_real_blocks_only_for_s_kinds_and_ek2_integrity
+1 failed, 1 error in 2.46s
+### m4_pending_not_simultaneous
+E           AssertionError: 1
+E           assert 2 == 1
+E            +  where 2 = len({'{"NA": ["TARGET_UNAVAILABLE", "TARGET_UNAVAILABLE", "NA_LIMIT"], "OK": ["SCORED", "SCORED", null], "PN": ["PENDING",...", null], "PN": ["SCORED", "SCORED", null], "TU": ["TARGET_UNAVAILABLE", "TARGET_UNAVAILABLE", "SESSION_NOT_FORMED"]}'})
+E       AssertionError: assert ({('CITAS', 1): {'SCORED'}, ('TKNKA', 1): {'SCORED'}, ('KPEKS', 1): {'SCORED'}, ('INTET', 1): {'SCORED'}, ...} and False)
+E        +  where False = all(<generator object test_real_pair_status_is_the_same_for_every_model.<locals>.<genexpr> at 0x10e933510>)
+FAILED tests/test_scoring_conditional.py::test_t4_missing_horizon_drops_pair_for_all_models_at_once
+FAILED tests/test_scoring_conditional.py::test_real_pair_status_is_the_same_for_every_model
+2 failed in 5.06s
+### m5_undefined_scored
+E           ValueError: S_3 = 0.0: koşul tanımsız
+FAILED tests/test_scoring_conditional.py::test_t5b_zero_S_j_is_undefined_not_scored
+1 failed in 0.10s

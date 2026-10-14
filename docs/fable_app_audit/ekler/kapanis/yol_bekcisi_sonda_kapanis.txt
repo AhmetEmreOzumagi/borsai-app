@@ -1,0 +1,171 @@
+# Yol bekçisi sondası (kapanış) — klon /tmp/borsai_app_audit_close/clone, HEAD db8e239, sonda kaynağı ekler/kapanis/close_probe.rs [ÖLÇTÜM]
+# cargo test --offline --test close_probe -- --nocapture
+running 1 test
+PROBE repo canonical = /private/tmp/borsai_app_audit_close/clone
+PROBE probe dir (outside) canonical = /private/tmp/borsai_app_audit_close/probe
+PROBE klon git status (registry data scores app/parity) başlangıç: []
+PROBE [askida_dosya_bagi (denetim symlink_file)]
+  hedef      = /tmp/borsai_app_audit_close/probe/askida_dosya.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [goreli_dizin_bagi]
+  hedef      = /tmp/borsai_app_audit_close/probe/goreli_dizin/kacak_probe.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [goreli_askida_dosya_bagi]
+  hedef      = /tmp/borsai_app_audit_close/probe/goreli_dosya.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [zincir2_dizin (dış→dış→repo)]
+  hedef      = /tmp/borsai_app_audit_close/probe/zincir1/kacak_probe.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [zincir2_dosya_askida]
+  hedef      = /tmp/borsai_app_audit_close/probe/zincir_dosya1.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [dongu_dosya (a→b→a, repo dışı)]
+  hedef      = /tmp/borsai_app_audit_close/probe/dongu_a
+  resolve    = /private/tmp/borsai_app_audit_close/probe/dongu_a
+  is_within  = false (beklenen false)
+  tekli      = INVALID_ARGUMENT ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = INVALID_ARGUMENT ; dosya oluştu = false
+PROBE [dongu_dizin_bileseni (a→b→a, repo dışı)]
+  hedef      = /tmp/borsai_app_audit_close/probe/dongu_a/kacak_probe.json
+  resolve    = /private/tmp/borsai_app_audit_close/probe/dongu_a/kacak_probe.json
+  is_within  = false (beklenen false)
+  tekli      = IO_ERROR ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = IO_ERROR ; dosya oluştu = false
+PROBE [dongu_repo_icinde]
+  hedef      = /private/tmp/borsai_app_audit_close/clone/registry/records/dongu_ic_a
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/dongu_ic_a
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [tmp_yerine_private (hedef /tmp/…)]
+  hedef      = /tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [buyuk_harf]
+  hedef      = /TMP/BORSAI_APP_AUDIT_CLOSE/CLONE/registry/records/kacak_probe.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [karisik_harf]
+  hedef      = /tmp/Borsai_App_Audit_Close/Clone/Registry/Records/kacak_probe.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [bagdan_sonra_dotdot (dizin bağı → records, ../)]
+  hedef      = /tmp/borsai_app_audit_close/probe/dizin_bagi/../kacak_probe.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [dotdot_var_olmayan_ara_dizin (repo içi)]
+  hedef      = /private/tmp/borsai_app_audit_close/clone/registry/records/yok/../kacak_probe.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [dotdot_disaridan_var_olmayan]
+  hedef      = /tmp/borsai_app_audit_close/nodir/../clone/registry/records/kacak_probe.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [dizin_baginin_icinde_askida_bag (repo dışına)]
+  hedef      = /tmp/borsai_app_audit_close/probe/dizin_bagi/askida_dis.json
+  resolve    = /nonexistent/zzz/askida_dis.json
+  is_within  = false (beklenen false)
+  tekli      = INVALID_ARGUMENT ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = INVALID_ARGUMENT ; dosya oluştu = false
+PROBE [dizin_baginin_icinde_askida_bag (repo içine)]
+  hedef      = /tmp/borsai_app_audit_close/probe/dizin_bagi/askida_ic.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [goreli_yol (cwd = klon)]
+  hedef      = registry/records/kacak_probe.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [kokte_dotdot]
+  hedef      = /../../private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [uzun_zincir_45 (MAX_LINKS aşımı)]
+  hedef      = /tmp/borsai_app_audit_close/probe/uzun0/kacak_probe.json
+  resolve    = /private/tmp/borsai_app_audit_close/probe/uzun20/kacak_probe.json
+  is_within  = false (beklenen false)
+  tekli      = IO_ERROR ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = IO_ERROR ; dosya oluştu = false
+PROBE [orta_zincir_33 (OS sınırı üstü, MAX_LINKS altı)]
+  hedef      = /tmp/borsai_app_audit_close/probe/orta0/kacak_probe.json
+  resolve    = /private/tmp/borsai_app_audit_close/clone/registry/records/kacak_probe.json
+  is_within  = true (beklenen true)
+  tekli      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu (REPO ALTINDA) = false
+  toplu      = SCENARIO_PATH_INSIDE_REPO ; dosya oluştu = false
+PROBE [dis_dizin_bagi (kabul beklenir)]
+  hedef      = /tmp/borsai_app_audit_close/probe/dis_dizin_bagi/ok.json
+  resolve    = /private/tmp/borsai_app_audit_close/probe/dis_dizin/alt/ok.json
+  is_within  = false (beklenen false)
+  tekli      = OK ; dosya oluştu (repo dışında) = true
+  toplu      = OK ; dosya oluştu = true
+PROBE [dis_dizin_bagi_dotdot (fiziksel üst; kabul beklenir)]
+  hedef      = /tmp/borsai_app_audit_close/probe/dis_dizin_bagi/../ok2.json
+  resolve    = /private/tmp/borsai_app_audit_close/probe/dis_dizin/ok2.json
+  is_within  = false (beklenen false)
+  tekli      = OK ; dosya oluştu (repo dışında) = true
+  toplu      = OK ; dosya oluştu = true
+PROBE [dis_dosya_bagi (askıda, repo dışına)]
+  hedef      = /tmp/borsai_app_audit_close/probe/dis_dosya_bagi.json
+  resolve    = /private/tmp/borsai_app_audit_close/probe/baska_yer.json
+  is_within  = false (beklenen false)
+  tekli      = INVALID_ARGUMENT ; dosya oluştu (repo dışında) = false
+  toplu      = INVALID_ARGUMENT ; dosya oluştu = false
+PROBE [repo_icinden_dotdot_ile_disari]
+  hedef      = /private/tmp/borsai_app_audit_close/clone/registry/../../probe/cikis.json
+  resolve    = /private/tmp/borsai_app_audit_close/probe/cikis.json
+  is_within  = false (beklenen false)
+  tekli      = OK ; dosya oluştu (repo dışında) = true
+  toplu      = OK ; dosya oluştu = true
+PROBE kaydetme [scenarios → repo/registry/records/SNTX (askıda, repo içi)]
+  scenarios_dir = SCENARIO_PATH_INSIDE_REPO
+  save          = SCENARIO_PATH_INSIDE_REPO
+  hedef dizin içeriği = []
+PROBE kaydetme [scenarios → repo/registry/records (var olan, repo içi)]
+  scenarios_dir = SCENARIO_PATH_INSIDE_REPO
+  save          = SCENARIO_PATH_INSIDE_REPO
+  hedef dizin içeriği = ["dongu_ic_a", "VEYAS", "askida_dis.json", "KPEKS", "dongu_ic_b", "INTET", "BKRGY", "TKNKA", "NETGL", "askida_ic.json", "CITAS"]
+PROBE kaydetme [scenarios → repo dışı var olan dizin]
+  scenarios_dir = /tmp/borsai_app_audit_close/probe/data_2/scenarios
+  save          = 01M385E65KX24Q18XV1W0FE804
+  hedef dizin içeriği = ["01M385E65KX24Q18XV1W0FE804.json"]
+PROBE kaydetme [scenarios → repo dışı askıda dizin]
+  scenarios_dir = /tmp/borsai_app_audit_close/probe/data_3/scenarios
+  save          = IO_ERROR
+  hedef dizin içeriği = []
+PROBE klon git status (registry data scores app/parity) sonda sonu: []
+PROBE beklenmeyen: []
+test close_probe ... ok
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.56s
+cargo test --offline --test close_probe -- --nocapture  2.56s user 1.17s system 147% cpu 2.530 total

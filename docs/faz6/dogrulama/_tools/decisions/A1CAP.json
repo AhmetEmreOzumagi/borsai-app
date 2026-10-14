@@ -1,0 +1,163 @@
+{
+ "ticker": "A1CAP",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_1157884",
+  "KAP_1157884_EK1",
+  "KAP_1155756_EK1",
+  "KAP_1158082"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "2.43",
+   "origin": "SOURCE_REPORTED_APPROX",
+   "source_id": "KAP_1157884_EK1",
+   "quote": "Halka arzda toplam 35 Milyon TL nominal değerli paylar için planlanan satış tutarının yaklaşık 2,43 katı talep gelmiştir.",
+   "definition": "belgedeki toplam kat ('yaklaşık 2,43 katı'; planlanan 35.000.000 TL nominal satış tutarına göre)",
+   "denominator_includes_additional_sale": false,
+   "note": "ek satış öngörülmemiş (SPK satırında ek pay satışı hücresi boş, TSSD yalnız 35.000.000 sermaye artırımını anıyor); tablo toplam talebi 85.029.012 / 35.000.000 = 2,4294 (belge yaklaşık 2,43)"
+  },
+  "total_demand_filter_status": {
+   "value": "NOT_SPECIFIED",
+   "source_id": "KAP_1157884_EK1",
+   "note": "belgede 'filtre' ifadesi yok"
+  },
+  "ipo_size_tl": {
+   "value": "875000000",
+   "source_id": "KAP_1157884_EK1",
+   "quote": "toplam halka arz büyüklüğü 875.000.000 TL olmuştur"
+  },
+  "capital_increase_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (yalnız 'halka arz edilen 35.000.000 TL nominal değerli payların tamamı' yazıyor; sermaye artırımı niteliği yalnız TSSD/SPK planında)"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok"
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_1157884_EK1",
+   "zero_from_statement": true,
+   "quote": "halka arz edilen 35.000.000 TL nominal değerli payların tamamının satışı gerçekleştirilmiş",
+   "note": "satılan toplam 35.000.000 = SPK planlanan taban (bedelli 35.000.000 + mevcut pay satışı '-'); SPK satırında ek pay satışı hücresi boş"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_1157884_EK1",
+   "quote": "halka arz edilen 35.000.000 TL nominal değerli payların tamamının satışı gerçekleştirilmiş"
+  },
+  "additional_sale_usage_statement": null,
+  "investor_count": {
+   "value": "753645",
+   "source_id": "KAP_1157884_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "Toplam 35.000.000 %100,00 786.954 85.029.012 %100,00 753.645 35.000.000 %100,00",
+   "note": "talep eden 786.954; dağıtım yapılan 753.645"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "753367",
+    "domestic_institutional": "61",
+    "employees": "217"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_1157884_EK1",
+   "quote": [
+    "Yurt İçi Bireysel 27.650.000 %79,00 786.676 52.201.588 %61,39 753.367 27.650.000 %79,00",
+    "Yurt İçi Kurumsal 7.000.000 %20,00 61 32.477.424 %38,20 61 7.000.000 %20,00",
+    "350.000 %1,00 217 350.000 %0,41 217 350.000 %1,00"
+   ],
+   "note": "employees = Çalışanlardan Oluşan Yatırımcılar; talep eden: bireysel 786.676, kurumsal 61, çalışan 217; yurt dışı grup yok"
+  },
+  "retail_demand_multiple": {
+   "value": "1.89",
+   "source_id": "KAP_1157884_EK1",
+   "quote": "“Yurt İçi Bireysel Yatırımcılar”dan planlanan tahsisat tutarının yaklaşık 1,89 katı",
+   "note": "belgede 'yaklaşık'"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": "4.64",
+   "source_id": "KAP_1157884_EK1",
+   "quote": "“Yurt İçi Kurumsal Yatırımcılar”dan ise planlanan tahsisat tutarının yaklaşık 4,64 katı talep gelmiştir.",
+   "note": "belgede 'yaklaşık'"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "arzda yurt dışı kurumsal grup yok (sonuç tablosunda satır yok)"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "27650000",
+    "domestic_institutional": "7000000",
+    "employees": "350000"
+   },
+   "source_id": "KAP_1157884_EK1",
+   "quote": [
+    "Yurt İçi Bireysel 27.650.000 %79,00 786.676 52.201.588 %61,39 753.367 27.650.000 %79,00",
+    "Yurt İçi Kurumsal 7.000.000 %20,00 61 32.477.424 %38,20 61 7.000.000 %20,00",
+    "350.000 %1,00 217 350.000 %0,41 217 350.000 %1,00"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "79.00",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1157884_EK1",
+   "quote": "Yurt İçi Bireysel 27.650.000 %79,00 786.676 52.201.588 %61,39 753.367 27.650.000 %79,00"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "20.00",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1157884_EK1",
+   "quote": "Yurt İçi Kurumsal 7.000.000 %20,00 61 32.477.424 %38,20 61 7.000.000 %20,00"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": null,
+   "missing_reason": "arzda yurt dışı kurumsal grup yok"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç eki satış yöntemini ('Sabit Fiyatla Talep Toplama') adlandırıyor, dağıtım yöntemini adlandırmıyor; TSSD izahnameye atıf yapıyor"
+  },
+  "lead_broker": {
+   "value": "A1 Capital Yatırım Menkul Değerler A.Ş.",
+   "source_id": "KAP_1155756_EK1",
+   "quote": "halka arzda satışa aracılık edecek ortaklığımızın www.alcapital.com.tr adresli internet sitesi",
+   "note": "ihraççı aracı kurumun kendisi ('ortaklığımız' = A1 Capital Yatırım Menkul Değerler A.Ş.; TSSD başlığı)"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {},
+ "notes": "Borsa dışı sabit fiyatla talep toplama (25 TL). Sonuç eki toplam katı 'yaklaşık 2,43' olarak yazıyor. Sonuç belgesi ayrım yazmıyor (TSSD: yalnız 35.000.000 sermaye artırımı). SPK ek pay satışı hücresi boş; TSSD tam metninde ek satışa dair açık beyan yok, pb_notes yazılmadı.",
+ "needs_search": false,
+ "pb_notes": {
+  "additional_sale_statement": {
+   "source_id": "KAP_1155755_EK1",
+   "quote": "ek satışa konu olup olmayacağı hakkında bilgi: Yoktur.",
+   "meaning": "NONE",
+   "note": "Doğrulayıcı: SPK tablosunda Ek Pay Satışı hücresi boş; onaylı izahname §25.2.5 beyanı (H99 BESTE emsali)"
+  }
+ }
+}

@@ -1,0 +1,67 @@
+{
+  "ticker": "SNTA3",
+  "j": 1,
+  "records": [
+    {
+      "file": "20300107T180000Z_eeeeeeeeeeee.json",
+      "rel_path": "registry/post_d1/SNTA3/20300107T180000Z_eeeeeeeeeeee.json",
+      "status": "OK",
+      "record_type": "PREDICTION",
+      "ticker": "SNTA3",
+      "recorded_at_utc": "2030-01-07T18:00:00Z",
+      "recorded_at_istanbul": "2030-01-07T21:00:00+03:00",
+      "d1_session_date": "2030-01-07",
+      "base_record_file": "registry/records/SNTA3/20300105T100000Z_aaaaaaaaaaaa.json",
+      "thb_sha8": "aaaaaaaa",
+      "thm_sha8": "bbbbbbbb",
+      "models_index_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+      "cells": [
+        {
+          "model_id": "post_d1_hazard_v0",
+          "params_sha256": "3f7640267cd0f6b114ec88cf29e811587daa18c191866f9fa2d6910bc949e5dc",
+          "status": "REFUSED",
+          "refusal": {
+            "code": "D1_LIMIT_NA",
+            "field": "upper_limit",
+            "reason": "sentetik"
+          },
+          "has_s": false
+        }
+      ],
+      "summary": {
+        "n_models": 1,
+        "n_not_applicable": 0,
+        "n_predicted": 0,
+        "n_refused": 1
+      },
+      "cancels": null,
+      "reason": null,
+      "cancelled_by": null,
+      "tracked": false,
+      "added_commit": null,
+      "push_proof": null,
+      "error": null
+    }
+  ],
+  "active": [
+    "20300107T180000Z_eeeeeeeeeeee.json"
+  ],
+  "selected": "20300107T180000Z_eeeeeeeeeeee.json",
+  "state": "REFUSED",
+  "refusal": {
+    "code": "D1_LIMIT_NA",
+    "field": "upper_limit",
+    "reason": "sentetik"
+  },
+  "row": null,
+  "source": {
+    "file": "20300107T180000Z_eeeeeeeeeeee.json",
+    "rel_path": "registry/post_d1/SNTA3/20300107T180000Z_eeeeeeeeeeee.json",
+    "params_sha8": "3f764026",
+    "d1_session_date": "2030-01-07",
+    "thb_sha8": "aaaaaaaa",
+    "thm_sha8": "bbbbbbbb"
+  },
+  "path_card": null,
+  "d1_close": "11.00"
+}

@@ -1,0 +1,278 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "KONKA",
+  "company": "Konya Kağıt Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "55237",
+      "source_id": "KAP_978872_EK1",
+      "source_document": "KAP 978872 ek 1",
+      "source_published_at": "2021-11-22T09:09:38+03:00",
+      "source_sha256": "c6ca729e4f7025ad83377932edff989941424ddd3d879b5a9c9abd5d7d2175d4",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_978872_ek1.pdf",
+      "quote": "Toplam 26.000.000 %100 56.758 115.033.895 %100 55.237 26.000.000 %100",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 56.758; dağıtım yapılan 55.237",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "56.758",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "56.758",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "56.758 talep eden kişi sayısı; dağıtım yapılan 55.237 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "51364",
+        "high_application_retail": "3828",
+        "domestic_institutional": "45"
+      },
+      "source_id": "KAP_978872_EK1",
+      "source_document": "KAP 978872 ek 1",
+      "source_published_at": "2021-11-22T09:09:38+03:00",
+      "source_sha256": "c6ca729e4f7025ad83377932edff989941424ddd3d879b5a9c9abd5d7d2175d4",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_978872_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 7.800.000 %30 52.800 19.423.455 %16,88 51.364 7.800.000 %30",
+        "Yüksek Başvurulu 7.800.000 %30 3.913 58.969.162 %51,26 3.828 7.800.000 %30",
+        "Yurt İçi Kurumsal 7.800.000 %30 45 36.641.278 %31,85 45 10.400.000 %40",
+        "Yurt Dışı Kurumsal 2.600.000 %10 - - - - - -"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 52.800, yüksek başvurulu 3.913, yurt içi kurumsal 45; yurt dışı kurumsal satırı tamamen '-'",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "52.800",
+        "Yüksek Başvurulu": "3.913",
+        "Yurt İçi Kurumsal": "45",
+        "Yurt Dışı Kurumsal": "0"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '52.800', 'Yüksek Başvurulu': '3.913', 'Yurt İçi Kurumsal': '45', 'Yurt Dışı Kurumsal': '0'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex talep eden sayılarını almış; dağıtım yapılan: 51.364, 3.828, 45; yurt dışı '-'"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "2.5",
+      "source_id": "KAP_978872_EK1",
+      "source_document": "KAP 978872 ek 1",
+      "source_published_at": "2021-11-22T09:09:38+03:00",
+      "source_sha256": "c6ca729e4f7025ad83377932edff989941424ddd3d879b5a9c9abd5d7d2175d4",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_978872_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara tahsisat tutarının yaklaşık 2,5 katı",
+      "note": "belgede 'yaklaşık'; yalnız Yurt İçi Bireysel; ayrı Yüksek Başvurulu grubu 'yaklaşık 7,6 katı' (gruplar birleştirilmedi)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,5",
+        "verdict": "FOUND_SAME",
+        "note": "belgede 'yaklaşık'"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "4.7",
+      "source_id": "KAP_978872_EK1",
+      "source_document": "KAP 978872 ek 1",
+      "source_published_at": "2021-11-22T09:09:38+03:00",
+      "source_sha256": "c6ca729e4f7025ad83377932edff989941424ddd3d879b5a9c9abd5d7d2175d4",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_978872_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara ise tahsisat tutarının yaklaşık 4,7 katı",
+      "note": "belgede 'yaklaşık'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "4,7",
+        "verdict": "FOUND_SAME",
+        "note": "belgede 'yaklaşık'"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal satırı talep ve dağıtım sütunlarında tamamen '-' ('Yurt Dışı Kurumsal 2.600.000 %10 - - - - - -'); kat yazılmıyor, 0 da yazılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "0",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "0",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "belgede yurt dışı kurumsal satırı tamamen '-'; 0 kat yazılı değil; alan null"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "7800000",
+        "high_application_retail": "7800000",
+        "domestic_institutional": "10400000"
+      },
+      "source_id": "KAP_978872_EK1",
+      "source_document": "KAP 978872 ek 1",
+      "source_published_at": "2021-11-22T09:09:38+03:00",
+      "source_sha256": "c6ca729e4f7025ad83377932edff989941424ddd3d879b5a9c9abd5d7d2175d4",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_978872_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 7.800.000 %30 52.800 19.423.455 %16,88 51.364 7.800.000 %30",
+        "Yüksek Başvurulu 7.800.000 %30 3.913 58.969.162 %51,26 3.828 7.800.000 %30",
+        "Yurt İçi Kurumsal 7.800.000 %30 45 36.641.278 %31,85 45 10.400.000 %40"
+      ],
+      "note": "yurt dışı kurumsal dağıtım '-'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "7.800.000",
+        "Yüksek Başvurulu": "7.800.000",
+        "Yurt İçi Kurumsal": "10.400.000",
+        "Yurt Dışı Kurumsal": "0"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '7.800.000', 'Yüksek Başvurulu': '7.800.000', 'Yurt İçi Kurumsal': '10.400.000', 'Yurt Dışı Kurumsal': '0'}",
+        "verdict": "FOUND_SAME",
+        "note": "üç grup aynı; yurt dışı belgede '-'"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "30",
+      "source_id": "KAP_978872_EK1",
+      "source_document": "KAP 978872 ek 1",
+      "source_published_at": "2021-11-22T09:09:38+03:00",
+      "source_sha256": "c6ca729e4f7025ad83377932edff989941424ddd3d879b5a9c9abd5d7d2175d4",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_978872_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 7.800.000 %30 52.800 19.423.455 %16,88 51.364 7.800.000 %30",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yalnız Yurt İçi Bireysel; Yüksek Başvurulu da %30",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "30",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "40",
+      "source_id": "KAP_978872_EK1",
+      "source_document": "KAP 978872 ek 1",
+      "source_published_at": "2021-11-22T09:09:38+03:00",
+      "source_sha256": "c6ca729e4f7025ad83377932edff989941424ddd3d879b5a9c9abd5d7d2175d4",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_978872_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 7.800.000 %30 45 36.641.278 %31,85 45 10.400.000 %40",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %30",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "40",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal dağıtım oranı '-' (satır tamamen '-'); planlanan %10",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "0",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "0",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "belgede '-'; 0 yazılı değil; alan null"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama” yöntemi); dağıtım yöntemi adlandırılmıyor; TSSD başvuru ayrıntısını izahnameye atfediyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Halk Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_977626_EK1",
+      "source_document": "KAP 977626 ek 1",
+      "source_published_at": "2021-11-14T10:31:09+03:00",
+      "source_sha256": "fafbd6393c08cadc9d268916255d72b37a5cd820db16913afbf928ede5a19234",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_977626_ek1.pdf",
+      "quote": "aracıhk edecek Halk Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "TSSD OCR metni ('aracıhk'); sonuç bildirimini de Halk Yatırım yayımlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Halk Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_979024",
+      "source_document": "KAP 979024",
+      "source_published_at": "2021-11-22T18:31:22+03:00",
+      "source_sha256": "f7d48204e495868733bd607742e707ee90aec86a0d7a961a2f544a3fc35a963a",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_979024_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_979024",
+      "source_document": "KAP 979024",
+      "source_published_at": "2021-11-22T18:31:22+03:00",
+      "source_sha256": "f7d48204e495868733bd607742e707ee90aec86a0d7a961a2f544a3fc35a963a",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_979024_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_979024": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 979024",
+      "published_at": "2021-11-22T18:31:22+03:00",
+      "sha256": "f7d48204e495868733bd607742e707ee90aec86a0d7a961a2f544a3fc35a963a",
+      "path": "registry/oot/source_docs/KONKA/KAP_979024_bildirim.pdf"
+    },
+    "KAP_978872_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 978872 ek 1",
+      "published_at": "2021-11-22T09:09:38+03:00",
+      "sha256": "c6ca729e4f7025ad83377932edff989941424ddd3d879b5a9c9abd5d7d2175d4",
+      "path": "registry/oot/source_docs/KONKA/KAP_978872_ek1.pdf"
+    },
+    "KAP_977626_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 977626 ek 1",
+      "published_at": "2021-11-14T10:31:09+03:00",
+      "sha256": "fafbd6393c08cadc9d268916255d72b37a5cd820db16913afbf928ede5a19234",
+      "path": "registry/oot/source_docs/KONKA/KAP_977626_ek1.pdf"
+    }
+  }
+}

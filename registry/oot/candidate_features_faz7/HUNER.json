@@ -1,0 +1,249 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "HUNER",
+ "company": "Hun Yenilenebilir Enerji Üretim A.Ş.",
+ "first_trading_date": "2022-02-21",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Borsa İstanbul Birincil Piyasa; yatırımcı grubu bazında tahsisat ve dağıtım yapılmadı",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_1001225_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7da7e96d017ee93121492108",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1001225",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1001225",
+   "published_at": "2022-02-11T17:59:50+03:00",
+   "source_sha256": "01ffa2eb68d3c89c77bf2f4f08994c2cfbdcade8bfd22fcd43fc8feb0ab02d4d",
+   "source_file": "source_docs/HUNER/KAP_1001225_ek1.pdf",
+   "page": 102,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "25.2.3. Halka arzda yatırımcılara tahsis ve dağıtım esasları: Borsa İstanbul Birincil Piyasa'da \"Borsa'da Satış - Sabit Fiyatla Talep Toplama ve Satış\" yöntemine göre paylar satışa sunulacağı için herhangi bir yatırımcı grubuna tahsisat ve dağıtım yapılmayacaktır.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1001225_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7da7e96d017ee93121492108",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1001225",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1001225",
+     "published_at": "2022-02-11T17:59:50+03:00",
+     "source_sha256": "01ffa2eb68d3c89c77bf2f4f08994c2cfbdcade8bfd22fcd43fc8feb0ab02d4d",
+     "source_file": "source_docs/HUNER/KAP_1001225_ek1.pdf",
+     "page": 102,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "a) Yatırımcı grubu bazında tahsisat oraniarı: Yoktur."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Borsa'da satış (Borsa Birincil Piyasa, Sabit Fiyatla Talep Toplama ve Satış; İnfo Yatırım). Yatırımcı grubu tahsisatı ve grup içi dağıtım yöntemi yok (25.2.3 a-e 'Yoktur'; mükerrer talepte Borsa düzenlemeleri uygulanır). Belge eşit/oransal adlandırmıyor. Borsa İstanbul duyurusu (KAP_1001254) da 'Borsada (On the Exchange)' ve Sabit Fiyatla Talep Toplama ve Satış Yöntemi diyor.",
+   "codex_value": "borsada satış",
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_planned": {
+   "value": "FALSE",
+   "unit": "boolean",
+   "status": "VERIFIED",
+   "source_id": "KAP_1001225_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7da7e96d017ee93121492108",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1001225",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1001225",
+   "published_at": "2022-02-11T17:59:50+03:00",
+   "source_sha256": "01ffa2eb68d3c89c77bf2f4f08994c2cfbdcade8bfd22fcd43fc8feb0ab02d4d",
+   "source_file": "source_docs/HUNER/KAP_1001225_ek1.pdf",
+   "page": 107,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: Planlanmamaktadır.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "Fiyat istikrarı yok. 26.6 Halka arz teşviki: Günlük Alım Emri Taahhüdü — halka arz eden ana pay sahibi Orhun Kartal adına, işlem görmeye başlanan gün dahil 5 işlem günü, her gün açılış seansında halka arz fiyatından İnfo Yatırım aracılığıyla 10.000.000 adet alım emri (azami kaynak ortak satışı brüt geliri). Bu teşvik fiyat istikrarı işlemi değildir.",
+   "codex_value": false,
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_days": {
+   "value": "0",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_1001225_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7da7e96d017ee93121492108",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1001225",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1001225",
+   "published_at": "2022-02-11T17:59:50+03:00",
+   "source_sha256": "01ffa2eb68d3c89c77bf2f4f08994c2cfbdcade8bfd22fcd43fc8feb0ab02d4d",
+   "source_file": "source_docs/HUNER/KAP_1001225_ek1.pdf",
+   "page": 107,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: Planlanmamaktadır.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "Planlanmadığı için 0 (H99 biçimi). 5 işlem günlük Günlük Alım Emri Taahhüdü fiyat istikrarı değildir.",
+   "codex_value": "",
+   "codex_verdict": "VERIFIED"
+  },
+  "issuer_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_1001225_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7da7e96d017ee93121492108",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1001225",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1001225",
+   "published_at": "2022-02-11T17:59:50+03:00",
+   "source_sha256": "01ffa2eb68d3c89c77bf2f4f08994c2cfbdcade8bfd22fcd43fc8feb0ab02d4d",
+   "source_file": "source_docs/HUNER/KAP_1001225_ek1.pdf",
+   "page": 109,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "a) İhraççı tarafından verilen taahbüt: Ihraççımın 04.01.2022 tarih ve 2022/05 sayılı yönetim kurulu kararı ile; İhraççının paylarının Borsa İstanbul'da işlem görmeye başladığı tarihten itibaren 1 (bir) yıl boyunca; (i) Herhangi bir bedelli sermaye artırımı yapılmamasına ve dolaşımdaki pay miktarının bu suretle artırilmamasına,",
+   "provenance": "CODEX_VERIFIED",
+   "note": "1 yıl = 365. Kapsam: bedelli sermaye artırımı yapmama, yeni satış/halka arz yapmama ve dolaşımdaki payı artıracak karar almama/açıklama yapmama. Başlangıç: Borsa İstanbul'da işlem görmeye başlama.",
+   "codex_value": "365",
+   "codex_verdict": "VERIFIED"
+  },
+  "shareholder_lockup_days": {
+   "value": "180",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_1001225_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7da7e96d017ee93121492108",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1001225",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1001225",
+   "published_at": "2022-02-11T17:59:50+03:00",
+   "source_sha256": "01ffa2eb68d3c89c77bf2f4f08994c2cfbdcade8bfd22fcd43fc8feb0ab02d4d",
+   "source_file": "source_docs/HUNER/KAP_1001225_ek1.pdf",
+   "page": 109,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "b) Ortaklar tarafından verilen taabhütler: Şirketin mevcut pay sahiplerinden Orhun Kartal ve Yonca Kartal, halka arz edilen paylar hariç olmak üzere sahip olduğu payları, şirket paylarının Borsa'da işlem görmeye başlamašindan itibaren, payların borsa fiyatından bağımsız olarak 6 ay süreyle hiçbir şekilde Borsa'da",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1001225_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7da7e96d017ee93121492108",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1001225",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1001225",
+     "published_at": "2022-02-11T17:59:50+03:00",
+     "source_sha256": "01ffa2eb68d3c89c77bf2f4f08994c2cfbdcade8bfd22fcd43fc8feb0ab02d4d",
+     "source_file": "source_docs/HUNER/KAP_1001225_ek1.pdf",
+     "page": 110,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "c) Sermaye piyasası mevzuatı kapsamında verilen taahbütler: Sermaye Piyasası Kurulu'nun VII-128.1 sayılı Pay tebliğinin 8. maddesinin 1. fıkrası çerçevesinde, Şirketin sermayesinde %10 ve üzeri pay sahibi olan ortak Orhun Kartal ile birlikte Yonca Kartal tarafından sahip olduğu payları (halka arz edilenler hariç), şirket paylarının Borsa'da işlem görmeye başlamasından itibaren bir yıl süreyle halka arz fiyatının altında bir fiyattan Borsa' da satamayacak,"
+    }
+   ],
+   "components": [
+    {
+     "who": "Orhun Kartal (ana pay sahibi, halka arz eden)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Yonca Kartal",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Orhun Kartal",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Yonca Kartal",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "Borsa'da işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "b) Orhun Kartal ve Yonca Kartal: halka arz edilen paylar hariç, 6 ay borsa fiyatından bağımsız hiçbir şekilde Borsa'da satmama (MUTLAK). c) Pay Tebliği 8/1: aynı ortaklar 1 yıl halka arz fiyatının altında Borsa'da satmama. En kısa 180. Orhun Kartal'ın Günlük (Geri) Alım Emri Taahhüdü kapsamında sonradan alacağı payları 1 yıl halka arz fiyatının altında satmama beyanı mevcut paylara ilişkin değil, components'e katılmadı. d) Yetkili kuruluşlar tarafından verilen taahhütler: Yoktur.",
+   "codex_value": "180",
+   "codex_verdict": "VERIFIED"
+  },
+  "sector": {
+   "value": "Yenilenebilir enerji üretimi (güneş, hidroelektrik, biyokütle)",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_1001224_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7da7e96d017ee931ff222135",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1001224",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1001224",
+   "published_at": "2022-02-11T17:59:07+03:00",
+   "source_sha256": "1776bb81a99cf764439b2a132c4a3b1ca5c2be8e700bab6479af72f080b6a962",
+   "source_file": "source_docs/HUNER/KAP_1001224_ek1.pdf",
+   "page": 54,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Şirketin fiili faaliyet konusu; güneş enerjisi, hidroelektrik enerji ve biyokütle enerji santrallerinden, elektrik enerjisi üretimi ve üretilen elektriğin dağıtım ve iletim şirketlerine Yenilenebilir Enerji Kaynakları Destekleme Mekanizması (YEKDEM) kapsamında satışından ibarettir.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1001224_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d7da7e96d017ee931ff222135",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1001224",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1001224",
+     "published_at": "2022-02-11T17:59:07+03:00",
+     "source_sha256": "1776bb81a99cf764439b2a132c4a3b1ca5c2be8e700bab6479af72f080b6a962",
+     "source_file": "source_docs/HUNER/KAP_1001224_ek1.pdf",
+     "page": 66,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Şirketin mevcut durum itibarıyla faaliyet alanı, bağlı ortaklıkları aracılığıyla elektrik enerjisi üretimi ve satışıdır."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Faaliyet bağlı ortaklıkları aracılığıyla; toplam kurulu güç 95.058,38 kWp (GES 58.458,38, HES 26.100, BES 10.500).",
+   "codex_value": "yenilenebilir enerji üretimi",
+   "codex_verdict": "VERIFIED"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahname 1. ve 2. Bölüm, izahname ekleri (Ek-4 fon kullanımı YK kararı, Ek-10 Günlük Geri Alım Emri Taahhüdü), TSSD ve Borsa İstanbul duyurularında katılım endeksi / faizsiz finans uygunluk beyanı yok. qfind 'katılım (endeks|finans|bank)|faizsiz|islam|icazet|helal|danışma kurulu|bilgi formu' uygunluk beyanı vermedi. İzahnamenin 35. EKLER listesinde (Ek/1-Ek/11) Katılım Finans İlkeleri Bilgi Formu yok.",
+   "looked_at": [
+    "KAP_1001224_EK1",
+    "KAP_1001225_EK1",
+    "KAP_1001227_EK3",
+    "KAP_1001236_EK3",
+    "KAP_1001238_EK1",
+    "KAP_1001238",
+    "KAP_1001254",
+    "KAP_1002467"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_1001224_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1001224",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7da7e96d017ee931ff222135",
+   "published_at": "2022-02-11T17:59:07+03:00",
+   "sha256": "1776bb81a99cf764439b2a132c4a3b1ca5c2be8e700bab6479af72f080b6a962",
+   "file": "source_docs/HUNER/KAP_1001224_ek1.pdf"
+  },
+  "KAP_1001225_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1001225",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d7da7e96d017ee93121492108",
+   "published_at": "2022-02-11T17:59:50+03:00",
+   "sha256": "01ffa2eb68d3c89c77bf2f4f08994c2cfbdcade8bfd22fcd43fc8feb0ab02d4d",
+   "file": "source_docs/HUNER/KAP_1001225_ek1.pdf"
+  }
+ }
+}

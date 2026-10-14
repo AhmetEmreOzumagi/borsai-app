@@ -1,0 +1,363 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "A1CAP",
+  "company": "A1 Capital Yatırım Menkul Değerler A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1158082",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "25",
+      "source_id": "KAP_1158082",
+      "source_document": "KAP 1158082",
+      "source_published_at": "2023-06-12T18:10:37+03:00",
+      "source_sha256": "3ced8124f340b3084f4efb39cfb7e5faa96c7634e8ff7bd727fea83e02037b0e",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1158082_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 25",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2023_29",
+          "quote": "A1 Capital Yatırım Menkul 25,00 100.000.000 135.000.000 35.000.000 - - Değerler A.Ş. (1)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "35000000",
+      "source_id": "KAP_1158082",
+      "source_document": "KAP 1158082",
+      "source_published_at": "2023-06-12T18:10:37+03:00",
+      "source_sha256": "3ced8124f340b3084f4efb39cfb7e5faa96c7634e8ff7bd727fea83e02037b0e",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1158082_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 35.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "135000000",
+      "source_id": "KAP_1158082",
+      "source_document": "KAP 1158082",
+      "source_published_at": "2023-06-12T18:10:37+03:00",
+      "source_sha256": "3ced8124f340b3084f4efb39cfb7e5faa96c7634e8ff7bd727fea83e02037b0e",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1158082_bildirim.pdf",
+      "quote": "sermayesini temsil eden 135.000.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "35000000",
+      "source_id": "SPK_BULTEN_2023_29",
+      "source_document": "SPK Bülteni 2023/29",
+      "source_published_at": "2023-06-01T23:59:59+03:00",
+      "source_sha256": "a032e439521c51b5a5bf0f605b19c026a144e398653a835159be409d9b519bbe",
+      "source_path": "registry/oot/source_docs/A1CAP/SPK_BULTEN_2023-29.pdf",
+      "quote": "A1 Capital Yatırım Menkul 25,00 100.000.000 135.000.000 35.000.000 - - Değerler A.Ş. (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1157884_EK1",
+          "quote": "halka arz edilen 35.000.000 TL nominal değerli payların tamamının satışı gerçekleştirilmiş"
+        },
+        "b_shares_offered_equals_planned_base": "35000000 = 35000000 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2023_29",
+      "source_document": "SPK Bülteni 2023/29",
+      "source_published_at": "2023-06-01T23:59:59+03:00",
+      "source_sha256": "a032e439521c51b5a5bf0f605b19c026a144e398653a835159be409d9b519bbe",
+      "source_path": "registry/oot/source_docs/A1CAP/SPK_BULTEN_2023-29.pdf",
+      "quote": "A1 Capital Yatırım Menkul 25,00 100.000.000 135.000.000 35.000.000 - - Değerler A.Ş. (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1157884_EK1",
+          "quote": "halka arz edilen 35.000.000 TL nominal değerli payların tamamının satışı gerçekleştirilmiş"
+        },
+        "b_shares_offered_equals_planned_base": "35000000 = 35000000 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "2.43",
+      "source_id": "KAP_1157884_EK1",
+      "source_document": "KAP 1157884 ek 1",
+      "source_published_at": "2023-06-09T23:38:42+03:00",
+      "source_sha256": "3264f207566b1f14dd4fb17bdd8490404f953002fe0668af806740de11d4fa2c",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1157884_ek1.pdf",
+      "quote": "Halka arzda toplam 35 Milyon TL nominal değerli paylar için planlanan satış tutarının yaklaşık 2,43 katı talep gelmiştir.",
+      "origin": "SOURCE_REPORTED_APPROX",
+      "definition": "belgedeki toplam kat ('yaklaşık 2,43 katı'; planlanan 35.000.000 TL nominal satış tutarına göre)",
+      "denominator_includes_additional_sale": false,
+      "note": "ek satış öngörülmemiş (SPK satırında ek pay satışı hücresi boş, TSSD yalnız 35.000.000 sermaye artırımını anıyor); tablo toplam talebi 85.029.012 / 35.000.000 = 2,4294 (belge yaklaşık 2,43)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_1157884_EK1",
+      "source_document": "KAP 1157884 ek 1",
+      "source_published_at": "2023-06-09T23:38:42+03:00",
+      "source_sha256": "3264f207566b1f14dd4fb17bdd8490404f953002fe0668af806740de11d4fa2c",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1157884_ek1.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1157884_EK1",
+      "source_document": "KAP 1157884 ek 1",
+      "source_published_at": "2023-06-09T23:38:42+03:00",
+      "source_sha256": "3264f207566b1f14dd4fb17bdd8490404f953002fe0668af806740de11d4fa2c",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1157884_ek1.pdf",
+      "quote": "halka arz edilen 35.000.000 TL nominal değerli payların tamamının satışı gerçekleştirilmiş",
+      "zero_from_statement": true,
+      "note": "satılan toplam 35.000.000 = SPK planlanan taban (bedelli 35.000.000 + mevcut pay satışı '-'); SPK satırında ek pay satışı hücresi boş",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_size_tl": {
+      "value": "875000000",
+      "source_id": "KAP_1157884_EK1",
+      "source_document": "KAP 1157884 ek 1",
+      "source_published_at": "2023-06-09T23:38:42+03:00",
+      "source_sha256": "3264f207566b1f14dd4fb17bdd8490404f953002fe0668af806740de11d4fa2c",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1157884_ek1.pdf",
+      "quote": "toplam halka arz büyüklüğü 875.000.000 TL olmuştur",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_price_try": {
+      "value": "25.00",
+      "source_id": "SPK_BULTEN_2023_29",
+      "source_document": "SPK Bülteni 2023/29",
+      "source_published_at": "2023-06-01T23:59:59+03:00",
+      "source_sha256": "a032e439521c51b5a5bf0f605b19c026a144e398653a835159be409d9b519bbe",
+      "source_path": "registry/oot/source_docs/A1CAP/SPK_BULTEN_2023-29.pdf",
+      "quote": "A1 Capital Yatırım Menkul 25,00 100.000.000 135.000.000 35.000.000 - - Değerler A.Ş. (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2023-06-01",
+        "bookbuilding_start": "2023-06-07",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "100000000",
+      "source_id": "SPK_BULTEN_2023_29",
+      "source_document": "SPK Bülteni 2023/29",
+      "source_published_at": "2023-06-01T23:59:59+03:00",
+      "source_sha256": "a032e439521c51b5a5bf0f605b19c026a144e398653a835159be409d9b519bbe",
+      "source_path": "registry/oot/source_docs/A1CAP/SPK_BULTEN_2023-29.pdf",
+      "quote": "A1 Capital Yatırım Menkul 25,00 100.000.000 135.000.000 35.000.000 - - Değerler A.Ş. (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-06-01",
+        "bookbuilding_start": "2023-06-07",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "135000000",
+      "source_id": "SPK_BULTEN_2023_29",
+      "source_document": "SPK Bülteni 2023/29",
+      "source_published_at": "2023-06-01T23:59:59+03:00",
+      "source_sha256": "a032e439521c51b5a5bf0f605b19c026a144e398653a835159be409d9b519bbe",
+      "source_path": "registry/oot/source_docs/A1CAP/SPK_BULTEN_2023-29.pdf",
+      "quote": "A1 Capital Yatırım Menkul 25,00 100.000.000 135.000.000 35.000.000 - - Değerler A.Ş. (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-06-01",
+        "bookbuilding_start": "2023-06-07",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "35000000",
+      "source_id": "SPK_BULTEN_2023_29",
+      "source_document": "SPK Bülteni 2023/29",
+      "source_published_at": "2023-06-01T23:59:59+03:00",
+      "source_sha256": "a032e439521c51b5a5bf0f605b19c026a144e398653a835159be409d9b519bbe",
+      "source_path": "registry/oot/source_docs/A1CAP/SPK_BULTEN_2023-29.pdf",
+      "quote": "A1 Capital Yatırım Menkul 25,00 100.000.000 135.000.000 35.000.000 - - Değerler A.Ş. (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2023-06-01",
+        "bookbuilding_start": "2023-06-07",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2023_29",
+      "source_document": "SPK Bülteni 2023/29",
+      "source_published_at": "2023-06-01T23:59:59+03:00",
+      "source_sha256": "a032e439521c51b5a5bf0f605b19c026a144e398653a835159be409d9b519bbe",
+      "source_path": "registry/oot/source_docs/A1CAP/SPK_BULTEN_2023-29.pdf",
+      "quote": "A1 Capital Yatırım Menkul 25,00 100.000.000 135.000.000 35.000.000 - - Değerler A.Ş. (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-06-01",
+        "bookbuilding_start": "2023-06-07",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "35000000",
+      "source_id": "SPK_BULTEN_2023_29",
+      "source_document": "SPK Bülteni 2023/29",
+      "source_published_at": "2023-06-01T23:59:59+03:00",
+      "source_sha256": "a032e439521c51b5a5bf0f605b19c026a144e398653a835159be409d9b519bbe",
+      "source_path": "registry/oot/source_docs/A1CAP/SPK_BULTEN_2023-29.pdf",
+      "quote": "A1 Capital Yatırım Menkul 25,00 100.000.000 135.000.000 35.000.000 - - Değerler A.Ş. (1)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-06-01",
+        "bookbuilding_start": "2023-06-07",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "KAP_1155755_EK1",
+      "source_document": "KAP 1155755 ek 1",
+      "source_published_at": "2023-06-02T18:05:30+03:00",
+      "source_sha256": "4bd85a5b98268c3f29df5f217ef6ab9b3b50bbf5210c95bc2f6ba19c2e077b46",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1155755_ek1.pdf",
+      "quote": "ek satışa konu olup olmayacağı hakkında bilgi: Yoktur.",
+      "zero_from_statement": true,
+      "locator": "SPK A.1 tablosunda Ek Pay Satışı hücresi boş; talep toplamadan önce KAP'ta yayımlanan TSSD'deki açık beyan (H99 BESTE emsali: KAP_APPROVED_PROSPECTUS ... EK_SATIS_YOKTUR)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2023_29",
+          "quote": "A1 Capital Yatırım Menkul 25,00 100.000.000 135.000.000 35.000.000 - - Değerler A.Ş. (1)",
+          "note": "SPK satırı; Ek Pay Satışı hücresi boş"
+        }
+      ],
+      "pit_pb": {
+        "bulletin_date": "2023-06-01",
+        "bookbuilding_start": "2023-06-07",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "35000000",
+      "source_id": "SPK_BULTEN_2023_29",
+      "source_document": "SPK Bülteni 2023/29",
+      "source_published_at": "2023-06-01T23:59:59+03:00",
+      "source_sha256": "a032e439521c51b5a5bf0f605b19c026a144e398653a835159be409d9b519bbe",
+      "source_path": "registry/oot/source_docs/A1CAP/SPK_BULTEN_2023-29.pdf",
+      "quote": "A1 Capital Yatırım Menkul 25,00 100.000.000 135.000.000 35.000.000 - - Değerler A.Ş. (1)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-06-01",
+        "bookbuilding_start": "2023-06-07",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2023-06-15",
+      "source_id": "KAP_1158082",
+      "source_document": "KAP 1158082",
+      "source_published_at": "2023-06-12T18:10:37+03:00",
+      "source_sha256": "3ced8124f340b3084f4efb39cfb7e5faa96c7634e8ff7bd727fea83e02037b0e",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1158082_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 15/06/2023",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2023-06-07",
+      "source_id": "KAP_1158082",
+      "source_document": "KAP 1158082",
+      "source_published_at": "2023-06-12T18:10:37+03:00",
+      "source_sha256": "3ced8124f340b3084f4efb39cfb7e5faa96c7634e8ff7bd727fea83e02037b0e",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1158082_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 07-09/06/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2023-06-09",
+      "source_id": "KAP_1158082",
+      "source_document": "KAP 1158082",
+      "source_published_at": "2023-06-12T18:10:37+03:00",
+      "source_sha256": "3ced8124f340b3084f4efb39cfb7e5faa96c7634e8ff7bd727fea83e02037b0e",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1158082_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 07-09/06/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1158082": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1158082",
+      "published_at": "2023-06-12T18:10:37+03:00",
+      "sha256": "3ced8124f340b3084f4efb39cfb7e5faa96c7634e8ff7bd727fea83e02037b0e",
+      "path": "registry/oot/source_docs/A1CAP/KAP_1158082_bildirim.pdf"
+    },
+    "SPK_BULTEN_2023_29": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2023/29",
+      "published_at": "2023-06-01T23:59:59+03:00",
+      "sha256": "a032e439521c51b5a5bf0f605b19c026a144e398653a835159be409d9b519bbe",
+      "path": "registry/oot/source_docs/A1CAP/SPK_BULTEN_2023-29.pdf"
+    },
+    "KAP_1155755_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1155755 ek 1",
+      "published_at": "2023-06-02T18:05:30+03:00",
+      "sha256": "4bd85a5b98268c3f29df5f217ef6ab9b3b50bbf5210c95bc2f6ba19c2e077b46",
+      "path": "registry/oot/source_docs/A1CAP/KAP_1155755_ek1.pdf"
+    },
+    "KAP_1157884_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1157884 ek 1",
+      "published_at": "2023-06-09T23:38:42+03:00",
+      "sha256": "3264f207566b1f14dd4fb17bdd8490404f953002fe0668af806740de11d4fa2c",
+      "path": "registry/oot/source_docs/A1CAP/KAP_1157884_ek1.pdf"
+    }
+  }
+}

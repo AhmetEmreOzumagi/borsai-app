@@ -1,0 +1,404 @@
+{
+  "featured": {
+    "model_id": null,
+    "reason": "VAULT_CLOSED",
+    "candidates": [
+      {
+        "model_id": "fall_d10_v0_addsale",
+        "in_index": true,
+        "primary_verdict": null,
+        "model_value": null,
+        "v15_ci95_hi": null,
+        "near_era_label": "belirsiz",
+        "near_era_comparator": "base_rate",
+        "near_era_ci95_lo": -0.03,
+        "k1": false,
+        "k2": false,
+        "k3": true,
+        "eligible": false,
+        "first_failed": null
+      },
+      {
+        "model_id": "fall_d10_v0_h99",
+        "in_index": true,
+        "primary_verdict": null,
+        "model_value": null,
+        "v15_ci95_hi": null,
+        "near_era_label": "tolerans içinde",
+        "near_era_comparator": "base_rate",
+        "near_era_ci95_lo": -0.077,
+        "k1": false,
+        "k2": false,
+        "k3": true,
+        "eligible": false,
+        "first_failed": null
+      },
+      {
+        "model_id": "fall_d10_v0_pooled",
+        "in_index": true,
+        "primary_verdict": null,
+        "model_value": null,
+        "v15_ci95_hi": null,
+        "near_era_label": "belirsiz",
+        "near_era_comparator": "fall_d10_v0_h99",
+        "near_era_ci95_lo": -0.034,
+        "k1": false,
+        "k2": false,
+        "k3": true,
+        "eligible": false,
+        "first_failed": null
+      }
+    ]
+  },
+  "official": false,
+  "record_file": null,
+  "rows": [
+    {
+      "model_id": "fall_d10_v0_addsale",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.8068759361348089,
+        "p_fall": 0.1931240638651911,
+        "pct_fall": 19,
+        "pct_up": 81
+      },
+      "d5": {
+        "p_up": 0.8616918501108343,
+        "p_fall": 0.13830814988916573,
+        "pct_fall": 14,
+        "pct_up": 86
+      },
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "belirsiz",
+        "comparator": "base_rate",
+        "metric": "D10 Brier",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": -0.03,
+        "ci95": [
+          -0.03,
+          0.016
+        ],
+        "n": 75,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "CLOSED",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": {
+        "description": "Düşen arz v0 (SPEC_C_V0): yalnız ek satış bayrağı (1[additional_sale_shares > 0]) ile L2-lojistik (V1.6 C ızgarası); eğitim H99 + açık küme, ek satış alanı dolu 165 arz; f3 istemez.",
+        "training_n": 94,
+        "training_cutoff": "2026-08-19",
+        "params_sha256_8": "abcdef12",
+        "n_variants_same_data": 2059,
+        "primary_cell": {
+          "output": "p_up",
+          "horizon_or_k": "D10",
+          "metric": "Brier",
+          "rule_ids": [
+            "base_rate"
+          ]
+        }
+      }
+    },
+    {
+      "model_id": "fall_d10_v0_h99",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.8371493107629145,
+        "p_fall": 0.16285068923708546,
+        "pct_fall": 16,
+        "pct_up": 84
+      },
+      "d5": {
+        "p_up": 0.9326371428637384,
+        "p_fall": 0.06736285713626156,
+        "pct_fall": 7,
+        "pct_up": 93
+      },
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "tolerans içinde",
+        "comparator": "base_rate",
+        "metric": "D10 Brier",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": -0.077,
+        "ci95": [
+          -0.077,
+          -0.005
+        ],
+        "n": 75,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "CLOSED",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": {
+        "description": "Düşen arz v0 (SPEC_C_V0): D10 ve D5'te P(kapanış > arz) için L2-lojistik (V1.6 C ızgarası, iç LOOCV Brier); özellikler f1r (TÜFE ile reel büyüklük), ln f3 (talep katı), ek satış bayrağı; H99'un f3 ve ek satış alanı dolu 94 arzı. Düşme olasılığı = 1 − p_up.",
+        "training_n": 94,
+        "training_cutoff": "2026-08-19",
+        "params_sha256_8": "abcdef12",
+        "n_variants_same_data": 2059,
+        "primary_cell": {
+          "output": "p_up",
+          "horizon_or_k": "D10",
+          "metric": "Brier",
+          "rule_ids": [
+            "base_rate"
+          ]
+        }
+      }
+    },
+    {
+      "model_id": "fall_d10_v0_pooled",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.8294485588497372,
+        "p_fall": 0.17055144115026277,
+        "pct_fall": 17,
+        "pct_up": 83
+      },
+      "d5": {
+        "p_up": 0.8927178445085044,
+        "p_fall": 0.10728215549149556,
+        "pct_fall": 11,
+        "pct_up": 89
+      },
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "belirsiz",
+        "comparator": "fall_d10_v0_h99",
+        "metric": "D10 Brier",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": -0.034,
+        "ci95": [
+          -0.034,
+          0.022
+        ],
+        "n": 75,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "CLOSED",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": {
+        "description": "Düşen arz v0 (SPEC_C_V0): h99 ile aynı özellikler ve model (f1r, ln f3, ek satış bayrağı; L2-lojistik, V1.6 C ızgarası); eğitim H99 + eski kohortun açık kümesi (161 arz, training_table_v2); rejim terimi yok.",
+        "training_n": 94,
+        "training_cutoff": "2026-08-19",
+        "params_sha256_8": "abcdef12",
+        "n_variants_same_data": 2059,
+        "primary_cell": {
+          "output": "p_up",
+          "horizon_or_k": "D10",
+          "metric": "Brier",
+          "rule_ids": [
+            "base_rate"
+          ]
+        }
+      }
+    },
+    {
+      "model_id": "fall_d10_v0_pooled@ZERO",
+      "role": "RULE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.7577639751552795,
+        "p_fall": 0.2422360248447205,
+        "pct_fall": 24,
+        "pct_up": 76
+      },
+      "d5": {
+        "p_up": 0.8198757763975155,
+        "p_fall": 0.18012422360248448,
+        "pct_fall": 18,
+        "pct_up": 82
+      },
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "tolerans içinde",
+        "comparator": "base_rate",
+        "metric": "D10 Brier",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": -0.016,
+        "ci95": [
+          -0.016,
+          0.008
+        ],
+        "n": 75,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "CLOSED",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": {
+        "description": "fall_d10_v0_pooled ızgarasının uç noktası (C = ZERO) kural olarak: ufuk başına sabit p_up = eğitim oranı (kapalı biçim), özellik yok (SPEC_C_V0 §2). Eğitim kümesi, plan ve f3 filtre dışlaması modelinkiyle aynı.",
+        "training_n": 94,
+        "training_cutoff": "2026-08-19",
+        "params_sha256_8": "abcdef12",
+        "n_variants_same_data": 2059,
+        "primary_cell": {
+          "output": "p_up",
+          "horizon_or_k": "D10",
+          "metric": "Brier",
+          "rule_ids": [
+            "base_rate"
+          ]
+        }
+      }
+    },
+    {
+      "model_id": "base_rate",
+      "role": "COMPARATOR",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.7070707070707071,
+        "p_fall": 0.29292929292929293,
+        "pct_fall": 29,
+        "pct_up": 71
+      },
+      "d5": {
+        "p_up": 0.7777777777777778,
+        "p_fall": 0.2222222222222222,
+        "pct_fall": 22,
+        "pct_up": 78
+      },
+      "near_era": null,
+      "vault": {
+        "status": "NONE",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": null
+    },
+    {
+      "model_id": "v1_5_h99",
+      "role": "COMPARATOR",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "d10": {
+        "p_up": 0.6022887021290777,
+        "p_fall": 0.3977112978709223,
+        "pct_fall": 40,
+        "pct_up": 60
+      },
+      "d5": {
+        "p_up": 0.797010819748606,
+        "p_fall": 0.202989180251394,
+        "pct_fall": 20,
+        "pct_up": 80
+      },
+      "near_era": null,
+      "vault": {
+        "status": "NONE",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      },
+      "first_failed": null,
+      "card": null
+    }
+  ],
+  "integrity": null,
+  "scores": {
+    "source": "REPO",
+    "sha12": "FIXTURE",
+    "generated_at_utc": null
+  },
+  "oot": {
+    "source": "REPO",
+    "generated_at_utc": "2030-01-01T00:00:00Z",
+    "sha12": "1d5e79fcdae6",
+    "vault_open": false,
+    "rows_present": true,
+    "unsupported_version": null,
+    "integrity": null
+  },
+  "tufe": {
+    "source": "EMBEDDED",
+    "path": null,
+    "file_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+    "through_month": "2026-08",
+    "t": "2026-09-17",
+    "month": "2026-07",
+    "index": "132.31",
+    "release_date": "2026-08-03",
+    "bulletin_id": "58297",
+    "refusal": null,
+    "reason": null,
+    "detail": null,
+    "append_command": null,
+    "pin_ok": true
+  }
+}

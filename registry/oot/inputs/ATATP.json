@@ -1,0 +1,335 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "ATATP",
+  "company": "ATP Ticari Bilgisayar Ağı ve Elektrik Güç Kaynakları Üretim Pazarlama ve Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_939094",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "24",
+      "source_id": "KAP_939094",
+      "source_document": "KAP 939094",
+      "source_published_at": "2021-05-31T18:00:37+03:00",
+      "source_sha256": "64b61bb83a04cbb7a5798f1f93c851b957d11c8e388e0a242da0b5192c975675",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_939094_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 24",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_25",
+          "quote": "ATP Ticari Bilgisayar Ağı ve Elektrik Güç Kaynakları 30.000.000 37.500.000 7.500.000 - - - 24 Üretim Pazarlama ve Ticaret A.Ş.",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "7500000",
+      "source_id": "KAP_939094",
+      "source_document": "KAP 939094",
+      "source_published_at": "2021-05-31T18:00:37+03:00",
+      "source_sha256": "64b61bb83a04cbb7a5798f1f93c851b957d11c8e388e0a242da0b5192c975675",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_939094_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 7.500.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "37500000",
+      "source_id": "KAP_939094",
+      "source_document": "KAP 939094",
+      "source_published_at": "2021-05-31T18:00:37+03:00",
+      "source_sha256": "64b61bb83a04cbb7a5798f1f93c851b957d11c8e388e0a242da0b5192c975675",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_939094_bildirim.pdf",
+      "quote": "sermayesini temsil eden 37.500.000 TL",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "capital_increase_shares": {
+      "value": "7500000",
+      "source_id": "KAP_938872_EK2",
+      "source_document": "KAP 938872 ek 2",
+      "source_published_at": "2021-05-30T18:48:36+03:00",
+      "source_sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf",
+      "quote": "sermaye artırımı yoluyla satışa sunulan 7.500.000 TL nominal değerli payların satışı gerçekleşmiştir",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "existing_share_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_25",
+      "source_document": "SPK Bülteni 2021/25",
+      "source_published_at": "2021-05-20T23:59:59+03:00",
+      "source_sha256": "634f1a1eb2081c956b4a3c4824d27517947408c46543696470ed42721b7923c4",
+      "source_path": "registry/oot/source_docs/ATATP/SPK_BULTEN_2021-25.pdf",
+      "quote": "ATP Ticari Bilgisayar Ağı ve Elektrik Güç Kaynakları 30.000.000 37.500.000 7.500.000 - - - 24 Üretim Pazarlama ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_938872_EK2",
+          "quote": "sermaye artırımı yoluyla satışa sunulan 7.500.000 TL nominal değerli payların satışı gerçekleşmiştir"
+        },
+        "b_shares_offered_equals_planned_base": "7500000 = 7500000 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "total_demand_multiple": {
+      "value": "1.6032537333",
+      "source_id": "KAP_938872_EK2",
+      "source_document": "KAP 938872 ek 2",
+      "source_published_at": "2021-05-30T18:48:36+03:00",
+      "source_sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf",
+      "origin": "CALCULATED_FROM_SOURCE_TOTALS",
+      "numerator": "12024403",
+      "numerator_quote": "TOPLAM 7.500.000 100,00 37.244 12.024.403 100,00 37.233 7.500.000 100,00",
+      "denominator": "7500000",
+      "denominator_quote": "sermaye artırımı yoluyla satışa sunulan 7.500.000 TL nominal değerli payların satışı gerçekleşmiştir",
+      "definition": "TOPLAM_TALEP_NOMINALI_12024403 / SATILAN_TOPLAM_NOMINAL_7500000 (tablo TOPLAM satırı talep sütunu; belge toplam katı yazmıyor; aynı birim TL nominal)",
+      "denominator_includes_additional_sale": false,
+      "derived": true,
+      "formula": "12024403 / 7500000 (10 ondalık ROUND_HALF_UP)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_938872_EK2",
+      "source_document": "KAP 938872 ek 2",
+      "source_published_at": "2021-05-30T18:48:36+03:00",
+      "source_sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_938872_EK2",
+      "source_document": "KAP 938872 ek 2",
+      "source_published_at": "2021-05-30T18:48:36+03:00",
+      "source_sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf",
+      "quote": "sermaye artırımı yoluyla satışa sunulan 7.500.000 TL nominal değerli payların satışı gerçekleşmiştir",
+      "zero_from_statement": true,
+      "note": "satılan toplam 7.500.000 = SPK planlanan taban (bedelli 7.500.000; mevcut pay satışı '-'); SPK satırında ek pay satışı '-'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "ipo_size_tl": {
+      "value": "180000000",
+      "source_id": "KAP_938872_EK2",
+      "source_document": "KAP 938872 ek 2",
+      "source_published_at": "2021-05-30T18:48:36+03:00",
+      "source_sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf",
+      "quote": "Buna göre halka arz büyüklüğü 180.000.000 TL olarak gerçekleşmiştir.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_price_try": {
+      "value": "24",
+      "source_id": "SPK_BULTEN_2021_25",
+      "source_document": "SPK Bülteni 2021/25",
+      "source_published_at": "2021-05-20T23:59:59+03:00",
+      "source_sha256": "634f1a1eb2081c956b4a3c4824d27517947408c46543696470ed42721b7923c4",
+      "source_path": "registry/oot/source_docs/ATATP/SPK_BULTEN_2021-25.pdf",
+      "quote": "ATP Ticari Bilgisayar Ağı ve Elektrik Güç Kaynakları 30.000.000 37.500.000 7.500.000 - - - 24 Üretim Pazarlama ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-05-20",
+        "bookbuilding_start": "2021-05-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "30000000",
+      "source_id": "SPK_BULTEN_2021_25",
+      "source_document": "SPK Bülteni 2021/25",
+      "source_published_at": "2021-05-20T23:59:59+03:00",
+      "source_sha256": "634f1a1eb2081c956b4a3c4824d27517947408c46543696470ed42721b7923c4",
+      "source_path": "registry/oot/source_docs/ATATP/SPK_BULTEN_2021-25.pdf",
+      "quote": "ATP Ticari Bilgisayar Ağı ve Elektrik Güç Kaynakları 30.000.000 37.500.000 7.500.000 - - - 24 Üretim Pazarlama ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-20",
+        "bookbuilding_start": "2021-05-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "37500000",
+      "source_id": "SPK_BULTEN_2021_25",
+      "source_document": "SPK Bülteni 2021/25",
+      "source_published_at": "2021-05-20T23:59:59+03:00",
+      "source_sha256": "634f1a1eb2081c956b4a3c4824d27517947408c46543696470ed42721b7923c4",
+      "source_path": "registry/oot/source_docs/ATATP/SPK_BULTEN_2021-25.pdf",
+      "quote": "ATP Ticari Bilgisayar Ağı ve Elektrik Güç Kaynakları 30.000.000 37.500.000 7.500.000 - - - 24 Üretim Pazarlama ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-20",
+        "bookbuilding_start": "2021-05-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "7500000",
+      "source_id": "SPK_BULTEN_2021_25",
+      "source_document": "SPK Bülteni 2021/25",
+      "source_published_at": "2021-05-20T23:59:59+03:00",
+      "source_sha256": "634f1a1eb2081c956b4a3c4824d27517947408c46543696470ed42721b7923c4",
+      "source_path": "registry/oot/source_docs/ATATP/SPK_BULTEN_2021-25.pdf",
+      "quote": "ATP Ticari Bilgisayar Ağı ve Elektrik Güç Kaynakları 30.000.000 37.500.000 7.500.000 - - - 24 Üretim Pazarlama ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-20",
+        "bookbuilding_start": "2021-05-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_25",
+      "source_document": "SPK Bülteni 2021/25",
+      "source_published_at": "2021-05-20T23:59:59+03:00",
+      "source_sha256": "634f1a1eb2081c956b4a3c4824d27517947408c46543696470ed42721b7923c4",
+      "source_path": "registry/oot/source_docs/ATATP/SPK_BULTEN_2021-25.pdf",
+      "quote": "ATP Ticari Bilgisayar Ağı ve Elektrik Güç Kaynakları 30.000.000 37.500.000 7.500.000 - - - 24 Üretim Pazarlama ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-20",
+        "bookbuilding_start": "2021-05-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "7500000",
+      "source_id": "SPK_BULTEN_2021_25",
+      "source_document": "SPK Bülteni 2021/25",
+      "source_published_at": "2021-05-20T23:59:59+03:00",
+      "source_sha256": "634f1a1eb2081c956b4a3c4824d27517947408c46543696470ed42721b7923c4",
+      "source_path": "registry/oot/source_docs/ATATP/SPK_BULTEN_2021-25.pdf",
+      "quote": "ATP Ticari Bilgisayar Ağı ve Elektrik Güç Kaynakları 30.000.000 37.500.000 7.500.000 - - - 24 Üretim Pazarlama ve Ticaret A.Ş.",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-20",
+        "bookbuilding_start": "2021-05-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_25",
+      "source_document": "SPK Bülteni 2021/25",
+      "source_published_at": "2021-05-20T23:59:59+03:00",
+      "source_sha256": "634f1a1eb2081c956b4a3c4824d27517947408c46543696470ed42721b7923c4",
+      "source_path": "registry/oot/source_docs/ATATP/SPK_BULTEN_2021-25.pdf",
+      "quote": "ATP Ticari Bilgisayar Ağı ve Elektrik Güç Kaynakları 30.000.000 37.500.000 7.500.000 - - - 24 Üretim Pazarlama ve Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-20",
+        "bookbuilding_start": "2021-05-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "7500000",
+      "source_id": "SPK_BULTEN_2021_25",
+      "source_document": "SPK Bülteni 2021/25",
+      "source_published_at": "2021-05-20T23:59:59+03:00",
+      "source_sha256": "634f1a1eb2081c956b4a3c4824d27517947408c46543696470ed42721b7923c4",
+      "source_path": "registry/oot/source_docs/ATATP/SPK_BULTEN_2021-25.pdf",
+      "quote": "ATP Ticari Bilgisayar Ağı ve Elektrik Güç Kaynakları 30.000.000 37.500.000 7.500.000 - - - 24 Üretim Pazarlama ve Ticaret A.Ş.",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-20",
+        "bookbuilding_start": "2021-05-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2021-06-04",
+      "source_id": "KAP_939094",
+      "source_document": "KAP 939094",
+      "source_published_at": "2021-05-31T18:00:37+03:00",
+      "source_sha256": "64b61bb83a04cbb7a5798f1f93c851b957d11c8e388e0a242da0b5192c975675",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_939094_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 04/06/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-05-27",
+      "source_id": "KAP_939094",
+      "source_document": "KAP 939094",
+      "source_published_at": "2021-05-31T18:00:37+03:00",
+      "source_sha256": "64b61bb83a04cbb7a5798f1f93c851b957d11c8e388e0a242da0b5192c975675",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_939094_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 27-28/05/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-05-28",
+      "source_id": "KAP_939094",
+      "source_document": "KAP 939094",
+      "source_published_at": "2021-05-31T18:00:37+03:00",
+      "source_sha256": "64b61bb83a04cbb7a5798f1f93c851b957d11c8e388e0a242da0b5192c975675",
+      "source_path": "registry/oot/source_docs/ATATP/KAP_939094_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 27-28/05/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_939094": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 939094",
+      "published_at": "2021-05-31T18:00:37+03:00",
+      "sha256": "64b61bb83a04cbb7a5798f1f93c851b957d11c8e388e0a242da0b5192c975675",
+      "path": "registry/oot/source_docs/ATATP/KAP_939094_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_25": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/25",
+      "published_at": "2021-05-20T23:59:59+03:00",
+      "sha256": "634f1a1eb2081c956b4a3c4824d27517947408c46543696470ed42721b7923c4",
+      "path": "registry/oot/source_docs/ATATP/SPK_BULTEN_2021-25.pdf"
+    },
+    "KAP_938872_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 938872 ek 2",
+      "published_at": "2021-05-30T18:48:36+03:00",
+      "sha256": "64cc64c07a4a19023a005bf7112ad9e29c9b04c80977d38d558e6f4cc48baa43",
+      "path": "registry/oot/source_docs/ATATP/KAP_938872_ek2.pdf"
+    }
+  }
+}

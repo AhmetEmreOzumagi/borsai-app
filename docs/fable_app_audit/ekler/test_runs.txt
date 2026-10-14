@@ -1,0 +1,86 @@
+# Tam koşu ölçümleri — BORSAI_FAZ3_FABLE_APP_AUDIT_20260923 [ÖLÇTÜM]
+# Asıl repo, HEAD 8fa0bf5; koşu sırası test.sh → e2e_freeze_tmp_repo.sh → e2e_personal_isolation.sh → pytest -q
+# Koşu öncesi git status --porcelain: '?? docs/prompts/FAZ3_FABLE_APP_AUDIT.md' ; sonrası: aynı
+# registry/ (95 dosya), data/ (84 dosya), scores/ (1 dosya) sha256 listeleri: koşu öncesi = sonrası (diff boş)
+
+## Özet
+test_sh rc=0 dur=82s cmd=bash app/scripts/test.sh
+e2e_freeze rc=0 dur=7s cmd=bash app/tests/e2e_freeze_tmp_repo.sh
+e2e_iso rc=0 dur=5s cmd=bash app/tests/e2e_personal_isolation.sh
+pytest rc=0 dur=923s cmd=.venv/bin/pytest -q
+DONE
+
+## 1. bash app/scripts/test.sh (82 s)
+cargo test --workspace (BORSAI_REPO ayarlı): 16 test ikilisi, toplam 95 geçti / 0 kaldı / 0 yoksayıldı
+       Running unittests src/lib.rs (target/debug/deps/borsai_app_lib-e76c14c329f8621a)
+  test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+       Running unittests src/main.rs (target/debug/deps/borsai_app-ee20f116ff228cb2)
+  test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+       Running tests/build_embed.rs (target/debug/deps/build_embed-88791a2ca1ab0abd)
+  test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+       Running tests/e2e.rs (target/debug/deps/e2e-80ad71b551c839f8)
+  test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+       Running tests/integrity.rs (target/debug/deps/integrity-6af3ea8b7e1575e2)
+  test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+       Running tests/no_network.rs (target/debug/deps/no_network-7d8f807f64557989)
+  test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.58s
+       Running tests/stage2.rs (target/debug/deps/stage2-acc80f753e83d51d)
+  test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.66s
+       Running tests/stage3.rs (target/debug/deps/stage3-9de4c8b54400a302)
+  test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.81s
+       Running tests/stage4.rs (target/debug/deps/stage4-be1e8bb61df47085)
+  test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.20s
+       Running unittests src/lib.rs (target/debug/deps/borsai_predict-e8766771c014a800)
+  test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+       Running tests/coverage.rs (target/debug/deps/coverage-8e8d8e97191690db)
+  test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.25s
+       Running tests/dec_semantics.rs (target/debug/deps/dec_semantics-2988eaae9f984594)
+  test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+       Running tests/golden.rs (target/debug/deps/golden-e3d2186d62708274)
+  test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 25.15s
+       Running tests/records_parity.rs (target/debug/deps/records_parity-43158e0ab0962e3d)
+  test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.23s
+  test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+  test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+vitest: 15 dosya, 207 test geçti (8.06 s); pytest app/parity/test_gen_golden.py: 4 geçti (19.60 s); golden_unchanged.sh: YEŞİL (U46)
+son satırlar:
+  === 3. dec_cases.json eski bölümleri bayt-eşit ===
+  OK   9 eski bölüm aynı; yeni bölüm: ['limit_path']
+  === 4. beklenen değişiklikler (bilgi) ===
+  MANIFEST.json:  1 file changed, 26 insertions(+), 4 deletions(-)
+    yeni ceiling_path_v0          468 satır · koşullu 40 taban satır
+    yeni ceiling_path_v0@INF      468 satır · koşullu 40 taban satır
+    yeni pb_ceiling_path_v0       468 satır · koşullu 40 taban satır
+  === golden_unchanged: YEŞİL (U46) ===
+
+## 2. bash app/tests/e2e_freeze_tmp_repo.sh (7 s) — cargo test --test e2e freeze_flow: 1 geçti
+  test freeze_flow ... E2E| adım 1 ön koşullar: git HEAD 8fa0bf5356f6, INDEX sha eşit, borsai = /private/var/folders/zr/drr97wqd4hl77c1q0bszd1vc0000gn/T/tmp.TGm7kWIVnt/repo/borsai/__init__.py
+  test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 3 filtered out; finished in 4.53s
+son satırlar:
+  ?? registry/records/SNTB2/
+  ?? registry/source_docs/SNTA1/
+  ?? registry/source_docs/SNTB2/
+  === 6. ASIL REPO denetimi ===
+  asıl repo registry/ sha listesi öncesiyle BİREBİR AYNI (95 dosya)
+  görev başındaki taban listeyle (/tmp/reg_before.txt) de aynı
+  asıl repo GIT_OPTIONAL_LOCKS=0 git status --porcelain -- registry: BOŞ
+  === e2e_freeze_tmp_repo: YEŞİL ===
+
+## 3. bash app/tests/e2e_personal_isolation.sh (5 s) — cargo test --test e2e personal_isolation: 1 geçti
+  test personal_isolation ... E2E| U39 şerit BKRGY: j = Some(0), bozuldu = true, dosya durumu = FOUND (kaynak yalnız dosya)
+  test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 3 filtered out; finished in 1.49s
+son satırlar:
+  app/src/screens/results.ts
+  app/src/screens/scenarios.ts
+  app/src/types.ts
+  scores / registry / freeze / parity okuyucuları beyan alanını okumuyor
+  === 6. ASIL REPO denetimi ===
+  asıl repo registry/ sha listesi öncesiyle BİREBİR AYNI (95 dosya)
+  asıl repo git status --porcelain -- registry data scores: BOŞ
+  === e2e_personal_isolation: YEŞİL ===
+
+## 4. .venv/bin/pytest -q (923 s duvar saati)
+son satırlar:
+  ........................................................................ [ 83%]
+  ........................................................................ [100%]
+  432 passed in 921.38s (0:15:21)

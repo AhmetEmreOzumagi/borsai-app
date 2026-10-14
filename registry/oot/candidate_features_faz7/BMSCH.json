@@ -1,0 +1,313 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "BMSCH",
+ "company": "BMS Çelik Hasır Sanayi ve Ticaret A.Ş.",
+ "first_trading_date": "2021-06-08",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Borsa İstanbul Birincil Piyasa; yatırımcı grubu bazında tahsisat ve dağıtım yapılmadı",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_938545_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f880179af381cbb5fc7",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "938545",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/938545",
+   "published_at": "2021-05-27T23:10:58+03:00",
+   "source_sha256": "6b8ecd94df1f00bf1890057d4d201541800dc240b1cce0b195be84eb0122d68a",
+   "source_file": "source_docs/BMSCH/KAP_938545_ek1.pdf",
+   "page": 6,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "5.2.3. Halka arzda yatırımcılara tahsis ve dağıtım esasları: SERMAYE UZM Halka arza konu olan paylara ilişkin olarak belirli bir yatırımcı grubu için yapılan tahsisat yoktur. Borsąda Satış-Sabit Fiyatla Talep Toplama ve Satış Yönetimi kullanılarak paylar satışa sunulacaktır.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_938545_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f880179af381cbb5fc7",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "938545",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/938545",
+     "published_at": "2021-05-27T23:10:58+03:00",
+     "source_sha256": "6b8ecd94df1f00bf1890057d4d201541800dc240b1cce0b195be84eb0122d68a",
+     "source_file": "source_docs/BMSCH/KAP_938545_ek1.pdf",
+     "page": 7,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "a) Yatırımcı grubu bazında tahsisat oranları: Yoktur."
+    },
+    {
+     "source_id": "KAP_938544_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f880179af3654475f97",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "938544",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/938544",
+     "published_at": "2021-05-27T23:10:38+03:00",
+     "source_sha256": "9ef8937835c401a79ff3c18b20f5387273ddb0593faf2a1cf19be867e24cb358",
+     "source_file": "source_docs/BMSCH/KAP_938544_ek1.pdf",
+     "page": 30,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Satılacak miktar, Sistem tarafından, gelen her bir alış emrine birer lot olarak dağıtılır."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Borsa'da satış (Sabit Fiyatla Talep Toplama ve Satış Yöntemi, BMSCH.HE); yatırımcı grubu tahsisatı yok. Dağıtım Borsa sistemince zaman önceliğiyle her emre birer lot (SPAN 5.1.3.2.a, s.30); belge bunu 'eşit' ya da 'oransal' diye adlandırmıyor. BIST birincil piyasa duyurusu (KAP_938560) de 'Borsa Birincil Piyasa'da Sabit Fiyatla Talep Toplama ve Satış Yöntemi' diyor.",
+   "codex_value": "Borsa'da satış; zaman önceliğiyle birer lot dağıtım",
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_planned": {
+   "value": "TRUE",
+   "unit": "boolean",
+   "status": "VERIFIED",
+   "source_id": "KAP_938545_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f880179af381cbb5fc7",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "938545",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/938545",
+   "published_at": "2021-05-27T23:10:58+03:00",
+   "source_sha256": "6b8ecd94df1f00bf1890057d4d201541800dc240b1cce0b195be84eb0122d68a",
+   "source_file": "source_docs/BMSCH/KAP_938545_ek1.pdf",
+   "page": 11,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "6.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: SPK VII-128.1 Pay Tebliği 11. Maddesi çerçevesinde Şirket paylarının, BIST'de işlem görmeye başlamasını takiben 30 gün süreyle fiyat istikrarını sağlayıcı işlemler uygulanabilecektir.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_938545_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f880179af381cbb5fc7",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "938545",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/938545",
+     "published_at": "2021-05-27T23:10:58+03:00",
+     "source_sha256": "6b8ecd94df1f00bf1890057d4d201541800dc240b1cce0b195be84eb0122d68a",
+     "source_file": "source_docs/BMSCH/KAP_938545_ek1.pdf",
+     "page": 12,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Aracı kurum Invest-AZ Yatırım Menkul Değerler A.Ş. Şirket paylarına yönelik olarak fiyat istikrarı işlemlerinde bulunmayı planlamaktadır."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Fiyat istikrarı işlemlerini Invest-AZ yapar; kaynak önce ortak satışı geliri, yetmezse Şirket'in halka arz gelirinin %20'sine kadarı (s.12-13).",
+   "codex_value": true,
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_days": {
+   "value": "30",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_938545_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f880179af381cbb5fc7",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "938545",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/938545",
+   "published_at": "2021-05-27T23:10:58+03:00",
+   "source_sha256": "6b8ecd94df1f00bf1890057d4d201541800dc240b1cce0b195be84eb0122d68a",
+   "source_file": "source_docs/BMSCH/KAP_938545_ek1.pdf",
+   "page": 12,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "6.5.2. Fiyat istikrarı işlemlerinin gerçekleştirilebileceği zaman aralığı: Payların borsada işlem görmeye başlamasından itibaren 30 gündür.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "",
+   "codex_value": "30",
+   "codex_verdict": "VERIFIED"
+  },
+  "issuer_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_938545_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f880179af381cbb5fc7",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "938545",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/938545",
+   "published_at": "2021-05-27T23:10:58+03:00",
+   "source_sha256": "6b8ecd94df1f00bf1890057d4d201541800dc240b1cce0b195be84eb0122d68a",
+   "source_file": "source_docs/BMSCH/KAP_938545_ek1.pdf",
+   "page": 14,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "a) İhraççı tarafından verilen taahhüt: Şirket paylarının birincil halka arzını takiben, payların Borsa İstanbul'da işlem görmeye başladığı tarihten itibaren 12 ay boyunca Satışa Hazır Bekletilen Paylar hariç olmak üzere herhangi bir bedelli sermaye artırımı yapılmamasına",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_938544_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f880179af3654475f97",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "938544",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/938544",
+     "published_at": "2021-05-27T23:10:38+03:00",
+     "source_sha256": "9ef8937835c401a79ff3c18b20f5387273ddb0593faf2a1cf19be867e24cb358",
+     "source_file": "source_docs/BMSCH/KAP_938544_ek1.pdf",
+     "page": 27,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "payların Borsa İstanbul A.Ş. 'de işlem görmeye başladığı tarihten itibaren 1 (bir) yıl süreyle satışa hazır bekletilen paylar hariç olmak üzere; Şirket paylarında herhangi bir bedelli sermaye artırımı"
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "12 ay = 1 yıl = 365 gün (H99 biçimi). Kapsam: bedelli sermaye artırımı yapmama ve dolaşımdaki pay miktarını artırmama (10.02.2021 tarih 2021/1 sayılı YK kararı, 06.05.2021 taahhüt); satışa hazır bekletilen paylar hariç. Başlangıç: borsada işlem görmeye başlama. s.14 OCR metninde satırlar karışık.",
+   "codex_value": "365",
+   "codex_verdict": "VERIFIED"
+  },
+  "shareholder_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_938545_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f880179af381cbb5fc7",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "938545",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/938545",
+   "published_at": "2021-05-27T23:10:58+03:00",
+   "source_sha256": "6b8ecd94df1f00bf1890057d4d201541800dc240b1cce0b195be84eb0122d68a",
+   "source_file": "source_docs/BMSCH/KAP_938545_ek1.pdf",
+   "page": 15,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "BMS Çelik Hasır Saayi ve Ticøet A.Ş.'de izahname tarihi itibariyle sahip oldukları payları, halka arz edilenler hariç olmak üzere, izahnamenin KAP'ta ilan edildiği tarihten itibaren bir yıl boyunca ve ayrıca ortaklık paylarının borsada işlem görmeye başlamasından itibaren bir yıl süreyle hiçbir şekilde borsada satmayacaklarını",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_938545_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f880179af381cbb5fc7",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "938545",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/938545",
+     "published_at": "2021-05-27T23:10:58+03:00",
+     "source_sha256": "6b8ecd94df1f00bf1890057d4d201541800dc240b1cce0b195be84eb0122d68a",
+     "source_file": "source_docs/BMSCH/KAP_938545_ek1.pdf",
+     "page": 15,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "c) Sermaye piyasası mevzuatı kapsamında verilen taahhütler: Şirket'in hâkim ortakları dışında ortaklıktaki pay oranı %10'u geçen ortağı bulunmamaktadır. Hâkim ortaklar, Ahmet Rauf MOLLAOĞLU, Mustafa ZONTUR, Ali ZONTUR,"
+    },
+    {
+     "source_id": "KAP_938537_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd70179af1f52054b83",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "938537",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/938537",
+     "published_at": "2021-05-27T23:08:39+03:00",
+     "source_sha256": "06b18f6778dcd70b9bd53c70f036ea73a72f2a6d26cbc57062b849fb7720daea",
+     "source_file": "source_docs/BMSCH/KAP_938537_ek1.pdf",
+     "page": 15,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "8'inci maddesinin birinci fikrası ile 9'uncu maddesinin üçüncü fikrası kapsamında ortaklardan Ahmet Rauf Mollaoğlu, Ali Zontur ve Mustafa Zontur;"
+    }
+   ],
+   "components": [
+    {
+     "who": "Ahmet Rauf Mollaoğlu, Mustafa Zontur, Ali Zontur (hakim ortaklar, her biri)",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "MEVZUAT Pay Tebliği 9/3",
+     "start": "izahnamenin KAP'ta ilanı"
+    },
+    {
+     "who": "Ahmet Rauf Mollaoğlu, Mustafa Zontur, Ali Zontur (hakim ortaklar, her biri)",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "borsada işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "b) Ortaklar tarafından verilen taahhütler: Yoktur (s.14, OCR bozuk: 'b) Ortaklar tarafın an SF-u ler: Yoktur'). c) mevzuat taahhüdü: hakim ortaklar izahname tarihindeki paylarını (halka arz edilenler hariç) KAP ilanından itibaren 1 yıl ve ayrıca borsada işlem görmeye başlamadan itibaren 1 yıl 'hiçbir şekilde' borsada satmama; Özet s.15 bunu Pay Tebliği 8/1 ve 9/3 kapsamında sayıyor. En kısa 365. Yetkili kuruluş (Invest-AZ) 6 aylık fiyat altı taahhüdü ortak taahhüdü değil, hariç.",
+   "codex_value": "365",
+   "codex_verdict": "VERIFIED"
+  },
+  "sector": {
+   "value": "Çelik hasır ve çelik çubuk üretimi; inşaat demiri ticareti",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_938539_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd70179af23d40c4c3a",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "938539",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/938539",
+   "published_at": "2021-05-27T23:09:11+03:00",
+   "source_sha256": "e1ed18ad593cd2d2c6882bb140c5a4c4aab783235cd992d52a8e17477a6cb72e",
+   "source_file": "source_docs/BMSCH/KAP_938539_ek1.pdf",
+   "page": 5,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Şirket'in ana faaliyet konusu, soğuk çekme yöntemi ile çekilerek nervürlenerek üretilen yüksek dayanım gücüne sahip olan çelik hasır, çelik hasır üretiminde ve betonarme yapılarda kullanılan soğuk çekilmiş düz ve nervürlü çelik çubuk, çelik telin sıvı çinkoya batırılması elde edilen ve paslanma kırılımna hasar alma gibi durumlara karşı dayanıklı galvanizli çelik hasır üretimi olup",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_938537_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd70179af1f52054b83",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "938537",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/938537",
+     "published_at": "2021-05-27T23:08:39+03:00",
+     "source_sha256": "06b18f6778dcd70b9bd53c70f036ea73a72f2a6d26cbc57062b849fb7720daea",
+     "source_file": "source_docs/BMSCH/KAP_938537_ek1.pdf",
+     "page": 1,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Şirket'in ana faaliyet konusu, çelik hasır, soğuk çekilmiş kategorilerini de içerecek düz ve nervürlü çelik, çelik çubuk ve galvanizli çelik hasır şekilde ihraççının mevcut üretimi ile inşaat demiri alım satim faaliyetini"
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Özet B.3 (s.1, iki sütun OCR'ı karışık): çelik hasır, düz ve nervürlü çelik çubuk, galvanizli çelik hasır üretimi ile inşaat demiri alım satımı.",
+   "codex_value": "çelik hasır ve çelik ürünleri üretimi; inşaat demiri ticareti",
+   "codex_verdict": "VERIFIED"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: Özet, İBD 1-5, SPAN 1-2, TSSD ve Borsa birincil piyasa duyurusunda katılım endeksi / faizsiz finans uygunluk beyanı yok. qfind 'katılım endeks|faizsiz|islami|icazet|katılım finans|danışma kurulu|katılım bank|kuveyt|albaraka|faiz içermeyen' yalnız İBD 5 s.15'te 'Emlak Katılım Bankası'nda kefaleti bulunmamaktadır' eşleşmesini verdi; uygunluk beyanı değil.",
+   "looked_at": [
+    "KAP_938537_EK1",
+    "KAP_938538_EK1",
+    "KAP_938539_EK1",
+    "KAP_938540_EK1",
+    "KAP_938541_EK1",
+    "KAP_938542_EK1",
+    "KAP_938543_EK1",
+    "KAP_938544_EK1",
+    "KAP_938545_EK1",
+    "KAP_938560"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_938537_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "938537",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd70179af1f52054b83",
+   "published_at": "2021-05-27T23:08:39+03:00",
+   "sha256": "06b18f6778dcd70b9bd53c70f036ea73a72f2a6d26cbc57062b849fb7720daea",
+   "file": "source_docs/BMSCH/KAP_938537_ek1.pdf"
+  },
+  "KAP_938539_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "938539",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd70179af23d40c4c3a",
+   "published_at": "2021-05-27T23:09:11+03:00",
+   "sha256": "e1ed18ad593cd2d2c6882bb140c5a4c4aab783235cd992d52a8e17477a6cb72e",
+   "file": "source_docs/BMSCH/KAP_938539_ek1.pdf"
+  },
+  "KAP_938544_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "938544",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f880179af3654475f97",
+   "published_at": "2021-05-27T23:10:38+03:00",
+   "sha256": "9ef8937835c401a79ff3c18b20f5387273ddb0593faf2a1cf19be867e24cb358",
+   "file": "source_docs/BMSCH/KAP_938544_ek1.pdf"
+  },
+  "KAP_938545_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "938545",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f880179af381cbb5fc7",
+   "published_at": "2021-05-27T23:10:58+03:00",
+   "sha256": "6b8ecd94df1f00bf1890057d4d201541800dc240b1cce0b195be84eb0122d68a",
+   "file": "source_docs/BMSCH/KAP_938545_ek1.pdf"
+  }
+ }
+}

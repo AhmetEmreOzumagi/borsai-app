@@ -1,0 +1,217 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "KMPUR",
+  "company": "Kimteks Poliüretan Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "36988",
+      "source_id": "KAP_1023408_EK1",
+      "source_document": "KAP 1023408 ek 1",
+      "source_published_at": "2022-04-25T10:20:55+03:00",
+      "source_sha256": "3ff00b8fd8ca42db38580ba0ba9b077c7556db241563b05aad4b24834564294c",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1023408_ek1.pdf",
+      "quote": "Toplam 33.000.000 %100 38.129 54.250.452 %100 36.988 33.000.000 %100",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 38.129; dağıtım yapılan 36.988",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "38.129",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "38.129",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "38.129 talep eden sayısı; dağıtım yapılan 36.988 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "36875",
+        "domestic_institutional": "113"
+      },
+      "source_id": "KAP_1023408_EK1",
+      "source_document": "KAP 1023408 ek 1",
+      "source_published_at": "2022-04-25T10:20:55+03:00",
+      "source_sha256": "3ff00b8fd8ca42db38580ba0ba9b077c7556db241563b05aad4b24834564294c",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1023408_ek1.pdf",
+      "quote": [
+        "19.800.000 %60 38.016 27.873.965 %51,39 36.875 19.800.000 %60",
+        "13.200.000 %40 113 26.376.487 %48,61 113 13.200.000 %40"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 38.016, yurt içi kurumsal 113; yurt dışı kurumsal grup yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "1.41",
+      "source_id": "KAP_1023408_EK1",
+      "source_document": "KAP 1023408 ek 1",
+      "source_published_at": "2022-04-25T10:20:55+03:00",
+      "source_sha256": "3ff00b8fd8ca42db38580ba0ba9b077c7556db241563b05aad4b24834564294c",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1023408_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara tahsis edilen payların 1,41 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "1,41",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "2.00",
+      "source_id": "KAP_1023408_EK1",
+      "source_document": "KAP 1023408 ek 1",
+      "source_published_at": "2022-04-25T10:20:55+03:00",
+      "source_sha256": "3ff00b8fd8ca42db38580ba0ba9b077c7556db241563b05aad4b24834564294c",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1023408_ek1.pdf",
+      "quote": "Kurumsal Yatırımcılara tahsis edilen payların 2,00 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,00",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belgede yurt dışı kurumsal yatırımcı grubu yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "19800000",
+        "domestic_institutional": "13200000"
+      },
+      "source_id": "KAP_1023408_EK1",
+      "source_document": "KAP 1023408 ek 1",
+      "source_published_at": "2022-04-25T10:20:55+03:00",
+      "source_sha256": "3ff00b8fd8ca42db38580ba0ba9b077c7556db241563b05aad4b24834564294c",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1023408_ek1.pdf",
+      "quote": [
+        "19.800.000 %60 38.016 27.873.965 %51,39 36.875 19.800.000 %60",
+        "13.200.000 %40 113 26.376.487 %48,61 113 13.200.000 %40"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "60",
+      "source_id": "KAP_1023408_EK1",
+      "source_document": "KAP 1023408 ek 1",
+      "source_published_at": "2022-04-25T10:20:55+03:00",
+      "source_sha256": "3ff00b8fd8ca42db38580ba0ba9b077c7556db241563b05aad4b24834564294c",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1023408_ek1.pdf",
+      "quote": "19.800.000 %60 38.016 27.873.965 %51,39 36.875 19.800.000 %60",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %60",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "40",
+      "source_id": "KAP_1023408_EK1",
+      "source_document": "KAP 1023408 ek 1",
+      "source_published_at": "2022-04-25T10:20:55+03:00",
+      "source_sha256": "3ff00b8fd8ca42db38580ba0ba9b077c7556db241563b05aad4b24834564294c",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1023408_ek1.pdf",
+      "quote": "13.200.000 %40 113 26.376.487 %48,61 113 13.200.000 %40",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %40",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "belgede yurt dışı kurumsal yatırımcı grubu yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD pencereleri dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Türkiye Sınai Kalkınma Bankası A.Ş.",
+      "source_id": "KAP_1021372_EK1",
+      "source_document": "KAP 1021372 ek 1",
+      "source_published_at": "2022-04-16T00:19:46+03:00",
+      "source_sha256": "9fb462b79e1f15e0067f06396f5ca5018985d6392b71e0d70c506a8687e54831",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1021372_ek1.pdf",
+      "quote": "halka arzda satışa aracıhk edecek Türkiye Sıai Kalkınma Bankası Anonim Şirketi'nin",
+      "note": "TSSD OCR metni ('Sıai', 'aracıhk' OCR yazımı); TSSD ayrıca Yatırım Finansman Menkul Değerler A.Ş.'yi aracı olarak sayıyor ('lider' ifadesi yok); sonuç bildirimini yayımlayan TÜRKİYE SINAİ KALKINMA BANKASI A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde fiyat istikrarı yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız",
+      "source_id": "KAP_1024003",
+      "source_document": "KAP 1024003",
+      "source_published_at": "2022-04-26T18:14:46+03:00",
+      "source_sha256": "b8e86858fb8cfa18980871d17cd3fecf3b25abd4d90e99c795cd3115cd1ffbc7",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1024003_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1024003",
+      "source_document": "KAP 1024003",
+      "source_published_at": "2022-04-26T18:14:46+03:00",
+      "source_sha256": "b8e86858fb8cfa18980871d17cd3fecf3b25abd4d90e99c795cd3115cd1ffbc7",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1024003_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1024003": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1024003",
+      "published_at": "2022-04-26T18:14:46+03:00",
+      "sha256": "b8e86858fb8cfa18980871d17cd3fecf3b25abd4d90e99c795cd3115cd1ffbc7",
+      "path": "registry/oot/source_docs/KMPUR/KAP_1024003_bildirim.pdf"
+    },
+    "KAP_1023408_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1023408 ek 1",
+      "published_at": "2022-04-25T10:20:55+03:00",
+      "sha256": "3ff00b8fd8ca42db38580ba0ba9b077c7556db241563b05aad4b24834564294c",
+      "path": "registry/oot/source_docs/KMPUR/KAP_1023408_ek1.pdf"
+    },
+    "KAP_1021372_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1021372 ek 1",
+      "published_at": "2022-04-16T00:19:46+03:00",
+      "sha256": "9fb462b79e1f15e0067f06396f5ca5018985d6392b71e0d70c506a8687e54831",
+      "path": "registry/oot/source_docs/KMPUR/KAP_1021372_ek1.pdf"
+    }
+  }
+}

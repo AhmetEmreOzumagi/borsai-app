@@ -1,0 +1,353 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "FZLGY",
+  "company": "Fuzul Gayrimenkul Yatırım Ortaklığı A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1175085",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "8.9",
+      "source_id": "KAP_1175085",
+      "source_document": "KAP 1175085",
+      "source_published_at": "2023-07-25T18:00:26+03:00",
+      "source_sha256": "8c56abbadadfdcda1c53bb828e01c5c66583a863a1b8509cb5209806bbb8a0c5",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1175085_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 8,9",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2023_39",
+          "quote": "Fuzul Gayrimenkul Yatırım 28.000.000 8,90 254.140.000 318.000.000 63.860.000 - - Ortaklığı AŞ (4) (5)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "91860000",
+      "source_id": "KAP_1175085",
+      "source_document": "KAP 1175085",
+      "source_published_at": "2023-07-25T18:00:26+03:00",
+      "source_sha256": "8c56abbadadfdcda1c53bb828e01c5c66583a863a1b8509cb5209806bbb8a0c5",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1175085_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 91.860.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "318000000",
+      "source_id": "KAP_1175085",
+      "source_document": "KAP 1175085",
+      "source_published_at": "2023-07-25T18:00:26+03:00",
+      "source_sha256": "8c56abbadadfdcda1c53bb828e01c5c66583a863a1b8509cb5209806bbb8a0c5",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1175085_bildirim.pdf",
+      "quote": "sermayesini temsil eden 318.000.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "63860000",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/FZLGY/SPK_BULTEN_2023-39.pdf",
+      "quote": "Fuzul Gayrimenkul Yatırım 28.000.000 8,90 254.140.000 318.000.000 63.860.000 - - Ortaklığı AŞ (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1174410_EK1",
+          "quote": "halka arz edilen 91.860.000 TL nominal değerli payların satışı gerçekleştirilmiş"
+        },
+        "b_shares_offered_equals_planned_base": "91860000 = 63860000 + 28000000",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "28000000",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/FZLGY/SPK_BULTEN_2023-39.pdf",
+      "quote": "Fuzul Gayrimenkul Yatırım 28.000.000 8,90 254.140.000 318.000.000 63.860.000 - - Ortaklığı AŞ (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1174410_EK1",
+          "quote": "halka arz edilen 91.860.000 TL nominal değerli payların satışı gerçekleştirilmiş"
+        },
+        "b_shares_offered_equals_planned_base": "91860000 = 63860000 + 28000000",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "2.9159481276",
+      "source_id": "KAP_1174410_EK1",
+      "source_document": "KAP 1174410 ek 1",
+      "source_published_at": "2023-07-24T07:37:28+03:00",
+      "source_sha256": "48fb67ee2ebd81462d20a025346085cf2a8bb4936513705fb204bc732dd1a119",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1174410_ek1.pdf",
+      "origin": "CALCULATED_FROM_SOURCE_TOTALS",
+      "numerator": "267858995",
+      "numerator_quote": "Toplam 91.860.000 %100,00 1.369.622 267.858.995,00 %100,0 1.326.874 91.860.000 %100,0",
+      "denominator": "91860000",
+      "denominator_quote": "halka arz edilen 91.860.000 TL nominal değerli payların satışı gerçekleştirilmiş",
+      "definition": "TOPLAM_TALEP_NOMINALI_267858995 / HALKA_ARZ_EDILEN_NOMINAL_PAY_91860000 (belge toplam katı yazmıyor; tablo 'Toplam' satırı talep nominali ve satılan nominal aynı belgede)",
+      "denominator_includes_additional_sale": false,
+      "note": "ek satış öngörülmemiş (SPK satırında '-'); belge yalnız grup katlarını veriyor (bireysel yaklaşık 3,0, yurt içi kurumsal yaklaşık 4,3)",
+      "derived": true,
+      "formula": "267858995 / 91860000 (10 ondalık ROUND_HALF_UP)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_1174410_EK1",
+      "source_document": "KAP 1174410 ek 1",
+      "source_published_at": "2023-07-24T07:37:28+03:00",
+      "source_sha256": "48fb67ee2ebd81462d20a025346085cf2a8bb4936513705fb204bc732dd1a119",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1174410_ek1.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1174410_EK1",
+      "source_document": "KAP 1174410 ek 1",
+      "source_published_at": "2023-07-24T07:37:28+03:00",
+      "source_sha256": "48fb67ee2ebd81462d20a025346085cf2a8bb4936513705fb204bc732dd1a119",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1174410_ek1.pdf",
+      "quote": "halka arz edilen 91.860.000 TL nominal değerli payların satışı gerçekleştirilmiş",
+      "zero_from_statement": true,
+      "note": "satılan toplam 91.860.000 = SPK planlanan taban (bedelli 63.860.000 + mevcut pay satışı 28.000.000); SPK satırında ek pay satışı '-'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_size_tl": {
+      "value": "817554000",
+      "source_id": "KAP_1174410_EK1",
+      "source_document": "KAP 1174410 ek 1",
+      "source_published_at": "2023-07-24T07:37:28+03:00",
+      "source_sha256": "48fb67ee2ebd81462d20a025346085cf2a8bb4936513705fb204bc732dd1a119",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1174410_ek1.pdf",
+      "quote": "buna göre halka arz büyüklüğü 817.554.000 TL olmuştur.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_price_try": {
+      "value": "8.90",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/FZLGY/SPK_BULTEN_2023-39.pdf",
+      "quote": "Fuzul Gayrimenkul Yatırım 28.000.000 8,90 254.140.000 318.000.000 63.860.000 - - Ortaklığı AŞ (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "254140000",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/FZLGY/SPK_BULTEN_2023-39.pdf",
+      "quote": "Fuzul Gayrimenkul Yatırım 28.000.000 8,90 254.140.000 318.000.000 63.860.000 - - Ortaklığı AŞ (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "318000000",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/FZLGY/SPK_BULTEN_2023-39.pdf",
+      "quote": "Fuzul Gayrimenkul Yatırım 28.000.000 8,90 254.140.000 318.000.000 63.860.000 - - Ortaklığı AŞ (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "63860000",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/FZLGY/SPK_BULTEN_2023-39.pdf",
+      "quote": "Fuzul Gayrimenkul Yatırım 28.000.000 8,90 254.140.000 318.000.000 63.860.000 - - Ortaklığı AŞ (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "28000000",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/FZLGY/SPK_BULTEN_2023-39.pdf",
+      "quote": "Fuzul Gayrimenkul Yatırım 28.000.000 8,90 254.140.000 318.000.000 63.860.000 - - Ortaklığı AŞ (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "91860000",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/FZLGY/SPK_BULTEN_2023-39.pdf",
+      "quote": "Fuzul Gayrimenkul Yatırım 28.000.000 8,90 254.140.000 318.000.000 63.860.000 - - Ortaklığı AŞ (4) (5)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/FZLGY/SPK_BULTEN_2023-39.pdf",
+      "quote": "Fuzul Gayrimenkul Yatırım 28.000.000 8,90 254.140.000 318.000.000 63.860.000 - - Ortaklığı AŞ (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "91860000",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/FZLGY/SPK_BULTEN_2023-39.pdf",
+      "quote": "Fuzul Gayrimenkul Yatırım 28.000.000 8,90 254.140.000 318.000.000 63.860.000 - - Ortaklığı AŞ (4) (5)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2023-07-28",
+      "source_id": "KAP_1175085",
+      "source_document": "KAP 1175085",
+      "source_published_at": "2023-07-25T18:00:26+03:00",
+      "source_sha256": "8c56abbadadfdcda1c53bb828e01c5c66583a863a1b8509cb5209806bbb8a0c5",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1175085_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 28/07/2023",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2023-07-20",
+      "source_id": "KAP_1175085",
+      "source_document": "KAP 1175085",
+      "source_published_at": "2023-07-25T18:00:26+03:00",
+      "source_sha256": "8c56abbadadfdcda1c53bb828e01c5c66583a863a1b8509cb5209806bbb8a0c5",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1175085_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 20-21/07/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2023-07-21",
+      "source_id": "KAP_1175085",
+      "source_document": "KAP 1175085",
+      "source_published_at": "2023-07-25T18:00:26+03:00",
+      "source_sha256": "8c56abbadadfdcda1c53bb828e01c5c66583a863a1b8509cb5209806bbb8a0c5",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1175085_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 20-21/07/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1175085": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1175085",
+      "published_at": "2023-07-25T18:00:26+03:00",
+      "sha256": "8c56abbadadfdcda1c53bb828e01c5c66583a863a1b8509cb5209806bbb8a0c5",
+      "path": "registry/oot/source_docs/FZLGY/KAP_1175085_bildirim.pdf"
+    },
+    "SPK_BULTEN_2023_39": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2023/39",
+      "published_at": "2023-07-13T23:59:59+03:00",
+      "sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "path": "registry/oot/source_docs/FZLGY/SPK_BULTEN_2023-39.pdf"
+    },
+    "KAP_1174410_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1174410 ek 1",
+      "published_at": "2023-07-24T07:37:28+03:00",
+      "sha256": "48fb67ee2ebd81462d20a025346085cf2a8bb4936513705fb204bc732dd1a119",
+      "path": "registry/oot/source_docs/FZLGY/KAP_1174410_ek1.pdf"
+    }
+  }
+}

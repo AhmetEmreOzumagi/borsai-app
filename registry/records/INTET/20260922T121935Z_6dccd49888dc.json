@@ -1,0 +1,1312 @@
+{
+  "code": {
+    "borsai_dirty": true,
+    "borsai_files_sha256": {
+      "__init__.py": "0db41acb4b55896948c417935a22bd79800f269f5497ade2ce305b69812b511a",
+      "backtest.py": "48375198c1837a3391de0b495f583e6a0546521ac6876fff1f6808b4761bd967",
+      "data.py": "749b07564495d202a96176764124f03b117237c020d2f817b45bc9587ecab57a",
+      "features.py": "c092fa5133e850b2949470772c45d0f22aec7d3e64c2935c532377185a245a94",
+      "fit.py": "61886eec6761c486f0c321a10401017f4c69ab91e1c2a0535007f8d7d2aca128",
+      "freeze.py": "ec2d51e4b31bfbd8d33aa6a19faefc934ef4cd1e3da1ee5917c80a5d6642ab30",
+      "hazard.py": "a8514b0ccd5cdbe74d458945d0314ae1335a2ee074ee64f897fa8ffe4236b30b",
+      "horizons.py": "4a1e4e896ee79d27e24019ca98396163030b85ccca468b087f3c32ad691a9858",
+      "market20.py": "54220da1658f5b1ce2aee1f20c9ac44034f816e6499d136a62ea74c0f7ea4cd2",
+      "metrics.py": "64508a1e9b95220668b86ea2f5ba3c00fa855e8f5b37fe6d3167c021b1629a23",
+      "predict.py": "4fb68a9e4294e2755b5541f16c2e1b41ee804a914ab013dd6f436efac42401c2",
+      "predict_hazard.py": "8099ead3f360d0b18fc39dc2f78132c57665296d58c7b00d6e9a4701be2204a8",
+      "predict_market20.py": "5b766e6100dd759059f7c702d75d7a2985e911083db13be06403389afb3db2d8",
+      "predict_pb.py": "a7f6e5f81cd312845220275cf4027bb67a8b12021c93d025f08bdede12b853c4",
+      "preprocess.py": "53a4885db676b07b7955416c8c147bc97034a0814ac8ae35b3e7cb00b979a0c4",
+      "provenance.py": "1dc53d218322c3c1df42ce768d13b84b05b7231156686a8c6fbb6b825747c37c",
+      "push_proof.py": "db079e955deda325f028d8d3876ac5f9e59592ac9abcbaf690d43d14b941507f",
+      "registry.py": "facf0d2fbe255ed37a6a43b092ed52ad843db212d5119b8711ea43968d2f13c7",
+      "report.py": "9efe52f6389b5e4cdee491309411f5df36ec93958743cd6121fd8020ad6c31e2",
+      "report_faz1b.py": "622c7666deb7b1fa93d0340d082c16a3af2e62913d1af8e2e5182b46e3dee70e",
+      "rules.py": "f1b6b1043c0eeb626e08802b27062f8ca7065518148ba113f2e39984e23a6363",
+      "specs.py": "8412685086a60a666772657cc812c1d383b850be1d1a3d7fbb033b7fdc32d3b4",
+      "survival.py": "e6283941cfccae6c74e6ab3276b5a61093bb923e29eaff9cb1554373bef477f3"
+    },
+    "borsai_source_sha256": "07dc558672894993ccf29283dcd0e4419925f88345f942103bed964a0b67a533",
+    "git_head": "1869da68a3f79f28b5593154712edbc73b1635b0"
+  },
+  "input_sha256": "92849a7bb5e102ab325e942891962837d6068d3a2563992c7ec3ea239b09b312",
+  "inputs": {
+    "document": {
+      "collected_at": "2026-09-22T14:48:03+03:00",
+      "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+      "collection_rules": [
+        "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul ve aracı kurum) ve SPK bülteni; hepsi ilk işlem gününden önce yayımlanmış.",
+        "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok.",
+        "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok.",
+        "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0) (H99 PB CSV tanımı), resmi belgede açıkça yazan toplamla çapraz denetlendi.",
+        "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı."
+      ],
+      "company": "İntetra Teknoloji ve Bilişim Hizmetleri A.Ş.",
+      "fields": {
+        "additional_sale_shares": {
+          "locator": "SPK tablosu Ek Pay Satışı sütunu '-': onaylı ek satış yok",
+          "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+          "source_document": "SPK Bülteni 2026/52",
+          "source_id": "SPK_BULTEN_2026_52",
+          "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+          "source_published_at": "2026-08-20T20:44:05+03:00",
+          "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+          "value": "0"
+        },
+        "bookbuilding_end": {
+          "cross_checks": [
+            {
+              "quote": "53,60 TL fiyattan 26-27/08/2026 tarihlerinde",
+              "source_id": "KAP_1654174"
+            },
+            {
+              "quote": "26 – 27 Ağustos 2026",
+              "source_id": "KAP_1655573_EK1"
+            }
+          ],
+          "quote": "Halka Arz Tarihi 26-27/08/2026",
+          "source_document": "KAP 1655890",
+          "source_id": "KAP_1655890",
+          "source_path": "registry/source_docs/INTET/KAP_1655890_bildirim.pdf",
+          "source_published_at": "2026-08-28T18:10:50+03:00",
+          "source_sha256": "c7752145551b5a7e1001ca47c84c22162086a50a4b04060b830e263960108509",
+          "value": "2026-08-27"
+        },
+        "bookbuilding_start": {
+          "cross_checks": [
+            {
+              "quote": "53,60 TL fiyattan 26-27/08/2026 tarihlerinde",
+              "source_id": "KAP_1654174"
+            },
+            {
+              "quote": "26 – 27 Ağustos 2026",
+              "source_id": "KAP_1655573_EK1"
+            }
+          ],
+          "quote": "Halka Arz Tarihi 26-27/08/2026",
+          "source_document": "KAP 1655890",
+          "source_id": "KAP_1655890",
+          "source_path": "registry/source_docs/INTET/KAP_1655890_bildirim.pdf",
+          "source_published_at": "2026-08-28T18:10:50+03:00",
+          "source_sha256": "c7752145551b5a7e1001ca47c84c22162086a50a4b04060b830e263960108509",
+          "value": "2026-08-26"
+        },
+        "capital_increase_shares": {
+          "cross_checks": [
+            {
+              "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+              "source_id": "SPK_BULTEN_2026_52"
+            }
+          ],
+          "quote": "Halka arzda sermaye artışı yoluyla 30.000.000 TL",
+          "source_document": "KAP 1655573 ek 1",
+          "source_id": "KAP_1655573_EK1",
+          "source_path": "registry/source_docs/INTET/KAP_1655573_ek1.pdf",
+          "source_published_at": "2026-08-28T11:39:53+03:00",
+          "source_sha256": "6df48115631e0ffe7426520b658cd00e254541cf0bac5d1282a1bc200c1a1f08",
+          "value": "30000000"
+        },
+        "existing_share_sale_shares": {
+          "cross_checks": [
+            {
+              "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+              "source_id": "SPK_BULTEN_2026_52"
+            }
+          ],
+          "quote": "ortak satışı yoluyla halka arz edilen 10.000.000 TL nominal değerli payların tamamı satılmıştır",
+          "source_document": "KAP 1655573 ek 1",
+          "source_id": "KAP_1655573_EK1",
+          "source_path": "registry/source_docs/INTET/KAP_1655573_ek1.pdf",
+          "source_published_at": "2026-08-28T11:39:53+03:00",
+          "source_sha256": "6df48115631e0ffe7426520b658cd00e254541cf0bac5d1282a1bc200c1a1f08",
+          "value": "10000000"
+        },
+        "first_trading_date": {
+          "quote": "İşlem Görmeye Başlayacağı Tarih 01/09/2026",
+          "source_document": "KAP 1655890",
+          "source_id": "KAP_1655890",
+          "source_path": "registry/source_docs/INTET/KAP_1655890_bildirim.pdf",
+          "source_published_at": "2026-08-28T18:10:50+03:00",
+          "source_sha256": "c7752145551b5a7e1001ca47c84c22162086a50a4b04060b830e263960108509",
+          "value": "2026-09-01"
+        },
+        "ipo_price_tl": {
+          "cross_checks": [
+            {
+              "quote": "1 TL nominal değerli pay için 53,60 TL’den talep toplanmıştır",
+              "source_id": "KAP_1655573_EK1"
+            },
+            {
+              "quote": "Halka Arz Fiyatı (TL) 53,6",
+              "source_id": "KAP_1654174"
+            },
+            {
+              "quote": "53,60 TL sabit fiyat",
+              "source_id": "SPK_BULTEN_2026_52"
+            }
+          ],
+          "quote": "HALKA ARZ FİYATI 53,6",
+          "source_document": "KAP 1655573",
+          "source_id": "KAP_1655573",
+          "source_path": "registry/source_docs/INTET/KAP_1655573_bildirim.pdf",
+          "source_published_at": "2026-08-28T11:39:53+03:00",
+          "source_sha256": "56a29c1453a4fa911f487759962c832b748a9bd402d400a60f211e8a567f1087",
+          "value": "53.6"
+        },
+        "ipo_price_try": {
+          "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+          "quote": "53,60 TL sabit fiyat",
+          "source_document": "SPK Bülteni 2026/52",
+          "source_id": "SPK_BULTEN_2026_52",
+          "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+          "source_published_at": "2026-08-20T20:44:05+03:00",
+          "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+          "value": "53.60"
+        },
+        "ipo_size_tl": {
+          "cross_checks": [
+            {
+              "quote": "Toplam halka arz büyüklüğü 2.144.000.000 TL olarak gerçekleşmiştir",
+              "source_id": "KAP_1655573_EK1"
+            }
+          ],
+          "quote": "HALKA ARZ BÜYÜKLÜĞÜ (TL) 2.144.000.000",
+          "source_document": "KAP 1655573",
+          "source_id": "KAP_1655573",
+          "source_path": "registry/source_docs/INTET/KAP_1655573_bildirim.pdf",
+          "source_published_at": "2026-08-28T11:39:53+03:00",
+          "source_sha256": "56a29c1453a4fa911f487759962c832b748a9bd402d400a60f211e8a567f1087",
+          "value": "2144000000"
+        },
+        "planned_additional_sale_ceiling": {
+          "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+          "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+          "source_document": "SPK Bülteni 2026/52",
+          "source_id": "SPK_BULTEN_2026_52",
+          "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+          "source_published_at": "2026-08-20T20:44:05+03:00",
+          "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+          "value": "0"
+        },
+        "planned_base_offer_shares": {
+          "cross_checks": [
+            {
+              "quote": "Halka Arz Edilecek Payların Nominal Tutarı (TL) 40.000.000",
+              "source_id": "KAP_1654174"
+            }
+          ],
+          "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz); çapraz denetim açıkça yazan resmi toplamla",
+          "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+          "source_document": "SPK Bülteni 2026/52",
+          "source_id": "SPK_BULTEN_2026_52",
+          "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+          "source_published_at": "2026-08-20T20:44:05+03:00",
+          "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+          "value": "40000000"
+        },
+        "planned_capital_increase_shares": {
+          "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+          "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+          "source_document": "SPK Bülteni 2026/52",
+          "source_id": "SPK_BULTEN_2026_52",
+          "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+          "source_published_at": "2026-08-20T20:44:05+03:00",
+          "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+          "value": "30000000"
+        },
+        "planned_existing_share_sale": {
+          "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+          "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+          "source_document": "SPK Bülteni 2026/52",
+          "source_id": "SPK_BULTEN_2026_52",
+          "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+          "source_published_at": "2026-08-20T20:44:05+03:00",
+          "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+          "value": "10000000"
+        },
+        "planned_max_offer_shares": {
+          "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+          "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+          "source_document": "SPK Bülteni 2026/52",
+          "source_id": "SPK_BULTEN_2026_52",
+          "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+          "source_published_at": "2026-08-20T20:44:05+03:00",
+          "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+          "value": "40000000"
+        },
+        "planned_post_ipo_capital": {
+          "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+          "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+          "source_document": "SPK Bülteni 2026/52",
+          "source_id": "SPK_BULTEN_2026_52",
+          "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+          "source_published_at": "2026-08-20T20:44:05+03:00",
+          "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+          "value": "160000000"
+        },
+        "planned_pre_ipo_capital": {
+          "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+          "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+          "source_document": "SPK Bülteni 2026/52",
+          "source_id": "SPK_BULTEN_2026_52",
+          "source_path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+          "source_published_at": "2026-08-20T20:44:05+03:00",
+          "source_sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0",
+          "value": "130000000"
+        },
+        "post_ipo_share_capital": {
+          "cross_checks": [
+            {
+              "quote": "Bilişim Hizmetleri AŞ 130.000.000 160.000.000 30.000.000 - 10.000.000 (1) - 53,60",
+              "source_id": "SPK_BULTEN_2026_52"
+            }
+          ],
+          "quote": "sermayesini temsil eden 160.000.000 TL nominal değerli payları",
+          "source_document": "KAP 1655890",
+          "source_id": "KAP_1655890",
+          "source_path": "registry/source_docs/INTET/KAP_1655890_bildirim.pdf",
+          "source_published_at": "2026-08-28T18:10:50+03:00",
+          "source_sha256": "c7752145551b5a7e1001ca47c84c22162086a50a4b04060b830e263960108509",
+          "value": "160000000"
+        },
+        "shares_offered": {
+          "cross_checks": [
+            {
+              "quote": "653.433 adet yatırımcıya 40.000.000 TL nominal değerli payların satışı gerçekleştirilmiştir",
+              "source_id": "KAP_1655573_EK1"
+            },
+            {
+              "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 40.000.000",
+              "source_id": "KAP_1655890"
+            }
+          ],
+          "quote": "SATIŞA SUNULAN PAY ADEDİ 40.000.000",
+          "source_document": "KAP 1655573",
+          "source_id": "KAP_1655573",
+          "source_path": "registry/source_docs/INTET/KAP_1655573_bildirim.pdf",
+          "source_published_at": "2026-08-28T11:39:53+03:00",
+          "source_sha256": "56a29c1453a4fa911f487759962c832b748a9bd402d400a60f211e8a567f1087",
+          "value": "40000000"
+        },
+        "total_demand_filter_status": {
+          "locator": "belge talebin filtre edilmemiş veriyle hesaplandığını açıkça yazar",
+          "quote": "halka arzda toplam filtre edilmemiş veriler baz alındığında",
+          "source_document": "KAP 1655573 ek 1",
+          "source_id": "KAP_1655573_EK1",
+          "source_path": "registry/source_docs/INTET/KAP_1655573_ek1.pdf",
+          "source_published_at": "2026-08-28T11:39:53+03:00",
+          "source_sha256": "6df48115631e0ffe7426520b658cd00e254541cf0bac5d1282a1bc200c1a1f08",
+          "value": "UNFILTERED"
+        },
+        "total_demand_multiple": {
+          "origin": "SOURCE_REPORTED",
+          "quote": "satışa sunulan adedin 1,7 katına tekabül eden 67.922.943 adet nominal",
+          "source_document": "KAP 1655573 ek 1",
+          "source_id": "KAP_1655573_EK1",
+          "source_path": "registry/source_docs/INTET/KAP_1655573_ek1.pdf",
+          "source_published_at": "2026-08-28T11:39:53+03:00",
+          "source_sha256": "6df48115631e0ffe7426520b658cd00e254541cf0bac5d1282a1bc200c1a1f08",
+          "value": "1.7"
+        }
+      },
+      "first_trading_date_source": "KAP_1655890",
+      "schema_version": "borsai.inputs/1",
+      "sources": {
+        "KAP_1654174": {
+          "document_id": "KAP 1654174",
+          "kind": "KAP_NOTIFICATION_PDF",
+          "path": "registry/source_docs/INTET/KAP_1654174_bildirim.pdf",
+          "published_at": "2026-08-21T18:10:16+03:00",
+          "sha256": "816c75fdd3968f2d0cebeb3dc1ba43c35420515a7719bde0a90de4299d1c3942"
+        },
+        "KAP_1655573": {
+          "document_id": "KAP 1655573",
+          "kind": "KAP_NOTIFICATION_PDF",
+          "path": "registry/source_docs/INTET/KAP_1655573_bildirim.pdf",
+          "published_at": "2026-08-28T11:39:53+03:00",
+          "sha256": "56a29c1453a4fa911f487759962c832b748a9bd402d400a60f211e8a567f1087"
+        },
+        "KAP_1655573_EK1": {
+          "document_id": "KAP 1655573 ek 1",
+          "kind": "KAP_ATTACHMENT_PDF",
+          "path": "registry/source_docs/INTET/KAP_1655573_ek1.pdf",
+          "published_at": "2026-08-28T11:39:53+03:00",
+          "sha256": "6df48115631e0ffe7426520b658cd00e254541cf0bac5d1282a1bc200c1a1f08"
+        },
+        "KAP_1655890": {
+          "document_id": "KAP 1655890",
+          "kind": "KAP_NOTIFICATION_PDF",
+          "path": "registry/source_docs/INTET/KAP_1655890_bildirim.pdf",
+          "published_at": "2026-08-28T18:10:50+03:00",
+          "sha256": "c7752145551b5a7e1001ca47c84c22162086a50a4b04060b830e263960108509"
+        },
+        "SPK_BULTEN_2026_52": {
+          "document_id": "SPK Bülteni 2026/52",
+          "kind": "SPK_BULLETIN",
+          "path": "registry/source_docs/INTET/SPK_BULTEN_2026-52.pdf",
+          "published_at": "2026-08-20T20:44:05+03:00",
+          "sha256": "a1940a9dbe874ffdea4c9c1ad697ed52359b0494f102b56b971b8790c61450a0"
+        }
+      },
+      "stage": "POST_BOOKBUILD_PRE_LISTING",
+      "ticker": "INTET"
+    },
+    "path": "registry/inputs/INTET.json",
+    "sha256": "92849a7bb5e102ab325e942891962837d6068d3a2563992c7ec3ea239b09b312"
+  },
+  "legacy_links": [
+    {
+      "has_official_f3": true,
+      "model_id": "v1_5_h99",
+      "record": "INTET_20260831_V1_5_POST_BOOKBUILD_PRE_LISTING",
+      "role": "PRIMARY",
+      "time_proof": "SELF_REPORTED"
+    },
+    {
+      "has_official_f3": false,
+      "model_id": "v1_5_h99",
+      "record": "INTET_20260825_V1_5",
+      "role": "INVALID_USE",
+      "time_proof": "SELF_REPORTED"
+    }
+  ],
+  "legacy_roles_sha256": "b6040c78af78954348018d556027b708a06f31feb5bb94eb2c5ea5755d910354",
+  "market20": {
+    "S0_date": "2026-08-31",
+    "S20_date": "2026-08-03",
+    "calendar": "B+EXT",
+    "calendar_sha256": "49b58029715881a7f1a304afb7e41fcff3d5c1c7a8896de3ed9bb555fb02d159+273ca0e7f815c7bb1a0ce562ba7060d2dc806603f2112cdde460195cbebc6432",
+    "close_S0": "14334.06",
+    "close_S20": "13410.54",
+    "f6": "0.06886523585180015122433548537195370208805909381725120688652",
+    "ref_date": "2026-09-01",
+    "ref_date_rule": "LATE_RECORD_T_SPEC_MARKET20_V0_4E",
+    "refusal": null,
+    "xu100_file": "data/raw/xu100/xu100_graphic_20260922.json",
+    "xu100_sha256": "04637c911f912e007522790520191ae99ad5cf47f8d38a4360698ea3038397fe"
+  },
+  "model_inputs": {
+    "additional_sale_shares": "0",
+    "capital_increase_shares": "30000000",
+    "existing_share_sale_shares": "10000000",
+    "f6_market20": "0.06886523585180015122433548537195370208805909381725120688652",
+    "f6_market20_refusal": null,
+    "ipo_price_tl": "53.6",
+    "ipo_price_try": "53.60",
+    "ipo_size_tl": "2144000000",
+    "planned_additional_sale_ceiling": "0",
+    "planned_base_offer_shares": "40000000",
+    "planned_capital_increase_shares": "30000000",
+    "planned_existing_share_sale": "10000000",
+    "planned_max_offer_shares": "40000000",
+    "planned_post_ipo_capital": "160000000",
+    "planned_pre_ipo_capital": "130000000",
+    "post_ipo_share_capital": "160000000",
+    "shares_offered": "40000000",
+    "total_demand_filter_status": "UNFILTERED",
+    "total_demand_multiple": "1.7"
+  },
+  "models": [
+    {
+      "algorithm": "V1_5_RIDGE_LOGIT",
+      "file": "models/v1_5_h99.json",
+      "kind": "linear",
+      "model_id": "v1_5_h99",
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 0.8883587854275888,
+          "price": 57.321025421699844,
+          "return": 0.0694221160764896,
+          "return_clipped": null,
+          "return_unclipped": 0.0694221160764896
+        },
+        "D10": {
+          "direction": "DOWN",
+          "p_up": 0.46957214414699255,
+          "price": 59.84866758681331,
+          "return": 0.1165796191569648,
+          "return_clipped": null,
+          "return_unclipped": 0.1165796191569648
+        },
+        "D3": {
+          "direction": "UP",
+          "p_up": 0.697145633791046,
+          "price": 60.89919931775492,
+          "return": 0.13617909174915893,
+          "return_clipped": null,
+          "return_unclipped": 0.13617909174915893
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.6282700864704426,
+          "price": 62.992520455479195,
+          "return": 0.17523359058729834,
+          "return_clipped": null,
+          "return_unclipped": 0.17523359058729834
+        },
+        "model_id": "v1_5_h99",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "bf809859f61e11180e46cb1e073de2bd792fed1ad434ed8194be60fc5937a854",
+      "refusal": null,
+      "spec_sha256": "a37ab09d4048b5d6b50bd767a950e465c24c716eaf05beb47159bcfb5934bf47",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "ALWAYS_CEILING",
+      "file": "models/base_always_ceiling.json",
+      "kind": "rule",
+      "model_id": "base_always_ceiling",
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 1.0,
+          "price": 58.96000000000001,
+          "return": 0.1,
+          "return_clipped": null,
+          "return_unclipped": 0.1
+        },
+        "D10": {
+          "direction": "UP",
+          "p_up": 1.0,
+          "price": 139.02459586136,
+          "return": 1.5937424601,
+          "return_clipped": null,
+          "return_unclipped": 1.5937424601
+        },
+        "D3": {
+          "direction": "UP",
+          "p_up": 1.0,
+          "price": 71.3416,
+          "return": 0.331,
+          "return_clipped": null,
+          "return_unclipped": 0.331
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 1.0,
+          "price": 86.32333600000001,
+          "return": 0.61051,
+          "return_clipped": null,
+          "return_unclipped": 0.61051
+        },
+        "model_id": "base_always_ceiling",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "0b27057479bd9244dc70cae6c01200d4fc544c5f65bf8be0c4362be5b5797780",
+      "refusal": null,
+      "spec_sha256": "ed1815f898c30b8cce6199e48d0788e2cd373fe84db59a4b782269810dc31eb6",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "TRAIN_MEDIAN",
+      "file": "models/base_train_median.json",
+      "kind": "rule",
+      "model_id": "base_train_median",
+      "output": {
+        "D1": {
+          "direction": null,
+          "p_up": null,
+          "price": 58.96000000000001,
+          "return": 0.1,
+          "return_clipped": null,
+          "return_unclipped": 0.1
+        },
+        "D10": {
+          "direction": null,
+          "p_up": null,
+          "price": 66.84685714285715,
+          "return": 0.24714285714285714,
+          "return_clipped": null,
+          "return_unclipped": 0.24714285714285714
+        },
+        "D3": {
+          "direction": null,
+          "p_up": null,
+          "price": 71.27032967032967,
+          "return": 0.32967032967032966,
+          "return_clipped": null,
+          "return_unclipped": 0.32967032967032966
+        },
+        "D5": {
+          "direction": null,
+          "p_up": null,
+          "price": 73.63815384615386,
+          "return": 0.37384615384615383,
+          "return_clipped": null,
+          "return_unclipped": 0.37384615384615383
+        },
+        "model_id": "base_train_median",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "56bb6c78671769dd1b47fa64f6520f6bb0c2eb90ff6c9fb14fa9d829a01307fb",
+      "refusal": null,
+      "spec_sha256": "842a14f529396ec5c9a2ac79463ac91816c89cab05fe6107b60731fab7ce4ea3",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "TRAIN_MEAN",
+      "file": "models/base_train_mean.json",
+      "kind": "rule",
+      "model_id": "base_train_mean",
+      "output": {
+        "D1": {
+          "direction": null,
+          "p_up": null,
+          "price": 57.74996747860715,
+          "return": 0.07742476639192437,
+          "return_clipped": null,
+          "return_unclipped": 0.07742476639192437
+        },
+        "D10": {
+          "direction": null,
+          "p_up": null,
+          "price": 78.92675834005414,
+          "return": 0.4725141481353383,
+          "return_clipped": null,
+          "return_unclipped": 0.4725141481353383
+        },
+        "D3": {
+          "direction": null,
+          "p_up": null,
+          "price": 64.83957770812907,
+          "return": 0.20969361395763195,
+          "return_clipped": null,
+          "return_unclipped": 0.20969361395763195
+        },
+        "D5": {
+          "direction": null,
+          "p_up": null,
+          "price": 70.32741891895269,
+          "return": 0.31207871117449043,
+          "return_clipped": null,
+          "return_unclipped": 0.31207871117449043
+        },
+        "model_id": "base_train_mean",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "8315d19ee941291a5bc2dab2d900ce8774f5f11a45c1819488168d175221d61a",
+      "refusal": null,
+      "spec_sha256": "f94c2e58d8a4f0607c33fa0c0a12cec8daef39ee0e012c2db1d11d2bb1706119",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "ZERO",
+      "file": "models/base_zero.json",
+      "kind": "rule",
+      "model_id": "base_zero",
+      "output": {
+        "D1": {
+          "direction": null,
+          "p_up": null,
+          "price": 53.6,
+          "return": 0.0,
+          "return_clipped": null,
+          "return_unclipped": 0.0
+        },
+        "D10": {
+          "direction": null,
+          "p_up": null,
+          "price": 53.6,
+          "return": 0.0,
+          "return_clipped": null,
+          "return_unclipped": 0.0
+        },
+        "D3": {
+          "direction": null,
+          "p_up": null,
+          "price": 53.6,
+          "return": 0.0,
+          "return_clipped": null,
+          "return_unclipped": 0.0
+        },
+        "D5": {
+          "direction": null,
+          "p_up": null,
+          "price": 53.6,
+          "return": 0.0,
+          "return_clipped": null,
+          "return_unclipped": 0.0
+        },
+        "model_id": "base_zero",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "9d2f8f82a3253291b0656c53b60d000c978af741fdcd7a619200d96fcbc9db9d",
+      "refusal": null,
+      "spec_sha256": "1ae0f539e663c6d14bba1ad329a07a332dc1ffca59a3acd4b62cc65e68c994d2",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "BASE_RATE",
+      "file": "models/base_rate.json",
+      "kind": "rule",
+      "model_id": "base_rate",
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 0.898989898989899,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.7070707070707071,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D3": {
+          "direction": "UP",
+          "p_up": 0.8080808080808081,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.7777777777777778,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "model_id": "base_rate",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "eb91ae3d429e6ba4567b9affb19b7dcf408123ed30f89a1dea9e3262f9ffd4d9",
+      "refusal": null,
+      "spec_sha256": "d094ba1119803a693ef17dce336f77e8022f88da6e944349a2cb04b8b2e2a6c5",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "LAST10_BASE_RATE",
+      "file": "models/base_last10_rate.json",
+      "kind": "rule",
+      "model_id": "base_last10_rate",
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 0.6,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D10": {
+          "direction": "DOWN",
+          "p_up": 0.5,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D3": {
+          "direction": "DOWN",
+          "p_up": 0.5,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "D5": {
+          "direction": "DOWN",
+          "p_up": 0.4,
+          "price": null,
+          "return": null,
+          "return_clipped": null,
+          "return_unclipped": null
+        },
+        "model_id": "base_last10_rate",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "8b0a098d1ad639d7b814f3ff87464330be7872968a4880628cd47abaf2e2ddda",
+      "refusal": null,
+      "spec_sha256": "ff7dfd4084a16432336eb551958c13403c72ac799d9742f8cbbf324ab98e0ecc",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "V1_5_RIDGE_LOGIT",
+      "file": "models/v1_6_h99.json",
+      "kind": "linear",
+      "model_id": "v1_6_h99",
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 0.8883587854275888,
+          "price": 57.321025421699844,
+          "return": 0.0694221160764896,
+          "return_clipped": null,
+          "return_unclipped": 0.0694221160764896
+        },
+        "D10": {
+          "direction": "DOWN",
+          "p_up": 0.46957214414699255,
+          "price": 59.824445956967594,
+          "return": 0.11612772307775354,
+          "return_clipped": null,
+          "return_unclipped": 0.11612772307775354
+        },
+        "D3": {
+          "direction": "UP",
+          "p_up": 0.697145633791046,
+          "price": 60.89919931775492,
+          "return": 0.13617909174915893,
+          "return_clipped": null,
+          "return_unclipped": 0.13617909174915893
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.6282700864704426,
+          "price": 62.992520455479195,
+          "return": 0.17523359058729834,
+          "return_clipped": null,
+          "return_unclipped": 0.17523359058729834
+        },
+        "model_id": "v1_6_h99",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "b40b7cb54cde57121788d1be974c2d1eae140b72c3e1849f23eb8145a213e598",
+      "refusal": null,
+      "spec_sha256": "7e3dd5ffe81674b7922904e416845f4212e1b667c60d0c4bdf10b01dfbe8b87a",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "V1_5_RIDGE_LOGIT",
+      "file": "models/v1_5_market20_v0.json",
+      "kind": "market20",
+      "model_id": "v1_5_market20_v0",
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 0.9027311886962921,
+          "price": 57.46938860761535,
+          "return": 0.07219008596297297,
+          "return_clipped": null,
+          "return_unclipped": 0.07219008596297297
+        },
+        "D10": {
+          "direction": "DOWN",
+          "p_up": 0.4171346238681378,
+          "price": 62.827813329770024,
+          "return": 0.17216069645093324,
+          "return_clipped": null,
+          "return_unclipped": 0.17216069645093324
+        },
+        "D3": {
+          "direction": "UP",
+          "p_up": 0.6199273080338588,
+          "price": 61.06514206948126,
+          "return": 0.13927503860972495,
+          "return_clipped": null,
+          "return_unclipped": 0.13927503860972495
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.6437934982114067,
+          "price": 63.51810791049461,
+          "return": 0.18503932668833217,
+          "return_clipped": null,
+          "return_unclipped": 0.18503932668833217
+        },
+        "f6_market20": 0.06886523585180016,
+        "model_id": "v1_5_market20_v0",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "9d6df5ece7151905f33134526604b1f947744b95fc9ef0340500f4eb86fe006a",
+      "refusal": null,
+      "spec_sha256": "4163f65a2ba637ee23521c2b9d7a96f0d5aa41220aa6c9bfd9d127a82c4e3796",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "V1_5_RIDGE_LOGIT",
+      "file": "models/pb_v0.json",
+      "kind": "pb",
+      "model_id": "pb_v0",
+      "output": {
+        "D1": {
+          "direction": "UP",
+          "p_up": 0.8923242486228644,
+          "price": 57.42546335768735,
+          "return": 0.07137058503148021,
+          "return_clipped": null,
+          "return_unclipped": 0.07137058503148021
+        },
+        "D10": {
+          "direction": "UP",
+          "p_up": 0.6738960425869931,
+          "price": 72.21387733577271,
+          "return": 0.34727383089128194,
+          "return_clipped": null,
+          "return_unclipped": 0.34727383089128194
+        },
+        "D3": {
+          "direction": "UP",
+          "p_up": 0.798765098549756,
+          "price": 63.43197673209104,
+          "return": 0.1834324017181163,
+          "return_clipped": null,
+          "return_unclipped": 0.1834324017181163
+        },
+        "D5": {
+          "direction": "UP",
+          "p_up": 0.7645031531741016,
+          "price": 67.58432209160728,
+          "return": 0.2609015315598371,
+          "return_clipped": null,
+          "return_unclipped": 0.2609015315598371
+        },
+        "features": {
+          "pb1": 21.485939080154967,
+          "pb2": 25.0,
+          "pb3": 75.0,
+          "pb4": 0.0
+        },
+        "model_id": "pb_v0",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "97c3b287f90a586464db7b2bca0777173a8e89aa51d0e4d609e8a672328fd003",
+      "refusal": null,
+      "spec_sha256": "4eb55d4e6ce8c43e8919eedd3e136850215f700de9312731bce767693d165e4f",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/ceiling_hazard_v0.json",
+      "kind": "hazard",
+      "model_id": "ceiling_hazard_v0",
+      "output": {
+        "P_L": [
+          0.24223286889831674,
+          0.14073637362078217,
+          0.11459809703555701,
+          0.20914762750222782,
+          0.12208575128773541,
+          0.07126511950192704,
+          0.041599590485004806,
+          0.02428293028363348,
+          0.014174675670722187,
+          0.008274183882395078,
+          0.011602781831698248
+        ],
+        "P_close_ceiling": [
+          0.7577671311016833,
+          0.6226079794593345,
+          0.509678786749538,
+          0.30357699848277964,
+          0.2897370588139717,
+          0.22866450872918076,
+          0.19301462711586848,
+          0.1722047205821035,
+          0.16005735317591485,
+          0.15296657001158326
+        ],
+        "S": [
+          0.7577671311016833,
+          0.6170307574809011,
+          0.5024326604453441,
+          0.29328503294311625,
+          0.17119928165538084,
+          0.0999341621534538,
+          0.05833457166844899,
+          0.03405164138481551,
+          0.019876965714093326,
+          0.011602781831698248
+        ],
+        "clipped": false,
+        "hazard": [
+          0.24223286889831672,
+          0.1857250965955358,
+          0.1857250965955358,
+          0.4162699680328194,
+          0.4162699680328194,
+          0.4162699680328194,
+          0.4162699680328194,
+          0.4162699680328194,
+          0.4162699680328194,
+          0.4162699680328194
+        ],
+        "model_id": "ceiling_hazard_v0",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "caa4dc867a9fc20d9f57cf6269e157ee1fafc9527c5144e53797bf48af0ffb67",
+      "refusal": null,
+      "spec_sha256": "18949ac747fd9759d63ce2182a12ee0f2b5ab2bb4d56682491270dea853b8623",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/ceiling_hazard_v0@INF.json",
+      "kind": "hazard",
+      "model_id": "ceiling_hazard_v0@INF",
+      "output": {
+        "P_L": [
+          0.16836734693877553,
+          0.0848046455424275,
+          0.07615680339829833,
+          0.13594686570010106,
+          0.10839006859872918,
+          0.08641910874763548,
+          0.06890172183933096,
+          0.05493515660162876,
+          0.04379965188508239,
+          0.03492134407053865,
+          0.13735728667745215
+        ],
+        "P_close_ceiling": [
+          0.8316326530612245,
+          0.7505149782830863,
+          0.6754672545459283,
+          0.5415001975696151,
+          0.5083818103006623,
+          0.4343226438506538,
+          0.37527547059997135,
+          0.3281973189541569,
+          0.2906620358851968,
+          0.26073525614102583
+        ],
+        "S": [
+          0.8316326530612245,
+          0.746828007518797,
+          0.6706712041204986,
+          0.5347243384203976,
+          0.4263342698216684,
+          0.3399151610740329,
+          0.27101343923470195,
+          0.2160782826330732,
+          0.1722786307479908,
+          0.13735728667745215
+        ],
+        "clipped": null,
+        "hazard": [
+          0.1683673469387755,
+          0.10197368421052631,
+          0.10197368421052631,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027
+        ],
+        "model_id": "ceiling_hazard_v0@INF",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "c5ac8085fd76b5bcdee328e51a4114ef85d5cae1cab23b51ea9b1232bc660c7e",
+      "refusal": null,
+      "spec_sha256": "db7a951f2578e7b346d292c51507a6102145fd00ed890fa59c454c1937107842",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/pb_ceiling_v0.json",
+      "kind": "hazard",
+      "model_id": "pb_ceiling_v0",
+      "output": {
+        "P_L": [
+          0.19843928122780696,
+          0.09645121534109824,
+          0.08484531110588978,
+          0.16389479447473454,
+          0.12058824222122,
+          0.08872474692443816,
+          0.06528066560887594,
+          0.04803130411819842,
+          0.03533980779419611,
+          0.026001834384037303,
+          0.07240279679950455
+        ],
+        "P_close_ceiling": [
+          0.801560718772193,
+          0.7118730469303816,
+          0.6289737291984802,
+          0.46883798964289086,
+          0.4282007459659045,
+          0.3518211844166993,
+          0.2956236883439,
+          0.25427547292088076,
+          0.22385285557768708,
+          0.20146892348916623
+        ],
+        "S": [
+          0.801560718772193,
+          0.7051095034310948,
+          0.620264192325205,
+          0.4563693978504705,
+          0.3357811556292505,
+          0.24705640870481232,
+          0.1817757430959364,
+          0.13374443897773797,
+          0.09840463118354185,
+          0.07240279679950455
+        ],
+        "clipped": null,
+        "hazard": [
+          0.19843928122780694,
+          0.12032926899017625,
+          0.12032926899017625,
+          0.2642338482580087,
+          0.2642338482580087,
+          0.2642338482580087,
+          0.2642338482580087,
+          0.2642338482580087,
+          0.2642338482580087,
+          0.2642338482580087
+        ],
+        "model_id": "pb_ceiling_v0",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "7fb7a41e48ea2259acbbfc754063be3dbdd23525aff34b574278b3f00dcbc5aa",
+      "refusal": null,
+      "spec_sha256": "8acfd7079be6d7dd8074bb87434d1c7c748b0921809d6b6ab0b2143ce65384e0",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "discrete_time_hazard_logit_l2",
+      "file": "models/pb_ceiling_v0@INF.json",
+      "kind": "hazard",
+      "model_id": "pb_ceiling_v0@INF",
+      "output": {
+        "P_L": [
+          0.18499999999999994,
+          0.08310855263157901,
+          0.07463366733033239,
+          0.13322792838609898,
+          0.10622226722675465,
+          0.08469072657268273,
+          0.06752368740254439,
+          0.053836453469596174,
+          0.04292365884738075,
+          0.0342229171891279,
+          0.13461014094390308
+        ],
+        "P_close_ceiling": [
+          0.8150000000000001,
+          0.7380407260985031,
+          0.6651188401289582,
+          0.534946598173733,
+          0.4988139951895971,
+          0.4259071593051949,
+          0.3677787361000634,
+          0.3214331013824585,
+          0.28448185208058435,
+          0.2550207208804415
+        ],
+        "S": [
+          0.8150000000000001,
+          0.731891447368421,
+          0.6572577800380887,
+          0.5240298516519897,
+          0.417807584425235,
+          0.3331168578525523,
+          0.2655931704500079,
+          0.21175671698041174,
+          0.16883305813303098,
+          0.13461014094390308
+        ],
+        "clipped": null,
+        "hazard": [
+          0.18499999999999997,
+          0.10197368421052631,
+          0.10197368421052631,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027
+        ],
+        "model_id": "pb_ceiling_v0@INF",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "6a5be1b952f5c7e01b0c55d366f6e3b50345ce7fe6021f9f70df60bf43b94aa0",
+      "refusal": null,
+      "spec_sha256": "b1a213bb68e29018247bb39b1adb89e4528a9a38a2eaf877cc6dc675379ac399",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "KM_EXPANDING",
+      "file": "models/base_km_expanding.json",
+      "kind": "km",
+      "model_id": "base_km_expanding",
+      "output": {
+        "P_L": [
+          0.18181818181818188,
+          0.11111111111111105,
+          0.04040404040404044,
+          0.13131313131313138,
+          0.12121212121212116,
+          0.08080808080808077,
+          0.06060606060606061,
+          0.06060606060606061,
+          0.04040404040404039,
+          0.030303030303030304,
+          0.1414141414141414
+        ],
+        "P_close_ceiling": [
+          0.8181818181818181,
+          0.7137892688351404,
+          0.6743119266055045,
+          0.5460105643591882,
+          0.4956579368344074,
+          0.42609351432880843,
+          0.3739201974496092,
+          0.32174688057040995,
+          0.2869646693176105,
+          0.2608780108780109
+        ],
+        "S": [
+          0.8181818181818181,
+          0.7070707070707071,
+          0.6666666666666666,
+          0.5353535353535352,
+          0.4141414141414141,
+          0.3333333333333333,
+          0.2727272727272727,
+          0.2121212121212121,
+          0.1717171717171717,
+          0.1414141414141414
+        ],
+        "clipped": null,
+        "hazard": [
+          0.18181818181818182,
+          0.13580246913580246,
+          0.05714285714285714,
+          0.19696969696969696,
+          0.22641509433962265,
+          0.1951219512195122,
+          0.18181818181818182,
+          0.2222222222222222,
+          0.19047619047619047,
+          0.17647058823529413
+        ],
+        "model_id": "base_km_expanding",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "8120c274de6fcf49dd880c9ce8e2639976d6a8a7daaae79e32d2ac6218f39722",
+      "refusal": null,
+      "spec_sha256": "ac6b402914cc5038dd6db29606ae54f2676e3ab299d982f6ae0591a714ba3c01",
+      "status": "PREDICTED"
+    },
+    {
+      "algorithm": "KM_LAST10",
+      "file": "models/base_km_last10.json",
+      "kind": "km",
+      "model_id": "base_km_last10",
+      "output": {
+        "P_L": [
+          0.5,
+          0.09999999999999998,
+          0.07999999999999996,
+          0.064,
+          0.051199999999999996,
+          0.040959999999999996,
+          0.03276800000000002,
+          0.0262144,
+          0.03145728000000002,
+          0.014680064000000007,
+          0.058720256000000026
+        ],
+        "P_close_ceiling": [
+          0.5,
+          0.4137614678899083,
+          0.3355963302752294,
+          0.2730642201834863,
+          0.31544434389140275,
+          0.2801835294117648,
+          0.25197487782805433,
+          0.229407956561086,
+          0.20232765104072403,
+          0.18969017513122174
+        ],
+        "S": [
+          0.5,
+          0.4,
+          0.32000000000000006,
+          0.25600000000000006,
+          0.20480000000000007,
+          0.16384000000000007,
+          0.13107200000000005,
+          0.10485760000000005,
+          0.07340032000000003,
+          0.058720256000000026
+        ],
+        "clipped": null,
+        "hazard": [
+          0.5,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.3,
+          0.2
+        ],
+        "model_id": "base_km_last10",
+        "refused": null,
+        "warnings": []
+      },
+      "params_sha256": "4bd27e6a5484d5e9161e2c65f5b104f5cad864e9f1cc7307ff2051917ea77537",
+      "refusal": null,
+      "spec_sha256": "b457c4cfc1881aaa7ad5701c9452d8d5be36efe8e06aeefa6801e03a93359389",
+      "status": "PREDICTED"
+    }
+  ],
+  "models_index": {
+    "model_ids": [
+      "v1_5_h99",
+      "base_always_ceiling",
+      "base_train_median",
+      "base_train_mean",
+      "base_zero",
+      "base_rate",
+      "base_last10_rate",
+      "v1_6_h99",
+      "v1_5_market20_v0",
+      "pb_v0",
+      "ceiling_hazard_v0",
+      "ceiling_hazard_v0@INF",
+      "pb_ceiling_v0",
+      "pb_ceiling_v0@INF",
+      "base_km_expanding",
+      "base_km_last10"
+    ],
+    "path": "models/INDEX.json",
+    "sha256": "a448a5cce6e93eed063fe670d64287a0956ed5c06b7dafd4568f6f6a90fadd89"
+  },
+  "record_type": "PREDICTION",
+  "recorded_at_basis": "LOCAL_CLOCK_SELF_REPORTED: zaman kanıtı bu kaydı içeren commit'in push kanıtıdır (registry/push_proofs, SPEC_SCORING §5)",
+  "recorded_at_istanbul": "2026-09-22T15:19:35+03:00",
+  "recorded_at_utc": "2026-09-22T12:19:35Z",
+  "schema_version": "borsai.record/1",
+  "summary": {
+    "n_models": 16,
+    "n_predicted": 16,
+    "n_refused": 0,
+    "refusals": {}
+  },
+  "ticker": "INTET"
+}

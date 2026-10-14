@@ -1,0 +1,65 @@
+{
+  "code": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "f501510d12c3a4e1513d03afa5b4ab2e59a2c5b2b8758e9b9e1a7891baef27bb",
+    "git_head": "439a80886b968a19e70f43d1c58f2f3112d9f10c"
+  },
+  "cohort": {
+    "n_member": 135,
+    "n_open": 71,
+    "path": "registry/oot/cohort_pre_h99.csv",
+    "sha256": "7d05b334d73985882debf7f31ecfc81b3eac501b756f9da44f41e3bf893760a7"
+  },
+  "documents": [
+    {
+      "added_commit": "6a16c160e0149fd868dd11b877b3ab050634499d",
+      "added_commit_push_proof_created_at": "2026-09-25T18:09:45Z",
+      "last_commit": "6a16c160e0149fd868dd11b877b3ab050634499d",
+      "last_commit_push_proof_created_at": "2026-09-25T18:09:45Z",
+      "path": "docs/specs_faz7/SPEC_HAZARD_V1.md"
+    },
+    {
+      "added_commit": "2a21a96c950579cd56f4983f72175f130c1b3bb0",
+      "added_commit_push_proof_created_at": "2026-09-27T15:30:42Z",
+      "last_commit": "2a21a96c950579cd56f4983f72175f130c1b3bb0",
+      "last_commit_push_proof_created_at": "2026-09-27T15:30:42Z",
+      "path": "docs/specs_faz7/KARARLAR.md"
+    },
+    {
+      "added_commit": "4fe4e51b1b8d369fed4f199350fcc3da6d6cfd55",
+      "added_commit_push_proof_created_at": "2026-09-27T15:30:42Z",
+      "last_commit": "4fe4e51b1b8d369fed4f199350fcc3da6d6cfd55",
+      "last_commit_push_proof_created_at": "2026-09-27T15:30:42Z",
+      "path": "docs/specs_faz7_c/SPEC_C_V0.md"
+    },
+    {
+      "added_commit": "3c93f9c731bdda0280e00c5e7f90b7f805572dca",
+      "added_commit_push_proof_created_at": "2026-09-28T19:06:01Z",
+      "last_commit": "3c93f9c731bdda0280e00c5e7f90b7f805572dca",
+      "last_commit_push_proof_created_at": "2026-09-28T19:06:01Z",
+      "path": "docs/specs_faz7_c/KARARLAR_C.md"
+    }
+  ],
+  "download_gate": {
+    "n_problems": 0,
+    "result": "OPEN"
+  },
+  "manifest_oot_before": {
+    "n_rows": 914,
+    "path": "data/raw/bist/MANIFEST_OOT.csv",
+    "sha256": "cf33d57d30fd3c91e05d523af7c68d5d70ba65517e25d270ed091d937c515301",
+    "source": "HEAD"
+  },
+  "n_sealed": 64,
+  "opened_at_basis": "LOCAL_CLOCK_SELF_REPORTED: zaman kanıtı bu dosyayı ekleyen commit'in push kanıtıdır (CLAUDE.md kural 1); işaret dosyası bütün indirme ve ayıklamadan sonra yazılır",
+  "opened_at_istanbul": "2026-09-29T15:43:26+03:00",
+  "opened_at_utc": "2026-09-29T12:43:26Z",
+  "redownload": {
+    "n_manifest_rows": 914,
+    "n_mismatch": 0,
+    "n_redownloaded": 914,
+    "n_sha_equal": 914
+  },
+  "rule": "SPEC_DEVIATIONS M-A…M-D; KARARLAR D6-4: kasa bir kez açılır; MANIFEST_OOT'un her zip'i yeniden indirildi ve pinli sha256'ya eşit; SEALED üyelerin satırları yalnız o koşuda resmi kaynaktan indirilmiş baytlardan ayıklanır",
+  "schema_version": "borsai.vault_open/1"
+}

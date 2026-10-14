@@ -1,0 +1,15 @@
+[package]
+name = "borsai_predict"
+version = "0.1.0"
+edition = "2021"
+description = "BorsAi predict: borsai/predict*.py, features.py, horizons.py, survival.py'nin saf Rust portu (SPEC_APP §1.2)"
+publish = false
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order", "float_roundtrip"] }
+num-bigint = "0.4"
+num-integer = "0.1"
+num-traits = "0.2"
+# TÜFE tablosunun önek pini (tufe.rs; SPEC_APP EK 3 §3.2)
+sha2 = "0.10"

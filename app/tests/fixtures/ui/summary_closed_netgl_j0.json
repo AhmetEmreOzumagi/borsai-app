@@ -1,0 +1,445 @@
+{
+  "featured": {
+    "model_id": "ceiling_hazard_v0",
+    "reason": "VAULT_CLOSED_V0_DEFAULT",
+    "candidates": [
+      {
+        "model_id": "ceiling_hazard_v1_clip",
+        "in_index": true,
+        "primary_verdict": null,
+        "model_value": null,
+        "v0_ci95_hi": null,
+        "near_era_label": "tolerans içinde",
+        "k1": false,
+        "k2": false,
+        "k3": true,
+        "eligible": false
+      },
+      {
+        "model_id": "ceiling_hazard_v1_real",
+        "in_index": true,
+        "primary_verdict": null,
+        "model_value": null,
+        "v0_ci95_hi": null,
+        "near_era_label": "bozuyor",
+        "k1": false,
+        "k2": false,
+        "k3": false,
+        "eligible": false
+      },
+      {
+        "model_id": "ceiling_hazard_v1_pooled",
+        "in_index": true,
+        "primary_verdict": null,
+        "model_value": null,
+        "v0_ci95_hi": null,
+        "near_era_label": "bozuyor",
+        "k1": false,
+        "k2": false,
+        "k3": false,
+        "eligible": false
+      }
+    ]
+  },
+  "featured_params_sha256": "caa4dc867a9fc20d9f57cf6269e157ee1fafc9527c5144e53797bf48af0ffb67",
+  "j": 0,
+  "j_source": "NONE",
+  "official": false,
+  "record_file": null,
+  "f3_missing": false,
+  "rows": [
+    {
+      "model_id": "ceiling_hazard_v0",
+      "role": "FEATURED",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 3.281147205061138,
+      "median_l": 3,
+      "mode_l": 3,
+      "mode_break_day": 4,
+      "p_mode": 0.202205519559443,
+      "p_ge3": 0.6084026323127945,
+      "p_ge5": 0.27119556301382086,
+      "p_10": 0.035975871092011766,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "CLOSED",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "ceiling_hazard_v1_clip",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 3.2486933701848058,
+      "median_l": 3,
+      "mode_l": 3,
+      "mode_break_day": 4,
+      "p_mode": 0.20432408465531415,
+      "p_ge3": 0.6055172778983297,
+      "p_ge5": 0.26581566567874737,
+      "p_10": 0.03394029815609994,
+      "cond": null,
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "tolerans içinde",
+        "comparator": "ceiling_hazard_v0",
+        "metric": "RPS",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": -0.001,
+        "ci95": [
+          -0.006,
+          0.004
+        ],
+        "n": 78,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "CLOSED",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "ceiling_hazard_v1_real",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 4.15971606313253,
+      "median_l": 4,
+      "mode_l": 3,
+      "mode_break_day": 4,
+      "p_mode": 0.16973129315581348,
+      "p_ge3": 0.6927264109711683,
+      "p_ge5": 0.39485125574356233,
+      "p_10": 0.09685297550131983,
+      "cond": null,
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "bozuyor",
+        "comparator": "ceiling_hazard_v0",
+        "metric": "RPS",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": -0.001,
+        "ci95": [
+          -0.006,
+          0.004
+        ],
+        "n": 78,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "CLOSED",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "ceiling_hazard_v1_pooled",
+      "role": "CANDIDATE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 4.618366150027498,
+      "median_l": 4,
+      "mode_l": 10,
+      "mode_break_day": null,
+      "p_mode": 0.15284579826394173,
+      "p_ge3": 0.7003098179969596,
+      "p_ge5": 0.45333847923033155,
+      "p_10": 0.15284579826394173,
+      "cond": null,
+      "near_era": {
+        "supported": true,
+        "schema_version": "borsai.near_era/1",
+        "label": "bozuyor",
+        "comparator": "ceiling_hazard_v0",
+        "metric": "RPS",
+        "subset": "first_trading_date >= 2024-01-01",
+        "diff": -0.001,
+        "ci95": [
+          -0.006,
+          0.004
+        ],
+        "n": 78,
+        "n_blocks": 22
+      },
+      "vault": {
+        "status": "CLOSED",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": 0,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "ceiling_hazard_v1_pooled@INF",
+      "role": "RULE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 4.599804693485842,
+      "median_l": 4,
+      "mode_l": 10,
+      "mode_break_day": null,
+      "p_mode": 0.1699412572194017,
+      "p_ge3": 0.6719301584881678,
+      "p_ge5": 0.4536756549782651,
+      "p_10": 0.1699412572194017,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "CLOSED",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "ceiling_hazard_v0@INF",
+      "role": "RULE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 4.346833273309837,
+      "median_l": 4,
+      "mode_l": 0,
+      "mode_break_day": null,
+      "p_mode": 0.16836734693877553,
+      "p_ge3": 0.6706712041204986,
+      "p_ge5": 0.4263342698216684,
+      "p_10": 0.13735728667745215,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "CLOSED",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "base_km_expanding",
+      "role": "RULE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 4.2727272727272725,
+      "median_l": 4,
+      "mode_l": 0,
+      "mode_break_day": null,
+      "p_mode": 0.18181818181818188,
+      "p_ge3": 0.6666666666666666,
+      "p_ge5": 0.4141414141414141,
+      "p_10": 0.1414141414141414,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "CLOSED",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "base_km_last10",
+      "role": "RULE",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 2.2126901760000006,
+      "median_l": 0,
+      "mode_l": 0,
+      "mode_break_day": null,
+      "p_mode": 0.5,
+      "p_ge3": 0.32000000000000006,
+      "p_ge5": 0.20480000000000007,
+      "p_10": 0.058720256000000026,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "CLOSED",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "pb_ceiling_v0",
+      "role": "PB",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 3.753382486156474,
+      "median_l": 3,
+      "mode_l": 0,
+      "mode_break_day": null,
+      "p_mode": 0.1920822102159413,
+      "p_ge3": 0.631192226293537,
+      "p_ge5": 0.34897133559007665,
+      "p_10": 0.0793158606016619,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "CLOSED",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "pb_ceiling_v0@INF",
+      "role": "PB",
+      "in_record": true,
+      "status": "PREDICTED",
+      "refused": null,
+      "expected_l": 4.259896607843641,
+      "median_l": 4,
+      "mode_l": 0,
+      "mode_break_day": null,
+      "p_mode": 0.18499999999999994,
+      "p_ge3": 0.6572577800380887,
+      "p_ge5": 0.417807584425235,
+      "p_10": 0.13461014094390308,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "CLOSED",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      }
+    },
+    {
+      "model_id": "ALWAYS_CEILING",
+      "role": "CONSTANT",
+      "in_record": true,
+      "status": null,
+      "refused": null,
+      "expected_l": 10.0,
+      "median_l": 10,
+      "mode_l": 10,
+      "mode_break_day": null,
+      "p_mode": 1.0,
+      "p_ge3": 1.0,
+      "p_ge5": 1.0,
+      "p_10": 1.0,
+      "cond": null,
+      "near_era": null,
+      "vault": {
+        "status": "NONE",
+        "verdict": null,
+        "diff": null,
+        "ci95": null,
+        "n": null,
+        "rule_id": null
+      },
+      "live": {
+        "n_scored": null,
+        "verdict": null
+      }
+    }
+  ],
+  "integrity": null,
+  "scores": {
+    "source": "REPO",
+    "sha12": "FIXTURE",
+    "generated_at_utc": null
+  },
+  "oot": {
+    "source": "REPO",
+    "generated_at_utc": "2030-01-01T00:00:00Z",
+    "sha12": "b35e0522ea33",
+    "vault_open": false,
+    "rows_present": true,
+    "unsupported_version": null,
+    "integrity": null
+  },
+  "tufe": {
+    "source": "EMBEDDED",
+    "path": null,
+    "file_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+    "through_month": "2026-08",
+    "t": "2026-09-17",
+    "month": "2026-07",
+    "index": "132.31",
+    "release_date": "2026-08-03",
+    "bulletin_id": "58297",
+    "refusal": null,
+    "reason": null,
+    "detail": null,
+    "append_command": null,
+    "pin_ok": true
+  },
+  "fall": null
+}

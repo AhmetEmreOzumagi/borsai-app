@@ -1,0 +1,313 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "KARYE",
+  "company": "Kartal Yenilenebilir Enerji Üretim A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_950856",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "8",
+      "source_id": "KAP_950856",
+      "source_document": "KAP 950856",
+      "source_published_at": "2021-07-13T18:10:19+03:00",
+      "source_sha256": "78e299491b866c6ebdfd82307ab530a382f2b8c995162fc53018c32e0347b2fd",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950856_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 8",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_32",
+          "quote": "Kartal Yenilenebilir 45.000.000 55.000.000 10.000.000 - 5.000.000 (1) - 8,00 Enerji Üretim A.Ş.",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "15000000",
+      "source_id": "KAP_950856",
+      "source_document": "KAP 950856",
+      "source_published_at": "2021-07-13T18:10:19+03:00",
+      "source_sha256": "78e299491b866c6ebdfd82307ab530a382f2b8c995162fc53018c32e0347b2fd",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950856_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 15.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "55000000",
+      "source_id": "KAP_950856",
+      "source_document": "KAP 950856",
+      "source_published_at": "2021-07-13T18:10:19+03:00",
+      "source_sha256": "78e299491b866c6ebdfd82307ab530a382f2b8c995162fc53018c32e0347b2fd",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950856_bildirim.pdf",
+      "quote": "sermayesini temsil eden 55.000.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "10000000",
+      "source_id": "KAP_950652_EK1",
+      "source_document": "KAP 950652 ek 1",
+      "source_published_at": "2021-07-13T14:17:33+03:00",
+      "source_sha256": "d3fa7d2ff3cd7a7947a6202099ed5484d84d0d3e29ed86082f30c63a5c69f515",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950652_ek1.pdf",
+      "quote": "Şirket’in çıkarılmış sermayesinin 45.000.000 TL’den 55.000.000 TL’ye artırılması nedeniyle ihraç edilen 10.000.000 TL nominal değerli paylar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "existing_share_sale_shares": {
+      "value": "5000000",
+      "source_id": "KAP_950652_EK1",
+      "source_document": "KAP 950652 ek 1",
+      "source_published_at": "2021-07-13T14:17:33+03:00",
+      "source_sha256": "d3fa7d2ff3cd7a7947a6202099ed5484d84d0d3e29ed86082f30c63a5c69f515",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950652_ek1.pdf",
+      "quote": "Şirket ortaklarından Orhun KARTAL’a ait 5.000.000 TL nominal değerli paylar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_multiple": {
+      "value": "1.74",
+      "source_id": "KAP_950652_EK1",
+      "source_document": "KAP 950652 ek 1",
+      "source_published_at": "2021-07-13T14:17:33+03:00",
+      "source_sha256": "d3fa7d2ff3cd7a7947a6202099ed5484d84d0d3e29ed86082f30c63a5c69f515",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950652_ek1.pdf",
+      "quote": "halka arz büyüklüğünün toplamda 1,74 katına denk gelen 208.833.168 TL karşılığı filtre edilmemiş 26.104.146 TL nominal değerli talep gelmiştir",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (filtre edilmemiş talep / halka arz büyüklüğü)",
+      "note": "aynı belgedeki nominaller: 26.104.146 / 15.000.000 = 1,7403; borsada satış yöntemi ama belge katı yazıyor",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_950652_EK1",
+      "source_document": "KAP 950652 ek 1",
+      "source_published_at": "2021-07-13T14:17:33+03:00",
+      "source_sha256": "d3fa7d2ff3cd7a7947a6202099ed5484d84d0d3e29ed86082f30c63a5c69f515",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950652_ek1.pdf",
+      "quote": "halka arz büyüklüğünün toplamda 1,74 katına denk gelen 208.833.168 TL karşılığı filtre edilmemiş 26.104.146 TL nominal değerli talep gelmiştir",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_950652_EK1",
+      "source_document": "KAP 950652 ek 1",
+      "source_published_at": "2021-07-13T14:17:33+03:00",
+      "source_sha256": "d3fa7d2ff3cd7a7947a6202099ed5484d84d0d3e29ed86082f30c63a5c69f515",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950652_ek1.pdf",
+      "quote": "olmak üzere, toplam 15.000.000 TL nominal değerli B Grubu Şirket payları halka arz edilmiştir",
+      "zero_from_statement": true,
+      "note": "halka arz edilen toplam 15.000.000 = SPK planlanan taban (bedelli 10.000.000 + mevcut pay satışı 5.000.000); SPK satırında ek pay satışı '-'",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": "120000000",
+      "source_id": "KAP_950652_EK1",
+      "source_document": "KAP 950652 ek 1",
+      "source_published_at": "2021-07-13T14:17:33+03:00",
+      "source_sha256": "d3fa7d2ff3cd7a7947a6202099ed5484d84d0d3e29ed86082f30c63a5c69f515",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950652_ek1.pdf",
+      "quote": "belirlenen halka arz fiyatı ile halka arz büyüklüğü 120.000.000 TL olarak gerçekleşmiştir",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "8.00",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/KARYE/SPK_BULTEN_2021-32.pdf",
+      "quote": "Kartal Yenilenebilir 45.000.000 55.000.000 10.000.000 - 5.000.000 (1) - 8,00 Enerji Üretim A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-09",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "45000000",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/KARYE/SPK_BULTEN_2021-32.pdf",
+      "quote": "Kartal Yenilenebilir 45.000.000 55.000.000 10.000.000 - 5.000.000 (1) - 8,00 Enerji Üretim A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-09",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "55000000",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/KARYE/SPK_BULTEN_2021-32.pdf",
+      "quote": "Kartal Yenilenebilir 45.000.000 55.000.000 10.000.000 - 5.000.000 (1) - 8,00 Enerji Üretim A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-09",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "10000000",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/KARYE/SPK_BULTEN_2021-32.pdf",
+      "quote": "Kartal Yenilenebilir 45.000.000 55.000.000 10.000.000 - 5.000.000 (1) - 8,00 Enerji Üretim A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-09",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "5000000",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/KARYE/SPK_BULTEN_2021-32.pdf",
+      "quote": "Kartal Yenilenebilir 45.000.000 55.000.000 10.000.000 - 5.000.000 (1) - 8,00 Enerji Üretim A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-09",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "15000000",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/KARYE/SPK_BULTEN_2021-32.pdf",
+      "quote": "Kartal Yenilenebilir 45.000.000 55.000.000 10.000.000 - 5.000.000 (1) - 8,00 Enerji Üretim A.Ş.",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-09",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/KARYE/SPK_BULTEN_2021-32.pdf",
+      "quote": "Kartal Yenilenebilir 45.000.000 55.000.000 10.000.000 - 5.000.000 (1) - 8,00 Enerji Üretim A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-09",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "15000000",
+      "source_id": "SPK_BULTEN_2021_32",
+      "source_document": "SPK Bülteni 2021/32",
+      "source_published_at": "2021-07-01T23:59:59+03:00",
+      "source_sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "source_path": "registry/oot/source_docs/KARYE/SPK_BULTEN_2021-32.pdf",
+      "quote": "Kartal Yenilenebilir 45.000.000 55.000.000 10.000.000 - 5.000.000 (1) - 8,00 Enerji Üretim A.Ş.",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-07-01",
+        "bookbuilding_start": "2021-07-09",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2021-07-16",
+      "source_id": "KAP_950856",
+      "source_document": "KAP 950856",
+      "source_published_at": "2021-07-13T18:10:19+03:00",
+      "source_sha256": "78e299491b866c6ebdfd82307ab530a382f2b8c995162fc53018c32e0347b2fd",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950856_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 16/07/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-07-09",
+      "source_id": "KAP_950856",
+      "source_document": "KAP 950856",
+      "source_published_at": "2021-07-13T18:10:19+03:00",
+      "source_sha256": "78e299491b866c6ebdfd82307ab530a382f2b8c995162fc53018c32e0347b2fd",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950856_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 09-12/07/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-07-12",
+      "source_id": "KAP_950856",
+      "source_document": "KAP 950856",
+      "source_published_at": "2021-07-13T18:10:19+03:00",
+      "source_sha256": "78e299491b866c6ebdfd82307ab530a382f2b8c995162fc53018c32e0347b2fd",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950856_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 09-12/07/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_950856": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 950856",
+      "published_at": "2021-07-13T18:10:19+03:00",
+      "sha256": "78e299491b866c6ebdfd82307ab530a382f2b8c995162fc53018c32e0347b2fd",
+      "path": "registry/oot/source_docs/KARYE/KAP_950856_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_32": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/32",
+      "published_at": "2021-07-01T23:59:59+03:00",
+      "sha256": "a2727ed6827436899f5217d193c7aa8727ee3219686128a48a3e7be9bfd1b587",
+      "path": "registry/oot/source_docs/KARYE/SPK_BULTEN_2021-32.pdf"
+    },
+    "KAP_950652_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 950652 ek 1",
+      "published_at": "2021-07-13T14:17:33+03:00",
+      "sha256": "d3fa7d2ff3cd7a7947a6202099ed5484d84d0d3e29ed86082f30c63a5c69f515",
+      "path": "registry/oot/source_docs/KARYE/KAP_950652_ek1.pdf"
+    }
+  }
+}

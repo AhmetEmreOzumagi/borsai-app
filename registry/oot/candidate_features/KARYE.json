@@ -1,0 +1,252 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "KARYE",
+  "company": "Kartal Yenilenebilir Enerji Üretim A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "16209",
+      "source_id": "KAP_950652_EK1",
+      "source_document": "KAP 950652 ek 1",
+      "source_published_at": "2021-07-13T14:17:33+03:00",
+      "source_sha256": "d3fa7d2ff3cd7a7947a6202099ed5484d84d0d3e29ed86082f30c63a5c69f515",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950652_ek1.pdf",
+      "quote": "Toplam 16.209 15.000.000,00 100,00",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "dağıtım tablosu kişi sayısı; metin: 'Halka arza toplamda 16.209 yatırımcı katılmıştır.'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "16.209",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "16171",
+        "domestic_institutional": "5",
+        "foreign_retail": "33",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_950652_EK1",
+      "source_document": "KAP 950652 ek 1",
+      "source_published_at": "2021-07-13T14:17:33+03:00",
+      "source_sha256": "d3fa7d2ff3cd7a7947a6202099ed5484d84d0d3e29ed86082f30c63a5c69f515",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950652_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel 16.171 14.695.718,00 97,97",
+        "Yurtiçi Kurumsal 5 140.700,00 0,94",
+        "Yurtdışı Bireysel 33 163.582,00 1,09",
+        "Yurtdışı Kurumsal - - -"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "yurt dışı kurumsal satırı '-' (dağıtım yok) → 0",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "16.171",
+        "Yurtiçi Kurumsal": "5",
+        "Yurtdışı Bireysel": "33",
+        "Yurtdışı Kurumsal": "0"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '16.171', 'Yurtiçi Kurumsal': '5', 'Yurtdışı Bireysel': '33', 'Yurtdışı Kurumsal': '0'}",
+        "verdict": "FOUND_SAME",
+        "note": "yurt dışı kurumsal belgede '-'"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır', grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "14695718",
+        "domestic_institutional": "140700",
+        "foreign_retail": "163582",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_950652_EK1",
+      "source_document": "KAP 950652 ek 1",
+      "source_published_at": "2021-07-13T14:17:33+03:00",
+      "source_sha256": "d3fa7d2ff3cd7a7947a6202099ed5484d84d0d3e29ed86082f30c63a5c69f515",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950652_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel 16.171 14.695.718,00 97,97",
+        "Yurtiçi Kurumsal 5 140.700,00 0,94",
+        "Yurtdışı Bireysel 33 163.582,00 1,09",
+        "Yurtdışı Kurumsal - - -"
+      ],
+      "note": "yurt dışı kurumsal satırı '-' → 0",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "14.695.718",
+        "Yurtiçi Kurumsal": "140.700",
+        "Yurtdışı Bireysel": "163.582",
+        "Yurtdışı Kurumsal": "0"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '14.695.718', 'Yurtiçi Kurumsal': '140.700', 'Yurtdışı Bireysel': '163.582', 'Yurtdışı Kurumsal': '0'}",
+        "verdict": "FOUND_SAME",
+        "note": "yurt dışı kurumsal belgede '-'"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "97.97",
+      "source_id": "KAP_950652_EK1",
+      "source_document": "KAP 950652 ek 1",
+      "source_published_at": "2021-07-13T14:17:33+03:00",
+      "source_sha256": "d3fa7d2ff3cd7a7947a6202099ed5484d84d0d3e29ed86082f30c63a5c69f515",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950652_ek1.pdf",
+      "quote": "Yurtiçi Bireysel 16.171 14.695.718,00 97,97",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "97,97",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.94",
+      "source_id": "KAP_950652_EK1",
+      "source_document": "KAP 950652 ek 1",
+      "source_published_at": "2021-07-13T14:17:33+03:00",
+      "source_sha256": "d3fa7d2ff3cd7a7947a6202099ed5484d84d0d3e29ed86082f30c63a5c69f515",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950652_ek1.pdf",
+      "quote": "Yurtiçi Kurumsal 5 140.700,00 0,94",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,94",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0",
+      "source_id": "KAP_950652_EK1",
+      "source_document": "KAP 950652 ek 1",
+      "source_published_at": "2021-07-13T14:17:33+03:00",
+      "source_sha256": "d3fa7d2ff3cd7a7947a6202099ed5484d84d0d3e29ed86082f30c63a5c69f515",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950652_ek1.pdf",
+      "quote": "Yurtdışı Kurumsal - - -",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "derived": true,
+      "formula": "tabloda Yurtdışı Kurumsal satırı '-' (dağıtım yok) → 0",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,00",
+        "verdict": "FOUND_SAME",
+        "note": "belgede '-'"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "A1 Capital Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_945993_EK1",
+      "source_document": "KAP 945993 ek 1",
+      "source_published_at": "2021-07-02T21:51:55+03:00",
+      "source_sha256": "557a30a367a44ede741e051ac9e4dd34e08f31d15f200b51a625ea90262a2c16",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_945993_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek A1 Capital Yatırım Menkul Değerler A.Ş.'nin",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "A1 Capital Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "TSSD'de aracı kurum olarak yazılı"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR) penceresinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_950856",
+      "source_document": "KAP 950856",
+      "source_published_at": "2021-07-13T18:10:19+03:00",
+      "source_sha256": "78e299491b866c6ebdfd82307ab530a382f2b8c995162fc53018c32e0347b2fd",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950856_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_950856",
+      "source_document": "KAP 950856",
+      "source_published_at": "2021-07-13T18:10:19+03:00",
+      "source_sha256": "78e299491b866c6ebdfd82307ab530a382f2b8c995162fc53018c32e0347b2fd",
+      "source_path": "registry/oot/source_docs/KARYE/KAP_950856_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_950856": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 950856",
+      "published_at": "2021-07-13T18:10:19+03:00",
+      "sha256": "78e299491b866c6ebdfd82307ab530a382f2b8c995162fc53018c32e0347b2fd",
+      "path": "registry/oot/source_docs/KARYE/KAP_950856_bildirim.pdf"
+    },
+    "KAP_950652_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 950652 ek 1",
+      "published_at": "2021-07-13T14:17:33+03:00",
+      "sha256": "d3fa7d2ff3cd7a7947a6202099ed5484d84d0d3e29ed86082f30c63a5c69f515",
+      "path": "registry/oot/source_docs/KARYE/KAP_950652_ek1.pdf"
+    },
+    "KAP_945993_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 945993 ek 1",
+      "published_at": "2021-07-02T21:51:55+03:00",
+      "sha256": "557a30a367a44ede741e051ac9e4dd34e08f31d15f200b51a625ea90262a2c16",
+      "path": "registry/oot/source_docs/KARYE/KAP_945993_ek1.pdf"
+    }
+  }
+}

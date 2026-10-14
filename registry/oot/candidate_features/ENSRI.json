@@ -1,0 +1,206 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "ENSRI",
+  "company": "Ensari Deri Gıda Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "258045",
+      "source_id": "KAP_1011341_EK1",
+      "source_document": "KAP 1011341 ek 1",
+      "source_published_at": "2022-03-18T12:37:01+03:00",
+      "source_sha256": "bf6a6974ab03490391dc6005e3382031e718990185d1d4f02b1e11cfbbe09e92",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011341_ek1.pdf",
+      "quote": "Halka arza toplamda 258.045 yatırımcı katılmış olup tamamına dağıtım yapılmıştır.",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "katılan = dağıtım yapılan",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "257614",
+        "domestic_institutional": "52",
+        "foreign_retail": "379",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_1011341_EK1",
+      "source_document": "KAP 1011341 ek 1",
+      "source_published_at": "2022-03-18T12:37:01+03:00",
+      "source_sha256": "bf6a6974ab03490391dc6005e3382031e718990185d1d4f02b1e11cfbbe09e92",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011341_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar 257.614 8.485.864 99,834%",
+        "Yurtiçi Kurumsal Yatırımcılar 52 1.662 0,020%",
+        "Yurtdışı Bireysel Yatırımcılar 379 12.474 0,147%",
+        "Yurtdışı Kurumsal Yatırımcılar 0 0 0,000%"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "belge grup bazında talep/kat vermiyor; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belge grup bazında talep/kat vermiyor; grup tahsisatı yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belge grup bazında talep/kat vermiyor; grup tahsisatı yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "8485864",
+        "domestic_institutional": "1662",
+        "foreign_retail": "12474",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_1011341_EK1",
+      "source_document": "KAP 1011341 ek 1",
+      "source_published_at": "2022-03-18T12:37:01+03:00",
+      "source_sha256": "bf6a6974ab03490391dc6005e3382031e718990185d1d4f02b1e11cfbbe09e92",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011341_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar 257.614 8.485.864 99,834%",
+        "Yurtiçi Kurumsal Yatırımcılar 52 1.662 0,020%",
+        "Yurtdışı Bireysel Yatırımcılar 379 12.474 0,147%",
+        "Yurtdışı Kurumsal Yatırımcılar 0 0 0,000%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.834",
+      "source_id": "KAP_1011341_EK1",
+      "source_document": "KAP 1011341 ek 1",
+      "source_published_at": "2022-03-18T12:37:01+03:00",
+      "source_sha256": "bf6a6974ab03490391dc6005e3382031e718990185d1d4f02b1e11cfbbe09e92",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011341_ek1.pdf",
+      "quote": "Yurtiçi Bireysel Yatırımcılar 257.614 8.485.864 99,834%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "ayrıca yurtdışı bireysel %0,147",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.020",
+      "source_id": "KAP_1011341_EK1",
+      "source_document": "KAP 1011341 ek 1",
+      "source_published_at": "2022-03-18T12:37:01+03:00",
+      "source_sha256": "bf6a6974ab03490391dc6005e3382031e718990185d1d4f02b1e11cfbbe09e92",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011341_ek1.pdf",
+      "quote": "Yurtiçi Kurumsal Yatırımcılar 52 1.662 0,020%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.000",
+      "source_id": "KAP_1011341_EK1",
+      "source_document": "KAP 1011341 ek 1",
+      "source_published_at": "2022-03-18T12:37:01+03:00",
+      "source_sha256": "bf6a6974ab03490391dc6005e3382031e718990185d1d4f02b1e11cfbbe09e92",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011341_ek1.pdf",
+      "quote": "Yurtdışı Kurumsal Yatırımcılar 0 0 0,000%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım için yalnız 'zaman önceliği kuralı gereği maksimum 34 adet pay' ifadesi var, dağıtım yöntemi adlandırılmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Metro Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1009713_EK1",
+      "source_document": "KAP 1009713 ek 1",
+      "source_published_at": "2022-03-11T18:48:09+03:00",
+      "source_sha256": "987dd0d6097741d7bf3e21b2b16b857caef30bc38cceaacb1d97c147b13d39be",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1009713_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Metro Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "TSSD OCR metni; sonuç bildirimini yayımlayan kurum da METRO YATIRIM MENKUL DEĞERLER A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde fiyat istikrarı yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_1011427",
+      "source_document": "KAP 1011427",
+      "source_published_at": "2022-03-18T18:04:56+03:00",
+      "source_sha256": "2c7cd38af44e9308af293b463284b2fe5878a3570fb31f67e6bd9090319bb645",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011427_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_1011427",
+      "source_document": "KAP 1011427",
+      "source_published_at": "2022-03-18T18:04:56+03:00",
+      "source_sha256": "2c7cd38af44e9308af293b463284b2fe5878a3570fb31f67e6bd9090319bb645",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011427_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1011427": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1011427",
+      "published_at": "2022-03-18T18:04:56+03:00",
+      "sha256": "2c7cd38af44e9308af293b463284b2fe5878a3570fb31f67e6bd9090319bb645",
+      "path": "registry/oot/source_docs/ENSRI/KAP_1011427_bildirim.pdf"
+    },
+    "KAP_1011341_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1011341 ek 1",
+      "published_at": "2022-03-18T12:37:01+03:00",
+      "sha256": "bf6a6974ab03490391dc6005e3382031e718990185d1d4f02b1e11cfbbe09e92",
+      "path": "registry/oot/source_docs/ENSRI/KAP_1011341_ek1.pdf"
+    },
+    "KAP_1009713_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1009713 ek 1",
+      "published_at": "2022-03-11T18:48:09+03:00",
+      "sha256": "987dd0d6097741d7bf3e21b2b16b857caef30bc38cceaacb1d97c147b13d39be",
+      "path": "registry/oot/source_docs/ENSRI/KAP_1009713_ek1.pdf"
+    }
+  }
+}

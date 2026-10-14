@@ -1,0 +1,275 @@
+BORSAI_FAZ6_S3_S5_EXTRACT adım 1 — T1 önce kırmızı; T1, T2, T3 yeni testlerinin mutasyon gösterimi
+Tarih: 2026-09-25 (İstanbul). Klon: git clone --local + commit'lenmemiş fark (borsai/, tests/); mutasyon uygulanır, yeni 5 test koşar,
+yedekten geri alınır. Bülten dosya adı kalıbı maskeli. Ağ kullanılmadı (sentetik zip'ler, sentetik HEAD).
+
+Yeni testler (tests/test_faz6_oot.py):
+  T1       test_extract_d1_rows_is_rerun_safe_unchanged_or_stop
+  T3       test_s3_gate_requires_committed_unchanged_pushed_d1_rows_and_post_d1
+  T3 (s5)  test_cli_s5_calls_s3_gate_before_any_extraction
+  T2/T4    test_cli_commands_print_numbers_only_pace_downloads_and_rerun
+  T6       test_cli_stops_on_closed_gate_head_codes_published_gap_day_and_unpublished_session
+
+---------------------------------------------------------------- T1 önce kırmızı (gerçek çalışma ağacı, kod değişmeden)
+Sıra: yeni testler tests/'e yazıldı; borsai/outcomes_oot.py HEAD (f57ce50) halindeyken T1 testi koştu; sonra kod yazıldı.
+HEAD: f57ce50f4e36f576682eb238da0ecc5b080b6a73; borsai/outcomes_oot.py = HEAD (T1 kodu yok), tests/test_faz6_oot.py = yeni testler
+borsai/outcomes_oot.py sha256: 97853298fbf2c2c14dbf3fd5b9324377e0165e6d77a06ed742a1aa549b361dd2
+>       again = oo.extract_d1_rows(**kw)                                         # F6 öncesi kod: FileExistsError
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+E       FileExistsError: [Errno 17] File exists: '<tmp>/test_extract_d1_rows_is_rerun_0/repo/registry/oot/d1_rows/SYNA.json'
+1 failed in 3.66s
+
+---------------------------------------------------------------- mutasyon özeti (pytest çıktısı; son kod üzerinde)
+klon HEAD: f57ce50f4e36f576682eb238da0ecc5b080b6a73 + commit'lenmemiş fark:  M borsai/outcomes_oot.py  M tests/test_faz6_oot.py 
+borsai kaynağı: /private/tmp/claude-501/-Users-ahmet-Desktop-BorsAi/98cc0488-2e79-4185-a8bb-2a061f4500b3/scratchpad/mut/w/clone/borsai
+
+== t1_no_byte_check  rc=1  :: (t1) d1_row_action: var olan dosya bayt denetimsiz UNCHANGED
+  FAILED test_extract_d1_rows_is_rerun_safe_unchanged_or_stop
+  1 failed, 4 passed in 16.44s
+== t1b_old_behaviour  rc=1  :: (t1b) d1_row_action hep CREATED (F6 öncesi 'xb' davranışı)
+  FAILED test_extract_d1_rows_is_rerun_safe_unchanged_or_stop
+  FAILED test_cli_commands_print_numbers_only_pace_downloads_and_rerun
+  2 failed, 3 passed in 13.05s
+== p_no_proof_check  rc=1  :: (p) S5 kapısı push kanıtını aramaz
+  FAILED test_s3_gate_requires_committed_unchanged_pushed_d1_rows_and_post_d1
+  1 failed, 4 passed in 12.05s
+== p2_post_d1_record_unchecked  rc=1  :: (p2) S5 kapısı POST_D1 kaydının commit/kanıt denetimini yapmaz
+  FAILED test_s3_gate_requires_committed_unchanged_pushed_d1_rows_and_post_d1
+  1 failed, 4 passed in 10.20s
+== q_no_post_d1_check  rc=1  :: (q) S5 kapısı POST_D1 kaydını hiç denetlemez
+  FAILED test_s3_gate_requires_committed_unchanged_pushed_d1_rows_and_post_d1
+  1 failed, 4 passed in 9.21s
+== r_no_d1_sha_link  rc=1  :: (r) S5 kapısı kayıttaki d1_rows sha'sını denetlemez
+  FAILED test_s3_gate_requires_committed_unchanged_pushed_d1_rows_and_post_d1
+  1 failed, 4 passed in 13.95s
+== s_s5_skips_gate  rc=1  :: (s) s5 komutu S5 kapısını çağırmaz
+  FAILED test_cli_s5_calls_s3_gate_before_any_extraction
+  FAILED test_cli_commands_print_numbers_only_pace_downloads_and_rerun
+  2 failed, 3 passed in 12.16s
+== u_no_dirty_check  rc=1  :: (u) S5 kapısı commit'ten sonra değişen dosyayı görmez
+  FAILED test_s3_gate_requires_committed_unchanged_pushed_d1_rows_and_post_d1
+  1 failed, 4 passed in 12.61s
+== v_no_pace  rc=1  :: (v) --pace hiç beklemez
+  FAILED test_cli_commands_print_numbers_only_pace_downloads_and_rerun
+  1 failed, 4 passed in 11.80s
+== w_cache_bypass  rc=1  :: (w) fetch_quarantine karantinada dosya varken de indirir
+  FAILED test_extract_d1_rows_is_rerun_safe_unchanged_or_stop
+  FAILED test_cli_commands_print_numbers_only_pace_downloads_and_rerun
+  2 failed, 3 passed in 11.83s
+== zz_no_mutation  rc=0  :: mutasyonsuz (geri alındıktan sonra)
+  5 passed in 14.73s
+son durum: 2 değişiklik (= yalnız görevin commit'lenmemiş farkı)
+
+---------------------------------------------------------------- kırmızının yeri (ilk hata satırı)
+== p2_post_d1_record_unchecked
+  >       assert sorted(oo.s3_gate_problems(root=root)) == sorted(
+  E       assert ['S3 çıktı di...h kanıtı yok'] == ['S3 çıktı di...mit'li değil"]
+  E         
+  E         Right contains 2 more items, first extra item: "registry/oot/post_d1/SYNA/20260925T090000Z_967f75773afe.json: commit'li değil"
+== p_no_proof_check
+  >       assert sorted(oo.s3_gate_problems(root=root)) == sorted(
+  E       assert ['S3 çıktı di...mit'li değil"] == ['S3 çıktı di...mit'li değil"]
+  E         
+  E         At index 1 diff: "registry/oot/post_d1/SYNA/20260925T090000Z_db9344f60395.json: commit'li değil" != 'registry/oot/d1_rows/SYNA.json: push kanıtı yok'
+== q_no_post_d1_check
+  >       assert {f"{d1[t]}: commit'li değil" for t in d1} | {f"{t}: etkin eski kohort POST_D1 kaydı yok" for t in d1} <= set(problems)
+  E       assert {'SYNA: etkin...mit'li değil"} <= {'S3 çıktı di...OOT'a karşı)"}
+  E         
+  E         Extra items in the left set:
+== r_no_d1_sha_link
+  >       assert oo.s3_gate_problems(root=root) == [f"{rec['SYNA']}: d1_rows sha256'sı D_1 satırı dosyasının kanonik sha'sı değil"]
+  E       assert [] == ["registry/oo...sha'sı değil"]
+  E         
+  E         Right contains one more item: "registry/oot/post_d1/SYNA/20260925T090000Z_babca5f98da6.json: d1_rows sha256'sı D_1 satırı dosyasının kanonik sha'sı değil"
+== s_s5_skips_gate
+  >       assert oo.main(["s5", "--quarantine", str(tmp_path / "q"), "--pace", "0"]) == 2
+  E       AssertionError: assert 0 == 2
+  E        +  where 0 = <function main at 0x1105a0040>(['s5', '--quarantine', '<tmp>/test_cli_s5_calls_s3_gate_befo0/q', '--pace', '0'])
+  E        +    where <function main at 0x1105a0040> = oo.main
+== t1_no_byte_check
+  >       with pytest.raises(oo.OotOutcomeError, match="bayt-eşit değil"):
+  E       Failed: DID NOT RAISE OotOutcomeError
+== t1b_old_behaviour
+  >       again = oo.extract_d1_rows(**kw)                                         # F6 öncesi kod: FileExistsError
+  >       return io.open(self, mode, buffering, encoding, errors, newline)
+  E       FileExistsError: [Errno 17] File exists: '<tmp>/test_extract_d1_rows_is_rerun_0/repo/registry/oot/d1_rows/SYNA.json'
+  >       rc, out = run("s3")
+== u_no_dirty_check
+  >       assert oo.s3_gate_problems(root=root) == [f"{d1['SYNA']}: commit'ten sonra değişmiş"]
+  E       assert [] == ['registry/oo...nra değişmiş']
+  E         
+  E         Right contains one more item: "registry/oot/d1_rows/SYNA.json: commit'ten sonra değişmiş"
+== v_no_pace
+  >       assert out["network_downloads"] == len(fake.calls) == len(sleeps) > 0 and set(sleeps) == {0.25}
+  E       AssertionError: assert (14 == 0)
+  E        +  where 14 = len(['https://www.borsaistanbul.com/data/thb/2021/03/thb_[tarih-maskeli]1.zip', 'https://www.borsaistanbul.com/data/thm/2021/03/th...stanbul.com/data/thb/2021/03/thb_[tarih-maskeli]1.zip', 'https:/
+  E        +    where ['https://www.borsaistanbul.com/data/thb/2021/03/thb_[tarih-maskeli]1.zip', 'https://www.borsaistanbul.com/data/thm/2021/03/th...stanbul.com/data/thb/2021/03/thb_[tarih-maskeli]1.zip', 'https://www.bo
+== w_cache_bypass
+  >       assert snap() == before and len(fake.calls) == n_calls                  # dokunulmadı; karantina önbellek
+  E       AssertionError: assert (({'SYNA.json'...103081.csv\n') == ({'SYNA.json'...103081.csv\n')
+  E         
+  E         Use -v to get more diff and 8 == 4)
+
+Okuma:
+  (t1)  bayt denetimi kaldırılınca T1 kırmızı: farklı içerikli var olan dosya sessizce 'aynı' sayılıyor (DID NOT RAISE).
+  (t1b) F6 öncesi davranış (hep 'xb') -> T1 ve CLI testi kırmızı (FileExistsError).
+  (p)   S5 kapısı push kanıtını aramayınca T3 kırmızı; (p2) yalnız POST_D1 kaydının commit/kanıt denetimi kaldırılınca T3 kırmızı.
+  (q)   POST_D1 denetimi tümüyle kaldırılınca T3 kırmızı; (r) kayıt-D_1 dosyası sha bağı denetlenmeyince T3 kırmızı.
+  (u)   commit'ten sonra değişen dosya görülmeyince T3 kırmızı.
+  (s)   s5 komutu kapıyı çağırmayınca T3 (s5) ve CLI testi kırmızı: kapı sorun dönerken extract_open_members çağrılıyor.
+  (v)   --pace hiç beklemeyince CLI testi kırmızı; (w) karantina önbellek olmayınca (dosya varken de indirme) T1 ve CLI testi kırmızı.
+  Toplam 10 mutasyon, 10 kırmızı; mutasyonsuz 5/5 yeşil.
+
+---------------------------------------------------------------- sürücü (scratchpad/mut/mutate_s3.sh; W=<çalışma dizini>)
+#!/usr/bin/env bash
+# BORSAI_FAZ6_S3_S5_EXTRACT adım 1: T1, T3 (ve T2 kapı çağrısı) için yeni testlerin mutasyon gösterimi.
+# Klon: git clone --local (HEAD) + çalışma ağacındaki commit'lenmemiş fark (git diff HEAD --binary); .venv sembolik bağ.
+# Her mutasyon klonda uygulanır, yeni testler koşar, yedekten geri alınır. Sonda mutasyonsuz koşu (yeşil beklenir).
+# Bülten dosya adı kalıbı çıktılarda maskelenir. Ağ yok (sentetik zip'ler).
+set -u
+REPO=/Users/ahmet/Desktop/BorsAi
+W=${W:?}
+C=$W/clone
+rm -rf "$C"; git clone -q --local "$REPO" "$C"
+git -C "$REPO" diff HEAD --binary -- borsai tests | git -C "$C" apply
+ln -s "$REPO/.venv" "$C/.venv"
+PY="$C/.venv/bin/python"
+OUT=$W/out.txt; : > "$OUT"
+cd "$C"
+export GIT_OPTIONAL_LOCKS=0
+MASK='s/th([bm])(20[0-9]{6})/th\1_[tarih-maskeli]/g'
+T6=tests/test_faz6_oot.py
+T1="$T6::test_extract_d1_rows_is_rerun_safe_unchanged_or_stop"
+G="$T6::test_s3_gate_requires_committed_unchanged_pushed_d1_rows_and_post_d1"
+S5="$T6::test_cli_s5_calls_s3_gate_before_any_extraction"
+CLI="$T6::test_cli_commands_print_numbers_only_pace_downloads_and_rerun"
+STOP="$T6::test_cli_stops_on_closed_gate_head_codes_published_gap_day_and_unpublished_session"
+NEW=("$T1" "$G" "$S5" "$CLI" "$STOP")
+echo "klon HEAD: $(git rev-parse HEAD) + commit'lenmemiş fark: $(git status --porcelain | grep -v '^?? .venv$' | tr '\n' ' ')" >> "$OUT"
+echo "borsai kaynağı: $($PY -c 'import borsai,os; print(os.path.dirname(borsai.__file__))')" >> "$OUT"
+echo >> "$OUT"
+
+run() { # run <ad> <açıklama> <pytest hedefleri...>
+  local name=$1 desc=$2; shift 2
+  local log=$W/$name.log
+  "$PY" -m pytest -q -p no:cacheprovider --no-header -rfE "$@" 2>&1 | sed -E "$MASK" > "$log"; local rc=${PIPESTATUS[0]}
+  echo "== $name  rc=$rc  :: $desc" >> "$OUT"
+  grep -E '^(FAILED|ERROR) ' "$log" | sed -E 's/^(FAILED|ERROR) tests\/test_faz6_oot.py::/  \1 /' | cut -c1-200 >> "$OUT"
+  grep -E 'passed|failed' "$log" | tail -1 | sed 's/^/  /' >> "$OUT"
+}
+mutate() { # mutate <dosya> <ad>; stdin: python (s -> s)
+  cp "$C/$1" "$W/backup"
+  "$PY" - "$C/$1" "$2" || { echo "MUTASYON UYGULANAMADI: $2" >> "$OUT"; exit 1; }
+}
+restore() { cp "$W/backup" "$C/$1"; }
+OO=borsai/outcomes_oot.py
+
+# (t1) T1: var olan dosya içerik denetimi yapılmadan UNCHANGED sayılır
+mutate $OO t1 <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='    if path.read_bytes() == payload:\n        return "UNCHANGED"\n    raise OotOutcomeError('
+new='    return "UNCHANGED"\n    raise OotOutcomeError('
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run t1_no_byte_check "(t1) d1_row_action: var olan dosya bayt denetimsiz UNCHANGED" "${NEW[@]}"
+restore $OO
+
+# (t1b) T1 öncesi davranış: var olan dosyaya yeniden 'xb' (FileExistsError)
+mutate $OO t1b <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='    if not path.exists():\n        return "CREATED"\n'
+new='    return "CREATED"\n'
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run t1b_old_behaviour "(t1b) d1_row_action hep CREATED (F6 öncesi 'xb' davranışı)" "${NEW[@]}"
+restore $OO
+
+# (p) T3: kanıt denetimi kaldırılır (d1_rows ve post_d1)
+mutate $OO p <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='    if sc.proof_time(git, git.added_commit(rel), proofs) is None:\n        return [f"{rel}: push kanıtı yok"]\n'
+new=''
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run p_no_proof_check "(p) S5 kapısı push kanıtını aramaz" "${NEW[@]}"
+restore $OO
+
+# (p2) T3: yalnız POST_D1 kaydının kanıt/commit denetimi kaldırılır
+mutate $OO p2 <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='        problems += _committed_unchanged_proven(rrel, committed, changed, git, proofs)\n'
+new=''
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run p2_post_d1_record_unchecked "(p2) S5 kapısı POST_D1 kaydının commit/kanıt denetimini yapmaz" "${NEW[@]}"
+restore $OO
+
+# (q) T3: POST_D1 denetimi tümüyle kaldırılır
+mutate $OO q <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='        primary = oot_post_d1_primary(t, post_dir)\n        if primary is None:'
+new='        primary = oot_post_d1_primary(t, post_dir)\n        continue\n        if primary is None:'
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run q_no_post_d1_check "(q) S5 kapısı POST_D1 kaydını hiç denetlemez" "${NEW[@]}"
+restore $OO
+
+# (r) T3: kayıt ile D_1 dosyası arasındaki sha bağı denetlenmez
+mutate $OO r <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='        if doc is not None and (rec.get("d1_rows") or {}).get("sha256") != canonical_sha256(doc):'
+new='        if False:'
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run r_no_d1_sha_link "(r) S5 kapısı kayıttaki d1_rows sha'sını denetlemez" "${NEW[@]}"
+restore $OO
+
+# (s) T3: s5 kapıyı çağırmaz
+mutate $OO s <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='        problems = s3_gate_problems(root=root, proofs=proofs)\n'
+new='        problems = []\n'
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run s_s5_skips_gate "(s) s5 komutu S5 kapısını çağırmaz" "${NEW[@]}"
+restore $OO
+
+# (u) T3: kirlilik (commit'ten sonra değişmiş) denetlenmez
+mutate $OO u <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='    if rel in changed:\n        return [f"{rel}: commit\'ten sonra değişmiş"]\n'
+new=''
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run u_no_dirty_check "(u) S5 kapısı commit'ten sonra değişen dosyayı görmez" "${NEW[@]}"
+restore $OO
+
+# (v) T2: tempo hiç uygulanmaz
+mutate $OO v <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='        if pace > 0:\n            sleep(pace)\n'
+new=''
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run v_no_pace "(v) --pace hiç beklemez" "${NEW[@]}"
+restore $OO
+
+# (w) T2/T1: karantina önbellek değil (dosya varken de indirici çağrılır; tempo karantinadan okumada da işler)
+mutate $OO w <<'PYEOF'
+import sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old='    if path.exists():\n        data = path.read_bytes()\n'
+new='    if path.exists():\n        (downloader or oc.download_bytes)(oc.source_url(market_date, kind))\n        data = path.read_bytes()\n'
+assert s.count(old)==1; open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+run w_cache_bypass "(w) fetch_quarantine karantinada dosya varken de indirir" "${NEW[@]}"
+restore $OO
+
+run zz_no_mutation "mutasyonsuz (geri alındıktan sonra)" "${NEW[@]}"
+echo "son durum: $(git status --porcelain | grep -v '^?? .venv$' | wc -l | tr -d ' ') değişiklik (= yalnız görevin commit'lenmemiş farkı)" >> "$OUT"
+echo >> "$OUT"
+echo "---------------------------------------------------------------- kırmızının yeri (ilk hata satırı)" >> "$OUT"
+for f in "$W"/*.log; do
+  n=$(basename "$f" .log)
+  [ "$n" = zz_no_mutation ] && continue
+  echo "== $n" >> "$OUT"
+  grep -E '^>|^E ' "$f" | head -4 | cut -c1-220 | sed 's/^/  /' >> "$OUT"
+done

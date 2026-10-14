@@ -1,0 +1,646 @@
+{
+  "algorithm": "V1_5_RIDGE_LOGIT",
+  "code_version": {
+    "borsai_dirty": true,
+    "borsai_source_sha256": "c873f64bf27bb6c0c1f6c0da343672b7f615d051beca8b59707ea4a1a6bf5ea8",
+    "git_commit": "d3fabada3a4b3b7ada1b03681c57c29a7e303be5"
+  },
+  "created_at": "2026-09-22T13:05:29+03:00",
+  "description": "V1.5 + genişletilmiş ızgara (SPEC_V1_6): Ridge α ∈ {0.001 … 10000, INF}, Logit C ∈ {ZERO, 0.0001 … 100}; INF/ZERO kapalı biçim sabit terim; aday başına yakınsamama. Özellikler, ön işleme ve fold planı V1.5 ile aynı.",
+  "feature_definitions": {
+    "f1": "arz büyüklüğü TL: kaynakta bildirilen ipo_size_tl, yoksa ipo_price_tl × shares_offered; ön işlemede doğal log",
+    "f2": "shares_offered / post_ipo_share_capital × 100; 10 ondalık ROUND_HALF_UP",
+    "f3": "total_demand_multiple (toplam talep katı); eksik ≠ 0; ön işlemede fold içi p05/p95 winsor",
+    "f4": "capital_increase_shares / shares_offered × 100; 10 ondalık ROUND_HALF_UP",
+    "f5": "1 yalnız f3 eksikse, değilse 0"
+  },
+  "feature_ranges": {
+    "f1": {
+      "max": 6825000000.0,
+      "min": 290870000.0,
+      "n": 99,
+      "n_missing": 0
+    },
+    "f2": {
+      "max": 40.4749055586,
+      "min": 10.0314889789,
+      "n": 99,
+      "n_missing": 0
+    },
+    "f3": {
+      "max": 14.6,
+      "min": 1.0,
+      "n": 97,
+      "n_missing": 2
+    },
+    "f4": {
+      "max": 100.0,
+      "min": 22.2222222222,
+      "n": 99,
+      "n_missing": 0
+    }
+  },
+  "features": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5"
+  ],
+  "horizons": {
+    "D1": {
+      "p_up": {
+        "C": 0.1,
+        "coef": [
+          -0.36428382963139727,
+          0.23877686644002138,
+          0.3287337012433358,
+          -0.022775625369449548,
+          -0.4382447970187697
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "final_fit_attempts": [
+          [
+            0.1,
+            "FIT_OK"
+          ]
+        ],
+        "inner_loocv_brier": {
+          "0.0001": 0.09262357766160166,
+          "0.001": 0.09220594733691752,
+          "0.01": 0.08794457753458179,
+          "0.1": 0.07364011134856921,
+          "1.0": 0.07395942142275601,
+          "10.0": 0.07599591527631845,
+          "100.0": 0.07633421921847419,
+          "ZERO": 0.09266972094960432
+        },
+        "inner_loocv_status": {
+          "0.0001": "SCORED",
+          "0.001": "SCORED",
+          "0.01": "SCORED",
+          "0.1": "SCORED",
+          "1.0": "SCORED",
+          "10.0": "SCORED",
+          "100.0": "SCORED",
+          "ZERO": "SCORED"
+        },
+        "intercept": 2.4350011676663375,
+        "kind": "logit",
+        "n_class_0": 10,
+        "n_class_1": 89,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      },
+      "return": {
+        "alpha": 100.0,
+        "coef": [
+          -0.006109568237524172,
+          0.006166132603621725,
+          0.008170157909692003,
+          -0.0025110682879776573,
+          -0.008447090618803032
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "inner_loocv_mae": {
+          "0.001": 0.03232193809262119,
+          "0.01": 0.03232130071312108,
+          "0.1": 0.0323149343244045,
+          "1.0": 0.03225199890590781,
+          "10.0": 0.03174887515561959,
+          "100.0": 0.031000551778741777,
+          "1000.0": 0.03561309438673977,
+          "10000.0": 0.03689131719299936,
+          "INF": 0.0370522015756281
+        },
+        "intercept": 0.07742476639192436,
+        "kind": "ridge"
+      }
+    },
+    "D10": {
+      "p_up": {
+        "C": 1.0,
+        "coef": [
+          -0.8953439956841492,
+          -0.1508079014501232,
+          1.1937477315188683,
+          0.047597332596937866,
+          -0.5782160495800999
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "final_fit_attempts": [
+          [
+            1.0,
+            "FIT_OK"
+          ]
+        ],
+        "inner_loocv_brier": {
+          "0.0001": 0.21109666344048578,
+          "0.001": 0.2087305807392474,
+          "0.01": 0.19211519592618936,
+          "0.1": 0.16408381294871985,
+          "1.0": 0.16080961807541397,
+          "10.0": 0.16223247807848537,
+          "100.0": 0.16249549000172483,
+          "ZERO": 0.21137026239067055
+        },
+        "inner_loocv_status": {
+          "0.0001": "SCORED",
+          "0.001": "SCORED",
+          "0.01": "SCORED",
+          "0.1": "SCORED",
+          "1.0": "SCORED",
+          "10.0": "SCORED",
+          "100.0": "SCORED",
+          "ZERO": "SCORED"
+        },
+        "intercept": 1.2918172222855577,
+        "kind": "logit",
+        "n_class_0": 29,
+        "n_class_1": 70,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      },
+      "return": {
+        "alpha": 0.001,
+        "coef": [
+          -0.24611923810653977,
+          -0.022567361932688625,
+          0.2822186369363994,
+          -0.042859750308993305,
+          -0.07528569284913852
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "inner_loocv_mae": {
+          "0.001": 0.4141696904311386,
+          "0.01": 0.4141716853879339,
+          "0.1": 0.4141915944832637,
+          "1.0": 0.4143867345891382,
+          "10.0": 0.41757551754607836,
+          "100.0": 0.46280919407446797,
+          "1000.0": 0.5323273310236775,
+          "10000.0": 0.5510334726630955,
+          "INF": 0.5534434559961843
+        },
+        "intercept": 0.47251414813533843,
+        "kind": "ridge"
+      }
+    },
+    "D3": {
+      "p_up": {
+        "C": 1.0,
+        "coef": [
+          -0.9026022365876633,
+          0.41683200168938916,
+          1.4629751304098058,
+          -0.02624851340539738,
+          -0.6906216503738454
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "final_fit_attempts": [
+          [
+            1.0,
+            "FIT_OK"
+          ]
+        ],
+        "inner_loocv_brier": {
+          "0.0001": 0.158070957129831,
+          "0.001": 0.15634637930783898,
+          "0.01": 0.14275389306695493,
+          "0.1": 0.11213054398633883,
+          "1.0": 0.10433886087204969,
+          "10.0": 0.104820768142825,
+          "100.0": 0.10502634621643962,
+          "ZERO": 0.1582673885880883
+        },
+        "inner_loocv_status": {
+          "0.0001": "SCORED",
+          "0.001": "SCORED",
+          "0.01": "SCORED",
+          "0.1": "SCORED",
+          "1.0": "SCORED",
+          "10.0": "SCORED",
+          "100.0": "SCORED",
+          "ZERO": "SCORED"
+        },
+        "intercept": 2.3979214454873223,
+        "kind": "logit",
+        "n_class_0": 19,
+        "n_class_1": 80,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      },
+      "return": {
+        "alpha": 10.0,
+        "coef": [
+          -0.04768735519777623,
+          0.02949105416832746,
+          0.06893564003099464,
+          0.0037043080464757776,
+          -0.03973259212944201
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "inner_loocv_mae": {
+          "0.001": 0.11785474272829324,
+          "0.01": 0.11785360823286725,
+          "0.1": 0.11784228157186202,
+          "1.0": 0.11774014975069673,
+          "10.0": 0.11704088868664426,
+          "100.0": 0.12345962667588396,
+          "1000.0": 0.15354696243090005,
+          "10000.0": 0.1611932632116352,
+          "INF": 0.16216346137869714
+        },
+        "intercept": 0.20969361395763192,
+        "kind": "ridge"
+      }
+    },
+    "D5": {
+      "p_up": {
+        "C": 1.0,
+        "coef": [
+          -0.7792411710964781,
+          0.29944154826258784,
+          1.3790760236597681,
+          0.09621198526967044,
+          -0.6579458566407539
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "final_fit_attempts": [
+          [
+            1.0,
+            "FIT_OK"
+          ]
+        ],
+        "inner_loocv_brier": {
+          "0.0001": 0.17615672143748629,
+          "0.001": 0.17416600822458297,
+          "0.01": 0.15920592860612826,
+          "0.1": 0.12954888499931302,
+          "1.0": 0.12471922896402808,
+          "10.0": 0.1267087958753957,
+          "100.0": 0.12714000157433047,
+          "ZERO": 0.17638483965014579
+        },
+        "inner_loocv_status": {
+          "0.0001": "SCORED",
+          "0.001": "SCORED",
+          "0.01": "SCORED",
+          "0.1": "SCORED",
+          "1.0": "SCORED",
+          "10.0": "SCORED",
+          "100.0": "SCORED",
+          "ZERO": "SCORED"
+        },
+        "intercept": 1.9799616668844853,
+        "kind": "logit",
+        "n_class_0": 22,
+        "n_class_1": 77,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      },
+      "return": {
+        "alpha": 10.0,
+        "coef": [
+          -0.08967328061991792,
+          0.03377800355140635,
+          0.12209885946181304,
+          -0.007224869296256626,
+          -0.05861656578958688
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "inner_loocv_mae": {
+          "0.001": 0.19736174656572827,
+          "0.01": 0.19736088010468908,
+          "0.1": 0.19735223109295294,
+          "1.0": 0.19726726803927927,
+          "10.0": 0.1966874459249412,
+          "100.0": 0.21842977598139443,
+          "1000.0": 0.2627344977218602,
+          "10000.0": 0.27349866692184316,
+          "INF": 0.27495276668623714
+        },
+        "intercept": 0.31207871117449043,
+        "kind": "ridge"
+      }
+    }
+  },
+  "input_policy": {
+    "f3_filter_status_conflict": "REFUSE",
+    "f3_missing": "REFUSE",
+    "f3_missing_reason": "AUDIT §1.2-d: f5 katsayısı yalnız 2 gözlemden (ALBTN, ENDAE) öğrenildi; f3'süz çağrı 'talep bilgisi henüz yok' durumunu 'hiç gelmedi' diye okur.",
+    "out_of_training_range": "WARN",
+    "return_output": "CLIP_TO_PHYSICAL_BOUNDS_AND_FLAG"
+  },
+  "model_id": "v1_6_h99",
+  "preprocessing": {
+    "columns": [
+      "f1",
+      "f2",
+      "f3",
+      "f4",
+      "f5"
+    ],
+    "dropped": {},
+    "f3_filter_mode": "NOT_SPECIFIED",
+    "f3_filter_mode_tie": false,
+    "f3_filter_nulled_tickers": [],
+    "f5_created": true,
+    "log_transform": [
+      "f1"
+    ],
+    "mean": {
+      "f1": 21.177452573847184,
+      "f2": 24.062689797143435,
+      "f3": 3.5509772626010103,
+      "f4": 74.95793126803636,
+      "f5": 0.020202020202020204
+    },
+    "medians": {
+      "f1": 1402170000.0,
+      "f2": 25.0,
+      "f3": 3.24,
+      "f4": 75.0
+    },
+    "n_train": 99,
+    "preprocessing_id": "V1_3_FOLD_LOCAL_11_STEP_PREPROCESSING+DETERMINISTIC_F3_MODE",
+    "std": {
+      "f1": 0.704076848861664,
+      "f2": 6.571072097185678,
+      "f3": 2.0402234582184606,
+      "f4": 17.751461498204904,
+      "f5": 0.14069079067862747
+    },
+    "winsor": {
+      "f3": {
+        "p05": 1.14870997716,
+        "p95": 8.332
+      }
+    }
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "schema_version": "borsai.model/1",
+  "spec": {
+    "algorithm": "V1_5_RIDGE_LOGIT",
+    "description": "V1.5 + genişletilmiş ızgara (SPEC_V1_6): Ridge α ∈ {0.001 … 10000, INF}, Logit C ∈ {ZERO, 0.0001 … 100}; INF/ZERO kapalı biçim sabit terim; aday başına yakınsamama. Özellikler, ön işleme ve fold planı V1.5 ile aynı.",
+    "feature_version": "BORSAI_FEATURES_V1_5_PORT_1",
+    "features": [
+      "f1",
+      "f2",
+      "f3",
+      "f4",
+      "f5"
+    ],
+    "grid_version": "v1_6",
+    "horizons": [
+      "D1",
+      "D3",
+      "D5",
+      "D10"
+    ],
+    "input_policy": {
+      "f3_filter_status_conflict": "REFUSE",
+      "f3_missing": "REFUSE",
+      "f3_missing_reason": "AUDIT §1.2-d: f5 katsayısı yalnız 2 gözlemden (ALBTN, ENDAE) öğrenildi; f3'süz çağrı 'talep bilgisi henüz yok' durumunu 'hiç gelmedi' diye okur.",
+      "out_of_training_range": "WARN",
+      "return_output": "CLIP_TO_PHYSICAL_BOUNDS_AND_FLAG"
+    },
+    "logit": {
+      "C_grid": [
+        "ZERO",
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "class_weight": null,
+      "direction_rule": "UP iff p > 0.5",
+      "endpoint_ZERO": "yalnız sabit terim: p = n_1/n, intercept = ln(p/(1 − p)), coef = 0; kapalı biçim",
+      "estimator": "sklearn.linear_model.LogisticRegression",
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "max_iter": 10000,
+      "minority_lt_2_policy": "NO_TUNING_FIXED_C_0.01",
+      "non_convergence_policy": "CANDIDATE_NOT_CONVERGED_DROPPED_FINAL_FIT_FALLS_BACK_TO_NEXT_RANKED",
+      "single_class_policy": "MODEL_NOT_FIT_SINGLE_CLASS",
+      "solver": "lbfgs",
+      "tie_break": "BIT_EXACT_TIE_TO_SMALLEST_C_ZERO_SMALLEST",
+      "tol": 1e-10,
+      "tuning": "INNER_LOOCV_RAW_UNCLIPPED_BRIER"
+    },
+    "min_train_n": 10,
+    "model_id": "v1_6_h99",
+    "plan_id": "H99_WALK_FORWARD_STRICT_PRIOR_DATE_MIN_TRAIN_10",
+    "preprocessing_id": "V1_3_FOLD_LOCAL_11_STEP_PREPROCESSING+DETERMINISTIC_F3_MODE",
+    "ridge": {
+      "alpha_grid": [
+        0.001,
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0,
+        1000.0,
+        10000.0,
+        "INF"
+      ],
+      "endpoint_INF": "yalnız sabit terim: tahmin = eğitim hedeflerinin aritmetik ortalaması (statistics.mean), coef = 0; kapalı biçim",
+      "estimator": "sklearn.linear_model.Ridge",
+      "fit_intercept": true,
+      "solver": "svd",
+      "tie_break": "BIT_EXACT_TIE_TO_LARGEST_ALPHA_INF_LARGEST",
+      "tuning": "INNER_LOOCV_MAE_RETURN_SPACE"
+    },
+    "runtime_pins": {
+      "joblib": "1.5.3",
+      "numpy": "2.5.2",
+      "python": "3.12",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "spec_document": {
+      "path": "docs/specs/SPEC_V1_6.md",
+      "sha256": "3901d4804b2ab9f7f0683915cc33d17425733cfc160eba5eb84e7d6549b26f8f"
+    },
+    "training": {
+      "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+      "description": "data/training_table.csv'nin 99 satırının hepsi, tablo sırasıyla (first_trading_date, ticker)",
+      "n": 99,
+      "set": "H99_ALL_ROWS"
+    }
+  },
+  "spec_sha256": "7e3dd5ffe81674b7922904e416845f4212e1b667c60d0c4bdf10b01dfbe8b87a",
+  "training": {
+    "cutoff_date": "2026-08-19",
+    "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+    "first_trading_date_range": [
+      "2023-09-22",
+      "2026-08-06"
+    ],
+    "n": 99,
+    "set": "H99_ALL_ROWS",
+    "targets_sha256": {
+      "D1": "62a670993946893f771bdc39841bcd3af5bc39c2e639995db60adca214d718a4",
+      "D10": "48432418e0f2e48bbdac91b95c3b0ebbf4992ee8c7e9a1dccd22e2299067fb2d",
+      "D3": "0465300b74653802492ef186e82231a75d872ee3d0a888263f75dc914d21b8bf",
+      "D5": "a77b63e284b0c86167d8f8b1eaf820da8e8290b823a90711e1d3f758b55c56e9"
+    },
+    "tickers": [
+      "HATSN",
+      "DMRGD",
+      "MEKAG",
+      "DOFER",
+      "MHRGY",
+      "BORLS",
+      "TABGD",
+      "VRGYO",
+      "MARBL",
+      "BINHO",
+      "EKOS",
+      "AGROT",
+      "SKYMD",
+      "CATES",
+      "BEGYO",
+      "KBORU",
+      "SURGY",
+      "MEGMT",
+      "AVPGY",
+      "PATEK",
+      "BORSK",
+      "LMKDC",
+      "ALVES",
+      "OBAMS",
+      "ARTMS",
+      "MOGAN",
+      "ODINE",
+      "ENTRA",
+      "RGYAS",
+      "LILAK",
+      "KOTON",
+      "ALTNY",
+      "KOCMT",
+      "HRKET",
+      "ONRYT",
+      "OZYSR",
+      "ALKLC",
+      "YIGIT",
+      "HOROZ",
+      "SEGMN",
+      "EFORC",
+      "DCTTR",
+      "BAHKM",
+      "TCKRC",
+      "GUNDG",
+      "AHSGY",
+      "OZATD",
+      "CEMZY",
+      "DURKN",
+      "BINBN",
+      "CGCAM",
+      "SMRVA",
+      "ARMGD",
+      "EGEGY",
+      "GLRMK",
+      "AKFIS",
+      "MOPAS",
+      "SERNT",
+      "BIGEN",
+      "DSTKF",
+      "VSNMD",
+      "ENDAE",
+      "KLYPV",
+      "BALSU",
+      "BULGS",
+      "DOFRB",
+      "ECOGR",
+      "VAKFA",
+      "PAHOL",
+      "ZERGY",
+      "ARFYE",
+      "MEYSU",
+      "FRMPL",
+      "ZGYO",
+      "UCAYM",
+      "NETCD",
+      "AKHAN",
+      "BESTE",
+      "ATATR",
+      "EMPAE",
+      "GENKM",
+      "SVGYO",
+      "LXGYO",
+      "MCARD",
+      "AAGYO",
+      "EKDMR",
+      "BETAE",
+      "SOHOE",
+      "ORZAX",
+      "GOLDA",
+      "EKIM",
+      "ISVEA",
+      "SSAAT",
+      "SARAE",
+      "METEN",
+      "ALBTN",
+      "MASFN",
+      "KARCL",
+      "QUICK"
+    ],
+    "tickers_sha256": "dca11401234cc3a66a155fd1b546ff1f26ac09b519278011b1ee84a47896174f"
+  }
+}

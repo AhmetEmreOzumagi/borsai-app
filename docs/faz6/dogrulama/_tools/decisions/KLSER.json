@@ -1,0 +1,166 @@
+{
+ "ticker": "KLSER",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_1174431",
+  "KAP_1174431_EK1",
+  "KAP_1174431_EK2",
+  "KAP_1172860_EK1",
+  "KAP_1174705"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "3.3",
+   "origin": "SOURCE_REPORTED",
+   "source_id": "KAP_1174431_EK1",
+   "quote": "Böylece, halka arzda planlanan tahsisatın toplam 3,3 katı talep toplanmıştır.",
+   "definition": "belgedeki toplam kat (365.921.942 adet talep / 109.390.465 adet planlanan tahsisat)",
+   "denominator_includes_additional_sale": false,
+   "note": "ek satış planlanmamış; planlanan = satılan 109.390.465; aynı belgedeki toplamlardan 3,3450990633"
+  },
+  "total_demand_filter_status": {
+   "value": "UNFILTERED",
+   "source_id": "KAP_1174431_EK1",
+   "quote": "Halka arzda, toplam 9.148.048.550,00 TL tutarında ve 365.921.942 adet paya karşılık gelen, toplam 2.002.245 adet filtrelenmemiş başvuru alınmıştır.",
+   "note": "filtre ifadesi toplam talebi (365.921.942 adet) oluşturan başvurular için yazılmış; 3,3 katın payı bu toplam (tablo TOPLAM satırı ile aynı)"
+  },
+  "ipo_size_tl": {
+   "value": "2734761625",
+   "source_id": "KAP_1174431_EK1",
+   "quote": "Halka arz boyutu 2.734.761.625 TL"
+  },
+  "capital_increase_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (yalnız 'halka arz edilen 109.390.465 adet payın tamamı satılmıştır'; sermaye artırımı nitelemesi yalnız TSSD/SPK planında)"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (ortak satışından söz edilmiyor; SPK satırında mevcut pay satışı '-')"
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_1174431_EK1",
+   "zero_from_statement": true,
+   "quote": "halka arz edilen 109.390.465 adet payın tamamı satılmıştır.",
+   "note": "SPK satırında ek satış '-'; satılan toplam 109.390.465 = planlanan taban (bedelli 109.390.465)"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_1174431_EK1",
+   "quote": "halka arz edilen 109.390.465 adet payın tamamı satılmıştır."
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_1174431_EK1",
+   "used": "NONE",
+   "quote": "halka arz edilen 109.390.465 adet payın tamamı satılmıştır.",
+   "note": "ek satış planlanmamıştı; satılan = taban"
+  },
+  "investor_count": {
+   "value": "1919116",
+   "source_id": "KAP_1174431_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "Halka arz sonucunda, 1.917.446 adedi Yurtiçi Bireysel Yatırımcı olmak üzere, toplam 1.919.116 yatırımcıya dağıtım gerçekleştirilmiştir.",
+   "note": "filtrelenmemiş başvuru sayısı 2.002.245; dağıtım yapılan 1.919.116"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "1917446",
+    "employees": "1464",
+    "domestic_institutional": "206"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_1174431_EK1",
+   "quote": [
+    "Yurtiçi Bireysel 86.418.467 %79,00 2.000.541 226.977.189 %62,03 1.917.446 86.418.467 %79,00",
+    "Kale Grubu Çalışanları 1.093.905 %1,00 1.488 1.827.882 %0,50 1.464 1.093.905 %1,00",
+    "Yurtiçi Kurumsal 21.878.093 %20,00 216 137.116.871 %37,47 206 21.878.093 %20,00"
+   ],
+   "note": "employees = Kale Grubu Çalışanları; başvuru: bireysel 2.000.541, çalışanlar 1.488, yurt içi kurumsal 216; yurt dışı kurumsal grup yok"
+  },
+  "retail_demand_multiple": {
+   "value": "2.6",
+   "source_id": "KAP_1174431_EK1",
+   "quote": "Yurtiçi Bireysel Yatırımcılar’a tahsis edilen payların 2,6 katı",
+   "note": "Kale Grubu Çalışanları 1,7 kat"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": "6.3",
+   "source_id": "KAP_1174431_EK1",
+   "quote": "Yurtiçi Kurumsal Yatırımcılar’a tahsis edilen payların 6,3 katı talep toplanmıştır."
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "sonuç ekinde yurt dışı kurumsal yatırımcı grubu yok"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "86418467",
+    "employees": "1093905",
+    "domestic_institutional": "21878093"
+   },
+   "source_id": "KAP_1174431_EK1",
+   "quote": [
+    "Yurtiçi Bireysel 86.418.467 %79,00 2.000.541 226.977.189 %62,03 1.917.446 86.418.467 %79,00",
+    "Kale Grubu Çalışanları 1.093.905 %1,00 1.488 1.827.882 %0,50 1.464 1.093.905 %1,00",
+    "Yurtiçi Kurumsal 21.878.093 %20,00 216 137.116.871 %37,47 206 21.878.093 %20,00"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "79.00",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1174431_EK1",
+   "quote": "%79,00’ına denk gelen 86.418.467 adet pay Yurtiçi Bireysel Yatırımcılar’a",
+   "note": "planlanan da %79,00"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "20.00",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1174431_EK1",
+   "quote": "%20,00’ına denk gelen 21.878.093 adet pay Yurtiçi Kurumsal Yatırımcılar’a dağıtılmıştır.",
+   "note": "planlanan da %20,00"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": null,
+   "missing_reason": "sonuç ekinde yurt dışı kurumsal grup yok"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor"
+  },
+  "lead_broker": {
+   "value": "Ak Yatırım Menkul Değerler A.Ş.; Yapı Kredi Yatırım Menkul Değerler A.Ş.",
+   "source_id": "KAP_1172860_EK1",
+   "quote": [
+    "Yetkili Kuruluş Ak Yatırım Menkul Değerler Aş",
+    "Yetkili Kuruluş Yapı Kredi Yatırım Menkul Değerler AŞ"
+   ],
+   "note": "TSSD (OCR) iki yetkili kuruluşu sayıyor; konsorsiyum lideri belirtilmiyor. Sonuç bildirimini Ak Yatırım, TSSD bildirimini Yapı Kredi Yatırım yayımlamış."
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {},
+ "notes": "Borsa dışı talep toplama (25,00 TL); yalnız sermaye artırımı, ek satış yok. Sonuç eki toplam katı (3,3) yazıyor; talep 'filtrelenmemiş başvuru' olarak nitelenmiş. Codex bu arz için sonuç alanlarını bulamamıştı.",
+ "needs_search": false
+}

@@ -1,0 +1,222 @@
+{
+ "ticker": "BRLSM",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_958198",
+  "KAP_958198_EK1",
+  "KAP_958198_EK2",
+  "KAP_955383_EK1",
+  "KAP_958344"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "6.74",
+   "origin": "SOURCE_REPORTED",
+   "source_id": "KAP_958198_EK1",
+   "quote": "Halka arzda toplam 35.734 yatırımcıdan halka arz edilen 33.000.000 TL nominal değerli payların 6,74 katına denk gelen 222.366.807 TL nominal değerli filtrelenmiş pay talebi gelmiştir.",
+   "definition": "belgedeki toplam kat (filtrelenmiş talep; ek satış hariç 33.000.000 TL nominal paya göre)",
+   "denominator_includes_additional_sale": false,
+   "note": "belge yalnız filtrelenmiş talebi veriyor (filtrelenmemiş toplam yok); ek satış dahil satılan 39.000.000 paydası ile 222.366.807 / 39.000.000 = 5,701713 olurdu"
+  },
+  "total_demand_filter_status": {
+   "value": "FILTERED",
+   "source_id": "KAP_958198_EK1",
+   "quote": "payların 6,74 katına denk gelen 222.366.807 TL nominal değerli filtrelenmiş pay talebi gelmiştir"
+  },
+  "ipo_size_tl": {
+   "value": "354900000",
+   "source_id": "KAP_958198_EK1",
+   "quote": "Ek pay satışı dahil halka arz edilen toplam 39.000.000 TL nominal değerli pay ile birlikte toplam halka arz büyüklüğü 354.900.000 TL olmuştur."
+  },
+  "capital_increase_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok"
+  },
+  "additional_sale_shares": {
+   "value": null,
+   "missing_reason": "belgede tek sayı olarak yazılı değil; türetme (Mesut Altan 3.000.000 + İdris Çakır 3.000.000 = 6.000.000 (= satılan toplam 39.000.000 − taban 33.000.000)) görev kuralı gereği kullanılmadı",
+   "derived_candidate": {
+    "value": "6000000",
+    "source_id": "KAP_958198_EK1",
+    "quote": "Halka arz edilen 33.000.000 TL nominal değerli payların satışı ile beraber ek satışa sunulan Mesut Altan’a ait 3.000.000 TL nominal değerli payların ve İdris Çakır’a ait 3.000.000 TL nominal değerli payların da satışı gerçekleştirilmiş, halka arz edilen toplam pay adedi 39.000.000 olmuştur.",
+    "formula": "Mesut Altan 3.000.000 + İdris Çakır 3.000.000 = 6.000.000 (= satılan toplam 39.000.000 − taban 33.000.000)"
+   }
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_958198_EK1",
+   "quote": "Halka arz edilen 33.000.000 TL nominal değerli payların satışı ile beraber ek satışa sunulan Mesut Altan’a ait 3.000.000 TL nominal değerli payların ve İdris Çakır’a ait 3.000.000 TL nominal değerli payların da satışı gerçekleştirilmiş, halka arz edilen toplam pay adedi 39.000.000 olmuştur."
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_958198_EK1",
+   "used": "FULL",
+   "quote": "Ek pay satışı dahil halka arz edilen toplam 39.000.000 TL nominal değerli pay ile birlikte toplam halka arz büyüklüğü 354.900.000 TL olmuştur.",
+   "note": "SPK planlanan ek satış 6.000.000 ile aynı"
+  },
+  "investor_count": {
+   "value": "35682",
+   "source_id": "KAP_958198_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "TOPLAM 33.000.000 100% 35.734 222.366.807 100% 35.682 39.000.000 100%",
+   "note": "talep eden 35.734; dağıtım yapılan 35.682"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "29287",
+    "high_application_retail": "6284",
+    "domestic_institutional": "111"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_958198_EK1",
+   "quote": [
+    "16.500.000 50% 29.287 7.354.598 3% 29.287 7.354.598 19%",
+    "9.900.000 30% 6.331 132.816.235 60% 6.284 21.895.402 56%",
+    "6.600.000 20% 116 82.195.974 37% 111 9.750.000 25%"
+   ],
+   "note": "sıra: Bireysel, Yüksek Başvurulu, Yurt İçi Kurumsal; talep eden: 29.287, 6.331, 116"
+  },
+  "retail_demand_multiple": {
+   "value": "0.4457332121",
+   "source_id": "KAP_958198_EK1",
+   "derived": true,
+   "formula": "Bireysel Yatırımcılar talep 7.354.598 / planlanan tahsisat 16.500.000 (aynı satır, lot)",
+   "quote": "16.500.000 50% 29.287 7.354.598 3% 29.287 7.354.598 19%",
+   "note": "yalnız 'Bireysel Yatırımcılar' grubu; ayrı 'Yüksek Başvurulu Yatırımcılar' grubunun katı 132.816.235 / 9.900.000 = 13,4157813131 (gruplar birleştirilmedi)"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": "12.4539354545",
+   "source_id": "KAP_958198_EK1",
+   "derived": true,
+   "formula": "Yurt İçi Kurumsal talep 82.195.974 / planlanan tahsisat 6.600.000",
+   "quote": "6.600.000 20% 116 82.195.974 37% 111 9.750.000 25%"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "yurt dışı kurumsal grup yok (tabloda Bireysel, Yüksek Başvurulu, Yurt İçi Kurumsal)"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "7354598",
+    "high_application_retail": "21895402",
+    "domestic_institutional": "9750000"
+   },
+   "source_id": "KAP_958198_EK1",
+   "quote": [
+    "16.500.000 50% 29.287 7.354.598 3% 29.287 7.354.598 19%",
+    "9.900.000 30% 6.331 132.816.235 60% 6.284 21.895.402 56%",
+    "6.600.000 20% 116 82.195.974 37% 111 9.750.000 25%"
+   ],
+   "note": "birim lot (1 TL nominal)"
+  },
+  "retail_allocation_pct": {
+   "value": "19",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_958198_EK1",
+   "quote": "16.500.000 50% 29.287 7.354.598 3% 29.287 7.354.598 19%",
+   "note": "yalnız Bireysel grubu; Yüksek Başvurulu %56; planlanan bireysel %50"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "25",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_958198_EK1",
+   "quote": "6.600.000 20% 116 82.195.974 37% 111 9.750.000 25%",
+   "note": "planlanan %20"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": null,
+   "missing_reason": "yurt dışı kurumsal grup yok"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor"
+  },
+  "lead_broker": {
+   "value": "QNB Finans Yatırım Menkul Değerler A.Ş.",
+   "source_id": "KAP_955383_EK1",
+   "quote": "Aracılık Eden Yetkili Kuruluş Sorumlu Olduğu Kısım: QNB FİNANS YATIRIM MENKUL DEĞERLER A.Ş.",
+   "note": "TSSD: 'halka arzda satışa aracıhk edecek QNB Finans Yatırım Menkul' (OCR); sonuç bildirimini de QNB Finans Yatırım yayımlamış"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {
+  "total_demand_multiple": {
+   "codex_value": "6,74",
+   "verdict": "FOUND_SAME",
+   "note": "belgede açık; filtrelenmiş talep, ek satış hariç tabana göre"
+  },
+  "additional_sale_shares": {
+   "codex_value": "6.000.000",
+   "verdict": "FOUND_SAME",
+   "note": "belgede 3.000.000 + 3.000.000 olarak yazılı"
+  },
+  "ipo_size_tl": {
+   "codex_value": "354.900.000",
+   "verdict": "FOUND_SAME"
+  },
+  "investor_count": {
+   "codex_value": "35.734",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "35.734 talep eden kişi sayısı; dağıtım yapılan 35.682 (ALLOCATED tercih)"
+  },
+  "investor_count_by_group": {
+   "codex_value": "{'Bireysel': '29.287', 'Yüksek Başvurulu': '6.331', 'Yurt İçi Kurumsal': '116'}",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "Codex talep eden sayılarını almış; dağıtım yapılan: 29.287, 6.284, 111"
+  },
+  "distributed_by_group": {
+   "codex_value": "{'Bireysel': '7.354.598', 'Yüksek Başvurulu': '21.895.402', 'Yurt İçi Kurumsal': '9.750.000'}",
+   "verdict": "FOUND_SAME"
+  },
+  "retail_allocation_pct": {
+   "codex_value": "19",
+   "verdict": "FOUND_SAME",
+   "note": "yalnız Bireysel grubu"
+  },
+  "domestic_institutional_allocation_pct": {
+   "codex_value": "25",
+   "verdict": "FOUND_SAME"
+  },
+  "foreign_institutional_allocation_pct": {
+   "codex_value": "0",
+   "verdict": "NOT_FOUND_IN_DOCS",
+   "note": "belgede yurt dışı kurumsal grup yok; 0 yazılı değil; alan null"
+  },
+  "distribution_method": {
+   "codex_value": "Sabit Fiyatla Talep Toplama",
+   "verdict": "NOT_FOUND_IN_DOCS",
+   "note": "'sabit fiyat' ifadesi sonuç ekinde ve TSSD'de yok (qfind); ayrıca satış yöntemi, dağıtım yöntemi değil"
+  },
+  "lead_broker": {
+   "codex_value": "QNB Finans Yatırım Menkul Değerler A.Ş.",
+   "verdict": "FOUND_SAME"
+  }
+ },
+ "notes": "Borsa dışı talep toplama (9,10 TL). Belge toplam katı 6,74 olarak yazıyor ve talebin filtrelenmiş olduğunu açıkça söylüyor; filtrelenmemiş toplam verilmiyor. Ek satış 6.000.000 tamamen kullanılmış (Yüksek Başvurulu 2.850.000, Yurt İçi Kurumsal 3.150.000). | Doğrulayıcı son işlemi: türetilmiş ayrım alanları boşaltıldı (postprocess.py).",
+ "needs_search": false
+}

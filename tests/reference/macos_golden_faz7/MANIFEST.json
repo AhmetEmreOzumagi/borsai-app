@@ -1,0 +1,119 @@
+{
+  "borsai_dirty": true,
+  "borsai_source_sha256": "0d374dd8ae9a1202a7459ce294c8779d51e0740d445159cce4378049f5360039",
+  "comparator_ledgers": {
+    "base_km_expanding": {
+      "path": "tests/reference/macos_golden_faz1b/base_km_expanding_fold_ledger.csv",
+      "sha256": "ed1b8821a0c5faac6a068402d545aa67810d53d2e523f8062100cec81c45017f"
+    },
+    "base_km_last10": {
+      "path": "tests/reference/macos_golden_faz1b/base_km_last10_fold_ledger.csv",
+      "sha256": "6d605dd02b7c1a4232a1299bac91a266cc4ee1df2e9446ce995fcea15fa7c26d"
+    },
+    "ceiling_hazard_v0": {
+      "path": "tests/reference/macos_golden_faz1b/ceiling_hazard_v0_fold_ledger.csv",
+      "sha256": "976b4dcea9819160bf863873a0a3e3a639942bdfeec6f9229e015047c904665b"
+    },
+    "ceiling_hazard_v0@INF": {
+      "path": "tests/reference/macos_golden_faz1b/ceiling_hazard_v0@INF_fold_ledger.csv",
+      "sha256": "90b610463de417c702cfae8032957aa4745aefcb4814a2745459da90bddb2f93"
+    }
+  },
+  "created_at": "2026-09-27T17:07:16+03:00",
+  "description": "Faz 7: tavan serisi v1 adaylarının (SPEC_HAZARD_V1) bu makinedeki walk-forward fold ledger'ları (clip ve real PLAN_CEILING'de, pooled ve @INF PLAN_CEILING_POOLED'da), havuz planının KM kuralları (keşif) ve nihai fit önizlemeleri. Regresyon testi bunlara karşı BİREBİR (bayt) çalışır; docs/MODELS.md Faz 7 bölümü bunlardan üretilir. Modeller DONDURULMADI; önizlemeler models/'e yazılmadı.",
+  "final_fit_note": "models/'e yazılmadı; dondurma görevi bit-eşitliği created_at, code_version ve runtime dışında sınar",
+  "final_fit_previews": {
+    "ceiling_hazard_v1_clip": {
+      "file": "ceiling_hazard_v1_clip_final_fit_preview.json",
+      "sha256": "18fdfb92d286602796e41f5ca6888b55b137bb86cd77518f2e3a25b928050e81"
+    },
+    "ceiling_hazard_v1_pooled": {
+      "file": "ceiling_hazard_v1_pooled_final_fit_preview.json",
+      "sha256": "4fab0d630259aaf3054b32eae481e90b667212bea9a154ca7db16472cec35f9a"
+    },
+    "ceiling_hazard_v1_pooled@INF": {
+      "file": "ceiling_hazard_v1_pooled@INF_final_fit_preview.json",
+      "sha256": "88c069584f7214c9c2323e61e7e8e3ab58b61076d0f4ca584cb4c66925a8f2ad"
+    },
+    "ceiling_hazard_v1_real": {
+      "file": "ceiling_hazard_v1_real_final_fit_preview.json",
+      "sha256": "212a4075da6c306b9e7d234f7ef2b98b8cb0ae87c97e1b33e290d8d4913cef55"
+    }
+  },
+  "git_commit": "eda9732f73832d928e2e60431a797198650a27dc",
+  "machine": {
+    "platform": "Darwin 27.0.0 arm64 / CPython 3.12.14"
+  },
+  "runs": {
+    "base_km_expanding__pooled": {
+      "computed_in_run": "ceiling_hazard_v1_pooled",
+      "file": "base_km_expanding__pooled_fold_ledger.csv",
+      "ledger_sha256": "cd77d9fec3d6446d38d56a007642837b3e012ae417b4719ef697e994273f6738",
+      "model_id": "base_km_expanding",
+      "plan_id": "H99_PLUS_OOT_OPEN_CEILING_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_MIN10IPO_5EV_5SV"
+    },
+    "base_km_last10__pooled": {
+      "computed_in_run": "ceiling_hazard_v1_pooled",
+      "file": "base_km_last10__pooled_fold_ledger.csv",
+      "ledger_sha256": "e93ffc42a75ee8c8e5b3587351e1d91f4e2b2f890911b65e4908074c89f3f525",
+      "model_id": "base_km_last10",
+      "plan_id": "H99_PLUS_OOT_OPEN_CEILING_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_MIN10IPO_5EV_5SV"
+    },
+    "ceiling_hazard_v1_clip": {
+      "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+      "file": "ceiling_hazard_v1_clip_fold_ledger.csv",
+      "ledger_sha256": "22057c06f683871ea1fd7cb8c98d46a36f60135b5f7d173fd8e71b7987865141",
+      "log_entry": {
+        "context": "faz7_golden_b1",
+        "started_at": "2026-09-27T17:06:48+03:00"
+      },
+      "model_id": "ceiling_hazard_v1_clip",
+      "plan_id": "H99_CEILING_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_MIN10IPO_5EV_5SV",
+      "spec_sha256": "6103d3c9189cf70dd92e65e0bba62d482e71b4d4e7ac5248aca120069684af19"
+    },
+    "ceiling_hazard_v1_pooled": {
+      "data_version_sha256": "2ee8d51be3f026ad05ff7b4894f9512809556b3da2fd2d0b06256b7de5ee525a",
+      "file": "ceiling_hazard_v1_pooled_fold_ledger.csv",
+      "ledger_sha256": "e165cafe26ee7150b66eb3b31e8e0d83e351983a889be6974e68f5c0f6f1010c",
+      "log_entry": {
+        "context": "faz7_golden_b1",
+        "started_at": "2026-09-27T17:06:57+03:00"
+      },
+      "model_id": "ceiling_hazard_v1_pooled",
+      "plan_id": "H99_PLUS_OOT_OPEN_CEILING_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_MIN10IPO_5EV_5SV",
+      "spec_sha256": "2a088b0d86d7c9868558d3004b6b7de9545734cf4155b51a67f8ac2ce0eb6845"
+    },
+    "ceiling_hazard_v1_pooled@INF": {
+      "data_version_sha256": "2ee8d51be3f026ad05ff7b4894f9512809556b3da2fd2d0b06256b7de5ee525a",
+      "file": "ceiling_hazard_v1_pooled@INF_fold_ledger.csv",
+      "ledger_sha256": "08cec307684d4da7aaa863fc5d3e22827a6032834a34c1d52914cfb5475a4128",
+      "log_entry": {
+        "context": "faz7_golden_b1",
+        "started_at": "2026-09-27T17:07:15+03:00"
+      },
+      "model_id": "ceiling_hazard_v1_pooled@INF",
+      "plan_id": "H99_PLUS_OOT_OPEN_CEILING_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_MIN10IPO_5EV_5SV",
+      "spec_sha256": "f53ad4cf1ba9dd08ab03678e86e5a49b56b1363d8205b27c00113d280ab82872"
+    },
+    "ceiling_hazard_v1_real": {
+      "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+      "file": "ceiling_hazard_v1_real_fold_ledger.csv",
+      "ledger_sha256": "e97a67f4246e5f706250ae74585e2aa0e29e3204dfa7a5ed221ad5e66610e955",
+      "log_entry": {
+        "context": "faz7_golden_b1",
+        "started_at": "2026-09-27T17:06:53+03:00"
+      },
+      "model_id": "ceiling_hazard_v1_real",
+      "plan_id": "H99_CEILING_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_MIN10IPO_5EV_5SV",
+      "spec_sha256": "fea051b617520b9fedcfe2876abbf8f80614250e4fd527e182479e7bf920f327"
+    }
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  }
+}

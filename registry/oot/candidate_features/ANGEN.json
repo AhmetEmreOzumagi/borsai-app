@@ -1,0 +1,281 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "ANGEN",
+  "company": "Anatolia Tanı ve Biyoteknoloji Ürünleri Araştırma Geliştirme Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "109585",
+      "source_id": "KAP_971143_EK1",
+      "source_document": "KAP 971143 ek 1",
+      "source_published_at": "2021-10-17T21:21:17+03:00",
+      "source_sha256": "fb650ddd44d13daac0144b0d69172845b55502e2e4f42a43b9999c30c1297a3c",
+      "source_path": "registry/oot/source_docs/ANGEN/KAP_971143_ek1.pdf",
+      "quote": "Toplam 20.000.000 %100,0 113.032 194.986.878 %100,0 109.585 23.000.000 %100,0",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 113.032; dağıtım yapılan 109.585",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "113.032",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "113.032",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "113.032 talep eden kişi sayısı; dağıtım yapılan kişi sayısı 109.585 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "109385",
+        "domestic_institutional": "131",
+        "foreign_institutional": "7",
+        "employees": "62"
+      },
+      "source_id": "KAP_971143_EK1",
+      "source_document": "KAP 971143 ek 1",
+      "source_published_at": "2021-10-17T21:21:17+03:00",
+      "source_sha256": "fb650ddd44d13daac0144b0d69172845b55502e2e4f42a43b9999c30c1297a3c",
+      "source_path": "registry/oot/source_docs/ANGEN/KAP_971143_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 11.800.000 %59,0 112.831 177.539.370 %91,1 109.385 13.570.000 %59,0",
+        "Yurt İçi Kurumsal 6.000.000 %30,0 132 14.785.429 %7,6 131 6.900.000 %30,0",
+        "Yurt Dışı Kurumsal 2.000.000 %10,0 7 2.406.788 %1,2 7 2.300.000 %10,0",
+        "Şirket Çalışanları 200.000 %1,0 62 255.291 %0,1 62 230.000 %1,0"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 112.831, yurt içi kurumsal 132, yurt dışı kurumsal 7, çalışan 62",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "112.831",
+        "Yurt İçi Kurumsal": "132",
+        "Yurt Dışı Kurumsal": "7",
+        "Şirket Çalışanları": "62"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '112.831', 'Yurt İçi Kurumsal': '132', 'Yurt Dışı Kurumsal': '7', 'Şirket Çalışanları': '62'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex talep eden sayılarını almış; dağıtım yapılan: bireysel 109.385, yurt içi kurumsal 131, yurt dışı kurumsal 7, çalışan 62"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "15.05",
+      "source_id": "KAP_971143_EK1",
+      "source_document": "KAP 971143 ek 1",
+      "source_published_at": "2021-10-17T21:21:17+03:00",
+      "source_sha256": "fb650ddd44d13daac0144b0d69172845b55502e2e4f42a43b9999c30c1297a3c",
+      "source_path": "registry/oot/source_docs/ANGEN/KAP_971143_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara tahsis edilen payların 15,05 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "15,05",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "2.46",
+      "source_id": "KAP_971143_EK1",
+      "source_document": "KAP 971143 ek 1",
+      "source_published_at": "2021-10-17T21:21:17+03:00",
+      "source_sha256": "fb650ddd44d13daac0144b0d69172845b55502e2e4f42a43b9999c30c1297a3c",
+      "source_path": "registry/oot/source_docs/ANGEN/KAP_971143_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara tahsis edilen payların 2,46 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,46",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "1.20",
+      "source_id": "KAP_971143_EK1",
+      "source_document": "KAP 971143 ek 1",
+      "source_published_at": "2021-10-17T21:21:17+03:00",
+      "source_sha256": "fb650ddd44d13daac0144b0d69172845b55502e2e4f42a43b9999c30c1297a3c",
+      "source_path": "registry/oot/source_docs/ANGEN/KAP_971143_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara tahsis edilen payların 1,20 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "1,20",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "13570000",
+        "domestic_institutional": "6900000",
+        "foreign_institutional": "2300000",
+        "employees": "230000"
+      },
+      "source_id": "KAP_971143_EK1",
+      "source_document": "KAP 971143 ek 1",
+      "source_published_at": "2021-10-17T21:21:17+03:00",
+      "source_sha256": "fb650ddd44d13daac0144b0d69172845b55502e2e4f42a43b9999c30c1297a3c",
+      "source_path": "registry/oot/source_docs/ANGEN/KAP_971143_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 11.800.000 %59,0 112.831 177.539.370 %91,1 109.385 13.570.000 %59,0",
+        "Yurt İçi Kurumsal 6.000.000 %30,0 132 14.785.429 %7,6 131 6.900.000 %30,0",
+        "Yurt Dışı Kurumsal 2.000.000 %10,0 7 2.406.788 %1,2 7 2.300.000 %10,0",
+        "Şirket Çalışanları 200.000 %1,0 62 255.291 %0,1 62 230.000 %1,0"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "13.570.000",
+        "Yurt İçi Kurumsal": "6.900.000",
+        "Yurt Dışı Kurumsal": "2.300.000",
+        "Şirket Çalışanları": "230.000"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '13.570.000', 'Yurt İçi Kurumsal': '6.900.000', 'Yurt Dışı Kurumsal': '2.300.000', 'Şirket Çalışanları': '230.000'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "59.0",
+      "source_id": "KAP_971143_EK1",
+      "source_document": "KAP 971143 ek 1",
+      "source_published_at": "2021-10-17T21:21:17+03:00",
+      "source_sha256": "fb650ddd44d13daac0144b0d69172845b55502e2e4f42a43b9999c30c1297a3c",
+      "source_path": "registry/oot/source_docs/ANGEN/KAP_971143_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 11.800.000 %59,0 112.831 177.539.370 %91,1 109.385 13.570.000 %59,0",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %59,0",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "59,0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "30.0",
+      "source_id": "KAP_971143_EK1",
+      "source_document": "KAP 971143 ek 1",
+      "source_published_at": "2021-10-17T21:21:17+03:00",
+      "source_sha256": "fb650ddd44d13daac0144b0d69172845b55502e2e4f42a43b9999c30c1297a3c",
+      "source_path": "registry/oot/source_docs/ANGEN/KAP_971143_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 6.000.000 %30,0 132 14.785.429 %7,6 131 6.900.000 %30,0",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %30,0",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "30,0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "10.0",
+      "source_id": "KAP_971143_EK1",
+      "source_document": "KAP 971143 ek 1",
+      "source_published_at": "2021-10-17T21:21:17+03:00",
+      "source_sha256": "fb650ddd44d13daac0144b0d69172845b55502e2e4f42a43b9999c30c1297a3c",
+      "source_path": "registry/oot/source_docs/ANGEN/KAP_971143_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal 2.000.000 %10,0 7 2.406.788 %1,2 7 2.300.000 %10,0",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %10,0",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "10,0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve 7 sayfalık TSSD dağıtım yöntemini adlandırmıyor (TSSD başvuru şekli için izahnameye atıf yapıyor)",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "'sabit fiyat' ifadesi sonuç ekinde ve TSSD'de yok (qfind); fiyat aralığıyla talep toplanmış (21,0-22,5 TL)"
+      }
+    },
+    "lead_broker": {
+      "value": "Ak Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_969317_EK1",
+      "source_document": "KAP 969317 ek 1",
+      "source_published_at": "2021-10-08T21:18:15+03:00",
+      "source_sha256": "ddfb4daaba82ecb5e30b8bd0e15fb0751dcd1aa6d648da71e25267d4ec74868a",
+      "source_path": "registry/oot/source_docs/ANGEN/KAP_969317_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Ak Yatırım Menkul Degerler A.S.'nin",
+      "note": "TSSD OCR metni ('Degerler A.S.' OCR yazımı); sonuç bildirimini yayımlayan kurum da AK YATIRIM MENKUL DEĞERLER A.Ş.",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Ak Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız",
+      "source_id": "KAP_971306",
+      "source_document": "KAP 971306",
+      "source_published_at": "2021-10-18T18:58:34+03:00",
+      "source_sha256": "17a40f2c9a7969f483abca03751186dbd761c3730c3661f1897c00df90b91e64",
+      "source_path": "registry/oot/source_docs/ANGEN/KAP_971306_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_971306",
+      "source_document": "KAP 971306",
+      "source_published_at": "2021-10-18T18:58:34+03:00",
+      "source_sha256": "17a40f2c9a7969f483abca03751186dbd761c3730c3661f1897c00df90b91e64",
+      "source_path": "registry/oot/source_docs/ANGEN/KAP_971306_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_971306": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 971306",
+      "published_at": "2021-10-18T18:58:34+03:00",
+      "sha256": "17a40f2c9a7969f483abca03751186dbd761c3730c3661f1897c00df90b91e64",
+      "path": "registry/oot/source_docs/ANGEN/KAP_971306_bildirim.pdf"
+    },
+    "KAP_971143_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 971143 ek 1",
+      "published_at": "2021-10-17T21:21:17+03:00",
+      "sha256": "fb650ddd44d13daac0144b0d69172845b55502e2e4f42a43b9999c30c1297a3c",
+      "path": "registry/oot/source_docs/ANGEN/KAP_971143_ek1.pdf"
+    },
+    "KAP_969317_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 969317 ek 1",
+      "published_at": "2021-10-08T21:18:15+03:00",
+      "sha256": "ddfb4daaba82ecb5e30b8bd0e15fb0751dcd1aa6d648da71e25267d4ec74868a",
+      "path": "registry/oot/source_docs/ANGEN/KAP_969317_ek1.pdf"
+    }
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "KIMMR",
+  "company": "Ersan Alışveriş Hizmetleri ve Gıda Sanayi Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_964579",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "3.5",
+      "source_id": "KAP_964579",
+      "source_document": "KAP 964579",
+      "source_published_at": "2021-09-20T18:10:05+03:00",
+      "source_sha256": "7bb8c036f23da18fabbfc45e2082a39fa0ad6f355839ab3607a12608c9a448e0",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964579_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 3,5",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_44",
+          "quote": "Ersan Alışveriş 3,50 Hizmetleri ve Gıda 175.000.000 240.000.000 65.000.000 - - - (1) Sanayi Ticaret A.Ş.",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "65000000",
+      "source_id": "KAP_964579",
+      "source_document": "KAP 964579",
+      "source_published_at": "2021-09-20T18:10:05+03:00",
+      "source_sha256": "7bb8c036f23da18fabbfc45e2082a39fa0ad6f355839ab3607a12608c9a448e0",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964579_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 65.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "240000000",
+      "source_id": "KAP_964579",
+      "source_document": "KAP 964579",
+      "source_published_at": "2021-09-20T18:10:05+03:00",
+      "source_sha256": "7bb8c036f23da18fabbfc45e2082a39fa0ad6f355839ab3607a12608c9a448e0",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964579_bildirim.pdf",
+      "quote": "sermayesini temsil eden 240.000.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "65000000",
+      "source_id": "KAP_964477_EK1",
+      "source_document": "KAP 964477 ek 1",
+      "source_published_at": "2021-09-20T10:59:25+03:00",
+      "source_sha256": "8066c327e83974df6896d4506971be5064d5c3209d797d793b237ce1e03ad3ac",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964477_ek1.pdf",
+      "quote": "çıkarılmış sermayesinin 175.000.000 TL'den 240.000.000 TL’ye artırılması nedeni ile 65.000.000 TL nominal değerli 65.000.000 adet pay halka arz edilmiştir",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "existing_share_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_44",
+      "source_document": "SPK Bülteni 2021/44",
+      "source_published_at": "2021-09-09T23:59:59+03:00",
+      "source_sha256": "d7a514b8a85bb502f8daa1a6ad8706793a9a3e367599e52fc0575f18ab9d4a2a",
+      "source_path": "registry/oot/source_docs/KIMMR/SPK_BULTEN_2021-44.pdf",
+      "quote": "Ersan Alışveriş 3,50 Hizmetleri ve Gıda 175.000.000 240.000.000 65.000.000 - - - (1) Sanayi Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_964477_EK1",
+          "quote": "Mükerrer tarama yapıldıktan sonra 187.719 adet emir ile 166.336.496 pay dağıtıma konu edilmiş ve 65.000.000 TL nominal değerli payların satışı gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_planned_base": "65000000 = 65000000 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_multiple": {
+      "value": "2.62",
+      "source_id": "KAP_964477_EK1",
+      "source_document": "KAP 964477 ek 1",
+      "source_published_at": "2021-09-20T10:59:25+03:00",
+      "source_sha256": "8066c327e83974df6896d4506971be5064d5c3209d797d793b237ce1e03ad3ac",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964477_ek1.pdf",
+      "quote": "Borsa İstanbul tarafından paylaşılan verilere göre toplam filtre edilmemiş 2,62 katına denk gelen 170.523.403 pay karşılığı 193.209 adet emir ile toplam 596.831.910 TL talep toplanmıştır.",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (filtre edilmemiş; 65.000.000 TL nominal arza göre)",
+      "denominator_includes_additional_sale": false,
+      "note": "ek satış planlanmamış (SPK '-'); 170.523.403 / 65.000.000 = 2,6234. Mükerrer tarama sonrası dağıtıma konu 166.336.496 pay (filtrelenmiş) / 65.000.000 = 2,5590; belge bunu kat olarak yazmıyor",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_964477_EK1",
+      "source_document": "KAP 964477 ek 1",
+      "source_published_at": "2021-09-20T10:59:25+03:00",
+      "source_sha256": "8066c327e83974df6896d4506971be5064d5c3209d797d793b237ce1e03ad3ac",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964477_ek1.pdf",
+      "quote": "toplam filtre edilmemiş 2,62 katına denk gelen 170.523.403 pay",
+      "locator": "filtrelenmiş karşılık: 'Mükerrer tarama yapıldıktan sonra 187.719 adet emir ile 166.336.496 pay dağıtıma konu edilmiş'",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_964477_EK1",
+      "source_document": "KAP 964477 ek 1",
+      "source_published_at": "2021-09-20T10:59:25+03:00",
+      "source_sha256": "8066c327e83974df6896d4506971be5064d5c3209d797d793b237ce1e03ad3ac",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964477_ek1.pdf",
+      "quote": "Mükerrer tarama yapıldıktan sonra 187.719 adet emir ile 166.336.496 pay dağıtıma konu edilmiş ve 65.000.000 TL nominal değerli payların satışı gerçekleşmiştir.",
+      "zero_from_statement": true,
+      "note": "SPK satırında ek satış '-'; satılan toplam 65.000.000 = planlanan taban (bedelli 65.000.000)",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": "227500000",
+      "source_id": "KAP_964477_EK1",
+      "source_document": "KAP 964477 ek 1",
+      "source_published_at": "2021-09-20T10:59:25+03:00",
+      "source_sha256": "8066c327e83974df6896d4506971be5064d5c3209d797d793b237ce1e03ad3ac",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964477_ek1.pdf",
+      "quote": "belirlenen halka arz fiyatı ile halka arz büyüklüğü 227.500.000 TL olarak gerçekleşmiştir",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "3.50",
+      "source_id": "SPK_BULTEN_2021_44",
+      "source_document": "SPK Bülteni 2021/44",
+      "source_published_at": "2021-09-09T23:59:59+03:00",
+      "source_sha256": "d7a514b8a85bb502f8daa1a6ad8706793a9a3e367599e52fc0575f18ab9d4a2a",
+      "source_path": "registry/oot/source_docs/KIMMR/SPK_BULTEN_2021-44.pdf",
+      "quote": "Ersan Alışveriş 3,50 Hizmetleri ve Gıda 175.000.000 240.000.000 65.000.000 - - - (1) Sanayi Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-09-09",
+        "bookbuilding_start": "2021-09-16",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "175000000",
+      "source_id": "SPK_BULTEN_2021_44",
+      "source_document": "SPK Bülteni 2021/44",
+      "source_published_at": "2021-09-09T23:59:59+03:00",
+      "source_sha256": "d7a514b8a85bb502f8daa1a6ad8706793a9a3e367599e52fc0575f18ab9d4a2a",
+      "source_path": "registry/oot/source_docs/KIMMR/SPK_BULTEN_2021-44.pdf",
+      "quote": "Ersan Alışveriş 3,50 Hizmetleri ve Gıda 175.000.000 240.000.000 65.000.000 - - - (1) Sanayi Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-09-09",
+        "bookbuilding_start": "2021-09-16",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "240000000",
+      "source_id": "SPK_BULTEN_2021_44",
+      "source_document": "SPK Bülteni 2021/44",
+      "source_published_at": "2021-09-09T23:59:59+03:00",
+      "source_sha256": "d7a514b8a85bb502f8daa1a6ad8706793a9a3e367599e52fc0575f18ab9d4a2a",
+      "source_path": "registry/oot/source_docs/KIMMR/SPK_BULTEN_2021-44.pdf",
+      "quote": "Ersan Alışveriş 3,50 Hizmetleri ve Gıda 175.000.000 240.000.000 65.000.000 - - - (1) Sanayi Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-09-09",
+        "bookbuilding_start": "2021-09-16",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "65000000",
+      "source_id": "SPK_BULTEN_2021_44",
+      "source_document": "SPK Bülteni 2021/44",
+      "source_published_at": "2021-09-09T23:59:59+03:00",
+      "source_sha256": "d7a514b8a85bb502f8daa1a6ad8706793a9a3e367599e52fc0575f18ab9d4a2a",
+      "source_path": "registry/oot/source_docs/KIMMR/SPK_BULTEN_2021-44.pdf",
+      "quote": "Ersan Alışveriş 3,50 Hizmetleri ve Gıda 175.000.000 240.000.000 65.000.000 - - - (1) Sanayi Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-09-09",
+        "bookbuilding_start": "2021-09-16",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_44",
+      "source_document": "SPK Bülteni 2021/44",
+      "source_published_at": "2021-09-09T23:59:59+03:00",
+      "source_sha256": "d7a514b8a85bb502f8daa1a6ad8706793a9a3e367599e52fc0575f18ab9d4a2a",
+      "source_path": "registry/oot/source_docs/KIMMR/SPK_BULTEN_2021-44.pdf",
+      "quote": "Ersan Alışveriş 3,50 Hizmetleri ve Gıda 175.000.000 240.000.000 65.000.000 - - - (1) Sanayi Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-09-09",
+        "bookbuilding_start": "2021-09-16",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "65000000",
+      "source_id": "SPK_BULTEN_2021_44",
+      "source_document": "SPK Bülteni 2021/44",
+      "source_published_at": "2021-09-09T23:59:59+03:00",
+      "source_sha256": "d7a514b8a85bb502f8daa1a6ad8706793a9a3e367599e52fc0575f18ab9d4a2a",
+      "source_path": "registry/oot/source_docs/KIMMR/SPK_BULTEN_2021-44.pdf",
+      "quote": "Ersan Alışveriş 3,50 Hizmetleri ve Gıda 175.000.000 240.000.000 65.000.000 - - - (1) Sanayi Ticaret A.Ş.",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-09-09",
+        "bookbuilding_start": "2021-09-16",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_44",
+      "source_document": "SPK Bülteni 2021/44",
+      "source_published_at": "2021-09-09T23:59:59+03:00",
+      "source_sha256": "d7a514b8a85bb502f8daa1a6ad8706793a9a3e367599e52fc0575f18ab9d4a2a",
+      "source_path": "registry/oot/source_docs/KIMMR/SPK_BULTEN_2021-44.pdf",
+      "quote": "Ersan Alışveriş 3,50 Hizmetleri ve Gıda 175.000.000 240.000.000 65.000.000 - - - (1) Sanayi Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2021-09-09",
+        "bookbuilding_start": "2021-09-16",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "65000000",
+      "source_id": "SPK_BULTEN_2021_44",
+      "source_document": "SPK Bülteni 2021/44",
+      "source_published_at": "2021-09-09T23:59:59+03:00",
+      "source_sha256": "d7a514b8a85bb502f8daa1a6ad8706793a9a3e367599e52fc0575f18ab9d4a2a",
+      "source_path": "registry/oot/source_docs/KIMMR/SPK_BULTEN_2021-44.pdf",
+      "quote": "Ersan Alışveriş 3,50 Hizmetleri ve Gıda 175.000.000 240.000.000 65.000.000 - - - (1) Sanayi Ticaret A.Ş.",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-09-09",
+        "bookbuilding_start": "2021-09-16",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2021-09-22",
+      "source_id": "KAP_964579",
+      "source_document": "KAP 964579",
+      "source_published_at": "2021-09-20T18:10:05+03:00",
+      "source_sha256": "7bb8c036f23da18fabbfc45e2082a39fa0ad6f355839ab3607a12608c9a448e0",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964579_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 22/09/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-09-16",
+      "source_id": "KAP_964579",
+      "source_document": "KAP 964579",
+      "source_published_at": "2021-09-20T18:10:05+03:00",
+      "source_sha256": "7bb8c036f23da18fabbfc45e2082a39fa0ad6f355839ab3607a12608c9a448e0",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964579_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 16-17/09/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-09-17",
+      "source_id": "KAP_964579",
+      "source_document": "KAP 964579",
+      "source_published_at": "2021-09-20T18:10:05+03:00",
+      "source_sha256": "7bb8c036f23da18fabbfc45e2082a39fa0ad6f355839ab3607a12608c9a448e0",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964579_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 16-17/09/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_964579": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 964579",
+      "published_at": "2021-09-20T18:10:05+03:00",
+      "sha256": "7bb8c036f23da18fabbfc45e2082a39fa0ad6f355839ab3607a12608c9a448e0",
+      "path": "registry/oot/source_docs/KIMMR/KAP_964579_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_44": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/44",
+      "published_at": "2021-09-09T23:59:59+03:00",
+      "sha256": "d7a514b8a85bb502f8daa1a6ad8706793a9a3e367599e52fc0575f18ab9d4a2a",
+      "path": "registry/oot/source_docs/KIMMR/SPK_BULTEN_2021-44.pdf"
+    },
+    "KAP_964477_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 964477 ek 1",
+      "published_at": "2021-09-20T10:59:25+03:00",
+      "sha256": "8066c327e83974df6896d4506971be5064d5c3209d797d793b237ce1e03ad3ac",
+      "path": "registry/oot/source_docs/KIMMR/KAP_964477_ek1.pdf"
+    }
+  }
+}

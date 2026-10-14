@@ -1,0 +1,178 @@
+{
+ "ticker": "REEDR",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_1195620",
+  "KAP_1195620_EK1",
+  "KAP_1193538_EK1",
+  "KAP_1195976"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "3.95",
+   "origin": "SOURCE_REPORTED",
+   "source_id": "KAP_1195620_EK1",
+   "quote": "halka arz edilen 215.000.000 TL nominal değerli payların 3,95 katına denk gelen 848.216.796 TL nominal değerli pay talebi gelmiştir.",
+   "definition": "belgedeki toplam kat (848.216.796 talep / 215.000.000 arz)",
+   "denominator_includes_additional_sale": false,
+   "note": "ek satış planlanmamış (SPK satırı '-'); aynı belgedeki toplamlardan 3,9451944"
+  },
+  "total_demand_filter_status": {
+   "value": "NOT_SPECIFIED",
+   "source_id": "KAP_1195620_EK1",
+   "note": "belgede 'filtre' ifadesi yok"
+  },
+  "ipo_size_tl": {
+   "value": "1999500000",
+   "source_id": "KAP_1195620_EK1",
+   "quote": "Toplam halka arz büyüklüğü 1.999.500.000 TL olarak gerçekleşmiştir."
+  },
+  "capital_increase_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (yalnız 'halka arz edilen 215.000.000'; 170.000.000 bedelli / 45.000.000 ortak satışı ayrımı yalnız TSSD/SPK planında)"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (ortak satışı nominali sonuç ekinde yazılı değil)"
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_1195620_EK1",
+   "zero_from_statement": true,
+   "quote": "Halka arz edilen 215.000.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir.",
+   "note": "SPK satırında ek satış '-'; satılan toplam 215.000.000 = planlanan taban (170.000.000 + 45.000.000)"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_1195620_EK1",
+   "quote": "Halka arz edilen 215.000.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir."
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_1195620_EK1",
+   "used": "NONE",
+   "quote": "Halka arz edilen 215.000.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir.",
+   "note": "ek satış planlanmamıştı; satılan = taban"
+  },
+  "investor_count": {
+   "value": "4208278",
+   "source_id": "KAP_1195620_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "Toplam 215.000.000 %100 4.262.914 848.216.796 %100 4.208.278 215.000.000 %100",
+   "note": "talep eden 4.262.914; dağıtım yapılan 4.208.278"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "4208248",
+    "domestic_institutional": "30"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_1195620_EK1",
+   "quote": [
+    "182.750.000 %85 4.262.699 440.839.796 %51,97 4.208.248 182.750.000 %85",
+    "32.250.000 %15 215 407.377.000 %48,03 30 32.250.000 %15"
+   ],
+   "note": "başvuru: bireysel 4.262.699, yurt içi kurumsal 215; yurt dışı kurumsal grup yok"
+  },
+  "retail_demand_multiple": {
+   "value": "2.41",
+   "source_id": "KAP_1195620_EK1",
+   "quote": "Yurt İçi Bireysel Yatırımcılara tahsis edilen payların 2,41 katı"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": "12.63",
+   "source_id": "KAP_1195620_EK1",
+   "quote": "Yurt İçi Kurumsal Yatırımcılara tahsis edilen payların 12,63 katı talep gelmiştir."
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "sonuç ekinde yurt dışı kurumsal yatırımcı grubu yok"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "182750000",
+    "domestic_institutional": "32250000"
+   },
+   "source_id": "KAP_1195620_EK1",
+   "quote": [
+    "182.750.000 %85 4.262.699 440.839.796 %51,97 4.208.248 182.750.000 %85",
+    "32.250.000 %15 215 407.377.000 %48,03 30 32.250.000 %15"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "85",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1195620_EK1",
+   "quote": "182.750.000 %85 4.262.699 440.839.796 %51,97 4.208.248 182.750.000 %85",
+   "note": "planlanan da %85"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "15",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1195620_EK1",
+   "quote": "32.250.000 %15 215 407.377.000 %48,03 30 32.250.000 %15",
+   "note": "planlanan da %15"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": null,
+   "missing_reason": "sonuç ekinde yurt dışı kurumsal grup yok"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç belgesi ve TSSD dağıtım yöntemini adlandırmıyor"
+  },
+  "lead_broker": {
+   "value": "Türkiye Sınai Kalkınma Bankası A.Ş.; Ziraat Yatırım Menkul Değerler A.Ş.; Yatırım Finansman Menkul Değerler A.Ş.",
+   "source_id": "KAP_1193538_EK1",
+   "quote": "halka arzda satışa aracıhk edecek Türkiye Sınai Kalkınma Bankası A.Ş. (www.tskb.com.tr), Ziraat Yatırım Menkul Değerler A.Ş (www.ziraatyatirim.com.tr) ve Yatırım Finansmanı Menkul Değerler Anonim Şirketi'nin",
+   "note": "TSSD (OCR) üç aracı kurumu birlikte sayıyor, konsorsiyum lideri ayrıca belirtilmiyor; sonuç bildirimini TSKB yayımlamış"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {
+  "ipo_size_tl": {
+   "codex_value": "1.999.500.000",
+   "verdict": "FOUND_SAME"
+  },
+  "total_demand_multiple": {
+   "codex_value": "3,95",
+   "verdict": "FOUND_SAME"
+  },
+  "investor_count": {
+   "codex_value": "4.262.914",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "4.262.914 talep eden kişi sayısı; dağıtım yapılan 4.208.278 (ALLOCATED tercih)"
+  },
+  "retail_demand_multiple": {
+   "codex_value": "2,41",
+   "verdict": "FOUND_SAME"
+  },
+  "domestic_institutional_demand_multiple": {
+   "codex_value": "12,63",
+   "verdict": "FOUND_SAME"
+  }
+ },
+ "notes": "Borsa dışı talep toplama (9,30 TL). Sonuç eki toplam katı (3,95) açıkça veriyor; filtre ifadesi yok. Ek satış yok; sermaye artırımı/ortak satışı ayrımı sonuç ekinde yazılı değil.",
+ "needs_search": false
+}

@@ -1,0 +1,245 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "MANAS",
+  "company": "Manas Enerji Yönetimi Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "19450",
+      "source_id": "KAP_951521_EK1",
+      "source_document": "KAP 951521 ek 1",
+      "source_published_at": "2021-07-16T17:06:59+03:00",
+      "source_sha256": "60fad51eea0f54eedb108c82f4fa93b5f5a2de0eb5b268bc0ff59de67f5974d2",
+      "source_path": "registry/oot/source_docs/MANAS/KAP_951521_ek1.pdf",
+      "quote": "TOPLAM 19.450 7.800.000 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "dağıtım tablosu yatırımcı sayısı; metin: 'Halka arza toplamda 19.450 olarak yatırımcı katılmıştır.'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "19.450",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "19392",
+        "domestic_institutional": "21",
+        "foreign_retail": "37",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_951521_EK1",
+      "source_document": "KAP 951521 ek 1",
+      "source_published_at": "2021-07-16T17:06:59+03:00",
+      "source_sha256": "60fad51eea0f54eedb108c82f4fa93b5f5a2de0eb5b268bc0ff59de67f5974d2",
+      "source_path": "registry/oot/source_docs/MANAS/KAP_951521_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel 19.392 7.601.604 97,46%",
+        "Yurtiçi Kurumsal 21 178.280 2,29%",
+        "Yurtdışı Bireysel 37 20.116 0,26%",
+        "Yurtdışı Kurumsal 0 0 0,00%"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "19.392",
+        "Yurtiçi Kurumsal": "21",
+        "Yurtdışı Bireysel": "37",
+        "Yurtdışı Kurumsal": "0"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '19.392', 'Yurtiçi Kurumsal': '21', 'Yurtdışı Bireysel': '37', 'Yurtdışı Kurumsal': '0'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır', grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "7601604",
+        "domestic_institutional": "178280",
+        "foreign_retail": "20116",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_951521_EK1",
+      "source_document": "KAP 951521 ek 1",
+      "source_published_at": "2021-07-16T17:06:59+03:00",
+      "source_sha256": "60fad51eea0f54eedb108c82f4fa93b5f5a2de0eb5b268bc0ff59de67f5974d2",
+      "source_path": "registry/oot/source_docs/MANAS/KAP_951521_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel 19.392 7.601.604 97,46%",
+        "Yurtiçi Kurumsal 21 178.280 2,29%",
+        "Yurtdışı Bireysel 37 20.116 0,26%",
+        "Yurtdışı Kurumsal 0 0 0,00%"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "7.601.604",
+        "Yurtiçi Kurumsal": "178.280",
+        "Yurtdışı Bireysel": "20.116",
+        "Yurtdışı Kurumsal": "0"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '7.601.604', 'Yurtiçi Kurumsal': '178.280', 'Yurtdışı Bireysel': '20.116', 'Yurtdışı Kurumsal': '0'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "97.46",
+      "source_id": "KAP_951521_EK1",
+      "source_document": "KAP 951521 ek 1",
+      "source_published_at": "2021-07-16T17:06:59+03:00",
+      "source_sha256": "60fad51eea0f54eedb108c82f4fa93b5f5a2de0eb5b268bc0ff59de67f5974d2",
+      "source_path": "registry/oot/source_docs/MANAS/KAP_951521_ek1.pdf",
+      "quote": "Yurtiçi Bireysel 19.392 7.601.604 97,46%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "97,46",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "2.29",
+      "source_id": "KAP_951521_EK1",
+      "source_document": "KAP 951521 ek 1",
+      "source_published_at": "2021-07-16T17:06:59+03:00",
+      "source_sha256": "60fad51eea0f54eedb108c82f4fa93b5f5a2de0eb5b268bc0ff59de67f5974d2",
+      "source_path": "registry/oot/source_docs/MANAS/KAP_951521_ek1.pdf",
+      "quote": "Yurtiçi Kurumsal 21 178.280 2,29%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,29",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.00",
+      "source_id": "KAP_951521_EK1",
+      "source_document": "KAP 951521 ek 1",
+      "source_published_at": "2021-07-16T17:06:59+03:00",
+      "source_sha256": "60fad51eea0f54eedb108c82f4fa93b5f5a2de0eb5b268bc0ff59de67f5974d2",
+      "source_path": "registry/oot/source_docs/MANAS/KAP_951521_ek1.pdf",
+      "quote": "Yurtdışı Kurumsal 0 0 0,00%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,00",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Tera Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_946121_EK1",
+      "source_document": "KAP 946121 ek 1",
+      "source_published_at": "2021-07-05T13:25:27+03:00",
+      "source_sha256": "df17b4b544ae40916b0802ae1cdb2d78a8aacb562752209a8915cb326a67c6ea",
+      "source_path": "registry/oot/source_docs/MANAS/KAP_946121_ek1.pdf",
+      "quote": "satışa aracılık edecek Tera Yatırım Menkul Değerler A.Ş.'nin www.terayatirim.com",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Tera Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "TSSD'de aracı kurum olarak yazılı"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR) penceresinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_951548",
+      "source_document": "KAP 951548",
+      "source_published_at": "2021-07-16T18:11:49+03:00",
+      "source_sha256": "e2086a6523ef194b1a23d6fa1804a4947b5ba0c003d73b8a3e13bca795b5fc0b",
+      "source_path": "registry/oot/source_docs/MANAS/KAP_951548_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_951548",
+      "source_document": "KAP 951548",
+      "source_published_at": "2021-07-16T18:11:49+03:00",
+      "source_sha256": "e2086a6523ef194b1a23d6fa1804a4947b5ba0c003d73b8a3e13bca795b5fc0b",
+      "source_path": "registry/oot/source_docs/MANAS/KAP_951548_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_951548": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 951548",
+      "published_at": "2021-07-16T18:11:49+03:00",
+      "sha256": "e2086a6523ef194b1a23d6fa1804a4947b5ba0c003d73b8a3e13bca795b5fc0b",
+      "path": "registry/oot/source_docs/MANAS/KAP_951548_bildirim.pdf"
+    },
+    "KAP_951521_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 951521 ek 1",
+      "published_at": "2021-07-16T17:06:59+03:00",
+      "sha256": "60fad51eea0f54eedb108c82f4fa93b5f5a2de0eb5b268bc0ff59de67f5974d2",
+      "path": "registry/oot/source_docs/MANAS/KAP_951521_ek1.pdf"
+    },
+    "KAP_946121_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 946121 ek 1",
+      "published_at": "2021-07-05T13:25:27+03:00",
+      "sha256": "df17b4b544ae40916b0802ae1cdb2d78a8aacb562752209a8915cb326a67c6ea",
+      "path": "registry/oot/source_docs/MANAS/KAP_946121_ek1.pdf"
+    }
+  }
+}

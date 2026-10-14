@@ -1,0 +1,314 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "TNZTP",
+ "company": "Tapdi Oksijen Özel Sağlık ve Eğitim Hizmetleri Sanayi Ticaret A.Ş.",
+ "first_trading_date": "2023-01-11",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Borsa İstanbul Birincil Piyasa; yatırımcı grubu bazında tahsisat ve dağıtım yapılmadı",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_1092279_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8563fcce018572ee41412529",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1092279",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1092279",
+   "published_at": "2023-01-02T17:52:29+03:00",
+   "source_sha256": "72e08f922cac50997e7cb026df7913d8a8002e377299a216d4aa788274e0ac99",
+   "source_file": "source_docs/TNZTP/KAP_1092279_ek1.pdf",
+   "page": 16,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "\"Borsada Satış* yöntemi ile Borsa İstanbul Birincil Piyasada \"Borsa'da Satış - Sabit Fiyatla Talep Toplama ve Satış Yöntemiạồine göre paylar satışa sunulacağı için herhangi bir yatırımcı grubuna tahsisat ve dağıtım yapılmayacaktır.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1092279_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8563fcce018572ee41412529",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1092279",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1092279",
+     "published_at": "2023-01-02T17:52:29+03:00",
+     "source_sha256": "72e08f922cac50997e7cb026df7913d8a8002e377299a216d4aa788274e0ac99",
+     "source_file": "source_docs/TNZTP/KAP_1092279_ek1.pdf",
+     "page": 17,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Yatırımcılara paylarının tahsisat ve dağıtımı, halka arzın ikinci günü olan satışın gerçekleşeceği günde, Birincil piyasa işlem süresinin bitişini takiben, Borsa yönetimi tarafindan otomatik olarak yapılacaktır."
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Borsa'da satış (Sabit Fiyatla Talep Toplama ve Satış, Piramit Menkul). a) Yatırımcı grubu bazında tahsisat oranları: Yoktur; c) dağıtım yöntemi: Yoktur. Dağıtımı Borsa sistemi otomatik yapar. Belge eşit/oransal adlandırmıyor. Borsa İstanbul birincil piyasa duyurusu (KAP_1092754) da dağıtım yöntemi adlandırmıyor."
+  },
+  "price_stability_planned": {
+   "value": "TRUE",
+   "unit": "boolean",
+   "status": "VERIFIED",
+   "source_id": "KAP_1092279_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8563fcce018572ee41412529",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1092279",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1092279",
+   "published_at": "2023-01-02T17:52:29+03:00",
+   "source_sha256": "72e08f922cac50997e7cb026df7913d8a8002e377299a216d4aa788274e0ac99",
+   "source_file": "source_docs/TNZTP/KAP_1092279_ek1.pdf",
+   "page": 21,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Tiyat istikrarı işlemlerinin planlanıp planlanmadığı: Planlanmaktadır.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1092279_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8563fcce018572ee41412529",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1092279",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1092279",
+     "published_at": "2023-01-02T17:52:29+03:00",
+     "source_sha256": "72e08f922cac50997e7cb026df7913d8a8002e377299a216d4aa788274e0ac99",
+     "source_file": "source_docs/TNZTP/KAP_1092279_ek1.pdf",
+     "page": 22,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "26.5.1. Fiyat istikrarı işlemlerinin yerine getirilmesine yönelik garantinin olmadığına ilişkin açıklama: Piramit Menkul,Şirket paylarına yönelik olarak fiyat istikrarı işlemlerinde bulunmayı planlamaktadır."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "OCR başlıkta 'Tiyat' (Fiyat). Fiyat istikrarını Piramit Menkul yapar; kaynak ihraççının brüt halka arz gelirinin %20'si (57.176.000 TL). Garanti yok (26.5.1).",
+   "codex_value": true,
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_days": {
+   "value": "30",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_1092279_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8563fcce018572ee41412529",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1092279",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1092279",
+   "published_at": "2023-01-02T17:52:29+03:00",
+   "source_sha256": "72e08f922cac50997e7cb026df7913d8a8002e377299a216d4aa788274e0ac99",
+   "source_file": "source_docs/TNZTP/KAP_1092279_ek1.pdf",
+   "page": 22,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5.2. Fiyat istikrarı işlemlerinin gerçekleştirilebileceği zaman aralığı: Payların borsada işlem görmeye başlamasından itibaren 30 gündür.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "",
+   "codex_value": "30",
+   "codex_verdict": "VERIFIED"
+  },
+  "issuer_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_1092279_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8563fcce018572ee41412529",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1092279",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1092279",
+   "published_at": "2023-01-02T17:52:29+03:00",
+   "source_sha256": "72e08f922cac50997e7cb026df7913d8a8002e377299a216d4aa788274e0ac99",
+   "source_file": "source_docs/TNZTP/KAP_1092279_ek1.pdf",
+   "page": 23,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "a) İhraççı tarafından verilen taahhüt: Şirket, Yönetim Kurulu'nun 17.05.2022 tarih ve 2022/013 sayılı karanı ile Şirket paylarımımbirincil halka arzını takiben,paylarıın Borsa İstanbul A.Ş.'de işlem görmeye başladığı tarihten itibaren 12 ay süreyle herhangi bir bedelli sermaye artırımı yapılmamasına ve dolaşımdaki pay miktarının artırılmamasına,",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1092279_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8563fcce018572ee41412529",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1092279",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1092279",
+     "published_at": "2023-01-02T17:52:29+03:00",
+     "source_sha256": "72e08f922cac50997e7cb026df7913d8a8002e377299a216d4aa788274e0ac99",
+     "source_file": "source_docs/TNZTP/KAP_1092279_ek1.pdf",
+     "page": 23,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "\"Şirketimizin paylarının birincil halka arzı takiben, paylarımızın Borsa İstanbul A.Ş.'de işlem görmeye başladığı tarihten itibaren 12 ay süre ile bedelsiz sermaye artırımı yapılmamasına\" hükmünün de eklenmesine,"
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Belgede '12 ay' — ay × 30 = 360 (1 yıl olarak yazılmamış). Kapsam: bedelli sermaye artırımı yapmama, dolaşımdaki payı artırmama, yeni satış/halka arz yapmama, bu yönde karar/açıklama yapmama; 12.12.2022 YK kararıyla 12 ay bedelsiz sermaye artırımı yapmama da eklendi. Başlangıç: Borsa İstanbul'da işlem görmeye başlama. [doğrulayıcı: '12 ay' H99 biçiminde 1 yıl = 365 olarak kodlandı (ajan 360 yazmıştı)]",
+   "codex_value": "360",
+   "codex_verdict": "VERIFIED"
+  },
+  "shareholder_lockup_days": {
+   "value": "540",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_1092279_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8563fcce018572ee41412529",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1092279",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1092279",
+   "published_at": "2023-01-02T17:52:29+03:00",
+   "source_sha256": "72e08f922cac50997e7cb026df7913d8a8002e377299a216d4aa788274e0ac99",
+   "source_file": "source_docs/TNZTP/KAP_1092279_ek1.pdf",
+   "page": 23,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "b) Ortaklar tarafından verilen taahhütler: SPK VII-128.1 sayılı Pay Tebliği'nin 8'inci maddesinin birinci ve altıncı fıkraları ile 9'uncu maddesinin üçüncü fikrası kapsamında Dr. Mehmet Bülent Nuri BEKTUR, Op. Dr. Tamer KANOĞLU, Dr. Hasibe Serap ULUIRMAK, Dr. Musa DOĞANAY, Dr. Hande Şeniz BEKTUR, Op. Dr. Tümay KOCAOĞLU ve Op. Dr. Hakan KOCAOGLU tarafından 06.12.2022 tarihinde verilen taahhütler aşağıdaki gibidir; \"Tapdi Oksijen Özel Sağlık Ve Eğitim Hizmetleri San. Tic. A.Ş. 'de sahip olduğum şirket paylarını Borsa'da işlem görmeye başladıktan itibaren 18 ay süreyle;",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1092650_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d8563fe9f018577b7a86a3cf2",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1092650",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1092650",
+     "published_at": "2023-01-03T16:03:13+03:00",
+     "source_sha256": "4ef2f8fba75fe6a365866078d40c3e51f32792dc08f69d320df5bc7a2be954e6",
+     "source_file": "source_docs/TNZTP/KAP_1092650_ek1.pdf",
+     "page": 1,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "\"Tapdi Oksijen Özel Sağlık Ve Eğitim Hizmetleri San. Tic. A.Ş. 'de sahip olduğum şirket paylarını Borsa'da işlem görmeye başladıktan itibaren 18 ay süreyle: Şirket sermayesinde sahip olduğum payların tamamını ya da bir kısmını herhangi bir fiyattan borsada satmamayı, dolaşımdaki pay miktarını artırmayacağımı,"
+    }
+   ],
+   "components": [
+    {
+     "who": "Dr. Mehmet Bülent Nuri BEKTUR (YK Başkanı)",
+     "days": "540",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b); metin Pay Tebliği 8/1, 8/6, 9/3 kapsamında diyor",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Op. Dr. Tamer KANOĞLU",
+     "days": "540",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b); metin Pay Tebliği 8/1, 8/6, 9/3 kapsamında diyor",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Dr. Hasibe Serap ULUIRMAK",
+     "days": "540",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b); metin Pay Tebliği 8/1, 8/6, 9/3 kapsamında diyor",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Dr. Musa DOĞANAY",
+     "days": "540",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b); metin Pay Tebliği 8/1, 8/6, 9/3 kapsamında diyor",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Dr. Hande Şeniz BEKTUR",
+     "days": "540",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b); metin Pay Tebliği 8/1, 8/6, 9/3 kapsamında diyor",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Op. Dr. Tümay KOCAOĞLU",
+     "days": "540",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b); metin Pay Tebliği 8/1, 8/6, 9/3 kapsamında diyor",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Op. Dr. Hakan KOCAOĞLU",
+     "days": "540",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b); metin Pay Tebliği 8/1, 8/6, 9/3 kapsamında diyor",
+     "start": "Borsa'da işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Yedi ortak 06.12.2022 tarihli taahhütnamelerle 18 ay (= 540 gün) herhangi bir fiyattan borsada satmama ve dolaşımdaki pay miktarını artırmama taahhüdü verdi (izahname §27.3 b ve taahhüt eki KAP_1092650_EK1 s.1-7, her ortak için ayrı sayfa). İzahnamede ayrı bir c) mevzuat taahhüdü (1 yıl fiyat altı) metni yok; b) başlığı taahhüdün Pay Tebliği 8/1, 8/6 ve 9/3 kapsamında verildiğini söylüyor. Halka arz yalnız sermaye artırımı; halka arz eden ortak yok. En kısa süre 540.",
+   "codex_value": "540",
+   "codex_verdict": "VERIFIED"
+  },
+  "sector": {
+   "value": "Sağlık hizmetleri; hastane ve tıp merkezi işletmeciliği",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_1092275_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8563fcce018572e9673c241e",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1092275",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1092275",
+   "published_at": "2023-01-02T17:52:07+03:00",
+   "source_sha256": "aaa4b82fbbb0057925572c57d67d2555fdc3b00bfdbb3bb65529f588424be565",
+   "source_file": "source_docs/TNZTP/KAP_1092275_ek1.pdf",
+   "page": 23,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Şirket, Izmir ilinde bünyesinde bulundurduğu iki adet hastancsi ve bir tıp merkezyile faąliyetlerini sürdürmektedir.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1092274_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c8563fcce018572e6c669233f",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1092274",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1092274",
+     "published_at": "2023-01-02T17:51:58+03:00",
+     "source_sha256": "9094ea2f0568b3f46026077aaefc6c4ddfb80bb5b06f5154a77f0eb17fb66fba",
+     "source_file": "source_docs/TNZTP/KAP_1092274_ek1.pdf",
+     "page": 14,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Özel sigortalar ve SGK ile anlaşmalı bir özel hastane olarak sağlık hizmeti sunmaktadır."
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "OCR 'hastancsi', 'tıp merkezyile'. Şirket bünyesinde Buca Tıp Merkezi, Özel Tınaztepe Hastanesi (Buca) ve Özel Tınaztepe Galen Hastanesi (Bayraklı). Ek alıntı Özel Tınaztepe Hastanesi'ne (şirket bünyesindeki hastane) ait."
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahname I. Borsa Görüşü (KAP_1092274_EK1 s.9, Borsa İstanbul 29.06.2022 tarihli yazı) BIST Katılım Tüm Endeksi hakkında cümle içermiyor; qfind 'Katılım Tüm Endeks|yer alma şartlarını|katılım endeks|Katılım Finans|faizsiz|icazet|katılım' uygunluk beyanı vermedi. İzahname ekler listesi (§35, KAP_1092279_EK1 s.42: Ek-1..Ek-10) Katılım Finans İlkeleri Bilgi Formu anmıyor.",
+   "looked_at": [
+    "KAP_1092274_EK1",
+    "KAP_1092275_EK1",
+    "KAP_1092277_EK1",
+    "KAP_1092278_EK1",
+    "KAP_1092279_EK1",
+    "KAP_1092415_EK1",
+    "KAP_1092650_EK1",
+    "KAP_1092754"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_1092274_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1092274",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c8563fcce018572e6c669233f",
+   "published_at": "2023-01-02T17:51:58+03:00",
+   "sha256": "9094ea2f0568b3f46026077aaefc6c4ddfb80bb5b06f5154a77f0eb17fb66fba",
+   "file": "source_docs/TNZTP/KAP_1092274_ek1.pdf"
+  },
+  "KAP_1092275_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1092275",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c8563fcce018572e9673c241e",
+   "published_at": "2023-01-02T17:52:07+03:00",
+   "sha256": "aaa4b82fbbb0057925572c57d67d2555fdc3b00bfdbb3bb65529f588424be565",
+   "file": "source_docs/TNZTP/KAP_1092275_ek1.pdf"
+  },
+  "KAP_1092279_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1092279",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c8563fcce018572ee41412529",
+   "published_at": "2023-01-02T17:52:29+03:00",
+   "sha256": "72e08f922cac50997e7cb026df7913d8a8002e377299a216d4aa788274e0ac99",
+   "file": "source_docs/TNZTP/KAP_1092279_ek1.pdf"
+  },
+  "KAP_1092650_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1092650",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d8563fe9f018577b7a86a3cf2",
+   "published_at": "2023-01-03T16:03:13+03:00",
+   "sha256": "4ef2f8fba75fe6a365866078d40c3e51f32792dc08f69d320df5bc7a2be954e6",
+   "file": "source_docs/TNZTP/KAP_1092650_ek1.pdf"
+  }
+ }
+}

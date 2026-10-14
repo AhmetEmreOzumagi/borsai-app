@@ -1,0 +1,221 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "EBEBK",
+  "company": "Ebebek Mağazacılık A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "3804835",
+      "source_id": "KAP_1191151_EK1",
+      "source_document": "KAP 1191151 ek 1",
+      "source_published_at": "2023-09-04T08:59:36+03:00",
+      "source_sha256": "a1b1d1e0a47453cd13f57974949ebce43d20f9263ed3386c0f32999b3f1f8c90",
+      "source_path": "registry/oot/source_docs/EBEBK/KAP_1191151_ek1.pdf",
+      "quote": "TOPLAM 40.000.000 100,0% 3.917.194 307.900.862 100,0% 3.804.835 40.000.000 100,0%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "başvuru sayısı 3.917.194; talebi karşılanan 3.804.835",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "3803496",
+        "employees": "1107",
+        "domestic_institutional": "208",
+        "foreign_institutional": "24"
+      },
+      "source_id": "KAP_1191151_EK1",
+      "source_document": "KAP 1191151 ek 1",
+      "source_published_at": "2023-09-04T08:59:36+03:00",
+      "source_sha256": "a1b1d1e0a47453cd13f57974949ebce43d20f9263ed3386c0f32999b3f1f8c90",
+      "source_path": "registry/oot/source_docs/EBEBK/KAP_1191151_ek1.pdf",
+      "quote": [
+        "19.200.000 48,0% 3.915.781 115.365.201 37,5% 3.803.496 19.200.000 48,0%",
+        "Grup Çalışanları 800.000 2,0% 1.107 1.740.001 0,6% 1.107 800.000 2,0%",
+        "10.000.000 25,0% 271 140.371.595 45,6% 208 10.000.000 25,0%",
+        "10.000.000 25,0% 35 50.424.065 16,4% 24 10.000.000 25,0%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "employees = Grup Çalışanları; başvuru: bireysel 3.915.781, çalışan 1.107, yurt içi kurumsal 271, yurt dışı kurumsal 35",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "6.0",
+      "source_id": "KAP_1191151_EK1",
+      "source_document": "KAP 1191151 ek 1",
+      "source_published_at": "2023-09-04T08:59:36+03:00",
+      "source_sha256": "a1b1d1e0a47453cd13f57974949ebce43d20f9263ed3386c0f32999b3f1f8c90",
+      "source_path": "registry/oot/source_docs/EBEBK/KAP_1191151_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 6,0 katı",
+      "note": "belgede 'yaklaşık'; Grup Çalışanları yaklaşık 2,2 kat",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "14.0",
+      "source_id": "KAP_1191151_EK1",
+      "source_document": "KAP 1191151 ek 1",
+      "source_published_at": "2023-09-04T08:59:36+03:00",
+      "source_sha256": "a1b1d1e0a47453cd13f57974949ebce43d20f9263ed3386c0f32999b3f1f8c90",
+      "source_path": "registry/oot/source_docs/EBEBK/KAP_1191151_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara nihai tahsisat tutarının yaklaşık 14,0 katı",
+      "note": "belgede 'yaklaşık'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "5.0",
+      "source_id": "KAP_1191151_EK1",
+      "source_document": "KAP 1191151 ek 1",
+      "source_published_at": "2023-09-04T08:59:36+03:00",
+      "source_sha256": "a1b1d1e0a47453cd13f57974949ebce43d20f9263ed3386c0f32999b3f1f8c90",
+      "source_path": "registry/oot/source_docs/EBEBK/KAP_1191151_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara nihai tahsisat tutarının yaklaşık 5,0 katı talep gelmiştir.",
+      "note": "belgede 'yaklaşık'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "19200000",
+        "employees": "800000",
+        "domestic_institutional": "10000000",
+        "foreign_institutional": "10000000"
+      },
+      "source_id": "KAP_1191151_EK1",
+      "source_document": "KAP 1191151 ek 1",
+      "source_published_at": "2023-09-04T08:59:36+03:00",
+      "source_sha256": "a1b1d1e0a47453cd13f57974949ebce43d20f9263ed3386c0f32999b3f1f8c90",
+      "source_path": "registry/oot/source_docs/EBEBK/KAP_1191151_ek1.pdf",
+      "quote": [
+        "19.200.000 48,0% 3.915.781 115.365.201 37,5% 3.803.496 19.200.000 48,0%",
+        "Grup Çalışanları 800.000 2,0% 1.107 1.740.001 0,6% 1.107 800.000 2,0%",
+        "10.000.000 25,0% 271 140.371.595 45,6% 208 10.000.000 25,0%",
+        "10.000.000 25,0% 35 50.424.065 16,4% 24 10.000.000 25,0%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "48.0",
+      "source_id": "KAP_1191151_EK1",
+      "source_document": "KAP 1191151 ek 1",
+      "source_published_at": "2023-09-04T08:59:36+03:00",
+      "source_sha256": "a1b1d1e0a47453cd13f57974949ebce43d20f9263ed3386c0f32999b3f1f8c90",
+      "source_path": "registry/oot/source_docs/EBEBK/KAP_1191151_ek1.pdf",
+      "quote": "19.200.000 48,0% 3.915.781 115.365.201 37,5% 3.803.496 19.200.000 48,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "Grup Çalışanları ayrıca %2,0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "25.0",
+      "source_id": "KAP_1191151_EK1",
+      "source_document": "KAP 1191151 ek 1",
+      "source_published_at": "2023-09-04T08:59:36+03:00",
+      "source_sha256": "a1b1d1e0a47453cd13f57974949ebce43d20f9263ed3386c0f32999b3f1f8c90",
+      "source_path": "registry/oot/source_docs/EBEBK/KAP_1191151_ek1.pdf",
+      "quote": "10.000.000 25,0% 271 140.371.595 45,6% 208 10.000.000 25,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "25.0",
+      "source_id": "KAP_1191151_EK1",
+      "source_document": "KAP 1191151 ek 1",
+      "source_published_at": "2023-09-04T08:59:36+03:00",
+      "source_sha256": "a1b1d1e0a47453cd13f57974949ebce43d20f9263ed3386c0f32999b3f1f8c90",
+      "source_path": "registry/oot/source_docs/EBEBK/KAP_1191151_ek1.pdf",
+      "quote": "10.000.000 25,0% 35 50.424.065 16,4% 24 10.000.000 25,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız talep toplama ve aracılık yöntemini ('Sabit Fiyatla Talep Toplama', 'En İyi Gayret Aracılığı') adlandırıyor, dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Ünlü Menkul Değerler A.Ş.",
+      "source_id": "KAP_1191151_EK1",
+      "source_document": "KAP 1191151 ek 1",
+      "source_published_at": "2023-09-04T08:59:36+03:00",
+      "source_sha256": "a1b1d1e0a47453cd13f57974949ebce43d20f9263ed3386c0f32999b3f1f8c90",
+      "source_path": "registry/oot/source_docs/EBEBK/KAP_1191151_ek1.pdf",
+      "quote": "Ünlü Menkul Konsorsiyum Liderliğinde “Sabit Fiyatla Talep Toplama” ve “En İyi Gayret Aracılığı” yöntemi ile gerçekleşmiştir.",
+      "note": "TSSD: 'halka arzda satışa aracılık edecek Ünlü Menkul Değerler A.Ş.'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok (Katılım Finans İlkeleri Bilgi Formu KAP 1189805 indirilmedi)",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1191428",
+      "source_document": "KAP 1191428",
+      "source_published_at": "2023-09-04T18:11:21+03:00",
+      "source_sha256": "0a3f884c7864d5fc6e7b011e8fd0de85b2a2f4b7cbd7184456ef4d5066b28ebc",
+      "source_path": "registry/oot/source_docs/EBEBK/KAP_1191428_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1191428",
+      "source_document": "KAP 1191428",
+      "source_published_at": "2023-09-04T18:11:21+03:00",
+      "source_sha256": "0a3f884c7864d5fc6e7b011e8fd0de85b2a2f4b7cbd7184456ef4d5066b28ebc",
+      "source_path": "registry/oot/source_docs/EBEBK/KAP_1191428_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1191428": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1191428",
+      "published_at": "2023-09-04T18:11:21+03:00",
+      "sha256": "0a3f884c7864d5fc6e7b011e8fd0de85b2a2f4b7cbd7184456ef4d5066b28ebc",
+      "path": "registry/oot/source_docs/EBEBK/KAP_1191428_bildirim.pdf"
+    },
+    "KAP_1191151_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1191151 ek 1",
+      "published_at": "2023-09-04T08:59:36+03:00",
+      "sha256": "a1b1d1e0a47453cd13f57974949ebce43d20f9263ed3386c0f32999b3f1f8c90",
+      "path": "registry/oot/source_docs/EBEBK/KAP_1191151_ek1.pdf"
+    }
+  }
+}

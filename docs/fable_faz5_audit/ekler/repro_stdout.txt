@@ -1,0 +1,93 @@
+[veri] 99 arz, 990 seans; training_table sha256 b307cd0e3a01, SESSIONS sha256 eca620d3a5e8
+[§2] D1 tavan (ham metin Decimal) = training_table etiketi: 99/99; L ≥ 1: 81; f3 dolu ∧ L ≥ 1: 81; kilit 70/81; tutarsız kilit 0; yarım gün 0; durdurma 0
+[§2] el değiştirme oranı p05/p50/p95 (81, Type-7): 0.0009841 / 0.004202 / 0.5402
+
+=== 1. Walk-forward: 87 fold sıfırdan (ana model ofseti dahil) ===
+[koşu] 87 fold, 45 s; durumlar {'INSUFFICIENT_TRAINING_HISTORY': 1, 'FIT_OK': 70, 'NOT_APPLICABLE': 16}
+
+=== (a) Fold ledger karşılaştırması (tests/reference/macos_golden_faz5) ===
+status birebir 87/87; λ birebir 70/70; training_* birebir 71/71; parent λ birebir 71/71; parent γ/β/test hazard maks|Δ| 4.954e-11
+λ skor tablosu maks|Δ| 3.251e-13; test_d1_lock birebir 70/70; kırpma bayrağı birebir 70/70; columns birebir 70/70; path_cond_status birebir 70/70
+sayısal sütunlar maks|Δ| = 1.530e-11 (en kötü sütun S_10); S_10 1.5e-11, S_cond_10 1.5e-11, S_9 1.4e-11, S_cond_9 1.3e-11, S_8 1.2e-11, S_cond_8 1.1e-11
+path_conditional maks|Δ|: h3_median 0.0e+00, h3_p_up 6.6e-13, h5_median 0.0e+00, h5_p_up 1.1e-12, h10_median 0.0e+00, h10_p_up 3.7e-12
+|Δ| > 1e-9 ya da birebir olmayan: 0
+(d) INF fold'ları ['AGROT', 'MEGMT']: S_cond − karşılaştırıcı S_cond maks|Δ| benim 3.9e-16, Opus 0.0e+00; h_1 Opus ledger metni == Faz 1B ledger metni: 70/70; benim h_1 maks|Δ| 1.1e-12
+
+=== (b) Nihai fit (81 arz, ofset models/ceiling_hazard_v0.json) ===
+δ eğitim kümesi: 81 arz, 409 satır (d ≥ 2), 67 olay, 342 sağ kalım; en son eğitim seansı 2026-08-05
+λ: benim 30.0 / Opus 30.0 (birebir True); δ maks|Δ| 1.11e-16 (benim {'d1_lock': -0.3278985872465677, 'd1_turnover': 0.25106109793882575}, Opus {'d1_lock': -0.3278985872465678, 'd1_turnover': 0.25106109793882575}); kırpma maks|Δ| 0.00e+00; μ maks|Δ| 0.00e+00; σ maks|Δ| 2.22e-16; skor tablosu maks|Δ| 2.04e-14; kolon/düşen (['d1_lock', 'd1_turnover'], ['d1_lock', 'd1_turnover']) / ([], []); sayılar ((81, 409, 67, 342), (81, 409, 67, 342)); parent sha pin == dosya: True
+nihai fit h_1 (ofset) ana modelin kendi h_1'iyle bit-eşit (81 arz, kendi hesabım): True
+
+=== (c) §4 hücreleri: fark, %95 aralık, n (bağımsız hesap) ===
+rps      vs ceiling_hazard_v0              fark -0.0105 [-0.0264, +0.0058] n=70 (22 ay) model 0.1591 karş. 0.1695 40/30/0 (|d|≤1e-12 eşitlik: 38/30/2) → AYIRT_EDILEMIYOR  MODELS.md ✓
+rps      vs base_km_expanding              fark -0.0481 [-0.0892, -0.0050] n=70 (22 ay) model 0.1591 karş. 0.2072 43/27/0 (|d|≤1e-12 eşitlik: 43/27/0) → MODEL  MODELS.md ✓
+rps      vs base_km_last10                 fark -0.0527 [-0.0934, -0.0116] n=70 (22 ay) model 0.1591 karş. 0.2118 41/29/0 (|d|≤1e-12 eşitlik: 41/29/0) → MODEL  MODELS.md ✓
+rps      vs ceiling_hazard_v0@INF          fark -0.0417 [-0.0806, -0.0009] n=70 (22 ay) model 0.1591 karş. 0.2007 43/27/0 (|d|≤1e-12 eşitlik: 43/27/0) → MODEL  MODELS.md ✓
+rps      vs base_always_ceiling__ceiling   fark -0.4108 [-0.5150, -0.2902] n=70 (22 ay) model 0.1591 karş. 0.5698 59/11/0 (|d|≤1e-12 eşitlik: 59/11/0) → MODEL  MODELS.md ✓
+brier2   vs ceiling_hazard_v0              fark -0.0512 [-0.1010, -0.0097] n=70 (22 ay) model 0.0784 karş. 0.1296 51/18/1 (|d|≤1e-12 eşitlik: 50/18/2) → MODEL  MODELS.md ✓
+brier2   vs base_km_expanding              fark -0.0642 [-0.1199, -0.0169] n=70 (22 ay) model 0.0784 karş. 0.1426 53/17/0 (|d|≤1e-12 eşitlik: 53/17/0) → MODEL  MODELS.md ✓
+brier2   vs base_km_last10                 fark -0.0916 [-0.1530, -0.0353] n=70 (22 ay) model 0.0784 karş. 0.1700 42/28/0 (|d|≤1e-12 eşitlik: 42/28/0) → MODEL  MODELS.md ✓
+brier2   vs ceiling_hazard_v0@INF          fark -0.0651 [-0.1300, -0.0110] n=70 (22 ay) model 0.0784 karş. 0.1435 46/24/0 (|d|≤1e-12 eşitlik: 46/24/0) → MODEL  MODELS.md ✓
+brier2   vs base_always_ceiling__ceiling   fark -0.0787 [-0.1557, -0.0129] n=70 (22 ay) model 0.0784 karş. 0.1571 11/59/0 (|d|≤1e-12 eşitlik: 11/59/0) → MODEL  MODELS.md ✓
+brier10  vs ceiling_hazard_v0              fark +0.0095 [-0.0034, +0.0233] n=70 (22 ay) model 0.1402 karş. 0.1307 34/35/1 (|d|≤1e-12 eşitlik: 33/35/2) → AYIRT_EDILEMIYOR  MODELS.md ✓
+brier10  vs base_km_expanding              fark +0.0042 [-0.0493, +0.0640] n=70 (22 ay) model 0.1402 karş. 0.1361 44/26/0 (|d|≤1e-12 eşitlik: 44/26/0) → AYIRT_EDILEMIYOR  MODELS.md ✓
+brier10  vs base_km_last10                 fark +0.0053 [-0.0535, +0.0683] n=70 (22 ay) model 0.1402 karş. 0.1350 42/28/0 (|d|≤1e-12 eşitlik: 42/28/0) → AYIRT_EDILEMIYOR  MODELS.md ✓
+brier10  vs ceiling_hazard_v0@INF          fark +0.0038 [-0.0501, +0.0631] n=70 (22 ay) model 0.1402 karş. 0.1364 43/27/0 (|d|≤1e-12 eşitlik: 43/27/0) → AYIRT_EDILEMIYOR  MODELS.md ✓
+brier10  vs base_always_ceiling__ceiling   fark -0.7169 [-0.8385, -0.5693] n=70 (22 ay) model 0.1402 karş. 0.8571 60/10/0 (|d|≤1e-12 eşitlik: 60/10/0) → MODEL  MODELS.md ✓
+path D3  MAE   vs ceiling_path_v0 j=1        fark -0.0234 [-0.0495, +0.0000] n=70 model 0.0456 karş. 0.0690 8/2/60 → AYIRT_EDILEMIYOR  MODELS.md ✓
+path D3  Brier vs ceiling_path_v0 j=1        fark +0.0073 [-0.0288, +0.0510] n=70 model 0.0717 karş. 0.0643 41/23/6 → AYIRT_EDILEMIYOR  MODELS.md ✓
+path D5  MAE   vs ceiling_path_v0 j=1        fark -0.0086 [-0.0317, +0.0130] n=70 model 0.1714 karş. 0.1800 16/18/36 → AYIRT_EDILEMIYOR  MODELS.md ✓
+path D5  Brier vs ceiling_path_v0 j=1        fark +0.0044 [-0.0311, +0.0461] n=70 model 0.1051 karş. 0.1006 46/23/1 → AYIRT_EDILEMIYOR  MODELS.md ✓
+path D10 MAE   vs ceiling_path_v0 j=1        fark +0.0361 [+0.0002, +0.0767] n=70 model 0.4992 karş. 0.4632 24/32/14 → RULE  MODELS.md ✓
+path D10 Brier vs ceiling_path_v0 j=1        fark -0.0038 [-0.0203, +0.0153] n=70 model 0.1588 karş. 0.1625 46/23/1 → AYIRT_EDILEMIYOR  MODELS.md ✓
+keşif brier3 vs ceiling_hazard_v0          fark -0.0342 [-0.0745, +0.0042] n=70 47/22/1 (|d|≤1e-12 eşitlik: 46/22/2) → AYIRT_EDILEMIYOR  MODELS.md ✓
+keşif brier4 vs ceiling_hazard_v0          fark -0.0233 [-0.0430, -0.0013] n=70 53/17/0 (|d|≤1e-12 eşitlik: 51/17/2) → MODEL  MODELS.md ✓
+keşif brier5 vs ceiling_hazard_v0          fark -0.0122 [-0.0253, +0.0053] n=70 49/21/0 (|d|≤1e-12 eşitlik: 47/21/2) → AYIRT_EDILEMIYOR  MODELS.md ✓
+keşif brier6 vs ceiling_hazard_v0          fark +0.0024 [-0.0117, +0.0212] n=70 43/26/1 (|d|≤1e-12 eşitlik: 42/26/2) → AYIRT_EDILEMIYOR  MODELS.md ✓
+keşif brier7 vs ceiling_hazard_v0          fark +0.0010 [-0.0129, +0.0171] n=70 42/28/0 (|d|≤1e-12 eşitlik: 40/28/2) → AYIRT_EDILEMIYOR  MODELS.md ✓
+keşif brier8 vs ceiling_hazard_v0          fark +0.0042 [-0.0091, +0.0207] n=70 40/30/0 (|d|≤1e-12 eşitlik: 38/30/2) → AYIRT_EDILEMIYOR  MODELS.md ✓
+keşif brier9 vs ceiling_hazard_v0          fark +0.0093 [-0.0047, +0.0243] n=70 37/33/0 (|d|≤1e-12 eşitlik: 35/33/2) → AYIRT_EDILEMIYOR  MODELS.md ✓
+MODELS.md ile basılı hassasiyette eşleşen hücre: 28/28 (15 §4 + 6 path + 7 keşif); kazanç/kayıp/eşitlik bit-eşit sayımla eşleşen: 16/28 (eşleşmeyenler yalnız λ = INF fold'larının eşitliği; bağımsız refit bit-eşit değil, |Δ| ~1e-16)
+kalibrasyon: ort(h_2) model 0.1556 / karş. 0.0916 / gözlenen 0.1571; k=2: 0.8444/0.9084/0.8429; k=3: 0.7595/0.8316/0.7857; k=5: 0.5024/0.5309/0.4571; k=10: 0.2495/0.2358/0.1429
+
+=== (d) §5'in 18 satırı, başarısızlık (a)–(d), 'çok iyi', canlı akış koşulu (bağımsız değerlendirme) ===
+  RPS_1 vs ceiling_hazard_v0 (BİRİNCİL)                → tuttu                  gerçekleşen -0.0105 [-0.0264, +0.0058]
+  RPS_1 vs @INF                                        → tuttu                  gerçekleşen -0.0417 [-0.0806, -0.0009]
+  RPS_1 vs base_km_expanding                           → tuttu                  gerçekleşen -0.0481 [-0.0892, -0.0050]
+  RPS_1 vs base_km_last10                              → tuttu                  gerçekleşen -0.0527 [-0.0934, -0.0116]
+  RPS_1 vs her-zaman-tavan                             → tuttu                  gerçekleşen -0.4108 [-0.5150, -0.2902]
+  Brier k=2 vs ceiling_hazard_v0                       → tutmadı (daha iyi)     gerçekleşen -0.0512 [-0.1010, -0.0097]
+  Brier k=2 vs @INF                                    → tutmadı (daha iyi)     gerçekleşen -0.0651 [-0.1300, -0.0110]
+  Brier k=2 vs base_km_last10                          → tutmadı (daha iyi)     gerçekleşen -0.0916 [-0.1530, -0.0353]
+  Brier k=10 vs ceiling_hazard_v0                      → tutmadı (daha kötü)    gerçekleşen +0.0095 [-0.0034, +0.0233]
+  Brier k=3 (keşif) vs ceiling_hazard_v0               → tutmadı (daha iyi)     gerçekleşen -0.0342 [-0.0745, +0.0042]
+  path h=5 MAE                                         → tuttu                  gerçekleşen -0.0086 [-0.0317, +0.0130]
+  path h=3 p_up Brier                                  → tutmadı (daha kötü)    gerçekleşen +0.0073 [-0.0288, +0.0510]
+  Kalibrasyon |ort(h_2) − gözlenen| ≤ 0.05             → tuttu                  gerçekleşen -0.0015
+  λ nihai fit 10–100 en olası; INF olası               → tuttu                  gerçekleşen +30.0000
+  λ fold'lar: erken fold'larda INF; %20–50'sinde INF   → tutmadı                gerçekleşen INF 2/70 (3%); ilk 20'de 2
+  δ_lock < 0 (nihai; λ<INF fold'ların ≥ %80'i)         → tuttu                  gerçekleşen nihai -0.3279; 63/63
+  δ_turn > 0 (nihai)                                   → tuttu                  gerçekleşen +0.2511
+  n (fold) 65–71                                       → tuttu                  gerçekleşen 70
+etiketler: {'tuttu': 11, 'tutmadı': 7}
+çok iyi: {'primary_diff_lt_-0.040': False, 'primary_ci_hi_lt_-0.020': False, 'brier2_diff_lt_-0.040': True} → TETİKLENDİ: True
+başarısızlık: {'a': False, 'b': False, 'c': False, 'd': False}; (b) paydası FIT_OK 70 (INSUFFICIENT 1, NOT_APPLICABLE 16 paydada değil); INF 2/70 = 2.9%; nihai λ = 30.0
+canlı akış koşulu: kurulur; 'kazanç en olası Brier k=2' → True {'rps': -0.010478271836950001, 'brier2': -0.05115465460516127, 'brier3': -0.03416369794077612, 'brier10': 0.009520618211440448}
+
+=== Tanı: Brier k = 2 kazancı nereden geliyor? ===
+kilit gruplarına göre (fark toplamı payı): {"kilitli": {"n": 59, "mean_diff": 0.0005, "sum_diff": 0.0274, "share": -0.0076}, "kilitsiz": {"n": 11, "mean_diff": -0.328, "sum_diff": -3.6082, "share": 1.0076}}
+  kilitli: n=59 gözlenen D2 kırılma 0.034; ort h_2 model 0.081 / karşılaştırıcı 0.080
+  kilitsiz: n=11 gözlenen D2 kırılma 0.818; ort h_2 model 0.556 / karşılaştırıcı 0.154
+  Murphy (0.05 kutu): model {"brier": 0.0784, "reliability": 0.04, "resolution": 0.0943, "uncertainty": 0.1324, "n_groups": 13}
+                      karş. {"brier": 0.1296, "reliability": 0.0122, "resolution": 0.0134, "uncertainty": 0.1324, "n_groups": 7}
+  ortalama kalibrasyon açığı²: model 0.0000, karş. 0.0043 (toplam Brier farkı -0.0512)
+  karşılaştırıcı h_2 ortalamaya kaydırılsa (+0.0655) Brier 0.1253 vs model 0.0784 (kalan fark = ayırt etme payı -0.0469)
+  yıllara göre: {"2023": {"n": 7, "mean_diff": -0.0012, "sum_diff": -0.0084}, "2024": {"n": 27, "mean_diff": -0.0634, "sum_diff": -1.7118}, "2025": {"n": 12, "mean_diff": -0.095, "sum_diff": -1.1399}, "2026": {"n": 24, "mean_diff": -0.03, "sum_diff": -0.7208}}
+  en çok katkı veren 10 arz: SMRVA(L=1,kilit=0,oran=0.38,h2 0.61 vs 0.08,Δ=-0.700); EGEGY(L=1,kilit=0,oran=0.399,h2 0.75 vs 0.13,Δ=-0.698); BIGEN(L=1,kilit=0,oran=0.694,h2 0.79 vs 0.19,Δ=-0.615); LILAK(L=1,kilit=0,oran=0.754,h2 0.64 vs 0.19,Δ=-0.520); MOPAS(L=1,kilit=0,oran=0.343,h2 0.87 vs 0.27,Δ=-0.509); KOTON(L=1,kilit=0,oran=0.169,h2 0.67 vs 0.21,Δ=-0.508); ORZAX(L=1,kilit=0,oran=0.531,h2 0.39 vs 0.15,Δ=-0.361); SOHOE(L=1,kilit=0,oran=1.96,h2 0.36 vs 0.13,Δ=-0.347); RGYAS(L=1,kilit=1,oran=0.0265,h2 0.11 vs 0.09,Δ=-0.040); GENKM(L=5,kilit=1,oran=0.00147,h2 0.12 vs 0.16,Δ=-0.011)
+  k=10 farkı: {"by_L10": {"L=10": {"n": 10, "sum_diff": -0.2651, "mean_diff": -0.0265}, "L<10": {"n": 60, "sum_diff": 0.9316, "mean_diff": 0.0155}}, "by_lock": {"kilitli": {"n": 59, "sum_diff": 0.7366, "mean_diff": 0.0125}, "kilitsiz": {"n": 11, "sum_diff": -0.0701, "mean_diff": -0.0064}}}
+  k=10: ort S_cond_10 model 0.2495 / karş. 0.2358 / gözlenen 0.1429; kilitli arzlarda ort S_cond_10 model 0.2942 karş. 0.2701
+  path D10 MAE farkı: {"L=10": {"n": 10, "sum_diff": -0.5442, "mean_diff": -0.0544}, "L<10": {"n": 60, "sum_diff": 3.0684, "mean_diff": 0.0511}}; medyan = ρ_10 (tam limit yolu) olan fold: model 16, karş. 10
+
+=== Duyarlılık (bilgi; model değil, şartname değişmez): yalnız d1_lock / yalnız d1_turnover ===
+lock_only      birincil RPS_1 fark -0.0074 [-0.0227, +0.0082] n=70; Brier k=2 -0.0561 [-0.1088, -0.0125]; Brier k=10 +0.0171 [+0.0057, +0.0302]; λ {'INF': 7, 3.0: 15, 10.0: 28, 0.1: 19, 1.0: 1}
+turnover_only  birincil RPS_1 fark -0.0064 [-0.0205, +0.0093] n=70; Brier k=2 -0.0252 [-0.0591, -0.0010]; Brier k=10 +0.0023 [-0.0125, +0.0180]; λ {'INF': 2, 3.0: 19, 30.0: 32, 10.0: 10, 1.0: 7}

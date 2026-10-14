@@ -1,0 +1,37 @@
+# BORSAI_FAZ7_APP_P1 test koşuları (Europe/Istanbul tarihleri; komutlar repo kökünden)
+
+## Adım 0 — taban (HEAD a9ffa4a = origin/main; ağaçta yalnız iki izinli izlenmeyen görev dosyası)
+- bash app/scripts/test.sh: exit 0 (35.7 s) · cargo 94 geçti (0 kalan) · vitest 222/222 (16 dosya) · parity (test_gen_golden.py) 4 geçti · golden_unchanged: YEŞİL (16 eski dosya bayt-eşit; _patched ilk 19 satır; dec_cases 9 eski bölüm)
+- .venv/bin/python app/parity/gen_golden.py --check: {"checked": 25, "different": []} exit 0
+- .venv/bin/pytest -q -n 6 --dist loadgroup: 864 passed in 575.46s (0:09:35)
+
+## Adım 1 — A1 (29df3e8)
+- bash app/scripts/test.sh: exit 0 · cargo 106 (0 kalan; +12: tufe birim 2, tufe_semantics 4, dec_semantics real_size 1, v1_semantics 5) · vitest 222/222 · parity 4 · golden_unchanged YEŞİL (dec_cases yeni bölüm: limit_path, real_size)
+
+## Adım 2 — A2 (d01daa4)
+- bash app/scripts/test.sh: exit 0 · cargo 107 (+1 v1_coverage) · vitest 222/222 · parity 6 (+2: v1 kümesi, kasa kodu bekçisi) · golden_unchanged YEŞİL (U46 + U55)
+- gen_golden --check: {"checked": 30, "different": []}
+- parity_report.json: 23 model, 23 geçen, 10143 satır, bit-eşit 10135 (0.99921), maks |Δ| 1.137e-13 (yalnız eski PB satırları); dört v1 dosyası 616/616 bit-eşit, maks |Δ| 0; yamalı 43/43
+- records_parity (BORSAI_REPO): 7 kayıt, 112 hücre, bit-eşit 112, maks |Δ| 0; kapsam dışı []; kayıt INDEX'ten eski: 7 kayıt × 7 model (3 tavan yolu + 4 v1)
+
+## Adım 3 — A3 (188026f)
+- bash app/scripts/test.sh: exit 0 · cargo 111 · vitest 225/225 · parity 6 · golden_unchanged YEŞİL
+- bash app/tests/e2e_freeze_tmp_repo.sh: YEŞİL (U59: yeni kayıt 27 model, tufe 2026-08 = 134.75 (yayım 2026-09-03), Rust parite 23/23 |Δ|max 0 + uygulamada henüz olmayan 4 (C); eski 7 kayıt 16/16 + kayıt INDEX'ten eski 7; asıl repo registry/ sha listesi birebir aynı)
+- bash app/tests/e2e_personal_isolation.sh: YEŞİL
+
+## Adım 4 — D (8090a45; ek 2613445: tablo hizası + P1 görüntü adımları, yalnız geliştirme)
+- bash app/scripts/test.sh: exit 0 · cargo 116 (+5: scores_oot okuyucu/bütünlük, featured_ceiling, kart fixture'ları, U62) · vitest 243/243 (+18 summary.test.ts) · parity 6 · golden_unchanged YEŞİL
+
+## Adım 5 — ekran görüntüleri
+- VITE_BORSAI_DEMO=1 VITE_BORSAI_DEMO_P1=1 npm run tauri dev -- --features snapshot (BORSAI_DATA_DIR ve BORSAI_SNAPSHOT_DIR geçici dizinde): 11 görüntü → docs/app/p1/ekran/ (sips -Z 1200); asıl repo registry/ sha listesi öncesiyle aynı
+
+## Adım 6 — derleme
+- npm run tauri build -- --bundles app: exit 0 (58 s, artımlı) · app/src-tauri/target/release/bundle/macos/BorsAi.app
+- borsai-app sha256 46fc63425894136a8d63ffa719e630fd07664c647eab6552c8b11faec67c570d (7 503 712 bayt; gömülü HEAD 107fd982db87)
+
+## Adım 7 — son kabul (HEAD 107fd98; ağaçta yalnız docs/app/p1/ ve izinli görev dosyası)
+- .venv/bin/pytest -q (sıralı): 864 passed in 937.40s (0:15:37)
+- bash app/scripts/test.sh: exit 0 · cargo 116 (0 kalan) · vitest 243/243 · parity 6 · golden_unchanged YEŞİL (U46, U55)
+- .venv/bin/python app/parity/gen_golden.py --check: {"checked": 30, "different": []} exit 0
+- bash app/tests/e2e_freeze_tmp_repo.sh: YEŞİL (U59: 27 model, tufe 2026-08 = 134.75, parite 23/23 + 4 (C))
+- bash app/tests/e2e_personal_isolation.sh: YEŞİL

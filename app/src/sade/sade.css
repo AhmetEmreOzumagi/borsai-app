@@ -1,0 +1,1875 @@
+/* Sade görünüm (UI v2, Safir paleti; docs/design/ui_v2/README.md). Bütün kurallar `.sade` kökü altında: ayrıntılı görünüm
+   (styles.css) etkilenmez. Renk tek başına bilgi taşımaz: her renkli değerin yanında sözcük ya da işaret vardır.
+   Hareket yalnız CSS (K-UI-10): çizgiler soldan sağa, çubuklar tabandan, noktalar en son; prefers-reduced-motion'da yok. */
+
+.sade {
+  --bg: #0a0f1a;
+  --bar: #0d1423;
+  --panel: #131c2f;
+  --panel-border: #22304a;
+  --well: #0d1423;
+  --input-border: #2e3f61;
+  --row-line: #1a2539;
+  --row-sel: #16284a;
+  --sel-bar: #5b9bff;
+  --text: #f4f7fc;
+  --text-2: #b7c3d7;
+  --text-3: #8c9ab3;
+  --action: #2f6feb;
+  --accent: #5b9bff;
+  --gold: #ffb648;
+  --gold-soft: rgba(255, 182, 72, 0.16);
+  --up: #1ecb8a;
+  --up-text: #5fe4b0;
+  --up-bg: rgba(30, 203, 138, 0.17);
+  --down: #ff5d6e;
+  --down-text: #ff9aa5;
+  --down-bg: rgba(255, 93, 110, 0.15);
+  --rule: #8c9bb6;
+  --rule-line: #50607d;
+  --regime-bg: #1d140e;
+  --regime-border: #47301c;
+  --regime-text: #ffc38f;
+  --regime-badge: #ff8a3d;
+  --regime-badge-text: #1f0e05;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --cond: "IBM Plex Sans Condensed", "IBM Plex Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+
+#app.sade-root {
+  display: block;
+  height: auto;
+  min-height: 100vh;
+  background: #0a0f1a;
+}
+
+body:has(#app.sade-root) {
+  background: #0a0f1a;
+}
+
+.sade *,
+.sade *::before,
+.sade *::after {
+  box-sizing: border-box;
+}
+
+.sade a,
+.sade .s-link {
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+}
+
+.sade a:hover,
+.sade .s-link:hover {
+  color: #a3c6ff;
+}
+
+.sade :focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.sade .mono,
+.sade .s-id {
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.sade .s-id {
+  color: var(--text-3);
+}
+
+.sade .s-id.gold {
+  color: var(--gold);
+}
+
+.sade .num,
+.sade .cond {
+  font-family: var(--cond);
+  font-variant-numeric: tabular-nums;
+}
+
+.sade .num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.sade .gold {
+  color: var(--gold);
+}
+
+.sade .up {
+  color: var(--up-text);
+}
+
+.sade .down {
+  color: var(--down-text);
+}
+
+.sade .muted,
+.sade .s-note {
+  color: var(--text-3);
+}
+
+.sade .s-note {
+  font-size: 12px;
+  margin: 0;
+}
+
+.sade .s-text2 {
+  color: var(--text-2);
+}
+
+.sade .rule-text {
+  color: var(--rule);
+}
+
+/* ---------------------------------------------------------------- üst bar */
+
+.sade .s-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  padding: 0 24px;
+  min-height: 56px;
+  background: var(--bar);
+  border-bottom: 1px solid var(--panel-border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.sade .s-brand {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.sade .s-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: stretch;
+  font-weight: 500;
+}
+
+.sade .s-nav button {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  min-height: 56px;
+  color: var(--text-2);
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sade .s-nav button.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.sade .s-search-wrap {
+  flex: 1 1 90px;
+  display: flex;
+  justify-content: center;
+}
+
+.sade .s-search {
+  width: 100%;
+  max-width: 220px;
+  height: 36px;
+  padding: 0 12px;
+  background: #0f1829;
+  border: 1px solid #1e3360;
+  border-radius: 6px;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+}
+
+.sade .s-mode {
+  display: inline-block;
+  line-height: 24px;
+  min-height: 26px;
+  padding: 0 10px;
+  border-radius: 13px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-transform: lowercase;
+}
+
+.sade .s-mode::first-letter {
+  text-transform: uppercase;
+}
+
+.sade .s-mode.mode-scenario {
+  border: 1px solid rgba(132, 185, 255, 0.45);
+  color: #a3c6ff;
+}
+
+.sade .s-mode.mode-official {
+  border: 1px solid rgba(30, 203, 138, 0.5);
+  color: var(--up-text);
+}
+
+.sade .s-mode.mode-neutral {
+  border: 1px solid #3a4d72;
+  color: var(--text-2);
+}
+
+.sade .s-standalone {
+  font-size: 12px;
+  color: var(--regime-text);
+  border: 1px solid var(--regime-border);
+  border-radius: 13px;
+  padding: 2px 10px;
+}
+
+.sade .s-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+.sade .s-meta strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ---------------------------------------------------------------- düğmeler, girişler */
+
+.sade button {
+  font: inherit;
+  cursor: pointer;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid #3a4d72;
+  border-radius: 6px;
+  min-height: 36px;
+  padding: 0 14px;
+  font-weight: 500;
+}
+
+.sade button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sade button.primary,
+.sade .s-btn-primary {
+  background: var(--action);
+  border-color: var(--action);
+  color: #fff;
+  font-weight: 600;
+}
+
+.sade button.s-gear {
+  width: 36px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-2);
+  border-color: #1e3360;
+}
+
+.sade button.link,
+.sade button.s-link {
+  border: 0;
+  min-height: 0;
+  padding: 0;
+  color: var(--accent);
+  background: none;
+  font-weight: 400;
+}
+
+.sade input[type="text"],
+.sade input[type="search"],
+.sade input:not([type]),
+.sade select,
+.sade textarea {
+  font: inherit;
+  color: var(--text);
+  background: var(--well);
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  min-height: 36px;
+}
+
+.sade input:disabled,
+.sade select:disabled {
+  opacity: 0.6;
+}
+
+.sade .s-seg {
+  display: inline-flex;
+  background: var(--well);
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.sade .s-seg button {
+  border: 0;
+  min-height: 32px;
+  color: var(--text-2);
+}
+
+.sade .s-seg button.active {
+  background: #1d3566;
+  color: var(--text);
+}
+
+/* ---------------------------------------------------------------- rejim şeridi */
+
+.sade .s-stripe {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+  padding: 10px 24px;
+  background: var(--regime-bg);
+  border-bottom: 1px solid var(--regime-border);
+  color: var(--regime-text);
+  font-size: 13px;
+}
+
+.sade .s-badge-regime {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--regime-badge);
+  color: var(--regime-badge-text);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------- sayfa */
+
+.sade .s-main {
+  padding: 20px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sade .s-crumb {
+  font-size: 13px;
+  color: var(--text-3);
+}
+
+.sade h1.s-h1 {
+  margin: 2px 0 0;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.sade .s-lead {
+  margin: 2px 0 0;
+  color: var(--text-2);
+  max-width: 80ch;
+}
+
+.sade .s-head-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
+.sade .s-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.sade .s-headline {
+  margin: 0;
+  font-size: 17px;
+  color: var(--text-2);
+  max-width: 95ch;
+}
+
+.sade .s-headline strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.sade .s-headline .gold {
+  font-weight: 600;
+}
+
+.sade .s-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.sade .s-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.sade .grow-1 {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+.sade .grow-2 {
+  flex: 2 1 640px;
+  min-width: 0;
+}
+
+.sade .side {
+  flex: 0 1 320px;
+  min-width: 280px;
+}
+
+/* ---------------------------------------------------------------- veri şeridi */
+
+.sade .s-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.sade .s-strip-item {
+  padding: 10px 20px 12px 0;
+  margin-right: 20px;
+  border-right: 1px solid var(--panel-border);
+}
+
+.sade .s-strip-item:last-child {
+  border-right: 0;
+}
+
+.sade .s-strip-label {
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+.sade .s-strip-value {
+  font-family: var(--cond);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.sade .s-strip-value small {
+  font-size: 15px;
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+.sade .s-strip-sub {
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+/* ---------------------------------------------------------------- pano */
+
+.sade .s-panel {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  min-width: 0;
+}
+
+.sade .s-panel.s-accent {
+  border-top: 2px solid var(--gold);
+}
+
+.sade .s-panel-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding: 16px 18px 12px;
+}
+
+.sade .s-panel-head h2,
+.sade h2.s-h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.sade .s-panel-sub {
+  font-size: 13px;
+  color: var(--text-3);
+}
+
+.sade .s-panel-body {
+  padding: 0 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sade .s-plain h2 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sade .s-big {
+  font-family: var(--cond);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.sade .s-mid {
+  font-family: var(--cond);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------- tablolar */
+
+.sade table.s-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.sade table.s-table th {
+  text-align: left;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--text-2);
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--row-line);
+  vertical-align: bottom;
+}
+
+.sade table.s-table th.num,
+.sade table.s-table td.num {
+  text-align: right;
+}
+
+.sade table.s-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--row-line);
+  vertical-align: middle;
+}
+
+.sade table.s-table tr.sel td {
+  background: var(--row-sel);
+}
+
+.sade table.s-table tr.sel td:first-child {
+  box-shadow: inset 3px 0 0 var(--sel-bar);
+}
+
+.sade table.s-table tr.clickable {
+  cursor: pointer;
+}
+
+.sade table.s-table tr.clickable:hover td {
+  background: #141f36;
+}
+
+.sade table.s-table th.group {
+  color: var(--gold);
+  text-align: center;
+  border-bottom: 1px solid var(--gold);
+}
+
+.sade .t-ticker {
+  font-weight: 600;
+}
+
+.sade .t-company {
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+.sade .s-kv {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0 16px;
+}
+
+.sade .s-kv > div {
+  padding: 9px 0;
+  border-bottom: 1px solid var(--row-line);
+}
+
+.sade .s-kv > div:nth-child(even) {
+  text-align: right;
+}
+
+/* ---------------------------------------------------------------- işaretler ve rozetler */
+
+.sade .mark-pass {
+  color: var(--up-text);
+}
+
+.sade .mark-fail {
+  color: var(--down-text);
+}
+
+.sade .mark-undecided,
+.sade .mark-approx {
+  color: var(--text-2);
+}
+
+/* uyarı (durdurmaz): SUM özdeşliği (FAZ9_WINDOWS K-TXT-3) */
+.sade .mark-warn {
+  color: var(--regime-text);
+}
+
+.sade .s-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  border: 1px solid #3a4d72;
+  color: var(--text-2);
+  white-space: nowrap;
+}
+
+.sade .s-chip.chip-live {
+  border-color: rgba(30, 203, 138, 0.5);
+  color: var(--up-text);
+}
+
+.sade .s-chip.chip-impossible {
+  border-color: rgba(30, 203, 138, 0.45);
+  color: var(--up-text);
+}
+
+.sade .s-class {
+  font-size: 12px;
+  color: var(--text-3);
+  line-height: 1.35;
+}
+
+.sade .s-class .chip-live {
+  color: var(--up-text);
+}
+
+/* ---------------------------------------------------------------- olay akışı, günlük */
+
+.sade .s-feed {
+  display: grid;
+  grid-template-columns: 170px 110px minmax(0, 1fr);
+  border-top: 1px solid var(--panel-border);
+}
+
+.sade .s-feed > div {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--row-line);
+}
+
+.sade .s-feed .f-at {
+  color: var(--text-2);
+  font-family: var(--cond);
+}
+
+.sade .s-feed .f-src {
+  font-weight: 500;
+}
+
+.sade .f-src.k-RECORD,
+.sade .f-src.k-LEGACY_RECORD,
+.sade .f-src.k-MACHINE {
+  color: var(--up-text);
+}
+
+.sade .f-src.k-MODEL_FROZEN {
+  color: var(--gold);
+}
+
+.sade .f-src.k-BREAK,
+.sade .f-src.k-D10 {
+  color: var(--down-text);
+}
+
+.sade .f-src.k-REGIME {
+  color: var(--regime-text);
+}
+
+.sade .f-src.k-STREAK {
+  color: var(--up-text);
+}
+
+/* ---------------------------------------------------------------- hesaplayıcı */
+
+.sade .s-jbtns {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.sade .s-jbtns button {
+  min-height: 36px;
+  padding: 0;
+  font-family: var(--cond);
+  font-size: 16px;
+  font-weight: 600;
+  border-color: #2c3c5a;
+}
+
+.sade .s-jbtns button.active {
+  background: #1d3566;
+  border-color: var(--accent);
+}
+
+.sade .s-jbtns button.observed {
+  box-shadow: inset 0 -3px 0 var(--up);
+}
+
+.sade .s-days {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 6px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.sade .s-days .d-label {
+  color: var(--text-3);
+}
+
+.sade .s-days .d-cell {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid #22304a;
+  color: var(--text-3);
+}
+
+.sade .s-days .d-cell.ceil {
+  background: var(--up-bg);
+  color: var(--up-text);
+  border-color: transparent;
+}
+
+.sade .s-days .d-cell.notceil {
+  background: var(--down-bg);
+  color: var(--down-text);
+  border-color: transparent;
+}
+
+.sade .s-days .d-cell.tomorrow {
+  border: 1px dashed var(--gold);
+  color: var(--gold);
+}
+
+.sade .s-readings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+}
+
+.sade .s-readings > div {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.sade .s-readings > div:nth-child(odd) {
+  border-right: 1px solid var(--panel-border);
+}
+
+.sade .s-readings > div:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.sade .s-reading-label {
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+.sade .s-reading-value {
+  font-family: var(--cond);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1.15;
+}
+
+.sade .s-reading-sub {
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+.sade .s-observed {
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sade .s-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  font-size: 12px;
+}
+
+.sade .lg-cond {
+  color: var(--gold);
+}
+
+.sade .lg-uncond {
+  color: var(--text-2);
+}
+
+.sade .lg-past {
+  color: var(--up-text);
+}
+
+/* ---------------------------------------------------------------- olasılık çubukları (yatay) */
+
+.sade .s-hbar {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) minmax(80px, 2fr) 60px;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.sade .s-hbar .track {
+  height: 8px;
+  background: #1a2539;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sade .s-hbar .fill {
+  height: 100%;
+  background: var(--rule);
+  border-radius: 4px;
+  transform-origin: left;
+  animation: s-growx 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.sade .s-hbar .fill.gold {
+  background: var(--gold);
+}
+
+.sade .s-hbar .fill.up {
+  background: var(--up);
+}
+
+/* ---------------------------------------------------------------- SVG */
+
+.sade svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.sade svg .tick {
+  fill: var(--text-3);
+  font-size: 11px;
+  font-family: var(--cond);
+}
+
+.sade svg .tick-hi {
+  fill: var(--gold);
+  font-weight: 600;
+}
+
+.sade svg .axis,
+.sade svg .grid-line {
+  stroke: #22304a;
+  stroke-width: 1;
+}
+
+.sade svg .spark-line {
+  fill: none;
+  stroke: var(--text-2);
+  stroke-width: 1.6;
+}
+
+.sade svg.spark.up .spark-line {
+  stroke: var(--up);
+}
+
+.sade svg.spark.down .spark-line {
+  stroke: var(--down);
+}
+
+.sade svg .spark-area {
+  fill: rgba(183, 195, 215, 0.12);
+}
+
+.sade svg.spark.up .spark-area {
+  fill: rgba(30, 203, 138, 0.18);
+}
+
+.sade svg.spark.down .spark-area {
+  fill: rgba(255, 93, 110, 0.18);
+}
+
+.sade svg .spark-ref {
+  stroke: var(--rule-line);
+  stroke-dasharray: 2 3;
+}
+
+.sade svg .bar {
+  fill: rgba(255, 182, 72, 0.16);
+  stroke: var(--gold);
+  stroke-width: 0;
+}
+
+.sade svg .bar-hi {
+  fill: var(--gold);
+}
+
+.sade svg .bar-ring {
+  fill: none;
+  stroke: var(--up);
+  stroke-width: 2;
+}
+
+.sade svg .curve-uncond {
+  fill: none;
+  stroke: var(--rule);
+  stroke-width: 1.6;
+  stroke-dasharray: 5 4;
+}
+
+.sade svg .curve-cond {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2.4;
+}
+
+.sade svg .curve-dot {
+  fill: var(--gold);
+}
+
+.sade svg .past {
+  fill: rgba(30, 203, 138, 0.12);
+}
+
+.sade svg .ipo-line,
+.sade svg .zero-line {
+  stroke: var(--rule-line);
+  stroke-dasharray: 4 4;
+}
+
+.sade svg .ipo-dot {
+  fill: var(--text);
+}
+
+.sade svg .break-line {
+  stroke: var(--text-3);
+  stroke-dasharray: 3 3;
+}
+
+.sade svg .break-label {
+  fill: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sade svg .close-line {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 2;
+}
+
+.sade svg .model-line {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.6;
+  stroke-dasharray: 6 4;
+}
+
+.sade svg .model-pt {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2;
+}
+
+.sade svg .upper-tick {
+  stroke: var(--up);
+  stroke-width: 2;
+  opacity: 0.55;
+}
+
+.sade svg .pt-up {
+  fill: var(--up);
+}
+
+.sade svg .pt-down {
+  fill: var(--down);
+}
+
+.sade svg .pt-none {
+  fill: var(--text-3);
+}
+
+.sade svg .last-label {
+  fill: var(--down-text);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sade svg .iv-zero {
+  stroke: var(--text-3);
+  stroke-dasharray: 2 3;
+}
+
+.sade svg .iv-line {
+  stroke: var(--rule);
+  stroke-width: 2;
+}
+
+.sade svg.iv.iv-pass .iv-line {
+  stroke: var(--up);
+}
+
+.sade svg .iv-dot {
+  fill: var(--rule);
+}
+
+.sade svg.iv.iv-pass .iv-dot {
+  fill: var(--up);
+}
+
+.sade svg.iv.iv-undecided .iv-dot {
+  fill: var(--bg);
+  stroke: var(--rule);
+  stroke-width: 2;
+}
+
+.sade svg .ret-fc {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2.4;
+}
+
+.sade svg .ret-real {
+  fill: var(--text);
+}
+
+.sade svg .ret-link {
+  stroke: #3a4d72;
+  stroke-width: 1.5;
+}
+
+/* ---------------------------------------------------------------- giriş formu */
+
+.sade .s-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 14px 20px;
+}
+
+.sade .s-field label {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.sade .s-field .opt {
+  color: var(--text-3);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.sade .s-input {
+  display: flex;
+  align-items: center;
+  background: var(--well);
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  padding-right: 10px;
+}
+
+.sade .s-input input,
+.sade .s-input select {
+  border: 0;
+  background: transparent;
+  text-align: right;
+  font-family: var(--cond);
+  font-size: 16px;
+  width: 100%;
+  min-height: 38px;
+}
+
+.sade .s-input select {
+  text-align: left;
+  font-family: var(--sans);
+  font-size: 14px;
+}
+
+.sade .s-input .unit {
+  color: var(--text-3);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.sade .s-field.has-error .s-input {
+  border-color: var(--down);
+}
+
+.sade .s-field.has-warn .s-input {
+  border-color: var(--regime-badge);
+}
+
+.sade .s-readback {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-3);
+  margin-top: 4px;
+  min-height: 18px;
+}
+
+.sade .s-readback .ok {
+  color: var(--up);
+}
+
+.sade .s-field-notes {
+  font-size: 12px;
+  color: var(--down-text);
+}
+
+.sade .s-field-notes.warn {
+  color: var(--regime-text);
+}
+
+.sade .s-field-notes.info {
+  color: var(--text-3);
+}
+
+.sade details.s-details {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+
+.sade details.s-details summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------- boş durum */
+
+.sade .s-empty {
+  text-align: center;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.sade .s-empty h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.sade .s-empty p {
+  margin: 0;
+  color: var(--text-2);
+  max-width: 62ch;
+}
+
+/* ---------------------------------------------------------------- alt bilgi */
+
+.sade .s-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding: 18px 24px;
+  border-top: 1px solid var(--panel-border);
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+.sade .s-footer .s-footer-right {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+/* ---------------------------------------------------------------- eski ekranlar sade kabukta (K-UI-11) */
+
+.sade .s-legacy {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  padding: 18px;
+  color: var(--text);
+}
+
+.sade .s-legacy h2,
+.sade .s-legacy h3,
+.sade .s-legacy h4 {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.sade .s-legacy table {
+  border-collapse: collapse;
+}
+
+.sade .s-legacy table th,
+.sade .s-legacy table td {
+  border-bottom: 1px solid var(--row-line);
+  padding: 6px 8px;
+  text-align: left;
+  color: var(--text);
+}
+
+.sade .s-legacy .muted,
+.sade .s-legacy .small {
+  color: var(--text-3);
+}
+
+.sade .s-legacy pre,
+.sade .s-legacy code,
+.sade .s-legacy .codeblock {
+  background: var(--well);
+  color: var(--text-2);
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+  padding: 8px;
+  white-space: pre-wrap;
+}
+
+.sade .s-legacy .warn-box,
+.sade .s-legacy .band-warn {
+  background: var(--regime-bg);
+  border: 1px solid var(--regime-border);
+  color: var(--regime-text);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.sade .s-legacy .ok-box {
+  background: var(--up-bg);
+  border: 1px solid rgba(30, 203, 138, 0.4);
+  color: var(--up-text);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.sade .s-legacy .error-box,
+.sade .s-legacy .band-error,
+.sade .s-legacy .fail-text {
+  background: var(--down-bg);
+  border: 1px solid rgba(255, 93, 110, 0.4);
+  color: var(--down-text);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.sade .s-legacy .ok-text {
+  color: var(--up-text);
+}
+
+.sade .s-legacy input,
+.sade .s-legacy select,
+.sade .s-legacy textarea {
+  color: var(--text);
+  background: var(--well);
+  border: 1px solid var(--input-border);
+}
+
+.sade .s-legacy a {
+  color: var(--accent);
+}
+
+.sade .s-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  align-items: center;
+  padding: 14px 18px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+}
+
+.sade .s-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-2);
+  font-size: 13px;
+}
+
+.sade .s-step .n {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid #3a4d72;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--cond);
+}
+
+/* ---------------------------------------------------------------- hareket (K-UI-10) */
+
+@keyframes s-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes s-grow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes s-growx {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes s-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sade .draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: s-draw 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.sade .curve-uncond.draw {
+  stroke-dasharray: 5 4;
+  stroke-dashoffset: 0;
+  animation: s-fade 0.9s ease both;
+}
+
+.sade .model-line.draw {
+  stroke-dasharray: 6 4;
+  stroke-dashoffset: 0;
+  animation: s-fade 0.9s ease both;
+}
+
+.sade .grow {
+  transform-box: fill-box;
+  transform-origin: bottom;
+  animation: s-grow 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.sade .growx {
+  transform-box: fill-box;
+  transform-origin: left;
+  animation: s-growx 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.sade .fade {
+  animation: s-fade 0.7s ease 0.9s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sade .draw,
+  .sade .grow,
+  .sade .growx,
+  .sade .fade,
+  .sade .s-hbar .fill {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}
+
+/* ---------------------------------------------------------------- dar pencere */
+
+@media (max-width: 760px) {
+  .sade .s-main {
+    padding: 16px;
+  }
+  .sade .s-feed {
+    grid-template-columns: 1fr;
+  }
+  .sade .s-jbtns,
+  .sade .s-days {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* ---------------------------------------------------------------- ek: yatay çubuk, kaydırma */
+
+.sade .s-scroll {
+  overflow-x: auto;
+}
+
+.sade .bar-cell {
+  width: 30%;
+  min-width: 90px;
+}
+
+.sade .s-hbar-track {
+  height: 8px;
+  background: #1a2539;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sade .s-hbar-fill {
+  height: 100%;
+  background: rgba(255, 182, 72, 0.45);
+  border-radius: 4px;
+  transform-origin: left;
+  animation: s-growx 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.sade .s-hbar-fill.gold {
+  background: var(--gold);
+}
+
+.sade .s-hbar-fill.rule {
+  background: var(--rule);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sade .s-hbar-fill {
+    animation: none !important;
+  }
+}
+
+html:has(#app.sade-root) {
+  background: #0a0f1a;
+}
+
+.sade .monitor .side {
+  flex: 0 1 340px;
+  min-width: 300px;
+}
+
+.sade .monitor-table table.s-table {
+  font-size: 13px;
+}
+
+.sade .monitor-table .t-company {
+  max-width: 150px;
+}
+
+.sade td.s-class {
+  white-space: nowrap;
+}
+
+.sade .monitor-table table.s-table td,
+.sade .monitor-table table.s-table th {
+  padding: 10px 8px;
+}
+
+.sade .monitor-table td[data-col="break"],
+.sade .monitor-table td[data-col="next-floor"] {
+  white-space: nowrap;
+}
+
+.sade .monitor-table td:first-child {
+  min-width: 150px;
+}
+
+/* ---------------------------------------------------------------- Analiz: zaman çizelgesi */
+
+.sade .s-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  position: relative;
+  padding-top: 18px;
+  border-top: 1px solid var(--panel-border);
+}
+
+.sade .tl-step {
+  position: relative;
+  padding-top: 14px;
+}
+
+.sade .tl-step::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: -12px;
+  height: 1px;
+  background: #2c3c5a;
+}
+
+.sade .tl-step:last-child::before {
+  right: 0;
+}
+
+.sade .tl-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.sade .tl-d1 .tl-dot {
+  background: var(--bg);
+  border: 2px solid var(--text-3);
+}
+
+.sade .tl-d10 .tl-dot {
+  background: var(--down);
+}
+
+.sade .tl-title {
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.sade .tl-value {
+  margin-top: 4px;
+}
+
+.sade .s-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--row-line);
+}
+
+.sade .s-tabs .s-tab {
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  color: var(--text-2);
+  min-height: 34px;
+}
+
+.sade .s-tabs .s-tab.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.sade .s-raw {
+  max-height: 320px;
+  overflow: auto;
+  background: var(--well);
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 11px;
+}
+
+.sade .score-bars .sb {
+  display: grid;
+  grid-template-columns: 44px minmax(60px, 1fr) 64px;
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.sade .s-guide {
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: var(--well);
+}
+
+.sade .guide-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.sade .identity {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--row-line);
+}
+
+.sade .view-opt {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 8px 0;
+}
+
+.sade .settings-form .s-panel-body > label,
+.sade .settings-form .s-panel-body > input {
+  display: block;
+}
+
+.sade .p-close-row .d-cell,
+.sade .realized-row .d-cell {
+  font-size: 12px;
+}
+
+.sade .calc-lead {
+  margin: 0;
+  color: var(--text-2);
+}
+
+.sade .analiz .kac {
+  flex: 1 1 380px;
+  min-width: 340px;
+}
+
+.sade .kac table.s-table td,
+.sade .kac table.s-table th {
+  padding: 6px 6px;
+  font-size: 13px;
+}
+
+.sade .s-mode.mode-scenario,
+.sade .s-mode.mode-official,
+.sade .s-mode.mode-neutral {
+  background: transparent;
+}
+
+.sade .calc .s-col.grow-1 {
+  flex: 1 1 300px;
+}
+
+.sade .calc-wrap {
+  flex: 1.6 1 640px;
+  min-width: 0;
+}
+
+.sade .sonuc .kac {
+  flex: 1 1 380px;
+}
+
+.sade .calc .s-col.grow-1:first-child {
+  flex: 1.3 1 340px;
+}
+
+.sade .calc .s-col.grow-1:last-child {
+  flex: 1 1 260px;
+}
+
+/* Monitör: tablo dar pencerede tam genişlik alır, yan sütun alta iner (pencere 1200 px; tasarım 1440 px) */
+.sade .monitor .monitor-table {
+  flex: 2 1 880px;
+}
+
+.sade .monitor .s-col.side {
+  flex: 1 1 340px;
+}
+
+/* Eski ekranlar sade kabukta (K-UI-11): eski styles.css'in açık zeminleri, koyu metinleri ve açık kenarları koyu temaya
+   döner; anlamlı kutular (ok/uyarı/hata) yukarıdaki daha özgül kurallarla renklenir. Eski dosyalar değişmez. */
+.sade .s-legacy * {
+  background-color: transparent;
+  border-color: var(--panel-border);
+  color: inherit;
+}
+
+.sade .s-legacy .wizard-step {
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 12px 0;
+}
+
+.sade .s-legacy .muted,
+.sade .s-legacy .small,
+.sade .s-legacy th {
+  color: var(--text-2);
+}
+
+.sade .s-legacy .wizard-step.t-level-red {
+  border-color: var(--down);
+}
+
+.sade .s-legacy .wizard-step.t-level-yellow {
+  border-color: var(--regime-badge);
+}
+
+.sade .s-legacy .blockers {
+  color: var(--down-text);
+}
+
+/* ---------------------------------------------------------------- FAZ9_UI_FIX (sunum öncesi düzeltmeler) */
+
+/* K-FIX-1: Analiz yolu, dönüş ve arz değiştirici */
+.sade .arz-crumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+
+.sade .arz-crumb strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.sade .arz-crumb .crumb-sep {
+  color: var(--text-3);
+}
+
+.sade .arz-nav {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-left: auto;
+}
+
+.sade .arz-nav button {
+  min-height: 30px;
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.sade .arz-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sade .arz-switch select {
+  min-height: 30px;
+  padding: 0 8px;
+  font-family: var(--cond);
+  font-weight: 600;
+}
+
+.sade .pick-table td:first-child {
+  min-width: 200px;
+}
+
+/* K-FIX-2: künye kayınca yapışkan üst bar açıkta kalır */
+.sade .sicil-card {
+  scroll-margin-top: 72px;
+}
+
+/* K-FIX-3: geçmiş arzlar satırı (kural, gri) ve gün grupları notu */
+.sade .s-history {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--rule-line);
+}
+
+.sade .s-history .s-reading-value {
+  font-size: 22px;
+  color: var(--rule);
+}
+
+.sade .history-count {
+  margin-top: 2px;
+}
+
+.sade .calc-groups {
+  margin: 0;
+  padding: 8px 10px;
+  border-left: 2px solid var(--rule-line);
+  color: var(--text-2);
+}
+
+.sade .lg-rule {
+  color: var(--rule);
+}
+
+.sade svg .curve-rule {
+  fill: none;
+  stroke: var(--rule);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+/* K-FIX-4: işlem sayısı çubukları (koridorun altında) */
+.sade .trade-title {
+  margin-top: 4px;
+}
+
+.sade .trade-row .d-cell.trade-cell {
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2px;
+  min-height: 44px;
+  padding: 2px 0 3px;
+  border-color: transparent;
+}
+
+.sade .trade-row svg.trade {
+  display: block;
+  width: 100%;
+  max-width: 36px;
+  height: 26px;
+}
+
+.sade svg .trade-bar {
+  fill: var(--rule);
+  opacity: 0.85;
+}
+
+.sade .trade-num {
+  font-family: var(--cond);
+  font-size: 11px;
+  color: var(--text-2);
+  white-space: nowrap;
+}
+
+/* K-FIX-6: 1024 px genişlikte yatay kaydırma yok (tablolar panel içinde kayar) */
+.sade .sicil-table .s-scroll,
+.sade .pick-table .s-scroll {
+  overflow-x: auto;
+}

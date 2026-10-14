@@ -1,0 +1,159 @@
+{
+  "ticker": "SNTA4",
+  "j": 1,
+  "records": [
+    {
+      "file": "20300107T180500Z_999999999999.json",
+      "rel_path": "registry/post_d1/SNTA4/20300107T180500Z_999999999999.json",
+      "status": "OK",
+      "record_type": "PREDICTION",
+      "ticker": "SNTA4",
+      "recorded_at_utc": "2030-01-07T18:05:00Z",
+      "recorded_at_istanbul": "2030-01-07T21:00:00+03:00",
+      "d1_session_date": "2030-01-07",
+      "base_record_file": "registry/records/SNTA4/20300105T100000Z_aaaaaaaaaaaa.json",
+      "thb_sha8": "aaaaaaaa",
+      "thm_sha8": "bbbbbbbb",
+      "models_index_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+      "cells": [
+        {
+          "model_id": "post_d1_hazard_v0",
+          "params_sha256": "3f7640267cd0f6b114ec88cf29e811587daa18c191866f9fa2d6910bc949e5dc",
+          "status": "PREDICTED",
+          "refusal": null,
+          "has_s": true
+        }
+      ],
+      "summary": {
+        "n_models": 1,
+        "n_not_applicable": 0,
+        "n_predicted": 1,
+        "n_refused": 0
+      },
+      "cancels": null,
+      "reason": null,
+      "cancelled_by": null,
+      "tracked": false,
+      "added_commit": null,
+      "push_proof": null,
+      "error": null
+    },
+    {
+      "file": "20300107T190000Z_ffffffffffff.json",
+      "rel_path": "registry/post_d1/SNTA4/20300107T190000Z_ffffffffffff.json",
+      "status": "OK",
+      "record_type": "PREDICTION",
+      "ticker": "SNTA4",
+      "recorded_at_utc": "2030-01-07T19:00:00Z",
+      "recorded_at_istanbul": "2030-01-07T21:00:00+03:00",
+      "d1_session_date": "2030-01-07",
+      "base_record_file": "registry/records/SNTA4/20300105T100000Z_aaaaaaaaaaaa.json",
+      "thb_sha8": "aaaaaaaa",
+      "thm_sha8": "bbbbbbbb",
+      "models_index_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+      "cells": [
+        {
+          "model_id": "post_d1_hazard_v0",
+          "params_sha256": "3f7640267cd0f6b114ec88cf29e811587daa18c191866f9fa2d6910bc949e5dc",
+          "status": "PREDICTED",
+          "refusal": null,
+          "has_s": true
+        }
+      ],
+      "summary": {
+        "n_models": 1,
+        "n_not_applicable": 0,
+        "n_predicted": 1,
+        "n_refused": 0
+      },
+      "cancels": null,
+      "reason": null,
+      "cancelled_by": null,
+      "tracked": false,
+      "added_commit": null,
+      "push_proof": null,
+      "error": null
+    }
+  ],
+  "active": [
+    "20300107T180500Z_999999999999.json",
+    "20300107T190000Z_ffffffffffff.json"
+  ],
+  "selected": "20300107T180500Z_999999999999.json",
+  "state": "PREDICTED",
+  "refusal": null,
+  "row": {
+    "model_id": "post_d1_hazard_v0",
+    "constant": false,
+    "S": [
+      0.6,
+      0.36,
+      0.216,
+      0.1296,
+      0.07776,
+      0.046655999999999996,
+      0.027993599999999997,
+      0.016796159999999997,
+      0.010077695999999999,
+      0.006046617599999999
+    ],
+    "P_L": [
+      0.4,
+      0.24,
+      0.144,
+      0.0864,
+      0.05184,
+      0.031104,
+      0.0186624,
+      0.01119744,
+      0.006718463999999999,
+      0.0040310784,
+      0.006046617599999999
+    ],
+    "expected_l": 1.4909300736,
+    "median_l": 1,
+    "mode_l": 0,
+    "cond": {
+      "S_cond": [
+        null,
+        0.6,
+        0.36,
+        0.216,
+        0.1296,
+        0.07776,
+        0.046655999999999996,
+        0.027993599999999997,
+        0.016796159999999997,
+        0.010077695999999999
+      ],
+      "P_L_cond": [
+        null,
+        0.4,
+        0.24,
+        0.14400000000000002,
+        0.0864,
+        0.051840000000000004,
+        0.031104,
+        0.0186624,
+        0.011197439999999998,
+        0.0067184639999999995,
+        0.010077695999999999
+      ],
+      "p_break_next": 0.4,
+      "expected_l": 2.484883456,
+      "expected_remaining": 1.484883456,
+      "median_l": 2,
+      "mode_l": 1
+    }
+  },
+  "source": {
+    "file": "20300107T180500Z_999999999999.json",
+    "rel_path": "registry/post_d1/SNTA4/20300107T180500Z_999999999999.json",
+    "params_sha8": "3f764026",
+    "d1_session_date": "2030-01-07",
+    "thb_sha8": "aaaaaaaa",
+    "thm_sha8": "bbbbbbbb"
+  },
+  "path_card": null,
+  "d1_close": "11.00"
+}

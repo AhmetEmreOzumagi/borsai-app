@@ -1,0 +1,43 @@
+{
+  "borsai_dirty": false,
+  "borsai_source_sha256": "51a35452a021768f7f3127244d0c0aff778a40cd1ee4111b212b91d154a01a3d",
+  "code_version_note": "Kod damgası BORSAI_FAZ4_FREEZE_20260922 görevinde güncellendi (AUDIT §6-1): üç ledger HEAD'in (2e2fd21) temiz kodunda yeniden koşulduğunda BAYT-EŞİT çıktı, damga artık bu baytları üreten commit'teki ağacı gösterir. Ledger dosyaları ve created_at (ilk koşu) değişmedi. Eski damga: git_commit 50c62da, borsai_dirty true, borsai_source_sha256 f96dbd02ed707bc9d6b926fbc8148f89583e0298d199834613ebda04cd8d6027 (commit edilmemiş bir ara ağaç).",
+  "code_version_verified_at": "2026-09-22",
+  "created_at": "2026-09-22T19:02:44+03:00",
+  "description": "Faz 4: tavan yolu modellerinin (SPEC_CEILING_PATH_V0) bu makinedeki H99 walk-forward fold ledger'ları; S_k Faz 1B tavan ledger'larından aynen. Regresyon testi bunlara karşı BİREBİR (bayt) çalışır; docs/MODELS.md Faz 4 bölümü bunlardan üretilir.",
+  "git_commit": "2e2fd21dc20a3eb485e62352d67a01d83dc080d0",
+  "machine": {
+    "platform": "Darwin 27.0.0 arm64 / CPython 3.12.14"
+  },
+  "runs": {
+    "ceiling_path_v0": {
+      "file": "ceiling_path_v0_fold_ledger.csv",
+      "ledger_sha256": "1f45365ee2d84612c7a1882d98bd46697405030b003aa3db379b4fcf450e2e15",
+      "model_id": "ceiling_path_v0",
+      "plan_id": "H99_CEILING_PATH_T_CUTOFF_REUSE_CEILING_LEDGER",
+      "spec_sha256": "104f49c4c951ad19d115781552206e82d3575d01f59f43baf8f23cd94a2e77cb"
+    },
+    "ceiling_path_v0@INF": {
+      "file": "ceiling_path_v0@INF_fold_ledger.csv",
+      "ledger_sha256": "cf79a8330c79221bd65fc554d36e1febe786ee206a0f61330c7992f5e4b06e24",
+      "model_id": "ceiling_path_v0@INF",
+      "plan_id": "H99_CEILING_PATH_T_CUTOFF_REUSE_CEILING_LEDGER",
+      "spec_sha256": "9cc7f016db4b78b75c0aee3ede49f364d58ac9f5964f0d071d4ba650d641dbd1"
+    },
+    "pb_ceiling_path_v0": {
+      "file": "pb_ceiling_path_v0_fold_ledger.csv",
+      "ledger_sha256": "498676bb985e8f2df7fd2b217b19946cfb794b71fbd738b43a8bf24e7fdf49da",
+      "model_id": "pb_ceiling_path_v0",
+      "plan_id": "H99_PB_CEILING_PATH_B_CUTOFF_REUSE_PB_CEILING_LEDGER",
+      "spec_sha256": "b3f723fba37acd2ee62d98c31e008e19298205735f40e45a58fbcf906653f1a9"
+    }
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  }
+}

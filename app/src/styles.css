@@ -1,0 +1,1314 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #1d2330;
+  background: #f6f7f9;
+  --scenario: #e8740c;
+  --official: #1f5fbf;
+  --neutral: #5a6377;
+  --border: #d8dce3;
+  --ok: #1e8e3e;
+  --fail: #b3261e;
+  --warn-bg: #fff6d6;
+  --warn-border: #e6c34a;
+  --muted: #6b7384;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+button {
+  font: inherit;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.primary {
+  background: var(--official);
+  color: #fff;
+  border-color: var(--official);
+}
+
+button.link {
+  border: 0;
+  background: transparent;
+  color: var(--official);
+  padding: 0 0.2rem;
+  text-decoration: underline;
+}
+
+input[type="text"],
+select {
+  font: inherit;
+  padding: 0.2rem 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #fff;
+}
+
+input[type="text"]:disabled,
+select:disabled {
+  background: #eef0f3;
+}
+
+.mode-band {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.4rem 1rem;
+  color: #fff;
+}
+
+.mode-scenario {
+  background: var(--scenario);
+}
+
+.mode-official {
+  background: var(--official);
+}
+
+/* Doğruluk, Ayarlar, Hakkında: mod yok (§3 bant tablosu). */
+.mode-neutral {
+  background: var(--neutral);
+}
+
+.repo-mode {
+  margin-left: auto;
+  font-size: 0.9em;
+  background: rgba(0, 0, 0, 0.18);
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+}
+
+.repo-mode.repo-on {
+  background: #2e7d32;
+}
+
+.layout {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.sidebar {
+  width: 170px;
+  flex: none;
+  border-right: 1px solid var(--border);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 2px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.2em;
+  padding: 0.5rem;
+}
+
+.nav-item {
+  text-align: left;
+  border: 0;
+  background: transparent;
+  padding: 0.45rem 0.6rem;
+  border-radius: 6px;
+}
+
+.nav-item.active {
+  background: #e7eefb;
+  font-weight: 600;
+}
+
+.content {
+  flex: 1;
+  overflow: auto;
+  padding: 0.8rem 1.2rem 2rem;
+  min-width: 0;
+}
+
+h2 {
+  margin: 0.2rem 0 0.6rem;
+}
+
+h3 {
+  margin: 1rem 0 0.4rem;
+}
+
+h4 {
+  margin: 0.8rem 0 0.3rem;
+}
+
+.kv th {
+  text-align: left;
+  padding-right: 1rem;
+  vertical-align: top;
+  font-weight: 500;
+  color: #4a5263;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.92em;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.small {
+  font-size: 0.85em;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.error {
+  color: var(--fail);
+}
+
+.disclaimer {
+  border-top: 1px solid var(--border);
+  padding: 0.35rem 1rem;
+  font-size: 0.85em;
+  color: #4a5263;
+  background: #fff;
+}
+
+.scroll {
+  overflow-x: auto;
+}
+
+/* kutular */
+.warn-box {
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-border);
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+}
+
+.ok-box {
+  background: #e7f5ea;
+  border: 1px solid #9fd3ab;
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+}
+
+.error-box,
+.band-error {
+  background: #fdecea;
+  border: 1px solid #f1a7a1;
+  color: var(--fail);
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+  margin: 0.4rem 0;
+}
+
+.broken-box {
+  background: #fdecea;
+  border-left: 4px solid var(--fail);
+  padding: 0.35rem 0.6rem;
+}
+
+.regime {
+  background: #eceef2;
+  color: #3c4350;
+  border-radius: 6px;
+  padding: 0.45rem 0.7rem;
+  margin: 0.5rem 0;
+  font-size: 0.9em;
+}
+
+.banner-info {
+  background: #fff2e6;
+  border: 1px solid #f3c79c;
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+}
+
+.closed-state,
+.empty-state {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.78em;
+  background: #eceef2;
+  border-radius: 4px;
+  padding: 0 0.3rem;
+  color: #4a5263;
+}
+
+.tag-scenario,
+.tag-source {
+  background: #fff2e6;
+  color: #9a4d05;
+}
+
+/* girdi formu */
+.stage .radio,
+.radios .radio {
+  margin-right: 1rem;
+}
+
+.prefill {
+  margin: 0.6rem 0;
+  padding: 0.5rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.ticker {
+  display: block;
+  margin: 0.4rem 0;
+}
+
+.form-table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+}
+
+.form-table th,
+.form-table td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.3rem 0.4rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+.form-table td.num {
+  color: var(--muted);
+}
+
+.form-table input[type="text"] {
+  width: 11rem;
+}
+
+.form-table tr.req-EMPTY {
+  background: #fafbfc;
+}
+
+.flabel {
+  font-weight: 600;
+}
+
+.users {
+  margin-top: 0.2rem;
+  font-style: italic;
+}
+
+.notes {
+  min-width: 14rem;
+}
+
+.note {
+  font-size: 0.82em;
+  border-radius: 4px;
+  padding: 0.05rem 0.3rem;
+  margin-bottom: 2px;
+}
+
+.note-error {
+  background: #fdecea;
+  color: var(--fail);
+}
+
+.note-warn {
+  background: var(--warn-bg);
+  color: #7a5b00;
+}
+
+.note-info {
+  background: #eef1f5;
+  color: #4a5263;
+}
+
+.note-suggest {
+  background: #e7eefb;
+}
+
+.f3-def,
+.f6 {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  margin: 0.7rem 0;
+}
+
+.actions {
+  margin: 0.8rem 0;
+}
+
+/* sonuç */
+.grid {
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 0.82em;
+}
+
+.grid th,
+.grid td {
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.4rem;
+  vertical-align: top;
+}
+
+.grid.compact td,
+.grid.compact th {
+  padding: 0.15rem 0.35rem;
+  text-align: right;
+}
+
+.model-col {
+  min-width: 78px;
+  border-top: 4px solid var(--border);
+  text-align: left;
+  position: relative;
+}
+
+.model-col .mid {
+  font-weight: 600;
+  font-size: 0.85em;
+  word-break: break-all;
+}
+
+.model-col.constant {
+  background: #f1f2f4;
+  color: var(--muted);
+}
+
+.watermark {
+  font-size: 0.7em;
+  letter-spacing: 0.08em;
+  color: var(--scenario);
+  opacity: 0.8;
+  font-weight: 700;
+}
+
+.sha {
+  color: var(--muted);
+  font-size: 0.75em;
+}
+
+.badge {
+  font-size: 0.78em;
+  padding: 0 0.35rem;
+  border-radius: 10px;
+}
+
+.badge-warn {
+  background: var(--warn-bg);
+  border-color: var(--warn-border);
+}
+
+.badge-none {
+  color: var(--muted);
+}
+
+.cell .ret {
+  font-weight: 600;
+}
+
+.cell .clip {
+  color: var(--fail);
+  margin-left: 2px;
+  cursor: help;
+}
+
+.cell .price,
+.cell .pup {
+  font-size: 0.9em;
+}
+
+.cell.constant {
+  background: #f6f7f9;
+  color: var(--muted);
+}
+
+.cell.undef {
+  color: var(--muted);
+  text-align: center;
+}
+
+.mae {
+  font-size: 0.75em;
+  margin-top: 2px;
+}
+
+.refused-cell {
+  background: #fbf3f2;
+  vertical-align: middle;
+}
+
+.refusal {
+  min-width: 96px;
+  max-width: 140px;
+  font-size: 0.85em;
+}
+
+.refusal-head {
+  font-weight: 700;
+  color: var(--fail);
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  margin: 0.6rem 0;
+}
+
+.selector {
+  margin: 0.4rem 0;
+}
+
+.chk-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1rem;
+  padding: 0.3rem 0;
+}
+
+.save-row {
+  margin: 0.4rem 0;
+}
+
+.save-row input {
+  width: 16rem;
+}
+
+.chart-wrap {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.chart {
+  width: 560px;
+  max-width: 100%;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.chart .grid-line {
+  stroke: #e6e8ec;
+}
+
+.chart .tick {
+  font-size: 10px;
+  fill: #6b7384;
+}
+
+.chart .axis-label {
+  font-size: 11px;
+  fill: #4a5263;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.85em;
+}
+
+.legend-item i {
+  display: inline-block;
+  width: 14px;
+  height: 3px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.bars-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.bars {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.3rem;
+}
+
+.bars figcaption {
+  font-size: 0.78em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.bars .tick {
+  font-size: 9px;
+  fill: #6b7384;
+}
+
+.info-line {
+  font-size: 0.9em;
+  color: #3c4350;
+}
+
+/* koşullu tavan */
+.conditional {
+  border-top: 2px solid var(--border);
+  margin-top: 1.2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.3rem;
+  margin: 0.4rem 0;
+}
+
+.tab.active {
+  background: #e7eefb;
+  border-color: var(--official);
+  font-weight: 600;
+}
+
+.strip {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.day {
+  width: 76px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.25rem;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  font-size: 0.8em;
+}
+
+.day .d {
+  font-weight: 700;
+}
+
+.day .f {
+  font-size: 0.8em;
+}
+
+.day-CEILING {
+  background: #d8f0dc;
+}
+
+.day-NOT_CEILING {
+  background: #f8d7d4;
+}
+
+.day-PENDING,
+.day-NONE {
+  background: #eceef2;
+}
+
+.day-NO_LABEL {
+  background: repeating-linear-gradient(45deg, #eceef2, #eceef2 5px, #d6d9df 5px, #d6d9df 10px);
+}
+
+.day.declared {
+  border-color: var(--scenario);
+}
+
+/* gün içindeki "seri sürüyor (kullanıcı beyanı)" etiketi: yalnız etiket, hesaba girmez (U52) */
+.day .decl {
+  color: var(--scenario);
+  font-weight: 600;
+}
+
+.user-badge {
+  background: var(--scenario);
+  color: #fff;
+  font-size: 0.72em;
+  border-radius: 4px;
+  padding: 0 0.35rem;
+  vertical-align: middle;
+}
+
+.hypo {
+  background: #efe7fb;
+  color: #5b3aa6;
+  border-radius: 4px;
+  padding: 0 0.35rem;
+  font-size: 0.85em;
+}
+
+.j-row {
+  margin: 0.5rem 0;
+}
+
+/* ayarlar */
+.settings-form label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.checks tr.ok td:first-of-type {
+  color: var(--ok);
+}
+
+.checks tr.fail td:first-of-type {
+  color: var(--fail);
+}
+
+.ok-text {
+  color: var(--ok);
+}
+
+.fail-text {
+  color: var(--fail);
+}
+
+/* ---------------------------------------------------------------- sicil ekranı ve arz sayfası (§3e, §3g) */
+
+.repo-line {
+  color: var(--muted);
+}
+
+.registry-table td {
+  vertical-align: middle;
+}
+
+.record-tabs {
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.tab.record-cancelled {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.cancelled-band {
+  margin: 0.6rem 0;
+}
+
+.proof-line {
+  margin: 0.3rem 0 0;
+}
+
+.proof-line .proof {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.unsupported-models {
+  margin: 0.8rem 0;
+  padding: 0.5rem 0.8rem;
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  background: #fbfbfd;
+}
+
+.unsupported-models h4 {
+  margin: 0 0 0.3rem;
+}
+
+.unsupported-models ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.record-source {
+  margin-top: 0.6rem;
+}
+
+.cancel-form {
+  margin: 1rem 0;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.cancel-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.raw-record pre {
+  max-height: 26rem;
+  overflow: auto;
+}
+
+/* ---------------------------------------------------------------- dondur sihirbazı (§3e) */
+
+.wizard-ident {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  margin-bottom: 0.8rem;
+}
+
+.wizard-step {
+  margin: 1rem 0;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.wizard-step h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.wizard-step.t-level-red {
+  border-color: var(--fail);
+}
+
+.wizard-step.t-level-yellow {
+  border-color: var(--warn-border);
+}
+
+.blockers {
+  margin: 0.4rem 0;
+  padding-left: 1.1rem;
+  color: var(--fail);
+}
+
+.docs-table input,
+.docs-table select {
+  font: inherit;
+}
+
+.copied-docs {
+  margin: 0.3rem 0;
+  padding-left: 1.1rem;
+}
+
+.fields-table .value {
+  white-space: nowrap;
+}
+
+.fields-table tr.empty td {
+  background: #fbfbfd;
+}
+
+.doc-meta {
+  display: flex;
+  gap: 1.2rem;
+  margin: 0.6rem 0;
+  align-items: flex-start;
+}
+
+.doc-preview pre,
+.diff {
+  max-height: 22rem;
+  overflow: auto;
+}
+
+.diff {
+  background: #fbfbfd;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+}
+
+.parity-line {
+  margin: 0.4rem 0;
+  font-weight: 600;
+}
+
+.parity-mismatch {
+  margin: 0.6rem 0;
+}
+
+.todo-block {
+  background: #10141c;
+  color: #e7ebf3;
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+  overflow-x: auto;
+  user-select: text;
+}
+
+/* ---------------------------------------------------------------- tavan yolu (Grup C, EK 2 §4) */
+
+.survival-note {
+  font-size: 0.72em;
+}
+
+.cell .band,
+.cell .s-h,
+.cell .atoms {
+  font-size: 0.85em;
+}
+
+.cell.path-cell .price-row {
+  font-size: 0.9em;
+  margin-top: 2px;
+}
+
+.cell.path-cell .price.approx {
+  color: var(--muted);
+  cursor: help;
+}
+
+.cell.insufficient {
+  color: var(--muted);
+  text-align: center;
+  cursor: help;
+}
+
+.tag.median-tag,
+.tag.limit-tag {
+  font-size: 0.7em;
+  vertical-align: middle;
+}
+
+.group-c .c-list,
+.group-c .post-break-cells ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0;
+  columns: 2;
+}
+
+.group-c .limit-path {
+  margin: 0.5rem 0;
+}
+
+.group-c .limit-path h5 {
+  margin: 0.25rem 0;
+}
+
+.path-cond {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.path-cond h4 {
+  margin: 0 0 0.25rem;
+}
+
+.path-cond .cond-state {
+  margin: 0.25rem 0;
+  font-weight: 600;
+}
+
+.path-cond .cond-closes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0;
+}
+
+.cond-return-table tr.realized {
+  background: #f4f8f4;
+}
+
+.cond-return-table .realized-cell {
+  color: var(--ok);
+}
+
+/* doğruluk paneli (§3d): iki terazi AYRI renk sınıfı; aralarında hiçbir toplam yoktur (U14) */
+.model-blocks {
+  margin-top: 0.75rem;
+}
+
+.model-block {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  margin: 0.5rem 0;
+  padding: 0.35rem 0.6rem;
+}
+
+.model-block > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.model-card {
+  margin: 0.5rem 0;
+}
+
+.model-card caption {
+  text-align: left;
+  font-weight: 600;
+  padding-bottom: 0.2rem;
+}
+
+.panel-backtest {
+  background: #eceef3;
+  border-left: 4px solid #3c4a63;
+  padding: 0.5rem 0.65rem;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+
+.panel-live {
+  background: #fdf3e0;
+  border-left: 4px solid var(--scenario);
+  padding: 0.5rem 0.65rem;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+
+.panel-backtest h4,
+.panel-live h4 {
+  margin: 0 0 0.25rem;
+}
+
+.cells td.metric {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.cells tr.primary > td {
+  border-top: 2px solid #3c4a63;
+  border-bottom: 2px solid #3c4a63;
+}
+
+.cells tr.primary > td:first-child {
+  border-left: 2px solid #3c4a63;
+}
+
+.cells tr.primary > td:last-child {
+  border-right: 2px solid #3c4a63;
+}
+
+.cells td.verdict {
+  white-space: nowrap;
+}
+
+.cells td.verdict.win {
+  color: var(--ok);
+  font-weight: 600;
+}
+
+.cells td.verdict.lose {
+  color: var(--fail);
+  font-weight: 600;
+}
+
+.badge-small-n {
+  display: inline-block;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0 0.4rem;
+  font-size: 0.8em;
+  color: var(--muted);
+}
+
+.label-tag {
+  font-size: 0.75em;
+}
+
+.invalid-use,
+.retro,
+.descriptive {
+  color: var(--muted);
+  margin: 0.4rem 0;
+}
+
+.invalid-use > summary,
+.retro > summary,
+.descriptive > summary,
+.skipped > summary {
+  cursor: pointer;
+}
+
+.self-reported,
+.cond-scores {
+  border-top: 1px dashed var(--border);
+  margin-top: 0.5rem;
+  padding-top: 0.35rem;
+}
+
+.cond-j {
+  border-left: 2px solid var(--border);
+  padding-left: 0.5rem;
+  margin: 0.4rem 0;
+}
+
+.cond-j h6 {
+  margin: 0.2rem 0;
+}
+
+.separate-models {
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+  margin: 0.75rem 0;
+}
+
+.integrity-error .mono {
+  display: block;
+  margin: 0.3rem 0;
+}
+
+.scales-note {
+  margin: 0.25rem 0;
+}
+
+/* ---------------------------------------------------------------- Tavan serisi kartı (SPEC_APP EK 3 §5) */
+:root {
+  --scale-backtest: #3d4a6b; /* lacivert-gri: geçmiş veri testi */
+  --scale-oot: #4d6b57; /* yeşil-gri: zaman-dışı */
+  --scale-live: #b7791f; /* kehribar: canlı sicil */
+}
+
+.summary-ceiling,
+.summary-fall {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--official);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.summary-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.summary-head h3 {
+  margin: 0;
+}
+
+.mode-badge {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0.05rem 0.4rem;
+}
+
+.mode-badge.scenario {
+  background: var(--scenario);
+}
+
+.mode-badge.official {
+  background: var(--official);
+}
+
+.featured-line {
+  color: var(--neutral);
+  font-size: 0.9rem;
+}
+
+.summary-headline {
+  margin: 0.6rem 0 0.2rem;
+}
+
+.summary-headline .big {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.summary-headline.refused {
+  color: var(--fail);
+  font-weight: 600;
+}
+
+.summary-probs,
+.summary-mode,
+.summary-cond {
+  margin: 0.2rem 0;
+}
+
+.summary-probs {
+  font-size: 1.05rem;
+}
+
+.summary-table th.scale-backtest,
+.summary-table td.scale-backtest {
+  color: var(--scale-backtest);
+  border-left: 3px solid var(--scale-backtest);
+}
+
+.summary-table th.scale-oot,
+.summary-table td.scale-oot {
+  color: var(--scale-oot);
+  border-left: 3px solid var(--scale-oot);
+}
+
+.summary-table th.scale-live,
+.summary-table td.scale-live {
+  color: var(--scale-live);
+  border-left: 3px solid var(--scale-live);
+}
+
+.summary-table td.vault.win {
+  color: var(--ok);
+  font-weight: 600;
+}
+
+.summary-table td.vault.lose {
+  color: var(--fail);
+  font-weight: 600;
+}
+
+.summary-table tr.role-featured th {
+  font-weight: 700;
+}
+
+.summary-table tr.role-constant {
+  color: var(--muted);
+}
+
+.summary-table td.not-in-record,
+.summary-table td.refused-cell {
+  font-style: italic;
+}
+
+.summary-table td.refused-cell {
+  color: var(--fail);
+}
+
+details.pb-mirror,
+details.group-b-details {
+  margin: 0.5rem 0;
+}
+
+details.group-b-details > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--official);
+}
+
+.tufe-line {
+  margin: 0.3rem 0;
+}
+
+.tufe-missing pre.append-command {
+  white-space: pre-wrap;
+  word-break: break-all;
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 0.4rem;
+}
+
+.grid.compact.summary-table tbody th,
+.grid.compact.summary-table thead th:first-child,
+.grid.compact.summary-table .scale-backtest,
+.grid.compact.summary-table .scale-oot,
+.grid.compact.summary-table .scale-live {
+  text-align: left;
+}
+
+/* D1 sonrası güncelleme (SPEC_APP EK 3 §6.5–§6.6) */
+.post-d1 {
+  border-left: 3px solid #e67e22;
+  padding: 2px 0 2px 10px;
+  margin: 10px 0;
+}
+.post-d1 h4 {
+  margin: 4px 0;
+}
+.summary-table tr.role-post_d1 th {
+  color: #b9661a;
+}
+.summary-table td.vault .comparator {
+  color: #555;
+  white-space: nowrap;
+}
+.post-d1-path {
+  border-top: 1px dashed #e67e22;
+  margin-top: 14px;
+  padding-top: 6px;
+}
+.panel-post-d1 {
+  border-left: 3px solid #e67e22;
+  padding-left: 10px;
+  margin-top: 18px;
+}
+.post-d1-checks .ok {
+  color: #1e7e34;
+  font-weight: 600;
+}
+.post-d1-checks .bad {
+  color: #b02a2a;
+  font-weight: 600;
+}
+.post-d1-step.pending h3 {
+  color: #888;
+}
+.post-d1-cancel {
+  margin-top: 18px;
+  border-top: 1px solid #ddd;
+  padding-top: 8px;
+}
+
+/* "Düşüş (D10)" kartı (EK 3 §8.4): tavan serisi kartıyla aynı kalıp; §5.5 sütunu ve karşılaştırıcı rozeti */
+.summary-fall .rule-5-5 {
+  font-size: 0.85em;
+  color: var(--muted);
+}
+.summary-fall .rule-5-5.eligible {
+  color: inherit;
+  font-weight: 600;
+}
+.summary-fall .comparator-badge {
+  font-size: 0.75em;
+  margin-left: 0.4em;
+}
+.summary-fall .fall-cards ul {
+  margin: 0.3em 0 0.3em 1.2em;
+  padding: 0;
+}
+
+/* Zaman-dışı test (eski kohort) paneli (EK 3 §7.2): üçüncü terazi, yeşil-gri; backtest (lacivert-gri) ve canlıdan (kehribar) ayrı */
+.panel-oot {
+  border: 1px solid var(--border);
+  border-left: 6px solid #6f8f7a;
+  background: #f4f8f5;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 1.25rem 0;
+}
+.panel-oot h3 {
+  margin: 0 0 0.4rem;
+}
+.panel-oot .oot-block {
+  border-top: 1px solid var(--border);
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+}
+.panel-oot .vault-line {
+  font-weight: 600;
+}
+.panel-oot td.verdict.win {
+  background: #e3f3e6;
+}
+.panel-oot td.verdict.lose {
+  background: #f8e3e1;
+}
+.panel-oot .model-block-oot > summary {
+  cursor: pointer;
+  margin: 0.4rem 0;
+}

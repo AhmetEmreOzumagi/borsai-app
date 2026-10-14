@@ -1,0 +1,217 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "REEDR",
+  "company": "Reeder Teknoloji Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "4208278",
+      "source_id": "KAP_1195620_EK1",
+      "source_document": "KAP 1195620 ek 1",
+      "source_published_at": "2023-09-18T11:44:21+03:00",
+      "source_sha256": "2065bb43ee992d5334be9a7bc0d66beb594775661a651652323e4d46bbcdf9d8",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195620_ek1.pdf",
+      "quote": "Toplam 215.000.000 %100 4.262.914 848.216.796 %100 4.208.278 215.000.000 %100",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 4.262.914; dağıtım yapılan 4.208.278",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "4.262.914",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "4.262.914",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "4.262.914 talep eden kişi sayısı; dağıtım yapılan 4.208.278 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "4208248",
+        "domestic_institutional": "30"
+      },
+      "source_id": "KAP_1195620_EK1",
+      "source_document": "KAP 1195620 ek 1",
+      "source_published_at": "2023-09-18T11:44:21+03:00",
+      "source_sha256": "2065bb43ee992d5334be9a7bc0d66beb594775661a651652323e4d46bbcdf9d8",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195620_ek1.pdf",
+      "quote": [
+        "182.750.000 %85 4.262.699 440.839.796 %51,97 4.208.248 182.750.000 %85",
+        "32.250.000 %15 215 407.377.000 %48,03 30 32.250.000 %15"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "başvuru: bireysel 4.262.699, yurt içi kurumsal 215; yurt dışı kurumsal grup yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "2.41",
+      "source_id": "KAP_1195620_EK1",
+      "source_document": "KAP 1195620 ek 1",
+      "source_published_at": "2023-09-18T11:44:21+03:00",
+      "source_sha256": "2065bb43ee992d5334be9a7bc0d66beb594775661a651652323e4d46bbcdf9d8",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195620_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara tahsis edilen payların 2,41 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,41",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "12.63",
+      "source_id": "KAP_1195620_EK1",
+      "source_document": "KAP 1195620 ek 1",
+      "source_published_at": "2023-09-18T11:44:21+03:00",
+      "source_sha256": "2065bb43ee992d5334be9a7bc0d66beb594775661a651652323e4d46bbcdf9d8",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195620_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara tahsis edilen payların 12,63 katı talep gelmiştir.",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "12,63",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "sonuç ekinde yurt dışı kurumsal yatırımcı grubu yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "182750000",
+        "domestic_institutional": "32250000"
+      },
+      "source_id": "KAP_1195620_EK1",
+      "source_document": "KAP 1195620 ek 1",
+      "source_published_at": "2023-09-18T11:44:21+03:00",
+      "source_sha256": "2065bb43ee992d5334be9a7bc0d66beb594775661a651652323e4d46bbcdf9d8",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195620_ek1.pdf",
+      "quote": [
+        "182.750.000 %85 4.262.699 440.839.796 %51,97 4.208.248 182.750.000 %85",
+        "32.250.000 %15 215 407.377.000 %48,03 30 32.250.000 %15"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "85",
+      "source_id": "KAP_1195620_EK1",
+      "source_document": "KAP 1195620 ek 1",
+      "source_published_at": "2023-09-18T11:44:21+03:00",
+      "source_sha256": "2065bb43ee992d5334be9a7bc0d66beb594775661a651652323e4d46bbcdf9d8",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195620_ek1.pdf",
+      "quote": "182.750.000 %85 4.262.699 440.839.796 %51,97 4.208.248 182.750.000 %85",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %85",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "15",
+      "source_id": "KAP_1195620_EK1",
+      "source_document": "KAP 1195620 ek 1",
+      "source_published_at": "2023-09-18T11:44:21+03:00",
+      "source_sha256": "2065bb43ee992d5334be9a7bc0d66beb594775661a651652323e4d46bbcdf9d8",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195620_ek1.pdf",
+      "quote": "32.250.000 %15 215 407.377.000 %48,03 30 32.250.000 %15",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %15",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "sonuç ekinde yurt dışı kurumsal grup yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç belgesi ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Türkiye Sınai Kalkınma Bankası A.Ş.; Ziraat Yatırım Menkul Değerler A.Ş.; Yatırım Finansman Menkul Değerler A.Ş.",
+      "source_id": "KAP_1193538_EK1",
+      "source_document": "KAP 1193538 ek 1",
+      "source_published_at": "2023-09-09T03:40:00+03:00",
+      "source_sha256": "d28a4b040ca8ce819badaf7629d18c5b3e932d9280f4f37a4c1811f734cea855",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1193538_ek1.pdf",
+      "quote": "halka arzda satışa aracıhk edecek Türkiye Sınai Kalkınma Bankası A.Ş. (www.tskb.com.tr), Ziraat Yatırım Menkul Değerler A.Ş (www.ziraatyatirim.com.tr) ve Yatırım Finansmanı Menkul Değerler Anonim Şirketi'nin",
+      "note": "TSSD (OCR) üç aracı kurumu birlikte sayıyor, konsorsiyum lideri ayrıca belirtilmiyor; sonuç bildirimini TSKB yayımlamış",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1195976",
+      "source_document": "KAP 1195976",
+      "source_published_at": "2023-09-18T18:12:10+03:00",
+      "source_sha256": "60ba08142d08d405c022b2e80e4f966a47800ca47fa01b6fac168b8ad9cc681a",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195976_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1195976",
+      "source_document": "KAP 1195976",
+      "source_published_at": "2023-09-18T18:12:10+03:00",
+      "source_sha256": "60ba08142d08d405c022b2e80e4f966a47800ca47fa01b6fac168b8ad9cc681a",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195976_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1195976": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1195976",
+      "published_at": "2023-09-18T18:12:10+03:00",
+      "sha256": "60ba08142d08d405c022b2e80e4f966a47800ca47fa01b6fac168b8ad9cc681a",
+      "path": "registry/oot/source_docs/REEDR/KAP_1195976_bildirim.pdf"
+    },
+    "KAP_1195620_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1195620 ek 1",
+      "published_at": "2023-09-18T11:44:21+03:00",
+      "sha256": "2065bb43ee992d5334be9a7bc0d66beb594775661a651652323e4d46bbcdf9d8",
+      "path": "registry/oot/source_docs/REEDR/KAP_1195620_ek1.pdf"
+    },
+    "KAP_1193538_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1193538 ek 1",
+      "published_at": "2023-09-09T03:40:00+03:00",
+      "sha256": "d28a4b040ca8ce819badaf7629d18c5b3e932d9280f4f37a4c1811f734cea855",
+      "path": "registry/oot/source_docs/REEDR/KAP_1193538_ek1.pdf"
+    }
+  }
+}

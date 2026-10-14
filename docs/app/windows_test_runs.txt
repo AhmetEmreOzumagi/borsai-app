@@ -1,0 +1,93 @@
+BORSAI_FAZ9_WINDOWS_20261013 — test günlüğü (yerel koşular; push yok)
+
+TABAN 2f01a28 (= origin/main), ağaç temiz (izinli izlenmeyenler: docs/prompts/FAZ9_WINDOWS.md, TUFE_2026_09.md, FAZ10_FABLE_STREAK_SPEC.md)
+
+[adım 0] .venv/bin/pytest -q -n 6 --dist loadgroup            → 952 passed in 539.41s (0:08:59)
+[adım 0] bash app/scripts/test.sh                              → cargo 164 passed / 0 failed; vitest 24 dosya, 376 test; parity 8 passed; golden_unchanged YEŞİL; EXIT 0
+[adım 0] .venv/bin/python app/parity/gen_golden.py --check     → {"checked": 35, "different": []}
+
+[adım 0b] prova klonu /tmp/borsai_win_20261013/repo (git clone --local; .venv ve app/node_modules bağ), CARGO_TARGET_DIR klon dizininde
+          app/dist YOK iken cargo test --workspace --no-run      → derlendi (test profili devUrl; CI test işi npm run build istemez)
+          A taslağı: cargo test --workspace (yalın, CI gibi)     → 158 passed, 0 failed, 13 ignored
+          A taslağı: BORSAI_REPO=<klon> cargo test --workspace -- --include-ignored --exact --skip (5 e2e) → 166 passed, 0 failed
+          A + B taslağı: npx vitest run                          → 2 failed | 374 passed (376): sade_render.test.ts
+                 "öne çıkan altın; öne çıkmayan aynı değer + ≈" (approxLabel) ve "getiri tablosu: … ≈ fark net değil" (eski :394)
+                 → ikisi de K-TXT-1 pini (K-PIN-WIN genel kuralına uyar); güncellendi + K-TXT-2/3 iddiaları eklendi → 377 passed
+          Windows'ta kırılacağı kod okumasıyla belirlenen vitest taramaları (no_frontend_math, sade_static, u52_declaration: rel ayırıcı)
+                 → proje sahibine soruldu, "Uygula" → yalnız rel ayırıcısı '/'; Mac'te 377 passed
+          TZ=UTC LANG=C LC_ALL=C npx vitest run                  → 24 dosya, 377 passed
+          TZ=UTC LANG=C LC_ALL=C cargo test --workspace          → 158 passed, 0 failed, 13 ignored
+          npm run tauri build (targets app, dmg, nsis)           → BorsAi.app + BorsAi_0.1.0_aarch64.dmg; nsis Mac'te sessizce atlandı, hata yok
+
+[adım A, commit öncesi] git status: yalnız A dosyaları + izinli izlenmeyenler
+[adım A, commit öncesi] pytest test_5c tek başına (commit'siz app/)   → 1 passed
+[adım A, commit öncesi] bash app/scripts/test.sh                → cargo 166 passed / 0 failed; vitest 376; parity 8 passed; golden_unchanged YEŞİL; EXIT 0
+[adım A, commit öncesi] .venv/bin/pytest -q -n 6 --dist loadgroup --deselect tests/test_faz8_break.py::test_14b_old_specs_models_and_cutoff_unchanged
+                                                               → 951 passed in 658.88s (0:10:58), 1 deselected
+[adım A sonrası 63d953d, temiz app/] pytest test_5c + test_14b tek başına → 2 passed in 4.51s
+
+[adım B] görüntü koşusu (screens_v2.sh kalıbı, VITE_BORSAI_DEMO=1 VITE_BORSAI_DEMO_V2=1 VITE_BORSAI_DEMO_WIN=1, BORSAI_DATA_DIR geçici)
+          → win_01_sonuc_birincil_degil, win_02_monitor_serit, win_03_giris_sum_uyari, win_04_analiz_birincil_degil (sips -Z 1440)
+          → asıl repo registry/ ve data/ sha listesi öncesiyle aynı (2246 dosya)
+          (ilk deneme yalnız VITE_BORSAI_DEMO_WIN=1: legacyDemo ayrıntılı görünümü açtı → demo zaman aşımı; dağıtım sırası düzeltildi)
+[adım B, commit öncesi] bash app/scripts/test.sh                → cargo 166 passed / 0 failed; vitest 24 dosya, 377 test; parity 8 passed; golden_unchanged YEŞİL; EXIT 0
+[adım B, commit öncesi] .venv/bin/pytest -q -n 6 --dist loadgroup --deselect tests/test_faz8_break.py::test_14b_old_specs_models_and_cutoff_unchanged
+                                                               → 951 passed in 673.73s (0:11:13), 1 deselected
+[adım B sonrası ac1d5e0] pytest test_5c tek başına (commit'siz app/README.md) → 1 passed
+
+[adım C] ruby YAML.safe_load + yapı denetimi .github/workflows/build.yml → 0 hata (bozma denemeleri: fetch-depth, timeout, --include-ignored, needs → 4/4 yakalandı)
+[adım C sonrası e688f96, temiz app/] pytest test_5c + test_14b tek başına → 2 passed in 4.58s
+          git diff --stat 2f01a28 -- borsai models scores registry data → boş; git diff --stat 2f01a28 -- app/parity → boş
+          npm run tauri build (HEAD e688f96)                   → BorsAi.app + BorsAi_0.1.0_aarch64.dmg (3562647 bayt,
+                 sha256 0c5cd45a86f91b54f37eafc723b48b4d2dab2550257e1d3e0b8f29f3d8c1ca23); borsai-app sha256 1373d7f15cdf341bd420409bd29f3848062ba3385bcc4169b253878c9348469d
+[hijyen] README.md, build.yml, app/README.md, FAZ9_WINDOWS.md, WINDOWS_RAPOR.md: kasa kodu 0, th[bm]+8 hane 0; dört görüntünün OCR metni: 0 / 0
+
+[adım C sonu] prova klonu /tmp/borsai_win_20261013 silindi
+
+→ BURADA DUR (görev "→ BURADA DUR"): proje sahibi push eder ve Actions'ı workflow_dispatch ile koşturur.
+
+[adım D, CI 1. koşu] https://github.com/AhmetEmreOzumagi/borsai/actions/runs/38387284223 (HEAD e688f96; 11:00–11:07 UTC)
+          test-windows KIRMIZI (6 dk 20 sn): cargo test --workspace → lib 23 passed (is_within_verbatim_prefix_windows dahil),
+                 main 0, build_embed 7 passed, e2e 0 passed / 1 failed / 4 ignored:
+                 observed_streak_user_only_in_scenario_module: left ["commands\\scenario.rs"] right ["commands/scenario.rs"]
+                 → cargo ilk kırmızı ikilide durdu; integrity/no_network/oot_panel/sade/stage2/stage3/stage4/borsai_predict ve npm test koşmadı
+          build-windows koşmadı (needs) · build-macos YEŞİL (3 dk 39 sn), artefakt BorsAi-macos-e688f96 (zip 3551606 bayt)
+[adım D] A2 (e2e.rs ayırıcı) + C2 (cargo fetch --locked, --no-fail-fast, npm test if !cancelled()) öncesi:
+          cargo test --workspace --no-fail-fast (Mac, yalın)   → 158 passed, 0 failed, 13 ignored
+          bash app/scripts/test.sh                              → cargo 166 passed / 0 failed; vitest 24 dosya, 377 test; parity 8 passed; golden_unchanged YEŞİL; EXIT 0
+          .venv/bin/pytest -q -n 6 --dist loadgroup --deselect tests/test_faz8_break.py::test_14b_old_specs_models_and_cutoff_unchanged
+                                                               → 951 passed in 581.67s (0:09:41), 1 deselected
+          ruby yapı denetimi build.yml                          → 0 hata
+[adım D, A2 fc69fec + C2 d57e2b3 sonrası, temiz app/] pytest test_5c + test_14b tek başına → 2 passed in 4.56s
+[adım D, CI 2. koşu] https://github.com/AhmetEmreOzumagi/borsai/actions/runs/38390530487 (HEAD d57e2b3; 11:29–11:39 UTC)
+          test-windows KIRMIZI (10 dk 36 sn): cargo 149 passed / 7 failed / 12 ignored; vitest 24 dosya, 377 passed
+                 stage2: u40_streak_and_undefined (ceiling_netgl_j0.json), u7_veyas_four_refusals (ceiling_veyas_j0.json)
+                 stage3: official_conditional_return_uses_record_only (record_ceiling_path_j3.json), registry_view_synthetic
+                         (record_ceiling_j3.json), u52_record_fixtures (record_ceiling_u52_j2.json), official_summary_post_d1_row
+                         (powi: left (0.216, 0.07776, 0.006046617599999999) right (0.21599999999999997, 0.07775999999999998, 0.006046617599999997))
+                 golden_parity: B10 bit-eşit tabanı 13 modelde 1–8 satır eksik; 27/27 model 1e-9 içinde, maks |Δ| 1.1368683772161603e-13
+          build-windows koşmadı · build-macos YEŞİL (2 dk 45 sn), artefakt BorsAi-macos-d57e2b3 (zip 3551593 bayt)
+[adım D] orkestratör kararı K-WIN-5 → A3 (fixture_cmp, powers06, B10 yalnız macOS) + C3 (bilgi adımı)
+          cargo test --workspace --no-fail-fast (Mac, yalın)   → 159 passed, 0 failed, 13 ignored
+          bilgi adımının Mac provası                            → karşılaştırılan fikstürlerde fark 0; golden tablosu basıldı
+          bash app/scripts/test.sh                              → cargo 167 passed / 0 failed; vitest 24 dosya, 377 test; parity 8 passed; golden_unchanged YEŞİL; EXIT 0
+          .venv/bin/pytest -q -n 6 --dist loadgroup --deselect tests/test_faz8_break.py::test_14b_old_specs_models_and_cutoff_unchanged
+                                                               → 951 passed in 607.57s (0:10:07), 1 deselected
+          ruby yapı denetimi build.yml                          → 0 hata
+[adım D, A3 0cd882f + C3 e9f06d8 sonrası, temiz app/] pytest test_5c + test_14b tek başına → 2 passed in 4.54s
+          git diff --stat 2f01a28 -- app/parity, borsai models scores registry data, build.rs/build_embed.rs → boş
+[adım D, CI 3. koşu] https://github.com/AhmetEmreOzumagi/borsai/actions/runs/38406430116 (HEAD e9f06d8; 13:37–14:01 UTC) → YEŞİL
+          test-windows YEŞİL (11 dk 05 sn): cargo fetch --locked; cargo test --workspace --no-fail-fast → 157 passed, 0 failed, 12 ignored;
+                 npm test → 24 dosya, 377 passed
+                 bilgi adımı (C3): fixture_numeric dökümü 9 satır (/price_hint/3/price ve /display/price_hint/3/price);
+                 Windows'ta yeniden üretilen fikstür farkı: 9 dosya, her biri 1 satır, yalnız price_hint[3].price
+                 (NETGL 66.19230758175205 → 66.19230758175206, |Δ| 1.42e-14; VEYAS 352.74897457360026 → 352.7489745736003, |Δ| 5.68e-14);
+                 yol/metin farkı yok; golden tablosu 2. koşuyla birebir (27/27 model 1e-9 içinde, maks |Δ| 1.1368683772161603e-13)
+          build-windows YEŞİL (12 dk 50 sn): BorsAi_0.1.0_x64-setup.exe → artefakt BorsAi-windows-e9f06d8 (zip 2835390 bayt)
+          build-macos YEŞİL (2 dk 22 sn): BorsAi_0.1.0_aarch64.dmg → artefakt BorsAi-macos-e9f06d8 (zip 3551572 bayt)
+
+[son kabul, HEAD e9f06d8, ağaçta yalnız bu rapor + günlük ve izinli izlenmeyenler]
+          GIT_OPTIONAL_LOCKS=0 .venv/bin/pytest -q (sıralı, ayrılan yok) → 952 passed in 1194.41s (0:19:54)
+          bash app/scripts/test.sh                              → cargo 167 passed / 0 failed; vitest 24 dosya, 377 test; parity 8 passed; golden_unchanged YEŞİL; EXIT 0
+          .venv/bin/python app/parity/gen_golden.py --check     → {"checked": 35, "different": []}
+          git diff --stat 2f01a28 -- borsai models scores registry data → boş; app/parity → boş; build.rs/build_embed.rs → boş

@@ -1,0 +1,73 @@
+{
+  "ticker": "SNTA1",
+  "rel_dir": "registry/source_docs/SNTA1",
+  "manifest_rel_path": "registry/source_docs/SNTA1/MANIFEST.json",
+  "documents": [
+    {
+      "source_id": "KAP_TEST_1",
+      "file_name": "kap_test_1.pdf",
+      "rel_path": "registry/source_docs/SNTA1/kap_test_1.pdf",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "size_bytes": 82,
+      "file_state": "NEW",
+      "manifest_state": "NEW"
+    },
+    {
+      "source_id": "KAP_TEST_2",
+      "file_name": "kap_test_2.pdf",
+      "rel_path": "registry/source_docs/SNTA1/kap_test_2.pdf",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "size_bytes": 82,
+      "file_state": "NEW",
+      "manifest_state": "NEW"
+    },
+    {
+      "source_id": "SPK_TEST",
+      "file_name": "spk_test.pdf",
+      "rel_path": "registry/source_docs/SNTA1/spk_test.pdf",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "size_bytes": 80,
+      "file_state": "NEW",
+      "manifest_state": "NEW"
+    }
+  ],
+  "manifest": {
+    "schema_version": "borsai.source_docs/1",
+    "ticker": "SNTA1",
+    "documents": {
+      "KAP_TEST_1": {
+        "document_id": "KAP KAP_TEST_1",
+        "downloaded_at": "2030-01-05T13:00:00+03:00",
+        "kind": "KAP_NOTIFICATION_PDF",
+        "path": "registry/source_docs/SNTA1/kap_test_1.pdf",
+        "published_at": "2030-01-04T10:00:00+03:00",
+        "published_at_basis": "TEST_FIXTURE",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "size_bytes": 82,
+        "title": "Test"
+      },
+      "KAP_TEST_2": {
+        "document_id": "KAP KAP_TEST_2",
+        "downloaded_at": "2030-01-05T13:00:00+03:00",
+        "kind": "KAP_ATTACHMENT_PDF",
+        "path": "registry/source_docs/SNTA1/kap_test_2.pdf",
+        "published_at": "2030-01-04T10:00:00+03:00",
+        "published_at_basis": "TEST_FIXTURE",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "size_bytes": 82,
+        "title": "Test"
+      },
+      "SPK_TEST": {
+        "document_id": "KAP SPK_TEST",
+        "downloaded_at": "2030-01-05T13:00:00+03:00",
+        "kind": "SPK_BULLETIN",
+        "path": "registry/source_docs/SNTA1/spk_test.pdf",
+        "published_at": "2030-01-01T10:00:00+03:00",
+        "published_at_basis": "TEST_FIXTURE",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "size_bytes": 80,
+        "title": "Test"
+      }
+    }
+  }
+}

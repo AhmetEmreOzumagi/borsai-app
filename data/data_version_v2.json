@@ -1,0 +1,106 @@
+{
+  "builder": "data/build_training_table_v2.py",
+  "builder_sha256": "801626b43005e6e3947747b9e29159922bce76b251b52ea7705ee29280202d84",
+  "bytes": 63398,
+  "cohort": {
+    "bytes": 47150,
+    "path": "registry/oot/cohort_pre_h99.csv",
+    "prefix_sha256": "7d05b334d73985882debf7f31ecfc81b3eac501b756f9da44f41e3bf893760a7",
+    "rule": "append-only; ilk `bytes` baytın sha256'sı"
+  },
+  "cohorts": {
+    "H99": 99,
+    "OOT_OPEN": 71
+  },
+  "column_count": 39,
+  "columns": [
+    "ticker",
+    "first_trading_date",
+    "point_in_time_status",
+    "ipo_price_tl",
+    "shares_offered",
+    "post_ipo_share_capital",
+    "capital_increase_shares",
+    "existing_share_sale_shares",
+    "total_demand_multiple",
+    "total_demand_multiple_origin",
+    "total_demand_filter_status",
+    "additional_sale_shares",
+    "R_D1",
+    "R_D3",
+    "R_D5",
+    "R_D10",
+    "Y_D1",
+    "Y_D3",
+    "Y_D5",
+    "Y_D10",
+    "ceiling_close_D1",
+    "ceiling_close_D2",
+    "ceiling_close_D3",
+    "ceiling_close_D4",
+    "ceiling_close_D5",
+    "ceiling_close_D6",
+    "ceiling_close_D7",
+    "ceiling_close_D8",
+    "ceiling_close_D9",
+    "ceiling_close_D10",
+    "ceiling_streak_L",
+    "ipo_size_tl",
+    "cohort",
+    "sale_method",
+    "market",
+    "alloc_regime",
+    "alloc_regime_date",
+    "tufe_month",
+    "tufe_index"
+  ],
+  "encoding": "UTF-8, no BOM, LF",
+  "first_trading_date_max": "2026-08-06",
+  "first_trading_date_min": "2020-08-06",
+  "missing_value": "empty cell",
+  "oot_inputs": {
+    "dir": "registry/oot/inputs",
+    "files_sha256": "85f8ef33d3cddedf8d508d02a7445cc88b4b554c86f36066eb21f093377d1ce5",
+    "n": 71
+  },
+  "oot_outcomes": {
+    "dir": "data/outcomes_oot",
+    "files_sha256": "dae31319a44983607ca7d2fac88721355382146a0788770588805a9f33a6c711",
+    "n": 71
+  },
+  "outcome_sessions_through": "2026-08-19",
+  "row_count": 170,
+  "row_order": "first_trading_date ASC, ticker ASC",
+  "sealed_rows": 0,
+  "sha256": "5adda8b2003d0d10a7245e06cb6bc3b126260c3a84dabc27cac966b781da3e6a",
+  "shared_columns_with": {
+    "n": 31,
+    "rule": "H99 satırlarında bu sütunlar training_table.csv ile hücre hücre aynı",
+    "table": "data/training_table.csv"
+  },
+  "sources": [
+    {
+      "path": "data/training_table.csv",
+      "sha256": "b307cd0e3a015f5d251512541007c5b16f8458224ab047e493c01551ccda7fb5"
+    },
+    {
+      "path": "data/data_version.json",
+      "sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977"
+    },
+    {
+      "path": "data/raw/HISTORICAL99_FROZEN_COHORT_V1_canonical_pretrade_master.csv",
+      "sha256": "6011917a549a4ac638ef4a70948ea8904be1244f9b894b10b370ae8a691b6d0a"
+    },
+    {
+      "path": "data/raw/PREBOOKBUILD_POINT_IN_TIME_EVIDENCE_V1_1_CANONICAL_R2_99.csv",
+      "sha256": "5e52d4d23b4f196ef0fd44fb6d4f4edab0ea326241288b036952c30c5e24a613"
+    }
+  ],
+  "table": "data/training_table_v2.csv",
+  "tufe": {
+    "path": "data/raw/tuik/tufe_genel_2025_100.csv",
+    "prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+    "series": "TUIK_TUFE_GENEL_2025_100",
+    "through_month": "2026-08"
+  }
+}

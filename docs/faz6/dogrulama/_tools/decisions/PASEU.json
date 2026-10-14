@@ -1,0 +1,189 @@
+{
+ "ticker": "PASEU",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_1157128",
+  "KAP_1157128_EK1",
+  "KAP_1155869_EK1",
+  "KAP_1157808"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "2.5430453529",
+   "origin": "CALCULATED_FROM_SOURCE_TOTALS",
+   "source_id": "KAP_1157128_EK1",
+   "numerator": "86463542",
+   "numerator_quote": "Toplam 34.000.000 %100,00 929.307 86.463.542 %100,00 903.205 34.000.000 %100,00",
+   "denominator": "34000000",
+   "denominator_quote": "halka arz edilen 34.000.000 TL nominal değerli payların satışı gerçekleştirilmiş; buna göre halka arz büyüklüğü 850.000.000 TL olmuştur.",
+   "definition": "TOPLAM_TALEP_NOMINALI_86463542 (tablo Toplam satırı) / SATILAN_NOMINAL_PAY_34000000 (belge katı yazmıyor)",
+   "denominator_includes_additional_sale": false,
+   "note": "ek satış planlanmamış (SPK satırı '-'); planlanan = satılan 34.000.000"
+  },
+  "total_demand_filter_status": {
+   "value": "NOT_SPECIFIED",
+   "source_id": "KAP_1157128_EK1",
+   "note": "belgede 'filtre' ifadesi yok"
+  },
+  "ipo_size_tl": {
+   "value": "850000000",
+   "source_id": "KAP_1157128_EK1",
+   "quote": "buna göre halka arz büyüklüğü 850.000.000 TL olmuştur."
+  },
+  "capital_increase_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (yalnız 'halka arz edilen 34.000.000'; 18.000.000 bedelli / 16.000.000 ortak satışı ayrımı yalnız TSSD/SPK planında)"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (ortak satışı nominali sonuç ekinde yazılı değil)"
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_1157128_EK1",
+   "zero_from_statement": true,
+   "quote": "halka arz edilen 34.000.000 TL nominal değerli payların satışı gerçekleştirilmiş; buna göre halka arz büyüklüğü 850.000.000 TL olmuştur.",
+   "note": "SPK satırında ek satış '-'; satılan toplam 34.000.000 = planlanan taban (18.000.000 + 16.000.000)"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_1157128_EK1",
+   "quote": "halka arz edilen 34.000.000 TL nominal değerli payların satışı gerçekleştirilmiş; buna göre halka arz büyüklüğü 850.000.000 TL olmuştur."
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_1157128_EK1",
+   "used": "NONE",
+   "quote": "halka arz edilen 34.000.000 TL nominal değerli payların satışı gerçekleştirilmiş; buna göre halka arz büyüklüğü 850.000.000 TL olmuştur.",
+   "note": "ek satış planlanmamıştı; satılan = taban"
+  },
+  "investor_count": {
+   "value": "903205",
+   "source_id": "KAP_1157128_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "Toplam 34.000.000 %100,00 929.307 86.463.542 %100,00 903.205 34.000.000 %100,00",
+   "note": "talep eden 929.307; dağıtım yapılan 903.205"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "903134",
+    "domestic_institutional": "68",
+    "foreign_institutional": "3"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_1157128_EK1",
+   "quote": [
+    "Yurt İçi Bireysel 23.800.000 %70,00 929.235 56.087.718 %64,87 903.134 24.225.000 %71,25",
+    "8.500.000 %25,00 69 29.100.824 %33,66 68 8.500.000 %25,00",
+    "1.700.000 %5,00 3 1.275.000 %1,47 3 1.275.000 %3,75"
+   ],
+   "note": "başvuru: bireysel 929.235, yurt içi kurumsal 69, yurt dışı kurumsal 3"
+  },
+  "retail_demand_multiple": {
+   "value": "2.3",
+   "source_id": "KAP_1157128_EK1",
+   "quote": "Yurt İçi Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 2,3 katı",
+   "note": "belge 'yaklaşık' diyor; nihai tahsisata göre (24.225.000)"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": "3.4",
+   "source_id": "KAP_1157128_EK1",
+   "quote": "Yurt İçi Kurumsal Yatırımcılara ise yaklaşık 3,4 katı oranında talep gelmiştir."
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": "0.75",
+   "source_id": "KAP_1157128_EK1",
+   "derived": true,
+   "formula": "talep 1.275.000 / planlanan tahsisat 1.700.000",
+   "quote": "1.700.000 %5,00 3 1.275.000 %1,47 3 1.275.000 %3,75",
+   "note": "belge bu grubun katını yazmıyor; talep planlanan tahsisatın altında (nihai tahsisat = talep 1.275.000, o tabanda 1,0)"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "24225000",
+    "domestic_institutional": "8500000",
+    "foreign_institutional": "1275000"
+   },
+   "source_id": "KAP_1157128_EK1",
+   "quote": [
+    "Yurt İçi Bireysel 23.800.000 %70,00 929.235 56.087.718 %64,87 903.134 24.225.000 %71,25",
+    "8.500.000 %25,00 69 29.100.824 %33,66 68 8.500.000 %25,00",
+    "1.700.000 %5,00 3 1.275.000 %1,47 3 1.275.000 %3,75"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "71.25",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1157128_EK1",
+   "quote": "Yurt İçi Bireysel 23.800.000 %70,00 929.235 56.087.718 %64,87 903.134 24.225.000 %71,25",
+   "note": "planlanan %70,00"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "25.00",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1157128_EK1",
+   "quote": "8.500.000 %25,00 69 29.100.824 %33,66 68 8.500.000 %25,00",
+   "note": "planlanan %25,00"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": "3.75",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1157128_EK1",
+   "quote": "1.700.000 %5,00 3 1.275.000 %1,47 3 1.275.000 %3,75",
+   "note": "planlanan %5,00"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç eki yalnız talep toplama yöntemini yazıyor (“Sabit Fiyatla Talep Toplama” yöntemiyle); dağıtım yöntemi adlandırılmıyor"
+  },
+  "lead_broker": {
+   "value": "Halk Yatırım Menkul Değerler Anonim Şirketi",
+   "source_id": "KAP_1155869_EK1",
+   "quote": "halka arzda satışa aracılık edecek Halk Yatırım Menkul Değerler Anonim Şirketi'nin",
+   "note": "sonuç bildirimini yayımlayan kurum da HALK YATIRIM MENKUL DEĞERLER A.Ş."
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {
+  "ipo_size_tl": {
+   "codex_value": "850.000.000",
+   "verdict": "FOUND_SAME"
+  },
+  "retail_demand_multiple": {
+   "codex_value": "2,3",
+   "verdict": "FOUND_SAME"
+  },
+  "domestic_institutional_demand_multiple": {
+   "codex_value": "3,4",
+   "verdict": "FOUND_SAME"
+  },
+  "distribution_method": {
+   "codex_value": "Sabit Fiyatla Talep Toplama",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "ifade belgede talep toplama (satış) yöntemi olarak geçiyor, dağıtım yöntemi değil; alan null"
+  }
+ },
+ "notes": "Borsa dışı sabit fiyatla talep toplama (25,00 TL). Belge toplam katı yazmıyor; ek tablonun Toplam satırındaki talep (86.463.542) / satılan (34.000.000) ile hesaplandı. Yurt dışı kurumsal talep planlanan tahsisatın altında kalmış, fark bireysele kaydırılmış. Ek satış yok. Codex f3'ü bulamamıştı.",
+ "needs_search": false
+}

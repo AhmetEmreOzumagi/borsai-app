@@ -1,0 +1,228 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "KAYSE",
+  "company": "Kayseri Şeker Fabrikası A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "1619459",
+      "source_id": "KAP_1151365",
+      "source_document": "KAP 1151365",
+      "source_published_at": "2023-05-15T15:31:12+03:00",
+      "source_sha256": "1c9da4d23f1ee85f0e7c0562ecfdbe7807c87d6dd7f0b64e1d953c6a99b7bdf2",
+      "source_path": "registry/oot/source_docs/KAYSE/KAP_1151365_bildirim.pdf",
+      "quote": "toplamda 1.619.459 yatırımcıya dağıtım gerçekleştirilmiştir.",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "belge talep eden kişi sayısını ayrıca yazmıyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "1618666",
+        "employees_farmers": "747",
+        "domestic_institutional": "44",
+        "foreign_institutional": "2"
+      },
+      "source_id": "KAP_1151365",
+      "source_document": "KAP 1151365",
+      "source_published_at": "2023-05-15T15:31:12+03:00",
+      "source_sha256": "1c9da4d23f1ee85f0e7c0562ecfdbe7807c87d6dd7f0b64e1d953c6a99b7bdf2",
+      "source_path": "registry/oot/source_docs/KAYSE/KAP_1151365_bildirim.pdf",
+      "quote": "1.618.666 adet yurt içi bireysel yatırımcıya, 747 adet çalışanlardan ve çiftçilerden oluşan yatırımcıya, 44 adet yurt içi kurumsal yatırımcıya ve 2 adet yurt dışı kurumsal yatırımcıya olmak üzere toplamda 1.619.459 yatırımcıya dağıtım gerçekleştirilmiştir.",
+      "semantic": "ALLOCATED",
+      "note": "employees_farmers = çalışanlardan ve çiftçilerden oluşan yatırımcılar",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "1.5945872424",
+      "source_id": "KAP_1151365_EK1",
+      "source_document": "KAP 1151365 ek 1",
+      "source_published_at": "2023-05-15T15:31:12+03:00",
+      "source_sha256": "9b5160047073912056c146bfbfbe4b6d11b0f8dcb31252ba8617f423f8df64f4",
+      "source_path": "registry/oot/source_docs/KAYSE/KAP_1151365_ek1.pdf",
+      "quote": "68.900.000,00 %65,00 109.867.061,00 90,51% 1.618.666 94.484.927,00 89,14%",
+      "derived": true,
+      "formula": "talep 109.867.061 / planlanan tahsisat 68.900.000",
+      "note": "belge grup katı yazmıyor; aynı tablodaki talep ve planlanan tahsisat nominalinden",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "0.302210717",
+      "source_id": "KAP_1151365_EK1",
+      "source_document": "KAP 1151365 ek 1",
+      "source_published_at": "2023-05-15T15:31:12+03:00",
+      "source_sha256": "9b5160047073912056c146bfbfbe4b6d11b0f8dcb31252ba8617f423f8df64f4",
+      "source_path": "registry/oot/source_docs/KAYSE/KAP_1151365_ek1.pdf",
+      "quote": "26.500.000,00 %25,00 8.008.584,00 6,60% 44 8.008.584,00 7,56%",
+      "derived": true,
+      "formula": "talep 8.008.584 / planlanan tahsisat 26.500.000",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "0.1509433962",
+      "source_id": "KAP_1151365_EK1",
+      "source_document": "KAP 1151365 ek 1",
+      "source_published_at": "2023-05-15T15:31:12+03:00",
+      "source_sha256": "9b5160047073912056c146bfbfbe4b6d11b0f8dcb31252ba8617f423f8df64f4",
+      "source_path": "registry/oot/source_docs/KAYSE/KAP_1151365_ek1.pdf",
+      "quote": "5.300.000,00 %5,00 800.000,00 0,66% 2 800.000,00 0,75%",
+      "derived": true,
+      "formula": "talep 800.000 / planlanan tahsisat 5.300.000",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "94484927",
+        "employees_farmers": "2706489",
+        "domestic_institutional": "8008584",
+        "foreign_institutional": "800000"
+      },
+      "source_id": "KAP_1151365_EK1",
+      "source_document": "KAP 1151365 ek 1",
+      "source_published_at": "2023-05-15T15:31:12+03:00",
+      "source_sha256": "9b5160047073912056c146bfbfbe4b6d11b0f8dcb31252ba8617f423f8df64f4",
+      "source_path": "registry/oot/source_docs/KAYSE/KAP_1151365_ek1.pdf",
+      "quote": [
+        "68.900.000,00 %65,00 109.867.061,00 90,51% 1.618.666 94.484.927,00 89,14%",
+        "Çiftçilerden Oluşan 5.300.000,00 %5,00 2.706.689,00 2,23% 747 2.706.489,00 2,55%",
+        "26.500.000,00 %25,00 8.008.584,00 6,60% 44 8.008.584,00 7,56%",
+        "5.300.000,00 %5,00 800.000,00 0,66% 2 800.000,00 0,75%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "89.14",
+      "source_id": "KAP_1151365_EK1",
+      "source_document": "KAP 1151365 ek 1",
+      "source_published_at": "2023-05-15T15:31:12+03:00",
+      "source_sha256": "9b5160047073912056c146bfbfbe4b6d11b0f8dcb31252ba8617f423f8df64f4",
+      "source_path": "registry/oot/source_docs/KAYSE/KAP_1151365_ek1.pdf",
+      "quote": "68.900.000,00 %65,00 109.867.061,00 90,51% 1.618.666 94.484.927,00 89,14%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "bildirim metni %89,1; planlanan %65",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "7.56",
+      "source_id": "KAP_1151365_EK1",
+      "source_document": "KAP 1151365 ek 1",
+      "source_published_at": "2023-05-15T15:31:12+03:00",
+      "source_sha256": "9b5160047073912056c146bfbfbe4b6d11b0f8dcb31252ba8617f423f8df64f4",
+      "source_path": "registry/oot/source_docs/KAYSE/KAP_1151365_ek1.pdf",
+      "quote": "26.500.000,00 %25,00 8.008.584,00 6,60% 44 8.008.584,00 7,56%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "bildirim metni %7,6; planlanan %25",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.75",
+      "source_id": "KAP_1151365_EK1",
+      "source_document": "KAP 1151365 ek 1",
+      "source_published_at": "2023-05-15T15:31:12+03:00",
+      "source_sha256": "9b5160047073912056c146bfbfbe4b6d11b0f8dcb31252ba8617f423f8df64f4",
+      "source_path": "registry/oot/source_docs/KAYSE/KAP_1151365_ek1.pdf",
+      "quote": "5.300.000,00 %5,00 800.000,00 0,66% 2 800.000,00 0,75%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "bildirim metni %0,8; planlanan %5",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç bildirimi ve eki dağıtım yöntemini adlandırmıyor; TSSD dossier'de yok",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Gedik Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1151365",
+      "source_document": "KAP 1151365",
+      "source_published_at": "2023-05-15T15:31:12+03:00",
+      "source_sha256": "1c9da4d23f1ee85f0e7c0562ecfdbe7807c87d6dd7f0b64e1d953c6a99b7bdf2",
+      "source_path": "registry/oot/source_docs/KAYSE/KAP_1151365_bildirim.pdf",
+      "quote": "Gedik Yatırım Menkul Değerler A.Ş. liderliğindeki konsorsiyum aracılığı ile",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD dossier'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD dossier'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD dossier'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD dossier'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1151757",
+      "source_document": "KAP 1151757",
+      "source_published_at": "2023-05-16T18:11:54+03:00",
+      "source_sha256": "c7c806c0d1930467bb31cf2efaf5f69031158873708ce9211fba39139564d1fa",
+      "source_path": "registry/oot/source_docs/KAYSE/KAP_1151757_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1151757",
+      "source_document": "KAP 1151757",
+      "source_published_at": "2023-05-16T18:11:54+03:00",
+      "source_sha256": "c7c806c0d1930467bb31cf2efaf5f69031158873708ce9211fba39139564d1fa",
+      "source_path": "registry/oot/source_docs/KAYSE/KAP_1151757_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1151757": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1151757",
+      "published_at": "2023-05-16T18:11:54+03:00",
+      "sha256": "c7c806c0d1930467bb31cf2efaf5f69031158873708ce9211fba39139564d1fa",
+      "path": "registry/oot/source_docs/KAYSE/KAP_1151757_bildirim.pdf"
+    },
+    "KAP_1151365": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1151365",
+      "published_at": "2023-05-15T15:31:12+03:00",
+      "sha256": "1c9da4d23f1ee85f0e7c0562ecfdbe7807c87d6dd7f0b64e1d953c6a99b7bdf2",
+      "path": "registry/oot/source_docs/KAYSE/KAP_1151365_bildirim.pdf"
+    },
+    "KAP_1151365_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1151365 ek 1",
+      "published_at": "2023-05-15T15:31:12+03:00",
+      "sha256": "9b5160047073912056c146bfbfbe4b6d11b0f8dcb31252ba8617f423f8df64f4",
+      "path": "registry/oot/source_docs/KAYSE/KAP_1151365_ek1.pdf"
+    }
+  }
+}

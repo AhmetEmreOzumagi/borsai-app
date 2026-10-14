@@ -1,0 +1,244 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "CANTE",
+  "company": "Çan2 Termik A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "487079",
+      "source_id": "KAP_930796_EK1",
+      "source_document": "KAP 930796 ek 1",
+      "source_published_at": "2021-04-26T09:53:40+03:00",
+      "source_sha256": "77d8a88f7d3764dbde2dcbba77b0df8d1a5316d055025a340a6c7d833b289568",
+      "source_path": "registry/oot/source_docs/CANTE/KAP_930796_ek1.pdf",
+      "quote": "Toplam 67.590.000 %100 508.554 271.219.686 %100,0 487.079 74.349.000 %100,0",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 508.554; dağıtım yapılan 487.079",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "508.554",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "508.554",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "508.554 talep eden; dağıtım yapılan 487.079 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "487006",
+        "domestic_institutional": "73"
+      },
+      "source_id": "KAP_930796_EK1",
+      "source_document": "KAP 930796 ek 1",
+      "source_published_at": "2021-04-26T09:53:40+03:00",
+      "source_sha256": "77d8a88f7d3764dbde2dcbba77b0df8d1a5316d055025a340a6c7d833b289568",
+      "source_path": "registry/oot/source_docs/CANTE/KAP_930796_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 33.795.000 %50 508.479 116.092.022 %42,8 487.006 33.795.000 %45,5",
+        "Yurt İçi Kurumsal 33.795.000 %50 75 155.127.664 %57,2 73 40.554.000 %54,5"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 508.479, kurumsal 75",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "508.479",
+        "Yurt İçi Kurumsal": "75"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '508.479', 'Yurt İçi Kurumsal': '75'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex talep eden sayılarını almış; dağıtım yapılan bireysel 487.006, kurumsal 73"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "3.44",
+      "source_id": "KAP_930796_EK1",
+      "source_document": "KAP 930796 ek 1",
+      "source_published_at": "2021-04-26T09:53:40+03:00",
+      "source_sha256": "77d8a88f7d3764dbde2dcbba77b0df8d1a5316d055025a340a6c7d833b289568",
+      "source_path": "registry/oot/source_docs/CANTE/KAP_930796_ek1.pdf",
+      "quote": "Ek satışa sunulan paylar dahil Yurt İçi Bireysel Yatırımcılara ayrılan tahsisat tutarının 3,44 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "3,44",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "3.83",
+      "source_id": "KAP_930796_EK1",
+      "source_document": "KAP 930796 ek 1",
+      "source_published_at": "2021-04-26T09:53:40+03:00",
+      "source_sha256": "77d8a88f7d3764dbde2dcbba77b0df8d1a5316d055025a340a6c7d833b289568",
+      "source_path": "registry/oot/source_docs/CANTE/KAP_930796_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara ayrılan tahsisat tutarının 3,83 katı talep gelmiştir",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "3,83",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok (tabloda yalnız yurt içi bireysel ve kurumsal)",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "33795000",
+        "domestic_institutional": "40554000"
+      },
+      "source_id": "KAP_930796_EK1",
+      "source_document": "KAP 930796 ek 1",
+      "source_published_at": "2021-04-26T09:53:40+03:00",
+      "source_sha256": "77d8a88f7d3764dbde2dcbba77b0df8d1a5316d055025a340a6c7d833b289568",
+      "source_path": "registry/oot/source_docs/CANTE/KAP_930796_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 33.795.000 %50 508.479 116.092.022 %42,8 487.006 33.795.000 %45,5",
+        "Yurt İçi Kurumsal 33.795.000 %50 75 155.127.664 %57,2 73 40.554.000 %54,5"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "33.795.000",
+        "Yurt İçi Kurumsal": "40.554.000"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '33.795.000', 'Yurt İçi Kurumsal': '40.554.000'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "45.5",
+      "source_id": "KAP_930796_EK1",
+      "source_document": "KAP 930796 ek 1",
+      "source_published_at": "2021-04-26T09:53:40+03:00",
+      "source_sha256": "77d8a88f7d3764dbde2dcbba77b0df8d1a5316d055025a340a6c7d833b289568",
+      "source_path": "registry/oot/source_docs/CANTE/KAP_930796_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 33.795.000 %50 508.479 116.092.022 %42,8 487.006 33.795.000 %45,5",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %50",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "45,5",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "54.5",
+      "source_id": "KAP_930796_EK1",
+      "source_document": "KAP 930796 ek 1",
+      "source_published_at": "2021-04-26T09:53:40+03:00",
+      "source_sha256": "77d8a88f7d3764dbde2dcbba77b0df8d1a5316d055025a340a6c7d833b289568",
+      "source_path": "registry/oot/source_docs/CANTE/KAP_930796_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 33.795.000 %50 75 155.127.664 %57,2 73 40.554.000 %54,5",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %50",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "54,5",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama” yöntemi); dağıtım yöntemi adlandırılmıyor; TSSD indirilmedi",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "HALK YATIRIM MENKUL DEĞERLER A.Ş.",
+      "source_id": "KAP_930796",
+      "source_document": "KAP 930796",
+      "source_published_at": "2021-04-26T09:53:40+03:00",
+      "source_sha256": "f22a851afcff299dc82af01e4ca27638cdef920cdd5dea537269aff6c87e5583",
+      "source_path": "registry/oot/source_docs/CANTE/KAP_930796_bildirim.pdf",
+      "quote": "KAMUYU AYDINLATMA PLATFORMU HALK YATIRIM MENKUL DEĞERLER A.Ş. Özel Durum Açıklaması (Genel)",
+      "basis": "RESULT_NOTICE_PUBLISHER",
+      "note": "belge 'aracılık' rolünü açıkça yazmıyor; ad, sonuç bildirimini yayımlayan kurumdur",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "HALK YATIRIM MENKUL DEĞERLER A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "yalnız sonuç bildirimini yayımlayan kurum olarak geçiyor"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD ve izahname indirilmedi; sonuç belgesinde yok",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD ve izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD ve izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD ve izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_930973",
+      "source_document": "KAP 930973",
+      "source_published_at": "2021-04-26T18:20:50+03:00",
+      "source_sha256": "5e31a1bc71c224dea4af486f7b494914ca9f1067dcd8098752adee0a9dd16166",
+      "source_path": "registry/oot/source_docs/CANTE/KAP_930973_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_930973",
+      "source_document": "KAP 930973",
+      "source_published_at": "2021-04-26T18:20:50+03:00",
+      "source_sha256": "5e31a1bc71c224dea4af486f7b494914ca9f1067dcd8098752adee0a9dd16166",
+      "source_path": "registry/oot/source_docs/CANTE/KAP_930973_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_930973": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 930973",
+      "published_at": "2021-04-26T18:20:50+03:00",
+      "sha256": "5e31a1bc71c224dea4af486f7b494914ca9f1067dcd8098752adee0a9dd16166",
+      "path": "registry/oot/source_docs/CANTE/KAP_930973_bildirim.pdf"
+    },
+    "KAP_930796_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 930796 ek 1",
+      "published_at": "2021-04-26T09:53:40+03:00",
+      "sha256": "77d8a88f7d3764dbde2dcbba77b0df8d1a5316d055025a340a6c7d833b289568",
+      "path": "registry/oot/source_docs/CANTE/KAP_930796_ek1.pdf"
+    },
+    "KAP_930796": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 930796",
+      "published_at": "2021-04-26T09:53:40+03:00",
+      "sha256": "f22a851afcff299dc82af01e4ca27638cdef920cdd5dea537269aff6c87e5583",
+      "path": "registry/oot/source_docs/CANTE/KAP_930796_bildirim.pdf"
+    }
+  }
+}

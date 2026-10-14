@@ -1,0 +1,243 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "HTTBT",
+  "company": "Hitit Bilgisayar Hizmetleri A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "48268",
+      "source_id": "KAP_1004940_EK2",
+      "source_document": "KAP 1004940 ek 2",
+      "source_published_at": "2022-02-27T19:42:46+03:00",
+      "source_sha256": "b5f3dcc2cd6773530c2339355497ebb41665bf33b6d0f5e1e61444f1a56d0c08",
+      "source_path": "registry/oot/source_docs/HTTBT/KAP_1004940_ek2.pdf",
+      "quote": "Toplam 35.192.308 %100,00 49.868* 103.001.112 %100,00 48.268 35.192.308 %100,00",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 49.868 (bireysel gruplar TCKNO/VKNO bazlı tekilleştirilmiş); talebi karşılanan 48.268",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "49.868",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "49.868",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "49.868 talep eden (tekilleştirilmiş) sayısı; talebi karşılanan 48.268 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "45712",
+        "retail_high_application": "2461",
+        "domestic_institutional": "87",
+        "foreign_institutional": "8"
+      },
+      "source_id": "KAP_1004940_EK2",
+      "source_document": "KAP 1004940 ek 2",
+      "source_published_at": "2022-02-27T19:42:46+03:00",
+      "source_sha256": "b5f3dcc2cd6773530c2339355497ebb41665bf33b6d0f5e1e61444f1a56d0c08",
+      "source_path": "registry/oot/source_docs/HTTBT/KAP_1004940_ek2.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 8.798.077 %25,00 47.325 14.308.945 %13,89 45.712 7.038.462 %20,00",
+        "Yurt İçi Yüksek Başvurulu 8.798.077 %25,00 2.525 35.606.566 %34,57 2.461 7.038.462 %20,00",
+        "Yurt İçi Kurumsal 8.798.077 %25,00 90 36.703.968 %35,63 87 12.317.307 %35,00",
+        "Yurt Dışı Kurumsal 8.798.077 %25,00 8 16.381.633 %15,90 8 8.798.077 %25,00"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 47.325, yüksek başvurulu 2.525, yurt içi kurumsal 90, yurt dışı kurumsal 8",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "1.6",
+      "source_id": "KAP_1004940_EK2",
+      "source_document": "KAP 1004940 ek 2",
+      "source_published_at": "2022-02-27T19:42:46+03:00",
+      "source_sha256": "b5f3dcc2cd6773530c2339355497ebb41665bf33b6d0f5e1e61444f1a56d0c08",
+      "source_path": "registry/oot/source_docs/HTTBT/KAP_1004940_ek2.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara tahsis edilen payların 1,6 katı",
+      "note": "ayrıca Yurt İçi Yüksek Başvurulu Yatırımcılar 4,0 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "1,6",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "4.2",
+      "source_id": "KAP_1004940_EK2",
+      "source_document": "KAP 1004940 ek 2",
+      "source_published_at": "2022-02-27T19:42:46+03:00",
+      "source_sha256": "b5f3dcc2cd6773530c2339355497ebb41665bf33b6d0f5e1e61444f1a56d0c08",
+      "source_path": "registry/oot/source_docs/HTTBT/KAP_1004940_ek2.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara tahsis edilen payların 4,2 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "4,2",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "1.9",
+      "source_id": "KAP_1004940_EK2",
+      "source_document": "KAP 1004940 ek 2",
+      "source_published_at": "2022-02-27T19:42:46+03:00",
+      "source_sha256": "b5f3dcc2cd6773530c2339355497ebb41665bf33b6d0f5e1e61444f1a56d0c08",
+      "source_path": "registry/oot/source_docs/HTTBT/KAP_1004940_ek2.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara tahsis edilen payların 1,9 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "1,9",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "7038462",
+        "retail_high_application": "7038462",
+        "domestic_institutional": "12317307",
+        "foreign_institutional": "8798077"
+      },
+      "source_id": "KAP_1004940_EK2",
+      "source_document": "KAP 1004940 ek 2",
+      "source_published_at": "2022-02-27T19:42:46+03:00",
+      "source_sha256": "b5f3dcc2cd6773530c2339355497ebb41665bf33b6d0f5e1e61444f1a56d0c08",
+      "source_path": "registry/oot/source_docs/HTTBT/KAP_1004940_ek2.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 8.798.077 %25,00 47.325 14.308.945 %13,89 45.712 7.038.462 %20,00",
+        "Yurt İçi Yüksek Başvurulu 8.798.077 %25,00 2.525 35.606.566 %34,57 2.461 7.038.462 %20,00",
+        "Yurt İçi Kurumsal 8.798.077 %25,00 90 36.703.968 %35,63 87 12.317.307 %35,00",
+        "Yurt Dışı Kurumsal 8.798.077 %25,00 8 16.381.633 %15,90 8 8.798.077 %25,00"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "20.00",
+      "source_id": "KAP_1004940_EK2",
+      "source_document": "KAP 1004940 ek 2",
+      "source_published_at": "2022-02-27T19:42:46+03:00",
+      "source_sha256": "b5f3dcc2cd6773530c2339355497ebb41665bf33b6d0f5e1e61444f1a56d0c08",
+      "source_path": "registry/oot/source_docs/HTTBT/KAP_1004940_ek2.pdf",
+      "quote": "Dağıtıma esas tahsisat oranları ise Yurt İçi Bireysel Yatırımcılar için %20,00",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "ayrıca Yurt İçi Yüksek Başvurulu %20,00 (bireysel toplam %40); planlanan %25",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "35.00",
+      "source_id": "KAP_1004940_EK2",
+      "source_document": "KAP 1004940 ek 2",
+      "source_published_at": "2022-02-27T19:42:46+03:00",
+      "source_sha256": "b5f3dcc2cd6773530c2339355497ebb41665bf33b6d0f5e1e61444f1a56d0c08",
+      "source_path": "registry/oot/source_docs/HTTBT/KAP_1004940_ek2.pdf",
+      "quote": "Yurt içi Kurumsal Yatırımcılar için %35,00",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %25",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "25.00",
+      "source_id": "KAP_1004940_EK2",
+      "source_document": "KAP 1004940 ek 2",
+      "source_published_at": "2022-02-27T19:42:46+03:00",
+      "source_sha256": "b5f3dcc2cd6773530c2339355497ebb41665bf33b6d0f5e1e61444f1a56d0c08",
+      "source_path": "registry/oot/source_docs/HTTBT/KAP_1004940_ek2.pdf",
+      "quote": "Yurt Dışı Kurumsal yatırımcılar için ise %25,00 olarak gerçekleşmiştir",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %25",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD penceresi dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Ünlü Menkul Değerler A.Ş.",
+      "source_id": "KAP_1004940",
+      "source_document": "KAP 1004940",
+      "source_published_at": "2022-02-27T19:42:46+03:00",
+      "source_sha256": "d36e861ece2c541a111cbe05c9fb7279a7a35e267e7757ec31d04877c216ea8d",
+      "source_path": "registry/oot/source_docs/HTTBT/KAP_1004940_bildirim.pdf",
+      "quote": "Ünlü Menkul Değerler A.Ş. liderliğindeki konsorsiyum aracılığı ile",
+      "note": "TSSD: 'halka arzda satışa aracılık edecek Unlü Menkul Değerler A.Ş.'nin' (OCR)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde fiyat istikrarı yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1005149",
+      "source_document": "KAP 1005149",
+      "source_published_at": "2022-02-28T18:02:12+03:00",
+      "source_sha256": "0ba23e455c63985e63aa20bdd236fc59a99ead3d7c2ef05f11f85742b15c6bb2",
+      "source_path": "registry/oot/source_docs/HTTBT/KAP_1005149_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1005149",
+      "source_document": "KAP 1005149",
+      "source_published_at": "2022-02-28T18:02:12+03:00",
+      "source_sha256": "0ba23e455c63985e63aa20bdd236fc59a99ead3d7c2ef05f11f85742b15c6bb2",
+      "source_path": "registry/oot/source_docs/HTTBT/KAP_1005149_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1005149": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1005149",
+      "published_at": "2022-02-28T18:02:12+03:00",
+      "sha256": "0ba23e455c63985e63aa20bdd236fc59a99ead3d7c2ef05f11f85742b15c6bb2",
+      "path": "registry/oot/source_docs/HTTBT/KAP_1005149_bildirim.pdf"
+    },
+    "KAP_1004940_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1004940 ek 2",
+      "published_at": "2022-02-27T19:42:46+03:00",
+      "sha256": "b5f3dcc2cd6773530c2339355497ebb41665bf33b6d0f5e1e61444f1a56d0c08",
+      "path": "registry/oot/source_docs/HTTBT/KAP_1004940_ek2.pdf"
+    },
+    "KAP_1004940": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1004940",
+      "published_at": "2022-02-27T19:42:46+03:00",
+      "sha256": "d36e861ece2c541a111cbe05c9fb7279a7a35e267e7757ec31d04877c216ea8d",
+      "path": "registry/oot/source_docs/HTTBT/KAP_1004940_bildirim.pdf"
+    }
+  }
+}

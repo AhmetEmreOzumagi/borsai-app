@@ -1,0 +1,38 @@
+BORSAI_FAZ7_VAULT_SCORE_20260929 — test koşuları (yalnız sayılar; çıktı kasa kodu maskesinden geçti)
+
+Adım 0 (taban)
+- HEAD 6287750 (VB kanıt commit'i), ağaçta yalnız iki görev dosyası izlenmiyor. VB kanıtı 2026-09-29T17:49:25Z > VA2 kanıtı
+  15:30:43Z. `len(oo.s2_gate_problems()), len(oo.vault_s3_gate_problems())` → 0 0.
+- .venv/bin/pytest -q: 864 geçti (14 dk 25 sn; 20:52–21:07). Koşu sürerken Fable'ın paralel görevi 38d36e8'i commit'ledi
+  (21:05; yalnız docs/fable_faz7_vault/ ve kendi görev dosyası). Sonraki bütün koşular 38d36e8 ve torunlarında.
+- bash app/scripts/test.sh: yeşil (cargo 94 geçti, vitest 222/222, parity 4 geçti, golden_unchanged YEŞİL)
+- .venv/bin/python app/parity/gen_golden.py --check: 25 dosya, fark 0
+
+Adım 1 (skor)
+- .venv/bin/python -m borsai.scoring --oot: HEAD 38d36e8, borsai temiz, 1 dk 24 sn; yalnız scores/scores_oot.json ve docs/SCORES_OOT.md
+- T2: docs/faz7_vault/ekler/skor_denetim.py → 23/23 denetim tuttu
+
+Adım 2 (S)
+- Skor dosyaları commit'siz, deselect'siz: 860 geçti, 4 kırmızı (16 dk 3 sn)
+  temizlik bekçileri: test_faz7c_golden::test_models_dir_registry_scores_unchanged,
+                      test_faz7c_model::test_tables_and_data_versions_unchanged
+  içerik testleri (commit'li dosyada kasa anahtarı yokluğunu pinliyor):
+                      test_faz7_vault::test_real_scores_oot_in_memory_run_equals_committed_file_while_vault_closed,
+                      test_faz7_oot::test_committed_oot_doc_unchanged_by_new_renderer
+  → DUR; proje sahibi kararı (SPEC_DEVIATIONS M21): S → T, dördü adıyla deselect; S sonrası tam olarak iki içerik testi kırmızı
+- Dört deselect: 860 geçti, 4 deselect (15 dk 55 sn)
+- S = ff49828 sonrası, deselect'siz: 862 geçti, 2 kırmızı (18 dk 46 sn): tam olarak iki içerik testi
+  (test_faz7_oot::test_committed_oot_doc_unchanged_by_new_renderer,
+   test_faz7_vault::test_real_scores_oot_in_memory_run_equals_committed_file_while_vault_closed)
+  bash app/scripts/test.sh: yeşil (cargo 94 geçti, vitest 222/222, parity 4 geçti, golden_unchanged YEŞİL); gen_golden.py --check 25, fark 0
+
+Adım 3 (T)
+- Hazırlık (repo dışı kopya, S'nin commit'li durumuna karşı): sıkılaştırılmış iki test geçti; mutasyonlar 4/4 kırmızı
+  (kasa hücre farkı +1e-12, definitions'a anahtar, code.borsai_source_sha256, belge sonuna satır sonu)
+- T öncesi hedefli: tests/test_faz7_vault.py + tests/test_faz7_oot.py + tests/test_outcome_guard.py → 64 geçti (5 dk 25 sn)
+- T = 8daeabe. T sonrası, deselect'siz: 864 geçti (19 dk 59 sn)
+  bash app/scripts/test.sh: yeşil (cargo 94 geçti, vitest 222/222, parity 4 geçti, golden_unchanged YEŞİL); gen_golden.py --check 25, fark 0
+
+Adım 4 (R)
+- R öncesi hijyen: tests/test_faz7_vault.py::test_new_task_files_carry_no_vault_code_or_bulletin_name (docs/faz7_vault altındaki yeni
+  dosyalar dahil): 1 geçti

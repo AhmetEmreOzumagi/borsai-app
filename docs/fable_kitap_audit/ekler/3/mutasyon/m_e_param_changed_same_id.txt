@@ -1,0 +1,62 @@
+### m_e_param_changed_same_id :: tests/test_models.py tests/test_faz1b_guardrails.py::test_faz1a_model_files_and_index_entries_unchanged tests/test_freeze_records.py::test_committed_record_consistency
+F...F....................F.......                                        [100%]
+=================================== FAILURES ===================================
+________________ test_index_lists_all_frozen_models_with_hashes ________________
+
+    def test_index_lists_all_frozen_models_with_hashes():
+        index = load_index(INDEX_PATH)
+        assert index["schema_version"] == "borsai.model_index/1"
+        ids = [e["model_id"] for e in index["models"]]
+        # Faz 7 dondurması (SPEC_DEVIATIONS J23): dört v1 girişi sonda; Faz 7C dondurmasından sonra ardından dört (C) girişi (K19);
+        # ayrıntı tests/test_faz7_frozen.py, tests/test_faz7c_frozen.py
+        assert len(ids) == len(set(ids)) and set(ids) == EXPECTED_IDS | set(fs7.frozen_tail_ids())
+        for e in index["models"]:
+            path = MODELS_DIR / e["file"]
+            assert path.name == f"{e['model_id']}.json"
+>           assert sha256_file(path) == e["sha256"]
+E           AssertionError: assert '031c9841713f...54f2c1a4f909a' == 'bf809859f61e...e60fc5937a854'
+E             
+E             - bf809859f61e11180e46cb1e073de2bd792fed1ad434ed8194be60fc5937a854
+E             + 031c9841713f9ed10b6c1bded425c42b588b1e106c1c503f0ed54f2c1a4f909a
+
+tests/test_models.py:39: AssertionError
+_______________ test_v1_5_h99_refit_reproduces_frozen_parameters _______________
+
+frozen_models = {'v1_5_h99': {'algorithm': 'V1_5_RIDGE_LOGIT', 'code_version': {'borsai_dirty': True, 'borsai_source_sha256': '17e7374...026-09-21T21:10:30+03:00', 'description': "Getiri = eğitimdeki R_h'lerin ortalaması (legacy V1_BASE_MEAN).", ...}, ...}
+dataset = Dataset(rows=(IPORow(ticker='HATSN', first_trading_date='2023-09-22', point_in_time_status='UNKNOWN', inputs={'ipo_pri...table_sha256='b307cd0e3a015f5d251512541007c5b16f8458224ab047e493c01551ccda7fb5', outcome_sessions_through='2026-08-19')
+
+    def test_v1_5_h99_refit_reproduces_frozen_parameters(frozen_models, dataset):
+        """Kod + veri aynıysa dondurulmuş sayılar aynen yeniden üretilir (bu makinede)."""
+        fresh, _ = fit_with_estimators(MODEL_SPECS["v1_5_h99"], list(dataset.rows), dataset_version=dataset.data_version_sha256)
+        frozen = frozen_models["v1_5_h99"]
+>       assert {k: v for k, v in fresh.items() if k not in VOLATILE} == {k: v for k, v in frozen.items() if k not in VOLATILE}
+E       AssertionError: assert {'schema_vers...seçimi.', ...} == {'algorithm':...ng': 0}}, ...}
+E         
+E         Omitting 13 identical items, use -vv to show
+E         Differing items:
+E         {'horizons': {'D1': {'return': {'kind': 'ridge', 'alpha': 100.0, 'intercept': 0.07742476639192436, 'coef': [-0.0061095...ef': [-0.8953439956841492, -0.1508079014501232, 1.1937477315188683, 0.047597332596937866, -0.5782160495800999], ...}}}} != {'horizons': {'D1': {'p_up': {'C': 0.1, 'coef': [-0.36428382963139727, 0.23877686644002138, 0.3287337012433358, -0.022...1': 0.19735223109295294, '1.0': 0.19726726803927927, '10.0': 0.1966874459249412, '100.0': 0.21842977598139443}, ...}}}}
+E         Use -v to get more diff
+
+tests/test_models.py:102: AssertionError
+______________ test_faz1a_model_files_and_index_entries_unchanged ______________
+
+    def test_faz1a_model_files_and_index_entries_unchanged():
+        old_index = {e["model_id"]: e for e in json.loads(_git_bytes(FAZ1A_COMMIT, "models/INDEX.json"))["models"]}
+        new_index = {e["model_id"]: e for e in json.loads((ROOT / "models" / "INDEX.json").read_text(encoding="utf-8"))["models"]}
+        assert set(old_index) == set(FAZ1A_MODEL_IDS)
+        for m in FAZ1A_MODEL_IDS:
+            assert new_index[m] == old_index[m], m
+>           assert (ROOT / "models" / f"{m}.json").read_bytes() == _git_bytes(FAZ1A_COMMIT, f"models/{m}.json"), m
+E           AssertionError: v1_5_h99
+E           assert b'{\n  "algor...4f"\n  }\n}\n' == b'{\n  "algor...4f"\n  }\n}\n'
+E             
+E             At index 6249 diff: b'8' != b'9'
+E             Use -v to get more diff
+
+tests/test_faz1b_guardrails.py:36: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_models.py::test_index_lists_all_frozen_models_with_hashes
+FAILED tests/test_models.py::test_v1_5_h99_refit_reproduces_frozen_parameters
+FAILED tests/test_faz1b_guardrails.py::test_faz1a_model_files_and_index_entries_unchanged
+3 failed, 30 passed in 4.63s
+exit=1

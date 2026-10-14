@@ -1,0 +1,54 @@
+# BORSAI_FAZ7C_FREEZE_20260928 — test koşuları (sayı, süre)
+
+## 0. Taban (HEAD 80670cb; izlenmeyen yalnız docs/prompts/FAZ7C_FREEZE.md)
+- .venv/bin/pytest -q                       : 806 passed in 642.18s (0:10:42)
+- app/parity/gen_golden.py --check          : {"checked": 25, "different": []}
+- bash app/scripts/test.sh                  : exit 0, 62 s; cargo 94 passed / 0 failed (3 e2e adıyla atlandı), npm 222 passed (16 dosya), parity pytest 4 passed, golden_unchanged YEŞİL (U46)
+
+## Prova (geçici klonlar, oturum scratchpad'inde, silinecek): K + gerçek `borsai.freeze --models …` + F1 commit'i sonrası tam pytest
+- Prova 1 (HEAD 80670cb + yalnız K1 yönlendirmesi ve F3_MODELS; dondurma; F1 commit'i): 42 failed, 761 passed, 3 errors (670.6 s)
+  - donmuş JSON'lar önizlemeyle `created_at`, `code_version` dışında `==` (runtime dahil)
+  - kırmızıların türleri: "23 giriş" / `frozen_faz7_ids` varsayımları (test), `report.py` "Kayıtlı modeller" D1 başlığı ve
+    `scoring.prediction_of_cell` D1 ufku (kod: KeyError 'D1'; eski kohort skorlaması 14 test + 3 hata, MODELS.md render 3 test),
+    J30 skor karşılaştırması (`faz7c_near_era` bloğu),
+    `test_app_golden_pins_unchanged` (F1 ile APPPIN arası MANIFEST sha'sı)
+- Prova 2 (prova 1 + iki asgari kod düzeltmesi + destek yaması + MODELS.md yeniden üretimi; yalnız prova 1'de kırmızı 19 dosya): 15 failed, 396 passed (600.4 s) — hepsi test varsayımı ya da `faz7c_near_era` bloğu
+- Proje sahibine iki soru (bu görevde): K22 asgari kod düzeltmesi K'da — onay; J30 genişlemesine `faz7c_near_era` bloğu — onay
+- Prova 3 (HEAD 80670cb + K'nın bütün değişiklikleri; dondurma; F1 commit'i; MODELS.md yeniden üretilmiş, commit'siz): 1 failed, 816 passed (920.8 s)
+  - tek kırmızı `test_faz7c_golden.py::test_models_md_faz7c_section` ("kasa: bekliyor" sayısı dondurma notunu bekliyordu; not F2'nin işi) → test notun varlığına bağlandı
+  - aynı klonda F2 notu (report_faz7c.py) + tests/test_faz7c_frozen.py + MODELS.md: MODELS.md bölüm testleri, test_report, donmuş model testleri 28 passed (40 s)
+
+## 1. K öncesi (çalışma ağacı; K commit'lenmeden; HEAD 80670cb; eşzamanlı prova koşusuyla)
+- .venv/bin/pytest -q -rf                   : 817 passed in 976.68s (0:16:16)
+  (bu koşudan sonra `test_faz7c_golden.py::test_models_md_faz7c_section`'da "kasa: bekliyor" sayısı notun varlığına bağlandı; 1 passed; K sonrası tam koşu kapsar)
+- app/parity/gen_golden.py --check          : {"checked": 25, "different": []}
+- bash app/scripts/test.sh                  : exit 0, 23 s; cargo 94 passed / 0 failed, npm 222 passed (16 dosya), parity 4 passed, U46 YEŞİL
+
+## 2. F1 (ce569a8) — dondurma HEAD 5494f70'ta (K), ağaç temiz
+- `.venv/bin/python -m borsai.freeze --models fall_d10_v0_h99 fall_d10_v0_pooled fall_d10_v0_addsale fall_d10_v0_pooled@ZERO`: rc 0, 9 s
+- Hızlı kontrol F1 commit'inden önce (tests/test_faz7c_golden.py tests/test_faz7c_model.py tests/test_models.py): 71 passed, 3 failed in 121.06s
+  (üçü commit'siz durumdan: test_models_dir_registry_scores_unchanged ve test_tables_and_data_versions_unchanged `git status -- models`;
+  test_models_md_faz7c_section `text == render()`, MODELS.md yeniden üretilmemişti)
+
+## 3. F1 sonrası (HEAD ce569a8; ağaçta yalnız docs/MODELS.md yeniden üretilmiş: INDEX'in 4 yeni satırı, commit'lenmemiş)
+- .venv/bin/pytest -q -rf                   : 817 passed in 663.46s (0:11:03)
+
+## 4. Uygulama, yeniden pin ÖNCESİ (F1 = ce569a8)
+- gen_golden --check                        : {"checked": 25, "different": ["golden/MANIFEST.json"]}  (models_index_sha256)
+- bash app/scripts/test.sh                  : exit 101 (ilk hata: build_embed::plan_pins_first_19_index_entries)
+- cargo test --workspace --no-fail-fast     : 92 passed, 2 failed (build_embed::plan_pins_first_19_index_entries, stage3::wizard_fixtures)
+- npm test                                  : 222 passed (16 dosya)
+- pytest app/parity/test_gen_golden.py      : 3 passed, 1 failed (test_golden_files_are_reproducible: MANIFEST)
+
+## 5. Uygulama, yeniden pin SONRASI (APPPIN = 6bbbb61; orkestratör kararı, J31 kalıbı, SPEC_DEVIATIONS K20)
+- `.venv/bin/python app/parity/gen_golden.py` yalnız MANIFEST'in `models_index_sha256` satırını değiştirdi (53265dd5… → 7e636e8b…)
+- `BORSAI_UPDATE_UI_FIXTURES=1 cargo test --test stage3 -- --include-ignored --exact wizard_fixtures`: yalnız preflight_ok.json (2 satır) ve preflight_blocked.json (1 satır) INDEX sha'ları
+- build_embed.rs: beklenen yok sayılan liste 4 v1 + 4 (C), INDEX sırası (elle)
+- gen_golden --check                        : {"checked": 25, "different": []}
+- bash app/scripts/test.sh                  : exit 0, 25 s; cargo 94 passed / 0 failed, npm 222 passed, parity 4 passed, U46 YEŞİL
+- cargo test --workspace --no-fail-fast     : 94 passed, 0 failed
+
+## 6. F2 öncesi (HEAD 6bbbb61 = APPPIN; ağaçta F2 değişiklikleri: report_faz7c dondurma notu, MODELS.md, test_faz7c_frozen.py, rapor)
+- .venv/bin/pytest -q -rf                   : 829 passed in 648.73s (0:10:48)
+- app/parity/gen_golden.py --check          : {"checked": 25, "different": []}
+- bash app/scripts/test.sh                  : exit 0, 36 s; cargo 94 passed / 0 failed, npm 222 passed, parity 4 passed, U46 YEŞİL

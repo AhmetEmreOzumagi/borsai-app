@@ -1,0 +1,348 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "IZENR",
+  "company": "İzdemir Enerji Elektrik Üretim A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1184602",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "19",
+      "source_id": "KAP_1184602",
+      "source_document": "KAP 1184602",
+      "source_published_at": "2023-08-11T18:10:39+03:00",
+      "source_sha256": "36790af22f5a580b171a6fbd79e73deb89fd20e653bfcdde813b5573f14b59fd",
+      "source_path": "registry/oot/source_docs/IZENR/KAP_1184602_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 19",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2023_45",
+          "quote": "İzdemir Enerji Elektrik 40.100.000 23.020.000 19,00 500.000.000 575.000.000 75.000.000 - Üretim AŞ (1) (2) (3)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "138120000",
+      "source_id": "KAP_1184602",
+      "source_document": "KAP 1184602",
+      "source_published_at": "2023-08-11T18:10:39+03:00",
+      "source_sha256": "36790af22f5a580b171a6fbd79e73deb89fd20e653bfcdde813b5573f14b59fd",
+      "source_path": "registry/oot/source_docs/IZENR/KAP_1184602_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 138.120.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "575000000",
+      "source_id": "KAP_1184602",
+      "source_document": "KAP 1184602",
+      "source_published_at": "2023-08-11T18:10:39+03:00",
+      "source_sha256": "36790af22f5a580b171a6fbd79e73deb89fd20e653bfcdde813b5573f14b59fd",
+      "source_path": "registry/oot/source_docs/IZENR/KAP_1184602_bildirim.pdf",
+      "quote": "sermayesini temsil eden 575.000.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "75000000",
+      "source_id": "SPK_BULTEN_2023_45",
+      "source_document": "SPK Bülteni 2023/45",
+      "source_published_at": "2023-08-03T23:59:59+03:00",
+      "source_sha256": "86efd5d72f43b3618a7da8d7430d3d4edb6dafd3692984a1794401cbdc3fb9ae",
+      "source_path": "registry/oot/source_docs/IZENR/SPK_BULTEN_2023-45.pdf",
+      "quote": "İzdemir Enerji Elektrik 40.100.000 23.020.000 19,00 500.000.000 575.000.000 75.000.000 - Üretim AŞ (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_BASE_PLUS_STATED_ADDITIONAL_SALE",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1184372_EK1",
+          "quote": "ek satış dahil 138.120.000 TL nominal değerli payların satışı sonucunda halka arz büyüklüğü 2.624.280.000 TL olarak gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_base_plus_stated_additional": "138120000 = 75000000 + 40100000 + 23020000",
+        "c_additional_sale_stated": {
+          "source_id": "KAP_1184372_EK1",
+          "quote": "Şirket’in toplam 115.100.00 TL nominal değerli payları ile ek satış kapsamında 23.020.000 TL nominal değerli payları halka arz edilmiştir."
+        }
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "40100000",
+      "source_id": "SPK_BULTEN_2023_45",
+      "source_document": "SPK Bülteni 2023/45",
+      "source_published_at": "2023-08-03T23:59:59+03:00",
+      "source_sha256": "86efd5d72f43b3618a7da8d7430d3d4edb6dafd3692984a1794401cbdc3fb9ae",
+      "source_path": "registry/oot/source_docs/IZENR/SPK_BULTEN_2023-45.pdf",
+      "quote": "İzdemir Enerji Elektrik 40.100.000 23.020.000 19,00 500.000.000 575.000.000 75.000.000 - Üretim AŞ (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_BASE_PLUS_STATED_ADDITIONAL_SALE",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1184372_EK1",
+          "quote": "ek satış dahil 138.120.000 TL nominal değerli payların satışı sonucunda halka arz büyüklüğü 2.624.280.000 TL olarak gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_base_plus_stated_additional": "138120000 = 75000000 + 40100000 + 23020000",
+        "c_additional_sale_stated": {
+          "source_id": "KAP_1184372_EK1",
+          "quote": "Şirket’in toplam 115.100.00 TL nominal değerli payları ile ek satış kapsamında 23.020.000 TL nominal değerli payları halka arz edilmiştir."
+        }
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "4.6",
+      "source_id": "KAP_1184372_EK1",
+      "source_document": "KAP 1184372 ek 1",
+      "source_published_at": "2023-08-11T11:30:39+03:00",
+      "source_sha256": "33498fa20629da04d2ec45bd3127f8b04dc52bcf03aa183609cc7c47cf36e770",
+      "source_path": "registry/oot/source_docs/IZENR/KAP_1184372_ek1.pdf",
+      "quote": "Halka arzda toplam 2.862.794 yatırımcıdan halka arz edilen 115.100.000 TL nominal değerli payların 4,6 katına denk gelen 525.808.101 TL nominal değerli filtrelenmemiş pay talebi gelmiştir.",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (525.808.101 talep / 115.100.000 ek satış hariç arz)",
+      "denominator_includes_additional_sale": false,
+      "note": "belge katı ek satış hariç 115.100.000 nominale göre veriyor; nihai gerçekleşen 138.120.000 (ek satış dahil) ile aynı belgedeki toplamlardan 3,8068932884 olurdu (H99 paydası). Kural gereği belgedeki kat alındı.",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_1184372_EK1",
+      "source_document": "KAP 1184372 ek 1",
+      "source_published_at": "2023-08-11T11:30:39+03:00",
+      "source_sha256": "33498fa20629da04d2ec45bd3127f8b04dc52bcf03aa183609cc7c47cf36e770",
+      "source_path": "registry/oot/source_docs/IZENR/KAP_1184372_ek1.pdf",
+      "quote": "Halka arzda toplam 2.862.794 yatırımcıdan halka arz edilen 115.100.000 TL nominal değerli payların 4,6 katına denk gelen 525.808.101 TL nominal değerli filtrelenmemiş pay talebi gelmiştir.",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "23020000",
+      "source_id": "KAP_1184372_EK1",
+      "source_document": "KAP 1184372 ek 1",
+      "source_published_at": "2023-08-11T11:30:39+03:00",
+      "source_sha256": "33498fa20629da04d2ec45bd3127f8b04dc52bcf03aa183609cc7c47cf36e770",
+      "source_path": "registry/oot/source_docs/IZENR/KAP_1184372_ek1.pdf",
+      "quote": "Şirket’in toplam 115.100.00 TL nominal değerli payları ile ek satış kapsamında 23.020.000 TL nominal değerli payları halka arz edilmiştir.",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": "2624280000",
+      "source_id": "KAP_1184372_EK1",
+      "source_document": "KAP 1184372 ek 1",
+      "source_published_at": "2023-08-11T11:30:39+03:00",
+      "source_sha256": "33498fa20629da04d2ec45bd3127f8b04dc52bcf03aa183609cc7c47cf36e770",
+      "source_path": "registry/oot/source_docs/IZENR/KAP_1184372_ek1.pdf",
+      "quote": "ek satış dahil 138.120.000 TL nominal değerli payların satışı sonucunda halka arz büyüklüğü 2.624.280.000 TL olarak gerçekleşmiştir.",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "19.00",
+      "source_id": "SPK_BULTEN_2023_45",
+      "source_document": "SPK Bülteni 2023/45",
+      "source_published_at": "2023-08-03T23:59:59+03:00",
+      "source_sha256": "86efd5d72f43b3618a7da8d7430d3d4edb6dafd3692984a1794401cbdc3fb9ae",
+      "source_path": "registry/oot/source_docs/IZENR/SPK_BULTEN_2023-45.pdf",
+      "quote": "İzdemir Enerji Elektrik 40.100.000 23.020.000 19,00 500.000.000 575.000.000 75.000.000 - Üretim AŞ (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2023-08-03",
+        "bookbuilding_start": "2023-08-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "500000000",
+      "source_id": "SPK_BULTEN_2023_45",
+      "source_document": "SPK Bülteni 2023/45",
+      "source_published_at": "2023-08-03T23:59:59+03:00",
+      "source_sha256": "86efd5d72f43b3618a7da8d7430d3d4edb6dafd3692984a1794401cbdc3fb9ae",
+      "source_path": "registry/oot/source_docs/IZENR/SPK_BULTEN_2023-45.pdf",
+      "quote": "İzdemir Enerji Elektrik 40.100.000 23.020.000 19,00 500.000.000 575.000.000 75.000.000 - Üretim AŞ (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-08-03",
+        "bookbuilding_start": "2023-08-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "575000000",
+      "source_id": "SPK_BULTEN_2023_45",
+      "source_document": "SPK Bülteni 2023/45",
+      "source_published_at": "2023-08-03T23:59:59+03:00",
+      "source_sha256": "86efd5d72f43b3618a7da8d7430d3d4edb6dafd3692984a1794401cbdc3fb9ae",
+      "source_path": "registry/oot/source_docs/IZENR/SPK_BULTEN_2023-45.pdf",
+      "quote": "İzdemir Enerji Elektrik 40.100.000 23.020.000 19,00 500.000.000 575.000.000 75.000.000 - Üretim AŞ (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-08-03",
+        "bookbuilding_start": "2023-08-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "75000000",
+      "source_id": "SPK_BULTEN_2023_45",
+      "source_document": "SPK Bülteni 2023/45",
+      "source_published_at": "2023-08-03T23:59:59+03:00",
+      "source_sha256": "86efd5d72f43b3618a7da8d7430d3d4edb6dafd3692984a1794401cbdc3fb9ae",
+      "source_path": "registry/oot/source_docs/IZENR/SPK_BULTEN_2023-45.pdf",
+      "quote": "İzdemir Enerji Elektrik 40.100.000 23.020.000 19,00 500.000.000 575.000.000 75.000.000 - Üretim AŞ (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2023-08-03",
+        "bookbuilding_start": "2023-08-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "40100000",
+      "source_id": "SPK_BULTEN_2023_45",
+      "source_document": "SPK Bülteni 2023/45",
+      "source_published_at": "2023-08-03T23:59:59+03:00",
+      "source_sha256": "86efd5d72f43b3618a7da8d7430d3d4edb6dafd3692984a1794401cbdc3fb9ae",
+      "source_path": "registry/oot/source_docs/IZENR/SPK_BULTEN_2023-45.pdf",
+      "quote": "İzdemir Enerji Elektrik 40.100.000 23.020.000 19,00 500.000.000 575.000.000 75.000.000 - Üretim AŞ (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-08-03",
+        "bookbuilding_start": "2023-08-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "115100000",
+      "source_id": "SPK_BULTEN_2023_45",
+      "source_document": "SPK Bülteni 2023/45",
+      "source_published_at": "2023-08-03T23:59:59+03:00",
+      "source_sha256": "86efd5d72f43b3618a7da8d7430d3d4edb6dafd3692984a1794401cbdc3fb9ae",
+      "source_path": "registry/oot/source_docs/IZENR/SPK_BULTEN_2023-45.pdf",
+      "quote": "İzdemir Enerji Elektrik 40.100.000 23.020.000 19,00 500.000.000 575.000.000 75.000.000 - Üretim AŞ (1) (2) (3)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-08-03",
+        "bookbuilding_start": "2023-08-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "23020000",
+      "source_id": "SPK_BULTEN_2023_45",
+      "source_document": "SPK Bülteni 2023/45",
+      "source_published_at": "2023-08-03T23:59:59+03:00",
+      "source_sha256": "86efd5d72f43b3618a7da8d7430d3d4edb6dafd3692984a1794401cbdc3fb9ae",
+      "source_path": "registry/oot/source_docs/IZENR/SPK_BULTEN_2023-45.pdf",
+      "quote": "İzdemir Enerji Elektrik 40.100.000 23.020.000 19,00 500.000.000 575.000.000 75.000.000 - Üretim AŞ (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı)",
+      "pit_pb": {
+        "bulletin_date": "2023-08-03",
+        "bookbuilding_start": "2023-08-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "138120000",
+      "source_id": "SPK_BULTEN_2023_45",
+      "source_document": "SPK Bülteni 2023/45",
+      "source_published_at": "2023-08-03T23:59:59+03:00",
+      "source_sha256": "86efd5d72f43b3618a7da8d7430d3d4edb6dafd3692984a1794401cbdc3fb9ae",
+      "source_path": "registry/oot/source_docs/IZENR/SPK_BULTEN_2023-45.pdf",
+      "quote": "İzdemir Enerji Elektrik 40.100.000 23.020.000 19,00 500.000.000 575.000.000 75.000.000 - Üretim AŞ (1) (2) (3)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-08-03",
+        "bookbuilding_start": "2023-08-08",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2023-08-16",
+      "source_id": "KAP_1184602",
+      "source_document": "KAP 1184602",
+      "source_published_at": "2023-08-11T18:10:39+03:00",
+      "source_sha256": "36790af22f5a580b171a6fbd79e73deb89fd20e653bfcdde813b5573f14b59fd",
+      "source_path": "registry/oot/source_docs/IZENR/KAP_1184602_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 16/08/2023",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2023-08-08",
+      "source_id": "KAP_1184602",
+      "source_document": "KAP 1184602",
+      "source_published_at": "2023-08-11T18:10:39+03:00",
+      "source_sha256": "36790af22f5a580b171a6fbd79e73deb89fd20e653bfcdde813b5573f14b59fd",
+      "source_path": "registry/oot/source_docs/IZENR/KAP_1184602_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 08-10/08/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2023-08-10",
+      "source_id": "KAP_1184602",
+      "source_document": "KAP 1184602",
+      "source_published_at": "2023-08-11T18:10:39+03:00",
+      "source_sha256": "36790af22f5a580b171a6fbd79e73deb89fd20e653bfcdde813b5573f14b59fd",
+      "source_path": "registry/oot/source_docs/IZENR/KAP_1184602_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 08-10/08/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1184602": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1184602",
+      "published_at": "2023-08-11T18:10:39+03:00",
+      "sha256": "36790af22f5a580b171a6fbd79e73deb89fd20e653bfcdde813b5573f14b59fd",
+      "path": "registry/oot/source_docs/IZENR/KAP_1184602_bildirim.pdf"
+    },
+    "SPK_BULTEN_2023_45": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2023/45",
+      "published_at": "2023-08-03T23:59:59+03:00",
+      "sha256": "86efd5d72f43b3618a7da8d7430d3d4edb6dafd3692984a1794401cbdc3fb9ae",
+      "path": "registry/oot/source_docs/IZENR/SPK_BULTEN_2023-45.pdf"
+    },
+    "KAP_1184372_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1184372 ek 1",
+      "published_at": "2023-08-11T11:30:39+03:00",
+      "sha256": "33498fa20629da04d2ec45bd3127f8b04dc52bcf03aa183609cc7c47cf36e770",
+      "path": "registry/oot/source_docs/IZENR/KAP_1184372_ek1.pdf"
+    }
+  }
+}

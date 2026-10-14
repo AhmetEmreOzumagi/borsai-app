@@ -1,0 +1,24 @@
+# R1 denetimi: docs/faz7_oot/ekler/r1_denetim.py ve bit-eşitlik/hijyen sayımı (yalnız sayı, kod yok).
+# Ağaç: HEAD f0588ef (C2) + 135 yeni ek kayıt (commit R1'den önce). Rejimle uygulanamaz (NA) hücreler açık/kasa ayrımıyla
+# basılmaz (RAPOR §8).
+
+uye sayilari {"uye": 135, "acik": 71, "kasa": 64}
+etkin kayit sayisi -> uye sayisi {2: 135}
+ek kayit dosyasi 135
+denetimler (her biri ek kayit sayisina esit olmali) {"8_model_sirasi_dogru": 135, "girdiler_bayt_esit": 135, "delta_of_ilk_kayit": 135, "ilk_kayit_19_model": 135, "models_index_sha_guncel": 135, "sonuc_alani_yok": 135, "stage_OOT_PRE_LISTING": 135, "karsilastirici_bos": 135, "tufe_ay_T_eksi_2": 135, "alloc_regime_kohort_etiketi": 135}
+model_inputs'a eklenen anahtarlar {'alloc_regime|tufe_index|tufe_refusal': 135}
+code.git_head {'f0588ef': 135} borsai_dirty {False: 135}
+
+model | toplam: PREDICTED / REFUSED / NA | acik: REFUSED | kasa: REFUSED | ret kodlari (acik; kasa) | NA kodlari (toplam)
+ceiling_hazard_v1_clip | 130 / 5 / 0 | 3 | 2 | {'F3_MISSING': 3}; {'F3_MISSING': 2} | {}
+ceiling_hazard_v1_real | 130 / 5 / 0 | 3 | 2 | {'F3_MISSING': 3}; {'F3_MISSING': 2} | {}
+ceiling_hazard_v1_pooled | 130 / 5 / 0 | 3 | 2 | {'F3_MISSING': 3}; {'F3_MISSING': 2} | {}
+ceiling_hazard_v1_pooled@INF | 134 / 0 / 1 | 0 | 0 | {}; {} | {'NA:MARGIN_NOT_10PCT': 1}
+fall_d10_v0_h99 | 127 / 8 / 0 | 4 | 4 | {'F3_MISSING': 3, 'ADDITIONAL_SALE_MISSING': 1}; {'F3_MISSING': 2, 'ADDITIONAL_SALE_MISSING': 2} | {}
+fall_d10_v0_pooled | 127 / 8 / 0 | 4 | 4 | {'F3_MISSING': 3, 'ADDITIONAL_SALE_MISSING': 1}; {'F3_MISSING': 2, 'ADDITIONAL_SALE_MISSING': 2} | {}
+fall_d10_v0_addsale | 132 / 3 / 0 | 1 | 2 | {'ADDITIONAL_SALE_MISSING': 1}; {'ADDITIONAL_SALE_MISSING': 2} | {}
+fall_d10_v0_pooled@ZERO | 135 / 0 / 0 | 0 | 0 | {}; {} | {}
+toplam hucre 1080 {'REFUSED': 34, 'PREDICTED': 1045, 'NOT_APPLICABLE_REGIME': 1}
+bit-eşitlik: 135 ek kayıt, 1080 hücre, kanonik JSON eşit 1080
+kasa alanı ('vault' anahtarı ya da SEALED metni) taşıyan ek kayıt: 0
+izlenen (ilk) kayıtlarda değişiklik: yok; izlenen kayıt dosyası 135, yeni dosya 135

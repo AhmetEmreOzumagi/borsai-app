@@ -1,0 +1,267 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "SELVA",
+  "company": "Selva Gıda Sanayi A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "821",
+      "source_id": "KAP_943588_EK1",
+      "source_document": "KAP 943588 ek 1",
+      "source_published_at": "2021-06-22T17:20:22+03:00",
+      "source_sha256": "a485b9790c85f39fb33ecb6b604a1277d6d624a5b9d7bd1a9bde012b75e7fb61",
+      "source_path": "registry/oot/source_docs/SELVA/KAP_943588_ek1.pdf",
+      "quote": "TOPLAM 26,000,000 100% 821 54,156,435 100% 821 26,000,000 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden ve talebi karşılanan başvuru sayısı aynı (821)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "821",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "764",
+        "company_employees": "46",
+        "domestic_institutional": "9",
+        "foreign_institutional": "2"
+      },
+      "source_id": "KAP_943588_EK1",
+      "source_document": "KAP 943588 ek 1",
+      "source_published_at": "2021-06-22T17:20:22+03:00",
+      "source_sha256": "a485b9790c85f39fb33ecb6b604a1277d6d624a5b9d7bd1a9bde012b75e7fb61",
+      "source_path": "registry/oot/source_docs/SELVA/KAP_943588_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel Yatırımcılar 7,800,000 30% 764 24,941,638 46% 764 7,800,000 30%",
+        "Çalışanlardan Oluşan Yatırımcılar 520,000 2% 46 520,000 1% 46 520,000 2%",
+        "Yurt İçi Kurumsal Yatırımcılar 7,280,000 28% 9 13,221,797 24% 9 6,616,000 25%",
+        "Yatırımcılar 10,400,000 40% 2 15,473,000 29% 2 11,064,000 43%"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "764",
+        "Çalışanlar": "46",
+        "Yurt İçi Kurumsal": "9",
+        "Yurt Dışı Kurumsal": "2"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '764', 'Çalışanlar': '46', 'Yurt İçi Kurumsal': '9', 'Yurt Dışı Kurumsal': '2'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "3.1976458974",
+      "source_id": "KAP_943588_EK1",
+      "source_document": "KAP 943588 ek 1",
+      "source_published_at": "2021-06-22T17:20:22+03:00",
+      "source_sha256": "a485b9790c85f39fb33ecb6b604a1277d6d624a5b9d7bd1a9bde012b75e7fb61",
+      "source_path": "registry/oot/source_docs/SELVA/KAP_943588_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılar 7,800,000 30% 764 24,941,638 46% 764 7,800,000 30%",
+      "derived": true,
+      "formula": "grup talebi 24,941,638 / planlanan tahsisat 7,800,000",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "1.8161809066",
+      "source_id": "KAP_943588_EK1",
+      "source_document": "KAP 943588 ek 1",
+      "source_published_at": "2021-06-22T17:20:22+03:00",
+      "source_sha256": "a485b9790c85f39fb33ecb6b604a1277d6d624a5b9d7bd1a9bde012b75e7fb61",
+      "source_path": "registry/oot/source_docs/SELVA/KAP_943588_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılar 7,280,000 28% 9 13,221,797 24% 9 6,616,000 25%",
+      "derived": true,
+      "formula": "grup talebi 13,221,797 / planlanan tahsisat 7,280,000",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "1.4877884615",
+      "source_id": "KAP_943588_EK1",
+      "source_document": "KAP 943588 ek 1",
+      "source_published_at": "2021-06-22T17:20:22+03:00",
+      "source_sha256": "a485b9790c85f39fb33ecb6b604a1277d6d624a5b9d7bd1a9bde012b75e7fb61",
+      "source_path": "registry/oot/source_docs/SELVA/KAP_943588_ek1.pdf",
+      "quote": "Yatırımcılar 10,400,000 40% 2 15,473,000 29% 2 11,064,000 43%",
+      "derived": true,
+      "formula": "grup talebi 15,473,000 / planlanan tahsisat 10,400,000",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "7800000",
+        "company_employees": "520000",
+        "domestic_institutional": "6616000",
+        "foreign_institutional": "11064000"
+      },
+      "source_id": "KAP_943588_EK1",
+      "source_document": "KAP 943588 ek 1",
+      "source_published_at": "2021-06-22T17:20:22+03:00",
+      "source_sha256": "a485b9790c85f39fb33ecb6b604a1277d6d624a5b9d7bd1a9bde012b75e7fb61",
+      "source_path": "registry/oot/source_docs/SELVA/KAP_943588_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel Yatırımcılar 7,800,000 30% 764 24,941,638 46% 764 7,800,000 30%",
+        "Çalışanlardan Oluşan Yatırımcılar 520,000 2% 46 520,000 1% 46 520,000 2%",
+        "Yurt İçi Kurumsal Yatırımcılar 7,280,000 28% 9 13,221,797 24% 9 6,616,000 25%",
+        "Yatırımcılar 10,400,000 40% 2 15,473,000 29% 2 11,064,000 43%"
+      ],
+      "note": "düzeltilmiş ek; ilk ekte (KAP_943300_EK1) yurt içi kurumsal 4.301.000 (%17), yurt dışı kurumsal 13.379.000 (%51) yazıyordu",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "7.800.000",
+        "Çalışanlar": "520.000",
+        "Yurt İçi Kurumsal": "4.301.000",
+        "Yurt Dışı Kurumsal": "13.379.000"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '7.800.000', 'Çalışanlar': '520.000', 'Yurt İçi Kurumsal': '4.301.000', 'Yurt Dışı Kurumsal': '13.379.000'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex ilk eki (KAP_943300_EK1) kullanmış; düzeltilmiş ekte (KAP_943588, 'Düzeltme mi? Evet') yurt içi kurumsal 6.616.000, yurt dışı kurumsal 11.064.000"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "30",
+      "source_id": "KAP_943588_EK1",
+      "source_document": "KAP 943588 ek 1",
+      "source_published_at": "2021-06-22T17:20:22+03:00",
+      "source_sha256": "a485b9790c85f39fb33ecb6b604a1277d6d624a5b9d7bd1a9bde012b75e7fb61",
+      "source_path": "registry/oot/source_docs/SELVA/KAP_943588_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılar 7,800,000 30% 764 24,941,638 46% 764 7,800,000 30%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "30",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "25",
+      "source_id": "KAP_943588_EK1",
+      "source_document": "KAP 943588 ek 1",
+      "source_published_at": "2021-06-22T17:20:22+03:00",
+      "source_sha256": "a485b9790c85f39fb33ecb6b604a1277d6d624a5b9d7bd1a9bde012b75e7fb61",
+      "source_path": "registry/oot/source_docs/SELVA/KAP_943588_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılar 7,280,000 28% 9 13,221,797 24% 9 6,616,000 25%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "17",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "17",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "düzeltilmiş ekte %25 (ilk ekte %17)"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "43",
+      "source_id": "KAP_943588_EK1",
+      "source_document": "KAP 943588 ek 1",
+      "source_published_at": "2021-06-22T17:20:22+03:00",
+      "source_sha256": "a485b9790c85f39fb33ecb6b604a1277d6d624a5b9d7bd1a9bde012b75e7fb61",
+      "source_path": "registry/oot/source_docs/SELVA/KAP_943588_ek1.pdf",
+      "quote": "Yatırımcılar 10,400,000 40% 2 15,473,000 29% 2 11,064,000 43%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "51",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "51",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "düzeltilmiş ekte %43 (ilk ekte %51)"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız satış yöntemini yazıyor (\"Sabit Fiyatla Talep Toplama\" yöntemi); dağıtım yöntemi adlandırılmıyor; TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Ahlatcı Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_943588_EK1",
+      "source_document": "KAP 943588 ek 1",
+      "source_published_at": "2021-06-22T17:20:22+03:00",
+      "source_sha256": "a485b9790c85f39fb33ecb6b604a1277d6d624a5b9d7bd1a9bde012b75e7fb61",
+      "source_path": "registry/oot/source_docs/SELVA/KAP_943588_ek1.pdf",
+      "quote": "Saygılarımızla, Ahlatcı Yatırım Menkul Değerler A.Ş.",
+      "basis": "RESULT_NOTICE_PUBLISHER",
+      "note": "sonuç ekini imzalayan/yayımlayan kurum; belge 'aracılık' rolünü açıkça yazmıyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": "AHLATCI YATIRIM MENKUL DEĞERLER A.Ş.",
+      "codex_check": {
+        "codex_value": "AHLATCI YATIRIM MENKUL DEĞERLER A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "sonuç ekini imzalayan kurum"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş; sonuç belgesinde yok",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_943848",
+      "source_document": "KAP 943848",
+      "source_published_at": "2021-06-23T18:11:43+03:00",
+      "source_sha256": "829c6f735898f0de3cb0639d9e014b1809eb04cf5797527bb2644111c9e7c0c8",
+      "source_path": "registry/oot/source_docs/SELVA/KAP_943848_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_943848",
+      "source_document": "KAP 943848",
+      "source_published_at": "2021-06-23T18:11:43+03:00",
+      "source_sha256": "829c6f735898f0de3cb0639d9e014b1809eb04cf5797527bb2644111c9e7c0c8",
+      "source_path": "registry/oot/source_docs/SELVA/KAP_943848_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_943848": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 943848",
+      "published_at": "2021-06-23T18:11:43+03:00",
+      "sha256": "829c6f735898f0de3cb0639d9e014b1809eb04cf5797527bb2644111c9e7c0c8",
+      "path": "registry/oot/source_docs/SELVA/KAP_943848_bildirim.pdf"
+    },
+    "KAP_943588_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 943588 ek 1",
+      "published_at": "2021-06-22T17:20:22+03:00",
+      "sha256": "a485b9790c85f39fb33ecb6b604a1277d6d624a5b9d7bd1a9bde012b75e7fb61",
+      "path": "registry/oot/source_docs/SELVA/KAP_943588_ek1.pdf"
+    }
+  }
+}

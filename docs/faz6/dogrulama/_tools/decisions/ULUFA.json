@@ -1,0 +1,241 @@
+{
+ "ticker": "ULUFA",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_975535",
+  "KAP_975535_EK1",
+  "KAP_976266",
+  "KAP_976273",
+  "KAP_976273_EK1",
+  "KAP_976329"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "23.9",
+   "origin": "SOURCE_REPORTED_APPROX",
+   "source_id": "KAP_976273_EK1",
+   "quote": "53.884 yatırımcıdan halka arz edilen 48.500.000,-TL nominal değerli payların yaklaşık 23,9 katına denk gelen toplam 1.159.019.219 TL nominal değerli talep toplanmıştır.",
+   "definition": "belgedeki toplam kat ('yaklaşık'; ek satış dahil 48.500.000 TL nominal paya göre)",
+   "denominator_includes_additional_sale": true,
+   "note": "düzeltilmiş bildirim (KAP_976273) kullanıldı; ilk bildirim KAP_975535 bireysel talebi hatalı yazmış ('yaklaşık 22,5 katına denk gelen toplam 1.095.010.163'). 1.159.019.219 / 48.500.000 = 23,8973; taban 41.000.000 paydası ile 28,2688"
+  },
+  "total_demand_filter_status": {
+   "value": "NOT_SPECIFIED",
+   "source_id": "KAP_976273_EK1",
+   "note": "belgede 'filtre' ifadesi yok"
+  },
+  "ipo_size_tl": {
+   "value": "120765000",
+   "source_id": "KAP_976273_EK1",
+   "quote": "ek satış dahil halka arz edilen toplam 48.500.000,-TL nominal değerli payların halka arz büyüklüğü 120.765.000,-TL olmuştur"
+  },
+  "capital_increase_shares": {
+   "value": null,
+   "missing_reason": "belgede tek sayı olarak yazılı değil; türetme (belgede '33.5000.000,-TL' (binlik ayırıcı yazım hatası); toplam 48.500.000 − ortak satışı 15.000.000 = 33.500.000 ve sermaye 100.000.000 → 133.500.000 artışı = 33.500.000 ile tutarlı) görev kuralı gereği kullanılmadı",
+   "derived_candidate": {
+    "value": "33500000",
+    "source_id": "KAP_976273_EK1",
+    "quote": "Ulusal Faktoring A.Ş. (Şirket)’nin sermayesinin 100.000.000,-TL’den 133.500.000,-TL’ye artırılması nedeniyle ihraç edilen 33.5000.000,-TL nominal değerli paylar",
+    "formula": "belgede '33.5000.000,-TL' (binlik ayırıcı yazım hatası); toplam 48.500.000 − ortak satışı 15.000.000 = 33.500.000 ve sermaye 100.000.000 → 133.500.000 artışı = 33.500.000 ile tutarlı"
+   }
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "belgedeki 15.000.000 ortak satışı ek satışı (7.500.000) içeriyor; H99 tanımında existing_share_sale_shares ek satış hariçtir (DATA_NOTES §4); ek satış hariç tutar belgede ayrı yazılmıyor",
+   "derived_candidate": {
+    "value": "15000000",
+    "source_id": "KAP_976273_EK1",
+    "quote": "ek satış dahil mevcut ortaklardan PineBridge Eurasia Financial Investments S.a.r.l.’nin sahibi olduğu toplam 15.000.000,-TL nominal değerli paylar"
+   }
+  },
+  "additional_sale_shares": {
+   "value": "7500000",
+   "source_id": "KAP_976273_EK1",
+   "quote": "Toplam talep tutarının ek satış hariç halka arz edilen toplam 41.000.000 TL nominal değerli paylardan yüksek olması nedeniyle ek satışa konu 7.500.000 TL nominal değerli paylar da satışa konu edilmek suretiyle Yurtiçi Kurumsal Yatırımcılara dağıtılmıştır."
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_976273_EK1",
+   "quote": "Böylece, ek satış dahil halka arz edilen toplam 48.500.000,-TL nominal değerli payların halka arz büyüklüğü 120.765.000,-TL olmuştur."
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_976273_EK1",
+   "used": "FULL",
+   "quote": "ek satışa konu 7.500.000 TL nominal değerli paylar da satışa konu edilmek suretiyle Yurtiçi Kurumsal Yatırımcılara dağıtılmıştır",
+   "note": "SPK planlanan ek satış 7.500.000 ile aynı"
+  },
+  "investor_count": {
+   "value": "51207",
+   "source_id": "KAP_976273_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "TOPLAM 41.000.000 100,0 53.884 1.159.019.219 100,0 51.207 48.500.000 100,0",
+   "note": "talep eden 53.884; talebi karşılanan 51.207 (düzeltilmiş bildirim; ilk bildirimde 51.205)"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "51119",
+    "domestic_institutional": "87",
+    "foreign_institutional": "1"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_976273_EK1",
+   "quote": [
+    "Yurtiçi 16.400.000 40,0 53.772 965.306.159 83,3 51.119 16.400.000 33,8",
+    "Yurtiçi 20.500.000 50,0 111 191.313.060 16,5 87 29.700.000 61,3",
+    "Yurtdışı 4.100.000 10,0 1 2.400.000 0,2 1 2.400.000 4,9"
+   ],
+   "note": "satırlar: Yurtiçi Bireysel, Yurtiçi Kurumsal, Yurtdışı Kurumsal; talep eden: 53.772, 111, 1"
+  },
+  "retail_demand_multiple": {
+   "value": "58.8601316463",
+   "source_id": "KAP_976273_EK1",
+   "derived": true,
+   "formula": "Yurtiçi Bireysel talep 965.306.159 / planlanan tahsisat 16.400.000 (aynı satır, TL nominal)",
+   "quote": "Yurtiçi 16.400.000 40,0 53.772 965.306.159 83,3 51.119 16.400.000 33,8"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": "9.3323443902",
+   "source_id": "KAP_976273_EK1",
+   "derived": true,
+   "formula": "Yurtiçi Kurumsal talep 191.313.060 / planlanan tahsisat 20.500.000",
+   "quote": "Yurtiçi 20.500.000 50,0 111 191.313.060 16,5 87 29.700.000 61,3"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": "0.5853658537",
+   "source_id": "KAP_976273_EK1",
+   "derived": true,
+   "formula": "Yurtdışı Kurumsal talep 2.400.000 / planlanan tahsisat 4.100.000",
+   "quote": "Yurtdışı 4.100.000 10,0 1 2.400.000 0,2 1 2.400.000 4,9"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "16400000",
+    "domestic_institutional": "29700000",
+    "foreign_institutional": "2400000"
+   },
+   "source_id": "KAP_976273_EK1",
+   "quote": [
+    "Yurtiçi 16.400.000 40,0 53.772 965.306.159 83,3 51.119 16.400.000 33,8",
+    "Yurtiçi 20.500.000 50,0 111 191.313.060 16,5 87 29.700.000 61,3",
+    "Yurtdışı 4.100.000 10,0 1 2.400.000 0,2 1 2.400.000 4,9"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "33.8",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_976273_EK1",
+   "quote": "toplam halka arz tutarının %33,8’i Yurtiçi Bireysel Yatırımcılara",
+   "note": "ek satış dahil nihai dağılım; ek satış hariç %40; planlanan %40"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "61.3",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_976273_EK1",
+   "quote": "%61,3’ü Yurtiçi Kurumsal Yatırımcılara",
+   "note": "ek satış hariç %54,2; planlanan %50"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": "4.9",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_976273_EK1",
+   "quote": "%4,9’u Yurtdışı Kurumsal Yatırımcılara dağıtılmıştır",
+   "note": "ek satış hariç %5,8; planlanan %10"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç eki yalnız satış yöntemini yazıyor ('sabit fiyatla talep toplama yöntemi'); dağıtım yöntemi adlandırılmıyor; TSSD dossier'de yok"
+  },
+  "lead_broker": {
+   "value": "Osmanlı Yatırım Menkul Değerler A.Ş.",
+   "source_id": "KAP_976273_EK1",
+   "quote": "Osmanlı Yatırım Menkul Değerler A.Ş. liderliğindeki Konsorsiyum",
+   "note": "sonuç ekinde konsorsiyum lideri olarak açık"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD dossier'de yok; sonuç belgelerinde fiyat istikrarı geçmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {
+  "total_demand_multiple": {
+   "codex_value": "23,9",
+   "verdict": "FOUND_SAME",
+   "note": "düzeltilmiş bildirimde açık ('yaklaşık'); ek satış dahil paydaya göre"
+  },
+  "capital_increase_shares": {
+   "codex_value": "33.500.000",
+   "verdict": "FOUND_SAME",
+   "note": "belgede '33.5000.000' yazım hatasıyla; türetildi"
+  },
+  "existing_share_sale_shares": {
+   "codex_value": "15.000.000",
+   "verdict": "FOUND_SAME",
+   "note": "ek satış dahil"
+  },
+  "additional_sale_shares": {
+   "codex_value": "7.500.000",
+   "verdict": "FOUND_SAME"
+  },
+  "ipo_size_tl": {
+   "codex_value": "120.765.000",
+   "verdict": "FOUND_SAME"
+  },
+  "investor_count": {
+   "codex_value": "53.884",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "53.884 talep eden kişi sayısı; talebi karşılanan 51.207 (ALLOCATED tercih)"
+  },
+  "investor_count_by_group": {
+   "codex_value": "{'Yurtiçi Bireysel': '53.772', 'Yurtiçi Kurumsal': '111', 'Yurtdışı Kurumsal': '1'}",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "Codex talep eden sayılarını almış; talebi karşılanan: 51.119, 87, 1"
+  },
+  "distributed_by_group": {
+   "codex_value": "{'Yurtiçi Bireysel': '16.400.000', 'Yurtiçi Kurumsal': '29.700.000', 'Yurtdışı Kurumsal': '2.400.000'}",
+   "verdict": "FOUND_SAME"
+  },
+  "retail_allocation_pct": {
+   "codex_value": "33,8",
+   "verdict": "FOUND_SAME"
+  },
+  "domestic_institutional_allocation_pct": {
+   "codex_value": "61,3",
+   "verdict": "FOUND_SAME"
+  },
+  "foreign_institutional_allocation_pct": {
+   "codex_value": "4,9",
+   "verdict": "FOUND_SAME"
+  },
+  "distribution_method": {
+   "codex_value": "Sabit Fiyatla Talep Toplama",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+  },
+  "lead_broker": {
+   "codex_value": "OSMANLI YATIRIM MENKUL DEĞERLER A.Ş.",
+   "verdict": "FOUND_SAME",
+   "note": "sonuç ekinde 'liderliğindeki Konsorsiyum'"
+  }
+ },
+ "notes": "Borsa dışı sabit fiyatla talep toplama (2,49 TL). Üç sonuç bildirimi: KAP_975535 (ilk; bireysel talep hatalı, 22,5 kat), KAP_976266 ve KAP_976273 (düzeltme; 23,9 kat). Düzeltilmiş KAP_976273_EK1 kullanıldı. Ek satış 7.500.000 tamamen kullanıldı (yurt içi kurumsala). Belge grup katı yazmıyor; grup katları talep / planlanan tahsisat ile türetildi. | Doğrulayıcı son işlemi: türetilmiş ayrım alanları boşaltıldı (postprocess.py).",
+ "needs_search": false
+}

@@ -1,0 +1,688 @@
+{
+  "code": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "3dcef9955cf82cd02be96f1fc1209ed6413ffa79d92e18f96ed765c4cab1fb30",
+    "git_head": "71cf0791d53d3b48e5914f760fa075a7626c6a15"
+  },
+  "definitions": {
+    "bootstrap_live": {
+      "B": 4000,
+      "block": "gerçekleşen D_1'in takvim ayı",
+      "generator": "numpy PCG64",
+      "percentiles": [
+        2.5,
+        97.5
+      ],
+      "seed": 20260921
+    },
+    "brier_clip": null,
+    "cells": [
+      {
+        "horizon_or_k": "F1",
+        "label": "birincil",
+        "model_id": "break_floor_v0",
+        "rule_id": "PRODUCT_BREAK_FLOOR"
+      },
+      {
+        "horizon_or_k": "F1",
+        "label": "ikincil",
+        "model_id": "break_floor_v0",
+        "rule_id": "break_floor_v0@ZERO"
+      },
+      {
+        "horizon_or_k": "F2",
+        "label": "ikincil",
+        "model_id": "break_floor_v0",
+        "rule_id": "PRODUCT_BREAK_FLOOR"
+      },
+      {
+        "horizon_or_k": "F2",
+        "label": "ikincil",
+        "model_id": "break_floor_v0",
+        "rule_id": "break_floor_v0@ZERO"
+      },
+      {
+        "horizon_or_k": "F1",
+        "label": "ikincil",
+        "model_id": "break_floor_v0",
+        "rule_id": "base_floor_by_type"
+      },
+      {
+        "horizon_or_k": "F1",
+        "label": "bilgi",
+        "model_id": "PRODUCT_BREAK_FLOOR",
+        "rule_id": "break_floor_v0@ZERO"
+      }
+    ],
+    "class": "SPEC_BREAK_V0 §9.3: MACHINE_SEQUENCED = model_prospective_break VE insan kaydı yok VE inputs_pit_ok_break; LIVE = model_prospective_break VE push kanıtlı insan kaydı < T_open VE inputs_pit_ok_break (v0'da insan kaydı üreticisi yok); RETRO aksi. model_prospective_break = commit_frozen(m) atası outcome_ingest_commit_after(D_b, h ≥ b + 1) (tarihi > D_b ilk THB/THM ya da h ≥ b + 1 dolu satırı ilk yazan commit) VE modelin push kanıtı var. inputs_pit_ok_break = girdi dosyası PIT (shares_offered < D_1) VE kayıt bekçisi temiz VE D_1..D_b bülten sha'ları MANIFEST'e ve dosyaya eşit.",
+    "comparators": {
+      "PRODUCT_BREAK_FLOOR": "arzın birincil listeleme öncesi kaydındaki ceiling_path_v0 (yoksa @INF) çıktısı ve donmuş hücreleriyle (§5.1); kayıtta yoksa NOT_AVAILABLE",
+      "base_floor_by_type": "donmuş comparators.by_type_F1 sınıf oranı (yalnız F1)",
+      "break_floor_v0@ZERO": "donmuş @ZERO JSON'unun eğitim oranı (kayıttaki çıktısı)"
+    },
+    "denominator_order": [
+      "RETRO",
+      "STREAK_PENDING",
+      "STREAK_TARGET_UNAVAILABLE",
+      "NOT_SCORABLE_STREAK_NA",
+      "NOT_APPLICABLE_NO_BREAK",
+      "NOT_APPLICABLE_B10",
+      "BULLETIN_NOT_PINNED",
+      "INPUTS_NOT_AVAILABLE",
+      "CALENDAR_NOT_AVAILABLE",
+      "RECORD"
+    ],
+    "diff": "model − karşılaştırılan; negatif = model iyi",
+    "primary_record": "INDEX_POST_BREAK sha'sı ve D_1..D_b bülten sha'ları bugünküyle eşit en erken makine kaydı; tahmin bellekte yeniden üretilir, |Δ| > 1e-12 ScoringError (K-LB-3)",
+    "scale": "live_break",
+    "small_n": {
+      "insufficient_below": 30,
+      "min_blocks": 6,
+      "row_table_only_below": 10
+    },
+    "t_open": "D_b'yi izleyen ilk resmi seans (ilan dışı kapanışlar düşülmüş) 09:40:00+03:00 (bilgi; v0'da insan kaydı yok)",
+    "targets": {
+      "F1": "close(D_{b+1}) == lower_limit(D_{b+1})",
+      "F2": "F1 and close(D_{b+2}) == lower_limit(D_{b+2})",
+      "label": "Decimal(kapanış) == Decimal(alt limit), resmi THB kapanışı ve pinli THM alt limiti; F1 = 0 ise F2 = 0; b = 9'da F2 tanımsız"
+    }
+  },
+  "generated_at_utc": "2026-10-02T16:17:54Z",
+  "inputs": {
+    "calendar_sha256": "15d4d975db53a42006c1e57bab7b5f11eab52f281069cc90f0c38361770bf9cb+273ca0e7f815c7bb1a0ce562ba7060d2dc806603f2112cdde460195cbebc6432",
+    "manifest_sha256": "19e0e62ea34d9af698222db0aa3871b6e855a14717c18a40a2e41cb5cbad4812",
+    "models_index_post_break_sha256": "899cf90c805d45313e187e2297f9207229d119f57c1ca56b009ace24ff8e8c5e",
+    "outcomes_sha256": "f0f2af393aa36783e3def8e17c25bca76d79fc865f7aa101fe6bac036d7eaaf9",
+    "post_break_records_sha256": "f514d29f2e95e684e9e764da2add354363565fda2a37e6d88145a73efd19634b",
+    "unannounced_closures": []
+  },
+  "models": [
+    {
+      "card": {
+        "backtest_info": {
+          "F1_product": {
+            "ci95": [
+              -0.2520349536711236,
+              -0.12470055611027922
+            ],
+            "diff": -0.19038429252388073,
+            "n": 69,
+            "n_months": 21
+          },
+          "F1_zero": {
+            "ci95": [
+              -0.0452816349205337,
+              -0.007396321020727523
+            ],
+            "diff": -0.02808492786446958,
+            "n": 69,
+            "n_months": 21
+          },
+          "k1": true,
+          "label": "backtest'te geçiyor (tasarıma maruz)",
+          "scale": "backtest_break",
+          "subset": "first_trading_date >= 2024-01-01"
+        },
+        "comparators_frozen": {
+          "by_type_F1": {
+            "0": 0.1276595744680851,
+            "1": 0.5428571428571428
+          },
+          "zero": {
+            "F1": 0.3048780487804878,
+            "F2": 0.14102564102564102
+          }
+        },
+        "frozen_at": "2026-10-02T16:21:00+03:00",
+        "model_commit": "4d3c9a26be65ee4b3b8f204945f36cdae7eedd5a",
+        "model_push_proof_created_at": "2026-10-02T14:45:08Z",
+        "n_runs_same_data": 1,
+        "n_variants_same_data": 24,
+        "params_sha256_8": "81f07e78",
+        "promotion": {
+          "basis": "backtest_k1 (yakın dönem; tasarıma maruz)",
+          "label": "ön eleme (yakın dönem backtest'i, tasarıma maruz); canlı n = 0",
+          "live_verdict": null,
+          "promoted": true,
+          "stage": 1
+        },
+        "regime_warning": {
+          "end_d1": null,
+          "start_d1": "2026-09-16",
+          "tag": "FON_KRIZI_2026",
+          "text": "Bu arzın ilk seansları Eylül 2026 fon krizi penceresine düşüyor; eğitim kümesinde (2023-09…2026-08) böyle bir stres yok. Beklenti (önceden yazıldı): model tabanı az tahmin eder."
+        },
+        "spec_training_cutoff": "2026-08-19",
+        "training_last_label_date": "2026-08-10",
+        "training_last_label_date_meaning": "eğitim etiketlerinin son seansı (JSON alanı training.cutoff_date; kesim değil, SPEC_DEVIATIONS N22)",
+        "training_n_F1": 82,
+        "training_n_F2": 78
+      },
+      "kind": "post_break",
+      "live_break": {
+        "cells": [],
+        "class_definition": "SPEC_BREAK_V0 §9.3: MACHINE_SEQUENCED = model_prospective_break VE insan kaydı yok VE inputs_pit_ok_break; LIVE = model_prospective_break VE push kanıtlı insan kaydı < T_open VE inputs_pit_ok_break (v0'da insan kaydı üreticisi yok); RETRO aksi. model_prospective_break = commit_frozen(m) atası outcome_ingest_commit_after(D_b, h ≥ b + 1) (tarihi > D_b ilk THB/THM ya da h ≥ b + 1 dolu satırı ilk yazan commit) VE modelin push kanıtı var. inputs_pit_ok_break = girdi dosyası PIT (shares_offered < D_1) VE kayıt bekçisi temiz VE D_1..D_b bülten sha'ları MANIFEST'e ve dosyaya eşit.",
+        "comparators": [
+          "PRODUCT_BREAK_FLOOR",
+          "break_floor_v0@ZERO",
+          "base_floor_by_type"
+        ],
+        "definition": "SPEC_BREAK_V0 §2, §5, §9: kırılma akşamı (b = L + 1 ∈ 1..9) donmuş modelin p_floor'u; F1 = D_{b+1} taban kapanışı, F2 = D_{b+1} ve D_{b+2} taban (b ≤ 8); Brier kırpmasız, model − karşılaştırılan; hiçbir ölçekle birleşmez",
+        "denominator": [
+          {
+            "L": 5,
+            "b": 6,
+            "break_date": "2026-08-25",
+            "class": "RETRO",
+            "d1": "2026-08-18",
+            "listed_first_trading_date": "2026-08-18",
+            "record_id": "machine_20261002T161730Z_af6ce6567cc6.json",
+            "stage_status": "RETRO",
+            "streak_state": "BREAK",
+            "ticker": "CITAS"
+          },
+          {
+            "L": 7,
+            "b": 8,
+            "break_date": "2026-08-31",
+            "class": "RETRO",
+            "d1": "2026-08-20",
+            "listed_first_trading_date": "2026-08-20",
+            "record_id": "machine_20261002T161730Z_130557515e13.json",
+            "stage_status": "RETRO",
+            "streak_state": "BREAK",
+            "ticker": "TKNKA"
+          },
+          {
+            "L": 0,
+            "b": 1,
+            "break_date": "2026-08-20",
+            "class": "RETRO",
+            "d1": "2026-08-20",
+            "listed_first_trading_date": "2026-08-20",
+            "record_id": "machine_20261002T161730Z_b4d19ca74cdc.json",
+            "stage_status": "RETRO",
+            "streak_state": "BREAK",
+            "ticker": "VEYAS"
+          },
+          {
+            "L": 5,
+            "b": 6,
+            "break_date": "2026-08-28",
+            "class": "RETRO",
+            "d1": "2026-08-21",
+            "listed_first_trading_date": "2026-08-21",
+            "record_id": "machine_20261002T161730Z_1510442bfbdf.json",
+            "stage_status": "RETRO",
+            "streak_state": "BREAK",
+            "ticker": "KPEKS"
+          },
+          {
+            "L": 4,
+            "b": 5,
+            "break_date": "2026-09-07",
+            "class": "RETRO",
+            "d1": "2026-09-01",
+            "listed_first_trading_date": "2026-09-01",
+            "record_id": "machine_20261002T161730Z_82475cb4213b.json",
+            "stage_status": "RETRO",
+            "streak_state": "BREAK",
+            "ticker": "INTET"
+          },
+          {
+            "L": 0,
+            "b": 1,
+            "break_date": "2026-09-02",
+            "class": "RETRO",
+            "d1": "2026-09-02",
+            "listed_first_trading_date": "2026-09-02",
+            "record_id": "machine_20261002T161730Z_0ffe802ead07.json",
+            "stage_status": "RETRO",
+            "streak_state": "BREAK",
+            "ticker": "BKRGY"
+          },
+          {
+            "L": 3,
+            "b": 4,
+            "break_date": "2026-09-22",
+            "class": "RETRO",
+            "d1": "2026-09-17",
+            "listed_first_trading_date": "2026-09-17",
+            "record_id": "machine_20261002T161730Z_c5a61ad0cf26.json",
+            "stage_status": "RETRO",
+            "streak_state": "BREAK",
+            "ticker": "NETGL"
+          }
+        ],
+        "descriptive": [],
+        "n_bulletin_not_pinned": 0,
+        "n_calendar_not_available": 0,
+        "n_inputs_not_available": 0,
+        "n_live": 0,
+        "n_machine": 0,
+        "n_not_applicable_b10": 0,
+        "n_not_applicable_no_break": 0,
+        "n_not_scorable_streak_na": 0,
+        "n_pending": 0,
+        "n_refused": 0,
+        "n_retro": 7,
+        "n_rows": 0,
+        "n_scored": 0,
+        "n_streak_pending": 0,
+        "n_streak_target_unavailable": 0,
+        "n_target_label_na": 0,
+        "n_target_unavailable": 0,
+        "primary_cell": {
+          "horizon_or_k": "F1",
+          "metric": "Brier",
+          "output": "p_floor",
+          "rule_ids": [
+            "PRODUCT_BREAK_FLOOR"
+          ]
+        },
+        "rows": [],
+        "scale": "live_break",
+        "title": "Kırılma akşamı sicili (canlı, makine sıralı; ölçek `live_break`)"
+      },
+      "model_id": "break_floor_v0",
+      "primary_cell": {
+        "horizon_or_k": "F1",
+        "metric": "Brier",
+        "output": "p_floor",
+        "rule_ids": [
+          "PRODUCT_BREAK_FLOOR"
+        ]
+      },
+      "rule_rows": [
+        "break_floor_v0@ZERO"
+      ],
+      "stage": "POST_BREAK"
+    }
+  ],
+  "retro_info": [
+    {
+      "L": 5,
+      "b": 6,
+      "b_floor": 0,
+      "break_date": "2026-08-25",
+      "class_evidence": {
+        "basis": "MODEL_FROZEN_AFTER_BREAK_OUTCOME: model, D_b'den sonraki ilk sonuç verisi (tarihi > D_b bülten ya da h ≥ b + 1 satırı) repoya girdikten sonra donduruldu ya da push kanıtı yok (SPEC_BREAK_V0 §9.3). Yalnız bilgi: hiçbir n'e girmez.",
+        "checked_against": "f1f9d444132e89f0377b026b76d775a82685c649",
+        "model_commit": "4d3c9a26be65ee4b3b8f204945f36cdae7eedd5a",
+        "model_frozen_at": "2026-10-02T16:21:00+03:00",
+        "model_params_sha256": "81f07e7810ca5b9513ebc577e14182798ea0b227f105df1551950d6ce40a3eab",
+        "model_prospective": false,
+        "model_push_proof_created_at": "2026-10-02T14:45:08Z",
+        "outcome_day": "2026-08-25",
+        "outcome_ingest_basis": "COMMITTED",
+        "outcome_ingest_commit": "f1f9d444132e89f0377b026b76d775a82685c649"
+      },
+      "comparators": {
+        "PRODUCT_BREAK_FLOOR": {
+          "F1": null,
+          "F2": null,
+          "source_model_id": null,
+          "source_record": null,
+          "status": "NOT_AVAILABLE"
+        },
+        "base_floor_by_type": {
+          "F1": 0.1276595744680851,
+          "F2": null
+        },
+        "break_floor_v0@ZERO": {
+          "F1": 0.3048780487804878,
+          "F2": 0.14102564102564102
+        }
+      },
+      "d1": "2026-08-18",
+      "model_id": "break_floor_v0",
+      "model_status": "PREDICTED",
+      "p": {
+        "F1": 0.13833264286466687,
+        "F2": 0.09464223345801025
+      },
+      "parity": {
+        "basis": "IN_MEMORY_REBUILD",
+        "max_abs_diff": 0.0,
+        "status": "OK"
+      },
+      "record_id": "machine_20261002T161730Z_af6ce6567cc6.json",
+      "refused": null,
+      "regime_tags": [],
+      "streak_state": "BREAK",
+      "t_open": "2026-08-26T09:40:00+03:00",
+      "ticker": "CITAS",
+      "warnings": []
+    },
+    {
+      "L": 7,
+      "b": 8,
+      "b_floor": 0,
+      "break_date": "2026-08-31",
+      "class_evidence": {
+        "basis": "MODEL_FROZEN_AFTER_BREAK_OUTCOME: model, D_b'den sonraki ilk sonuç verisi (tarihi > D_b bülten ya da h ≥ b + 1 satırı) repoya girdikten sonra donduruldu ya da push kanıtı yok (SPEC_BREAK_V0 §9.3). Yalnız bilgi: hiçbir n'e girmez.",
+        "checked_against": "f1f9d444132e89f0377b026b76d775a82685c649",
+        "model_commit": "4d3c9a26be65ee4b3b8f204945f36cdae7eedd5a",
+        "model_frozen_at": "2026-10-02T16:21:00+03:00",
+        "model_params_sha256": "81f07e7810ca5b9513ebc577e14182798ea0b227f105df1551950d6ce40a3eab",
+        "model_prospective": false,
+        "model_push_proof_created_at": "2026-10-02T14:45:08Z",
+        "outcome_day": "2026-08-31",
+        "outcome_ingest_basis": "COMMITTED",
+        "outcome_ingest_commit": "f1f9d444132e89f0377b026b76d775a82685c649"
+      },
+      "comparators": {
+        "PRODUCT_BREAK_FLOOR": {
+          "F1": null,
+          "F2": null,
+          "source_model_id": null,
+          "source_record": null,
+          "status": "NOT_AVAILABLE"
+        },
+        "base_floor_by_type": {
+          "F1": 0.1276595744680851,
+          "F2": null
+        },
+        "break_floor_v0@ZERO": {
+          "F1": 0.3048780487804878,
+          "F2": 0.14102564102564102
+        }
+      },
+      "d1": "2026-08-20",
+      "model_id": "break_floor_v0",
+      "model_status": "PREDICTED",
+      "p": {
+        "F1": 0.13817491254287276,
+        "F2": 0.09521214961923939
+      },
+      "parity": {
+        "basis": "IN_MEMORY_REBUILD",
+        "max_abs_diff": 0.0,
+        "status": "OK"
+      },
+      "record_id": "machine_20261002T161730Z_130557515e13.json",
+      "refused": null,
+      "regime_tags": [],
+      "streak_state": "BREAK",
+      "t_open": "2026-09-01T09:40:00+03:00",
+      "ticker": "TKNKA",
+      "warnings": []
+    },
+    {
+      "L": 0,
+      "b": 1,
+      "b_floor": 0,
+      "break_date": "2026-08-20",
+      "class_evidence": {
+        "basis": "MODEL_FROZEN_AFTER_BREAK_OUTCOME: model, D_b'den sonraki ilk sonuç verisi (tarihi > D_b bülten ya da h ≥ b + 1 satırı) repoya girdikten sonra donduruldu ya da push kanıtı yok (SPEC_BREAK_V0 §9.3). Yalnız bilgi: hiçbir n'e girmez.",
+        "checked_against": "f1f9d444132e89f0377b026b76d775a82685c649",
+        "model_commit": "4d3c9a26be65ee4b3b8f204945f36cdae7eedd5a",
+        "model_frozen_at": "2026-10-02T16:21:00+03:00",
+        "model_params_sha256": "81f07e7810ca5b9513ebc577e14182798ea0b227f105df1551950d6ce40a3eab",
+        "model_prospective": false,
+        "model_push_proof_created_at": "2026-10-02T14:45:08Z",
+        "outcome_day": "2026-08-20",
+        "outcome_ingest_basis": "COMMITTED",
+        "outcome_ingest_commit": "f1f9d444132e89f0377b026b76d775a82685c649"
+      },
+      "comparators": {
+        "PRODUCT_BREAK_FLOOR": {
+          "F1": null,
+          "F2": null,
+          "source_model_id": null,
+          "source_record": null,
+          "status": "NOT_AVAILABLE"
+        },
+        "base_floor_by_type": {
+          "F1": 0.1276595744680851,
+          "F2": null
+        },
+        "break_floor_v0@ZERO": {
+          "F1": 0.3048780487804878,
+          "F2": 0.14102564102564102
+        }
+      },
+      "d1": "2026-08-20",
+      "model_id": "break_floor_v0",
+      "model_status": "PREDICTED",
+      "p": {
+        "F1": 0.1376436522563838,
+        "F2": 0.09715847417357594
+      },
+      "parity": {
+        "basis": "IN_MEMORY_REBUILD",
+        "max_abs_diff": 0.0,
+        "status": "OK"
+      },
+      "record_id": "machine_20261002T161730Z_b4d19ca74cdc.json",
+      "refused": null,
+      "regime_tags": [],
+      "streak_state": "BREAK",
+      "t_open": "2026-08-21T09:40:00+03:00",
+      "ticker": "VEYAS",
+      "warnings": []
+    },
+    {
+      "L": 5,
+      "b": 6,
+      "b_floor": 1,
+      "break_date": "2026-08-28",
+      "class_evidence": {
+        "basis": "MODEL_FROZEN_AFTER_BREAK_OUTCOME: model, D_b'den sonraki ilk sonuç verisi (tarihi > D_b bülten ya da h ≥ b + 1 satırı) repoya girdikten sonra donduruldu ya da push kanıtı yok (SPEC_BREAK_V0 §9.3). Yalnız bilgi: hiçbir n'e girmez.",
+        "checked_against": "f1f9d444132e89f0377b026b76d775a82685c649",
+        "model_commit": "4d3c9a26be65ee4b3b8f204945f36cdae7eedd5a",
+        "model_frozen_at": "2026-10-02T16:21:00+03:00",
+        "model_params_sha256": "81f07e7810ca5b9513ebc577e14182798ea0b227f105df1551950d6ce40a3eab",
+        "model_prospective": false,
+        "model_push_proof_created_at": "2026-10-02T14:45:08Z",
+        "outcome_day": "2026-08-28",
+        "outcome_ingest_basis": "COMMITTED",
+        "outcome_ingest_commit": "f1f9d444132e89f0377b026b76d775a82685c649"
+      },
+      "comparators": {
+        "PRODUCT_BREAK_FLOOR": {
+          "F1": null,
+          "F2": null,
+          "source_model_id": null,
+          "source_record": null,
+          "status": "NOT_AVAILABLE"
+        },
+        "base_floor_by_type": {
+          "F1": 0.5428571428571428,
+          "F2": null
+        },
+        "break_floor_v0@ZERO": {
+          "F1": 0.3048780487804878,
+          "F2": 0.14102564102564102
+        }
+      },
+      "d1": "2026-08-21",
+      "model_id": "break_floor_v0",
+      "model_status": "PREDICTED",
+      "p": {
+        "F1": 0.5389117003850694,
+        "F2": 0.16401056260438845
+      },
+      "parity": {
+        "basis": "IN_MEMORY_REBUILD",
+        "max_abs_diff": 0.0,
+        "status": "OK"
+      },
+      "record_id": "machine_20261002T161730Z_1510442bfbdf.json",
+      "refused": null,
+      "regime_tags": [],
+      "streak_state": "BREAK",
+      "t_open": "2026-08-31T09:40:00+03:00",
+      "ticker": "KPEKS",
+      "warnings": []
+    },
+    {
+      "L": 4,
+      "b": 5,
+      "b_floor": 0,
+      "break_date": "2026-09-07",
+      "class_evidence": {
+        "basis": "MODEL_FROZEN_AFTER_BREAK_OUTCOME: model, D_b'den sonraki ilk sonuç verisi (tarihi > D_b bülten ya da h ≥ b + 1 satırı) repoya girdikten sonra donduruldu ya da push kanıtı yok (SPEC_BREAK_V0 §9.3). Yalnız bilgi: hiçbir n'e girmez.",
+        "checked_against": "f1f9d444132e89f0377b026b76d775a82685c649",
+        "model_commit": "4d3c9a26be65ee4b3b8f204945f36cdae7eedd5a",
+        "model_frozen_at": "2026-10-02T16:21:00+03:00",
+        "model_params_sha256": "81f07e7810ca5b9513ebc577e14182798ea0b227f105df1551950d6ce40a3eab",
+        "model_prospective": false,
+        "model_push_proof_created_at": "2026-10-02T14:45:08Z",
+        "outcome_day": "2026-09-07",
+        "outcome_ingest_basis": "COMMITTED",
+        "outcome_ingest_commit": "f1f9d444132e89f0377b026b76d775a82685c649"
+      },
+      "comparators": {
+        "PRODUCT_BREAK_FLOOR": {
+          "F1": null,
+          "F2": null,
+          "source_model_id": null,
+          "source_record": null,
+          "status": "NOT_AVAILABLE"
+        },
+        "base_floor_by_type": {
+          "F1": 0.1276595744680851,
+          "F2": null
+        },
+        "break_floor_v0@ZERO": {
+          "F1": 0.3048780487804878,
+          "F2": 0.14102564102564102
+        }
+      },
+      "d1": "2026-09-01",
+      "model_id": "break_floor_v0",
+      "model_status": "PREDICTED",
+      "p": {
+        "F1": 0.14182539930275256,
+        "F2": 0.08290496022647753
+      },
+      "parity": {
+        "basis": "IN_MEMORY_REBUILD",
+        "max_abs_diff": 0.0,
+        "status": "OK"
+      },
+      "record_id": "machine_20261002T161730Z_82475cb4213b.json",
+      "refused": null,
+      "regime_tags": [],
+      "streak_state": "BREAK",
+      "t_open": "2026-09-08T09:40:00+03:00",
+      "ticker": "INTET",
+      "warnings": []
+    },
+    {
+      "L": 0,
+      "b": 1,
+      "b_floor": 1,
+      "break_date": "2026-09-02",
+      "class_evidence": {
+        "basis": "MODEL_FROZEN_AFTER_BREAK_OUTCOME: model, D_b'den sonraki ilk sonuç verisi (tarihi > D_b bülten ya da h ≥ b + 1 satırı) repoya girdikten sonra donduruldu ya da push kanıtı yok (SPEC_BREAK_V0 §9.3). Yalnız bilgi: hiçbir n'e girmez.",
+        "checked_against": "f1f9d444132e89f0377b026b76d775a82685c649",
+        "model_commit": "4d3c9a26be65ee4b3b8f204945f36cdae7eedd5a",
+        "model_frozen_at": "2026-10-02T16:21:00+03:00",
+        "model_params_sha256": "81f07e7810ca5b9513ebc577e14182798ea0b227f105df1551950d6ce40a3eab",
+        "model_prospective": false,
+        "model_push_proof_created_at": "2026-10-02T14:45:08Z",
+        "outcome_day": "2026-09-02",
+        "outcome_ingest_basis": "COMMITTED",
+        "outcome_ingest_commit": "f1f9d444132e89f0377b026b76d775a82685c649"
+      },
+      "comparators": {
+        "PRODUCT_BREAK_FLOOR": {
+          "F1": null,
+          "F2": null,
+          "source_model_id": null,
+          "source_record": null,
+          "status": "NOT_AVAILABLE"
+        },
+        "base_floor_by_type": {
+          "F1": 0.5428571428571428,
+          "F2": null
+        },
+        "break_floor_v0@ZERO": {
+          "F1": 0.3048780487804878,
+          "F2": 0.14102564102564102
+        }
+      },
+      "d1": "2026-09-02",
+      "model_id": "break_floor_v0",
+      "model_status": "PREDICTED",
+      "p": {
+        "F1": 0.5432679533511754,
+        "F2": 0.15231130173471372
+      },
+      "parity": {
+        "basis": "IN_MEMORY_REBUILD",
+        "max_abs_diff": 0.0,
+        "status": "OK"
+      },
+      "record_id": "machine_20261002T161730Z_0ffe802ead07.json",
+      "refused": null,
+      "regime_tags": [],
+      "streak_state": "BREAK",
+      "t_open": "2026-09-03T09:40:00+03:00",
+      "ticker": "BKRGY",
+      "warnings": []
+    },
+    {
+      "L": 3,
+      "b": 4,
+      "b_floor": 1,
+      "break_date": "2026-09-22",
+      "class_evidence": {
+        "basis": "MODEL_FROZEN_AFTER_BREAK_OUTCOME: model, D_b'den sonraki ilk sonuç verisi (tarihi > D_b bülten ya da h ≥ b + 1 satırı) repoya girdikten sonra donduruldu ya da push kanıtı yok (SPEC_BREAK_V0 §9.3). Yalnız bilgi: hiçbir n'e girmez.",
+        "checked_against": "c1eb7aeb0bbdb7bea937d71f93751fd859671207",
+        "model_commit": "4d3c9a26be65ee4b3b8f204945f36cdae7eedd5a",
+        "model_frozen_at": "2026-10-02T16:21:00+03:00",
+        "model_params_sha256": "81f07e7810ca5b9513ebc577e14182798ea0b227f105df1551950d6ce40a3eab",
+        "model_prospective": false,
+        "model_push_proof_created_at": "2026-10-02T14:45:08Z",
+        "outcome_day": "2026-09-22",
+        "outcome_ingest_basis": "COMMITTED",
+        "outcome_ingest_commit": "c1eb7aeb0bbdb7bea937d71f93751fd859671207"
+      },
+      "comparators": {
+        "PRODUCT_BREAK_FLOOR": {
+          "F1": null,
+          "F2": null,
+          "source_model_id": null,
+          "source_record": null,
+          "status": "NOT_AVAILABLE"
+        },
+        "base_floor_by_type": {
+          "F1": 0.5428571428571428,
+          "F2": null
+        },
+        "break_floor_v0@ZERO": {
+          "F1": 0.3048780487804878,
+          "F2": 0.14102564102564102
+        }
+      },
+      "d1": "2026-09-17",
+      "model_id": "break_floor_v0",
+      "model_status": "PREDICTED",
+      "p": {
+        "F1": 0.4990578357497034,
+        "F2": 0.30432770420243327
+      },
+      "parity": {
+        "basis": "IN_MEMORY_REBUILD",
+        "max_abs_diff": 0.0,
+        "status": "OK"
+      },
+      "record_id": "machine_20261002T161730Z_c5a61ad0cf26.json",
+      "refused": null,
+      "regime_tags": [
+        "FON_KRIZI_2026"
+      ],
+      "streak_state": "BREAK",
+      "t_open": "2026-09-23T09:40:00+03:00",
+      "ticker": "NETGL",
+      "warnings": [
+        "B_TURNOVER_CLIPPED_TO_TRAINING_P05_P95"
+      ]
+    }
+  ],
+  "scale": "live_break",
+  "schema_version": "borsai.scores_break/1"
+}

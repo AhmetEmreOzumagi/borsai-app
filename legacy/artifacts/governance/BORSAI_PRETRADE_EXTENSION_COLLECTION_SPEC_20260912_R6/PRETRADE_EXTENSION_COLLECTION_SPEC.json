@@ -1,0 +1,1676 @@
+{
+ "task_id": "BORSAI_COLLECTION_SPEC_R6_20260912_T21",
+ "spec_name": "BORSAI_PRETRADE_EXTENSION_COLLECTION_SPEC",
+ "spec_version": "PRETRADE_EXT_COLLECTION_SPEC_V2",
+ "spec_revision": "R6",
+ "supersedes": {
+  "supersedes_directory": "artifacts/governance/BORSAI_PRETRADE_EXTENSION_COLLECTION_SPEC_20260912_R5/",
+  "supersedes_scope": "EVERY_VALIDATION_RUN_AFTER_THIS_REVISIONS_TAG",
+  "key_rename_note": "R3 carried this block under the key 'supersedes_for_batches_B01_B16'. R4 renames it because the key name itself encodes the defect R4 D3 corrects: effect is bound to a tag, never to a batch number (section 7.6). No other key is renamed or removed.",
+  "predecessor_chain": [
+   "BORSAI_PRETRADE_EXTENSION_COLLECTION_SPEC_20260906_R1",
+   "BORSAI_PRETRADE_EXTENSION_COLLECTION_SPEC_20260906_R2",
+   "BORSAI_PRETRADE_EXTENSION_COLLECTION_SPEC_20260908_R3",
+   "BORSAI_PRETRADE_EXTENSION_COLLECTION_SPEC_20260909_R4",
+   "BORSAI_PRETRADE_EXTENSION_COLLECTION_SPEC_20260912_R5"
+  ],
+  "spec_version": "PRETRADE_EXT_COLLECTION_SPEC_V2",
+  "tag": "APPLIED_BY_OPERATOR_NOT_BY_THIS_TASK",
+  "suggested_tag": "frozen/collection-spec-r6",
+  "r1_tag_unaffected": "frozen/collection-spec-v1",
+  "r2_tag_unaffected": "frozen/collection-spec-v2",
+  "r3_tag_unaffected": "frozen/collection-spec-r3",
+  "r4_tag_unaffected": "frozen/collection-spec-r4",
+  "r5_tag_unaffected": "frozen/collection-spec-r5",
+  "r1_modified": false,
+  "r2_modified": false,
+  "r3_modified": false,
+  "r4_modified": false,
+  "r5_modified": false,
+  "basis": "R1 section 6.7 item 3 - a revision is a new directory and a new tag; no published revision is edited in place. R6 uses the same instrument R2 used against R1, R3 used against R2, R4 used against R3 and R5 used against R4.",
+  "changes": [
+   "R6_D1_CHECK_8_CONFLICT_FAMILY_ROW_KEY_COLLISION_REPORT_ONLY",
+   "R6_D2_PUBLISH_OWN_MACHINE_READABLE_SPEC_FILE"
+  ],
+  "change_count": 2,
+  "predecessor_changes_carried_forward": [
+   "R1_DURATION_FIELDS",
+   "R2_CATEGORY_CELL_STATUS_REGISTER",
+   "R3_CHECK_12_FILTER_STATUS_AWARENESS",
+   "R4_D1_CHECK_11_PERCENTAGE_BASE_RECONSTRUCTION",
+   "R4_D2_CHECK_8_DURATION_CLAUSE_REPORT_ONLY",
+   "R4_D3_TAG_BASED_REVISION_EFFECT",
+   "R5_D1_POINT_IN_TIME_AS_OF_LISTING_RESTRICTION",
+   "R5_D4_CHECK_8_OFFER_KEY_MULTI_SOURCE_NOTE",
+   "R5_D5_COLLECTOR_INSTRUCTION_REISSUE"
+  ]
+ },
+ "scientific_weight": "FROZEN_GATE",
+ "written_local_date": "2026-09-12",
+ "timezone": "Europe/Istanbul",
+ "document_path": "PRETRADE_EXTENSION_COLLECTION_SPEC.md",
+ "identity": {
+  "rule": "The git commit containing this file is the spec identity.",
+  "tag": "frozen/collection-spec-v1",
+  "authority_hash_manifest": "NOT_MAINTAINED_BY_DESIGN"
+ },
+ "outcome_firewall": {
+  "realized_outcome_reads": 0,
+  "collection_performed": false,
+  "web_research_performed": false,
+  "model_run": false,
+  "existing_files_modified": 0,
+  "field_selection_basis": [
+   "EXISTING_SCHEMA_COLUMNS",
+   "PREREGISTERED_DATA_ACQUISITION_BACKLOG"
+  ],
+  "field_selection_basis_excluded": "ANY_OBSERVED_FIELD_TO_OUTCOME_RELATIONSHIP",
+  "collector_binding_rule": "No D1/D3/D5/D10 value, price, OHLCV, tavan event, drawdown, THB/THM content or artifacts/outcomes/ value may be read, requested, transcribed or reasoned about.",
+  "r3_change_driver": "Mislabelled validator finding diagnosed in BORSAI_GOVERNANCE_AUDIT_20260907_F2 section G3.2 and corrected additively in artifacts/governance/BORSAI_LABEL_CORRECTION_20260908_T11.md, plus the pre-trade source sentences of DOFER and MARBL. No observed field-to-outcome relationship.",
+  "r4_change_driver": "Three measurements over already-delivered pre-trade bytes and over the repository's own commit and tag timestamps, recorded in BORSAI_SPEC_7_3_CHECKPOINT_20260909_T13.md sections 2.2, 3, 5.3 and 6.3 and re-measured independently while drafting R4. No observed field-to-outcome relationship."
+ },
+ "precedence": {
+  "status": "ADDITIVE_SUBORDINATE",
+  "amends_nothing": true,
+  "subordinate_to": [
+   "CLAUDE.md",
+   "config/ipo_master_schema.toml",
+   "config/ipo_master_schema_v2.toml",
+   "artifacts/ipo_master/ipo_demand_category_schema.md",
+   "scripts/modeling/preprocessing.py (frozen f3 comparability rule)",
+   "scripts/modeling/feature_assembly.py (frozen V1_CORE_4 contract)",
+   "artifacts/governance/BORSAI_PROSPECTIVE_SCORING_PROTOCOL_20260906_R1/"
+  ],
+  "creates_no_new_code": true,
+  "creates_no_new_capability_or_authorization_mechanism": true,
+  "collection_is_not_admission": "A collected field is not a feature, is not OFFICIAL_VERIFIED, and is not eligible for any model until a separate preregistration admits it."
+ },
+ "existing_schema_inventory": {
+  "cohort": "HISTORICAL99_FROZEN_COHORT_V1",
+  "cohort_n": 99,
+  "membership_file": "artifacts/ipo_master/historical99/HISTORICAL99_FROZEN_COHORT_V1/canonical/HISTORICAL99_FROZEN_COHORT_V1_canonical_membership.csv",
+  "membership_split": {
+   "CANONICAL20_PROTECTED_INPUT": 20,
+   "VERIFIED_FINAL_EXTERNAL_ACQUISITION_EVIDENCE": 79
+  },
+  "thin_rows_in_scope": 79,
+  "thin_first_trading_date_min": "2023-09-22",
+  "thin_first_trading_date_max": "2026-07-06",
+  "schema_column_counts": {
+   "ipo_master_v1_master_fields": 30,
+   "ipo_master_v2_master_extension_fields": 7,
+   "v2_normalized_columns": 37,
+   "historical99_canonical_pretrade_master_columns": 38,
+   "historical99_extra_column": "total_demand_multiple_origin",
+   "provenance_fields": 12,
+   "demand_category_long_form_fields": 22,
+   "demand_category_canonical_realized_columns": 24
+  },
+  "demand_category_canonical_instance": {
+   "path": "artifacts/ipo_master/consolidated/ipo_master_20_demand_categories_canonical.csv",
+   "rows": 81,
+   "tickers": 20,
+   "leaf_rows": 70,
+   "aggregate_rows": 11,
+   "rows_for_the_79": 0
+  },
+  "fill_map_n20_vs_n79": {
+   "complete_in_both": {
+    "n20": 20,
+    "n79": 79,
+    "columns": [
+     "ticker",
+     "first_trading_date",
+     "ipo_price",
+     "shares_offered",
+     "capital_increase_shares",
+     "existing_share_sale",
+     "post_ipo_share_capital",
+     "ipo_size_tl",
+     "free_float_pct",
+     "capital_increase_pct_of_offer",
+     "existing_sale_pct_of_offer",
+     "data_completeness_status"
+    ]
+   },
+   "additional_sale_shares": {
+    "n20": 16,
+    "n79": 79
+   },
+   "company_name": {
+    "n20": 20,
+    "n79": 51
+   },
+   "total_demand_multiple": {
+    "n20": 19,
+    "n79": 78
+   },
+   "total_demand_multiple_value": {
+    "n20": 19,
+    "n79": 78
+   },
+   "total_demand_multiple_origin": {
+    "n20": 19,
+    "n79": 79
+   },
+   "total_demand_definition": {
+    "n20": 20,
+    "n79": 79
+   },
+   "total_demand_filter_status": {
+    "n20": 20,
+    "n79": 79
+   },
+   "empty_for_all_79": {
+    "n79": 0,
+    "columns": [
+     "investor_count",
+     "retail_demand_multiple",
+     "domestic_institutional_demand_multiple",
+     "foreign_institutional_demand_multiple",
+     "retail_allocation_pct",
+     "domestic_institutional_allocation_pct",
+     "foreign_institutional_allocation_pct",
+     "distribution_method",
+     "price_determination_method",
+     "lead_broker",
+     "price_stability_planned",
+     "price_stability_days",
+     "issuer_lockup_days",
+     "shareholder_lockup_days",
+     "sector",
+     "applicant_count",
+     "allocated_investor_count",
+     "order_count",
+     "investor_count_semantic"
+    ],
+    "n20_counts": {
+     "investor_count": 20,
+     "retail_demand_multiple": 16,
+     "domestic_institutional_demand_multiple": 17,
+     "foreign_institutional_demand_multiple": 10,
+     "retail_allocation_pct": 17,
+     "domestic_institutional_allocation_pct": 17,
+     "foreign_institutional_allocation_pct": 10,
+     "distribution_method": 20,
+     "price_determination_method": 20,
+     "lead_broker": 20,
+     "price_stability_planned": 20,
+     "price_stability_days": 20,
+     "issuer_lockup_days": 20,
+     "shareholder_lockup_days": 20,
+     "sector": 20,
+     "applicant_count": 17,
+     "allocated_investor_count": 20,
+     "order_count": 2,
+     "investor_count_semantic": 20
+    }
+   }
+  },
+  "point_in_time_status_for_the_79": "UNKNOWN (20 PASS / 79 UNKNOWN / 0 FAIL) - preserved verbatim, not changed by this spec"
+ },
+ "enums_reused_verbatim": {
+  "verification_statuses": [
+   "OFFICIAL_VERIFIED",
+   "AUTHORIZED_INTERMEDIARY_VERIFIED",
+   "SECONDARY_VERIFIED",
+   "DATA_NOT_FOUND",
+   "SOURCE_CONFLICT"
+  ],
+  "conflict_statuses": [
+   "",
+   "NO_CONFLICT",
+   "SOURCE_CONFLICT"
+  ],
+  "data_completeness_statuses": [
+   "NOT_CALCULABLE",
+   "PARTIAL",
+   "COMPLETE",
+   "SOURCE_CONFLICT"
+  ],
+  "allowed_boolean_values": [
+   "TRUE",
+   "FALSE"
+  ],
+  "total_demand_filter_status": [
+   "FILTERED",
+   "UNFILTERED",
+   "NOT_SPECIFIED",
+   "NOT_APPLICABLE",
+   "DATA_NOT_FOUND"
+  ],
+  "investor_count_semantic": [
+   "APPLICANT_COUNT",
+   "ALLOCATED_INVESTOR_COUNT",
+   "ORDER_COUNT",
+   "AMBIGUOUS",
+   "DATA_NOT_FOUND"
+  ],
+  "normalized_categories": [
+   "RETAIL_DOMESTIC",
+   "HIGH_APPLICATION_DOMESTIC",
+   "INSTITUTIONAL_DOMESTIC",
+   "INSTITUTIONAL_FOREIGN",
+   "EMPLOYEE",
+   "RETAIL_FOREIGN",
+   "OTHER"
+  ],
+  "category_levels": [
+   "LEAF",
+   "AGGREGATE"
+  ],
+  "available_before_first_trade": [
+   "TRUE",
+   "FALSE",
+   "UNKNOWN"
+  ],
+  "source_priority": [
+   "SPK",
+   "KAP",
+   "BORSA_ISTANBUL",
+   "MKK",
+   "AUTHORIZED_INTERMEDIARY_OR_CONSORTIUM",
+   "TRUSTED_SECONDARY"
+  ],
+  "field_status": [
+   "VALUE_RECORDED",
+   "DATA_NOT_FOUND",
+   "FIELD_NOT_FOUND_IN_DOCUMENT",
+   "SOURCES_CONFLICT",
+   "SCOPE_DIFFERENCE",
+   "SEMANTIC_DIFFERENCE",
+   "SEMANTICALLY_AMBIGUOUS",
+   "SPEC_EDGE_CASE_UNRESOLVED"
+  ],
+  "publication_timing_status": [
+   "AVAILABLE_PRE_FIRST_TRADE",
+   "PUBLICATION_TIMING_UNRESOLVED",
+   "POST_FIRST_TRADE_NOT_ELIGIBLE"
+  ],
+  "scope_tag": [
+   "INCL_ADDITIONAL",
+   "EXCL_ADDITIONAL",
+   "SCOPE_NOT_SPECIFIED",
+   "AS_OF_LISTING",
+   "AS_OF_RETRIEVAL",
+   "NOT_APPLICABLE"
+  ],
+  "source_document_type": [
+   "KAP_SONUC_BILDIRIMI",
+   "TSSD",
+   "IZAHNAME_OR_ARAC_NOTU",
+   "BIST_LISTING_NOTICE",
+   "KAP_COMPANY_RECORD",
+   "SPK_BULLETIN",
+   "OUT_OF_SCOPE_FAMILY"
+  ],
+  "unit": [
+   "SHARES",
+   "TL",
+   "RATIO",
+   "PCT",
+   "DAYS",
+   "MONTHS",
+   "YEARS",
+   "COUNT",
+   "DATE",
+   "TEXT",
+   "BOOLEAN",
+   "ENUM"
+  ],
+  "duration_start_reference": [
+   "FIRST_TRADING_DATE",
+   "PROSPECTUS_APPROVAL_DATE",
+   "PUBLIC_OFFERING_DATE",
+   "ALLOCATION_DATE",
+   "NOT_SPECIFIED",
+   "NOT_APPLICABLE"
+  ],
+  "no_inherited_enum_extended_by_this_spec": true,
+  "vocabularies_extended_by_r2": {
+   "unit": {
+    "added": [
+     "MONTHS",
+     "YEARS"
+    ],
+    "r1_members": [
+     "SHARES",
+     "TL",
+     "RATIO",
+     "PCT",
+     "DAYS",
+     "COUNT",
+     "DATE",
+     "TEXT",
+     "BOOLEAN",
+     "ENUM"
+    ],
+    "owned_by": "THIS_SPEC",
+    "present_in_config_toml": false
+   },
+   "duration_start_reference": {
+    "added": "NEW_VOCABULARY",
+    "owned_by": "THIS_SPEC",
+    "present_in_config_toml": false
+   }
+  },
+  "field_status_and_publication_timing_status_source": "BorsAi_External_Archive/SPECS/PRETRADE_ACQUISITION_COLLECTOR_SPEC_CORRECTED_20260819.md"
+ },
+ "publication_timing_rule": {
+  "assigned_by": "DETERMINISTIC_VALIDATION_SCRIPT",
+  "never_assigned_by": "COLLECTOR",
+  "rules": [
+   "source_publication_date < first_trading_date (strict) -> AVAILABLE_PRE_FIRST_TRADE",
+   "source_publication_date == first_trading_date without time-of-day evidence -> PUBLICATION_TIMING_UNRESOLVED",
+   "source_publication_date > first_trading_date -> POST_FIRST_TRADE_NOT_ELIGIBLE unconditionally",
+   "source_publication_date null -> PUBLICATION_TIMING_UNRESOLVED, plainly",
+   "internal signature date is never substituted for publication date",
+   "later republication never back-dates availability; only the earliest confirmed SPK/KAP/BIST appearance counts"
+  ]
+ },
+ "field_dictionary": {
+  "offer_level_field_count": 22,
+  "offer_level_fields": [
+   {
+    "n": 1,
+    "field_name": "demand_shares_unfiltered",
+    "status": "NEW",
+    "type": "decimal",
+    "unit": "SHARES",
+    "scope_tag_required": true,
+    "primary_document": "KAP_SONUC_BILDIRIMI",
+    "definition": "Total nominal share quantity demanded in the bookbuild before any duplicate/ineligibility screen, exactly as the source states it.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 2,
+    "field_name": "demand_shares_filtered",
+    "status": "NEW",
+    "type": "decimal",
+    "unit": "SHARES",
+    "scope_tag_required": true,
+    "primary_document": "KAP_SONUC_BILDIRIMI",
+    "definition": "Total nominal share quantity demanded after the source's stated screen (kabul edilen / elenmis / mukerrer ayiklanmis).",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 3,
+    "field_name": "shares_offered_denominator",
+    "status": "NEW",
+    "type": "decimal",
+    "unit": "SHARES",
+    "scope_tag_required": true,
+    "primary_document": "KAP_SONUC_BILDIRIMI",
+    "definition": "The offered-share quantity the source itself divided by to reach its published demand multiple; not necessarily the canonical shares_offered.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 4,
+    "field_name": "total_demand_multiple_value",
+    "status": "EXISTING_V2",
+    "type": "decimal",
+    "unit": "RATIO",
+    "scope_tag_required": false,
+    "primary_document": "KAP_SONUC_BILDIRIMI",
+    "definition": "Total demand multiple as directly published by the source; never derived here.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 5,
+    "field_name": "total_demand_filter_status",
+    "status": "EXISTING_V2",
+    "type": "enum",
+    "unit": "ENUM",
+    "scope_tag_required": false,
+    "primary_document": "KAP_SONUC_BILDIRIMI",
+    "definition": "Whether the source describes its total as filtered, unfiltered, or leaves it open.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 6,
+    "field_name": "total_demand_definition",
+    "status": "EXISTING_V2",
+    "type": "string",
+    "unit": "TEXT",
+    "scope_tag_required": false,
+    "primary_document": "KAP_SONUC_BILDIRIMI",
+    "definition": "Verbatim-grounded textual statement of the numerator, denominator and wording the source used.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 7,
+    "field_name": "applicant_count",
+    "status": "EXISTING_V2",
+    "type": "integer",
+    "unit": "COUNT",
+    "scope_tag_required": false,
+    "primary_document": "KAP_SONUC_BILDIRIMI",
+    "definition": "Number of persons/applications reported on the demand side; never converted to an order or allocated count.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 8,
+    "field_name": "allocated_investor_count",
+    "status": "EXISTING_V2",
+    "type": "integer",
+    "unit": "COUNT",
+    "scope_tag_required": false,
+    "primary_document": "KAP_SONUC_BILDIRIMI",
+    "definition": "Number of investors/applications that actually received an allocation; never renamed to applicant count.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 9,
+    "field_name": "order_count",
+    "status": "EXISTING_V2",
+    "type": "integer",
+    "unit": "COUNT",
+    "scope_tag_required": false,
+    "primary_document": "KAP_SONUC_BILDIRIMI",
+    "definition": "Filled only if the source explicitly reports a count of orders (emir adedi/sayisi); never derived from order quantity.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 10,
+    "field_name": "investor_count_semantic",
+    "status": "EXISTING_V2",
+    "type": "enum",
+    "unit": "ENUM",
+    "scope_tag_required": false,
+    "primary_document": "KAP_SONUC_BILDIRIMI",
+    "definition": "Which of applicant/allocated/order the source's single unlabelled investor count actually is.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 11,
+    "field_name": "distribution_method",
+    "status": "EXISTING_V1",
+    "type": "string",
+    "unit": "TEXT",
+    "scope_tag_required": false,
+    "primary_document": "TSSD",
+    "definition": "The distribution rule applied per investor group (esit dagitim, oransal dagitim, mixtures), verbatim-grounded.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 12,
+    "field_name": "price_determination_method",
+    "status": "EXISTING_V1",
+    "type": "string",
+    "unit": "TEXT",
+    "scope_tag_required": false,
+    "primary_document": "IZAHNAME_OR_ARAC_NOTU",
+    "definition": "How the price was set and demand collected (sabit fiyatla talep toplama, fiyat araligi ile talep toplama, Borsa'da satis).",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 13,
+    "field_name": "lead_broker",
+    "status": "EXISTING_V1",
+    "type": "string",
+    "unit": "TEXT",
+    "scope_tag_required": false,
+    "primary_document": "TSSD",
+    "definition": "Legal name(s) of the lead intermediary/consortium leader(s), semicolon-separated, verbatim.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 14,
+    "field_name": "price_stability_planned",
+    "status": "EXISTING_V1",
+    "type": "boolean",
+    "unit": "BOOLEAN",
+    "scope_tag_required": false,
+    "primary_document": "TSSD",
+    "definition": "Whether a price-stabilisation (fiyat istikrari) undertaking was planned/disclosed pre-listing.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 15,
+    "field_name": "price_stability_undertaking",
+    "status": "NEW_R2",
+    "type": "decimal",
+    "unit": [
+     "DAYS",
+     "MONTHS",
+     "YEARS"
+    ],
+    "unit_rule": "THE_UNIT_THE_SOURCE_PRINTS_NEVER_CONVERTED",
+    "scope_tag_required": false,
+    "duration_start_reference_required": true,
+    "undertaking_scope_required": true,
+    "one_row_per_undertaking": true,
+    "source_stated_zero_is_a_real_zero": true,
+    "primary_document": "TSSD",
+    "definition": "One disclosed price-stabilisation (fiyat istikrari) window, recorded in the unit the source itself uses. A source-stated \"no stabilisation\" is a real 0 with unit DAYS, never DATA_NOT_FOUND.",
+    "if_absent": "DATA_NOT_FOUND",
+    "replaces_r1_field": "price_stability_days"
+   },
+   {
+    "n": 16,
+    "field_name": "issuer_lockup_undertaking",
+    "status": "NEW_R2",
+    "type": "decimal",
+    "unit": [
+     "DAYS",
+     "MONTHS",
+     "YEARS"
+    ],
+    "unit_rule": "THE_UNIT_THE_SOURCE_PRINTS_NEVER_CONVERTED",
+    "scope_tag_required": false,
+    "duration_start_reference_required": true,
+    "undertaking_scope_required": true,
+    "one_row_per_undertaking": true,
+    "primary_document": "IZAHNAME_OR_ARAC_NOTU",
+    "definition": "One disclosed lock-up undertaking binding the issuer on new share issuance, recorded in the unit the source itself uses.",
+    "if_absent": "DATA_NOT_FOUND",
+    "replaces_r1_field": "issuer_lockup_days"
+   },
+   {
+    "n": 17,
+    "field_name": "shareholder_lockup_undertaking",
+    "status": "NEW_R2",
+    "type": "decimal",
+    "unit": [
+     "DAYS",
+     "MONTHS",
+     "YEARS"
+    ],
+    "unit_rule": "THE_UNIT_THE_SOURCE_PRINTS_NEVER_CONVERTED",
+    "scope_tag_required": false,
+    "duration_start_reference_required": true,
+    "undertaking_scope_required": true,
+    "one_row_per_undertaking": true,
+    "primary_document": "IZAHNAME_OR_ARAC_NOTU",
+    "definition": "One disclosed lock-up undertaking binding existing shareholders on sales, recorded in the unit the source itself uses.",
+    "if_absent": "DATA_NOT_FOUND",
+    "replaces_r1_field": "shareholder_lockup_days"
+   },
+   {
+    "n": 18,
+    "field_name": "market_segment",
+    "status": "NEW",
+    "type": "string",
+    "unit": "TEXT",
+    "scope_tag_required": false,
+    "primary_document": "BIST_LISTING_NOTICE",
+    "definition": "The BIST market/segment the shares were admitted to at listing, verbatim.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 19,
+    "field_name": "sector_kap_code",
+    "status": "NEW",
+    "type": "string",
+    "unit": "TEXT",
+    "scope_tag_required": true,
+    "scope_tag_allowed": [
+     "AS_OF_LISTING",
+     "AS_OF_RETRIEVAL"
+    ],
+    "primary_document": "KAP_COMPANY_RECORD",
+    "definition": "The official KAP/BIST sector code for the issuer.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 20,
+    "field_name": "sector_kap_label",
+    "status": "NEW",
+    "type": "string",
+    "unit": "TEXT",
+    "scope_tag_required": true,
+    "scope_tag_allowed": [
+     "AS_OF_LISTING",
+     "AS_OF_RETRIEVAL"
+    ],
+    "primary_document": "KAP_COMPANY_RECORD",
+    "definition": "The official KAP/BIST sector label matching sector_kap_code, verbatim.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 21,
+    "field_name": "bookbuilding_start",
+    "status": "NEW",
+    "type": "date",
+    "unit": "DATE",
+    "scope_tag_required": false,
+    "primary_document": "TSSD",
+    "definition": "First calendar date of the demand-collection period, as disclosed.",
+    "if_absent": "DATA_NOT_FOUND"
+   },
+   {
+    "n": 22,
+    "field_name": "bookbuilding_end",
+    "status": "NEW",
+    "type": "date",
+    "unit": "DATE",
+    "scope_tag_required": false,
+    "primary_document": "TSSD",
+    "definition": "Last calendar date of the demand-collection period, as disclosed.",
+    "if_absent": "DATA_NOT_FOUND"
+   }
+  ],
+  "identity_completion_field": {
+   "field_name": "company_name",
+   "scope": "the 28 of 79 rows currently empty",
+   "rule": "COMPLETE_ONLY_NEVER_ALTER_EXISTING_51"
+  },
+  "demand_category_data_fields": [
+   "normalized_category",
+   "source_category_label",
+   "source_parent_label",
+   "category_level",
+   "is_aggregate",
+   "applicant_count",
+   "allocated_investor_count",
+   "order_count",
+   "planned_allocation_shares",
+   "planned_allocation_pct",
+   "demand_nominal",
+   "demand_share_pct",
+   "demand_multiple",
+   "distributed_nominal",
+   "distributed_pct"
+  ],
+  "demand_category_data_field_count": 15,
+  "demand_category_schema_reused_unchanged": true
+ },
+ "f3_semantic_preservation": {
+  "frozen_definition": "f3 = total_demand_multiple, read from the canonical pretrade master.",
+  "frozen_comparability_rule": "apply_f3_comparability_filter() in scripts/modeling/preprocessing.py, step 1 of preprocess_fold: training-fold-only modal total_demand_filter_status rule that nulls a ticker's f3 when its status explicitly opposes the training-fold mode.",
+  "changed_by_this_spec": false,
+  "new_fields_are_additive_not_corrective": [
+   "demand_shares_unfiltered",
+   "demand_shares_filtered",
+   "shares_offered_denominator"
+  ],
+  "collector_may_not_write": [
+   "total_demand_multiple",
+   "total_demand_multiple_origin"
+  ],
+  "collector_may_not_overwrite_existing_79_values_of": [
+   "total_demand_multiple",
+   "total_demand_multiple_value",
+   "total_demand_definition",
+   "total_demand_filter_status",
+   "total_demand_multiple_origin"
+  ],
+  "on_disagreement": "Record new evidence as its own row with field_status = SOURCES_CONFLICT and a note naming the canonical value; validator emits CANONICAL_DISAGREEMENT; no write-back, no averaging, no newer-source-wins rule.",
+  "policy_basis": [
+   "conflict_policy = NO_AUTOMATIC_SELECTION",
+   "calculation_mismatch_policy = REPORT_ONLY_NO_AUTOMATIC_CORRECTION"
+  ],
+  "total_demand_filter_status_not_a_predictor": "It already acts inside the frozen f3 comparability rule and must not additionally appear as a predictor (V2 preregistration candidate)."
+ },
+ "fable_list_reconciliation": {
+  "proposed_offer_level_names": 18,
+  "final_offer_level_fields": 22,
+  "renamed_into_existing_column": [
+   {
+    "proposed": "total_demand_multiple_source_reported",
+    "final": "total_demand_multiple_value"
+   }
+  ],
+  "added_beyond_proposal": [
+   "order_count",
+   "investor_count_semantic",
+   "total_demand_definition",
+   "sector_kap_code/sector_kap_label split"
+  ],
+  "demand_category_ruling": "The 8 proposed columns are superseded by the full 15-field existing long-form set; dropping is_aggregate and source_parent_label would remove the only mechanism preventing aggregate+leaf double counting.",
+  "sector_ruling": "sector_kap_code/sector_kap_label are NEW and strictly distinct from the existing free-text `sector` column; a KAP code is never written into `sector`.",
+  "irreconcilable_conflicts": 0,
+  "resolution_principle": "CLAUDE.md 22 - existing schema wins over a new synonym."
+ },
+ "deliberately_excluded_fields": [
+  {
+   "field": "sector (existing free-text column)",
+   "reason": "prose, not a taxonomy; issuer_sector_official_taxonomy_backfill is preregistered as NOT_A_V2_FEATURE requiring a grouping scheme that does not exist."
+  },
+  {
+   "field": "investor_count (legacy)",
+   "reason": "uninterpretable without investor_count_semantic; superseded by applicant/allocated/order counts."
+  },
+  {
+   "field": "financial statement fields",
+   "reason": "financial_statement_information is preregistered NOT_CURRENTLY_FEASIBLE (requires a TMS-29 / period-comparability policy that does not exist)."
+  },
+  {
+   "field": "XU100 / market regime history",
+   "reason": "xu100_pre_cutoff_index_history is a sealed SEALED_V3_MARKET_REGIME_CANDIDATE item."
+  },
+  {
+   "field": "additional-sale planned-vs-exercised semantic confirmation",
+   "reason": "preregistered separately as f6_semantic_confirmation_planned_versus_exercised with authorized_in_this_task = FALSE; it touches V2 feature evidence and carries a V2-blocking withdrawal consequence, so it needs its own authorization."
+  },
+  {
+   "field": "anything post-listing",
+   "reason": "outcome firewall."
+  }
+ ],
+ "source_hierarchy": {
+  "tiers": [
+   {
+    "rank": 1,
+    "code": "SPK",
+    "official": true
+   },
+   {
+    "rank": 2,
+    "code": "KAP",
+    "official": true
+   },
+   {
+    "rank": 3,
+    "code": "BORSA_ISTANBUL",
+    "official": true
+   },
+   {
+    "rank": 4,
+    "code": "MKK",
+    "official": true
+   },
+   {
+    "rank": 5,
+    "code": "AUTHORIZED_INTERMEDIARY_OR_CONSORTIUM",
+    "official": false
+   },
+   {
+    "rank": 6,
+    "code": "TRUSTED_SECONDARY",
+    "official": false
+   }
+  ],
+  "rank_does_not_resolve_semantics": "Rank breaks ties only between sources making the same claim under the same definition, scope and date. A semantic difference is recorded as SEMANTIC_DIFFERENCE, not resolved by hierarchy.",
+  "authorized_intermediary_never_relabelled_official": true,
+  "trusted_secondary_never_sole_basis_for_a_numeric_field": true,
+  "document_families": [
+   {
+    "type": "KAP_SONUC_BILDIRIMI",
+    "authoritative_for": "offer-level fields 1-10; all demand-category rows; confirmation of bookbuilding dates"
+   },
+   {
+    "type": "TSSD",
+    "authoritative_for": "offer-level fields 11-17, 21, 22; planned allocation percentages"
+   },
+   {
+    "type": "IZAHNAME_OR_ARAC_NOTU",
+    "authoritative_for": "offer-level fields 12-17; fallback for 11"
+   },
+   {
+    "type": "BIST_LISTING_NOTICE",
+    "authoritative_for": "market_segment; first_trading_date confirmation only"
+   },
+   {
+    "type": "KAP_COMPANY_RECORD",
+    "authoritative_for": "sector_kap_code, sector_kap_label, company_name completion"
+   },
+   {
+    "type": "SPK_BULLETIN",
+    "authoritative_for": "approval evidence; cross-check only; never the sole source of a demand figure"
+   },
+   {
+    "type": "OUT_OF_SCOPE_FAMILY",
+    "authoritative_for": "nothing; recorded but never used as a field source"
+   }
+  ],
+  "known_trap": "A document titled 'Fiyat Tespit Raporu'na Iliskin Analist Raporu' is NOT a Fiyat Tespit Raporu; it is an intermediary restatement, tier 5 at best, and never substitutes for the original.",
+  "multi_source_rule": "Each source stating the same field gets its own row; agreement is established by the validator, never by the collector discarding a row."
+ },
+ "conflict_rules": {
+  "SOURCES_CONFLICT": "Same field, same semantic definition, same date, same scope, same offer universe, different value. Both rows recorded, same conflict_group_id, NO selection made.",
+  "SCOPE_DIFFERENCE": "Different scope (additional sale included vs excluded). Both rows recorded with their own scope_tag. Not a conflict.",
+  "SEMANTIC_DIFFERENCE": "Same field name, different definition. Both rows recorded; notes state each definition.",
+  "SEMANTICALLY_AMBIGUOUS": "Source wording resolvable into neither. Recorded with verbatim phrase, escalated, never guessed.",
+  "SPEC_EDGE_CASE_UNRESOLVED": "Structurally unusual offer whose scope cannot be bounded. Recorded and escalated; other fields proceed.",
+  "forbidden": [
+   "averaging",
+   "selecting the more convenient/rounder/larger/smaller/more recent value",
+   "selecting the source that looks like the other 78 rows",
+   "silently promoting tier 5/6 to fill a tier 1-4 gap",
+   "deriving a multiple the source did not itself compute"
+  ],
+  "genuine_absence": {
+   "field_status": "DATA_NOT_FOUND",
+   "normalized_value": "DATA_NOT_FOUND",
+   "search_scope": "MANDATORY_NON_EMPTY_LIST_OF_DOCUMENT_FAMILIES_ACTUALLY_OPENED"
+  },
+  "per_document_absence": {
+   "field_status": "FIELD_NOT_FOUND_IN_DOCUMENT",
+   "meaning": "a per-document observation, not a per-field conclusion"
+  },
+  "forbidden_absence_encodings": [
+   "",
+   "0",
+   "N/A",
+   "NA",
+   "-",
+   "yok",
+   "bilinmiyor",
+   "null",
+   "None",
+   "em dash"
+  ],
+  "explicit_source_zero_is_a_real_zero": true,
+  "corrections_never_backdate": true,
+  "internal_signature_date_never_used_as_publication_date": true,
+  "canonical_disagreement": "Recorded and reported; never written back; resolution is a separate operator decision."
+ },
+ "output_schema": {
+  "root": "work/pretrade_extension/collection/",
+  "path_charset": "ASCII_ONLY",
+  "content_charset_rule": "Turkish characters inside CSV content preserved exactly; ASCII-folding and transliteration forbidden.",
+  "quotepath_warning": "git config core.quotepath = true in this repository, so non-ASCII bytes in a path are escaped in git output; file and directory names must be ASCII-only.",
+  "encoding": "UTF-8 with BOM",
+  "line_ending": "CRLF",
+  "delimiter": ",",
+  "quote_char": "\"",
+  "quote_escape": "\"\"",
+  "decimal_separator": ".",
+  "thousands_separator": "NONE",
+  "date_format": "YYYY-MM-DD",
+  "time_format": "HH:MM",
+  "timestamp_format": "YYYY-MM-DDTHH:MM:SS+03:00",
+  "boolean_format": "TRUE/FALSE",
+  "offer_level_csv": {
+   "filename_pattern": "PRETRADE_EXT_<BATCH>_offer_fields.csv",
+   "column_count": 26,
+   "column_count_r1": 24,
+   "columns": [
+    "batch_id",
+    "ticker",
+    "field_name",
+    "raw_value",
+    "normalized_value",
+    "unit",
+    "scope_tag",
+    "source_document_type",
+    "source_priority",
+    "source_name",
+    "source_url",
+    "kap_notification_id",
+    "attachment_filename",
+    "page_or_section",
+    "verbatim_source_phrase",
+    "source_publication_date",
+    "source_publication_time",
+    "retrieval_timestamp_istanbul",
+    "collector",
+    "field_status",
+    "conflict_group_id",
+    "search_scope",
+    "notes",
+    "spec_version",
+    "duration_start_reference",
+    "undertaking_scope"
+   ],
+   "added_by_r2": [
+    "duration_start_reference",
+    "undertaking_scope"
+   ],
+   "r2_columns_appended_not_inserted": "Columns 1-24 keep their R1 positions and meanings, so a reader that stops at column 24 reads an R2 file correctly.",
+   "r2_columns_value_on_non_duration_fields": "NOT_APPLICABLE",
+   "added_beyond_proposal": [
+    "source_priority",
+    "conflict_group_id",
+    "spec_version"
+   ],
+   "conflict_group_id_rationale": "Without it, the two rows of a SOURCES_CONFLICT pair cannot be mechanically bound to each other."
+  },
+  "demand_category_csv": {
+   "filename_pattern": "PRETRADE_EXT_<BATCH>_demand_categories.csv",
+   "column_count": 31,
+   "columns": [
+    "batch_id",
+    "ticker",
+    "normalized_category",
+    "source_category_label",
+    "source_parent_label",
+    "category_level",
+    "is_aggregate",
+    "applicant_count",
+    "allocated_investor_count",
+    "order_count",
+    "planned_allocation_shares",
+    "planned_allocation_pct",
+    "demand_nominal",
+    "demand_share_pct",
+    "demand_multiple",
+    "distributed_nominal",
+    "distributed_pct",
+    "source_document_type",
+    "source_name",
+    "source_url",
+    "kap_notification_id",
+    "attachment_filename",
+    "page_or_section",
+    "source_publication_date",
+    "source_publication_time",
+    "retrieval_timestamp_istanbul",
+    "collector",
+    "field_status",
+    "conflict_group_id",
+    "notes",
+    "spec_version"
+   ],
+   "existing_schema_fields_reused": 20,
+   "collection_audit_columns_added": 11,
+   "changed_by_r2": false,
+   "unchanged_by_r2_rationale": "This file must stay row-comparable with the canonical demand-category CSV and is the file the section 6 calibration was scored against; R2 adds the missing expressiveness beside it, in category_cell_status_csv, rather than by reshaping it.",
+   "row_level_field_status_meaning": "Describes the source record as a whole. Per-cell status lives in category_cell_status_csv. A data cell with no register entry is VALUE_RECORDED."
+  },
+  "category_cell_status_csv": {
+   "introduced_by": "R2",
+   "filename_pattern": "PRETRADE_EXT_<BATCH>_category_cell_status.csv",
+   "column_count": 9,
+   "columns": [
+    "batch_id",
+    "ticker",
+    "normalized_category",
+    "source_category_label",
+    "field_name",
+    "field_status",
+    "search_scope",
+    "notes",
+    "spec_version"
+   ],
+   "scope": "One row per demand-category DATA FIELD cell whose status is anything other than a plainly recorded value. Cells holding a value are not listed; this is an exception log, not a mirror.",
+   "field_name_closed_to": "demand_category_data_fields (15)",
+   "field_status_enum": "INHERITED_UNCHANGED",
+   "search_scope_mandatory_when": "field_status == DATA_NOT_FOUND",
+   "carries_no_data_value": true,
+   "applies_to_spec_version": "PRETRADE_EXT_COLLECTION_SPEC_V2",
+   "b00_backfill": "NOT_REQUIRED_NOT_A_FAILURE",
+   "closes_r1_open_items": [
+    "category file has no search_scope column",
+    "15 data fields share one row-level field_status"
+   ]
+  },
+  "script_derived_columns_never_written_by_collector": [
+   "available_before_first_trade",
+   "verification_status",
+   "conflict_status",
+   "publication_timing_status",
+   "total_demand_multiple_origin",
+   "price_stability_days",
+   "issuer_lockup_days",
+   "shareholder_lockup_days"
+  ],
+  "derived_duration_fields_r2": {
+   "fields": [
+    "price_stability_days",
+    "issuer_lockup_days",
+    "shareholder_lockup_days"
+   ],
+   "derived_from": [
+    "price_stability_undertaking",
+    "issuer_lockup_undertaking",
+    "shareholder_lockup_undertaking"
+   ],
+   "field_mapping": {
+    "price_stability_days": "price_stability_undertaking",
+    "issuer_lockup_days": "issuer_lockup_undertaking",
+    "shareholder_lockup_days": "shareholder_lockup_undertaking"
+   },
+   "price_stability_days_added_by": "BORSAI_COLLECTION_SPEC_R2_FINALIZE_20260906_T9A",
+   "price_stability_days_is_a_replication_not_a_new_pattern": true,
+   "source_stated_zero_passes_through_as_zero": true,
+   "written_by_collector": false,
+   "pattern_basis": [
+    "publication_timing_status (section 1.7)",
+    "total_demand_multiple_origin (section 2.3 item 5)"
+   ],
+   "conversion_constant_location": "THE_DERIVATION_SCRIPT_NOT_THIS_SPEC",
+   "conversion_constant_stated_here": false,
+   "conversion_constant_versioned_in_script": true,
+   "multiple_undertakings_policy": "MULTIPLE_UNDERTAKINGS_NOT_REDUCIBLE - emit the full set for a human decision; never silently pick one.",
+   "derived_value_is_evidence": false,
+   "write_back_to_canonical": "FORBIDDEN_REPORT_ONLY_SECTION_4_7",
+   "reversible": "The verbatim magnitude, unit, start reference and source phrase stay in the collected file, so a derived day count can be recomputed or discarded without re-collection."
+  },
+  "provenance_projection": {
+   "column_count": 12,
+   "columns": [
+    "ticker",
+    "field_name",
+    "raw_value",
+    "normalized_value",
+    "source_priority",
+    "source_name",
+    "source_url",
+    "source_publication_date",
+    "available_before_first_trade",
+    "verification_status",
+    "conflict_status",
+    "notes"
+   ],
+   "derivations": {
+    "available_before_first_trade": "AVAILABLE_PRE_FIRST_TRADE->TRUE, POST_FIRST_TRADE_NOT_ELIGIBLE->FALSE, PUBLICATION_TIMING_UNRESOLVED->UNKNOWN",
+    "verification_status": "tiers 1-4 -> OFFICIAL_VERIFIED; tier 5 -> AUTHORIZED_INTERMEDIARY_VERIFIED; tier 6 -> SECONDARY_VERIFIED; field_status DATA_NOT_FOUND -> DATA_NOT_FOUND; field_status SOURCES_CONFLICT -> SOURCE_CONFLICT",
+    "conflict_status": "SOURCE_CONFLICT when field_status = SOURCES_CONFLICT, else NO_CONFLICT"
+   }
+  },
+  "derived_artifact_column_count": 29
+ },
+ "calibration": {
+  "selection_rule": "Members of HISTORICAL99_FROZEN_COHORT_V1 with membership_source = CANONICAL20_PROTECTED_INPUT, sorted by first_trading_date DESCENDING, tie-break ticker ASCENDING, first 5.",
+  "selection_is_outcome_independent": true,
+  "selection_is_difficulty_independent": true,
+  "set_file": "CALIBRATION_SET.md",
+  "batch_id": "B00",
+  "ticker_count": 5,
+  "canonical_values_written_in_this_spec": false,
+  "canonical_values_written_in_calibration_set_file": false,
+  "blindness": "The collector receives ticker codes and this spec only. Canonical values, canonical file contents, and per-ticker row counts are withheld. Requesting the key before submitting B00 voids the calibration.",
+  "disclosed_residual_leak": {
+   "what": "Section 1.5 of the spec is visible to the collector and reports, per field, how many of the 20 dense tickers have a non-missing value (cohort-level aggregate).",
+   "why_not_removed": "Section 1.5 is the schema inventory this specification is required to carry.",
+   "severity": "WEAK_PRIOR_ONLY - names no ticker, gives no value, does not identify which 20 members are the 5",
+   "binding_mitigation": "The collector records what the source in front of it says and must not use the n20 counts as an expectation, in either direction. DATA_NOT_FOUND remains admissible only with a non-empty search_scope naming documents actually opened, which makes an unsearched DATA_NOT_FOUND detectable."
+  },
+  "cell_classes": [
+   "MATCH",
+   "MATCH_ABSENT",
+   "MISMATCH",
+   "MISS",
+   "CANONICAL_GAP_FILLED",
+   "UNSCORED",
+   "EXTRA_ROW"
+  ],
+  "scored_cells_formula": "MATCH + MATCH_ABSENT + MISMATCH + MISS",
+  "unscored_fields": [
+   "distribution_method",
+   "price_determination_method"
+  ],
+  "unscored_reason": "Free-form Turkish prose in the canonical record; string equality is noise and semantic equivalence is not mechanical.",
+  "normalization_before_comparison": "Strip thousands separators/whitespace, Turkish decimal comma to point, exact decimal string comparison after trailing-zero removal. No tolerance band. lead_broker compared as an order-insensitive name set.",
+  "gates": [
+   {
+    "gate": 1,
+    "name": "CORRECTNESS",
+    "rule": "MISMATCH == 0 on every numeric, date and enum cell",
+    "rationale": "A mismatch is a correctness failure; the 79 rows have no answer key to catch it later."
+   },
+   {
+    "gate": 2,
+    "name": "COVERAGE",
+    "rule": "(MISMATCH + MISS) / scored_cells <= 0.10",
+    "rationale": "A MISS is a coverage failure and is self-declaring (DATA_NOT_FOUND with a search_scope), unlike a silent wrong value."
+   }
+  ],
+  "pass_requires_both_gates": true,
+  "on_fail": {
+   "collection_of_79_does_not_start": true,
+   "b01_not_opened": true,
+   "root_cause_each_discrepancy": [
+    "SPEC_DEFECT",
+    "COLLECTOR_PROCEDURE_DEFECT",
+    "CANONICAL_RECORD_PROBLEM"
+   ],
+   "spec_defects_fixed_by": "A NEW spec revision (..._20260906_R2, new directory, new tag). This document is never edited.",
+   "recalibration_uses_same_five_tickers": true,
+   "reselection_forbidden": "Picking a different five after a failure is selecting on difficulty.",
+   "max_reruns": 2,
+   "max_total_attempts": 3,
+   "after_max_attempts": "STOP and escalate to the operator on the record.",
+   "feedback_between_attempts": "Per-field discrepancy list only; the full canonical dataset is never handed over."
+  },
+  "output_paths": [
+   "work/pretrade_extension/calibration/PRETRADE_EXT_CALIBRATION_B00_comparison.csv",
+   "work/pretrade_extension/calibration/PRETRADE_EXT_CALIBRATION_B00_summary.json",
+   "work/pretrade_extension/calibration/PRETRADE_EXT_CALIBRATION_B00_discrepancies.md"
+  ],
+  "summary_json_must_record": [
+   "scored_cells",
+   "per-class counts",
+   "both gate results",
+   "overall verdict",
+   "sha256 of submitted B00 files",
+   "sha256 of every canonical file used as the key"
+  ],
+  "promotion": "Calibration output stays under work/ and is not promoted into artifacts/ without a separate operator decision.",
+  "r2_status": {
+   "b00_collected_and_scored_under": "PRETRADE_EXT_COLLECTION_SPEC_V1",
+   "b00_result": "GATES_PASSED_ON_SECOND_ATTEMPT (BORSAI_B00_ATTEMPT2_GATE_20260906_T6)",
+   "result_covers": "R1 field set, in R1 24-column and 31-column shapes",
+   "r2_added_fields_calibrated": false,
+   "r2_added_fields": [
+    "price_stability_undertaking",
+    "issuer_lockup_undertaking",
+    "shareholder_lockup_undertaking",
+    "duration_start_reference",
+    "undertaking_scope",
+    "category_cell_status_csv"
+   ],
+   "r2_added_fields_inherit_b00_pass": false,
+   "recalibration_under_r2": "NOT_AUTHORIZED_BY_THIS_REVISION_AND_NOT_REQUIRED_BY_IT; operator decision, on the record.",
+   "attempts_consumed_under_r1": 2,
+   "gates_changed_by_r2": false,
+   "scoring_rules_changed_by_r2": false
+  }
+ },
+ "batch_plan": {
+  "ordering": "first_trading_date ASCENDING, tie-break ticker ASCENDING",
+  "tickers_per_batch": 5,
+  "tickers_per_batch_basis": "matches the existing batch_01..batch_04 convention for the dense 20",
+  "collection_batches": 16,
+  "calibration_batches": 1,
+  "total_batches": 17,
+  "in_scope_rows": 79,
+  "ticker_slots": 84,
+  "batches": {
+   "B01": [
+    "HATSN",
+    "DMRGD",
+    "MEKAG",
+    "DOFER",
+    "MHRGY"
+   ],
+   "B02": [
+    "BORLS",
+    "TABGD",
+    "VRGYO",
+    "MARBL",
+    "BINHO"
+   ],
+   "B03": [
+    "EKOS",
+    "AGROT",
+    "SKYMD",
+    "CATES",
+    "BEGYO"
+   ],
+   "B04": [
+    "KBORU",
+    "SURGY",
+    "MEGMT",
+    "AVPGY",
+    "PATEK"
+   ],
+   "B05": [
+    "BORSK",
+    "LMKDC",
+    "ALVES",
+    "OBAMS",
+    "ARTMS"
+   ],
+   "B06": [
+    "MOGAN",
+    "ODINE",
+    "ENTRA",
+    "RGYAS",
+    "LILAK"
+   ],
+   "B07": [
+    "KOTON",
+    "ALTNY",
+    "KOCMT",
+    "HRKET",
+    "ONRYT"
+   ],
+   "B08": [
+    "OZYSR",
+    "ALKLC",
+    "YIGIT",
+    "HOROZ",
+    "SEGMN"
+   ],
+   "B09": [
+    "EFORC",
+    "DCTTR",
+    "BAHKM",
+    "TCKRC",
+    "GUNDG"
+   ],
+   "B10": [
+    "AHSGY",
+    "OZATD",
+    "CEMZY",
+    "DURKN",
+    "BINBN"
+   ],
+   "B11": [
+    "CGCAM",
+    "SMRVA",
+    "ARMGD",
+    "EGEGY",
+    "GLRMK"
+   ],
+   "B12": [
+    "AKFIS",
+    "MOPAS",
+    "SERNT",
+    "BIGEN",
+    "DSTKF"
+   ],
+   "B13": [
+    "VSNMD",
+    "ENDAE",
+    "KLYPV",
+    "BALSU",
+    "BULGS"
+   ],
+   "B14": [
+    "DOFRB",
+    "ECOGR",
+    "VAKFA",
+    "PAHOL",
+    "ZERGY"
+   ],
+   "B15": [
+    "ARFYE",
+    "MEYSU",
+    "FRMPL",
+    "ZGYO",
+    "UCAYM"
+   ],
+   "B16": [
+    "NETCD",
+    "AKHAN",
+    "BESTE",
+    "SOHOE"
+   ]
+  },
+  "assignment_frozen": true,
+  "reordering_merging_splitting_forbidden": true,
+  "protocol": "collect -> submit -> deterministic validation -> read report -> only then open the next batch; never collect ahead in parallel.",
+  "systematic_review_checkpoint": "after B04",
+  "r1_to_r2_transition": {
+   "b00_repeated": false,
+   "b00_repeat_rationale": "The calibration tickers are Market20 rows whose canonical record already exists; B00 output was a reliability test, not production data for the 79, and nothing downstream consumes it as data.",
+   "b00_rows_spec_version": "PRETRADE_EXT_COLLECTION_SPEC_V1",
+   "b00_rows_rewritten_or_restamped": false,
+   "b01_to_b16_spec_version": "PRETRADE_EXT_COLLECTION_SPEC_V2",
+   "r1_and_r2_rows_may_coexist_in_one_file": true,
+   "merge_key": "spec_version column; never position, filename or collection date",
+   "merge_migration": "An R1 row entering the 26-column frame takes NOT_APPLICABLE in duration_start_reference and undertaking_scope. An R2 row is never down-converted to 24 columns.",
+   "b00_cell_status_register_backfilled": false,
+   "b00_lockup_cells": "Left exactly as submitted (DATA_NOT_FOUND / SPEC_EDGE_CASE_UNRESOLVED), which was correct under R1. R2 does not reach back into a completed batch.",
+   "canonical_record_touched": false
+  }
+ },
+ "batch_validation_requirements": {
+  "script_written_by_this_task": false,
+  "implementation_is_a_separate_gated_task": true,
+  "validation_is_deterministic_not_llm": true,
+  "checks": [
+   "FORMAT: BOM, CRLF, delimiter, quoting, exact column count and order, exact header match",
+   "MEMBERSHIP: ticker set equals the frozen batch table entry for that batch_id",
+   "ENUMS: every enum-valued column drawn from the frozen lists; unrecognised value is FAIL, never a warning, never silently normalized",
+   "FIELD_NAME_CLOSURE: every field_name is one of the 22 (or company_name); unknown name is FAIL; price_stability_days, issuer_lockup_days or shareholder_lockup_days appearing as a collector-written field_name in a V2 row is FAIL",
+   "SENTINEL_DISCIPLINE: no empty cells, no N/A-family strings, no 0 under DATA_NOT_FOUND, non-empty search_scope on every DATA_NOT_FOUND row",
+   "DERIVATION: compute publication_timing_status, available_before_first_trade, verification_status, conflict_status; emit the 12-column projection and the 29-column derived file; assert the collector wrote none of these four",
+   "CONFLICT_INTEGRITY: every conflict/scope/semantic row shares conflict_group_id with at least one other row; no field carries both a conflict row and a lone unmarked resolved row",
+   "DUPLICATES (R4, replaces R2/R3's check 8 in full; second report added by R6 D1): three FAIL gates and two reports. FAIL - offer-level non-duration rows on (ticker, field_name, scope_tag, source_url); demand-category on (ticker, normalized_category, source_category_label, source_url); section 5.6 register on (ticker, normalized_category, source_category_label, field_name); rule code DUPLICATE_ROW_KEY. REPORT-ONLY - offer-level rows on fields 15/16/17, key (ticker, field_name, scope_tag, duration_start_reference, undertaking_scope, source_url), rule code DURATION_ROW_KEY_COLLISION, never gate-affecting, because section 2.1.1 item 2 makes two undertakings differing in duration and unit two correct rows and the key carries neither. REPORT-ONLY (R6 D1) - offer-level non-duration rows whose colliding key group satisfies all three conditions: every row carries a conflict_group_id other than NOT_APPLICABLE, those values are all identical, and every row carries a field_status from the conflict family (SOURCES_CONFLICT, SCOPE_DIFFERENCE, SEMANTIC_DIFFERENCE); rule code CONFLICT_FAMILY_ROW_KEY_COLLISION, never gate-affecting, because those rows are what section 4.1, section 4.2 and check 7 oblige the collector to produce. In every other case, including a group whose conflict_group_id is present on some rows and NOT_APPLICABLE, empty or absent on others, DUPLICATE_ROW_KEY remains a FAIL and the offer-level non-duration key is unchanged; recorded in section R6.1. The key is never extended with a free-text column. The structural fix (a typed undertaking identifier) is deferred to a genuine schema revision, recorded in section R4.2(c).",
+   "CANONICAL_IMMUTABILITY: sha256 of every frozen canonical Historical99 artifact and config schema TOML unchanged; any change is a hard STOP",
+   "CANONICAL_AGREEMENT: emit CANONICAL_DISAGREEMENT list for already-populated fields; report only, never a write-back",
+   "AGGREGATE_LEAF_GUARD AND PERCENTAGE_BASE_RECONSTRUCTION (R4, replaces R2/R3's check 11 in full): Branch A, additive fields (applicant_count, allocated_investor_count, order_count, planned_allocation_shares, demand_nominal, distributed_nominal) - leaf sum vs aggregate cell at the aggregate cell's own printed precision, unchanged from R2/R3, rule code AGGREGATE_LEAF_DIVERGENCE, violation and gate-affecting. Branch B, percentage fields (planned_allocation_pct/planned_allocation_shares, demand_share_pct/demand_nominal, distributed_pct/distributed_nominal) - each printed cell reconstructed as round(own nominal / base nominal * 100) at THAT cell's printed precision, ROUND_HALF_UP; the base row is the ticker's row that is AGGREGATE, is_aggregate TRUE and prints 100 in that same percentage field, identified structurally and never by category label; rule code PERCENTAGE_BASE_RECONSTRUCTION_MISMATCH, violation and gate-affecting. No base, an ambiguous base, an unusable base nominal or a non-numeric own nominal makes a cell uncheckable, counted, never passed. Never fix by dropping a row.",
+   "ARITHMETIC_CONSISTENCY (R3, filter-aware, replaces R2's check 12 in full): read total_demand_filter_status (field 5) before comparing. UNFILTERED designates demand_shares_unfiltered; FILTERED designates demand_shares_filtered; the non-designated numerator is NOT_APPLICABLE for this check and is counted under filter_status_excludes_numerator, never reported as a divergence and never as a pass. NOT_SPECIFIED and DATA_NOT_FOUND are undetermined: compare both, and if at least one pairing matches the published multiple the diverging pairing is ARITHMETIC_CONSISTENCY_UNDETERMINED_FILTER (report-only), while no matching pairing at all is ARITHMETIC_CONSISTENCY_DIVERGENCE (violation). NOT_APPLICABLE means C1: no multiple was published - if total_demand_multiple_value is nevertheless VALUE_RECORDED, or if FILTERED/UNFILTERED is asserted while it is not, raise FILTER_STATUS_MULTIPLE_CONTRADICTION, a FAIL. Where the designated numerator is not VALUE_RECORDED while the other is, raise ARITHMETIC_CONSISTENCY_NOT_COMPARABLE (report-only). Pairing by scope_tag, the comparison itself and the source-stated precision are unchanged from R2. REPORT_ONLY_NO_AUTOMATIC_CORRECTION governs correction, never severity: ARITHMETIC_CONSISTENCY_DIVERGENCE remains a gate-affecting violation.",
+   "OUTCOME_FIREWALL: assert no post-listing price/return/OHLCV value or column present; emit REALIZED_OUTCOME_READS = 0",
+   "DURATION_FIELD_INTEGRITY (R2): on fields 15/16/17 unit is DAYS/MONTHS/YEARS, duration_start_reference and undertaking_scope are not NOT_APPLICABLE, normalized_value is a plain decimal or DATA_NOT_FOUND; on every other field both R2 columns are NOT_APPLICABLE; more than one undertaking of a type for a ticker is a MULTIPLE_UNDERTAKINGS report item, informational, not a failure",
+   "CELL_STATUS_REGISTER_COMPLETENESS (R2): every demand-category data cell holding DATA_NOT_FOUND in a V2 batch has exactly one register row; every register row resolves to an existing category row and one of the 15 data field names; every register row with field_status DATA_NOT_FOUND has a non-empty, non-generic search_scope; a missing register row is FAIL. Applies only to spec_version V2 rows",
+   "MANIFEST: sha256 of all batch CSVs; row counts derived from the actual files, never from a hardcoded historical constant",
+   "REPORT: per-batch validation JSON in the existing batch_0N_validation.json shape, including scope_guards and protected_hashes, with status PASS / PASS_WITH_WARNINGS / FAIL"
+  ],
+  "check_12_rule_codes": {
+   "ARITHMETIC_CONSISTENCY_DIVERGENCE": "VIOLATION_GATE_AFFECTING",
+   "FILTER_STATUS_MULTIPLE_CONTRADICTION": "FAIL",
+   "ARITHMETIC_CONSISTENCY_UNDETERMINED_FILTER": "REPORT_ONLY",
+   "ARITHMETIC_CONSISTENCY_NOT_COMPARABLE": "REPORT_ONLY"
+  },
+  "check_12_coverage_buckets": [
+   "no_unique_denominator_for_scope",
+   "no_unique_total_demand_multiple_for_scope",
+   "non_value_recorded_status",
+   "non_numeric_value",
+   "zero_denominator",
+   "filter_status_excludes_numerator",
+   "designated_numerator_not_value_recorded"
+  ],
+  "check_8_rule_codes": {
+   "DUPLICATE_ROW_KEY": "FAIL",
+   "DURATION_ROW_KEY_COLLISION": "REPORT_ONLY",
+   "CONFLICT_FAMILY_ROW_KEY_COLLISION": "REPORT_ONLY"
+  },
+  "check_11_rule_codes": {
+   "AGGREGATE_LEAF_DIVERGENCE": "VIOLATION_GATE_AFFECTING",
+   "PERCENTAGE_BASE_RECONSTRUCTION_MISMATCH": "VIOLATION_GATE_AFFECTING"
+  },
+  "check_11_coverage_buckets": [
+   "aggregate_cell_not_numeric",
+   "leaf_cell_not_numeric",
+   "no_unique_percentage_base",
+   "percentage_base_nominal_unusable",
+   "cell_nominal_not_numeric",
+   "base_cells"
+  ]
+ },
+ "collector_prohibitions": [
+  "Never modify any existing repository file; output only under work/pretrade_extension/",
+  "Never change f3 or any total-demand column",
+  "Never read or record a post-listing outcome",
+  "Never average, pick, or rank away a conflict",
+  "Never write a value the source does not state, including when it seems obviously implied or when it follows arithmetically",
+  "Never fold DATA_NOT_FOUND into 0",
+  "Never treat collection as admission into a feature set or model",
+  "Never re-select the calibration set",
+  "Never collect batches ahead of validation",
+  "When uncertain, do not guess: record the ambiguity with its verbatim phrase and escalate",
+  "Never write a script-derived field (R2): publication_timing_status, available_before_first_trade, verification_status, conflict_status, total_demand_multiple_origin, price_stability_days, issuer_lockup_days, shareholder_lockup_days",
+  "Never convert a duration into another unit (R2): record the magnitude and the unit the source printed"
+ ],
+ "r2_preserved_provisions": {
+  "prohibition_5_never_write_an_unstated_value": {
+   "carried_over": "VERBATIM_AND_UNDIMINISHED",
+   "weakened_by_r2": false,
+   "note": "The R1-era gap was not that this prohibition was too strict; it was that the schema gave the collector nowhere to put what the source actually said, leaving silence as the only compliant answer. R2 widens what can be recorded, never what may be invented.",
+   "weakened_by_r3": false
+  },
+  "section_6_2_binding_mitigation": {
+   "carried_over": "VERBATIM_AND_UNDIMINISHED",
+   "weakened_by_r2": false,
+   "strengthened_by": "category_cell_status_csv requires a per-cell search_scope naming documents actually opened for every absent demand-category cell - the check that makes an unsearched absence detectable, which the category file previously had no column to support.",
+   "weakened_by_r3": false
+  },
+  "unchanged_by_r2": [
+   "f3 semantics and total-demand columns",
+   "source hierarchy",
+   "conflict rules",
+   "calibration gates and thresholds",
+   "frozen batch table",
+   "order_count in scope",
+   "C1/C2/C4 clarification rulings",
+   "target definitions",
+   "feature sets",
+   "fold protocol",
+   "decision rules",
+   "collection admits nothing"
+  ],
+  "unchanged_by_r3_as_well": true
+ },
+ "spec_version_unchanged_by_r3": {
+  "value": "PRETRADE_EXT_COLLECTION_SPEC_V2",
+  "reason": "R3 changes no column, column order, enum or collector obligation. The revision id R3 names the document; V2 names the schema. Introducing a V3 string would break section 8 check 1's column-count resolution (24 for V1 rows, 26 for V2 rows) and invalidate an in-flight collection for no gain.",
+  "namespace_warning": "R1/R2/R3 are revisions of this collection specification. They are a different namespace from model versions V1/V1.5/V2, and R3 here is unrelated to SEALED_V3_MARKET_REGIME_CANDIDATE."
+ },
+ "r3_change": {
+  "change_count": 1,
+  "what": "Section 8 check 12 becomes total_demand_filter_status-aware.",
+  "why": "Check 12 consulted neither field 5 nor the source's own statement of which numerator it divided by, so it fired systematically on every ticker whose source says UNFILTERED and whose collector recorded both numerators (DOFER in B01, and in mirror image MARBL in B02). A gate with a predictable false positive teaches its readers to waive it.",
+  "filter_status_enum_read_not_extended": [
+   "FILTERED",
+   "UNFILTERED",
+   "NOT_SPECIFIED",
+   "NOT_APPLICABLE",
+   "DATA_NOT_FOUND"
+  ],
+  "filter_status_enum_source": "config/ipo_master_schema_v2.toml, via section 1.6",
+  "check_11_unchanged": true,
+  "check_11_note": "AGGREGATE_LEAF_DIVERGENCE really is source-side rounding: aggregate and leaf percentages are independently rounded at the source while demand_nominal sums exactly. That label was correct.",
+  "unchanged_by_r3": [
+   "spec_version string PRETRADE_EXT_COLLECTION_SPEC_V2",
+   "offer-level column count 26 and column order",
+   "demand-category column count 31 and cell-status register column count 9",
+   "every enum list, inherited and own, total_demand_filter_status included",
+   "the 22 offer-level field names and the 15 demand-category data fields",
+   "every collector obligation and COLLECTOR_INSTRUCTION.md",
+   "f3 semantics and every total-demand column",
+   "source hierarchy",
+   "conflict, absence and timestamp rules",
+   "calibration set, method and acceptance gates",
+   "frozen batch table and batch protocol",
+   "section 8 checks 1-11 and 13-17 and the report shape",
+   "every standing prohibition",
+   "target definitions, feature sets, fold protocol, preprocessing, training-eligibility, decision rules, gate thresholds, preregistrations, benchmarks and scientific primitives"
+  ],
+  "in_flight_batch_unaffected": "The schema does not move, so check 1's column-count resolution is undisturbed and the bytes that satisfy R2 satisfy R3. No collector is asked to reopen a source."
+ },
+ "r3_retroactive_application": {
+  "applies_to_validation_from": "AMENDED_BY_R4_SECTION_7_6",
+  "b01_b02_data_changed": false,
+  "b01_b02_acceptance_reopened": false,
+  "validation_reports_deleted_or_amended": false,
+  "report_only_rerun_ordered": true,
+  "rerun_purpose": "Measure how many of the four recorded divergence waivers (B01 AGGREGATE_LEAF_DIVERGENCE, B01 ARITHMETIC_CONSISTENCY_DIVERGENCE, B02 AGGREGATE_LEAF_DIVERGENCE, B02 ARITHMETIC_CONSISTENCY_DIVERGENCE) survive the corrected rule.",
+  "rerun_is_a_separate_mechanical_task": true,
+  "realized_outcome_read": false,
+  "realized_outcome_note": "Collection is a pre-trade phase; no realized D1/D3/D5/D10 value, price or OHLCV row exists in a batch delivery. The rerun compares numbers to numbers inside one CSV and must emit REALIZED_OUTCOME_READS = 0.",
+  "output_root": "artifacts/derived/check12_revalidation/",
+  "output_files": [
+   "B01/B01_check12_r3_recheck.json",
+   "B01/B01_check12_r3_recheck.csv",
+   "B02/B02_check12_r3_recheck.json",
+   "B02/B02_check12_r3_recheck.csv",
+   "CHECK12_R3_WAIVER_RESOLUTION.md"
+  ],
+  "output_forbidden_root": "inputs/",
+  "output_changes_no_status": true,
+  "applies_to_validation_from_r3_published_text": "B03",
+  "applies_to_validation_from_r4_correction": "R3 governs every validation run after the creation of the tag frozen/collection-spec-r3 (2026-09-08 21:25:09 +03). B03 and B04 were validated before that tag existed and were governed by R2. R3's own directory is untouched; the correction lives in R4 (sections R4.3, 7.5 item 5, R3.3 item 1, 7.6)."
+ },
+ "spec_version_unchanged_by_r4": {
+  "value": "PRETRADE_EXT_COLLECTION_SPEC_V2",
+  "reason": "R4 changes no column, column order, enum or collector obligation. The revision id R4 names the document; V2 names the schema. Introducing a V3 string would break section 8 check 1's column-count resolution (24 for V1 rows, 26 for V2 rows) for no gain.",
+  "namespace_warning": "R1/R2/R3/R4 are revisions of this collection specification, a different namespace from model versions V1/V1.5/V2 and unrelated to any sealed V3/V4 model item."
+ },
+ "r4_change": {
+  "change_count": 3,
+  "d1_check_11": {
+   "what": "Section 8 check 11's percentage branch is replaced by per-cell reconstruction from the cell's own nominal and the ticker's percentage base; the additive branch is unchanged.",
+   "why": "The replaced comparison, round(a)+round(b) versus round(a+b), is one the source never asserts. Measured over B00_codex_r2..B04: 4 divergences in 13 percentage-family comparisons, 0 in 24 additive ones, every divergence exactly one unit in the last place and reproducible from the delivered bytes.",
+   "percentage_to_nominal_pairing": {
+    "planned_allocation_pct": "planned_allocation_shares",
+    "demand_share_pct": "demand_nominal",
+    "distributed_pct": "distributed_nominal"
+   },
+   "base_row_rule": "Per (batch_id, ticker, percentage field): the row with category_level AGGREGATE, is_aggregate TRUE, printing a plain decimal equal to 100 in that same percentage field. Never identified by category label.",
+   "base_rule_measured": "Exactly one base row in 57 of 57 (ticker, percentage field) groups holding any numeric cell; 0 with none; 0 ambiguous; all 57 AGGREGATE/TRUE.",
+   "reconstruction_measured": {
+    "numeric_percentage_cells": 245,
+    "base_cells_excluded": 57,
+    "uncheckable": 1,
+    "checked": 187,
+    "exact": 187,
+    "mismatches": 0
+   },
+   "coverage_delta": {
+    "cells_inside_any_r2_r3_comparison": 39,
+    "cells_checked_by_r4": 244,
+    "newly_covered": 206,
+    "coverage_lost": 1,
+    "coverage_lost_identity": "B00_codex_r2 ALBTN, Yurt Disi Yatirimci / - Kurumsal Yatirimci, distributed_pct 0.00 with distributed_nominal DATA_NOT_FOUND; becomes uncheckable, never passed."
+   },
+   "tickers_with_zero_evaluated_family_under_r2_r3": 18,
+   "tickers_total": 25,
+   "four_recorded_divergences": {
+    "B00_codex_r2 ALBTN": "DISSOLVES",
+    "B01 MHRGY": "DISSOLVES",
+    "B02 MARBL": "DISSOLVES",
+    "B03 EKOS": "DISSOLVES"
+   },
+   "dissolves_is_not_waived": "In each case a comparison the source never asserted is replaced by one it does assert, which the delivered bytes satisfy exactly. No finding is reclassified as an acceptable defect.",
+   "catch_rate_hypothesis": "0 catches in 187 checked cells to date; roughly 450 further percentage cells over B05..B16; at a 0.5% transcription-error rate the expected yield is 1 to 2 catches. Principal near-term value is removing an estimated 8 to 10 forecast false firings and the 206-cell coverage gain."
+  },
+  "d2_check_8": {
+   "what": "Section 8 check 8's duration clause is downgraded to a report-only DURATION_ROW_KEY_COLLISION; its other three keys stay FAIL gates.",
+   "why": "Coded literally the duration clause produces 11 FAILs across B01, B02 and B04, every one on shareholder_lockup_undertaking and every one on a row pattern section 2.1.1 item 2 declares correct. Measured true-positive rate 0 in 101 duration rows; measured excess on the other three keys 0.",
+   "gates_retained": [
+    "offer-level non-duration key",
+    "demand-category key",
+    "section 5.6 register key"
+   ],
+   "register_gate_is_load_bearing": "Section 5.6 binding rule 1 ('two rows for one cell is a FAIL (section 8 check 8)') depends on the register gate and is preserved by leaving it untouched.",
+   "contradiction_status": {
+    "obligation_conflict": "RESOLVED - section 2.1.1 item 2 and check 8 can now both be satisfied by the same 11 rows, because a report asserts nothing about correctness.",
+    "residual_1": "DESCRIPTIVE - the check is still titled Duplicates and still computes a key over rows that are not duplicates.",
+    "residual_2": "LOST GATE - a genuine duplicate duration row is now reported, not gated. Measured exposure 0 in 101 rows."
+   },
+   "forbidden_interim_fix": "Extending the key with page_or_section, verbatim_source_phrase or any other free-text column, notwithstanding that + page_or_section + normalized_value + unit measures 0 residual collisions on 101 rows: a FAIL gate must not depend on a collector's free-text transcription choice, and the 0 is fitted to four batches.",
+   "deferred_structural_fix": "A typed undertaking identifier (undertaking_ordinal per (ticker, field_name, source_url), or the source clause identifier as a typed field). Requires a 27th column, a third arm in check 1's column-count resolution, a new spec_version and therefore a fork of the section 7.4 item 4 merge key, a new collector obligation and the first reissue of COLLECTOR_INSTRUCTION.md, and a back-fill or coexistence rule for the 101 delivered duration rows. Belongs to a genuine schema revision; recorded, not implemented."
+  },
+  "d3_revision_effect": {
+   "what": "A revision takes effect at the moment its annotated git tag is created, never at a batch number. Section 7.6.",
+   "why": "R3 section 7.5 item 5 and section R3.3 item 1 bound R3's force to 'B03 onward', but B03 (2026-09-08 17:57:14) and B04 (2026-09-08 21:20:38) were both validated before the tag frozen/collection-spec-r3 existed (2026-09-08 21:25:09) and both were correctly validated under R2. The written provision was wrong; the executed practice was right.",
+   "amended_sentences": [
+    "section 7.5 item 5",
+    "section R3.3 item 1"
+   ],
+   "amendment_lives_in": "R4's own copy only. R3's directory is untouched.",
+   "retroactive_effect": "B03's and B04's validations and acceptances are valid and are not reopened, re-run or re-verdicted. Measured substantive consequence: nil for B03 (identical validator output under R2 and R3); for B04 R2 was the stricter reading."
+  },
+  "unchanged_by_r4": [
+   "spec_version string PRETRADE_EXT_COLLECTION_SPEC_V2",
+   "offer-level column count 26 and column order",
+   "demand-category column count 31 and cell-status register column count 9",
+   "every enum list, inherited and own - R4 extends none",
+   "the 22 offer-level field names and the 15 demand-category data fields",
+   "every collector obligation; COLLECTOR_INSTRUCTION.md is not reissued",
+   "section 2.1.1 item 2 itself - two undertakings remain two rows",
+   "f3 semantics and every total-demand column",
+   "the source document hierarchy and document families",
+   "the conflict, absence and timestamp rules",
+   "the calibration set, method and acceptance gates",
+   "the frozen batch table and the batch protocol",
+   "section 8 check 12 - R3's filter-aware definition stands verbatim",
+   "section 8 checks 1-7, 9, 10, 13-17 and the section 8 report shape",
+   "every standing prohibition",
+   "any target definition, feature set, fold protocol, preprocessing step, training-eligibility rule, decision rule, gate threshold, preregistration, benchmark or scientific primitive"
+  ],
+  "three_changes_in_one_revision_justification": "They share one instrument (a new directory and a new tag) and are independent in substance - none is a premise of another. Splitting them would create three tags in one day and, under D3's own rule, three separate moments of entry into force. Each carries its own R4 subsection, its own measurement and its own ledger row."
+ },
+ "revision_effect_rule": {
+  "spec_section": "7.6",
+  "binding_on": "EVERY_REVISION_OF_THIS_SPECIFICATION",
+  "effect_begins_at": "ANNOTATED_GIT_TAG_CREATION",
+  "effect_never_bound_to": [
+   "BATCH_NUMBER",
+   "DIRECTORY_NAME",
+   "FILE_DATE",
+   "PUBLICATION_COMMIT"
+  ],
+  "batch_validated_under": "THE_REVISION_IN_FORCE_AT_THE_TIMESTAMP_ITS_VALIDATION_RUNS",
+  "batch_record_must_name": [
+   "GOVERNING_REVISION_DIRECTORY",
+   "GOVERNING_REVISION_TAG",
+   "RUN_TIMESTAMP"
+  ],
+  "completed_batch_revalidated_by_a_later_tag": false,
+  "acceptance_reopened_by_a_later_tag": false,
+  "difference_may_be_measured_report_only_under": "artifacts/derived/",
+  "record_as_it_stands": {
+   "R1": {
+    "tag": "frozen/collection-spec-v1"
+   },
+   "R2": {
+    "tag": "frozen/collection-spec-v2",
+    "tag_created": "2026-09-06T22:54:45+03:00",
+    "governed": [
+     "B01",
+     "B02",
+     "B03",
+     "B04"
+    ]
+   },
+   "R3": {
+    "tag": "frozen/collection-spec-r3",
+    "tag_created": "2026-09-08T21:25:09+03:00",
+    "governed": "every validation run after that moment; no batch validated before it"
+   },
+   "R4": {
+    "tag": "NOT_YET_CREATED",
+    "suggested": "frozen/collection-spec-r4"
+   }
+  }
+ },
+ "r4_retroactive_application": {
+  "applies_to_validation_from": "THE_MOMENT_R4S_TAG_IS_CREATED",
+  "collected_data_changed": false,
+  "acceptance_reopened": false,
+  "validation_reports_deleted_or_amended": false,
+  "four_recorded_aggregate_leaf_divergences_erased": false,
+  "four_recorded_note": "They were correctly reported and correctly labelled under the rule then in force. Section R4.1(e) records what the new definition produces on the same bytes; it does not rewrite what the old one produced.",
+  "realized_outcome_read": false,
+  "realized_outcome_note": "Every measurement in this revision compares numbers to numbers inside delivered CSVs, or reads commit and tag timestamps. REALIZED_OUTCOME_READS = 0."
+ },
+ "r4_ordered_measurement": {
+  "spec_section": "R4.6",
+  "ordered": true,
+  "is_a_separate_mechanical_task": true,
+  "scope_batches": [
+   "B00_codex_r2",
+   "B01",
+   "B02",
+   "B03",
+   "B04"
+  ],
+  "both_definitions_flag": "--check11-revision r2|r4",
+  "metrics": {
+   "M1_dissolution": "Per recorded AGGREGATE_LEAF_DIVERGENCE instance: DISSOLVED or STANDS, with the reconstruction arithmetic printed at full precision.",
+   "M2_coverage_delta": "Count and identity of every percentage cell R2/R3 evaluated and R4 marks uncheckable (expected exactly 1), and count of cells newly covered (expected 206). Reported separately and never netted against each other.",
+   "M3_catch_power_preservation": "Deliberately corrupted copies of the delivered CSVs, one mutation per copy, written under artifacts/derived/ and never under inputs/. Mutations 1-6 must all fire under R4; 3, 5 and 6 are cases R2/R3 misses; 7 records D2's residual. Any mutation R2/R3 catches and R4 misses is a capture regression and blocks the implementation."
+  },
+  "mutations": [
+   {
+    "n": 1,
+    "target": "B03 EKOS leaf distributed_pct 0.1941 -> 0.1841",
+    "r2_r3": "fires",
+    "r4_required": "fire"
+   },
+   {
+    "n": 2,
+    "target": "B03 EKOS aggregate distributed_pct 99.8058 -> 99.8085",
+    "r2_r3": "fires",
+    "r4_required": "fire"
+   },
+   {
+    "n": 3,
+    "target": "B03 AGROT demand_nominal 648991222 -> 64899122",
+    "r2_r3": "silent (no family)",
+    "r4_required": "fire"
+   },
+   {
+    "n": 4,
+    "target": "B01 MHRGY leaf distributed_nominal 30700 -> 30070",
+    "r2_r3": "fires (additive)",
+    "r4_required": "fire (additive)"
+   },
+   {
+    "n": 5,
+    "target": "B02 MARBL base Toplam distributed_nominal 58976404 -> 58967404",
+    "r2_r3": "silent",
+    "r4_required": "fire on every non-base distributed_pct cell of MARBL"
+   },
+   {
+    "n": 6,
+    "target": "B03 EKOS two compensating leaf distributed_pct errors +0.0010 / -0.0010",
+    "r2_r3": "silent (family sum preserved)",
+    "r4_required": "fire on both cells"
+   },
+   {
+    "n": 7,
+    "target": "B01 DMRGD duration row duplicated exactly",
+    "r2_r3": "FAIL under check 8 as written",
+    "r4_required": "report DURATION_ROW_KEY_COLLISION and not FAIL"
+   }
+  ],
+  "output_root": "artifacts/derived/check11_revalidation/",
+  "output_files": [
+   "B00_codex_r2/B00_codex_r2_check11_r4_recheck.json",
+   "B00_codex_r2/B00_codex_r2_check11_r4_recheck.csv",
+   "B01/B01_check11_r4_recheck.json",
+   "B01/B01_check11_r4_recheck.csv",
+   "B02/B02_check11_r4_recheck.json",
+   "B02/B02_check11_r4_recheck.csv",
+   "B03/B03_check11_r4_recheck.json",
+   "B03/B03_check11_r4_recheck.csv",
+   "B04/B04_check11_r4_recheck.json",
+   "B04/B04_check11_r4_recheck.csv",
+   "mutation_harness/check11_r4_mutation_results.json",
+   "mutation_harness/mutants/",
+   "CHECK11_R4_DIVERGENCE_RESOLUTION.md"
+  ],
+  "output_forbidden_root": "inputs/",
+  "output_changes_no_status": true,
+  "delivery_sha256_recorded": true
+ }
+}

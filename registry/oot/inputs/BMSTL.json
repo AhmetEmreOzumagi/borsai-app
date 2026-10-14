@@ -1,0 +1,341 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "BMSTL",
+  "company": "BMS Birleşik Metal Sanayi ve Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1023551",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "17.5",
+      "source_id": "KAP_1023551",
+      "source_document": "KAP 1023551",
+      "source_published_at": "2022-04-25T18:06:51+03:00",
+      "source_sha256": "c1dfa109a44dc983d3cc3da849db9c01902a6e60d06dff5ad37ced42de23ec58",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023551_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 17,5",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2022_18",
+          "quote": "BMS Birleşik Metal 4.350.000 17,50 30.000.000 36.525.000 6.525.000 - - Sanayi ve Ticaret A.Ş. (4) (5)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "10875000",
+      "source_id": "KAP_1023551",
+      "source_document": "KAP 1023551",
+      "source_published_at": "2022-04-25T18:06:51+03:00",
+      "source_sha256": "c1dfa109a44dc983d3cc3da849db9c01902a6e60d06dff5ad37ced42de23ec58",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023551_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 10.875.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "36525000",
+      "source_id": "KAP_1023551",
+      "source_document": "KAP 1023551",
+      "source_published_at": "2022-04-25T18:06:51+03:00",
+      "source_sha256": "c1dfa109a44dc983d3cc3da849db9c01902a6e60d06dff5ad37ced42de23ec58",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023551_bildirim.pdf",
+      "quote": "sermayesini temsil eden 36.525.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "6525000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/BMSTL/SPK_BULTEN_2022-18.pdf",
+      "quote": "BMS Birleşik Metal 4.350.000 17,50 30.000.000 36.525.000 6.525.000 - - Sanayi ve Ticaret A.Ş. (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1023429_EK1",
+          "quote": "Halka arz sonucunda sermaye artırımı ve ortak satışı yoluyla satışa sunulan 10.875.000 TL nominal değerli payların satışı gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_planned_base": "10875000 = 6525000 + 4350000",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "4350000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/BMSTL/SPK_BULTEN_2022-18.pdf",
+      "quote": "BMS Birleşik Metal 4.350.000 17,50 30.000.000 36.525.000 6.525.000 - - Sanayi ve Ticaret A.Ş. (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1023429_EK1",
+          "quote": "Halka arz sonucunda sermaye artırımı ve ortak satışı yoluyla satışa sunulan 10.875.000 TL nominal değerli payların satışı gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_planned_base": "10875000 = 6525000 + 4350000",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "2.5",
+      "source_id": "KAP_1023429_EK1",
+      "source_document": "KAP 1023429 ek 1",
+      "source_published_at": "2022-04-25T11:55:41+03:00",
+      "source_sha256": "02b75cd2babb29a4a641b7b42a00271ddc2b0f51d1c7b202be2983b0a8eb2cf7",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023429_ek1.pdf",
+      "quote": "nominal halka arz büyüklüğü olan 10.875.000 TL’nin 2,5 katına denk gelen 27.473.033 TL nominal değerli talep gelmiştir",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (nominal halka arz büyüklüğü 10.875.000 TL'ye göre; Borsa İstanbul verisi)",
+      "note": "planlanan ek satış yok (SPK satırı '-'); 27.473.033 / 10.875.000 = 2,5262 (bilgi amaçlı, belge katı alındı)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_1023429_EK1",
+      "source_document": "KAP 1023429 ek 1",
+      "source_published_at": "2022-04-25T11:55:41+03:00",
+      "source_sha256": "02b75cd2babb29a4a641b7b42a00271ddc2b0f51d1c7b202be2983b0a8eb2cf7",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023429_ek1.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1023429_EK1",
+      "source_document": "KAP 1023429 ek 1",
+      "source_published_at": "2022-04-25T11:55:41+03:00",
+      "source_sha256": "02b75cd2babb29a4a641b7b42a00271ddc2b0f51d1c7b202be2983b0a8eb2cf7",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023429_ek1.pdf",
+      "quote": "Halka arz sonucunda sermaye artırımı ve ortak satışı yoluyla satışa sunulan 10.875.000 TL nominal değerli payların satışı gerçekleşmiştir.",
+      "zero_from_statement": true,
+      "note": "SPK satırında ek satış '-'; satılan toplam 10.875.000 = planlanan taban (6.525.000 bedelli + 4.350.000 mevcut pay satışı)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_size_tl": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız nominal halka arz büyüklüğünü (10.875.000 TL nominal) yazıyor; gerçekleşen arzın TL tutarı yazmıyor",
+      "provenance": "MISSING"
+    },
+    "ipo_price_try": {
+      "value": "17.50",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/BMSTL/SPK_BULTEN_2022-18.pdf",
+      "quote": "BMS Birleşik Metal 4.350.000 17,50 30.000.000 36.525.000 6.525.000 - - Sanayi ve Ticaret A.Ş. (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-21",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "30000000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/BMSTL/SPK_BULTEN_2022-18.pdf",
+      "quote": "BMS Birleşik Metal 4.350.000 17,50 30.000.000 36.525.000 6.525.000 - - Sanayi ve Ticaret A.Ş. (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-21",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "36525000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/BMSTL/SPK_BULTEN_2022-18.pdf",
+      "quote": "BMS Birleşik Metal 4.350.000 17,50 30.000.000 36.525.000 6.525.000 - - Sanayi ve Ticaret A.Ş. (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-21",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "6525000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/BMSTL/SPK_BULTEN_2022-18.pdf",
+      "quote": "BMS Birleşik Metal 4.350.000 17,50 30.000.000 36.525.000 6.525.000 - - Sanayi ve Ticaret A.Ş. (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-21",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "4350000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/BMSTL/SPK_BULTEN_2022-18.pdf",
+      "quote": "BMS Birleşik Metal 4.350.000 17,50 30.000.000 36.525.000 6.525.000 - - Sanayi ve Ticaret A.Ş. (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-21",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "10875000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/BMSTL/SPK_BULTEN_2022-18.pdf",
+      "quote": "BMS Birleşik Metal 4.350.000 17,50 30.000.000 36.525.000 6.525.000 - - Sanayi ve Ticaret A.Ş. (4) (5)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-21",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/BMSTL/SPK_BULTEN_2022-18.pdf",
+      "quote": "BMS Birleşik Metal 4.350.000 17,50 30.000.000 36.525.000 6.525.000 - - Sanayi ve Ticaret A.Ş. (4) (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-21",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "10875000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/BMSTL/SPK_BULTEN_2022-18.pdf",
+      "quote": "BMS Birleşik Metal 4.350.000 17,50 30.000.000 36.525.000 6.525.000 - - Sanayi ve Ticaret A.Ş. (4) (5)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-21",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2022-04-27",
+      "source_id": "KAP_1023551",
+      "source_document": "KAP 1023551",
+      "source_published_at": "2022-04-25T18:06:51+03:00",
+      "source_sha256": "c1dfa109a44dc983d3cc3da849db9c01902a6e60d06dff5ad37ced42de23ec58",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023551_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 27/04/2022",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2022-04-21",
+      "source_id": "KAP_1023551",
+      "source_document": "KAP 1023551",
+      "source_published_at": "2022-04-25T18:06:51+03:00",
+      "source_sha256": "c1dfa109a44dc983d3cc3da849db9c01902a6e60d06dff5ad37ced42de23ec58",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023551_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 21-22/04/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2022-04-22",
+      "source_id": "KAP_1023551",
+      "source_document": "KAP 1023551",
+      "source_published_at": "2022-04-25T18:06:51+03:00",
+      "source_sha256": "c1dfa109a44dc983d3cc3da849db9c01902a6e60d06dff5ad37ced42de23ec58",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023551_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 21-22/04/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1023551": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1023551",
+      "published_at": "2022-04-25T18:06:51+03:00",
+      "sha256": "c1dfa109a44dc983d3cc3da849db9c01902a6e60d06dff5ad37ced42de23ec58",
+      "path": "registry/oot/source_docs/BMSTL/KAP_1023551_bildirim.pdf"
+    },
+    "SPK_BULTEN_2022_18": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2022/18",
+      "published_at": "2022-04-14T23:59:59+03:00",
+      "sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "path": "registry/oot/source_docs/BMSTL/SPK_BULTEN_2022-18.pdf"
+    },
+    "KAP_1023429_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1023429 ek 1",
+      "published_at": "2022-04-25T11:55:41+03:00",
+      "sha256": "02b75cd2babb29a4a641b7b42a00271ddc2b0f51d1c7b202be2983b0a8eb2cf7",
+      "path": "registry/oot/source_docs/BMSTL/KAP_1023429_ek1.pdf"
+    }
+  }
+}

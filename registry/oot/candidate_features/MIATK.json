@@ -1,0 +1,236 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "MIATK",
+  "company": "Mia Teknoloji A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "196813",
+      "source_id": "KAP_978449_EK1",
+      "source_document": "KAP 978449 ek 1",
+      "source_published_at": "2021-11-18T12:12:59+03:00",
+      "source_sha256": "d754a203850c4fc8f18ed23856147ee25adc039b022d75222ff0f5b7c6700477",
+      "source_path": "registry/oot/source_docs/MIATK/KAP_978449_ek1.pdf",
+      "quote": "Halka arza toplamda 196.813 yatırımcı katılmış olup tamamına dağıtım yapılmıştır.",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "196.813",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "196391",
+        "domestic_institutional": "72",
+        "foreign_retail": "349",
+        "foreign_institutional": "1"
+      },
+      "source_id": "KAP_978449_EK1",
+      "source_document": "KAP 978449 ek 1",
+      "source_published_at": "2021-11-18T12:12:59+03:00",
+      "source_sha256": "d754a203850c4fc8f18ed23856147ee25adc039b022d75222ff0f5b7c6700477",
+      "source_path": "registry/oot/source_docs/MIATK/KAP_978449_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar 196,391 12,472,163 197,060,175.40",
+        "Yurtiçi Kurumsal Yatırımcılar 72 4,866 76,882.80",
+        "Yurtdışı Bireysel Yatırımcılar 349 22,900 361,820.00",
+        "Yurtdışı Kurumsal 1 71 1,121.80"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "tablo İngilizce binlik ayırıcı kullanıyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "196.391",
+        "Yurtiçi Kurumsal": "72",
+        "Yurtdışı Bireysel": "349",
+        "Yurtdışı Kurumsal": "1"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '196.391', 'Yurtiçi Kurumsal': '72', 'Yurtdışı Bireysel': '349', 'Yurtdışı Kurumsal': '1'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı yok ('herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'), grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "12472163",
+        "domestic_institutional": "4866",
+        "foreign_retail": "22900",
+        "foreign_institutional": "71"
+      },
+      "source_id": "KAP_978449_EK1",
+      "source_document": "KAP 978449 ek 1",
+      "source_published_at": "2021-11-18T12:12:59+03:00",
+      "source_sha256": "d754a203850c4fc8f18ed23856147ee25adc039b022d75222ff0f5b7c6700477",
+      "source_path": "registry/oot/source_docs/MIATK/KAP_978449_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar 196,391 12,472,163 197,060,175.40",
+        "Yurtiçi Kurumsal Yatırımcılar 72 4,866 76,882.80",
+        "Yurtdışı Bireysel Yatırımcılar 349 22,900 361,820.00",
+        "Yurtdışı Kurumsal 1 71 1,121.80"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "12.472.163",
+        "Yurtiçi Kurumsal": "4.866",
+        "Yurtdışı Bireysel": "22.900",
+        "Yurtdışı Kurumsal": "71"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '12.472.163', 'Yurtiçi Kurumsal': '4.866', 'Yurtdışı Bireysel': '22.900', 'Yurtdışı Kurumsal': '71'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": null,
+      "missing_reason": "tablonun 'Oran (%)' başlıklı sütunu oran değil TL tutar içeriyor (197,060,175.40); belgede yüzde yazılmıyor. Nominalden hesap 12.472.163 / 12.500.000 = %99,7773 (yazılmadığı için alana konmadı)",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "99,7773",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "99,7773",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "belgede yüzde yazılmıyor; Codex nominalden hesaplamış (12.472.163 / 12.500.000); alan null"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "belgede yüzde yazılmıyor ('Oran (%)' sütunu TL tutar: 76,882.80); nominalden hesap 4.866 / 12.500.000 = %0,038928",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "0,038928",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "0,038928",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "belgede yüzde yazılmıyor; Codex nominalden hesaplamış; alan null"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "belgede yüzde yazılmıyor ('Oran (%)' sütunu TL tutar: 1,121.80); nominalden hesap 71 / 12.500.000 = %0,000568",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "0,000568",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "0,000568",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "belgede yüzde yazılmıyor; Codex nominalden hesaplamış; alan null"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (\"Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış\") ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor (yalnız 'yüksek talep giren yatırımcılara maksimum 72 şer adet pay dağıtılmıştır')",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Metro Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_977369_EK1",
+      "source_document": "KAP 977369 ek 1",
+      "source_published_at": "2021-11-12T14:56:19+03:00",
+      "source_sha256": "42e62c6ec699552bb3d40c7f469b0ae20ae9fdf7085bce2695269f73a0eb4ba0",
+      "source_path": "registry/oot/source_docs/MIATK/KAP_977369_ek1.pdf",
+      "quote": "satışa aracılık edecek Metro Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "sonuç bildirimini de Metro Yatırım yayımlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Metro Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_978546",
+      "source_document": "KAP 978546",
+      "source_published_at": "2021-11-18T18:22:32+03:00",
+      "source_sha256": "74729bde065aeca9d95aaf0dca554675a1580e59ef011407d718c75f6a5c6cd0",
+      "source_path": "registry/oot/source_docs/MIATK/KAP_978546_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_978546",
+      "source_document": "KAP 978546",
+      "source_published_at": "2021-11-18T18:22:32+03:00",
+      "source_sha256": "74729bde065aeca9d95aaf0dca554675a1580e59ef011407d718c75f6a5c6cd0",
+      "source_path": "registry/oot/source_docs/MIATK/KAP_978546_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_978546": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 978546",
+      "published_at": "2021-11-18T18:22:32+03:00",
+      "sha256": "74729bde065aeca9d95aaf0dca554675a1580e59ef011407d718c75f6a5c6cd0",
+      "path": "registry/oot/source_docs/MIATK/KAP_978546_bildirim.pdf"
+    },
+    "KAP_978449_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 978449 ek 1",
+      "published_at": "2021-11-18T12:12:59+03:00",
+      "sha256": "d754a203850c4fc8f18ed23856147ee25adc039b022d75222ff0f5b7c6700477",
+      "path": "registry/oot/source_docs/MIATK/KAP_978449_ek1.pdf"
+    },
+    "KAP_977369_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 977369 ek 1",
+      "published_at": "2021-11-12T14:56:19+03:00",
+      "sha256": "42e62c6ec699552bb3d40c7f469b0ae20ae9fdf7085bce2695269f73a0eb4ba0",
+      "path": "registry/oot/source_docs/MIATK/KAP_977369_ek1.pdf"
+    }
+  }
+}

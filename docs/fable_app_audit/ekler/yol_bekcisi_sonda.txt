@@ -1,0 +1,19 @@
+PROBE repo canonical = /private/tmp/borsai_app_audit/clone
+PROBE canonicalize(UPPER) = Ok("/private/tmp/borsai_app_audit/clone")
+PROBE is_within[exact] /tmp/borsai_app_audit/clone/registry/records/x.json -> true
+PROBE is_within[upper_case] /TMP/BORSAI_APP_AUDIT/CLONE/registry/records/x.json -> true
+PROBE is_within[mixed_case] /tmp/Borsai_App_Audit/Clone/Registry/Records/x.json -> true
+PROBE is_within[dotdot_existing] /tmp/borsai_app_audit/other/../clone/registry/records/x.json -> true
+PROBE is_within[dotdot_nonexistent_mid] /tmp/borsai_app_audit/clone/registry/nonexist/../records/x.json -> false
+PROBE is_within[dotdot_from_outside_nonexistent] /tmp/borsai_app_audit/nodir/../clone/registry/records/x.json -> false
+PROBE is_within[outside] /tmp/borsai_app_audit/elsewhere/x.json -> false
+PROBE is_within[symlink_dir] -> true
+PROBE is_within[symlink_file] -> false
+PROBE export[upper_case] -> Err("SCENARIO_PATH_INSIDE_REPO") ; repo'da dosya oluştu mu: false
+PROBE export[dotdot_nonexistent_mid] -> Err("IO_ERROR") ; repo'da dosya oluştu mu: false
+PROBE export[symlink_dir] -> Err("SCENARIO_PATH_INSIDE_REPO") ; repo'da dosya oluştu mu: false
+PROBE export[symlink_file] -> Ok("OK") ; repo'da dosya oluştu mu: true
+PROBE scenarios_dir[upper_case_datadir] -> Err("SCENARIO_PATH_INSIDE_REPO")
+PROBE scenarios_dir[symlink_datadir] -> Err("SCENARIO_PATH_INSIDE_REPO")
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+0

@@ -1,0 +1,263 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "BRLSM",
+  "company": "Birleşim Mühendislik Isıtma Soğutma Havalandırma Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "35682",
+      "source_id": "KAP_958198_EK1",
+      "source_document": "KAP 958198 ek 1",
+      "source_published_at": "2021-08-16T10:02:08+03:00",
+      "source_sha256": "cf78a4375600f7d735593f5892ca54c60d1b3359444cd034181f6b3325207122",
+      "source_path": "registry/oot/source_docs/BRLSM/KAP_958198_ek1.pdf",
+      "quote": "TOPLAM 33.000.000 100% 35.734 222.366.807 100% 35.682 39.000.000 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 35.734; dağıtım yapılan 35.682",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "35.734",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "35.734",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "35.734 talep eden kişi sayısı; dağıtım yapılan 35.682 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "29287",
+        "high_application_retail": "6284",
+        "domestic_institutional": "111"
+      },
+      "source_id": "KAP_958198_EK1",
+      "source_document": "KAP 958198 ek 1",
+      "source_published_at": "2021-08-16T10:02:08+03:00",
+      "source_sha256": "cf78a4375600f7d735593f5892ca54c60d1b3359444cd034181f6b3325207122",
+      "source_path": "registry/oot/source_docs/BRLSM/KAP_958198_ek1.pdf",
+      "quote": [
+        "16.500.000 50% 29.287 7.354.598 3% 29.287 7.354.598 19%",
+        "9.900.000 30% 6.331 132.816.235 60% 6.284 21.895.402 56%",
+        "6.600.000 20% 116 82.195.974 37% 111 9.750.000 25%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "sıra: Bireysel, Yüksek Başvurulu, Yurt İçi Kurumsal; talep eden: 29.287, 6.331, 116",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Bireysel": "29.287",
+        "Yüksek Başvurulu": "6.331",
+        "Yurt İçi Kurumsal": "116"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Bireysel': '29.287', 'Yüksek Başvurulu': '6.331', 'Yurt İçi Kurumsal': '116'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex talep eden sayılarını almış; dağıtım yapılan: 29.287, 6.284, 111"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "0.4457332121",
+      "source_id": "KAP_958198_EK1",
+      "source_document": "KAP 958198 ek 1",
+      "source_published_at": "2021-08-16T10:02:08+03:00",
+      "source_sha256": "cf78a4375600f7d735593f5892ca54c60d1b3359444cd034181f6b3325207122",
+      "source_path": "registry/oot/source_docs/BRLSM/KAP_958198_ek1.pdf",
+      "quote": "16.500.000 50% 29.287 7.354.598 3% 29.287 7.354.598 19%",
+      "derived": true,
+      "formula": "Bireysel Yatırımcılar talep 7.354.598 / planlanan tahsisat 16.500.000 (aynı satır, lot)",
+      "note": "yalnız 'Bireysel Yatırımcılar' grubu; ayrı 'Yüksek Başvurulu Yatırımcılar' grubunun katı 132.816.235 / 9.900.000 = 13,4157813131 (gruplar birleştirilmedi)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "12.4539354545",
+      "source_id": "KAP_958198_EK1",
+      "source_document": "KAP 958198 ek 1",
+      "source_published_at": "2021-08-16T10:02:08+03:00",
+      "source_sha256": "cf78a4375600f7d735593f5892ca54c60d1b3359444cd034181f6b3325207122",
+      "source_path": "registry/oot/source_docs/BRLSM/KAP_958198_ek1.pdf",
+      "quote": "6.600.000 20% 116 82.195.974 37% 111 9.750.000 25%",
+      "derived": true,
+      "formula": "Yurt İçi Kurumsal talep 82.195.974 / planlanan tahsisat 6.600.000",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok (tabloda Bireysel, Yüksek Başvurulu, Yurt İçi Kurumsal)",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "7354598",
+        "high_application_retail": "21895402",
+        "domestic_institutional": "9750000"
+      },
+      "source_id": "KAP_958198_EK1",
+      "source_document": "KAP 958198 ek 1",
+      "source_published_at": "2021-08-16T10:02:08+03:00",
+      "source_sha256": "cf78a4375600f7d735593f5892ca54c60d1b3359444cd034181f6b3325207122",
+      "source_path": "registry/oot/source_docs/BRLSM/KAP_958198_ek1.pdf",
+      "quote": [
+        "16.500.000 50% 29.287 7.354.598 3% 29.287 7.354.598 19%",
+        "9.900.000 30% 6.331 132.816.235 60% 6.284 21.895.402 56%",
+        "6.600.000 20% 116 82.195.974 37% 111 9.750.000 25%"
+      ],
+      "note": "birim lot (1 TL nominal)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Bireysel": "7.354.598",
+        "Yüksek Başvurulu": "21.895.402",
+        "Yurt İçi Kurumsal": "9.750.000"
+      },
+      "codex_check": {
+        "codex_value": "{'Bireysel': '7.354.598', 'Yüksek Başvurulu': '21.895.402', 'Yurt İçi Kurumsal': '9.750.000'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "19",
+      "source_id": "KAP_958198_EK1",
+      "source_document": "KAP 958198 ek 1",
+      "source_published_at": "2021-08-16T10:02:08+03:00",
+      "source_sha256": "cf78a4375600f7d735593f5892ca54c60d1b3359444cd034181f6b3325207122",
+      "source_path": "registry/oot/source_docs/BRLSM/KAP_958198_ek1.pdf",
+      "quote": "16.500.000 50% 29.287 7.354.598 3% 29.287 7.354.598 19%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yalnız Bireysel grubu; Yüksek Başvurulu %56; planlanan bireysel %50",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "19",
+        "verdict": "FOUND_SAME",
+        "note": "yalnız Bireysel grubu"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "25",
+      "source_id": "KAP_958198_EK1",
+      "source_document": "KAP 958198 ek 1",
+      "source_published_at": "2021-08-16T10:02:08+03:00",
+      "source_sha256": "cf78a4375600f7d735593f5892ca54c60d1b3359444cd034181f6b3325207122",
+      "source_path": "registry/oot/source_docs/BRLSM/KAP_958198_ek1.pdf",
+      "quote": "6.600.000 20% 116 82.195.974 37% 111 9.750.000 25%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %20",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "25",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "0",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "0",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "belgede yurt dışı kurumsal grup yok; 0 yazılı değil; alan null"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "'sabit fiyat' ifadesi sonuç ekinde ve TSSD'de yok (qfind); ayrıca satış yöntemi, dağıtım yöntemi değil"
+      }
+    },
+    "lead_broker": {
+      "value": "QNB Finans Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_955383_EK1",
+      "source_document": "KAP 955383 ek 1",
+      "source_published_at": "2021-08-06T16:59:48+03:00",
+      "source_sha256": "ae1635ee531c68cce3dc1fd4b55118199ac8ee197a90a29c8a6b18fe2c47c8e0",
+      "source_path": "registry/oot/source_docs/BRLSM/KAP_955383_ek1.pdf",
+      "quote": "Aracılık Eden Yetkili Kuruluş Sorumlu Olduğu Kısım: QNB FİNANS YATIRIM MENKUL DEĞERLER A.Ş.",
+      "note": "TSSD: 'halka arzda satışa aracıhk edecek QNB Finans Yatırım Menkul' (OCR); sonuç bildirimini de QNB Finans Yatırım yayımlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "QNB Finans Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_958344",
+      "source_document": "KAP 958344",
+      "source_published_at": "2021-08-16T18:11:01+03:00",
+      "source_sha256": "1479d51a6ac85d8afe4065dbd4417d52223c591dfc08ca01d7a2d501fb81c2dc",
+      "source_path": "registry/oot/source_docs/BRLSM/KAP_958344_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_958344",
+      "source_document": "KAP 958344",
+      "source_published_at": "2021-08-16T18:11:01+03:00",
+      "source_sha256": "1479d51a6ac85d8afe4065dbd4417d52223c591dfc08ca01d7a2d501fb81c2dc",
+      "source_path": "registry/oot/source_docs/BRLSM/KAP_958344_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_958344": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 958344",
+      "published_at": "2021-08-16T18:11:01+03:00",
+      "sha256": "1479d51a6ac85d8afe4065dbd4417d52223c591dfc08ca01d7a2d501fb81c2dc",
+      "path": "registry/oot/source_docs/BRLSM/KAP_958344_bildirim.pdf"
+    },
+    "KAP_958198_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 958198 ek 1",
+      "published_at": "2021-08-16T10:02:08+03:00",
+      "sha256": "cf78a4375600f7d735593f5892ca54c60d1b3359444cd034181f6b3325207122",
+      "path": "registry/oot/source_docs/BRLSM/KAP_958198_ek1.pdf"
+    },
+    "KAP_955383_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 955383 ek 1",
+      "published_at": "2021-08-06T16:59:48+03:00",
+      "sha256": "ae1635ee531c68cce3dc1fd4b55118199ac8ee197a90a29c8a6b18fe2c47c8e0",
+      "path": "registry/oot/source_docs/BRLSM/KAP_955383_ek1.pdf"
+    }
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "BIGCH",
+  "company": "Büyük Şefler Gıda Turizm Tekstil Danışmanlık Organizasyon Eğitim Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "1800881",
+      "source_id": "KAP_1147783_EK1",
+      "source_document": "KAP 1147783 ek 1",
+      "source_published_at": "2023-05-08T06:38:57+03:00",
+      "source_sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf",
+      "quote": "Toplam 34.000.000 100,0% 1.886.951 190.709.355 100,0% 1.800.881 37.000.000 100,0%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "toplam başvuru 1.886.951; talebi karşılanan 1.800.881",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "1800797",
+        "domestic_institutional": "84"
+      },
+      "source_id": "KAP_1147783_EK1",
+      "source_document": "KAP 1147783 ek 1",
+      "source_published_at": "2023-05-08T06:38:57+03:00",
+      "source_sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf",
+      "quote": [
+        "Bireysel Yatırımcılar 27.200.000 80,0% 1.886.825 136.989.240 71,8% 1.800.797 30.200.000 81,6%",
+        "6.800.000 20,0% 126 53.720.115 28,2% 84 6.800.000 18,4%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "başvuru: bireysel 1.886.825, yurt içi kurumsal 126; yurt dışı kurumsal grup yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "4.54",
+      "source_id": "KAP_1147783_EK1",
+      "source_document": "KAP 1147783 ek 1",
+      "source_published_at": "2023-05-08T06:38:57+03:00",
+      "source_sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf",
+      "quote": "Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 4,54 katı",
+      "note": "belge 'yaklaşık' ve 'nihai tahsisat' diyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "7.90",
+      "source_id": "KAP_1147783_EK1",
+      "source_document": "KAP 1147783 ek 1",
+      "source_published_at": "2023-05-08T06:38:57+03:00",
+      "source_sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara nihai tahsisat tutarının yaklaşık 7,90 katı talep gelmiştir",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "sonuç ekinde yurt dışı kurumsal yatırımcı grubu yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "30200000",
+        "domestic_institutional": "6800000"
+      },
+      "source_id": "KAP_1147783_EK1",
+      "source_document": "KAP 1147783 ek 1",
+      "source_published_at": "2023-05-08T06:38:57+03:00",
+      "source_sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf",
+      "quote": [
+        "Bireysel Yatırımcılar 27.200.000 80,0% 1.886.825 136.989.240 71,8% 1.800.797 30.200.000 81,6%",
+        "6.800.000 20,0% 126 53.720.115 28,2% 84 6.800.000 18,4%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "81.6",
+      "source_id": "KAP_1147783_EK1",
+      "source_document": "KAP 1147783 ek 1",
+      "source_published_at": "2023-05-08T06:38:57+03:00",
+      "source_sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf",
+      "quote": "Bireysel Yatırımcılar 27.200.000 80,0% 1.886.825 136.989.240 71,8% 1.800.797 30.200.000 81,6%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %80,0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "18.4",
+      "source_id": "KAP_1147783_EK1",
+      "source_document": "KAP 1147783 ek 1",
+      "source_published_at": "2023-05-08T06:38:57+03:00",
+      "source_sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf",
+      "quote": "6.800.000 20,0% 126 53.720.115 28,2% 84 6.800.000 18,4%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %20,0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "sonuç ekinde yurt dışı kurumsal grup yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Türkiye Kalkınma ve Yatırım Bankası A.Ş.; Deniz Yatırım Menkul Kıymetler A.Ş.",
+      "source_id": "KAP_1143550_EK1",
+      "source_document": "KAP 1143550 ek 1",
+      "source_published_at": "2023-04-28T20:36:41+03:00",
+      "source_sha256": "bc0b6344265aa90163c424bbdb5a5eb1ac69635ee3efd9d1a6f14d2aafc30bf9",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1143550_ek1.pdf",
+      "quote": [
+        "Halka Arza Aracılık Eden Yetkili Kuruluş Sorumlu Olduğu Kısım: Türkiye Kalkınma ve Yatırım Bankası A.Ş.",
+        "Halka Arza Aracılık Eden Yetkili Kuruluş Sorumlu Olduğu Kısım: Deniz Yatırım Menkul Kıymetler A.Ş."
+      ],
+      "note": "TSSD iki yetkili kuruluş sayıyor; konsorsiyum lideri belirtilmiyor. Sonuç bildirimini Deniz Yatırım yayımlamış.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1148193",
+      "source_document": "KAP 1148193",
+      "source_published_at": "2023-05-08T18:10:48+03:00",
+      "source_sha256": "a328de1fe1ff028250be013e65bc9cc3d2ec611776f93689990ba66d2ece9c76",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1148193_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1148193",
+      "source_document": "KAP 1148193",
+      "source_published_at": "2023-05-08T18:10:48+03:00",
+      "source_sha256": "a328de1fe1ff028250be013e65bc9cc3d2ec611776f93689990ba66d2ece9c76",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1148193_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1148193": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1148193",
+      "published_at": "2023-05-08T18:10:48+03:00",
+      "sha256": "a328de1fe1ff028250be013e65bc9cc3d2ec611776f93689990ba66d2ece9c76",
+      "path": "registry/oot/source_docs/BIGCH/KAP_1148193_bildirim.pdf"
+    },
+    "KAP_1147783_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1147783 ek 1",
+      "published_at": "2023-05-08T06:38:57+03:00",
+      "sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf"
+    },
+    "KAP_1143550_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1143550 ek 1",
+      "published_at": "2023-04-28T20:36:41+03:00",
+      "sha256": "bc0b6344265aa90163c424bbdb5a5eb1ac69635ee3efd9d1a6f14d2aafc30bf9",
+      "path": "registry/oot/source_docs/BIGCH/KAP_1143550_ek1.pdf"
+    }
+  }
+}

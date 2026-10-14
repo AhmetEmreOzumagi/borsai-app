@@ -1,0 +1,182 @@
+{
+ "ticker": "IZENR",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_1184372",
+  "KAP_1184372_EK1",
+  "KAP_1184602"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "4.6",
+   "origin": "SOURCE_REPORTED",
+   "source_id": "KAP_1184372_EK1",
+   "quote": "Halka arzda toplam 2.862.794 yatırımcıdan halka arz edilen 115.100.000 TL nominal değerli payların 4,6 katına denk gelen 525.808.101 TL nominal değerli filtrelenmemiş pay talebi gelmiştir.",
+   "definition": "belgedeki toplam kat (525.808.101 talep / 115.100.000 ek satış hariç arz)",
+   "denominator_includes_additional_sale": false,
+   "note": "belge katı ek satış hariç 115.100.000 nominale göre veriyor; nihai gerçekleşen 138.120.000 (ek satış dahil) ile aynı belgedeki toplamlardan 3,8068932884 olurdu (H99 paydası). Kural gereği belgedeki kat alındı."
+  },
+  "total_demand_filter_status": {
+   "value": "UNFILTERED",
+   "source_id": "KAP_1184372_EK1",
+   "quote": "Halka arzda toplam 2.862.794 yatırımcıdan halka arz edilen 115.100.000 TL nominal değerli payların 4,6 katına denk gelen 525.808.101 TL nominal değerli filtrelenmemiş pay talebi gelmiştir."
+  },
+  "ipo_size_tl": {
+   "value": "2624280000",
+   "source_id": "KAP_1184372_EK1",
+   "quote": "ek satış dahil 138.120.000 TL nominal değerli payların satışı sonucunda halka arz büyüklüğü 2.624.280.000 TL olarak gerçekleşmiştir."
+  },
+  "capital_increase_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (yalnız toplam '115.100.00' [belgedeki yazım] + ek satış 23.020.000; 75.000.000 bedelli / 40.100.000 ortak satışı ayrımı yalnız SPK planında)"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (ek satış hariç ortak satışı nominali sonuç ekinde yazılı değil)"
+  },
+  "additional_sale_shares": {
+   "value": "23020000",
+   "source_id": "KAP_1184372_EK1",
+   "quote": "Şirket’in toplam 115.100.00 TL nominal değerli payları ile ek satış kapsamında 23.020.000 TL nominal değerli payları halka arz edilmiştir."
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_1184372_EK1",
+   "quote": "ek satış dahil 138.120.000 TL nominal değerli payların satışı sonucunda halka arz büyüklüğü 2.624.280.000 TL olarak gerçekleşmiştir."
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_1184372_EK1",
+   "used": "FULL",
+   "quote": "Şirket’in toplam 115.100.00 TL nominal değerli payları ile ek satış kapsamında 23.020.000 TL nominal değerli payları halka arz edilmiştir.",
+   "note": "SPK planındaki ek satış 23.020.000 nominalin tamamı kullanılmış"
+  },
+  "investor_count": {
+   "value": "2648584",
+   "source_id": "KAP_1184372_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "TOPLAM 115.100.000 %100 2.862.794 525.808.101 %100 2.648.584 138.120.000 %100",
+   "note": "talep eden 2.862.794; dağıtım yapılan 2.648.584"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "2648422",
+    "domestic_institutional": "162"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_1184372_EK1",
+   "quote": [
+    "Bireysel 69.060.000 %60 2.862.632 362.654.230 %69 2.648.422 92.080.000 %67",
+    "Kurumsal 46.040.000 %40 162 163.153.871 %31 162 46.040.000 %33"
+   ],
+   "note": "başvuru: bireysel 2.862.632, yurt içi kurumsal 162; yurt dışı kurumsal grup yok"
+  },
+  "retail_demand_multiple": {
+   "value": "5.3",
+   "source_id": "KAP_1184372_EK1",
+   "quote": "Yurt İçi Bireysel Yatırımcılara planlanan tahsisat tutarının yaklaşık 5,3 katı",
+   "note": "belge 'yaklaşık' diyor; planlanan tahsisata göre"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": "3.5",
+   "source_id": "KAP_1184372_EK1",
+   "quote": "Yurt İçi Kurumsal Yatırımcılara planlanan tahsisat tutarının ise 3,5 katı talep gelmiştir."
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "sonuç ekinde yurt dışı kurumsal yatırımcı grubu yok"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "92080000",
+    "domestic_institutional": "46040000"
+   },
+   "source_id": "KAP_1184372_EK1",
+   "quote": [
+    "Bireysel 69.060.000 %60 2.862.632 362.654.230 %69 2.648.422 92.080.000 %67",
+    "Kurumsal 46.040.000 %40 162 163.153.871 %31 162 46.040.000 %33"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "67",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1184372_EK1",
+   "quote": "Bireysel 69.060.000 %60 2.862.632 362.654.230 %69 2.648.422 92.080.000 %67",
+   "note": "planlanan %60"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "33",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1184372_EK1",
+   "quote": "Kurumsal 46.040.000 %40 162 163.153.871 %31 162 46.040.000 %33",
+   "note": "planlanan %40"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": null,
+   "missing_reason": "sonuç ekinde yurt dışı kurumsal grup yok"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç eki dağıtım yöntemini adlandırmıyor; TSSD dossier'de yok"
+  },
+  "lead_broker": {
+   "value": "Garanti Yatırım Menkul Kıymetler A.Ş.",
+   "source_id": "KAP_1184372_EK1",
+   "basis": "RESULT_NOTICE_PUBLISHER",
+   "quote": "Saygılarımızla; Garanti Yatırım Menkul Kıymetler A.Ş.",
+   "note": "sonuç ekini imzalayan/yayımlayan kurum; belge 'aracılık' rolünü açıkça yazmıyor; TSSD dossier'de yok"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD dossier'de yok; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD dossier'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD dossier'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD dossier'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {
+  "total_demand_multiple": {
+   "codex_value": "4,6",
+   "verdict": "FOUND_SAME",
+   "note": "belgedeki kat; paydası ek satış hariç 115.100.000"
+  },
+  "ipo_size_tl": {
+   "codex_value": "2.624.280.000",
+   "verdict": "FOUND_SAME"
+  },
+  "additional_sale_shares": {
+   "codex_value": "23.020.000",
+   "verdict": "FOUND_SAME"
+  },
+  "investor_count": {
+   "codex_value": "2.862.794",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "2.862.794 talep eden kişi sayısı; dağıtım yapılan 2.648.584 (ALLOCATED tercih)"
+  },
+  "retail_demand_multiple": {
+   "codex_value": "5,3",
+   "verdict": "FOUND_SAME"
+  },
+  "domestic_institutional_demand_multiple": {
+   "codex_value": "3,5",
+   "verdict": "FOUND_SAME"
+  }
+ },
+ "notes": "Borsa dışı talep toplama (19,00 TL). Sonuç eki toplam katı (4,6) ek satış hariç 115.100.000 nominale göre veriyor ('filtrelenmemiş'). Belgede ana arz '115.100.00' diye yazım hatasıyla geçiyor (tablo ve kat cümlesinde 115.100.000). Ek satış (23.020.000) tamamen kullanılmış; toplam 138.120.000 = listeleme nominali.",
+ "needs_search": false
+}

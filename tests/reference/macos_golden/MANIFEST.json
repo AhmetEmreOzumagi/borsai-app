@@ -1,0 +1,56 @@
+{
+  "borsai_dirty": true,
+  "borsai_source_sha256": "17e7374070328e7dbb3a887605167f4670315bb15a4c5d819a4feaf65a4ca004",
+  "created_at": "2026-09-21T21:10:01+03:00",
+  "description": "Faz 1A port kabulünden (testler 1-3) sonra bu makinede üretilen H99 walk-forward fold ledger'ları. Regresyon testi bunlara karşı BİREBİR (bayt) çalışır.",
+  "git_commit": "ff3eee64eadd70c61e8b2eff657fd98cb94a0d04",
+  "machine": {
+    "platform": "Darwin 27.0.0 arm64 / CPython 3.12.14"
+  },
+  "models": {
+    "base_always_ceiling": {
+      "file": "base_always_ceiling_fold_ledger.csv",
+      "ledger_sha256": "2933c656feba56e429d8957cfca2d0a5aa202c7243ed83eb3a0b4aae043d1706",
+      "spec_sha256": "ed1815f898c30b8cce6199e48d0788e2cd373fe84db59a4b782269810dc31eb6"
+    },
+    "base_last10_rate": {
+      "file": "base_last10_rate_fold_ledger.csv",
+      "ledger_sha256": "1459e9ebd65fc7d0f914f604f80ab23d550534e248b85a6148bc55cea4995517",
+      "spec_sha256": "ff7dfd4084a16432336eb551958c13403c72ac799d9742f8cbbf324ab98e0ecc"
+    },
+    "base_rate": {
+      "file": "base_rate_fold_ledger.csv",
+      "ledger_sha256": "898d2d849cc21a0461c88b816338c9d64d7b93b7d4ffafe726bfd3c56d5147e2",
+      "spec_sha256": "d094ba1119803a693ef17dce336f77e8022f88da6e944349a2cb04b8b2e2a6c5"
+    },
+    "base_train_mean": {
+      "file": "base_train_mean_fold_ledger.csv",
+      "ledger_sha256": "bbe8e29c998e7842bf1dd0733df1c4a96e1c5a481db05aac54ded27ed5f694fb",
+      "spec_sha256": "f94c2e58d8a4f0607c33fa0c0a12cec8daef39ee0e012c2db1d11d2bb1706119"
+    },
+    "base_train_median": {
+      "file": "base_train_median_fold_ledger.csv",
+      "ledger_sha256": "abb8669fa5ac2027a719e06696531b5ed1e5b52f037e3a9a283b238843e31418",
+      "spec_sha256": "842a14f529396ec5c9a2ac79463ac91816c89cab05fe6107b60731fab7ce4ea3"
+    },
+    "base_zero": {
+      "file": "base_zero_fold_ledger.csv",
+      "ledger_sha256": "4b0bd28cd6eafc0c1065f8ccc670e017df23a4de65c97eac1291263b86d66378",
+      "spec_sha256": "1ae0f539e663c6d14bba1ad329a07a332dc1ffca59a3acd4b62cc65e68c994d2"
+    },
+    "v1_5_h99": {
+      "file": "v1_5_h99_fold_ledger.csv",
+      "ledger_sha256": "5c56da37bf7cece261fc5472ff0a2de8e242169755afc3aefb3c6c12b7fb049b",
+      "spec_sha256": "a37ab09d4048b5d6b50bd767a950e465c24c716eaf05beb47159bcfb5934bf47"
+    }
+  },
+  "plan_id": "H99_WALK_FORWARD_STRICT_PRIOR_DATE_MIN_TRAIN_10",
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  }
+}

@@ -1,0 +1,135 @@
+### m_k_sequence_guard_disabled :: tests/test_outcome_guard.py -k test_10
+F.FFFFFF                                                                 [100%]
+=================================== FAILURES ===================================
+_____________________ test_10_outcome_before_model_is_red ______________________
+
+tmp_path = PosixPath('/private/var/folders/zr/drr97wqd4hl77c1q0bszd1vc0000gn/T/pytest-of-ahmet/pytest-52/test_10_outcome_before_model_i0')
+
+    def test_10_outcome_before_model_is_red(tmp_path):
+        root = _mini_repo(tmp_path, ["index", "m1", "ipos", "record", "outcome", "bulletin", "m2"])
+        v = sc.sequence_violations(root, ["m1", "m2"])
+>       assert v and all("m2" in x for x in v) and len(v) == 2          # hem sonuç dosyası hem bülten
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       assert ([])
+
+tests/test_outcome_guard.py:149: AssertionError
+____________________ test_10c_outcome_before_record_is_red _____________________
+
+tmp_path = PosixPath('/private/var/folders/zr/drr97wqd4hl77c1q0bszd1vc0000gn/T/pytest-of-ahmet/pytest-52/test_10c_outcome_before_record0')
+
+    def test_10c_outcome_before_record_is_red(tmp_path):
+        root = _mini_repo(tmp_path, ["index", "m1", "m2", "ipos", "outcome", "record"])
+        v = sc.sequence_violations(root, ["m1", "m2"])
+>       assert len(v) == 1 and "NEWCO tahmin kaydını" in v[0]
+E       assert (0 == 1)
+E        +  where 0 = len([])
+
+tests/test_outcome_guard.py:160: AssertionError
+______________ test_10d_uncommitted_outcome_checked_against_head _______________
+
+tmp_path = PosixPath('/private/var/folders/zr/drr97wqd4hl77c1q0bszd1vc0000gn/T/pytest-of-ahmet/pytest-52/test_10d_uncommitted_outcome_c0')
+
+    def test_10d_uncommitted_outcome_checked_against_head(tmp_path):
+        root = _mini_repo(tmp_path, ["index", "m1", "ipos", "record"])
+        (root / "models" / "m2.json").write_text("{}", encoding="utf-8")        # model commit edilmemiş
+        (root / "data" / "outcomes").mkdir(parents=True)
+        (root / "data" / "outcomes" / "NEWCO.csv").write_text("h\n", encoding="utf-8")
+        v = sc.sequence_violations(root, ["m1", "m2"])
+>       assert len(v) == 1 and "m2" in v[0]
+E       assert (0 == 1)
+E        +  where 0 = len([])
+
+tests/test_outcome_guard.py:169: AssertionError
+____________ test_10e_post_d1_model_listed_but_not_committed_is_red ____________
+
+tmp_path = PosixPath('/private/var/folders/zr/drr97wqd4hl77c1q0bszd1vc0000gn/T/pytest-of-ahmet/pytest-52/test_10e_post_d1_model_listed_0')
+
+    def test_10e_post_d1_model_listed_but_not_committed_is_red(tmp_path):
+        root = _mini_repo(tmp_path, ["index", "m1", "m2", "ipos", "record", "outcome", "bulletin"])
+        assert sc.sequence_violations(root, ["m1", "m2"]) == []
+        _commit(root, "models/INDEX_POST_D1.json", POST_INDEX)                    # dizin var, model dosyası yok
+        v = sc.sequence_violations(root, ["m1", "m2"])
+>       assert len(v) == 2 and all("POST_D1 modeli p" in x for x in v)          # hem sonuç dosyası hem bülten
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       assert (0 == 2)
+E        +  where 0 = len([])
+
+tests/test_outcome_guard.py:182: AssertionError
+_____ test_10f_post_d1_model_then_outcome_is_green_parallel_branch_is_red ______
+
+tmp_path = PosixPath('/private/var/folders/zr/drr97wqd4hl77c1q0bszd1vc0000gn/T/pytest-of-ahmet/pytest-52/test_10f_post_d1_model_then_ou0')
+
+    def test_10f_post_d1_model_then_outcome_is_green_parallel_branch_is_red(tmp_path):
+        root = _mini_repo(tmp_path, ["index", "m1", "m2", "ipos", "record"])
+        _commit(root, "models/INDEX_POST_D1.json", POST_INDEX)
+        _commit(root, "models/p.json", "{}")
+        _commit(root, "data/outcomes/NEWCO.csv", "h\n")
+        assert sc.sequence_violations(root, ["m1", "m2"]) == []
+        # paralel dal: sonuç dosyası, POST_D1 modelini görmeyen bir daldan birleşiyor
+        (tmp_path / "b").mkdir()
+        root2 = _mini_repo(tmp_path / "b", ["index", "m1", "m2", "ipos", "record"])
+        main = _git("rev-parse", "--abbrev-ref", "HEAD", root=root2)
+        _git("checkout", "-q", "-b", "side", root=root2)
+        _commit(root2, "data/outcomes/NEWCO.csv", "h\n")
+        _git("checkout", "-q", main, root=root2)
+        _commit(root2, "models/INDEX_POST_D1.json", POST_INDEX)
+        _commit(root2, "models/p.json", "{}")
+        _git("-c", "user.name=t", "-c", "user.email=t@t", "merge", "-q", "--no-edit", "side", root=root2)
+        v = sc.sequence_violations(root2, ["m1", "m2"])
+>       assert len(v) == 1 and "POST_D1 modeli p" in v[0] and "sıralı değil" in v[0]
+E       assert (0 == 1)
+E        +  where 0 = len([])
+
+tests/test_outcome_guard.py:206: AssertionError
+__________ test_10g_post_break_model_listed_but_not_committed_is_red ___________
+
+tmp_path = PosixPath('/private/var/folders/zr/drr97wqd4hl77c1q0bszd1vc0000gn/T/pytest-of-ahmet/pytest-52/test_10g_post_break_model_list0')
+
+    def test_10g_post_break_model_listed_but_not_committed_is_red(tmp_path):
+        """POST_BREAK dizini POST_D1 dalıyla aynı kural: listelenen model dosyası commit edilmemişse her hedef ihlal; commit'ten sonra
+        (sonuçlar modelden önce girmiş: RETRO) temiz."""
+        root = _mini_repo(tmp_path, ["index", "m1", "m2", "ipos", "record", "outcome", "bulletin"])
+        _commit(root, "models/INDEX_POST_BREAK.json", BREAK_INDEX)                  # dizin var, model dosyası yok
+        v = sc.sequence_violations(root, ["m1", "m2"])
+>       assert len(v) == 2 and all("POST_BREAK modeli k" in x for x in v)        # hem sonuç dosyası hem bülten
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       assert (0 == 2)
+E        +  where 0 = len([])
+
+tests/test_outcome_guard.py:220: AssertionError
+____ test_10h_post_break_model_then_outcome_is_green_parallel_branch_is_red ____
+
+tmp_path = PosixPath('/private/var/folders/zr/drr97wqd4hl77c1q0bszd1vc0000gn/T/pytest-of-ahmet/pytest-52/test_10h_post_break_model_then0')
+
+    def test_10h_post_break_model_then_outcome_is_green_parallel_branch_is_red(tmp_path):
+        """Model → sonuç: temiz; sonuç dosyası POST_BREAK modelini görmeyen paralel bir daldan birleşirse ihlal."""
+        root = _mini_repo(tmp_path, ["index", "m1", "m2", "ipos", "record"])
+        _commit(root, "models/INDEX_POST_BREAK.json", BREAK_INDEX)
+        _commit(root, "models/k.json", "{}")
+        _commit(root, "data/outcomes/NEWCO.csv", "h\n")
+        assert sc.sequence_violations(root, ["m1", "m2"]) == []
+        (tmp_path / "b").mkdir()
+        root2 = _mini_repo(tmp_path / "b", ["index", "m1", "m2", "ipos", "record"])
+        main = _git("rev-parse", "--abbrev-ref", "HEAD", root=root2)
+        _git("checkout", "-q", "-b", "side", root=root2)
+        _commit(root2, "data/outcomes/NEWCO.csv", "h\n")
+        _git("checkout", "-q", main, root=root2)
+        _commit(root2, "models/INDEX_POST_BREAK.json", BREAK_INDEX)
+        _commit(root2, "models/k.json", "{}")
+        _git("-c", "user.name=t", "-c", "user.email=t@t", "merge", "-q", "--no-edit", "side", root=root2)
+        v = sc.sequence_violations(root2, ["m1", "m2"])
+>       assert len(v) == 1 and "POST_BREAK modeli k" in v[0] and "sıralı değil" in v[0]
+E       assert (0 == 1)
+E        +  where 0 = len([])
+
+tests/test_outcome_guard.py:244: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_outcome_guard.py::test_10_outcome_before_model_is_red - ass...
+FAILED tests/test_outcome_guard.py::test_10c_outcome_before_record_is_red - a...
+FAILED tests/test_outcome_guard.py::test_10d_uncommitted_outcome_checked_against_head
+FAILED tests/test_outcome_guard.py::test_10e_post_d1_model_listed_but_not_committed_is_red
+FAILED tests/test_outcome_guard.py::test_10f_post_d1_model_then_outcome_is_green_parallel_branch_is_red
+FAILED tests/test_outcome_guard.py::test_10g_post_break_model_listed_but_not_committed_is_red
+FAILED tests/test_outcome_guard.py::test_10h_post_break_model_then_outcome_is_green_parallel_branch_is_red
+7 failed, 1 passed, 26 deselected in 2.50s
+exit=1

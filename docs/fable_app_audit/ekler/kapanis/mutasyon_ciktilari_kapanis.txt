@@ -1,0 +1,297 @@
+# Mutasyon yeniden koşusu çıktıları — FAZ3_FABLE_APP_AUDIT_CLOSE [ÖLÇTÜM]
+# Klon /tmp/borsai_app_audit_close/clone (git clone --local, HEAD db8e239), CARGO_TARGET_DIR=/tmp/borsai_app_audit_close/target
+# Klon derlemesi (cargo test --workspace --no-run --offline): rc=0, 36 s duvar (183 s CPU; bağımlılıklar önbellekli)
+# Sürücü: ekler/kapanis/mutate_close.sh ; özet (rc=101 cargo kırmızı, rc=1 vitest/npm kırmızı, rc=0 yeşil):
+a_golden_digit rc=101 dur=14s :: cargo_t -p borsai_predict --test golden golden_parity -- --nocapture
+21:        "D3" => ("-0.271", "0.332"),
+b1_clip_bound rc=101 dur=11s :: cargo_t -p borsai_predict --test golden golden_parity
+95:    py_sum(coef.iter().rev().zip(z.iter()).map(|(c, v)| c * v)) + intercept
+b2_ridge_coef_order rc=101 dur=12s :: cargo_t -p borsai_predict --test golden golden_parity
+c_n7_cells_rust rc=101 dur=2s :: cargo_t --test stage4
+c_n7_cells_vitest rc=1 dur=3s :: vitest_t tests/accuracy.test.ts
+d_n35_verdict_ci0_rust rc=101 dur=0s :: cargo_t --test stage4
+d_n35_verdict_ci0_vitest rc=1 dur=2s :: vitest_t tests/accuracy.test.ts
+e1_declared_in_api_line rc=1 dur=2s :: vitest_t tests/u52_declaration.test.ts
+e2_declared_one_line_above_npm_test rc=1 dur=6s :: bash -c cd app && npm test
+9:pub const GIT_READONLY_SUBCOMMANDS: [&str; 5] = ["rev-parse", "status", "log", "ls-files", "commit"];
+f_git_commit_whitelist rc=101 dur=2s :: cargo_t --test stage2 git_readonly_whitelist
+g_guard_removed_stage2 rc=101 dur=2s :: cargo_t --test stage2 scenario_path_guard
+g_guard_removed_unit rc=101 dur=1s :: cargo_t --lib export_all_scenarios_array_and_guard
+g_guard_removed_e2e rc=101 dur=4s :: bash app/tests/e2e_freeze_tmp_repo.sh
+h_band_registry_scenario rc=1 dur=3s :: vitest_t tests/stage5.test.ts
+i_official_predict_all rc=1 dur=1s :: vitest_t tests/registry.test.ts
+i_official_predict_all_invoke rc=1 dur=3s :: vitest_t tests/screens_invoke.test.ts
+j_b1_reverted_stage2 rc=101 dur=4s :: cargo_t --test stage2 scenario_path_guard -- --nocapture
+j_b1_reverted_e2e rc=101 dur=5s :: bash app/tests/e2e_freeze_tmp_repo.sh
+j2_b1_fully_reverted_stage2 rc=101 dur=5s :: cargo_t --test stage2 scenario_path_guard -- --nocapture
+k_freeze_no_preflight rc=101 dur=6s :: cargo_t --test stage3 freeze_refuses_when_preflight_blocked -- --nocapture
+l_freeze_ts_ready_no_preflight rc=1 dur=1s :: vitest_t tests/freeze.test.ts
+m_path_output_sha_default rc=101 dur=6s :: cargo_t --test stage3 official_conditional_return_uses_record_only
+n_floor_model_removed rc=101 dur=17s :: cargo_t -p borsai_predict --test golden golden_parity
+o_test_sh_no_include_ignored rc=0 dur=52s :: bash app/scripts/test.sh
+=== klon durumu ===
+?? .venv
+?? app/node_modules
+DONE
+
+=================== a_golden_digit
+thread 'golden_parity' (3099079) panicked at crates/borsai_predict/tests/golden.rs:494:5:
+bit-eşitlik tabanı:
+v1_5_h99: bit-eşit satır 391 < taban 392 (tolerans içi sürüklenme)
+test golden_parity ... FAILED
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 9.66s
+=================== b1_clip_bound
+test golden_parity ... FAILED
+thread 'golden_parity' (3099527) panicked at crates/borsai_predict/tests/golden.rs:470:5:
+288 uyuşmazlık; ilk 20:
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 10.47s
+=================== b2_ridge_coef_order
+test golden_parity ... FAILED
+thread 'golden_parity' (3100083) panicked at crates/borsai_predict/tests/golden.rs:470:5:
+21691 uyuşmazlık; ilk 20:
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 10.80s
+=================== c_n7_cells_rust
+test header_fields_and_index_mismatch ... FAILED
+test ui_view_fixtures ... FAILED
+test integrity_is_fail_closed ... FAILED
+thread 'header_fields_and_index_mismatch' (3100837) panicked at tests/stage4.rs:127:5:
+thread 'ui_view_fixtures' (3100840) panicked at tests/stage4.rs:41:5:
+thread 'integrity_is_fail_closed' (3100838) panicked at tests/stage4.rs:41:5:
+test result: FAILED. 2 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+=================== c_n7_cells_vitest
+     × fixture'daki her model_value ve kural değeri DOM'da (biçimlendirilmiş) 12ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+AssertionError: n7 return D1 MAE base_train_median: expected 'Kaynak: REPO (repo dosyası) · üretim …' to contain '3.1 puan'
+ Test Files  1 failed (1)
+      Tests  1 failed | 42 passed (43)
+=================== d_n35_verdict_ci0_rust
+test integrity_is_fail_closed ... FAILED
+test ui_view_fixtures ... FAILED
+thread 'integrity_is_fail_closed' (3101067) panicked at tests/stage4.rs:41:5:
+thread 'ui_view_fixtures' (3101069) panicked at tests/stage4.rs:217:5:
+test result: FAILED. 3 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s
+=================== d_n35_verdict_ci0_vitest
+     × aralıklar dosyadaki uçlarla 8ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+AssertionError: expected '[-0.9, 0.1] puan' to be '[-0.9, -0.1] puan' // Object.is equality
+ Test Files  1 failed (1)
+      Tests  1 failed | 42 passed (43)
+=================== e1_declared_in_api_line
+     × api çağrılarının hiçbirinde beyan alanı yok 18ms
+     × bütün ekran dosyalarında beyan akışı yalnız izinli havuzlarda biter 47ms
+     × pozitif kontrol: (e2) sonuç: j beyandan bir satır önce türetilir → kırmızı 7ms
+     × pozitif kontrol: (e1) sonuç: beyan doğrudan api satırında → kırmızı 9ms
+     × pozitif kontrol: sonuç: beyan işleyicisi j'yi değiştirir → kırmızı 5ms
+     × pozitif kontrol: sonuç: beyan ara değişkenle komuta → kırmızı 4ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
+AssertionError: screens/results.ts: out.push({ model_id: run.model_id, result: await api.pathConditional(run.model_id, source, jOrT + store.view.declared.filter((x) => x).length, stateName), error: null });: expected true to be false // Object.is equality
+AssertionError: expected [ Array(1) ] to deeply equal []
+AssertionError: expected [ Array(1) ] to deeply equal []
+AssertionError: results.ts içinde mutasyon noktası: expected '// Sonuç ekranı (SPEC_APP §3b, §3c, §…' to contain 'await api.pathConditional(run.model_i…'
+ Test Files  1 failed (1)
+      Tests  6 failed | 20 passed (26)
+=================== e2_declared_one_line_above_npm_test
+     × bütün ekran dosyalarında beyan akışı yalnız izinli havuzlarda biter 90ms
+     × pozitif kontrol: (e2) sonuç: j beyandan bir satır önce türetilir → kırmızı 12ms
+     × pozitif kontrol: (e1) sonuç: beyan doğrudan api satırında → kırmızı 8ms
+     × pozitif kontrol: sonuç: beyan işleyicisi j'yi değiştirir → kırmızı 8ms
+     × pozitif kontrol: sonuç: beyan ara değişkenle komuta → kırmızı 7ms
+     × açılış (D3 beyanlı): koşulsuz j = 0, koşullu ceiling_display resmi j; streak_view tek argüman 818ms
+     × beyan aç/kapa (D4, D3), getiri sekmesi, temizle: her yenilemede j resmi j 461ms
+     × SEÇİLEN varsayımsal j (5) komuta aynen gider; sonra girilen beyan eklenmez 613ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 8 ⎯⎯⎯⎯⎯⎯⎯
+AssertionError: ceiling_display j: expected [ 3 ] to deeply equal [ 2 ]
+  [
+AssertionError: ceiling_display j: expected [ 5 ] to deeply equal [ 2 ]
+  [
+AssertionError: ceiling_display j: expected [ 6 ] to deeply equal [ 5 ]
+  [
+AssertionError: expected [ …(4) ] to deeply equal []
+AssertionError: results.ts içinde mutasyon noktası: expected '// Sonuç ekranı (SPEC_APP §3b, §3c, §…' to contain 'const j = store.view.jSelected ?? str…'
+AssertionError: expected [ { …(4) }, { …(4) }, { …(4) }, …(1) ] to deeply equal []
+ Test Files  2 failed | 14 passed (16)
+      Tests  8 failed | 214 passed (222)
+=================== f_git_commit_whitelist
+test git_readonly_whitelist ... FAILED
+thread 'git_readonly_whitelist' (3102181) panicked at tests/stage2.rs:517:47:
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 13 filtered out; finished in 0.00s
+=================== g_guard_removed_stage2
+test scenario_path_guard ... FAILED
+thread 'scenario_path_guard' (3102747) panicked at tests/stage2.rs:390:102:
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 13 filtered out; finished in 0.06s
+=================== g_guard_removed_unit
+test commands::scenario::tests::export_all_scenarios_array_and_guard ... FAILED
+thread 'commands::scenario::tests::export_all_scenarios_array_and_guard' (3103054) panicked at src/commands/scenario.rs:472:9:
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 15 filtered out; finished in 0.00s
+=================== g_guard_removed_e2e
+E2E| U31 adım 5: T = 2026-09-23 ≤ bugün (2026-09-24) → KIRMIZI uyarı
+thread 'freeze_flow' (3103791) panicked at tests/e2e.rs:338:87:
+FAILED
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3 filtered out; finished in 2.13s
+=================== h_band_registry_scenario
+     × Sicil · liste: sınıf ve metin birebir 6ms
+     × Sicil · liste: SENARYO bandı ve notu hiç geçmez 2ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+AssertionError: expected 'mode-scenario' to be 'mode-official' // Object.is equality
+AssertionError: Sicil · liste: SENARYO: expected '<header class="mode-band mode-scenari…' not to contain 'SENARYO'
+ Test Files  1 failed (1)
+      Tests  2 failed | 33 passed (35)
+=================== i_official_predict_all
+     × sicil ekranı ve arz sayfası predict_all yolunu hiç çağırmaz 4ms
+     × arz sayfasının çağırdığı komutlar sabit bir kümededir 2ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+AssertionError: src/screens/registry.ts: expected true to be false // Object.is equality
+AssertionError: expected [ 'predictAll' ] to deeply equal []
+ Test Files  1 failed (1)
+      Tests  2 failed | 11 passed (13)
+=================== i_official_predict_all_invoke
+     × arz sayfası açılışı (D3 beyanlı): record_ceiling resmi j; predict_all 0 çağrı 54ms
+     × beyan aç/kapa, getiri sekmesi, temizle: j resmi j, predict_all her adımda 0 102ms
+     × SEÇİLEN varsayımsal j (5) aynen gider; sonra girilen beyan eklenmez; predict_all 0 256ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+AssertionError: predict_all çağrı sayısı (U38/U49): expected 1 to be +0 // Object.is equality
+AssertionError: [data-action=declare][data-h='4']: predict_all: expected 1 to be +0 // Object.is equality
+AssertionError: expected 1 to be +0 // Object.is equality
+ Test Files  1 failed (1)
+      Tests  3 failed | 4 passed (7)
+=================== j_b1_reverted_stage2
+thread 'scenario_path_guard' (3105241) panicked at tests/stage2.rs:468:5:
+B1 yol bekçisi 16 vakada açık:
+  is_within[askıda dosya bağı] = false
+  tekli dışa aktarma[askıda dosya bağı] -> INVALID_ARGUMENT
+  toplu dışa aktarma[askıda dosya bağı] -> INVALID_ARGUMENT
+  is_within[askıda dizin bağı] = false
+  tekli dışa aktarma[askıda dizin bağı] -> IO_ERROR
+  toplu dışa aktarma[askıda dizin bağı] -> IO_ERROR
+  is_within[var olmayan ara dizinli ..] = false
+  tekli dışa aktarma[var olmayan ara dizinli ..] -> IO_ERROR
+  toplu dışa aktarma[var olmayan ara dizinli ..] -> IO_ERROR
+  scenarios_dir[askıda uygulama verisi bağı] -> Ok
+  kaydetme[askıda uygulama verisi bağı] -> IO_ERROR
+  scenarios_dir[askıda scenarios bağı] -> Ok
+  kaydetme[askıda scenarios bağı] -> IO_ERROR
+  scenarios_dir[var olmayan ara dizinli ..] -> Ok
+  kaydetme[var olmayan ara dizinli ..] -> Ok
+test scenario_path_guard ... FAILED
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 13 filtered out; finished in 0.25s
+=================== j_b1_reverted_e2e
+E2E| U31 adım 5: T = 2026-09-23 ≤ bugün (2026-09-24) → KIRMIZI uyarı
+E2E| B1 dışa aktarma [askıda dosya bağı]: tekli INVALID_ARGUMENT · toplu INVALID_ARGUMENT
+E2E| B1 dışa aktarma [askıda dizin bağı]: tekli IO_ERROR · toplu IO_ERROR
+E2E| B1 dışa aktarma [dizin bağı]: tekli SCENARIO_PATH_INSIDE_REPO · toplu SCENARIO_PATH_INSIDE_REPO
+E2E| B1 dışa aktarma [var olmayan ara dizinli ..]: tekli IO_ERROR · toplu IO_ERROR
+E2E| B1 kaydetme [askıda uygulama verisi bağı]: IO_ERROR
+E2E| B1 kaydetme [var olmayan ara dizinli ..]: Ok
+thread 'freeze_flow' (3105972) panicked at tests/e2e.rs:409:5:
+B1 yol bekçisi 9 vakada açık:
+  tekli dışa aktarma [askıda dosya bağı] -> INVALID_ARGUMENT
+  toplu dışa aktarma [askıda dosya bağı] -> INVALID_ARGUMENT
+  tekli dışa aktarma [askıda dizin bağı] -> IO_ERROR
+  toplu dışa aktarma [askıda dizin bağı] -> IO_ERROR
+  tekli dışa aktarma [var olmayan ara dizinli ..] -> IO_ERROR
+  toplu dışa aktarma [var olmayan ara dizinli ..] -> IO_ERROR
+  kaydetme [askıda uygulama verisi bağı] -> IO_ERROR
+  kaydetme [var olmayan ara dizinli ..] -> Ok
+FAILED
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3 filtered out; finished in 2.89s
+=================== j2_b1_fully_reverted_stage2
+thread 'scenario_path_guard' (3106957) panicked at tests/stage2.rs:468:5:
+B1 yol bekçisi 15 vakada açık:
+  is_within[askıda dosya bağı] = false
+  tekli dışa aktarma[askıda dosya bağı] -> Ok
+  is_within[askıda dizin bağı] = false
+  tekli dışa aktarma[askıda dizin bağı] -> IO_ERROR
+  toplu dışa aktarma[askıda dizin bağı] -> IO_ERROR
+  is_within[var olmayan ara dizinli ..] = false
+  tekli dışa aktarma[var olmayan ara dizinli ..] -> IO_ERROR
+  toplu dışa aktarma[var olmayan ara dizinli ..] -> IO_ERROR
+  scenarios_dir[askıda uygulama verisi bağı] -> Ok
+  kaydetme[askıda uygulama verisi bağı] -> IO_ERROR
+  scenarios_dir[askıda scenarios bağı] -> Ok
+  kaydetme[askıda scenarios bağı] -> IO_ERROR
+  scenarios_dir[var olmayan ara dizinli ..] -> Ok
+  kaydetme[var olmayan ara dizinli ..] -> Ok
+test scenario_path_guard ... FAILED
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 13 filtered out; finished in 0.31s
+=================== k_freeze_no_preflight
+B3 [sahte gömülü sha] freeze_in -> Ok(registry/records/SNTP1/20300105T100000Z_aaaaaaaaaaaa.json)
+B3 [borsai repo dışından] freeze_in -> Ok(registry/records/SNTP1/20300105T100000Z_aaaaaaaaaaaa.json)
+thread 'freeze_refuses_when_preflight_blocked' (3107557) panicked at tests/stage3.rs:684:5:
+B3 dondurma ön koşulsuz açık, 8 sapma:
+  [sahte gömülü sha] freeze_in -> Ok(registry/records/SNTP1/20300105T100000Z_aaaaaaaaaaaa.json) (beklenen FREEZE_PREFLIGHT_BLOCKED + INDEX_SHA)
+  [sahte gömülü sha] Python `-m borsai.freeze` çağrıldı
+  [sahte gömülü sha] registry/records oluştu: ["SNTP1"]
+  [sahte gömülü sha] app/parity/incidents oluştu: ["20260923T222018Z.json"]
+  [borsai repo dışından] freeze_in -> Ok(registry/records/SNTP1/20300105T100000Z_aaaaaaaaaaaa.json) (beklenen FREEZE_PREFLIGHT_BLOCKED + BORSAI_IMPORT)
+  [borsai repo dışından] Python `-m borsai.freeze` çağrıldı
+  [borsai repo dışından] registry/records oluştu: ["SNTP1"]
+  [borsai repo dışından] app/parity/incidents oluştu: ["20260923T222019Z.json"]
+test freeze_refuses_when_preflight_blocked ... FAILED
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 14 filtered out; finished in 0.40s
+=================== l_freeze_ts_ready_no_preflight
+     × B3: ön koşul adımı koşmadıysa ya da ok: false ise dondur düğmesi kapalı (öteki şartlar sağlansa bile) 27ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+AssertionError: dondur düğmesi açık kalan hâller: expected [ 'ön koşul adımı koşmadı', …(2) ] to deeply equal []
+ Test Files  1 failed (1)
+      Tests  1 failed | 16 passed (17)
+=================== m_path_output_sha_default
+test official_conditional_return_uses_record_only ... FAILED
+thread 'official_conditional_return_uses_record_only' (3108435) panicked at tests/stage3.rs:1074:5:
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 14 filtered out; finished in 0.29s
+=================== n_floor_model_removed
+test golden_parity ... FAILED
+thread 'golden_parity' (3108818) panicked at crates/borsai_predict/tests/golden.rs:494:5:
+bit-eşitlik tabanı:
+v1_5_h99: tabanı yok (app/parity/bit_equal_floor.json'a bilerek yazılır)
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 15.82s
+=================== o_test_sh_no_include_ignored
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test freeze_flow ... ignored, BORSAI_E2E_REPO/DATA/PYTHON (geçici klon) ister: bash app/tests/e2e_freeze_tmp_repo.sh --ignored ile koşar
+test personal_isolation ... ignored, BORSAI_E2E_REPO/DATA/PYTHON (geçici klon) ister: bash app/tests/e2e_personal_isolation.sh --ignored ile koşar
+test prepare_screens ... ignored, BORSAI_E2E_REPO/DATA/PYTHON + BORSAI_E2E_SCREENS=1 ister: app/scripts/screens.sh ve bash app/tests/e2e_freeze_tmp_repo.sh --ignored ile koşar
+test result: ok. 1 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.22s
+test market20_via_python_repo ... ignored, BORSAI_REPO (asıl repo; .venv Python'u) ister: bash app/scripts/test.sh --include-ignored ile koşar
+test result: ok. 13 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.26s
+test inputs_doc_bytes_match_python ... ignored, BORSAI_REPO (asıl repo; .venv Python'u) ister: bash app/scripts/test.sh --include-ignored ile koşar
+test preflight_real_repo ... ignored, BORSAI_REPO (asıl repo; .venv Python'u) ister: bash app/scripts/test.sh --include-ignored ile koşar
+test wizard_fixtures ... ignored, BORSAI_REPO (asıl repo; .venv Python'u) ister: bash app/scripts/test.sh --include-ignored ile koşar
+test result: ok. 12 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out; finished in 0.54s
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.17s
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.80s
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 16.81s
+test records_parity ... ignored, BORSAI_REPO (asıl repo; .venv Python'u) ister: bash app/scripts/test.sh --include-ignored ile koşar
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+ Test Files  16 passed (16)
+      Tests  222 passed (222)
+=================== o_test_sh_no_include_ignored (son satırlar)
+=== 4. beklenen değişiklikler (bilgi) ===
+MANIFEST.json:  1 file changed, 26 insertions(+), 4 deletions(-)
+  yeni ceiling_path_v0          468 satır · koşullu 40 taban satır
+  yeni ceiling_path_v0@INF      468 satır · koşullu 40 taban satır
+  yeni pb_ceiling_path_v0       468 satır · koşullu 40 taban satır
+=== golden_unchanged: YEŞİL (U46) ===
+=================== o: yalın cargo test'te ignored sayısı
+8
+MUT(a) satır 0 case v1_5_h99/0000 D5.p_up 0.9790906401090418 -> 0.9790906401090411 (|Δ|=6.661338e-16)
+MUT(c) n7 live.n_scored = 7 live.cells = 1
+MUT(d) n35 hücre base_train_mean D1 ci95 [-0.009, -0.001] -> [-0.009, 0.001]
+MUT(e1) uygulandı
+MUT(e2) uygulandı
+MUT(g) uygulandı (guard_outside)
+MUT(h) uygulandı
+MUT(i) uygulandı
+MUT(j) uygulandı: resolve_path eski canonicalize, check_export_target bağ reddi yok (write_export duruyor)
+MUT(j2) uygulandı: + std::fs::write
+MUT(k) uygulandı
+MUT(l) uygulandı
+MUT(m) uygulandı
+MUT(n) v1_5_h99 tabanı silindi (idi: 392 )
+MUT(o) uygulandı

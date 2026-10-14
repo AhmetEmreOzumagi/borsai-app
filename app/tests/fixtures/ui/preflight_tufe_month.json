@@ -1,0 +1,34 @@
+{
+  "repo_root": "FIXTURE",
+  "python_path": "FIXTURE",
+  "git_head": "0000000000000000000000000000000000000000",
+  "git_status_registry": "",
+  "index_sha_repo": "7e636e8bf64b25d79bac04f4bf78b9f870cded8d4d1c10009b6926941e4edb59",
+  "index_sha_embedded": "7e636e8bf64b25d79bac04f4bf78b9f870cded8d4d1c10009b6926941e4edb59",
+  "index_match": true,
+  "borsai_file": "FIXTURE",
+  "borsai_in_repo": true,
+  "today_istanbul": "2999-01-05",
+  "t": "2999-01-10",
+  "t_level": "NONE",
+  "ok": false,
+  "blockers": [
+    "TUFE_MONTH"
+  ],
+  "tufe": {
+    "source": "REPO",
+    "path": "FIXTURE",
+    "file_sha256": "FIXTURE",
+    "through_month": "FIXTURE",
+    "t": "2999-01-10",
+    "month": "2998-11",
+    "index": null,
+    "release_date": null,
+    "bulletin_id": null,
+    "refusal": "TUFE_MISSING",
+    "reason": "MONTH_MISSING",
+    "detail": "TÜFE 2998-11 ayı data/raw/tuik/tufe_genel_2025_100.csv dosyasında yok (T = 2999-01-10)",
+    "append_command": ".venv/bin/python data/raw/tuik/build_tufe_csv.py --append-month 2998-11 --bulletin-id <bülten sayısı> --release <YYYY-MM-DDT10:00:00+03:00> --xls <indirilen tablo .xls> --download-url '<indirme bağlantısı>' --sha256 <indirilen tablonun sha256'sı>",
+    "pin_ok": null
+  }
+}

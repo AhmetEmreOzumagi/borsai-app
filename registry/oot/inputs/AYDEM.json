@@ -1,0 +1,343 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "AYDEM",
+  "company": "Aydem Yenilenebilir Enerji A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_930966",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "9.9",
+      "source_id": "KAP_930966",
+      "source_document": "KAP 930966",
+      "source_published_at": "2021-04-26T18:16:59+03:00",
+      "source_sha256": "6345ae35d3bca2c8a7c291d70c70990160d5180cc7cbbcefd64f171ebd3f9c09",
+      "source_path": "registry/oot/source_docs/AYDEM/KAP_930966_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 9,9",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_19",
+          "quote": "Aydem 105.000.000 20.000.000 8,50-9,90 Yenilenebilir Enerji 700.000.000 705.000.000 5.000.000 - (1) (2) (3) A.Ş.",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "130000000",
+      "source_id": "KAP_930966",
+      "source_document": "KAP 930966",
+      "source_published_at": "2021-04-26T18:16:59+03:00",
+      "source_sha256": "6345ae35d3bca2c8a7c291d70c70990160d5180cc7cbbcefd64f171ebd3f9c09",
+      "source_path": "registry/oot/source_docs/AYDEM/KAP_930966_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 130.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "705000000",
+      "source_id": "KAP_930966",
+      "source_document": "KAP 930966",
+      "source_published_at": "2021-04-26T18:16:59+03:00",
+      "source_sha256": "6345ae35d3bca2c8a7c291d70c70990160d5180cc7cbbcefd64f171ebd3f9c09",
+      "source_path": "registry/oot/source_docs/AYDEM/KAP_930966_bildirim.pdf",
+      "quote": "sermayesini temsil eden 705.000.000 TL",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "capital_increase_shares": {
+      "value": "5000000",
+      "source_id": "SPK_BULTEN_2021_19",
+      "source_document": "SPK Bülteni 2021/19",
+      "source_published_at": "2021-04-08T23:59:59+03:00",
+      "source_sha256": "8b9be2fea1326749ee38f1ca332876abc23a7baf0be45c53421e743be86e29c2",
+      "source_path": "registry/oot/source_docs/AYDEM/SPK_BULTEN_2021-19.pdf",
+      "quote": "Aydem 105.000.000 20.000.000 8,50-9,90 Yenilenebilir Enerji 700.000.000 705.000.000 5.000.000 - (1) (2) (3) A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_BASE_PLUS_STATED_ADDITIONAL_SALE",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_930781_EK1",
+          "quote": "Halka arz sonucunda ortak satışı ve sermaye artırımı yoluyla satışa sunulan 110.000.000 TL ile ek satışa sunulan 20.000.000 TL olmak üzere toplam 130.000.000 TL nominal değerli payların satışı gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_base_plus_stated_additional": "130000000 = 5000000 + 105000000 + 20000000",
+        "c_additional_sale_stated": {
+          "source_id": "KAP_930781_EK1",
+          "quote": "Halka arz sonucunda ortak satışı ve sermaye artırımı yoluyla satışa sunulan 110.000.000 TL ile ek satışa sunulan 20.000.000 TL olmak üzere toplam 130.000.000 TL nominal değerli payların satışı gerçekleşmiştir."
+        }
+      },
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "existing_share_sale_shares": {
+      "value": "105000000",
+      "source_id": "SPK_BULTEN_2021_19",
+      "source_document": "SPK Bülteni 2021/19",
+      "source_published_at": "2021-04-08T23:59:59+03:00",
+      "source_sha256": "8b9be2fea1326749ee38f1ca332876abc23a7baf0be45c53421e743be86e29c2",
+      "source_path": "registry/oot/source_docs/AYDEM/SPK_BULTEN_2021-19.pdf",
+      "quote": "Aydem 105.000.000 20.000.000 8,50-9,90 Yenilenebilir Enerji 700.000.000 705.000.000 5.000.000 - (1) (2) (3) A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_BASE_PLUS_STATED_ADDITIONAL_SALE",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_930781_EK1",
+          "quote": "Halka arz sonucunda ortak satışı ve sermaye artırımı yoluyla satışa sunulan 110.000.000 TL ile ek satışa sunulan 20.000.000 TL olmak üzere toplam 130.000.000 TL nominal değerli payların satışı gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_base_plus_stated_additional": "130000000 = 5000000 + 105000000 + 20000000",
+        "c_additional_sale_stated": {
+          "source_id": "KAP_930781_EK1",
+          "quote": "Halka arz sonucunda ortak satışı ve sermaye artırımı yoluyla satışa sunulan 110.000.000 TL ile ek satışa sunulan 20.000.000 TL olmak üzere toplam 130.000.000 TL nominal değerli payların satışı gerçekleşmiştir."
+        }
+      },
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "total_demand_multiple": {
+      "value": "4.5109713923",
+      "source_id": "KAP_930781_EK1",
+      "source_document": "KAP 930781 ek 1",
+      "source_published_at": "2021-04-26T08:30:10+03:00",
+      "source_sha256": "3fc08fbe7de3d7d10cbfcc4c90287fe8cae2452548306e97ba067fa1743eb59c",
+      "source_path": "registry/oot/source_docs/AYDEM/KAP_930781_ek1.pdf",
+      "origin": "CALCULATED_FROM_SOURCE_TOTALS",
+      "numerator": "586426281",
+      "numerator_quote": "TOPLAM 110.000.000 %100,0 338.548 586.426.281 %100,0 325.182 130.000.000 %100,0",
+      "denominator": "130000000",
+      "denominator_quote": "ek satışa sunulan 20.000.000 TL olmak üzere toplam 130.000.000 TL nominal değerli payların satışı gerçekleşmiştir",
+      "definition": "TOPLAM_TALEP_NOMINALI_586426281 / SATILAN_TOPLAM_NOMINAL_130000000 (ek satış dahil; aynı birim TL nominal; belge katı yazmıyor)",
+      "denominator_includes_additional_sale": true,
+      "note": "taban (110.000.000) paydası kullanılsaydı 5,3311; belge grup katı yazmıyor",
+      "derived": true,
+      "formula": "586426281 / 130000000 (10 ondalık ROUND_HALF_UP)",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "4,51",
+      "correction_kind": "PRECISION_ONLY"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_930781_EK1",
+      "source_document": "KAP 930781 ek 1",
+      "source_published_at": "2021-04-26T08:30:10+03:00",
+      "source_sha256": "3fc08fbe7de3d7d10cbfcc4c90287fe8cae2452548306e97ba067fa1743eb59c",
+      "source_path": "registry/oot/source_docs/AYDEM/KAP_930781_ek1.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "20000000",
+      "source_id": "KAP_930781_EK1",
+      "source_document": "KAP 930781 ek 1",
+      "source_published_at": "2021-04-26T08:30:10+03:00",
+      "source_sha256": "3fc08fbe7de3d7d10cbfcc4c90287fe8cae2452548306e97ba067fa1743eb59c",
+      "source_path": "registry/oot/source_docs/AYDEM/KAP_930781_ek1.pdf",
+      "quote": "Halka arz sonucunda ortak satışı ve sermaye artırımı yoluyla satışa sunulan 110.000.000 TL ile ek satışa sunulan 20.000.000 TL olmak üzere toplam 130.000.000 TL nominal değerli payların satışı gerçekleşmiştir.",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": null,
+      "missing_reason": "KAP_930781_EK1 gerçekleşen arzın TL tutarını yazmıyor (nominal ve 9,90 TL fiyat var); fiyat x pay hesaplanmadı",
+      "provenance": "MISSING"
+    },
+    "ipo_price_try": {
+      "value": "8.50-9.90",
+      "source_id": "SPK_BULTEN_2021_19",
+      "source_document": "SPK Bülteni 2021/19",
+      "source_published_at": "2021-04-08T23:59:59+03:00",
+      "source_sha256": "8b9be2fea1326749ee38f1ca332876abc23a7baf0be45c53421e743be86e29c2",
+      "source_path": "registry/oot/source_docs/AYDEM/SPK_BULTEN_2021-19.pdf",
+      "quote": "Aydem 105.000.000 20.000.000 8,50-9,90 Yenilenebilir Enerji 700.000.000 705.000.000 5.000.000 - (1) (2) (3) A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-04-08",
+        "bookbuilding_start": "2021-04-19",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "700000000",
+      "source_id": "SPK_BULTEN_2021_19",
+      "source_document": "SPK Bülteni 2021/19",
+      "source_published_at": "2021-04-08T23:59:59+03:00",
+      "source_sha256": "8b9be2fea1326749ee38f1ca332876abc23a7baf0be45c53421e743be86e29c2",
+      "source_path": "registry/oot/source_docs/AYDEM/SPK_BULTEN_2021-19.pdf",
+      "quote": "Aydem 105.000.000 20.000.000 8,50-9,90 Yenilenebilir Enerji 700.000.000 705.000.000 5.000.000 - (1) (2) (3) A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-08",
+        "bookbuilding_start": "2021-04-19",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "705000000",
+      "source_id": "SPK_BULTEN_2021_19",
+      "source_document": "SPK Bülteni 2021/19",
+      "source_published_at": "2021-04-08T23:59:59+03:00",
+      "source_sha256": "8b9be2fea1326749ee38f1ca332876abc23a7baf0be45c53421e743be86e29c2",
+      "source_path": "registry/oot/source_docs/AYDEM/SPK_BULTEN_2021-19.pdf",
+      "quote": "Aydem 105.000.000 20.000.000 8,50-9,90 Yenilenebilir Enerji 700.000.000 705.000.000 5.000.000 - (1) (2) (3) A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-08",
+        "bookbuilding_start": "2021-04-19",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "5000000",
+      "source_id": "SPK_BULTEN_2021_19",
+      "source_document": "SPK Bülteni 2021/19",
+      "source_published_at": "2021-04-08T23:59:59+03:00",
+      "source_sha256": "8b9be2fea1326749ee38f1ca332876abc23a7baf0be45c53421e743be86e29c2",
+      "source_path": "registry/oot/source_docs/AYDEM/SPK_BULTEN_2021-19.pdf",
+      "quote": "Aydem 105.000.000 20.000.000 8,50-9,90 Yenilenebilir Enerji 700.000.000 705.000.000 5.000.000 - (1) (2) (3) A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-08",
+        "bookbuilding_start": "2021-04-19",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "105000000",
+      "source_id": "SPK_BULTEN_2021_19",
+      "source_document": "SPK Bülteni 2021/19",
+      "source_published_at": "2021-04-08T23:59:59+03:00",
+      "source_sha256": "8b9be2fea1326749ee38f1ca332876abc23a7baf0be45c53421e743be86e29c2",
+      "source_path": "registry/oot/source_docs/AYDEM/SPK_BULTEN_2021-19.pdf",
+      "quote": "Aydem 105.000.000 20.000.000 8,50-9,90 Yenilenebilir Enerji 700.000.000 705.000.000 5.000.000 - (1) (2) (3) A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-08",
+        "bookbuilding_start": "2021-04-19",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "110000000",
+      "source_id": "SPK_BULTEN_2021_19",
+      "source_document": "SPK Bülteni 2021/19",
+      "source_published_at": "2021-04-08T23:59:59+03:00",
+      "source_sha256": "8b9be2fea1326749ee38f1ca332876abc23a7baf0be45c53421e743be86e29c2",
+      "source_path": "registry/oot/source_docs/AYDEM/SPK_BULTEN_2021-19.pdf",
+      "quote": "Aydem 105.000.000 20.000.000 8,50-9,90 Yenilenebilir Enerji 700.000.000 705.000.000 5.000.000 - (1) (2) (3) A.Ş.",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-08",
+        "bookbuilding_start": "2021-04-19",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "20000000",
+      "source_id": "SPK_BULTEN_2021_19",
+      "source_document": "SPK Bülteni 2021/19",
+      "source_published_at": "2021-04-08T23:59:59+03:00",
+      "source_sha256": "8b9be2fea1326749ee38f1ca332876abc23a7baf0be45c53421e743be86e29c2",
+      "source_path": "registry/oot/source_docs/AYDEM/SPK_BULTEN_2021-19.pdf",
+      "quote": "Aydem 105.000.000 20.000.000 8,50-9,90 Yenilenebilir Enerji 700.000.000 705.000.000 5.000.000 - (1) (2) (3) A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-08",
+        "bookbuilding_start": "2021-04-19",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "130000000",
+      "source_id": "SPK_BULTEN_2021_19",
+      "source_document": "SPK Bülteni 2021/19",
+      "source_published_at": "2021-04-08T23:59:59+03:00",
+      "source_sha256": "8b9be2fea1326749ee38f1ca332876abc23a7baf0be45c53421e743be86e29c2",
+      "source_path": "registry/oot/source_docs/AYDEM/SPK_BULTEN_2021-19.pdf",
+      "quote": "Aydem 105.000.000 20.000.000 8,50-9,90 Yenilenebilir Enerji 700.000.000 705.000.000 5.000.000 - (1) (2) (3) A.Ş.",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-08",
+        "bookbuilding_start": "2021-04-19",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2021-04-29",
+      "source_id": "KAP_930966",
+      "source_document": "KAP 930966",
+      "source_published_at": "2021-04-26T18:16:59+03:00",
+      "source_sha256": "6345ae35d3bca2c8a7c291d70c70990160d5180cc7cbbcefd64f171ebd3f9c09",
+      "source_path": "registry/oot/source_docs/AYDEM/KAP_930966_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 29/04/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-04-19",
+      "source_id": "KAP_930966",
+      "source_document": "KAP 930966",
+      "source_published_at": "2021-04-26T18:16:59+03:00",
+      "source_sha256": "6345ae35d3bca2c8a7c291d70c70990160d5180cc7cbbcefd64f171ebd3f9c09",
+      "source_path": "registry/oot/source_docs/AYDEM/KAP_930966_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 19-22/04/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-04-22",
+      "source_id": "KAP_930966",
+      "source_document": "KAP 930966",
+      "source_published_at": "2021-04-26T18:16:59+03:00",
+      "source_sha256": "6345ae35d3bca2c8a7c291d70c70990160d5180cc7cbbcefd64f171ebd3f9c09",
+      "source_path": "registry/oot/source_docs/AYDEM/KAP_930966_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 19-22/04/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_930966": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 930966",
+      "published_at": "2021-04-26T18:16:59+03:00",
+      "sha256": "6345ae35d3bca2c8a7c291d70c70990160d5180cc7cbbcefd64f171ebd3f9c09",
+      "path": "registry/oot/source_docs/AYDEM/KAP_930966_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_19": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/19",
+      "published_at": "2021-04-08T23:59:59+03:00",
+      "sha256": "8b9be2fea1326749ee38f1ca332876abc23a7baf0be45c53421e743be86e29c2",
+      "path": "registry/oot/source_docs/AYDEM/SPK_BULTEN_2021-19.pdf"
+    },
+    "KAP_930781_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 930781 ek 1",
+      "published_at": "2021-04-26T08:30:10+03:00",
+      "sha256": "3fc08fbe7de3d7d10cbfcc4c90287fe8cae2452548306e97ba067fa1743eb59c",
+      "path": "registry/oot/source_docs/AYDEM/KAP_930781_ek1.pdf"
+    }
+  }
+}

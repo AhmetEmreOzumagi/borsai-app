@@ -1,0 +1,60 @@
+{
+  "post_d1_n12": {
+    "status": "REPO",
+    "path": "tests/fixtures/scores/post_d1_n12.json",
+    "sha12": "ddb8c4757b0c",
+    "generated_at_utc": "2030-03-01T12:00:00Z",
+    "as_of_session": "2030-02-28",
+    "unsupported_version": null,
+    "integrity": null,
+    "doc_file": "post_d1_n12.json"
+  },
+  "post_d1_n35": {
+    "status": "REPO",
+    "path": "tests/fixtures/scores/post_d1_n35.json",
+    "sha12": "2b7e8da6c4ea",
+    "generated_at_utc": "2030-03-01T12:00:00Z",
+    "as_of_session": "2030-02-28",
+    "unsupported_version": null,
+    "integrity": null,
+    "doc_file": "post_d1_n35.json"
+  },
+  "post_d1_bad_cells": {
+    "status": "REPO",
+    "path": null,
+    "sha12": "ff417ec7dd0e",
+    "generated_at_utc": "2030-03-01T12:00:00Z",
+    "as_of_session": "2030-02-28",
+    "unsupported_version": null,
+    "integrity": {
+      "rule": "CONDITIONAL_CELLS_BELOW_MIN_N",
+      "model_id": "post_d1_hazard_v0",
+      "detail": "post_d1 j = 1: n_scored = 8 < 10, cells = 1"
+    },
+    "doc_file": null
+  },
+  "post_d1_bad_verdict": {
+    "status": "REPO",
+    "path": null,
+    "sha12": "b5e07ef64e62",
+    "generated_at_utc": "2030-03-01T12:00:00Z",
+    "as_of_session": "2030-02-28",
+    "unsupported_version": null,
+    "integrity": {
+      "rule": "VERDICT_WITHOUT_INTERVAL",
+      "model_id": "post_d1_hazard_v0",
+      "detail": "D1 sonrası j = 1 · S_cond null RPS vs ceiling_hazard_v0: verdict = \"geçiyor\", n = 12, ci95 = [-0.05,-0.01]"
+    },
+    "doc_file": null
+  },
+  "post_d1_bad_version": {
+    "status": "REPO",
+    "path": null,
+    "sha12": "ad7724154a71",
+    "generated_at_utc": "2030-03-01T12:00:00Z",
+    "as_of_session": "2030-02-28",
+    "unsupported_version": "borsai.scores_post_d1/2",
+    "integrity": null,
+    "doc_file": null
+  }
+}

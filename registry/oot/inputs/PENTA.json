@@ -1,0 +1,341 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "PENTA",
+  "company": "Penta Teknoloji Ürünleri Dağıtım Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_935940",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "32",
+      "source_id": "KAP_935940",
+      "source_document": "KAP 935940",
+      "source_published_at": "2021-05-10T18:22:56+03:00",
+      "source_sha256": "80b1e79e598e3aab2326413785ae89884d77d5a7748b3633e60c692cb1bc456b",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935940_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 32",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_22",
+          "quote": "Penta Teknoloji 6.378.752 2.756.809 32-38 Ürünleri Dağıtım 31.724.000 43.724.000 12.000.000 - (4) (5) (6) Ticaret A.Ş.",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "18378752",
+      "source_id": "KAP_935940",
+      "source_document": "KAP 935940",
+      "source_published_at": "2021-05-10T18:22:56+03:00",
+      "source_sha256": "80b1e79e598e3aab2326413785ae89884d77d5a7748b3633e60c692cb1bc456b",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935940_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 18.378.752",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "43724000",
+      "source_id": "KAP_935940",
+      "source_document": "KAP 935940",
+      "source_published_at": "2021-05-10T18:22:56+03:00",
+      "source_sha256": "80b1e79e598e3aab2326413785ae89884d77d5a7748b3633e60c692cb1bc456b",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935940_bildirim.pdf",
+      "quote": "sermayesini temsil eden 43.724.000 TL",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "capital_increase_shares": {
+      "value": "12000000",
+      "source_id": "KAP_935552",
+      "source_document": "KAP 935552",
+      "source_published_at": "2021-05-10T08:32:24+03:00",
+      "source_sha256": "dcfd4ed00865a2f0cba63953ab23542deebe29675926d6f63a16cebe160c6f80",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935552_bildirim.pdf",
+      "quote": "Halka arz sonucunda sermaye artırımı ( 12.000.000 TL nominal değerli pay) ve ortak satışı",
+      "note": "KAP_935552 satıcı ortak Gözde Girişim'in sonuç açıklaması; aracı kurum eki (KAP_935550_EK1) ayrımı yazmıyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "existing_share_sale_shares": {
+      "value": "6378752",
+      "source_id": "SPK_BULTEN_2021_22",
+      "source_document": "SPK Bülteni 2021/22",
+      "source_published_at": "2021-04-29T23:59:59+03:00",
+      "source_sha256": "ae840b6d52f44595572850e903e2ab07a9a4fb3ae139cc0184044925da9db51d",
+      "source_path": "registry/oot/source_docs/PENTA/SPK_BULTEN_2021-22.pdf",
+      "quote": "Penta Teknoloji 6.378.752 2.756.809 32-38 Ürünleri Dağıtım 31.724.000 43.724.000 12.000.000 - (4) (5) (6) Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_935550_EK1",
+          "quote": "Halka arz sonucunda sermaye artırımı ve ortak satışı yoluyla satışa sunulan 18.378.752 TL nominal değerli payların satışı gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_planned_base": "18378752 = 12000000 + 6378752",
+        "c_no_additional_sale": {
+          "source_id": "KAP_935550_EK1",
+          "used": "NONE",
+          "quote": "sermaye artırımı ve ortak satışı yoluyla satışa sunulan 18.378.752 TL nominal değerli payların satışı gerçekleşmiştir",
+          "note": "satılan toplam = taban; ek satış açıkça anılmıyor"
+        }
+      },
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "total_demand_multiple": {
+      "value": "1.0530721564",
+      "source_id": "KAP_935550_EK1",
+      "source_document": "KAP 935550 ek 1",
+      "source_published_at": "2021-05-10T08:30:08+03:00",
+      "source_sha256": "5d6ea2eb9927438449a2597f4cfd1f7cdf1269748b8158825e8f81bcb5d1c965",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935550_ek1.pdf",
+      "origin": "CALCULATED_FROM_SOURCE_TOTALS",
+      "numerator": "19354152",
+      "numerator_quote": "TOPLAM 18.378.752 100,00 94.564 19.354.152 100,00 94.564 18.378.752 100,00",
+      "denominator": "18378752",
+      "denominator_quote": "sermaye artırımı ve ortak satışı yoluyla satışa sunulan 18.378.752 TL nominal değerli payların satışı gerçekleşmiştir",
+      "definition": "TOPLAM_TALEP_NOMINALI_19354152 / SATILAN_TOPLAM_NOMINAL_18378752 (tablo TOPLAM satırı talep sütunu; aynı birim TL nominal; ek satış yok; belge toplam katı yazmıyor)",
+      "denominator_includes_additional_sale": false,
+      "derived": true,
+      "formula": "19354152 / 18378752 (10 ondalık ROUND_HALF_UP)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_935550_EK1",
+      "source_document": "KAP 935550 ek 1",
+      "source_published_at": "2021-05-10T08:30:08+03:00",
+      "source_sha256": "5d6ea2eb9927438449a2597f4cfd1f7cdf1269748b8158825e8f81bcb5d1c965",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935550_ek1.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_935550_EK1",
+      "source_document": "KAP 935550 ek 1",
+      "source_published_at": "2021-05-10T08:30:08+03:00",
+      "source_sha256": "5d6ea2eb9927438449a2597f4cfd1f7cdf1269748b8158825e8f81bcb5d1c965",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935550_ek1.pdf",
+      "quote": "sermaye artırımı ve ortak satışı yoluyla satışa sunulan 18.378.752 TL nominal değerli payların satışı gerçekleşmiştir",
+      "zero_from_statement": true,
+      "note": "satılan toplam 18.378.752 = SPK planlanan taban (bedelli 12.000.000 + mevcut pay satışı 6.378.752); planlanan 2.756.809 ek satış kullanılmamış",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": null,
+      "missing_reason": "sonuç ekleri gerçekleşen arzın TL tutarını yazmıyor (yalnız pay fiyatı 32,00 TL ve nominaller)",
+      "provenance": "MISSING"
+    },
+    "ipo_price_try": {
+      "value": "32-38",
+      "source_id": "SPK_BULTEN_2021_22",
+      "source_document": "SPK Bülteni 2021/22",
+      "source_published_at": "2021-04-29T23:59:59+03:00",
+      "source_sha256": "ae840b6d52f44595572850e903e2ab07a9a4fb3ae139cc0184044925da9db51d",
+      "source_path": "registry/oot/source_docs/PENTA/SPK_BULTEN_2021-22.pdf",
+      "quote": "Penta Teknoloji 6.378.752 2.756.809 32-38 Ürünleri Dağıtım 31.724.000 43.724.000 12.000.000 - (4) (5) (6) Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-04-29",
+        "bookbuilding_start": "2021-05-06",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "31724000",
+      "source_id": "SPK_BULTEN_2021_22",
+      "source_document": "SPK Bülteni 2021/22",
+      "source_published_at": "2021-04-29T23:59:59+03:00",
+      "source_sha256": "ae840b6d52f44595572850e903e2ab07a9a4fb3ae139cc0184044925da9db51d",
+      "source_path": "registry/oot/source_docs/PENTA/SPK_BULTEN_2021-22.pdf",
+      "quote": "Penta Teknoloji 6.378.752 2.756.809 32-38 Ürünleri Dağıtım 31.724.000 43.724.000 12.000.000 - (4) (5) (6) Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-29",
+        "bookbuilding_start": "2021-05-06",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "43724000",
+      "source_id": "SPK_BULTEN_2021_22",
+      "source_document": "SPK Bülteni 2021/22",
+      "source_published_at": "2021-04-29T23:59:59+03:00",
+      "source_sha256": "ae840b6d52f44595572850e903e2ab07a9a4fb3ae139cc0184044925da9db51d",
+      "source_path": "registry/oot/source_docs/PENTA/SPK_BULTEN_2021-22.pdf",
+      "quote": "Penta Teknoloji 6.378.752 2.756.809 32-38 Ürünleri Dağıtım 31.724.000 43.724.000 12.000.000 - (4) (5) (6) Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-29",
+        "bookbuilding_start": "2021-05-06",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "12000000",
+      "source_id": "SPK_BULTEN_2021_22",
+      "source_document": "SPK Bülteni 2021/22",
+      "source_published_at": "2021-04-29T23:59:59+03:00",
+      "source_sha256": "ae840b6d52f44595572850e903e2ab07a9a4fb3ae139cc0184044925da9db51d",
+      "source_path": "registry/oot/source_docs/PENTA/SPK_BULTEN_2021-22.pdf",
+      "quote": "Penta Teknoloji 6.378.752 2.756.809 32-38 Ürünleri Dağıtım 31.724.000 43.724.000 12.000.000 - (4) (5) (6) Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-29",
+        "bookbuilding_start": "2021-05-06",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "6378752",
+      "source_id": "SPK_BULTEN_2021_22",
+      "source_document": "SPK Bülteni 2021/22",
+      "source_published_at": "2021-04-29T23:59:59+03:00",
+      "source_sha256": "ae840b6d52f44595572850e903e2ab07a9a4fb3ae139cc0184044925da9db51d",
+      "source_path": "registry/oot/source_docs/PENTA/SPK_BULTEN_2021-22.pdf",
+      "quote": "Penta Teknoloji 6.378.752 2.756.809 32-38 Ürünleri Dağıtım 31.724.000 43.724.000 12.000.000 - (4) (5) (6) Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-29",
+        "bookbuilding_start": "2021-05-06",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "18378752",
+      "source_id": "SPK_BULTEN_2021_22",
+      "source_document": "SPK Bülteni 2021/22",
+      "source_published_at": "2021-04-29T23:59:59+03:00",
+      "source_sha256": "ae840b6d52f44595572850e903e2ab07a9a4fb3ae139cc0184044925da9db51d",
+      "source_path": "registry/oot/source_docs/PENTA/SPK_BULTEN_2021-22.pdf",
+      "quote": "Penta Teknoloji 6.378.752 2.756.809 32-38 Ürünleri Dağıtım 31.724.000 43.724.000 12.000.000 - (4) (5) (6) Ticaret A.Ş.",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-29",
+        "bookbuilding_start": "2021-05-06",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "2756809",
+      "source_id": "SPK_BULTEN_2021_22",
+      "source_document": "SPK Bülteni 2021/22",
+      "source_published_at": "2021-04-29T23:59:59+03:00",
+      "source_sha256": "ae840b6d52f44595572850e903e2ab07a9a4fb3ae139cc0184044925da9db51d",
+      "source_path": "registry/oot/source_docs/PENTA/SPK_BULTEN_2021-22.pdf",
+      "quote": "Penta Teknoloji 6.378.752 2.756.809 32-38 Ürünleri Dağıtım 31.724.000 43.724.000 12.000.000 - (4) (5) (6) Ticaret A.Ş.",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-29",
+        "bookbuilding_start": "2021-05-06",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "21135561",
+      "source_id": "SPK_BULTEN_2021_22",
+      "source_document": "SPK Bülteni 2021/22",
+      "source_published_at": "2021-04-29T23:59:59+03:00",
+      "source_sha256": "ae840b6d52f44595572850e903e2ab07a9a4fb3ae139cc0184044925da9db51d",
+      "source_path": "registry/oot/source_docs/PENTA/SPK_BULTEN_2021-22.pdf",
+      "quote": "Penta Teknoloji 6.378.752 2.756.809 32-38 Ürünleri Dağıtım 31.724.000 43.724.000 12.000.000 - (4) (5) (6) Ticaret A.Ş.",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-04-29",
+        "bookbuilding_start": "2021-05-06",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2021-05-17",
+      "source_id": "KAP_935940",
+      "source_document": "KAP 935940",
+      "source_published_at": "2021-05-10T18:22:56+03:00",
+      "source_sha256": "80b1e79e598e3aab2326413785ae89884d77d5a7748b3633e60c692cb1bc456b",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935940_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 17/05/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-05-06",
+      "source_id": "KAP_935940",
+      "source_document": "KAP 935940",
+      "source_published_at": "2021-05-10T18:22:56+03:00",
+      "source_sha256": "80b1e79e598e3aab2326413785ae89884d77d5a7748b3633e60c692cb1bc456b",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935940_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 06-07/05/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-05-07",
+      "source_id": "KAP_935940",
+      "source_document": "KAP 935940",
+      "source_published_at": "2021-05-10T18:22:56+03:00",
+      "source_sha256": "80b1e79e598e3aab2326413785ae89884d77d5a7748b3633e60c692cb1bc456b",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935940_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 06-07/05/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_935940": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 935940",
+      "published_at": "2021-05-10T18:22:56+03:00",
+      "sha256": "80b1e79e598e3aab2326413785ae89884d77d5a7748b3633e60c692cb1bc456b",
+      "path": "registry/oot/source_docs/PENTA/KAP_935940_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_22": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/22",
+      "published_at": "2021-04-29T23:59:59+03:00",
+      "sha256": "ae840b6d52f44595572850e903e2ab07a9a4fb3ae139cc0184044925da9db51d",
+      "path": "registry/oot/source_docs/PENTA/SPK_BULTEN_2021-22.pdf"
+    },
+    "KAP_935550_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 935550 ek 1",
+      "published_at": "2021-05-10T08:30:08+03:00",
+      "sha256": "5d6ea2eb9927438449a2597f4cfd1f7cdf1269748b8158825e8f81bcb5d1c965",
+      "path": "registry/oot/source_docs/PENTA/KAP_935550_ek1.pdf"
+    },
+    "KAP_935552": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 935552",
+      "published_at": "2021-05-10T08:32:24+03:00",
+      "sha256": "dcfd4ed00865a2f0cba63953ab23542deebe29675926d6f63a16cebe160c6f80",
+      "path": "registry/oot/source_docs/PENTA/KAP_935552_bildirim.pdf"
+    }
+  }
+}

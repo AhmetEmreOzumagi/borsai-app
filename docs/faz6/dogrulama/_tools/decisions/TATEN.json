@@ -1,0 +1,196 @@
+{
+ "ticker": "TATEN",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_1184942",
+  "KAP_1184942_EK1",
+  "KAP_1184942_EK2",
+  "KAP_1180970_EK1",
+  "KAP_1185339"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "4.0",
+   "origin": "SOURCE_REPORTED",
+   "source_id": "KAP_1184942_EK1",
+   "quote": "Yurt Dışı Kurumsal Yatırımcılar tahsisat tutarının 2,4 katı olmak üzere toplamda 4,0 kat filtrelenmemiş talep gelmiştir.",
+   "definition": "belgedeki toplam kat",
+   "denominator_includes_additional_sale": false,
+   "note": "ek satış planlanmamış (SPK satırı '-'); aynı belgedeki toplamlardan 281.550.455 / 70.200.000 = 4,0106902422. 'yaklaşık' sözcüğü grup katlarında var, toplam katta yok."
+  },
+  "total_demand_filter_status": {
+   "value": "UNFILTERED",
+   "source_id": "KAP_1184942_EK1",
+   "quote": "Yurt Dışı Kurumsal Yatırımcılar tahsisat tutarının 2,4 katı olmak üzere toplamda 4,0 kat filtrelenmemiş talep gelmiştir."
+  },
+  "ipo_size_tl": {
+   "value": "1579500000",
+   "source_id": "KAP_1184942_EK1",
+   "quote": "halka arz büyüklüğü 1.579.500.000 TL olarak gerçekleşmiştir."
+  },
+  "capital_increase_shares": {
+   "value": "35100000",
+   "source_id": "KAP_1184942_EK1",
+   "quote": "Tatlıpınar Enerji’nin sermayesinin 245.400.000 TL’den 280.500.000 TL’ye çıkarılması nedeniyle artırılan 35.100.000 TL nominal değerli 35.100.000 adet pay"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesi ortak satışını yalnız ortak bazında yazıyor (7.020.000 + 21.060.000 + 7.020.000); toplam ortak satışı nominali tek sayı olarak yazılı değil; toplama yapılmadı"
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_1184942_EK1",
+   "zero_from_statement": true,
+   "quote": "olmak üzere toplam 70.200.000 TL nominal değerli 70.200.000 adet pay halka arz edilmiştir.",
+   "note": "SPK satırında ek satış '-'; halka arz edilen toplam 70.200.000 = planlanan taban (bedelli 35.100.000 + mevcut pay satışı 35.100.000)"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_1184942_EK1",
+   "quote": "olmak üzere toplam 70.200.000 TL nominal değerli 70.200.000 adet pay halka arz edilmiştir."
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_1184942_EK1",
+   "used": "NONE",
+   "quote": "olmak üzere toplam 70.200.000 TL nominal değerli 70.200.000 adet pay halka arz edilmiştir.",
+   "note": "ek satış planlanmamıştı; toplam = taban"
+  },
+  "investor_count": {
+   "value": "2233460",
+   "source_id": "KAP_1184942_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "Toplam 70.200.000 100,0 2.356.053 281.550.455 100,0 2.233.460 70.200.000 100,0",
+   "note": "talep eden (başvuru) 2.356.053; talebi karşılanan 2.233.460"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "employees": "237",
+    "retail": "2233047",
+    "domestic_institutional": "165",
+    "foreign_institutional": "11"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_1184942_EK1",
+   "quote": [
+    "702.000 1,0 275 702.012 0,2 237 682.126 1,0",
+    "49.140.000 70,0 2.355.601 160.367.397 57,0 2.233.047 49.159.874 70,0",
+    "10.179.000 14,5 165 96.517.396 34,3 165 10.179.000 14,5",
+    "Kurumsal 10.179.000 14,5 12 23.963.650 8,5 11 10.179.000 14,5"
+   ],
+   "note": "employees = Ağaoğlu Şirketler Grubu Çalışanları; başvuru: çalışanlar 275, bireysel 2.355.601, yurt içi kurumsal 165, yurt dışı kurumsal 12"
+  },
+  "retail_demand_multiple": {
+   "value": "3.3",
+   "source_id": "KAP_1184942_EK1",
+   "quote": "Yurt İçi Bireysel Yatırımcılar tahsisat tutarının yaklaşık 3,3 katı",
+   "note": "belge 'yaklaşık' diyor; çalışanlar yaklaşık 1,0 kat"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": "9.5",
+   "source_id": "KAP_1184942_EK1",
+   "quote": "Yurt İçi Kurumsal Yatırımcılar tahsisat tutarının yaklaşık 9,5 katı"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": "2.4",
+   "source_id": "KAP_1184942_EK1",
+   "quote": "Yurt Dışı Kurumsal Yatırımcılar tahsisat tutarının 2,4 katı"
+  },
+  "distributed_by_group": {
+   "value": {
+    "employees": "682126",
+    "retail": "49159874",
+    "domestic_institutional": "10179000",
+    "foreign_institutional": "10179000"
+   },
+   "source_id": "KAP_1184942_EK1",
+   "quote": [
+    "702.000 1,0 275 702.012 0,2 237 682.126 1,0",
+    "49.140.000 70,0 2.355.601 160.367.397 57,0 2.233.047 49.159.874 70,0",
+    "10.179.000 14,5 165 96.517.396 34,3 165 10.179.000 14,5",
+    "Kurumsal 10.179.000 14,5 12 23.963.650 8,5 11 10.179.000 14,5"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "70.0",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1184942_EK1",
+   "quote": "49.140.000 70,0 2.355.601 160.367.397 57,0 2.233.047 49.159.874 70,0",
+   "note": "planlanan da %70,0"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "14.5",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1184942_EK1",
+   "quote": "10.179.000 14,5 165 96.517.396 34,3 165 10.179.000 14,5",
+   "note": "planlanan da %14,5"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": "14.5",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1184942_EK1",
+   "quote": "Kurumsal 10.179.000 14,5 12 23.963.650 8,5 11 10.179.000 14,5",
+   "note": "planlanan da %14,5"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç belgesi ve TSSD dağıtım yöntemini adlandırmıyor"
+  },
+  "lead_broker": {
+   "value": "İnfo Yatırım Menkul Değerler A.Ş.; Vakıf Yatırım Menkul Değerler A.Ş.",
+   "source_id": "KAP_1180970_EK1",
+   "quote": "halka arzda satışa aracılık edecek Info ve Vakıf Yatırım Menkul Değerler A.Ş.'nin",
+   "note": "TSSD (OCR) iki aracı kurumu birlikte sayıyor ('Info' OCR yazımı), konsorsiyum lideri ayrıca belirtilmiyor; sonuç bildirimini İnfo Yatırım yayımlamış"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {
+  "capital_increase_shares": {
+   "codex_value": "35.100.000",
+   "verdict": "FOUND_SAME"
+  },
+  "ipo_size_tl": {
+   "codex_value": "1.579.500.000",
+   "verdict": "FOUND_SAME"
+  },
+  "total_demand_multiple": {
+   "codex_value": "4,0",
+   "verdict": "FOUND_SAME"
+  },
+  "retail_demand_multiple": {
+   "codex_value": "3,3",
+   "verdict": "FOUND_SAME"
+  },
+  "domestic_institutional_demand_multiple": {
+   "codex_value": "9,5",
+   "verdict": "FOUND_SAME"
+  },
+  "foreign_institutional_demand_multiple": {
+   "codex_value": "2,4",
+   "verdict": "FOUND_SAME"
+  }
+ },
+ "notes": "Borsa dışı talep toplama (22,50 TL). Sonuç eki toplam katı (4,0, filtrelenmemiş) açıkça veriyor. Sermaye artırımı (35.100.000) tek sayı olarak yazılı; ortak satışı yalnız üç ortak için ayrı ayrı yazılı olduğundan existing_share_sale_shares null. Ek satış yok.",
+ "needs_search": false
+}

@@ -1,0 +1,51 @@
+# BORSAI_FAZ7_APP_P3P4 test koşuları (Europe/Istanbul tarihleri; komutlar repo kökünden)
+
+## Adım 0 — taban (HEAD 572ac1f = origin/main; ağaçta yalnız izinli görev dosyası docs/prompts/FAZ7_APP_P3P4.md)
+- bash app/scripts/test.sh: exit 0 · cargo 134 geçti (0 kalan) · vitest 272/272 (19 dosya) · parity (test_gen_golden.py) 7 geçti · golden_unchanged: YEŞİL (U46, U55, EK 3 P2)
+- .venv/bin/python app/parity/gen_golden.py --check: {"checked": 31, "different": []} exit 0
+- .venv/bin/pytest -q -n 6 --dist loadgroup: 866 passed in 910.14s (0:15:10; koşunun sonunda cargo derlemesiyle aynı anda)
+
+## Adım 1 — C0 referans kilidi (commit yok): 11 fark, app/parity/README.md "Faz 7C düşen arz ailesi: referans kilidi"
+
+## Adım 2 — C1 (46039fb)
+- bash app/scripts/test.sh: exit 0 · cargo 142 (+8: fall_semantics 7, fall birim 1) · vitest 272/272 · parity 7 · golden_unchanged YEŞİL
+
+## Adım 3 — C2 (2a29dd4) + APPPIN (3ab9d1e)
+- .venv/bin/python app/parity/gen_golden.py --check (C2 öncesi): {"checked": 35, "different": [4 (C) dosyası, _patched_params.jsonl, MANIFEST.json]} — eski 23 altın dosya, dec_cases.json ve tufe_cases.json bayt-eşit
+- bash app/scripts/test.sh: exit 0 · cargo 144 (+2: golden fall_parity [U77], coverage fall_coverage [U78]) · vitest 272/272 · parity 8 (+1 test_fall_models_pinned) · golden_unchanged YEŞİL (yeni taban 0041dc9: 27 altın .jsonl bayt-eşit; _patched ilk 19/31/43/51 satır)
+- .venv/bin/python app/parity/gen_golden.py --check: {"checked": 35, "different": []}
+- parity_report.json: 27 model 27 geçen; dört (C) dosyası 635/635 satır, bit-eşit 635 (1.0000), maks |Δ| 0 · yamalı 61/61 ((C) 10: PARAMS_INVALID 7, SCHEMA_UNSUPPORTED 1, F3_FILTER_STATUS_CONFLICT 1, tahmin 1)
+- golden_coverage_fall.json: ADDITIONAL_SALE_MISSING h99/pooled 9 (yok 1, null 5, boş 2, DATA_NOT_FOUND 1), addsale 20; INPUT_NEGATIVE (additional_sale_shares) 2'şer; add_sale = 1: h99 25, pooled 25, addsale 31; kırpma h99 f1r alt 24/üst 17, f3 alt 14/üst 26; pooled f1r 12/15, f3 14/11; @ZERO 635/635 sabit
+- APPPIN: .venv/bin/pytest -q tests/test_faz7c_model.py: 34 passed (pin 31 → 35, predict_fall.py artık uygulama MANIFEST'inde)
+
+## Adım 4 — C3 (41f14f0)
+- bash app/scripts/test.sh: exit 0 · cargo 145 (+1: records_parity fall_oot_open [K-P4-3]; parity birim testi genişledi) · vitest 272/272 · parity 8 · golden_unchanged YEŞİL
+- K-P4-3: BORSAI_REPO=… cargo test -p borsai_predict --test records_parity fall_oot_open -- --ignored --nocapture → açık üye 71, (C)'li kayıt 71, hücre 284, parite 284/284, bit-eşit 284, maks |Δ| 0; addsale 70 PREDICTED + 1 ADDITIONAL_SALE_MISSING; h99 ve pooled 67 PREDICTED + 1 ADDITIONAL_SALE_MISSING + 3 F3_MISSING; @ZERO 71 PREDICTED (kasa dizinleri açılmadı; çıktıda kod yok)
+- bash app/tests/e2e_freeze_tmp_repo.sh: YEŞİL · yeni kayıt 27 model, tufe 2026-08 = 134.75, parite 27/27 |Δ|max 0 (U80); eski 7 kayıt 16/16 + kayıtta yok 11
+- ara paralel pytest (APPPIN sonrası, C3 çalışırken): .venv/bin/pytest -q -n 6 --dist loadgroup → 866 passed in 1340.75s (0:22:20; cargo derlemeleriyle aynı anda)
+
+## Adım 5 — C4 (bkz. git log: BORSAI_APP_P34_C4)
+- bash app/scripts/test.sh: exit 0 · cargo 149 (+4: stage2 featured_fall_rules [U79], fall_summary_fixtures [U79, K-P4-1/2 gerçek dosyalar], stage3 official_fall_summary_uses_record_only, fall birim fall_cell_complement) · vitest 287/287 (+15: summary.test.ts düşüş kartı 13, resmi görünüm 1, no_frontend_math 1) · parity 8 · golden_unchanged YEŞİL
+
+## Adım 6 — E1 (bkz. git log: BORSAI_APP_P34_E1)
+- bash app/scripts/test.sh: exit 0 · cargo 151 (+2: oot_panel panel_view_rows_only_in_open_block [K-P3-1, U73, U74], panel_view_real_file [U75 Rust: 27/8, 27/14, 19/8, D1 sonrası 1/1 ×3; açık satır 71; RETRO 568, çizilmeyen 0; kasa kodu 0]) · vitest 287/287 · parity 8 · golden_unchanged YEŞİL
+
+## Adım 7 — E2 (bkz. git log: BORSAI_APP_P34_E2)
+- bash app/scripts/test.sh: exit 0 · cargo 151 · vitest 304/304 (20 dosya; +17 accuracy_oot.test.ts: U71 ×4, U72 ×3, U73 ×5, U74 ×2, U75 ×3) · parity 8 · golden_unchanged YEŞİL
+- U75: gerçek fixture (Rust okuyucusundan) altı bölümün birincil hücreleri SCORES_OOT.md §2 (8), §8.1 (14), §9.1 (8), §6, §10, §11 (1'er) ile n (blok), model, karşılaştırılan, fark, aralık (4 ondalık), k/k/e ve hüküm birebir; DOM'da 71 açık kod, kasa kodu 0 (yalnız sayı)
+
+## Adım 7 (ek) — E2 (ek) (9ddcab6)
+- bash app/scripts/test.sh: exit 0 · cargo 151 · vitest 305/305 (20 dosya; +1 accuracy_oot model kartı) · parity 8 · golden_unchanged YEŞİL
+
+## Adım 8 — ekran görüntüleri
+- bash app/scripts/screens_p34.sh: exit 0 · VITE_BORSAI_DEMO=1 VITE_BORSAI_DEMO_P34=1 npm run tauri dev -- --features snapshot · 14 görüntü (sips -Z 1200) → docs/app/p34/ekran/ · asıl repo registry/ ve data/ sha listesi öncesiyle aynı · kasa kodu görüntülerde yok (panel yalnız açık küme kodlarını çizer; Rust ve vitest taramaları 0)
+
+## Adım 9 — derleme (commit yok)
+- source app/scripts/env.sh; cd app; npm run tauri build -- --bundles app: exit 0 · BorsAi.app/Contents/MacOS/borsai-app sha256 4a51f11f5408a8b4eb5c8551f9ad0694b888a1565e8a16b9303b2b7cc8c64156 (7 832 416 bayt; gömülü HEAD 9ddcab6) · /Applications'a kopyalanmadı
+
+## Adım 10 — son kabul (HEAD 9ddcab6; ağaçta yalnız docs/app/p34/)
+- .venv/bin/python app/parity/gen_golden.py --check: {"checked": 35, "different": []} exit 0
+- bash app/scripts/test.sh: exit 0 · cargo 151 geçti (0 kalan) · vitest 305/305 (20 dosya) · parity 8 · golden_unchanged: YEŞİL (U46, U55, U80; EK 3 P2, P4)
+- .venv/bin/pytest -q (sıralı): 866 passed in 998.06s (0:16:38)
+- APPPIN: ek pin gerekmedi (3ab9d1e yeterli)
+- Tarama: docs/app/p34, app/ kaynakları, testler, altın dosyalar ve fikstürler (262 dosya) kohort dosyasının SEALED kodları için tarandı → 0 eşleşme (yalnız sayı); thb/thm + 8 haneli tarih kalıbı 0

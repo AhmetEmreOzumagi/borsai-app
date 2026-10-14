@@ -1,0 +1,31 @@
+# L4 prova: NETGL POST_D1 kaydı, uçtan uca (geçici klon; gerçek repoya yazılmadı)
+
+klon HEAD: b8763fcb09469dc9f481e5c91976aae8f32a4b1e  (git clone --local; kod bu oturumun çalışma ağacından)
+enjekte zaman (yerel saat değil): 2026-09-17T19:00:00+03:00
+kayıt: registry/post_d1/NETGL/20260917T160000Z_6d9fdff5c4b9.json
+D_1 = 2026-09-17; D2_cal = 2026-09-18; T_open = 2026-09-18T09:40:00+03:00; kayıt anı < T_open: True
+base_record: registry/records/NETGL/20260922T121936Z_65a39d7392dd.json (sha256 65a39d7392dd…, SPEC_SCORING_6_PRIMARY_ceiling_hazard_v0_AT_POST_D1_TIME)
+d1: ceiling_close_D1 = 1, lock_consistency = {'close_at_U': True, 'high_at_U': True, 'open_at_U': True}, half_day = 0, halt_flag = 0
+d1 bültenleri: data/raw/bist/thb/2026/thb_2026-09-17.zip (ce6c61c946e1…), data/raw/bist/thm/2026/thm_2026-09-17.zip (f246818fac56…)
+d1_features: d1_lock = 1, d1_turnover_ln = -3.711568281338081, clipped = False, uyarı = 0
+summary: {'n_models': 1, 'n_not_applicable': 0, 'n_predicted': 1, 'n_refused': 0}
+
+[1] kayıt şeması §7.4 birebir: EVET
+[2] post_d1_hazard_v0: status PREDICTED; kayıttaki çıktı == doğrudan predict_post_d1 (aynı girdi): True; path_conditional null (base_record ceiling_path_v0 taşımıyor)
+    S_cond[2] = 0.8607717317209536, S_cond[10] = 0.04222633592407073, p_break_next = 0.13922826827904644
+[3] base_always_ceiling: kopya S_cond vs Faz 2C j = 1 satırı max|Δ| = 0.0 (kaynak SPEC_DEVIATIONS_C4)
+[3] base_km_expanding: kopya S_cond vs Faz 2C j = 1 satırı max|Δ| = 0.0 (kaynak base_record)
+[3] base_km_last10: kopya S_cond vs Faz 2C j = 1 satırı max|Δ| = 0.0 (kaynak base_record)
+[3] ceiling_hazard_v0: kopya S_cond vs Faz 2C j = 1 satırı max|Δ| = 0.0 (kaynak base_record)
+[3] ceiling_hazard_v0@INF: kopya S_cond vs Faz 2C j = 1 satırı max|Δ| = 0.0 (kaynak base_record)
+    genel max|Δ| = 0.0 ≤ 1e-12: True; scoring.post_d1_comparator_parity: OK
+
+[4] sequence_guard, commit edilmemiş registry/post_d1 kaydı varken indirmeyi durdurdu: True
+    commit'ten sonra sequence_guard geçti; sequence_violations = []; post_d1_record_problems = []; h ≥ 2 satır sırası = []
+
+[5] model commit 7c18c0f58ed1 (kanıt 2026-09-24T14:13:55Z); outcome_ingest_commit_post_d1 = f1f9d444132e (D_1'den sonraki ilk sonuç verisi); model atası mı: False
+    kayıt commit ab7097488fdb push kanıtı: None; inputs_pit_ok_post_d1: True 
+    class_post_d1 = RETRO (model_prospective False, record_live False)
+    scores_post_d1 (klon): NETGL aşama durumu RETRO; n_scored 0, n_retro 7; retro_info NETGL kayıt sayısı 1
+
+SONUÇ: PROVA_OK

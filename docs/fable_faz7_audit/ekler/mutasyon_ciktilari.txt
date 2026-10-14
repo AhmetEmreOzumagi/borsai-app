@@ -1,0 +1,336 @@
+# Mutasyon çıktıları (BORSAI_FAZ7_FABLE_V1_REPRO_AUDIT_20260926); klon /tmp/borsai_faz7_audit/clone (HEAD f5d7609), sürücü ekler/mutate.sh
+# Her mutasyon ayrı uygulandı, ilgili test(ler) koştu, geri alındı. rc≠0 = KIRMIZI (bekçi yakaladı). Kasa kodu taraması: aşağıda.
+
+## Özet (summary.txt)
+klon HEAD: f5d7609; borsai kaynağı: /private/tmp/borsai_faz7_audit/clone/borsai
+a_clip_bounds_include_test_ipo rc=1 dur=60s :: tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden :: 1 failed in 59.46s
+b_clip_on_log_scale rc=1 dur=4s :: tests/test_faz7_model.py::test_winsor_bounds_are_training_type7_p05_p95_of_raw_values tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden :: 2 failed, 1 error in 3.10s
+c1_tufe_month_T_minus_1 rc=1 dur=1s :: tests/test_faz7_tufe.py::test_month_for_examples tests/test_faz7_tufe.py::test_index_for_is_pit_on_all_170_rows tests/test_faz7_golden.py::test_tufe_month_and_index_in_ledgers :: 3 failed in 0.23s
+c2_release_date_le_T_accepted rc=0 dur=2s :: tests/test_faz7_tufe.py::test_refusals_missing_not_pit_and_file_mismatch tests/test_faz7_tufe.py::test_index_for_is_pit_on_all_170_rows tests/test_faz7_model.py::test_tufe_refusals_in_predict tests/test_faz7_tufe.py :: 10 passed in 0.21s
+d1_gamma_penalized rc=1 dur=1s :: tests/test_ceiling.py::test_6_gamma_is_not_penalized tests/test_faz7_model.py::test_regime_lambda_1e9_equals_inf_newton_and_beta_vanishes :: 2 failed in 0.31s
+d2_delta_penalized rc=1 dur=1s :: tests/test_faz7_model.py::test_regime_lambda_1e9_equals_inf_newton_and_beta_vanishes tests/test_faz7_golden.py::test_regime_fit_lambda_1e9_matches_inf_on_real_data :: 2 failed in 0.27s
+e_tie_to_smallest_lambda rc=1 dur=2s :: tests/test_ceiling.py::test_7_tie_goes_to_largest_lambda_and_inf_is_in_grid :: 1 failed in 0.11s
+f_cutoff_le rc=1 dur=1s :: tests/test_faz7_backtest.py::test_fold_plans_same_tickers_near_era_78_and_no_leakage tests/test_ceiling.py::test_3_censoring_three_sessions_before_cutoff tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden :: 2 failed, 2 passed, 2 errors in 0.49s
+g1_live_r_equals_1 rc=1 dur=2s :: tests/test_faz7_model.py::test_regime_values_live_and_oot_inputs tests/test_faz7_golden.py::test_pooled_at_inf_differs_from_v0_at_inf :: 2 failed in 0.21s
+g2_test_r_equals_1 rc=1 dur=103s :: tests/test_faz7_backtest.py::test_log_entries_and_ledgers_synthetic tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden :: 2 failed in 102.18s (0:01:42)
+h_j10_exclusion_off rc=1 dur=36s :: tests/test_faz7_model.py::test_f3_filter_exclusion_rule tests/test_faz7_backtest.py::test_pooled_plan_filter_exclusion_matches_independent_mode tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden :: 2 failed, 1 error in 34.52s
+i_near_era_start_2023_12_01 rc=1 dur=4s :: tests/test_faz7_backtest.py::test_fold_plans_same_tickers_near_era_78_and_no_leakage tests/test_faz7_backtest.py::test_near_era_cell_of_v0_against_itself tests/test_faz7_golden.py::test_near_era_cells_labels_and_v0_comparator :: 3 failed in 1.68s
+j_tolerance_0_015 rc=0 dur=15s :: tests/test_faz7_backtest.py::test_near_era_label_rule_synthetic tests/test_faz7_golden.py::test_near_era_cells_labels_and_v0_comparator tests/test_faz7_golden.py::test_models_md_faz7_section tests/test_report.py :: 12 passed in 13.60s
+k1_v0_ledger_pin_skipped rc=1 dur=2s :: tests/test_faz7_backtest.py::test_v0_comparator_ledger_pinned_and_mean_rps_reproduced :: 1 failed in 0.21s
+k2_v0_comparator_is_other_ledger rc=1 dur=2s :: tests/test_faz7_backtest.py::test_v0_comparator_ledger_pinned_and_mean_rps_reproduced tests/test_faz7_golden.py::test_near_era_cells_labels_and_v0_comparator tests/test_faz7_golden.py::test_manifest_and_sha256sums :: 3 failed in 0.26s
+l_v0_predict_changed_gen_golden_check rc=1 dur=11s :: /tmp/borsai_faz7_audit/clone/.venv/bin/python app/parity/gen_golden.py --check :: {"checked": 25, "different": ["golden/ceiling_hazard_v0.jsonl", "golden/pb_ceiling_v0.jsonl", "golden/ceiling_path_v0.jsonl", "golden/ceiling_path_v0.conditional.jsonl", "golden/pb_ceiling_path_v0.jsonl", "golden/pb_ceiling_path_v0.conditional.jsonl", "golden/_patched_params.jsonl", "golden/MANIFEST.json"]}
+l_v0_predict_changed_pytest rc=1 dur=4s :: tests/test_ceiling.py::test_8_json_matches_numpy_final_model :: 2 failed in 2.91s
+m_vault_code_in_data rc=1 dur=3s :: tests/test_outcome_guard.py::test_cohort_codes_appear_in_data_only_as_outcomes :: 1 failed in 2.22s
+n_tufe_old_row_changed rc=1 dur=2s :: tests/test_faz7_tufe.py::test_file_sha_pinned_in_specs_and_provenance tests/test_faz7_tufe.py::test_index_for_is_pit_on_all_170_rows tests/test_faz7_tufe.py::test_builder_reproduces_csv_from_pinned_xls :: 3 failed in 0.23s
+o1_bootstrap_seed rc=1 dur=3s :: tests/test_faz7_golden.py::test_near_era_cells_labels_and_v0_comparator :: 1 failed in 1.04s
+o2_block_key_year rc=1 dur=2s :: tests/test_faz7_backtest.py::test_near_era_cell_of_v0_against_itself tests/test_faz7_golden.py::test_near_era_cells_labels_and_v0_comparator :: 2 failed in 0.28s
+=== klon durumu (mutasyonlar geri alındı) ===
+DONE_FAZ7
+
+
+## a_clip_bounds_include_test_ipo  (rc=1, KIRMIZI)
+testler: tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden
+son satırlar:
+            for m, res in rerun.items():
+    >           assert res.ledger_csv == (GOLDEN / bt.golden_filename(m)).read_bytes(), m
+    E           AssertionError: ceiling_hazard_v1_clip
+    E           assert b'model_id,fo...68292682927\n' == b'model_id,fo...68292682927\n'
+    E             
+    E             At index 1806 diff: b'6' != b'4'
+    E             Use -v to get more diff
+    
+    tests/test_faz7_golden.py:62: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden
+    1 failed in 59.46s
+
+## b_clip_on_log_scale  (rc=1, KIRMIZI)
+testler: tests/test_faz7_model.py::test_winsor_bounds_are_training_type7_p05_p95_of_raw_values tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden
+son satırlar:
+    E           AssertionError: f1r
+    E           assert (Fraction(731...000000000000)) == (Fraction(457...000000000000))
+    E             
+    E             At index 0 diff: Fraction(7312677758984055724064980969, 10000000000000000000) != Fraction(45704449139427935452867431570058451238731910118290168929363, 62500000000000000000000000000000000000000000000000)
+    E             Use -v to get more diff
+    
+    tests/test_faz7_model.py:61: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_faz7_model.py::test_winsor_bounds_are_training_type7_p05_p95_of_raw_values[ceiling_hazard_v1_clip]
+    FAILED tests/test_faz7_model.py::test_winsor_bounds_are_training_type7_p05_p95_of_raw_values[ceiling_hazard_v1_real]
+    ERROR tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden
+    2 failed, 1 error in 3.10s
+
+## c1_tufe_month_T_minus_1  (rc=1, KIRMIZI)
+testler: tests/test_faz7_tufe.py::test_month_for_examples tests/test_faz7_tufe.py::test_index_for_is_pit_on_all_170_rows tests/test_faz7_golden.py::test_tufe_month_and_index_in_ledgers
+son satırlar:
+    E                 
+    E                 - 2023-10
+    E                 ?      -
+    E                 + 2023-09
+    E                 ?       +
+    
+    tests/test_faz7_golden.py:148: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_faz7_tufe.py::test_month_for_examples - AssertionError: ass...
+    FAILED tests/test_faz7_tufe.py::test_index_for_is_pit_on_all_170_rows - borsa...
+    FAILED tests/test_faz7_golden.py::test_tufe_month_and_index_in_ledgers - Asse...
+    3 failed in 0.23s
+
+## c2_release_date_le_T_accepted  (rc=0, YEŞİL — KORUMASIZ)
+testler: tests/test_faz7_tufe.py::test_refusals_missing_not_pit_and_file_mismatch tests/test_faz7_tufe.py::test_index_for_is_pit_on_all_170_rows tests/test_faz7_model.py::test_tufe_refusals_in_predict tests/test_faz7_tufe.py
+son satırlar:
+    ..........                                                               [100%]
+    10 passed in 0.21s
+
+## d1_gamma_penalized  (rc=1, KIRMIZI)
+testler: tests/test_ceiling.py::test_6_gamma_is_not_penalized tests/test_faz7_model.py::test_regime_lambda_1e9_equals_inf_newton_and_beta_vanishes
+son satırlar:
+            inf = hz.fit_rows(g, Z, e, hz.INF, ("a", "b", "c"), R=R, r_columns=("r_pre_equal",))
+    >       assert big.status == inf.status == hz.CONVERGED and inf.grad_max <= hz.GRAD_TOL
+    E       AssertionError: assert ('MODEL_NOT_FI..._NOT_CONVERGE' == 'CONVERGED'
+    E         
+    E         - CONVERGED
+    E         + MODEL_NOT_FIT_DID_NOT_CONVERGE)
+    
+    tests/test_faz7_model.py:144: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_ceiling.py::test_6_gamma_is_not_penalized - AssertionError:...
+    FAILED tests/test_faz7_model.py::test_regime_lambda_1e9_equals_inf_newton_and_beta_vanishes
+    2 failed in 0.31s
+
+## d2_delta_penalized  (rc=1, KIRMIZI)
+testler: tests/test_faz7_model.py::test_regime_lambda_1e9_equals_inf_newton_and_beta_vanishes tests/test_faz7_golden.py::test_regime_fit_lambda_1e9_matches_inf_on_real_data
+son satırlar:
+    E        +      where <function norm at 0x10ae6d730> = <module 'numpy.linalg' from '/tmp/borsai_faz7_audit/clone/.venv/lib/python3.12/site-packages/numpy/linalg/__init__.py'>.norm
+    E        +        where <module 'numpy.linalg' from '/tmp/borsai_faz7_audit/clone/.venv/lib/python3.12/site-packages/numpy/linalg/__init__.py'> = np.linalg
+    E        +      and   array([ 2.67678798e-08, -1.74056483e-08, -4.51570549e-08]) = HazardFit(lam=1000000000.0, columns=('f1r', 'f2', 'f3'), gamma=array([-1.70652904, -1.97716268, -1.45740443]), beta=ar...s='CONVERGED', iterations=1, grad_max=2.984279490192421e-13, delta=array([5.87522408e-09]), r_columns=('r_pre_equal',)).beta
+    E        +        where HazardFit(lam=1000000000.0, columns=('f1r', 'f2', 'f3'), gamma=array([-1.70652904, -1.97716268, -1.45740443]), beta=ar...s='CONVERGED', iterations=1, grad_max=2.984279490192421e-13, delta=array([5.87522408e-09]), r_columns=('r_pre_equal',)) = TrainingResult(status='FIT_OK', features=('f1r', 'f2', 'f3'), selected_lambda=1000000000.0, score_table=[], fit=Hazard...ow(ticker='QUICK', first_trading_date='2026-08-06', day=1, group=0, event=1)], r_columns=('r_pre_equal',), excluded=()).fit
+    E        +  and   5.875224080406772e-09 = abs(5.875224080406772e-09)
+    E        +    where 5.875224080406772e-09 = float(np.float64(5.875224080406772e-09))
+    
+    tests/test_faz7_golden.py:250: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_faz7_model.py::test_regime_lambda_1e9_equals_inf_newton_and_beta_vanishes
+    FAILED tests/test_faz7_golden.py::test_regime_fit_lambda_1e9_matches_inf_on_real_data
+    2 failed in 0.27s
+
+## e_tie_to_smallest_lambda  (rc=1, KIRMIZI)
+testler: tests/test_ceiling.py::test_7_tie_goes_to_largest_lambda_and_inf_is_in_grid
+son satırlar:
+            assert [hz.lambda_parse(x) for x in MODEL_SPECS["ceiling_hazard_v0"]["lambda_grid"]] == list(hz.LAMBDA_GRID)
+            table = [{"lambda": 1.0, "score": 0.31, "status": hz.SCORED}, {"lambda": 10.0, "score": 0.3, "status": hz.SCORED},
+                     {"lambda": 30.0, "score": 0.3, "status": hz.SCORED}, {"lambda": "INF", "score": 0.4, "status": hz.SCORED}]
+    >       assert hz.choose_lambda(table) == 30.0
+    E       AssertionError: assert 10.0 == 30.0
+    E        +  where 10.0 = <function choose_lambda at 0x10bc3b600>([{'lambda': 1.0, 'score': 0.31, 'status': 'SCORED'}, {'lambda': 10.0, 'score': 0.3, 'status': 'SCORED'}, {'lambda': 30.0, 'score': 0.3, 'status': 'SCORED'}, {'lambda': 'INF', 'score': 0.4, 'status': 'SCORED'}])
+    E        +    where <function choose_lambda at 0x10bc3b600> = hz.choose_lambda
+    
+    tests/test_ceiling.py:253: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_ceiling.py::test_7_tie_goes_to_largest_lambda_and_inf_is_in_grid
+    1 failed in 0.11s
+
+## f_cutoff_le  (rc=1, KIRMIZI)
+testler: tests/test_faz7_backtest.py::test_fold_plans_same_tickers_near_era_78_and_no_leakage tests/test_ceiling.py::test_3_censoring_three_sessions_before_cutoff tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden
+son satırlar:
+    E       assert [(1, 0), (2, ...3, 0), (4, 0)] == [(1, 0), (2, 0), (3, 0)]
+    E         
+    E         Left contains one more item: (4, 0)
+    E         Use -v to get more diff
+    
+    tests/test_ceiling.py:127: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_ceiling.py::test_3_censoring_three_sessions_before_cutoff[10-expected0]
+    FAILED tests/test_ceiling.py::test_3_censoring_three_sessions_before_cutoff[5-expected1]
+    ERROR tests/test_faz7_backtest.py::test_fold_plans_same_tickers_near_era_78_and_no_leakage
+    ERROR tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden
+    2 failed, 2 passed, 2 errors in 0.49s
+
+## g1_live_r_equals_1  (rc=1, KIRMIZI)
+testler: tests/test_faz7_model.py::test_regime_values_live_and_oot_inputs tests/test_faz7_golden.py::test_pooled_at_inf_differs_from_v0_at_inf
+son satırlar:
+            frozen = json.loads((ROOT / "models" / "ceiling_hazard_v0@INF.json").read_text(encoding="utf-8"))
+            p = golden[2][POOLED_INF]
+            assert p["gamma"] != frozen["gamma"] and p["regime"]["delta"] != 0.0 and p["beta"] == {}
+            live = ph.predict(p, {})
+    >       assert live["regime_value_used"] == 0 and live["S"] != ph.predict(frozen, {})["S"]
+    E       assert (1 == 0)
+    
+    tests/test_faz7_golden.py:294: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_faz7_model.py::test_regime_values_live_and_oot_inputs - ass...
+    FAILED tests/test_faz7_golden.py::test_pooled_at_inf_differs_from_v0_at_inf
+    2 failed in 0.21s
+
+## g2_test_r_equals_1  (rc=1, KIRMIZI)
+testler: tests/test_faz7_backtest.py::test_log_entries_and_ledgers_synthetic tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden
+son satırlar:
+    >           assert res.ledger_csv == (GOLDEN / bt.golden_filename(m)).read_bytes(), m
+    E           AssertionError: ceiling_hazard_v1_pooled
+    E           assert b'model_id,fo...78612716763\n' == b'model_id,fo...78612716763\n'
+    E             
+    E             At index 2204 diff: b'1' != b'0'
+    E             Use -v to get more diff
+    
+    tests/test_faz7_golden.py:62: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_faz7_backtest.py::test_log_entries_and_ledgers_synthetic - ...
+    FAILED tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden
+    2 failed in 102.18s (0:01:42)
+
+## h_j10_exclusion_off  (rc=1, KIRMIZI)
+testler: tests/test_faz7_model.py::test_f3_filter_exclusion_rule tests/test_faz7_backtest.py::test_pooled_plan_filter_exclusion_matches_independent_mode tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden
+son satırlar:
+    E             Extra items in the right set:
+    E             'VBTYZ'
+    E             'MIATK'
+    E             'MAREN'
+    E             Use -v to get more diff
+    
+    tests/test_faz7_backtest.py:75: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_faz7_model.py::test_f3_filter_exclusion_rule - AssertionErr...
+    FAILED tests/test_faz7_backtest.py::test_pooled_plan_filter_exclusion_matches_independent_mode
+    ERROR tests/test_faz7_golden.py::test_backtest_byte_identical_to_faz7_golden
+    2 failed, 1 error in 34.52s
+
+## i_near_era_start_2023_12_01  (rc=1, KIRMIZI)
+testler: tests/test_faz7_backtest.py::test_fold_plans_same_tickers_near_era_78_and_no_leakage tests/test_faz7_backtest.py::test_near_era_cell_of_v0_against_itself tests/test_faz7_golden.py::test_near_era_cells_labels_and_v0_comparator
+son satırlar:
+    >           assert (c["n"], c["n_months"]) == (78, 22) and c["label"] == bt.near_era_label(c["ci95"])
+    E           assert ((85, 23) == (78, 22)
+    E             
+    E             At index 0 diff: 85 != 78
+    E             Use -v to get more diff)
+    
+    tests/test_faz7_golden.py:200: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_faz7_backtest.py::test_fold_plans_same_tickers_near_era_78_and_no_leakage
+    FAILED tests/test_faz7_backtest.py::test_near_era_cell_of_v0_against_itself
+    FAILED tests/test_faz7_golden.py::test_near_era_cells_labels_and_v0_comparator
+    3 failed in 1.68s
+
+## j_tolerance_0_015  (rc=0, YEŞİL — KORUMASIZ)
+testler: tests/test_faz7_backtest.py::test_near_era_label_rule_synthetic tests/test_faz7_golden.py::test_near_era_cells_labels_and_v0_comparator tests/test_faz7_golden.py::test_models_md_faz7_section tests/test_report.py
+son satırlar:
+    ............                                                             [100%]
+    12 passed in 13.60s
+
+## k1_v0_ledger_pin_skipped  (rc=1, KIRMIZI)
+testler: tests/test_faz7_backtest.py::test_v0_comparator_ledger_pinned_and_mean_rps_reproduced
+son satırlar:
+            assert round(m, 4) == bt.V0_PUBLISHED_MEAN_RPS == 0.1503 and abs(m - 0.1503154628757853) <= 1e-9
+            text = (ROOT / "docs" / "MODELS.md").read_text(encoding="utf-8")
+            section = text.split("### `ceiling_hazard_v0` (SPEC_CEILING_V0)")[1].split("### `pb_ceiling_v0`")[0]
+            assert "0.1503" in section
+    >       with pytest.raises(bt.BacktestStop):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    E       Failed: DID NOT RAISE BacktestStop
+    
+    tests/test_faz7_backtest.py:97: Failed
+    =========================== short test summary info ============================
+    FAILED tests/test_faz7_backtest.py::test_v0_comparator_ledger_pinned_and_mean_rps_reproduced
+    1 failed in 0.21s
+
+## k2_v0_comparator_is_other_ledger  (rc=1, KIRMIZI)
+testler: tests/test_faz7_backtest.py::test_v0_comparator_ledger_pinned_and_mean_rps_reproduced tests/test_faz7_golden.py::test_near_era_cells_labels_and_v0_comparator tests/test_faz7_golden.py::test_manifest_and_sha256sums
+son satırlar:
+    E         
+    E         Omitting 3 identical items, use -vv to show
+    E         Differing items:
+    E         {'ceiling_hazard_v0': {'path': 'tests/reference/macos_golden_faz1b/ceiling_hazard_v0_fold_ledger.csv', 'sha256': '976b4dcea9819160bf863873a0a3e3a639942bdfeec6f9229e015047c904665b'}} != {'ceiling_hazard_v0': {'path': 'tests/reference/macos_golden_faz1b/ceiling_hazard_v0@INF_fold_ledger.csv', 'sha256': '90b610463de417c702cfae8032957aa4745aefcb4814a2745459da90bddb2f93'}}
+    E         Use -v to get more diff
+    
+    tests/test_faz7_golden.py:87: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_faz7_backtest.py::test_v0_comparator_ledger_pinned_and_mean_rps_reproduced
+    FAILED tests/test_faz7_golden.py::test_near_era_cells_labels_and_v0_comparator
+    FAILED tests/test_faz7_golden.py::test_manifest_and_sha256sums - AssertionErr...
+    3 failed in 0.26s
+
+## l_v0_predict_changed_gen_golden_check  (rc=1, KIRMIZI)
+testler: /tmp/borsai_faz7_audit/clone/.venv/bin/python app/parity/gen_golden.py --check
+son satırlar:
+    {"checked": 25, "different": ["golden/ceiling_hazard_v0.jsonl", "golden/pb_ceiling_v0.jsonl", "golden/ceiling_path_v0.jsonl", "golden/ceiling_path_v0.conditional.jsonl", "golden/pb_ceiling_path_v0.jsonl", "golden/pb_ceiling_path_v0.conditional.jsonl", "golden/_patched_params.jsonl", "golden/MANIFEST.json"]}
+
+## l_v0_predict_changed_pytest  (rc=1, KIRMIZI)
+testler: tests/test_ceiling.py::test_8_json_matches_numpy_final_model
+son satırlar:
+                assert out["refused"] is None
+                for key_numpy, key_json in (("hazards", "hazard"), ("S", "S"), ("P_close", "P_close_ceiling")):
+    >               assert max(abs(a - b) for a, b in zip(mine[key_numpy], out[key_json])) <= 1e-12, (r.ticker, key_json)
+    E               AssertionError: ('HATSN', 'hazard')
+    E               assert 3.125625702704582e-09 <= 1e-12
+    E                +  where 3.125625702704582e-09 = max(<generator object test_8_json_matches_numpy_final_model.<locals>.<genexpr> at 0x1102a04a0>)
+    
+    tests/test_ceiling.py:288: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_ceiling.py::test_8_json_matches_numpy_final_model[ceiling_hazard_v0]
+    FAILED tests/test_ceiling.py::test_8_json_matches_numpy_final_model[pb_ceiling_v0]
+    2 failed in 2.91s
+
+## m_vault_code_in_data  (rc=1, KIRMIZI)
+testler: tests/test_outcome_guard.py::test_cohort_codes_appear_in_data_only_as_outcomes
+son satırlar:
+            codes, sealed = _cohort_codes()
+            problems = cohort_code_problems(ROOT / "data", codes, sealed)       # yerel değişken: hata çıktısı kod listesi basmaz
+    >       assert problems == []
+    E       AssertionError: assert ['data/traini...u (1 farklı)'] == []
+    E         
+    E         Left contains one more item: 'data/training_table_v2.csv: kasa kodu (1 farklı)'
+    E         Use -v to get more diff
+    
+    tests/test_outcome_guard.py:547: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_outcome_guard.py::test_cohort_codes_appear_in_data_only_as_outcomes
+    1 failed in 2.22s
+
+## n_tufe_old_row_changed  (rc=1, KIRMIZI)
+testler: tests/test_faz7_tufe.py::test_file_sha_pinned_in_specs_and_provenance tests/test_faz7_tufe.py::test_index_for_is_pit_on_all_170_rows tests/test_faz7_tufe.py::test_builder_reproduces_csv_from_pinned_xls
+son satırlar:
+    >       assert mod.render(mod.build_rows()) == (TUIK / "tufe_genel_2025_100.csv").read_bytes()
+    E       AssertionError: assert b'month,index...2aa6c70ff86\n' == b'month,index...2aa6c70ff86\n'
+    E         
+    E         At index 78 diff: b'2' != b'3'
+    E         Use -v to get more diff
+    
+    tests/test_faz7_tufe.py:104: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_faz7_tufe.py::test_file_sha_pinned_in_specs_and_provenance
+    FAILED tests/test_faz7_tufe.py::test_index_for_is_pit_on_all_170_rows - borsa...
+    FAILED tests/test_faz7_tufe.py::test_builder_reproduces_csv_from_pinned_xls
+    3 failed in 0.23s
+
+## o1_bootstrap_seed  (rc=1, KIRMIZI)
+testler: tests/test_faz7_golden.py::test_near_era_cells_labels_and_v0_comparator
+son satırlar:
+    >           assert logged == _roundtrip({k: c[k] for k in logged})
+    E           AssertionError: assert {'ci95': [-0....r_n': 46, ...} == {'ci95': [-0....r_n': 46, ...}
+    E             
+    E             Omitting 7 identical items, use -vv to show
+    E             Differing items:
+    E             {'ci95': [-0.006628108974885741, 0.0048954313965766045]} != {'ci95': [-0.006583976545050647, 0.005027543752686028]}
+    E             Use -v to get more diff
+    
+    tests/test_faz7_golden.py:202: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_faz7_golden.py::test_near_era_cells_labels_and_v0_comparator
+    1 failed in 1.04s
+
+## o2_block_key_year  (rc=1, KIRMIZI)
+testler: tests/test_faz7_backtest.py::test_near_era_cell_of_v0_against_itself tests/test_faz7_golden.py::test_near_era_cells_labels_and_v0_comparator
+son satırlar:
+                c = ev["near"][m]
+    >           assert (c["n"], c["n_months"]) == (78, 22) and c["label"] == bt.near_era_label(c["ci95"])
+    E           assert ((78, 3) == (78, 22)
+    E             
+    E             At index 1 diff: 3 != 22
+    E             Use -v to get more diff)
+    
+    tests/test_faz7_golden.py:200: AssertionError
+    =========================== short test summary info ============================
+    FAILED tests/test_faz7_backtest.py::test_near_era_cell_of_v0_against_itself
+    FAILED tests/test_faz7_golden.py::test_near_era_cells_labels_and_v0_comparator
+    2 failed in 0.28s
+
+# Günlüklerde kasa kodu eşleşmesi (yalnız sayı): 1

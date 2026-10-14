@@ -1,0 +1,220 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "INVES",
+  "company": "Investco Holding A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "122203",
+      "source_id": "KAP_1004143_EK1",
+      "source_document": "KAP 1004143 ek 1",
+      "source_published_at": "2022-02-24T18:14:41+03:00",
+      "source_sha256": "e57a138a177052de60506c07029506c8f3fb8232c524e2acd80d35e6a134fd16",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004143_ek1.pdf",
+      "quote": "Halka arza toplamda 122.203 yatırımcı katılmış olup tamamına dağıtım yapılmıştır.",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "katılan = dağıtım yapılan",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "122015",
+        "domestic_institutional": "48",
+        "foreign_retail": "139",
+        "foreign_institutional": "1"
+      },
+      "source_id": "KAP_1004143_EK1",
+      "source_document": "KAP 1004143 ek 1",
+      "source_published_at": "2022-02-24T18:14:41+03:00",
+      "source_sha256": "e57a138a177052de60506c07029506c8f3fb8232c524e2acd80d35e6a134fd16",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004143_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar 122.015 34.390.197 0,92",
+        "Yurtiçi Kurumsal Yatırımcılar 48 3.089.363 0,08",
+        "Yurtdışı Bireysel Yatırımcılar 139 19.440 0,00",
+        "Yurtdışı Kurumsal Yatırımcılar 1 1.000 0,00"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "belge grup bazında talep/kat vermiyor; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belge grup bazında talep/kat vermiyor; grup tahsisatı yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belge grup bazında talep/kat vermiyor; grup tahsisatı yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "34390197",
+        "domestic_institutional": "3089363",
+        "foreign_retail": "19440",
+        "foreign_institutional": "1000"
+      },
+      "source_id": "KAP_1004143_EK1",
+      "source_document": "KAP 1004143 ek 1",
+      "source_published_at": "2022-02-24T18:14:41+03:00",
+      "source_sha256": "e57a138a177052de60506c07029506c8f3fb8232c524e2acd80d35e6a134fd16",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004143_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar 122.015 34.390.197 0,92",
+        "Yurtiçi Kurumsal Yatırımcılar 48 3.089.363 0,08",
+        "Yurtdışı Bireysel Yatırımcılar 139 19.440 0,00",
+        "Yurtdışı Kurumsal Yatırımcılar 1 1.000 0,00"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "91.707192",
+      "source_id": "KAP_1004143_EK1",
+      "source_document": "KAP 1004143 ek 1",
+      "source_published_at": "2022-02-24T18:14:41+03:00",
+      "source_sha256": "e57a138a177052de60506c07029506c8f3fb8232c524e2acd80d35e6a134fd16",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004143_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar 122.015 34.390.197 0,92",
+        "Toplam: 122.203 37.500.000 1,00"
+      ],
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "derived": true,
+      "formula": "34.390.197 / 37.500.000 × 100 (belgedeki 'Oran (%)' sütunu kesir yazıyor: 0,92)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "8.2383013333",
+      "source_id": "KAP_1004143_EK1",
+      "source_document": "KAP 1004143 ek 1",
+      "source_published_at": "2022-02-24T18:14:41+03:00",
+      "source_sha256": "e57a138a177052de60506c07029506c8f3fb8232c524e2acd80d35e6a134fd16",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004143_ek1.pdf",
+      "quote": [
+        "Yurtiçi Kurumsal Yatırımcılar 48 3.089.363 0,08",
+        "Toplam: 122.203 37.500.000 1,00"
+      ],
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "derived": true,
+      "formula": "3.089.363 / 37.500.000 × 100 (belgede kesir 0,08)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.0026666667",
+      "source_id": "KAP_1004143_EK1",
+      "source_document": "KAP 1004143 ek 1",
+      "source_published_at": "2022-02-24T18:14:41+03:00",
+      "source_sha256": "e57a138a177052de60506c07029506c8f3fb8232c524e2acd80d35e6a134fd16",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004143_ek1.pdf",
+      "quote": [
+        "Yurtdışı Kurumsal Yatırımcılar 1 1.000 0,00",
+        "Toplam: 122.203 37.500.000 1,00"
+      ],
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "derived": true,
+      "formula": "1.000 / 37.500.000 × 100 (belgede kesir 0,00)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Metro Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1002786_EK1",
+      "source_document": "KAP 1002786 ek 1",
+      "source_published_at": "2022-02-18T16:37:38+03:00",
+      "source_sha256": "367aee433390220e5165c117405df1d9dc7f1e7d0f50549467371903994ce464",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1002786_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Metro Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "TSSD OCR metni; sonuç bildirimini yayımlayan kurum da METRO YATIRIM MENKUL DEĞERLER A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde fiyat istikrarı yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız",
+      "source_id": "KAP_1004618",
+      "source_document": "KAP 1004618",
+      "source_published_at": "2022-02-25T18:10:04+03:00",
+      "source_sha256": "b43daf8c879c1944bdabcf6e676a7b8ca32b1ecf62c8c0b12a5d65948783dbec",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004618_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_1004618",
+      "source_document": "KAP 1004618",
+      "source_published_at": "2022-02-25T18:10:04+03:00",
+      "source_sha256": "b43daf8c879c1944bdabcf6e676a7b8ca32b1ecf62c8c0b12a5d65948783dbec",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004618_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1004618": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1004618",
+      "published_at": "2022-02-25T18:10:04+03:00",
+      "sha256": "b43daf8c879c1944bdabcf6e676a7b8ca32b1ecf62c8c0b12a5d65948783dbec",
+      "path": "registry/oot/source_docs/INVES/KAP_1004618_bildirim.pdf"
+    },
+    "KAP_1004143_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1004143 ek 1",
+      "published_at": "2022-02-24T18:14:41+03:00",
+      "sha256": "e57a138a177052de60506c07029506c8f3fb8232c524e2acd80d35e6a134fd16",
+      "path": "registry/oot/source_docs/INVES/KAP_1004143_ek1.pdf"
+    },
+    "KAP_1002786_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1002786 ek 1",
+      "published_at": "2022-02-18T16:37:38+03:00",
+      "sha256": "367aee433390220e5165c117405df1d9dc7f1e7d0f50549467371903994ce464",
+      "path": "registry/oot/source_docs/INVES/KAP_1002786_ek1.pdf"
+    }
+  }
+}

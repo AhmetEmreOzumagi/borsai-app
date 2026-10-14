@@ -1,0 +1,275 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "GESAN",
+  "company": "Girişim Elektrik Sanayi Taahhüt ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "42843",
+      "source_id": "KAP_958180_EK1",
+      "source_document": "KAP 958180 ek 1",
+      "source_published_at": "2021-08-16T01:09:09+03:00",
+      "source_sha256": "0669d4568f8536549bc07568b24ae0388277d742c215c3fe49b885347b01583f",
+      "source_path": "registry/oot/source_docs/GESAN/KAP_958180_ek1.pdf",
+      "quote": "Toplam 27.000.000 100,00% 44.346 489.210.638 100,00% 42.843 27.000.000 100,00%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 44.346; dağıtım yapılan 42.843",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "44.346",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "44.346",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "44.346 talep eden kişi sayısı; dağıtım yapılan 42.843 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "42707",
+        "domestic_institutional": "127",
+        "foreign_institutional": "9"
+      },
+      "source_id": "KAP_958180_EK1",
+      "source_document": "KAP 958180 ek 1",
+      "source_published_at": "2021-08-16T01:09:09+03:00",
+      "source_sha256": "0669d4568f8536549bc07568b24ae0388277d742c215c3fe49b885347b01583f",
+      "source_path": "registry/oot/source_docs/GESAN/KAP_958180_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 8.100.000 30,00% 44.090 308.336.530 63,03% 42.707 8.100.000 30,00%",
+        "Yurt İçi Kurumsal 9.450.000 35,00% 245 156.960.951 32,08% 127 9.450.000 35,00%",
+        "Yurt Dışı Kurumsal 9.450.000 35,00% 11 23.913.157 4,89% 9 9.450.000 35,00%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 44.090, yurt içi kurumsal 245, yurt dışı kurumsal 11",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "44.090",
+        "Yurt İçi Kurumsal": "245",
+        "Yurt Dışı Kurumsal": "11"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '44.090', 'Yurt İçi Kurumsal': '245', 'Yurt Dışı Kurumsal': '11'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex talep eden sayılarını almış; dağıtım yapılan: 42.707, 127, 9"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "38.1",
+      "source_id": "KAP_958180_EK1",
+      "source_document": "KAP 958180 ek 1",
+      "source_published_at": "2021-08-16T01:09:09+03:00",
+      "source_sha256": "0669d4568f8536549bc07568b24ae0388277d742c215c3fe49b885347b01583f",
+      "source_path": "registry/oot/source_docs/GESAN/KAP_958180_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara tahsis edilen payların 38,1 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "38,1",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "16.6",
+      "source_id": "KAP_958180_EK1",
+      "source_document": "KAP 958180 ek 1",
+      "source_published_at": "2021-08-16T01:09:09+03:00",
+      "source_sha256": "0669d4568f8536549bc07568b24ae0388277d742c215c3fe49b885347b01583f",
+      "source_path": "registry/oot/source_docs/GESAN/KAP_958180_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara tahsis edilen payların 16,6 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "16,6",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "2.5",
+      "source_id": "KAP_958180_EK1",
+      "source_document": "KAP 958180 ek 1",
+      "source_published_at": "2021-08-16T01:09:09+03:00",
+      "source_sha256": "0669d4568f8536549bc07568b24ae0388277d742c215c3fe49b885347b01583f",
+      "source_path": "registry/oot/source_docs/GESAN/KAP_958180_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara tahsis edilen payların 2,5 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,5",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "8100000",
+        "domestic_institutional": "9450000",
+        "foreign_institutional": "9450000"
+      },
+      "source_id": "KAP_958180_EK1",
+      "source_document": "KAP 958180 ek 1",
+      "source_published_at": "2021-08-16T01:09:09+03:00",
+      "source_sha256": "0669d4568f8536549bc07568b24ae0388277d742c215c3fe49b885347b01583f",
+      "source_path": "registry/oot/source_docs/GESAN/KAP_958180_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 8.100.000 30,00% 44.090 308.336.530 63,03% 42.707 8.100.000 30,00%",
+        "Yurt İçi Kurumsal 9.450.000 35,00% 245 156.960.951 32,08% 127 9.450.000 35,00%",
+        "Yurt Dışı Kurumsal 9.450.000 35,00% 11 23.913.157 4,89% 9 9.450.000 35,00%"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "8.100.000",
+        "Yurt İçi Kurumsal": "9.450.000",
+        "Yurt Dışı Kurumsal": "9.450.000"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '8.100.000', 'Yurt İçi Kurumsal': '9.450.000', 'Yurt Dışı Kurumsal': '9.450.000'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "30.00",
+      "source_id": "KAP_958180_EK1",
+      "source_document": "KAP 958180 ek 1",
+      "source_published_at": "2021-08-16T01:09:09+03:00",
+      "source_sha256": "0669d4568f8536549bc07568b24ae0388277d742c215c3fe49b885347b01583f",
+      "source_path": "registry/oot/source_docs/GESAN/KAP_958180_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 8.100.000 30,00% 44.090 308.336.530 63,03% 42.707 8.100.000 30,00%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %30",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "30,00",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "35.00",
+      "source_id": "KAP_958180_EK1",
+      "source_document": "KAP 958180 ek 1",
+      "source_published_at": "2021-08-16T01:09:09+03:00",
+      "source_sha256": "0669d4568f8536549bc07568b24ae0388277d742c215c3fe49b885347b01583f",
+      "source_path": "registry/oot/source_docs/GESAN/KAP_958180_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 9.450.000 35,00% 245 156.960.951 32,08% 127 9.450.000 35,00%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %35",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "35,00",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "35.00",
+      "source_id": "KAP_958180_EK1",
+      "source_document": "KAP 958180 ek 1",
+      "source_published_at": "2021-08-16T01:09:09+03:00",
+      "source_sha256": "0669d4568f8536549bc07568b24ae0388277d742c215c3fe49b885347b01583f",
+      "source_path": "registry/oot/source_docs/GESAN/KAP_958180_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal 9.450.000 35,00% 11 23.913.157 4,89% 9 9.450.000 35,00%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %35",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "35,00",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "'sabit fiyat' ifadesi sonuç ekinde ve TSSD'de yok; ayrıca satış yöntemi, dağıtım yöntemi değil"
+      }
+    },
+    "lead_broker": {
+      "value": "OYAK Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_954471_EK1",
+      "source_document": "KAP 954471 ek 1",
+      "source_published_at": "2021-08-03T16:51:53+03:00",
+      "source_sha256": "e3299aa17668fdb90de7b1b4acc759fe8dce7a888ca059919e3292407fce17fd",
+      "source_path": "registry/oot/source_docs/GESAN/KAP_954471_ek1.pdf",
+      "quote": "Halka Arza Aracılık Eden Yetkili Kuruluş OYAK YATIRIM MENKUL DEĞERLER A.Ş.",
+      "note": "sonuç bildirimini de OYAK Yatırım yayımlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Oyak Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_958338",
+      "source_document": "KAP 958338",
+      "source_published_at": "2021-08-16T18:10:30+03:00",
+      "source_sha256": "8912a759a162c861dd2a0420b7b63449103fe4afc90b64e24a494f8269f0c115",
+      "source_path": "registry/oot/source_docs/GESAN/KAP_958338_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_958338",
+      "source_document": "KAP 958338",
+      "source_published_at": "2021-08-16T18:10:30+03:00",
+      "source_sha256": "8912a759a162c861dd2a0420b7b63449103fe4afc90b64e24a494f8269f0c115",
+      "source_path": "registry/oot/source_docs/GESAN/KAP_958338_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_958338": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 958338",
+      "published_at": "2021-08-16T18:10:30+03:00",
+      "sha256": "8912a759a162c861dd2a0420b7b63449103fe4afc90b64e24a494f8269f0c115",
+      "path": "registry/oot/source_docs/GESAN/KAP_958338_bildirim.pdf"
+    },
+    "KAP_958180_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 958180 ek 1",
+      "published_at": "2021-08-16T01:09:09+03:00",
+      "sha256": "0669d4568f8536549bc07568b24ae0388277d742c215c3fe49b885347b01583f",
+      "path": "registry/oot/source_docs/GESAN/KAP_958180_ek1.pdf"
+    },
+    "KAP_954471_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 954471 ek 1",
+      "published_at": "2021-08-03T16:51:53+03:00",
+      "sha256": "e3299aa17668fdb90de7b1b4acc759fe8dce7a888ca059919e3292407fce17fd",
+      "path": "registry/oot/source_docs/GESAN/KAP_954471_ek1.pdf"
+    }
+  }
+}

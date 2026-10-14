@@ -1,0 +1,14 @@
+Faz 7 izahname alımı: bekçi mutasyon gösterimi (geçici kopya; repo dosyaları değişmez)
+Komut: PYTHONPATH=.:tests .venv/bin/python tests/test_faz7_prospectus.py
+Kopya temeli (değişmemiş): (d) 0 sorun, (e) 0 sorun
+M1a (d) A1CAP.distribution_method özellik dosyasında published_at ilk işlem gününe çekildi: published_at -> 2023-06-15T00:00:00+03:00
+  temel kopya: 0 sorun
+  mutasyon:    2 sorun; 'yayın zamanı ilk işlem gününden önce değil' sorunu: A1CAP.distribution_method: yayın zamanı ilk işlem gününden önce değil (KAP_1155755_EK1)
+M1b (d) A1CAP MANIFEST belgesinde published_at ilk işlem gününe çekildi: KAP_1155755_EK1 published_at -> 2023-06-15T00:00:00+03:00
+  temel kopya: 0 sorun
+  mutasyon:    11 sorun; 'yayın zamanı ilk işlem gününden önce değil' sorunu: A1CAP: MANIFEST belgesi KAP_1155755_EK1: yayın zamanı ilk işlem gününden önce değil
+M2 (e) A1CAP.json içinde tek bayt değişti: bayt 179: 'n' -> 'N'
+  temel kopya: 0 sorun
+  mutasyon:    1 sorun; 'sha256 tutmuyor' sorunu: sha256 tutmuyor: A1CAP.json
+Geri yükleme sonrası kopya: (d) 0 sorun, (e) 0 sorun
+Gerçek repo (mutasyondan sonra): (d) 0 sorun, (e) 0 sorun

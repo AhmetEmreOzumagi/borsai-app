@@ -1,0 +1,185 @@
+[veri] 99 arz, 990 seans; SESSIONS sha256 eca620d3a5e8; training_table sha256 b307cd0e3a01
+[1a] kırılma akşamı 82; b dağılımı 18/11/4/13/12/8/6/6/4; L=10: 14; b=10: 3; b_floor 35 (2≤b≤9: 31, b=1: 4)
+[1a] yarım gün 1, durdurma 0; ref==kapanış_{b−1} 67/67; Lo(ref)==alt 85/85; gün boyu taban kilidi 8; bant uyuşmazlığı 0
+[1a] yapısal sıfır 16 (b: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 6, 8: 6, 9: 4}); yaklaşık kuralla aynı 82/82; yakın dönem 69, 2023: 13; F2 birimi 78; olay F1 25 / F2 11; son etiket F1 2026-08-07 F2 2026-08-10; b_turnover aralığı [-2.774809265822848, 1.1691103406911647]
+[1b] el değiştirme (2≤b≤9, n=64) min/p05/p25/p50/p75/p95/max = 0.06236 / 0.1134 / 0.8542 / 1.632 / 2.228 / 2.897 / 3.219
+[1e] Faz 4 ledger'ı (sha 1f45365ee2d8) hücre sayısı paritesi: 87/87 birebir; farklı: []; max tarih farkı: []
+[ortam] python 3.12.14, numpy 2.5.2, sklearn 1.9.0; işçi 6
+[koşu] break_floor_v0: 82 fold, 5.9 sn; F1 durumları {'INSUFFICIENT_TRAINING_HISTORY': 13, 'FIT_OK': 69}; F2 {'TARGET_UNDEFINED_F2': 4, 'INSUFFICIENT_TRAINING_HISTORY': 26, 'FIT_OK': 52}; seçilen C F1 {'0.1': 32, '0.01': 7, 'ZERO': 3, '1.0': 27}; F2 {'1.0': 9, '0.1': 43}; ürün yetersiz 5
+[ledger] break_floor_v0: EŞLEŞTİ; kimlik sha kipi {'plan_order': 82}; maks |Δ| (sayısal sütunlar, 1e-9 eşiği):
+    clip_p05                     max|Δ| = 0.000e+00
+    clip_p95                     max|Δ| = 0.000e+00
+    coef_floor_F1                max|Δ| = 0.000e+00
+    coef_floor_F2                max|Δ| = 0.000e+00
+    coef_turn_F1                 max|Δ| = 0.000e+00
+    coef_turn_F2                 max|Δ| = 0.000e+00
+    inner_F1.coef                max|Δ| = 0.000e+00
+    inner_F1.intercept           max|Δ| = 0.000e+00
+    inner_F1.prep.mean           max|Δ| = 0.000e+00
+    inner_F1.prep.std            max|Δ| = 0.000e+00
+    inner_F1.prep.winsor         max|Δ| = 0.000e+00
+    inner_F1.scores              max|Δ| = 0.000e+00
+    inner_F2.coef                max|Δ| = 0.000e+00
+    inner_F2.intercept           max|Δ| = 0.000e+00
+    inner_F2.prep.mean           max|Δ| = 0.000e+00
+    inner_F2.prep.std            max|Δ| = 0.000e+00
+    inner_F2.prep.winsor         max|Δ| = 0.000e+00
+    inner_F2.scores              max|Δ| = 0.000e+00
+    intercept_F1                 max|Δ| = 0.000e+00
+    intercept_F2                 max|Δ| = 0.000e+00
+    mean_floor                   max|Δ| = 0.000e+00
+    mean_turn                    max|Δ| = 0.000e+00
+    p_F1                         max|Δ| = 0.000e+00
+    p_F2                         max|Δ| = 0.000e+00
+    product_F1                   max|Δ| = 0.000e+00
+    product_F2                   max|Δ| = 0.000e+00
+    std_floor                    max|Δ| = 0.000e+00
+    std_turn                     max|Δ| = 0.000e+00
+    test_b_turnover_ratio        max|Δ| = 0.000e+00
+[çözücü] Newton paritesi (ana model, F1, C≠ZERO, 66 fold): maks |Δp| 6.26e-09, maks |Δβ| 4.18e-08, maks |Δsabit| 2.07e-08
+[1f] yakın dönem hücreleri:
+    F1_product             n 69 (21 ay) model 0.1878 karş 0.3781 fark -0.1904 [-0.2520, -0.1247] iyi/kötü/eşit 48/21/0 (≤1e-12: 0)
+    F1_zero                n 69 (21 ay) model 0.1878 karş 0.2158 fark -0.0281 [-0.0453, -0.0074] iyi/kötü/eşit 49/17/3 (≤1e-12: 3)
+    F1_by_type             n 69 (21 ay) model 0.1878 karş 0.1771 fark +0.0106 [-0.0047, +0.0282] iyi/kötü/eşit 17/52/0 (≤1e-12: 0)
+    F2_product             n 52 (16 ay) model 0.0955 karş 0.1527 fark -0.0572 [-0.0847, -0.0239] iyi/kötü/eşit 32/20/0 (≤1e-12: 0)
+    F2_zero                n 52 (16 ay) model 0.0955 karş 0.0956 fark -0.0001 [-0.0131, +0.0179] iyi/kötü/eşit 38/14/0 (≤1e-12: 0)
+    info_product_zero_F1   n 69 (21 ay) model 0.3781 karş 0.2158 fark +0.1623 [+0.1087, +0.2139] iyi/kötü/eşit 22/47/0 (≤1e-12: 0)
+[1f] keşif:
+    F1_product|2023        n = 0
+    F1_zero|2023           n = 0
+    F2_product|2023        n = 0
+    F2_zero|2023           n = 0
+    F1_product|all         n 69 (21 ay) model 0.1878 karş 0.3781 fark -0.1904 [-0.2520, -0.1247] iyi/kötü/eşit 48/21/0 (≤1e-12: 0)
+    F1_zero|all            n 69 (21 ay) model 0.1878 karş 0.2158 fark -0.0281 [-0.0453, -0.0074] iyi/kötü/eşit 49/17/3 (≤1e-12: 3)
+    F2_product|all         n 52 (16 ay) model 0.0955 karş 0.1527 fark -0.0572 [-0.0847, -0.0239] iyi/kötü/eşit 32/20/0 (≤1e-12: 0)
+    F2_zero|all            n 52 (16 ay) model 0.0955 karş 0.0956 fark -0.0001 [-0.0131, +0.0179] iyi/kötü/eşit 38/14/0 (≤1e-12: 0)
+    F1_product|b1          n 17 (8 ay) model 0.1984 karş 0.3273 fark -0.1288 [-0.3000, +0.0393] iyi/kötü/eşit 9/8/0 (≤1e-12: 0)
+    F1_zero|b1             n 17 (8 ay) model 0.1984 karş 0.2106 fark -0.0122 [-0.0457, +0.0117] iyi/kötü/eşit 13/4/0 (≤1e-12: 0)
+    F1_product|b2_9        n 52 (19 ay) model 0.1843 karş 0.3948 fark -0.2105 [-0.2826, -0.1311] iyi/kötü/eşit 39/13/0 (≤1e-12: 0)
+    F1_zero|b2_9           n 52 (19 ay) model 0.1843 karş 0.2176 fark -0.0333 [-0.0609, -0.0044] iyi/kötü/eşit 36/13/3 (≤1e-12: 3)
+[1f] kalibrasyon: near: n 69 ort p 0.3315 gözlenen 0.2899 fark +0.0417; 2023: n 0; all: n 69 ort p 0.3315 gözlenen 0.2899 fark +0.0417; all_floor1: n 28 ort p 0.4499 gözlenen 0.5357 fark -0.0858; all_floor0: n 41 ort p 0.2507 gözlenen 0.1220 fark +0.1287; year_2023: n 0; year_2024: n 27 ort p 0.3553 gözlenen 0.3704 fark -0.0151; year_2025: n 16 ort p 0.3287 gözlenen 0.1250 fark +0.2037; year_2026: n 26 ort p 0.3086 gözlenen 0.3077 fark +0.0009
+[1f] hücreler günlük satırıyla (near_era, tam hassasiyet): EŞLEŞTİ; maks |Δ| 0.00e+00
+[1f] MODELS.md keşif/kalibrasyon 'F1_product|b1': eşit  
+[1f] MODELS.md keşif/kalibrasyon 'F1_zero|b1': eşit  
+[1f] MODELS.md keşif/kalibrasyon 'F1_product|b2_9': eşit  
+[1f] MODELS.md keşif/kalibrasyon 'F1_zero|b2_9': eşit  
+[1f] MODELS.md keşif/kalibrasyon 'all_floor1': eşit  
+[1f] MODELS.md keşif/kalibrasyon 'all_floor0': eşit  
+[1f] MODELS.md keşif/kalibrasyon 'year_2024': eşit  
+[1f] MODELS.md keşif/kalibrasyon 'year_2025': eşit  
+[1f] MODELS.md keşif/kalibrasyon 'year_2026': eşit  
+[1g] nihai fit önizlemesi: EŞLEŞTİ; C F1 ('1.0', '1.0') F2 ('0.1', '0.1'); sınıf sayıları ((57, 25), (57, 25)) ((67, 11), (67, 11)); iç fold (82, 82) (78, 78); @ZERO F1 (0.3048780487804878, 0.3048780487804878, 0.3048780487804878) F2 (0.14102564102564102, 0.14102564102564102, 0.14102564102564102); by_type {'0': {'events': 6, 'n': 47, 'rate': 0.1276595744680851}, '1': {'events': 19, 'n': 35, 'rate': 0.5428571428571428}}
+[1g] maks |Δ|: F1.coef.b_floor 0.00e+00; F1.coef.b_turnover 0.00e+00; F1.inner_brier 0.00e+00; F1.intercept 0.00e+00; F1.prep.mean 0.00e+00; F1.prep.std 0.00e+00; F1.prep.winsor 0.00e+00; F2.coef.b_floor 0.00e+00; F2.coef.b_turnover 0.00e+00; F2.inner_brier 0.00e+00; F2.intercept 0.00e+00; F2.prep.mean 0.00e+00; F2.prep.std 0.00e+00; F2.prep.winsor 0.00e+00
+[1g] tickers_sha256 F1 eşit True, F2 eşit True; kesim ('2026-08-07', '2026-08-10'); feature_ranges ([-2.774809265822848, 1.1691103406911647], [-2.774809265822848, 1.1691103406911647]); break_fields_sha256 adayları ({'csv': '7aef0a3d585c', 'csv_json': 'ca7163e6d861', 'pipe': 'e0cbf778f2c6', 'pipe_json': 'ca7163e6d861', 'tab': 'a59563ad174e', 'tab_json': 'ca7163e6d861'}, 'e0cbf778f2c6', ['pipe'])
+[§6] satır satır hüküm:
+    F1_product             altında — beklentiden çok iyi            tutmadı (daha iyi)
+    F1_zero                aralık içinde                            tuttu
+    F1_by_type             aralık içinde                            tuttu
+    F2_product             aralık içinde                            tuttu
+    F2_zero                aralık içinde                            tuttu
+    info_product_zero_F1   üstünde                                  tutmadı (daha kötü)
+    calibration            +0.0417                                  tuttu
+    beta_floor             nihai +0.9867; fold payı 66/66           tuttu
+    beta_turn              nihai +0.0629; fold payı < 0: 52/66      tutmadı (> 0)
+    C_final                1.0                                      tuttu
+    C_folds_zero_share     4%                                       tuttu
+    n_F1                   69                                       tuttu
+    n_F2                   52                                       tutmadı (az)
+[§6] beklentiden çok iyi tetikleri: {'primary_lt_-0.160': True, 'primary_hi_lt_-0.080': True, 'zero_lt_-0.090': False}; başarısızlık tanımları: {'a_indistinguishable': False, 'b_harms': False, 'c_no_info': False, 'd_level_shift': False}; k1 (ön eleme): True
+[§6] hüküm dizisi MODELS.md ile aynı: True
+[N20] yakın dönem taban kırılması n=28: kesin eşik payı ort 0.1150; v ≤ −0.185 payı ort 0.2728
+[N20-b] F1 model − ürün[spec]: n 69 (21 ay) model 0.1878 karş 0.3781 fark -0.1904 [-0.2520, -0.1247] iyi/kötü/eşit 48/21/0 (≤1e-12: 0); ürün ort p taban/taban üstü 0.115/0.568; ürün − @ZERO +0.1623 [+0.1087, +0.2139]
+[N20-b] F1 model − ürün[plus_one_tick]: n 69 (21 ay) model 0.1878 karş 0.3489 fark -0.1611 [-0.2193, -0.1013] iyi/kötü/eşit 48/21/0 (≤1e-12: 0); ürün ort p taban/taban üstü 0.199/0.569; ürün − @ZERO +0.1330 [+0.0847, +0.1826]
+[N20-b] F1 model − ürün[nominal_0_9]: n 69 (21 ay) model 0.1878 karş 0.3930 fark -0.2052 [-0.2665, -0.1375] iyi/kötü/eşit 48/21/0 (≤1e-12: 0); ürün ort p taban/taban üstü 0.053/0.566; ürün − @ZERO +0.1771 [+0.1228, +0.2272]
+[N20-b] F1 model − ürün[rel_1pct]: n 69 (21 ay) model 0.1878 karş 0.3426 fark -0.1549 [-0.2284, -0.0810] iyi/kötü/eşit 48/21/0 (≤1e-12: 0); ürün ort p taban/taban üstü 0.313/0.604; ürün − @ZERO +0.1268 [+0.0630, +0.1927]
+[N20-b] F1 model − ürün[half_tick]: n 69 (21 ay) model 0.1878 karş 0.3576 fark -0.1698 [-0.2281, -0.1086] iyi/kötü/eşit 48/21/0 (≤1e-12: 0); ürün ort p taban/taban üstü 0.172/0.568; ürün − @ZERO +0.1417 [+0.0923, +0.1906]
+[N20-b] F2 model − ürün[spec]: n 52 (16 ay) model 0.0955 karş 0.1527 fark -0.0572 [-0.0847, -0.0239] iyi/kötü/eşit 32/20/0 (≤1e-12: 0)
+[N20-b] F2 model − ürün[plus_one_tick]: n 52 (16 ay) model 0.0955 karş 0.1515 fark -0.0560 [-0.0848, -0.0226] iyi/kötü/eşit 34/18/0 (≤1e-12: 0)
+[sızıntı-i] BORSK: test arzı alanları değiştirildi → katsayı/ön işleme/iç skorlar/@ZERO/ürün bit-eşit True; p_F1 0.3146 → 0.3855 (yalnız test satırı)
+[sızıntı-i] OBAMS: test arzı alanları değiştirildi → katsayı/ön işleme/iç skorlar/@ZERO/ürün bit-eşit True; p_F1 0.2872 → 0.3626 (yalnız test satırı)
+[sızıntı-i] MOGAN: test arzı alanları değiştirildi → katsayı/ön işleme/iç skorlar/@ZERO/ürün bit-eşit True; p_F1 0.3951 → 0.4008 (yalnız test satırı)
+[koşu] break_floor_v0__sens_floor_only: 82 fold, 5.4 sn; F1 durumları {'INSUFFICIENT_TRAINING_HISTORY': 13, 'FIT_OK': 69}; F2 {'TARGET_UNDEFINED_F2': 4, 'INSUFFICIENT_TRAINING_HISTORY': 26, 'FIT_OK': 52}; seçilen C F1 {'1.0': 48, '0.1': 11, 'ZERO': 9, '0.01': 1}; F2 {'ZERO': 8, '0.01': 5, '0.1': 10, '0.001': 2, '1.0': 27}; ürün yetersiz 5
+[ledger] break_floor_v0__sens_floor_only: EŞLEŞTİ; kimlik sha kipi {'plan_order': 82}; maks |Δ| (sayısal sütunlar, 1e-9 eşiği):
+    coef_floor_F1                max|Δ| = 0.000e+00
+    coef_floor_F2                max|Δ| = 0.000e+00
+    inner_F1.coef                max|Δ| = 0.000e+00
+    inner_F1.intercept           max|Δ| = 0.000e+00
+    inner_F1.prep.mean           max|Δ| = 0.000e+00
+    inner_F1.prep.std            max|Δ| = 0.000e+00
+    inner_F1.scores              max|Δ| = 0.000e+00
+    inner_F2.coef                max|Δ| = 0.000e+00
+    inner_F2.intercept           max|Δ| = 0.000e+00
+    inner_F2.prep.mean           max|Δ| = 0.000e+00
+    inner_F2.prep.std            max|Δ| = 0.000e+00
+    inner_F2.scores              max|Δ| = 0.000e+00
+    intercept_F1                 max|Δ| = 0.000e+00
+    intercept_F2                 max|Δ| = 0.000e+00
+    mean_floor                   max|Δ| = 0.000e+00
+    p_F1                         max|Δ| = 0.000e+00
+    p_F2                         max|Δ| = 0.000e+00
+    product_F1                   max|Δ| = 0.000e+00
+    product_F2                   max|Δ| = 0.000e+00
+    std_floor                    max|Δ| = 0.000e+00
+    test_b_turnover_ratio        max|Δ| = 0.000e+00
+[1h] break_floor_v0__sens_floor_only: F1−ürün n 69 (21 ay) model 0.1814 karş 0.3781 fark -0.1968 [-0.2648, -0.1255] iyi/kötü/eşit 49/20/0 (≤1e-12: 0); F1−@ZERO n 69 (21 ay) model 0.1814 karş 0.2158 fark -0.0345 [-0.0545, -0.0106] iyi/kötü/eşit 45/15/9 (≤1e-12: 9)
+[koşu] break_floor_v0__sens_turnover_only: 82 fold, 6.0 sn; F1 durumları {'INSUFFICIENT_TRAINING_HISTORY': 13, 'FIT_OK': 69}; F2 {'TARGET_UNDEFINED_F2': 4, 'INSUFFICIENT_TRAINING_HISTORY': 26, 'FIT_OK': 52}; seçilen C F1 {'0.01': 26, '0.1': 10, 'ZERO': 16, '1.0': 9, '0.001': 8}; F2 {'1.0': 17, '0.1': 35}; ürün yetersiz 5
+[ledger] break_floor_v0__sens_turnover_only: EŞLEŞTİ; kimlik sha kipi {'plan_order': 82}; maks |Δ| (sayısal sütunlar, 1e-9 eşiği):
+    clip_p05                     max|Δ| = 0.000e+00
+    clip_p95                     max|Δ| = 0.000e+00
+    coef_turn_F1                 max|Δ| = 0.000e+00
+    coef_turn_F2                 max|Δ| = 0.000e+00
+    inner_F1.coef                max|Δ| = 0.000e+00
+    inner_F1.intercept           max|Δ| = 0.000e+00
+    inner_F1.prep.mean           max|Δ| = 0.000e+00
+    inner_F1.prep.std            max|Δ| = 0.000e+00
+    inner_F1.prep.winsor         max|Δ| = 0.000e+00
+    inner_F1.scores              max|Δ| = 0.000e+00
+    inner_F2.coef                max|Δ| = 0.000e+00
+    inner_F2.intercept           max|Δ| = 0.000e+00
+    inner_F2.prep.mean           max|Δ| = 0.000e+00
+    inner_F2.prep.std            max|Δ| = 0.000e+00
+    inner_F2.prep.winsor         max|Δ| = 0.000e+00
+    inner_F2.scores              max|Δ| = 0.000e+00
+    intercept_F1                 max|Δ| = 0.000e+00
+    intercept_F2                 max|Δ| = 0.000e+00
+    mean_turn                    max|Δ| = 0.000e+00
+    p_F1                         max|Δ| = 0.000e+00
+    p_F2                         max|Δ| = 0.000e+00
+    product_F1                   max|Δ| = 0.000e+00
+    product_F2                   max|Δ| = 0.000e+00
+    std_turn                     max|Δ| = 0.000e+00
+    test_b_turnover_ratio        max|Δ| = 0.000e+00
+[1h] break_floor_v0__sens_turnover_only: F1−ürün n 69 (21 ay) model 0.2214 karş 0.3781 fark -0.1567 [-0.2058, -0.1053] iyi/kötü/eşit 47/22/0 (≤1e-12: 0); F1−@ZERO n 69 (21 ay) model 0.2214 karş 0.2158 fark +0.0056 [-0.0094, +0.0296] iyi/kötü/eşit 29/24/16 (≤1e-12: 16)
+[koşu] break_floor_v0__sens_with_group_Z: 82 fold, 8.3 sn; F1 durumları {'INSUFFICIENT_TRAINING_HISTORY': 13, 'FIT_OK': 69}; F2 {'TARGET_UNDEFINED_F2': 4, 'INSUFFICIENT_TRAINING_HISTORY': 26, 'FIT_OK': 52}; seçilen C F1 {'0.1': 41, '0.01': 15, 'ZERO': 3, '1.0': 10}; F2 {'0.1': 52}; ürün yetersiz 5
+[ledger] break_floor_v0__sens_with_group_Z: EŞLEŞTİ; kimlik sha kipi {'plan_order': 82}; maks |Δ| (sayısal sütunlar, 1e-9 eşiği):
+    clip_p05                     max|Δ| = 0.000e+00
+    clip_p95                     max|Δ| = 0.000e+00
+    coef_floor_F1                max|Δ| = 0.000e+00
+    coef_floor_F2                max|Δ| = 0.000e+00
+    coef_turn_F1                 max|Δ| = 0.000e+00
+    coef_turn_F2                 max|Δ| = 0.000e+00
+    inner_F1.coef                max|Δ| = 0.000e+00
+    inner_F1.intercept           max|Δ| = 0.000e+00
+    inner_F1.prep.mean           max|Δ| = 0.000e+00
+    inner_F1.prep.std            max|Δ| = 0.000e+00
+    inner_F1.prep.winsor         max|Δ| = 0.000e+00
+    inner_F1.scores              max|Δ| = 0.000e+00
+    inner_F2.coef                max|Δ| = 0.000e+00
+    inner_F2.intercept           max|Δ| = 0.000e+00
+    inner_F2.prep.mean           max|Δ| = 0.000e+00
+    inner_F2.prep.std            max|Δ| = 0.000e+00
+    inner_F2.prep.winsor         max|Δ| = 0.000e+00
+    inner_F2.scores              max|Δ| = 0.000e+00
+    intercept_F1                 max|Δ| = 0.000e+00
+    intercept_F2                 max|Δ| = 0.000e+00
+    mean_floor                   max|Δ| = 0.000e+00
+    mean_turn                    max|Δ| = 0.000e+00
+    p_F1                         max|Δ| = 0.000e+00
+    p_F2                         max|Δ| = 0.000e+00
+    product_F1                   max|Δ| = 0.000e+00
+    product_F2                   max|Δ| = 0.000e+00
+    std_floor                    max|Δ| = 0.000e+00
+    std_turn                     max|Δ| = 0.000e+00
+    test_b_turnover_ratio        max|Δ| = 0.000e+00
+[1h] break_floor_v0__sens_with_group_Z: F1−ürün n 69 (21 ay) model 0.1980 karş 0.3781 fark -0.1801 [-0.2389, -0.1175] iyi/kötü/eşit 47/22/0 (≤1e-12: 0); F1−@ZERO n 69 (21 ay) model 0.1980 karş 0.2158 fark -0.0178 [-0.0314, -0.0000] iyi/kötü/eşit 46/20/3 (≤1e-12: 3)
+[son] borsai sys.modules: []; toplam süre 26.8 sn; HEPSİ EŞLEŞTİ: True

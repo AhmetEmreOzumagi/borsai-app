@@ -1,0 +1,590 @@
+{
+  "repo_root": "FIXTURE",
+  "today_istanbul": "2030-01-08",
+  "git_status_registry": "",
+  "tickers": [
+    {
+      "ticker": "SNTA1",
+      "company": "Sentetik Test A.Ş.",
+      "first_trading_date": "2030-01-10",
+      "ipo_status": "FROZEN",
+      "records": [
+        {
+          "file": "20300105T100000Z_aaaaaaaaaaaa.json",
+          "rel_path": "registry/records/SNTA1/20300105T100000Z_aaaaaaaaaaaa.json",
+          "status": "OK",
+          "schema_version": "borsai.record/1",
+          "record_type": "PREDICTION",
+          "ticker": "SNTA1",
+          "recorded_at_utc": "2030-01-05T10:00:00Z",
+          "recorded_at_istanbul": "2030-01-05T13:00:00+03:00",
+          "git_head": "0000000000000000000000000000000000000000",
+          "input_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "models_index_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "inputs_path": "registry/inputs/SNTA1.json",
+          "first_trading_date": "2030-01-10",
+          "n_models": 30,
+          "summary": {
+            "n_models": 19,
+            "n_predicted": 19,
+            "n_refused": 0,
+            "refusals": {}
+          },
+          "models": [
+            {
+              "model_id": "v1_5_h99",
+              "params_sha256": "8000000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "base_always_ceiling",
+              "params_sha256": "1900000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "base_train_median",
+              "params_sha256": "1700000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "base_train_mean",
+              "params_sha256": "1500000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "base_zero",
+              "params_sha256": "9000000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "base_rate",
+              "params_sha256": "9000000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "base_last10_rate",
+              "params_sha256": "1600000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "v1_6_h99",
+              "params_sha256": "8000000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "v1_5_market20_v0",
+              "params_sha256": "1600000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "pb_v0",
+              "params_sha256": "5000000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "ceiling_hazard_v0",
+              "params_sha256": "1700000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "ceiling_hazard_v0@INF",
+              "params_sha256": "2100000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "pb_ceiling_v0",
+              "params_sha256": "1300000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "pb_ceiling_v0@INF",
+              "params_sha256": "1700000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "base_km_expanding",
+              "params_sha256": "1700000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "base_km_last10",
+              "params_sha256": "1400000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "ceiling_path_v0",
+              "params_sha256": "1500000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "ceiling_path_v0@INF",
+              "params_sha256": "1900000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "pb_ceiling_path_v0",
+              "params_sha256": "1800000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "ceiling_hazard_v1_clip",
+              "params_sha256": "2200000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "ceiling_hazard_v1_real",
+              "params_sha256": "2200000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "ceiling_hazard_v1_pooled",
+              "params_sha256": "2400000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "ceiling_hazard_v1_pooled@INF",
+              "params_sha256": "2800000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "fall_d10_v0_h99",
+              "params_sha256": "1500000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "fall_d10_v0_pooled",
+              "params_sha256": "1800000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "fall_d10_v0_addsale",
+              "params_sha256": "1900000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "fall_d10_v0_pooled@ZERO",
+              "params_sha256": "2300000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            }
+          ],
+          "unsupported_models": [
+            {
+              "model_id": "zzz_future_a",
+              "params_sha256": "1200000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "zzz_future_b",
+              "params_sha256": "1200000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "zzz_future_c",
+              "params_sha256": "1200000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            }
+          ],
+          "n_ceiling_models": 14,
+          "cancels": null,
+          "reason": null,
+          "cancelled_by": null,
+          "tracked": false,
+          "added_commit": null,
+          "push_proof": null,
+          "error": null
+        },
+        {
+          "file": "20300105T110000Z_bbbbbbbbbbbb.json",
+          "rel_path": "registry/records/SNTA1/20300105T110000Z_bbbbbbbbbbbb.json",
+          "status": "OK",
+          "schema_version": "borsai.record/1",
+          "record_type": "PREDICTION",
+          "ticker": "SNTA1",
+          "recorded_at_utc": "2030-01-05T11:00:00Z",
+          "recorded_at_istanbul": "2030-01-05T13:00:00+03:00",
+          "git_head": "0000000000000000000000000000000000000000",
+          "input_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "models_index_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "inputs_path": "registry/inputs/SNTA1.json",
+          "first_trading_date": "2030-01-10",
+          "n_models": 30,
+          "summary": {
+            "n_models": 19,
+            "n_predicted": 19,
+            "n_refused": 0,
+            "refusals": {}
+          },
+          "models": [
+            {
+              "model_id": "v1_5_h99",
+              "params_sha256": "8000000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "base_always_ceiling",
+              "params_sha256": "1900000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "base_train_median",
+              "params_sha256": "1700000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "base_train_mean",
+              "params_sha256": "1500000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "base_zero",
+              "params_sha256": "9000000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "base_rate",
+              "params_sha256": "9000000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "base_last10_rate",
+              "params_sha256": "1600000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "v1_6_h99",
+              "params_sha256": "8000000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "v1_5_market20_v0",
+              "params_sha256": "1600000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "pb_v0",
+              "params_sha256": "5000000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "ceiling_hazard_v0",
+              "params_sha256": "1700000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "ceiling_hazard_v0@INF",
+              "params_sha256": "2100000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "pb_ceiling_v0",
+              "params_sha256": "1300000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "pb_ceiling_v0@INF",
+              "params_sha256": "1700000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "base_km_expanding",
+              "params_sha256": "1700000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "base_km_last10",
+              "params_sha256": "1400000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "ceiling_path_v0",
+              "params_sha256": "1500000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "ceiling_path_v0@INF",
+              "params_sha256": "1900000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "pb_ceiling_path_v0",
+              "params_sha256": "1800000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "ceiling_hazard_v1_clip",
+              "params_sha256": "2200000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "ceiling_hazard_v1_real",
+              "params_sha256": "2200000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "ceiling_hazard_v1_pooled",
+              "params_sha256": "2400000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "ceiling_hazard_v1_pooled@INF",
+              "params_sha256": "2800000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "fall_d10_v0_h99",
+              "params_sha256": "1500000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "fall_d10_v0_pooled",
+              "params_sha256": "1800000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "fall_d10_v0_addsale",
+              "params_sha256": "1900000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            },
+            {
+              "model_id": "fall_d10_v0_pooled@ZERO",
+              "params_sha256": "2300000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": false
+            }
+          ],
+          "unsupported_models": [
+            {
+              "model_id": "zzz_future_a",
+              "params_sha256": "1200000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "zzz_future_b",
+              "params_sha256": "1200000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            },
+            {
+              "model_id": "zzz_future_c",
+              "params_sha256": "1200000000000000000000000000000000000000000000000000000000000000",
+              "status": "PREDICTED",
+              "has_s": true
+            }
+          ],
+          "n_ceiling_models": 14,
+          "cancels": null,
+          "reason": null,
+          "cancelled_by": {
+            "file": "20300105T110000Z_bbbbbbbbbbbb.json",
+            "reason": "kurgusal: girdi belgesinde hatalı f3",
+            "recorded_at_istanbul": "2030-01-05T15:00:00+03:00"
+          },
+          "tracked": false,
+          "added_commit": null,
+          "push_proof": null,
+          "error": null
+        },
+        {
+          "file": "20300105T120000Z_cccccccccccc.json",
+          "rel_path": "registry/records/SNTA1/20300105T120000Z_cccccccccccc.json",
+          "status": "OK",
+          "schema_version": "borsai.record/1",
+          "record_type": "CANCELLATION",
+          "ticker": "SNTA1",
+          "recorded_at_utc": "2030-01-05T12:00:00Z",
+          "recorded_at_istanbul": "2030-01-05T15:00:00+03:00",
+          "git_head": "0000000000000000000000000000000000000000",
+          "input_sha256": null,
+          "models_index_sha256": null,
+          "inputs_path": null,
+          "first_trading_date": null,
+          "n_models": 0,
+          "summary": null,
+          "models": [],
+          "unsupported_models": [],
+          "n_ceiling_models": 0,
+          "cancels": "20300105T110000Z_bbbbbbbbbbbb.json",
+          "reason": "kurgusal: girdi belgesinde hatalı f3",
+          "cancelled_by": null,
+          "tracked": false,
+          "added_commit": null,
+          "push_proof": null,
+          "error": null
+        },
+        {
+          "file": "20300105T130000Z_dddddddddddd.json",
+          "rel_path": "registry/records/SNTA1/20300105T130000Z_dddddddddddd.json",
+          "status": "UNSUPPORTED_VERSION",
+          "schema_version": "borsai.record/0",
+          "record_type": null,
+          "ticker": null,
+          "recorded_at_utc": null,
+          "recorded_at_istanbul": null,
+          "git_head": null,
+          "input_sha256": null,
+          "models_index_sha256": null,
+          "inputs_path": null,
+          "first_trading_date": null,
+          "n_models": 0,
+          "summary": null,
+          "models": [],
+          "unsupported_models": [],
+          "n_ceiling_models": 0,
+          "cancels": null,
+          "reason": null,
+          "cancelled_by": null,
+          "tracked": false,
+          "added_commit": null,
+          "push_proof": null,
+          "error": null
+        }
+      ],
+      "n_active": 1,
+      "n_post_d1_files": 0,
+      "n_post_d1_active": 0
+    },
+    {
+      "ticker": "SNTB2",
+      "company": null,
+      "first_trading_date": null,
+      "ipo_status": null,
+      "records": [
+        {
+          "file": "20300105T140000Z_eeeeeeeeeeee.json",
+          "rel_path": "registry/records/SNTB2/20300105T140000Z_eeeeeeeeeeee.json",
+          "status": "UNREADABLE",
+          "schema_version": null,
+          "record_type": null,
+          "ticker": null,
+          "recorded_at_utc": null,
+          "recorded_at_istanbul": null,
+          "git_head": null,
+          "input_sha256": null,
+          "models_index_sha256": null,
+          "inputs_path": null,
+          "first_trading_date": null,
+          "n_models": 0,
+          "summary": null,
+          "models": [],
+          "unsupported_models": [],
+          "n_ceiling_models": 0,
+          "cancels": null,
+          "reason": null,
+          "cancelled_by": null,
+          "tracked": false,
+          "added_commit": null,
+          "push_proof": null,
+          "error": "key must be a string at line 1 column 2"
+        }
+      ],
+      "n_active": 0,
+      "n_post_d1_files": 0,
+      "n_post_d1_active": 0
+    }
+  ],
+  "ipos": [
+    {
+      "ticker": "SNTA1",
+      "company": "Sentetik Test A.Ş.",
+      "first_trading_date": "2030-01-10",
+      "listing_source_id": "KAP_1",
+      "status": "FROZEN",
+      "skip_reason": "",
+      "note": "kurgusal, test",
+      "added_at": "2030-01-05T13:00:00+03:00"
+    }
+  ],
+  "proofs": [
+    {
+      "sha": "0000000000000000000000000000000000000000",
+      "created_at": "2030-01-05T13:05:00Z",
+      "rel_path": "registry/push_proofs/0000000000000000000000000000000000000000.json"
+    }
+  ],
+  "supported_models": [
+    "v1_5_h99",
+    "base_always_ceiling",
+    "base_train_median",
+    "base_train_mean",
+    "base_zero",
+    "base_rate",
+    "base_last10_rate",
+    "v1_6_h99",
+    "v1_5_market20_v0",
+    "pb_v0",
+    "ceiling_hazard_v0",
+    "ceiling_hazard_v0@INF",
+    "pb_ceiling_v0",
+    "pb_ceiling_v0@INF",
+    "base_km_expanding",
+    "base_km_last10",
+    "ceiling_path_v0",
+    "ceiling_path_v0@INF",
+    "pb_ceiling_path_v0",
+    "ceiling_hazard_v1_clip",
+    "ceiling_hazard_v1_real",
+    "ceiling_hazard_v1_pooled",
+    "ceiling_hazard_v1_pooled@INF",
+    "fall_d10_v0_h99",
+    "fall_d10_v0_pooled",
+    "fall_d10_v0_addsale",
+    "fall_d10_v0_pooled@ZERO"
+  ]
+}

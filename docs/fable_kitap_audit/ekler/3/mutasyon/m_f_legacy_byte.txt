@@ -1,0 +1,25 @@
+### m_f_legacy_byte :: tests/test_guardrails.py
+F..                                                                      [100%]
+=================================== FAILURES ===================================
+__________________ test_legacy_files_match_provenance_hashes ___________________
+
+    def test_legacy_files_match_provenance_hashes():
+        text = (ROOT / "docs" / "PROVENANCE.md").read_text(encoding="utf-8")
+        listed = dict(re.findall(r"\| `(legacy/[^`]+)` \| `([0-9a-f]{64})` \|", text))
+        assert len(listed) == 34
+        on_disk = {p.relative_to(ROOT).as_posix() for p in (ROOT / "legacy").rglob("*")
+                   if p.is_file() and "__pycache__" not in p.parts}
+        assert on_disk == set(listed)
+        for path, sha in listed.items():
+>           assert sha256_file(ROOT / path) == sha, path
+E           AssertionError: legacy/scripts/__init__.py
+E           assert '01ba4719c80b...f9805daca546b' == 'e3b0c44298fc...5991b7852b855'
+E             
+E             - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+E             + 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+
+tests/test_guardrails.py:25: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_guardrails.py::test_legacy_files_match_provenance_hashes - ...
+1 failed, 2 passed in 0.14s
+exit=1

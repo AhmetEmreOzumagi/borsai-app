@@ -1,0 +1,530 @@
+{
+  "spec_version": "BORSAI_V1_5_PREREG_20260814",
+  "supersedes": "BORSAI_V1_4_PREREG_20260814",
+  "supersedes_chain": ["BORSAI_V1_PREREG_20260814", "BORSAI_V1_1_PREREG_20260814", "BORSAI_V1_2_PREREG_20260814", "BORSAI_V1_3_PREREG_20260814", "BORSAI_V1_4_PREREG_20260814"],
+  "change_reason": "PRE_FIT_RUNTIME_AND_RIDGE_SVD_CONTRACT_CORRECTION",
+  "change_class": "IMPLEMENTATION_RUNTIME_AND_SOLVER_CONTRACT_ONLY",
+  "change_scope": "NARROW",
+  "feature_schema_version": "V1_FEATURES_20260814",
+  "track_id": "MODELING_TRACK",
+  "written_at": "2026-08-14",
+  "timezone": "Europe/Istanbul",
+  "status": "FROZEN_PREREGISTRATION_NO_FIT_PERFORMED_NO_INSTALL_PERFORMED",
+  "document_path": "artifacts/modeling/V1_5_PREREGISTRATION.md",
+
+  "supersession": {
+    "corrected_before_any_model_result_existed": true,
+    "ridge_fit_existed_at_time_of_change": false,
+    "logistic_fit_existed_at_time_of_change": false,
+    "candidate_tuning_score_existed_at_time_of_change": false,
+    "candidate_model_performance_existed_at_time_of_change": false,
+    "champion_existed": false,
+    "methodology_changed_in_response_to_an_outcome": false,
+    "outcome_blind_status_preserved": true,
+    "no_feature_target_grid_tuning_objective_or_validation_changed_by_this_amendment": true,
+    "predecessor_artifacts_immutable": [
+      "artifacts/modeling/V1_PREREGISTRATION.md",
+      "config/model_v1_spec.json",
+      "artifacts/modeling/V1_1_PREREGISTRATION.md",
+      "config/model_v1_1_spec.json",
+      "artifacts/modeling/V1_2_PREREGISTRATION.md",
+      "config/model_v1_2_spec.json",
+      "artifacts/modeling/V1_3_PREREGISTRATION.md",
+      "config/model_v1_3_spec.json",
+      "artifacts/modeling/V1_4_PREREGISTRATION.md",
+      "config/model_v1_4_spec.json"
+    ],
+    "predecessor_hashes_sha256": {
+      "artifacts/modeling/V1_PREREGISTRATION.md": "9984488554bd396797d4cad620b93390b5e9341dbbaaa9de350ce950e3d23cd8",
+      "config/model_v1_spec.json": "7bc7a69b715ce056611e6bd44990f67278549c057f708c57e0f55ea7d30e18dc",
+      "artifacts/modeling/V1_1_PREREGISTRATION.md": "b6e3681ae8fbb4e0f16b7004f1e2adafaa5285fb0ad6788a1c0156817a2d9d0d",
+      "config/model_v1_1_spec.json": "3c7c4336903924fa6f898413804564ba146d8a9ce7016e556d8a7bd82ba0be7c",
+      "artifacts/modeling/V1_2_PREREGISTRATION.md": "73ea3d2df048277e3f55eeaef710e050698a4e9e4aba3e6b53faac2cfbe3b2dc",
+      "config/model_v1_2_spec.json": "d8cfa4565ce6baae81d2b8627343dd6964d6fc85f338d414b10f09ee8d57b82f",
+      "artifacts/modeling/V1_3_PREREGISTRATION.md": "1cdf04ea27a9e0d0c875052f71ba6658cd8b4ecc9f116ef8b3189cfc71e2cd9c",
+      "config/model_v1_3_spec.json": "7c49fa16a66cb98f28e2e1cee736b8eeddf4f43b2cbda3deb6032703a984a7d3",
+      "artifacts/modeling/V1_4_PREREGISTRATION.md": "0bf9d305c34a0f79a4fe23a18497c259db3864fa73cf74c5fae441226bc0ecae",
+      "config/model_v1_4_spec.json": "6bea33b9445c67099e21eaf7a9ade128c13e36834604e76fc5866deef269affb"
+    }
+  },
+
+  "corrected_defects_in_v1_4": [
+    {
+      "id": "D1",
+      "severity": "UNAUTHORIZED_PREDICTION_AFFECTING_KNOB",
+      "location": "config/model_v1_4_spec.json -> ridge.objective_notes; artifacts/modeling/V1_4_PREREGISTRATION.md section 2.2",
+      "defect": "V1.4 wrote 'singular values s_i <= 1e-15 are treated as exactly zero' into the Ridge SVD contract. The operator preregistered solver='svd' but never preregistered any singular-value cutoff, pseudoinverse tolerance or rank-determination threshold. The V1.4 author introduced it, creating an arbitrary project-defined numeric knob capable of changing a fitted coefficient vector.",
+      "resolution": "WITHDRAWN. No project-side cutoff, tolerance or rank threshold of any kind. The pinned library estimator's internal numerical handling is the contract, fixed by the runtime version pin.",
+      "introduced_by": "V1_4_IMPLEMENTATION_AUTHOR_NOT_OPERATOR",
+      "changes_any_value_or_formula": false,
+      "changes_the_objective_function": false
+    },
+    {
+      "id": "D2",
+      "severity": "OPEN_RUNTIME_GAP",
+      "location": "config/model_v1_4_spec.json -> environment_finding.E1",
+      "defect": "V1.4 recorded that scikit-learn was absent from every interpreter and that no ML library was pinned, leaving the candidate-model runtime undefined and the Logistic path unimplementable.",
+      "resolution": "candidate_model_runtime pinned: python 3.12.x + scikit-learn 1.9.0 in an isolated project virtual environment, with a mandatory full dependency freeze manifest.",
+      "changes_any_value_or_formula": false
+    }
+  ],
+
+  "ratified_from_v1_4": [
+    {
+      "id": "P1",
+      "item": "optimizer non-convergence policy",
+      "v1_4_status": "IMPLEMENTER_PROPOSED_FLAGGED_FOR_AUDIT",
+      "v1_5_status": "OPERATOR_APPROVED_PRE_FIT_POLICY",
+      "policy_text_changed": false
+    }
+  ],
+
+  "data_checkpoint": {
+    "full20_run_id": "20260814_231842",
+    "full20_cutoff": "2026-08-14",
+    "full20_status": "PASS_PARTIAL_AS_OF_CUTOFF",
+    "official_verified": 197,
+    "expected_sessions": 200,
+    "remaining_sessions": ["QUICK D8 2026-08-17", "QUICK D9 2026-08-18", "QUICK D10 2026-08-19"]
+  },
+
+  "ridge": {
+    "id": "V1_RIDGE",
+    "family": "RIDGE_L2_LINEAR",
+    "grid": [0.1, 1.0, 10.0, 100.0],
+    "grid_parameter": "alpha",
+    "grid_widening_forbidden": true,
+    "grid_value_outside_list_forbidden": true,
+    "fit_intercept": true,
+    "solver": "svd",
+    "solver_substitution_forbidden": true,
+    "intercept_penalized": false,
+    "target": "R_h",
+    "target_transform": "NONE",
+    "target_scaling_forbidden": true,
+    "feature_source": "V1_3_PREPROCESS_FOLD_OUTPUT_ONLY",
+    "objective_function": "minimize over (w, c) of: ||y - X w - c*1||^2 + alpha * ||w||^2",
+    "objective_notes": [
+      "intercept c is NOT penalized",
+      "residual sum of squares is NOT divided by n",
+      "alpha > 0 for every grid point, so the objective is strictly convex and the minimiser is unique"
+    ],
+    "singular_value_cutoff": "WITHDRAWN_NO_PROJECT_DEFINED_CUTOFF",
+    "v1_4_withdrawn_statement": "singular values s_i <= 1e-15 are treated as exactly zero (sklearn _solve_svd convention)",
+    "custom_singular_value_cutoff_forbidden": true,
+    "custom_pseudoinverse_tolerance_forbidden": true,
+    "custom_rank_determination_threshold_forbidden": true,
+    "hand_written_or_alternate_ridge_solver_forbidden": true,
+    "numerical_semantics_source": "PINNED_LIBRARY_ESTIMATOR_SEMANTICS",
+    "numerical_semantics_note": "whatever Ridge(solver='svd') does internally about near-singular directions is part of the pinned library's semantics, fixed by the runtime version pin; it is not restated, overridden, replicated or configured by this project",
+    "closed_form_status": "MATHEMATICAL_CHARACTERISATION_ONLY_NOT_AN_IMPLEMENTATION_INSTRUCTION",
+    "reference_implementation": "sklearn.linear_model.Ridge(alpha=<selected>, fit_intercept=True, solver='svd')",
+    "inner_validation": "LOOCV_WITHIN_OUTER_TRAINING_FOLD_ONLY",
+    "tuning_objective": "INNER_LOOCV_MAE",
+    "tuning_objective_formula": "MAE(alpha) = (1/K) * sum |y_val - yhat_val| over the K inner LOOCV splits",
+    "tuning_objective_space": "NATIVE_TARGET_SPACE_R_H",
+    "objective_direction": "MINIMIZE",
+    "forbidden_tuning_objectives": ["MSE", "RMSE", "R2", "price_level_MAPE", "any_other"],
+    "tie_break": "STRONGER_REGULARIZATION_LARGEST_ALPHA",
+    "tie_requires_bit_exact_equality": true,
+    "epsilon_or_tolerance_tie_forbidden": true,
+    "iterative_convergence_policy_applicable": false,
+    "iterative_convergence_policy_note": "svd is a direct (non-iterative) method; MODEL_NOT_FIT_OPTIMIZER_DID_NOT_CONVERGE does not apply to Ridge",
+    "final_refit": {
+      "performed": true,
+      "hyperparameter": "SELECTED_ALPHA",
+      "training_data": "FULL_OUTER_TRAINING_FOLD",
+      "preprocessing": "V1_3_PREPROCESSING_FIT_ON_FULL_OUTER_TRAINING_FOLD",
+      "output": "ONE_PREDICTION_FOR_THE_OUTER_TEST_ROW",
+      "outer_test_target_read_before_prediction": false
+    },
+    "unchanged_from_v1_4_except_cutoff_withdrawal_and_runtime_pin": true
+  },
+
+  "logistic": {
+    "id": "V1_LOGIT",
+    "family": "L2_REGULARIZED_LOGISTIC",
+    "grid": [0.01, 0.1, 1.0, 10.0],
+    "grid_parameter": "C",
+    "grid_widening_forbidden": true,
+    "grid_value_outside_list_forbidden": true,
+    "penalty": "l2",
+    "solver": "lbfgs",
+    "solver_substitution_forbidden": true,
+    "fit_intercept": true,
+    "intercept_penalized": false,
+    "class_weight": null,
+    "class_reweighting_forbidden": true,
+    "max_iter": 10000,
+    "tol": 1e-10,
+    "target": "Y_h",
+    "feature_source": "V1_3_PREPROCESS_FOLD_OUTPUT_ONLY",
+    "objective_function": "minimize over (w, c) of: 0.5 * w^T w + C * sum_i log(1 + exp(-ytilde_i * (x_i^T w + c))), with ytilde_i = 2*y_i - 1 in {-1,+1}",
+    "objective_notes": [
+      "intercept c is NOT penalized",
+      "LARGER C = WEAKER regularization; this is why smallest C is the stronger-regularization tie-break",
+      "the L2 term makes the objective strictly convex and coercive, so a finite unique minimiser exists even under perfect class separation"
+    ],
+    "hand_written_or_alternate_logistic_solver_forbidden": true,
+    "numerical_semantics_source": "PINNED_LIBRARY_ESTIMATOR_SEMANTICS",
+    "reference_implementation": "sklearn.linear_model.LogisticRegression(C=<selected>, penalty='l2', solver='lbfgs', fit_intercept=True, class_weight=None, max_iter=10000, tol=1e-10)",
+    "positive_class": 1,
+    "positive_class_definition": "official close > IPO price",
+    "negative_class": 0,
+    "negative_class_definition": "official close <= IPO price (existing TIE_IS_ZERO_AT_OR_BELOW_IPO rule, unchanged)",
+    "probability_output": "P(y = 1)",
+    "probability_column_selection": "EXPLICIT_LOOKUP_OF_CLASS_1_IN_ESTIMATOR_CLASSES_ARRAY",
+    "fixed_probability_column_position_assumption_forbidden": true,
+    "classification_threshold": 0.5,
+    "classification_rule": "p > 0.5 -> 1; p <= 0.5 -> 0",
+    "threshold_tie": "EXACTLY_0_5_PREDICTS_0",
+    "calibration": "NONE",
+    "post_hoc_calibration_forbidden": true,
+    "inner_validation": "LOOCV_WITHIN_OUTER_TRAINING_FOLD_ONLY",
+    "tuning_objective": "INNER_LOOCV_BRIER_SCORE",
+    "tuning_objective_formula": "Brier(C) = (1/K) * sum (p_i - y_i)^2 over the K inner LOOCV splits, p_i = predicted probability of class 1",
+    "tuning_probability_clipping": "NONE_RAW_UNCLIPPED",
+    "reporting_layer_clip_inside_tuning_forbidden": true,
+    "objective_direction": "MINIMIZE",
+    "forbidden_tuning_objectives": ["accuracy", "F1", "AUC", "log_loss", "any_other"],
+    "tie_break": "STRONGER_REGULARIZATION_SMALLEST_C",
+    "tie_requires_bit_exact_equality": true,
+    "epsilon_or_tolerance_tie_forbidden": true,
+    "single_class_policy": {
+      "condition": "outer training fold contains a single class",
+      "fit": false,
+      "status": "MODEL_NOT_FIT_SINGLE_CLASS",
+      "emit_probability": false,
+      "fabricated_probability_forbidden": true,
+      "classification_baselines_still_run": true,
+      "unchanged_from_v1_1": true
+    },
+    "minority_one_policy": {
+      "condition": "two classes present AND minority_class_count == 1",
+      "fit": true,
+      "tuning": false,
+      "fallback_C": 0.01,
+      "status": "TUNING_SKIPPED_MINORITY_COUNT_LT_2",
+      "status_variant_spellings_forbidden": ["TUNING_SKIPPED_MINORITY_CLASS_COUNT_1"],
+      "final_outer_fit_permitted": true,
+      "unchanged_from_v1_1": true
+    },
+    "minority_two_or_more_policy": {
+      "condition": "two classes present AND minority_class_count >= 2",
+      "fit": true,
+      "tuning": "INNER_LOOCV_WITHIN_TRAINING_FOLD_ONLY",
+      "status": "TUNED_INNER_LOOCV",
+      "unchanged_from_v1_1": true
+    },
+    "final_refit": {
+      "performed": true,
+      "hyperparameter": "SELECTED_C_OR_FALLBACK_C_PER_DEGENERACY_POLICY",
+      "training_data": "FULL_OUTER_TRAINING_FOLD",
+      "preprocessing": "V1_3_PREPROCESSING_FIT_ON_FULL_OUTER_TRAINING_FOLD",
+      "output": "ONE_PROBABILITY_AND_ONE_DIRECTION_FOR_THE_OUTER_TEST_ROW",
+      "outer_test_target_read_before_prediction": false
+    },
+    "unchanged_from_v1_4": true
+  },
+
+  "candidate_model_runtime": {
+    "python": "3.12.x",
+    "scikit_learn": "1.9.0",
+    "isolation": "ISOLATED_PROJECT_VIRTUAL_ENVIRONMENT_REQUIRED",
+    "global_or_system_environment_install_forbidden": true,
+    "existing_codex_primary_runtime_must_not_be_mutated": true,
+    "existing_codex_primary_runtime_note": "python 3.12.13 / numpy 2.3.5; remains the runtime for the already-audited FULL20 and preprocessing test suites",
+    "installation_performed_by_this_spec": false,
+    "dependency_manifest_required": true,
+    "dependency_manifest_must_record": [
+      "python (full patch version)",
+      "scikit-learn",
+      "numpy",
+      "scipy",
+      "joblib",
+      "threadpoolctl",
+      "every other resolved scikit-learn runtime dependency (full transitive freeze)",
+      "platform",
+      "BLAS/LAPACK backend, version and thread configuration"
+    ],
+    "manifest_stored_as_repo_reproducibility_artifact": true,
+    "manifest_created_during": "SEPARATE_DEPENDENCY_SETUP_TASK",
+    "silent_dependency_upgrade_forbidden": true,
+    "dependency_change_after_a_model_result_requires_new_runtime_or_spec_version": true,
+    "dependency_change_in_response_to_an_observed_outcome_forbidden": true,
+    "determinism_is_conditional_on_this_pin": true,
+    "determinism_note": "V1.4 froze a library-independent closed form so the contract would be well-defined without any library, which is what forced a cutoff to be named. V1.5 instead pins the runtime, so the pinned library's fixed behaviour is the numerical contract and no project-side threshold is needed."
+  },
+
+  "deprecation_handling": {
+    "silent_methodology_change_forbidden": true,
+    "rule": "if scikit-learn 1.9.0 emits a deprecation warning for an API spelling, use the parameterization semantically equivalent to the frozen L2 contract",
+    "exact_invocation_must_be_documented_in_implementation_audit": true,
+    "documentation_must_include_warning_text": true,
+    "api_migration_based_on_model_performance_forbidden": true
+  },
+
+  "optimizer_non_convergence_policy": {
+    "status": "MODEL_NOT_FIT_OPTIMIZER_DID_NOT_CONVERGE",
+    "approval_state": "OPERATOR_APPROVED_PRE_FIT_POLICY",
+    "v1_4_approval_state": "IMPLEMENTER_PROPOSED_FLAGGED_FOR_AUDIT",
+    "policy_text_changed_from_v1_4": false,
+    "applies_to": "ITERATIVE_LOGISTIC_LBFGS_FIT",
+    "trigger": "optimizer reports non-convergence under the frozen max_iter=10000 and tol=1e-10",
+    "emit_prediction": false,
+    "emit_probability": false,
+    "silent_acceptance_of_non_converged_coefficients_forbidden": true,
+    "retry_with_larger_max_iter_forbidden": true,
+    "looser_tolerance_forbidden": true,
+    "alternate_solver_forbidden": true,
+    "fallback_model_forbidden": true,
+    "hyperparameter_substitution_forbidden": true,
+    "counts_as_a_model_result": false,
+    "counts_as_performance": false,
+    "must_be_reported_in_the_run_report": true,
+    "classification": "ACCEPTED_SAFETY_BOUNDARY",
+    "applies_to_ridge": false,
+    "ridge_note": "solver='svd' is a direct, non-iterative method; iterative convergence policy is not applicable"
+  },
+
+  "inner_validation": {
+    "unchanged_from_v1_4": true,
+    "method": "LOOCV",
+    "scope": "OUTER_TRAINING_FOLD_ONLY",
+    "preprocessing": "REFIT_FULL_V1_3_PREPROCESSING_ON_EACH_INNER_TRAIN",
+    "preprocessing_reuse_of_outer_matrix_forbidden": true,
+    "inner_validation_preprocessing_fit": "FORBIDDEN",
+    "outer_test_visibility": "FORBIDDEN",
+    "outer_min_train_n": 10,
+    "inner_auxiliary_n_minus_one_permitted": true,
+    "inner_n_minus_one_may_equal_9": true,
+    "min_train_n_interpretation": "MIN_TRAIN_N=10 gates the effective OUTER candidate-training fold that may produce an outer prediction; inner LOOCV fits are auxiliary hyperparameter-selection fits and are not gated by it. Clarification, NOT a relaxation.",
+    "forbidden_leakage": [
+      "inner-validation row in winsorization bounds",
+      "inner-validation row in the imputation median",
+      "inner-validation row in missingness or >40% fold-drop determination",
+      "inner-validation row in the zero-variance decision or f3->f5 co-drop",
+      "inner-validation row in standardization mean or std",
+      "inner-validation target in estimator fit (used ONLY in the scoring step)",
+      "outer test row anywhere in tuning"
+    ],
+    "insufficient_variation_policy": {
+      "status": "MODEL_NOT_FIT_INNER_PREPROCESSING_INSUFFICIENT_VARIATION",
+      "scope_of_status": "THE_ENTIRE_OUTER_FOLD_CANDIDATE_MODEL",
+      "skip_inner_observation_forbidden": true,
+      "average_successful_folds_only_forbidden": true,
+      "substitute_baseline_prediction_forbidden": true,
+      "select_default_hyperparameter_forbidden": true,
+      "fabricated_tuning_score_forbidden": true,
+      "unchanged_from_v1_4": true
+    },
+    "inner_single_class_policy": {
+      "status": "MODEL_NOT_FIT_INNER_SINGLE_CLASS",
+      "scope_of_status": "THE_ENTIRE_OUTER_FOLD_CANDIDATE_MODEL",
+      "implementation_must_verify_invariant_explicitly": true,
+      "fabricated_probability_forbidden": true,
+      "silent_skip_forbidden": true,
+      "unchanged_from_v1_4": true
+    },
+    "hard_numeric_error_policy": {
+      "action": "PROPAGATE_HARD_FAILURE",
+      "catch_and_downgrade_forbidden": true,
+      "unchanged_from_v1_4": true
+    }
+  },
+
+  "scoring": {
+    "unchanged_from_v1_4": true,
+    "ridge": "MAE",
+    "logistic": "BRIER",
+    "direction": "MINIMIZE",
+    "arithmetic_domain": "MODEL_NUMERIC_FINITE_NOT_CLAIMED_EXACT",
+    "finite_required": true,
+    "non_finite_score_status": "NUMERIC_REPRESENTATION_INTEGRITY_ERROR",
+    "non_finite_score_action": "HARD_FAIL_LOUDLY_AND_STOP",
+    "tolerance_tie": false,
+    "comparison_rule": "minimum stored finite score wins; only bit-exact equality invokes the frozen tie-break"
+  },
+
+  "determinism": {
+    "ridge_solver_frozen": "svd",
+    "logistic_solver_frozen": "lbfgs",
+    "both_objectives_strictly_convex_unique_minimiser": true,
+    "stochastic_resampling": false,
+    "shuffling_dependent_model_selection": false,
+    "random_state_dependent_path": false,
+    "training_row_order": "OUTER_FOLD_training_tickers_ORDER (first_trading_date ASC, then ticker ASC as a pure serialization tie-break)",
+    "feature_column_order": "active_substantive_features THEN active_indicator_features, in preprocess_fold return order",
+    "reproducibility_requirement": "same raw outer fold + same spec + same pinned runtime environment must deterministically produce the same inner folds, score table, selected hyperparameter, status, and prediction/probability",
+    "reproducibility_scope_claimed": "WITHIN_A_SINGLE_PINNED_ENVIRONMENT_ON_A_SINGLE_MACHINE",
+    "cross_machine_bit_level_reproducibility_claimed": false,
+    "unchanged_from_v1_4": true
+  },
+
+  "setup_time_verification_requirements": {
+    "id": "V1",
+    "class": "VERIFICATION_DUTY_NOT_METHODOLOGY_AMBIGUITY",
+    "statement": "this preregistration performs no installation and has no network access, so it cannot and does not verify that scikit-learn 1.9.0 exists, is installable on this platform for python 3.12.x, or still exposes the exact API spellings frozen above; the operator asserts the version, this document records it",
+    "must_verify_before_implementation": [
+      "scikit-learn == 1.9.0 resolves and installs into the isolated environment",
+      "sklearn.linear_model.Ridge(solver='svd') is present and not removed or deprecated",
+      "sklearn.linear_model.LogisticRegression(penalty='l2', solver='lbfgs', fit_intercept=True, class_weight=None, max_iter=10000, tol=1e-10) is accepted with the frozen semantics",
+      "estimator.classes_ and predict_proba behave as the probability contract requires"
+    ],
+    "on_verification_failure": "STOP_AND_REPORT",
+    "substitute_version_forbidden": true,
+    "substitute_solver_forbidden": true,
+    "semantically_different_parameterization_forbidden": true
+  },
+
+  "residual_items": [
+    {
+      "id": "R1",
+      "class": "RECORDED_RISK_NOT_A_METHODOLOGY_AMBIGUITY",
+      "item": "BLAS/LAPACK backend and thread configuration are a byte-level reproducibility factor",
+      "detail": "SVD and the LBFGS gradient path run through the numpy/scipy BLAS/LAPACK backend; backend identity and thread count can change results in the last floating-point bits, which matters here only because hyperparameter ties turn on bit-exact score equality",
+      "deliberately_not_frozen": true,
+      "reason_not_frozen": "freezing a thread count or BLAS backend would be exactly the kind of unauthorized numeric knob the Ridge cutoff withdrawal exists to remove",
+      "required_action": "the dependency manifest must record the BLAS/LAPACK backend, version and thread configuration actually in use; the implementation audit should treat cross-machine bit-level divergence as an open recorded risk",
+      "freezing_it_later_requires": "NEW_SPEC_VERSION_AND_EXPLICIT_OPERATOR_DECISION",
+      "ad_hoc_environment_variable_during_a_run_forbidden": true
+    }
+  ],
+
+  "hard_fail_assertions": [
+    "no_future_target",
+    "no_same_day_ipo_cross_training",
+    "no_test_row_preprocessing_fit",
+    "no_test_target_read_before_prediction",
+    "no_post_cutoff_feature",
+    "min_effective_train_n",
+    "no_target_imputation",
+    "no_global_preprocessing_statistic",
+    "no_non_comparable_total_demand_value_without_missing_treatment",
+    "no_single_class_logistic_fit_attempt",
+    "no_zero_variance_divide_by_zero",
+    "no_binary_float_or_fixed_precision_context_in_any_structural_decision",
+    "no_numeric_representation_integrity_violation",
+    "no_transformed_f1_value_in_any_structural_decision",
+    "no_inner_validation_row_in_any_inner_preprocessing_statistic",
+    "no_outer_test_row_in_any_tuning_computation",
+    "no_fabricated_tuning_score_for_a_failed_inner_split"
+  ],
+  "assertion_behaviour": "HARD_FAIL_LOUDLY_NEVER_WARN_NEVER_SILENTLY_FILTER",
+  "assertion_count": 17,
+  "assertions_added_in_v1_5": 0,
+
+  "prohibited_practices_added_in_v1_5": [
+    "defining any project-side singular-value cutoff, pseudoinverse tolerance, or rank-determination threshold for the Ridge SVD solver",
+    "reimplementing, hand-writing or substituting the Ridge or Logistic solver instead of calling the pinned library estimator",
+    "installing candidate-model dependencies into the global/system Python environment, or mutating the existing codex-primary-runtime interpreter",
+    "upgrading, downgrading or re-resolving a pinned dependency without a new runtime/spec version, and in particular doing so in response to an observed model result"
+  ],
+  "prohibited_practices_total": 50,
+
+  "inherited_methodology": {
+    "reference_document": "artifacts/modeling/V1_4_PREREGISTRATION.md",
+    "reference_config": "config/model_v1_4_spec.json",
+    "applies_in_full_except_the_two_corrections_and_one_ratification_above": true,
+    "unchanged": [
+      "Ridge tuning objective INNER_LOOCV_MAE and largest-alpha tie",
+      "Logistic tuning objective INNER_LOOCV_BRIER_SCORE and smallest-C tie",
+      "nested V1.3 preprocessing refit on every inner train split",
+      "outer-test invisibility",
+      "MIN_TRAIN_N interpretation",
+      "inner insufficient variation policy",
+      "inner logistic single-class policy",
+      "finite-score hard failure",
+      "classification threshold and tie",
+      "calibration NONE",
+      "logistic degeneracy policy and enums",
+      "V1_CORE_4", "V1_MIN_2", "feature_schema_version",
+      "horizons D1/D3/D5/D10", "regression and classification target definitions",
+      "both hyperparameter grids",
+      "MIN_TRAIN_N = 10", "walk-forward expanding chronological primary validation",
+      "realized-target-only training rule", "same-day IPO cross-training prohibition",
+      "LOOCV secondary sensitivity only", "all leakage rules",
+      "ALL V1.3 preprocessing and numeric rules",
+      "baselines and majority-class tie rule",
+      "prediction intervals DISABLED_IN_V1_1_PILOT",
+      "confidence policy and pilot cap", "historical vs live OOS separation",
+      "feature eligibility gate", "AUTHORIZED_INTERMEDIARY_VERIFIED semantics",
+      "f3/f5 co-drop semantics", "model league", "update governance",
+      "dataset growth rule", "prohibited model families",
+      "11-step preprocessing order", "canonical input contract",
+      "FROZEN and live forecast rules"
+    ],
+    "new_model_family_added": false,
+    "feature_changed": false,
+    "target_changed": false,
+    "grid_changed": false,
+    "tuning_objective_changed": false,
+    "tie_break_changed": false,
+    "validation_changed": false,
+    "preprocessing_changed": false,
+    "canonical_turkish_enums_carried_verbatim": {
+      "allowed_confidence_levels": ["Çok düşük", "Düşük", "Düşük-orta", "Orta", "Yüksek"],
+      "allowed_risk_labels": ["Kırmızı", "Turuncu", "Sarı", "Açık yeşil", "Yeşil"],
+      "v1_pilot_effective_confidence_cap": "Çok düşük",
+      "first_live_ipo_prediction_cap": "Çok düşük",
+      "encoding": "UTF-8"
+    }
+  },
+
+  "outcome_blind_declaration": {
+    "ridge_historical_fit_exists": false,
+    "logistic_historical_fit_exists": false,
+    "candidate_performance_exists": false,
+    "candidate_tuning_score_exists": false,
+    "candidate_probability_or_prediction_exists": false,
+    "champion_exists": false,
+    "model_fitted": false,
+    "baseline_rerun_performed": false,
+    "backtest_executed": false,
+    "feature_selection_performed": false,
+    "outcome_or_return_analysis_performed": false,
+    "feature_outcome_correlation_computed": false,
+    "outcome_or_performance_file_read_during_this_amendment": false,
+    "target_rows_read_during_this_amendment": false,
+    "package_installed_during_this_amendment": false,
+    "new_exposure_during_this_amendment": false,
+    "inherited_contamination_from_v1": {
+      "present": true,
+      "severity": "LOW_NON_ZERO",
+      "carried_forward_verbatim": true,
+      "seen_values": [
+        "KARCL 2026-08-12 (D9) OHLC: open 65, low 62.2, high 67.4, close 67.4, prev_close 61.3, aof 66.562",
+        "KARCL 2026-08-12 THM: reference 61.3, limits 55.2/67.4",
+        "QUICK D6 2026-08-13 close 71.9",
+        "KARCL D10 2026-08-13 close 74.1"
+      ],
+      "exposure_context": "earlier data-engineering tasks in the same session chain, not sought during any design task",
+      "material_effect_on_runtime_or_solver_contract_choice": "none",
+      "special_handling_granted_to_affected_tickers": false
+    }
+  },
+
+  "claude_md_gate_deviation": {
+    "gate": "CLAUDE.md section 10 forbids building V1 before 200/200 OFFICIAL_VERIFIED",
+    "state_at_writing": "197/200",
+    "user_authorized": true,
+    "scope": "PREREGISTRATION_AMENDMENT_AND_CANDIDATE_MODEL_CODE_IMPLEMENTATION_ONLY_NO_REAL_FIT",
+    "real_historical_fit_authorization_is_a_separate_decision": true
+  },
+
+  "implementation_requirements": {
+    "no_code_changed_by_this_spec": true,
+    "no_package_installed_by_this_spec": true,
+    "preprocessing_module_must_not_change": "scripts/modeling/preprocessing.py",
+    "logistic_policy_module_must_not_change": "scripts/modeling/logistic_policy.py",
+    "ordered_next_steps": [
+      "1. DEPENDENCY SETUP TASK: create the isolated environment, verify every setup_time_verification_requirements item, commit the dependency freeze manifest including the R1 BLAS/threading record; STOP and report if any verification fails",
+      "2. CANDIDATE IMPLEMENTATION TASK: implement V1_RIDGE / V1_LOGIT against V1.5 calling the pinned estimators, synthetic fixtures only, using the required-test list carried forward from V1.4 section 17.2",
+      "3. INDEPENDENT STATIC CODE AUDIT",
+      "4. only after that audit PASSes may a real historical pilot fit be authorized, and that remains a separate explicit operator decision on the CLAUDE.md section 10 gate"
+    ],
+    "required_tests_carried_forward_from_v1_4": true,
+    "synthetic_fixtures_only": true,
+    "real_data_fit_authorized_by_this_spec": false
+  }
+}

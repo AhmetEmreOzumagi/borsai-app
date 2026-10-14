@@ -1,0 +1,215 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "KOPOL",
+  "company": "Koza Polyester Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "1729152",
+      "source_id": "KAP_1135485_EK1",
+      "source_document": "KAP 1135485 ek 1",
+      "source_published_at": "2023-04-10T16:33:01+03:00",
+      "source_sha256": "80aaf48cf07a073a9a515bc17ceb72562019ecc09fc6569402515543a178af84",
+      "source_path": "registry/oot/source_docs/KOPOL/KAP_1135485_ek1.pdf",
+      "quote": "TOPLAM 44.390.000 %100 1.850.175 225.411.467 %100 1.729.152 44.390.000 %100",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 1.850.175; dağıtım yapılan 1.729.152 (düzeltilmiş bildirim; ilk bildirimde 1.850.176 / 1.729.153)",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "1.850.175",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "1.850.175",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "1.850.175 belgede talep eden sayısı; dağıtım yapılan 1.729.152 (ALLOCATED tercih edildi)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "1728984",
+        "domestic_institutional": "168"
+      },
+      "source_id": "KAP_1135485_EK1",
+      "source_document": "KAP 1135485 ek 1",
+      "source_published_at": "2023-04-10T16:33:01+03:00",
+      "source_sha256": "80aaf48cf07a073a9a515bc17ceb72562019ecc09fc6569402515543a178af84",
+      "source_path": "registry/oot/source_docs/KOPOL/KAP_1135485_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 33.292.500 %75 1.849.992 162.399.597 %72 1.728.984 33.292.500 %75 Yatırımcılar",
+        "Yurt İçi Kurumsal 11.097.500 %25 183 63.011.870 %28 168 11.097.500 %25 Yatırımcılar"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "4.88",
+      "source_id": "KAP_1135485_EK1",
+      "source_document": "KAP 1135485 ek 1",
+      "source_published_at": "2023-04-10T16:33:01+03:00",
+      "source_sha256": "80aaf48cf07a073a9a515bc17ceb72562019ecc09fc6569402515543a178af84",
+      "source_path": "registry/oot/source_docs/KOPOL/KAP_1135485_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara planlanan tahsisat tutarının yaklaşık 4,88 katı",
+      "note": "belge 'yaklaşık' diyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "4,88",
+        "verdict": "FOUND_SAME",
+        "note": "belge 'yaklaşık' diyor"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "5.68",
+      "source_id": "KAP_1135485_EK1",
+      "source_document": "KAP 1135485 ek 1",
+      "source_published_at": "2023-04-10T16:33:01+03:00",
+      "source_sha256": "80aaf48cf07a073a9a515bc17ceb72562019ecc09fc6569402515543a178af84",
+      "source_path": "registry/oot/source_docs/KOPOL/KAP_1135485_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara planlanan tahsisat tutarının ise 5,68 katı talep gelmiştir.",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "5,68",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup tabloda yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "33292500",
+        "domestic_institutional": "11097500"
+      },
+      "source_id": "KAP_1135485_EK1",
+      "source_document": "KAP 1135485 ek 1",
+      "source_published_at": "2023-04-10T16:33:01+03:00",
+      "source_sha256": "80aaf48cf07a073a9a515bc17ceb72562019ecc09fc6569402515543a178af84",
+      "source_path": "registry/oot/source_docs/KOPOL/KAP_1135485_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 33.292.500 %75 1.849.992 162.399.597 %72 1.728.984 33.292.500 %75 Yatırımcılar",
+        "Yurt İçi Kurumsal 11.097.500 %25 183 63.011.870 %28 168 11.097.500 %25 Yatırımcılar"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "75",
+      "source_id": "KAP_1135485_EK1",
+      "source_document": "KAP 1135485 ek 1",
+      "source_published_at": "2023-04-10T16:33:01+03:00",
+      "source_sha256": "80aaf48cf07a073a9a515bc17ceb72562019ecc09fc6569402515543a178af84",
+      "source_path": "registry/oot/source_docs/KOPOL/KAP_1135485_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 33.292.500 %75 1.849.992 162.399.597 %72 1.728.984 33.292.500 %75 Yatırımcılar",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "25",
+      "source_id": "KAP_1135485_EK1",
+      "source_document": "KAP 1135485 ek 1",
+      "source_published_at": "2023-04-10T16:33:01+03:00",
+      "source_sha256": "80aaf48cf07a073a9a515bc17ceb72562019ecc09fc6569402515543a178af84",
+      "source_path": "registry/oot/source_docs/KOPOL/KAP_1135485_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 11.097.500 %25 183 63.011.870 %28 168 11.097.500 %25 Yatırımcılar",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup tabloda yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Garanti Yatırım Menkul Kıymetler A.Ş.",
+      "source_id": "KAP_1130712_EK1",
+      "source_document": "KAP 1130712 ek 1",
+      "source_published_at": "2023-03-31T21:35:54+03:00",
+      "source_sha256": "62c3b2ce966468514d812fe91bd479a3fe8e636ba5282220303040d7db86fd08",
+      "source_path": "registry/oot/source_docs/KOPOL/KAP_1130712_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Garanti Yatırım Menkul Kıymetler A.Ş.'nin",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim, OCR) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yılıdız Pazar",
+      "source_id": "KAP_1136531",
+      "source_document": "KAP 1136531",
+      "source_published_at": "2023-04-11T18:11:57+03:00",
+      "source_sha256": "10defd0f805a1250be1eab49479beb6a9062afefdc706db9a31ee6eb5c3f1551",
+      "source_path": "registry/oot/source_docs/KOPOL/KAP_1136531_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yılıdız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1136531",
+      "source_document": "KAP 1136531",
+      "source_published_at": "2023-04-11T18:11:57+03:00",
+      "source_sha256": "10defd0f805a1250be1eab49479beb6a9062afefdc706db9a31ee6eb5c3f1551",
+      "source_path": "registry/oot/source_docs/KOPOL/KAP_1136531_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1136531": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1136531",
+      "published_at": "2023-04-11T18:11:57+03:00",
+      "sha256": "10defd0f805a1250be1eab49479beb6a9062afefdc706db9a31ee6eb5c3f1551",
+      "path": "registry/oot/source_docs/KOPOL/KAP_1136531_bildirim.pdf"
+    },
+    "KAP_1135485_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1135485 ek 1",
+      "published_at": "2023-04-10T16:33:01+03:00",
+      "sha256": "80aaf48cf07a073a9a515bc17ceb72562019ecc09fc6569402515543a178af84",
+      "path": "registry/oot/source_docs/KOPOL/KAP_1135485_ek1.pdf"
+    },
+    "KAP_1130712_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1130712 ek 1",
+      "published_at": "2023-03-31T21:35:54+03:00",
+      "sha256": "62c3b2ce966468514d812fe91bd479a3fe8e636ba5282220303040d7db86fd08",
+      "path": "registry/oot/source_docs/KOPOL/KAP_1130712_ek1.pdf"
+    }
+  }
+}

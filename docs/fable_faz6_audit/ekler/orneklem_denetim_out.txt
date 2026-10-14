@@ -1,0 +1,382 @@
+örneklem (tohum 20260925): ['ARZUM', 'FADE', 'BOBET', 'KZBGY', 'MIATK', 'ORCAY', 'VBTYZ', 'HUNER', 'OBASE', 'SEGYO', 'TERA', 'A1CAP', 'ATAKP', 'FORTE', 'SOKE']
+
+| ticker | ilk işlem | dolu | boş | sha OK | yayın<ilk işlem | alıntı EXACT | alıntı gevşek | alıntı FAIL | alıntısız | değer alıntıda | değer YOK | taşıma OK/FAIL | türetilmiş OK/FAIL |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| ARZUM | 2020-12-24 | 19 | 1 | 19 | 19 | 7 | 10 | 0 | 2 | 17 | 0 | 2/0 | 2/0 |
+| FADE | 2020-08-06 | 17 | 3 | 17 | 17 | 7 | 10 | 0 | 0 | 17 | 0 | 2/0 | 2/0 |
+| BOBET | 2021-06-03 | 20 | 0 | 20 | 20 | 8 | 10 | 0 | 2 | 18 | 0 | 2/0 | 3/0 |
+| KZBGY | 2021-08-12 | 20 | 0 | 20 | 20 | 8 | 10 | 0 | 2 | 18 | 0 | 2/0 | 2/0 |
+| MIATK | 2021-11-22 | 20 | 0 | 20 | 20 | 11 | 9 | 0 | 0 | 20 | 0 | 1/0 | 2/0 |
+| ORCAY | 2021-09-02 | 20 | 0 | 20 | 20 | 11 | 9 | 0 | 0 | 20 | 0 | 1/0 | 0/0 |
+| VBTYZ | 2021-07-12 | 20 | 0 | 20 | 20 | 12 | 8 | 0 | 0 | 20 | 0 | 0/0 | 2/0 |
+| HUNER | 2022-02-21 | 20 | 0 | 20 | 20 | 12 | 8 | 0 | 0 | 20 | 0 | 0/0 | 2/0 |
+| OBASE | 2022-08-03 | 20 | 0 | 20 | 20 | 10 | 10 | 0 | 0 | 20 | 0 | 2/0 | 2/0 |
+| SEGYO | 2022-06-07 | 20 | 0 | 20 | 20 | 11 | 9 | 0 | 0 | 20 | 0 | 1/0 | 0/0 |
+| TERA | 2022-12-22 | 20 | 0 | 20 | 20 | 8 | 10 | 0 | 2 | 18 | 0 | 1/0 | 2/0 |
+| A1CAP | 2023-06-15 | 20 | 0 | 20 | 20 | 10 | 9 | 0 | 1 | 19 | 0 | 2/0 | 0/0 |
+| ATAKP | 2023-07-27 | 20 | 0 | 20 | 20 | 9 | 10 | 0 | 1 | 19 | 0 | 2/0 | 2/0 |
+| FORTE | 2023-06-14 | 20 | 0 | 20 | 20 | 11 | 9 | 0 | 0 | 20 | 0 | 1/0 | 0/0 |
+| SOKE | 2023-01-12 | 20 | 0 | 20 | 20 | 8 | 10 | 1 | 1 | 19 | 0 | 2/0 | 0/0 |
+| **toplam** | | 296 | 4 | 296 | 296 | 143 | 141 | 1 | 11 | 285 | 0 | 21/0 | 21/0 |
+
+## ARZUM (ilk işlem 2020-12-24; OFF_EXCHANGE_BOOKBUILD, YILDIZ)
+  ipo_price_tl                     =             17 | KAP_894223             | sha OK | yayın 2020-12-22 < 2020-12-24 | alıntı EXACT | değer alıntıda
+  shares_offered                   =       15302446 | KAP_894223             | sha OK | yayın 2020-12-22 < 2020-12-24 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =       32210000 | KAP_894223             | sha OK | yayın 2020-12-22 < 2020-12-24 | alıntı EXACT | değer alıntıda
+  capital_increase_shares          =              0 | SPK_BULTEN_2020_75     | sha OK | yayın 2020-12-10 < 2020-12-24 | alıntı TOKENS 14/14 | değer 0 ← '-' hücresi/beyan | taşıma PLANNED_SPLIT_CARRIED_FULL_BASE_PLUS_STATED_ADDITIONAL_SALE: (a) OK (b) OK (c) 
+  existing_share_sale_shares       =       13306475 | SPK_BULTEN_2020_75     | sha OK | yayın 2020-12-10 < 2020-12-24 | alıntı TOKENS 14/14 | değer alıntıda | taşıma PLANNED_SPLIT_CARRIED_FULL_BASE_PLUS_STATED_ADDITIONAL_SALE: (a) OK (b) OK (c) 
+  total_demand_multiple            =  43.2785276942 | KAP_893966_EK1         | sha OK | yayın 2020-12-21 < 2020-12-24 | alıntı yok | türetilmiş: pay/payda alıntı EXACT/EXACT, sayılar alıntıda, 662267333/15302446 = 43.2785276942 == 43.2785276942
+  total_demand_filter_status       =  NOT_SPECIFIED | KAP_893966_EK1         | sha OK | yayın 2020-12-21 < 2020-12-24 | alıntı yok | 'filtre' belgede YOK (uyumlu)
+  additional_sale_shares           =        1995971 | KAP_893966_EK1         | sha OK | yayın 2020-12-21 < 2020-12-24 | alıntı EXACT | değer alıntıda
+  ipo_size_tl: BOŞ (KAP_893966_EK1 gerçekleşen arzın TL tutarını yazmıyor (yalnız nominal ve 17,00 T)
+  ipo_price_try                    =       15.50-17 | SPK_BULTEN_2020_75     | sha OK | yayın 2020-12-10 < 2020-12-24 | alıntı TOKENS 14/14 | değer alıntıda
+  planned_pre_ipo_capital          =       32210000 | SPK_BULTEN_2020_75     | sha OK | yayın 2020-12-10 < 2020-12-24 | alıntı TOKENS 14/14 | değer alıntıda
+  planned_post_ipo_capital         =       32210000 | SPK_BULTEN_2020_75     | sha OK | yayın 2020-12-10 < 2020-12-24 | alıntı TOKENS 14/14 | değer alıntıda
+  planned_capital_increase_shares  =              0 | SPK_BULTEN_2020_75     | sha OK | yayın 2020-12-10 < 2020-12-24 | alıntı TOKENS 14/14 | değer 0 ← '-' hücresi/beyan
+  planned_existing_share_sale      =       13306475 | SPK_BULTEN_2020_75     | sha OK | yayın 2020-12-10 < 2020-12-24 | alıntı TOKENS 14/14 | değer alıntıda
+  planned_base_offer_shares        =       13306475 | SPK_BULTEN_2020_75     | sha OK | yayın 2020-12-10 < 2020-12-24 | alıntı TOKENS 14/14 | değer alıntıda
+  planned_additional_sale_ceiling  =        1995971 | SPK_BULTEN_2020_75     | sha OK | yayın 2020-12-10 < 2020-12-24 | alıntı TOKENS 14/14 | değer alıntıda
+  planned_max_offer_shares         =       15302446 | SPK_BULTEN_2020_75     | sha OK | yayın 2020-12-10 < 2020-12-24 | alıntı TOKENS 14/14 | değer türetilmiş toplam (özdeşlik OK)
+  first_trading_date               =     2020-12-24 | KAP_894223             | sha OK | yayın 2020-12-22 < 2020-12-24 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2020-12-17 | KAP_894223             | sha OK | yayın 2020-12-22 < 2020-12-24 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2020-12-18 | KAP_894223             | sha OK | yayın 2020-12-22 < 2020-12-24 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 15302446 == 15302446
+
+## FADE (ilk işlem 2020-08-06; ON_EXCHANGE, ANA)
+  ipo_price_tl                     =            2.4 | KAP_864942             | sha OK | yayın 2020-08-04 < 2020-08-06 | alıntı EXACT | değer alıntıda
+  shares_offered                   =       18000000 | KAP_864942             | sha OK | yayın 2020-08-04 < 2020-08-06 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =       66000000 | KAP_864942             | sha OK | yayın 2020-08-04 < 2020-08-06 | alıntı EXACT | değer alıntıda
+  capital_increase_shares          =       11000000 | SPK_BULTEN_2020_46     | sha OK | yayın 2020-07-23 < 2020-08-06 | alıntı TOKENS 12/12 | değer alıntıda | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  existing_share_sale_shares       =        7000000 | SPK_BULTEN_2020_46     | sha OK | yayın 2020-07-23 < 2020-08-06 | alıntı TOKENS 12/12 | değer alıntıda | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  total_demand_multiple: BOŞ (SALE_METHOD_ON_EXCHANGE_NO_BOOKBUILD_MULTIPLE: KAP_864170 yalnız dağıtım/talebi )
+  total_demand_filter_status: BOŞ (f3 yok; filtre durumu uygulanamaz (H99: NOT_APPLICABLE))
+  additional_sale_shares           =              0 | KAP_864170             | sha OK | yayın 2020-07-30 < 2020-08-06 | alıntı EXACT | değer 0 ← '-' hücresi/beyan
+  ipo_size_tl: BOŞ (KAP_864170 gerçekleşen arzın TL tutarını yazmıyor (18.000.000 TL nominal ve 2,40)
+  ipo_price_try                    =           2.40 | SPK_BULTEN_2020_46     | sha OK | yayın 2020-07-23 < 2020-08-06 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_pre_ipo_capital          =       55000000 | SPK_BULTEN_2020_46     | sha OK | yayın 2020-07-23 < 2020-08-06 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_post_ipo_capital         =       66000000 | SPK_BULTEN_2020_46     | sha OK | yayın 2020-07-23 < 2020-08-06 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_capital_increase_shares  =       11000000 | SPK_BULTEN_2020_46     | sha OK | yayın 2020-07-23 < 2020-08-06 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_existing_share_sale      =        7000000 | SPK_BULTEN_2020_46     | sha OK | yayın 2020-07-23 < 2020-08-06 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_base_offer_shares        =       18000000 | SPK_BULTEN_2020_46     | sha OK | yayın 2020-07-23 < 2020-08-06 | alıntı TOKENS 12/12 | değer türetilmiş toplam (özdeşlik OK)
+  planned_additional_sale_ceiling  =              0 | SPK_BULTEN_2020_46     | sha OK | yayın 2020-07-23 < 2020-08-06 | alıntı TOKENS 12/12 | değer 0 ← '-' hücresi/beyan
+  planned_max_offer_shares         =       18000000 | SPK_BULTEN_2020_46     | sha OK | yayın 2020-07-23 < 2020-08-06 | alıntı TOKENS 12/12 | değer türetilmiş toplam (özdeşlik OK)
+  first_trading_date               =     2020-08-06 | KAP_864942             | sha OK | yayın 2020-08-04 < 2020-08-06 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2020-07-29 | KAP_864942             | sha OK | yayın 2020-08-04 < 2020-08-06 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2020-07-30 | KAP_864942             | sha OK | yayın 2020-08-04 < 2020-08-06 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 18000000 == 18000000
+
+## BOBET (ilk işlem 2021-06-03; OFF_EXCHANGE_BOOKBUILD, YILDIZ)
+  ipo_price_tl                     =            3.5 | KAP_939093             | sha OK | yayın 2021-05-31 < 2021-06-03 | alıntı EXACT | değer alıntıda
+  shares_offered                   =      114000000 | KAP_939093             | sha OK | yayın 2021-05-31 < 2021-06-03 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =      380000000 | KAP_939093             | sha OK | yayın 2021-05-31 < 2021-06-03 | alıntı EXACT | değer alıntıda
+  capital_increase_shares          =      100000000 | SPK_BULTEN_2021_25     | sha OK | yayın 2021-05-20 < 2021-06-03 | alıntı TOKENS 10/10 | değer alıntıda | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  existing_share_sale_shares       =       14000000 | SPK_BULTEN_2021_25     | sha OK | yayın 2021-05-20 < 2021-06-03 | alıntı TOKENS 10/10 | değer alıntıda | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  total_demand_multiple            =    1.321749114 | KAP_938907_EK1         | sha OK | yayın 2021-05-31 < 2021-06-03 | alıntı yok | türetilmiş: pay/payda alıntı EXACT/EXACT, sayılar alıntıda, 150679399/114000000 = 1.3217491140 == 1.321749114
+  total_demand_filter_status       =  NOT_SPECIFIED | KAP_938907_EK1         | sha OK | yayın 2021-05-31 < 2021-06-03 | alıntı yok | 'filtre' belgede YOK (uyumlu)
+  additional_sale_shares           =              0 | KAP_938907_EK1         | sha OK | yayın 2021-05-31 < 2021-06-03 | alıntı EXACT | değer 0 ← '-' hücresi/beyan
+  ipo_size_tl                      =      399000000 | KAP_938907_EK1         | sha OK | yayın 2021-05-31 < 2021-06-03 | alıntı EXACT | değer alıntıda
+  ipo_price_try                    =           3.50 | SPK_BULTEN_2021_25     | sha OK | yayın 2021-05-20 < 2021-06-03 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_pre_ipo_capital          =      280000000 | SPK_BULTEN_2021_25     | sha OK | yayın 2021-05-20 < 2021-06-03 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_post_ipo_capital         =      380000000 | SPK_BULTEN_2021_25     | sha OK | yayın 2021-05-20 < 2021-06-03 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_capital_increase_shares  =      100000000 | SPK_BULTEN_2021_25     | sha OK | yayın 2021-05-20 < 2021-06-03 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_existing_share_sale      =       14000000 | SPK_BULTEN_2021_25     | sha OK | yayın 2021-05-20 < 2021-06-03 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_base_offer_shares        =      114000000 | SPK_BULTEN_2021_25     | sha OK | yayın 2021-05-20 < 2021-06-03 | alıntı TOKENS 10/10 | değer türetilmiş toplam (özdeşlik OK)
+  planned_additional_sale_ceiling  =              0 | SPK_BULTEN_2021_25     | sha OK | yayın 2021-05-20 < 2021-06-03 | alıntı TOKENS 10/10 | değer 0 ← '-' hücresi/beyan
+  planned_max_offer_shares         =      114000000 | SPK_BULTEN_2021_25     | sha OK | yayın 2021-05-20 < 2021-06-03 | alıntı TOKENS 10/10 | değer türetilmiş toplam (özdeşlik OK)
+  first_trading_date               =     2021-06-03 | KAP_939093             | sha OK | yayın 2021-05-31 < 2021-06-03 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2021-05-26 | KAP_939093             | sha OK | yayın 2021-05-31 < 2021-06-03 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2021-05-28 | KAP_939093             | sha OK | yayın 2021-05-31 < 2021-06-03 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 114000000 == 114000000
+
+## KZBGY (ilk işlem 2021-08-12; OFF_EXCHANGE_BOOKBUILD, ANA)
+  ipo_price_tl                     =           15.8 | KAP_957001             | sha OK | yayın 2021-08-10 < 2021-08-12 | alıntı EXACT | değer alıntıda
+  shares_offered                   =       60000000 | KAP_957001             | sha OK | yayın 2021-08-10 < 2021-08-12 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =      240000000 | KAP_957001             | sha OK | yayın 2021-08-10 < 2021-08-12 | alıntı EXACT | değer alıntıda
+  capital_increase_shares          =              0 | SPK_BULTEN_2021_36     | sha OK | yayın 2021-07-14 < 2021-08-12 | alıntı TOKENS 11/11 | değer 0 ← '-' hücresi/beyan | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) {'source_id': 'KAP_955803_EK1', 'used': 'NONE', 'q
+  existing_share_sale_shares       =       60000000 | SPK_BULTEN_2021_36     | sha OK | yayın 2021-07-14 < 2021-08-12 | alıntı TOKENS 11/11 | değer alıntıda | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) {'source_id': 'KAP_955803_EK1', 'used': 'NONE', 'q
+  total_demand_multiple            =              1 | KAP_955803_EK1         | sha OK | yayın 2021-08-09 < 2021-08-12 | alıntı yok | türetilmiş: pay/payda alıntı EXACT/EXACT, sayılar alıntıda, 60000000/60000000 = 1.0000000000 == 1
+  total_demand_filter_status       =  NOT_SPECIFIED | KAP_955803_EK1         | sha OK | yayın 2021-08-09 < 2021-08-12 | alıntı yok | 'filtre' belgede YOK (uyumlu)
+  additional_sale_shares           =              0 | KAP_955803_EK1         | sha OK | yayın 2021-08-09 < 2021-08-12 | alıntı EXACT | değer 0 ← '-' hücresi/beyan
+  ipo_size_tl                      =      948000000 | KAP_955803_EK1         | sha OK | yayın 2021-08-09 < 2021-08-12 | alıntı EXACT | değer alıntıda
+  ipo_price_try                    =          15.80 | SPK_BULTEN_2021_36     | sha OK | yayın 2021-07-14 < 2021-08-12 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_pre_ipo_capital          =      240000000 | SPK_BULTEN_2021_36     | sha OK | yayın 2021-07-14 < 2021-08-12 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_post_ipo_capital         =      240000000 | SPK_BULTEN_2021_36     | sha OK | yayın 2021-07-14 < 2021-08-12 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_capital_increase_shares  =              0 | SPK_BULTEN_2021_36     | sha OK | yayın 2021-07-14 < 2021-08-12 | alıntı TOKENS 11/11 | değer 0 ← '-' hücresi/beyan
+  planned_existing_share_sale      =       60000000 | SPK_BULTEN_2021_36     | sha OK | yayın 2021-07-14 < 2021-08-12 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_base_offer_shares        =       60000000 | SPK_BULTEN_2021_36     | sha OK | yayın 2021-07-14 < 2021-08-12 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_additional_sale_ceiling  =       12000000 | SPK_BULTEN_2021_36     | sha OK | yayın 2021-07-14 < 2021-08-12 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_max_offer_shares         =       72000000 | SPK_BULTEN_2021_36     | sha OK | yayın 2021-07-14 < 2021-08-12 | alıntı TOKENS 11/11 | değer türetilmiş toplam (özdeşlik OK)
+  first_trading_date               =     2021-08-12 | KAP_957001             | sha OK | yayın 2021-08-10 < 2021-08-12 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2021-08-04 | KAP_957001             | sha OK | yayın 2021-08-10 < 2021-08-12 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2021-08-06 | KAP_957001             | sha OK | yayın 2021-08-10 < 2021-08-12 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 60000000 == 60000000
+
+## MIATK (ilk işlem 2021-11-22; ON_EXCHANGE, ANA)
+  ipo_price_tl                     =           15.8 | KAP_978546             | sha OK | yayın 2021-11-18 < 2021-11-22 | alıntı EXACT | değer alıntıda
+  shares_offered                   =       12500000 | KAP_978546             | sha OK | yayın 2021-11-18 < 2021-11-22 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =       38000000 | KAP_978546             | sha OK | yayın 2021-11-18 < 2021-11-22 | alıntı EXACT | değer alıntıda
+  capital_increase_shares          =        8000000 | KAP_978449_EK1         | sha OK | yayın 2021-11-18 < 2021-11-22 | alıntı EXACT | değer alıntıda
+  existing_share_sale_shares       =        4500000 | SPK_BULTEN_2021_57     | sha OK | yayın 2021-11-11 < 2021-11-22 | alıntı TOKENS 8/8 | değer alıntıda | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  total_demand_multiple            =           2.54 | KAP_978449_EK1         | sha OK | yayın 2021-11-18 < 2021-11-22 | alıntı EXACT | değer alıntıda
+  total_demand_filter_status       =       FILTERED | KAP_978449_EK1         | sha OK | yayın 2021-11-18 < 2021-11-22 | alıntı EXACT | değer alıntıda
+  additional_sale_shares           =              0 | KAP_978449_EK1         | sha OK | yayın 2021-11-18 < 2021-11-22 | alıntı EXACT | değer 0 ← '-' hücresi/beyan
+  ipo_size_tl                      =      197500000 | KAP_978449_EK1         | sha OK | yayın 2021-11-18 < 2021-11-22 | alıntı EXACT | değer alıntıda
+  ipo_price_try                    =          15.80 | SPK_BULTEN_2021_57     | sha OK | yayın 2021-11-11 < 2021-11-22 | alıntı TOKENS 8/8 | değer alıntıda
+  planned_pre_ipo_capital          =       30000000 | SPK_BULTEN_2021_57     | sha OK | yayın 2021-11-11 < 2021-11-22 | alıntı TOKENS 8/8 | değer alıntıda
+  planned_post_ipo_capital         =       38000000 | SPK_BULTEN_2021_57     | sha OK | yayın 2021-11-11 < 2021-11-22 | alıntı TOKENS 8/8 | değer alıntıda
+  planned_capital_increase_shares  =        8000000 | SPK_BULTEN_2021_57     | sha OK | yayın 2021-11-11 < 2021-11-22 | alıntı TOKENS 8/8 | değer alıntıda
+  planned_existing_share_sale      =        4500000 | SPK_BULTEN_2021_57     | sha OK | yayın 2021-11-11 < 2021-11-22 | alıntı TOKENS 8/8 | değer alıntıda
+  planned_base_offer_shares        =       12500000 | SPK_BULTEN_2021_57     | sha OK | yayın 2021-11-11 < 2021-11-22 | alıntı TOKENS 8/8 | değer türetilmiş toplam (özdeşlik OK)
+  planned_additional_sale_ceiling  =              0 | SPK_BULTEN_2021_57     | sha OK | yayın 2021-11-11 < 2021-11-22 | alıntı TOKENS 8/8 | değer 0 ← '-' hücresi/beyan
+  planned_max_offer_shares         =       12500000 | SPK_BULTEN_2021_57     | sha OK | yayın 2021-11-11 < 2021-11-22 | alıntı TOKENS 8/8 | değer türetilmiş toplam (özdeşlik OK)
+  first_trading_date               =     2021-11-22 | KAP_978546             | sha OK | yayın 2021-11-18 < 2021-11-22 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2021-11-15 | KAP_978546             | sha OK | yayın 2021-11-18 < 2021-11-22 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2021-11-16 | KAP_978546             | sha OK | yayın 2021-11-18 < 2021-11-22 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 12500000 == 12500000
+
+## ORCAY (ilk işlem 2021-09-02; ON_EXCHANGE, ANA)
+  ipo_price_tl                     =            9.9 | KAP_961005             | sha OK | yayın 2021-08-31 < 2021-09-02 | alıntı EXACT | değer alıntıda
+  shares_offered                   =        8000000 | KAP_961005             | sha OK | yayın 2021-08-31 < 2021-09-02 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =       20465000 | KAP_961005             | sha OK | yayın 2021-08-31 < 2021-09-02 | alıntı EXACT | değer alıntıda
+  capital_increase_shares          =        8000000 | KAP_960955_EK1         | sha OK | yayın 2021-08-31 < 2021-09-02 | alıntı EXACT | değer alıntıda
+  existing_share_sale_shares       =              0 | SPK_BULTEN_2021_41     | sha OK | yayın 2021-08-19 < 2021-09-02 | alıntı TOKENS 9/9 | değer 0 ← '-' hücresi/beyan | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  total_demand_multiple            =           5.46 | KAP_960955_EK1         | sha OK | yayın 2021-08-31 < 2021-09-02 | alıntı EXACT | değer alıntıda
+  total_demand_filter_status       =     UNFILTERED | KAP_960955_EK1         | sha OK | yayın 2021-08-31 < 2021-09-02 | alıntı EXACT | değer alıntıda
+  additional_sale_shares           =              0 | KAP_960955_EK1         | sha OK | yayın 2021-08-31 < 2021-09-02 | alıntı EXACT | değer 0 ← '-' hücresi/beyan
+  ipo_size_tl                      =       79200000 | KAP_960955_EK1         | sha OK | yayın 2021-08-31 < 2021-09-02 | alıntı EXACT | değer alıntıda
+  ipo_price_try                    =           9.90 | SPK_BULTEN_2021_41     | sha OK | yayın 2021-08-19 < 2021-09-02 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_pre_ipo_capital          =       12465000 | SPK_BULTEN_2021_41     | sha OK | yayın 2021-08-19 < 2021-09-02 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_post_ipo_capital         =       20465000 | SPK_BULTEN_2021_41     | sha OK | yayın 2021-08-19 < 2021-09-02 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_capital_increase_shares  =        8000000 | SPK_BULTEN_2021_41     | sha OK | yayın 2021-08-19 < 2021-09-02 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_existing_share_sale      =              0 | SPK_BULTEN_2021_41     | sha OK | yayın 2021-08-19 < 2021-09-02 | alıntı TOKENS 9/9 | değer 0 ← '-' hücresi/beyan
+  planned_base_offer_shares        =        8000000 | SPK_BULTEN_2021_41     | sha OK | yayın 2021-08-19 < 2021-09-02 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_additional_sale_ceiling  =              0 | SPK_BULTEN_2021_41     | sha OK | yayın 2021-08-19 < 2021-09-02 | alıntı TOKENS 9/9 | değer 0 ← '-' hücresi/beyan
+  planned_max_offer_shares         =        8000000 | SPK_BULTEN_2021_41     | sha OK | yayın 2021-08-19 < 2021-09-02 | alıntı TOKENS 9/9 | değer alıntıda
+  first_trading_date               =     2021-09-02 | KAP_961005             | sha OK | yayın 2021-08-31 < 2021-09-02 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2021-08-26 | KAP_961005             | sha OK | yayın 2021-08-31 < 2021-09-02 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2021-08-27 | KAP_961005             | sha OK | yayın 2021-08-31 < 2021-09-02 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 8000000 == 8000000
+
+## VBTYZ (ilk işlem 2021-07-12; ON_EXCHANGE, ANA)
+  ipo_price_tl                     =          12.48 | KAP_949088             | sha OK | yayın 2021-07-08 < 2021-07-12 | alıntı EXACT | değer alıntıda
+  shares_offered                   =        8000000 | KAP_949088             | sha OK | yayın 2021-07-08 < 2021-07-12 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =       26000000 | KAP_949088             | sha OK | yayın 2021-07-08 < 2021-07-12 | alıntı EXACT | değer alıntıda
+  capital_increase_shares          =        6000000 | KAP_947841_EK1         | sha OK | yayın 2021-07-07 < 2021-07-12 | alıntı EXACT | değer alıntıda
+  existing_share_sale_shares       =        2000000 | KAP_947841_EK1         | sha OK | yayın 2021-07-07 < 2021-07-12 | alıntı EXACT | değer alıntıda
+  total_demand_multiple            =           3.35 | KAP_947841_EK1         | sha OK | yayın 2021-07-07 < 2021-07-12 | alıntı EXACT | değer alıntıda
+  total_demand_filter_status       =       FILTERED | KAP_947841_EK1         | sha OK | yayın 2021-07-07 < 2021-07-12 | alıntı EXACT | değer alıntıda
+  additional_sale_shares           =              0 | KAP_947841_EK1         | sha OK | yayın 2021-07-07 < 2021-07-12 | alıntı EXACT | değer 0 ← '-' hücresi/beyan
+  ipo_size_tl                      =       99840000 | KAP_947841_EK1         | sha OK | yayın 2021-07-07 < 2021-07-12 | alıntı EXACT | değer alıntıda
+  ipo_price_try                    =          12.48 | SPK_BULTEN_2021_31     | sha OK | yayın 2021-06-24 < 2021-07-12 | alıntı TOKENS 7/7 | değer alıntıda
+  planned_pre_ipo_capital          =       20000000 | SPK_BULTEN_2021_31     | sha OK | yayın 2021-06-24 < 2021-07-12 | alıntı TOKENS 7/7 | değer alıntıda
+  planned_post_ipo_capital         =       26000000 | SPK_BULTEN_2021_31     | sha OK | yayın 2021-06-24 < 2021-07-12 | alıntı TOKENS 7/7 | değer alıntıda
+  planned_capital_increase_shares  =        6000000 | SPK_BULTEN_2021_31     | sha OK | yayın 2021-06-24 < 2021-07-12 | alıntı TOKENS 7/7 | değer alıntıda
+  planned_existing_share_sale      =        2000000 | SPK_BULTEN_2021_31     | sha OK | yayın 2021-06-24 < 2021-07-12 | alıntı TOKENS 7/7 | değer alıntıda
+  planned_base_offer_shares        =        8000000 | SPK_BULTEN_2021_31     | sha OK | yayın 2021-06-24 < 2021-07-12 | alıntı TOKENS 7/7 | değer türetilmiş toplam (özdeşlik OK)
+  planned_additional_sale_ceiling  =              0 | SPK_BULTEN_2021_31     | sha OK | yayın 2021-06-24 < 2021-07-12 | alıntı TOKENS 7/7 | değer 0 ← '-' hücresi/beyan
+  planned_max_offer_shares         =        8000000 | SPK_BULTEN_2021_31     | sha OK | yayın 2021-06-24 < 2021-07-12 | alıntı TOKENS 7/7 | değer türetilmiş toplam (özdeşlik OK)
+  first_trading_date               =     2021-07-12 | KAP_949088             | sha OK | yayın 2021-07-08 < 2021-07-12 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2021-07-05 | KAP_949088             | sha OK | yayın 2021-07-08 < 2021-07-12 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2021-07-06 | KAP_949088             | sha OK | yayın 2021-07-08 < 2021-07-12 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 8000000 == 8000000
+
+## HUNER (ilk işlem 2022-02-21; ON_EXCHANGE, ANA)
+  ipo_price_tl                     =           1.82 | KAP_1002467            | sha OK | yayın 2022-02-17 < 2022-02-21 | alıntı EXACT | değer alıntıda
+  shares_offered                   =      130000000 | KAP_1002467            | sha OK | yayın 2022-02-17 < 2022-02-21 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =      580000000 | KAP_1002467            | sha OK | yayın 2022-02-17 < 2022-02-21 | alıntı EXACT | değer alıntıda
+  capital_increase_shares          =       80000000 | KAP_1002294_EK1        | sha OK | yayın 2022-02-17 < 2022-02-21 | alıntı EXACT | değer alıntıda
+  existing_share_sale_shares       =       50000000 | KAP_1002294_EK1        | sha OK | yayın 2022-02-17 < 2022-02-21 | alıntı EXACT | değer alıntıda
+  total_demand_multiple            =              3 | KAP_1002294_EK1        | sha OK | yayın 2022-02-17 < 2022-02-21 | alıntı EXACT | değer alıntıda
+  total_demand_filter_status       =     UNFILTERED | KAP_1002294_EK1        | sha OK | yayın 2022-02-17 < 2022-02-21 | alıntı EXACT | değer alıntıda
+  additional_sale_shares           =              0 | KAP_1002294_EK1        | sha OK | yayın 2022-02-17 < 2022-02-21 | alıntı EXACT | değer 0 ← '-' hücresi/beyan
+  ipo_size_tl                      =      236600000 | KAP_1002294_EK1        | sha OK | yayın 2022-02-17 < 2022-02-21 | alıntı EXACT | değer alıntıda
+  ipo_price_try                    =           1.82 | SPK_BULTEN_2022_7      | sha OK | yayın 2022-02-10 < 2022-02-21 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_pre_ipo_capital          =      500000000 | SPK_BULTEN_2022_7      | sha OK | yayın 2022-02-10 < 2022-02-21 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_post_ipo_capital         =      580000000 | SPK_BULTEN_2022_7      | sha OK | yayın 2022-02-10 < 2022-02-21 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_capital_increase_shares  =       80000000 | SPK_BULTEN_2022_7      | sha OK | yayın 2022-02-10 < 2022-02-21 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_existing_share_sale      =       50000000 | SPK_BULTEN_2022_7      | sha OK | yayın 2022-02-10 < 2022-02-21 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_base_offer_shares        =      130000000 | SPK_BULTEN_2022_7      | sha OK | yayın 2022-02-10 < 2022-02-21 | alıntı TOKENS 10/10 | değer türetilmiş toplam (özdeşlik OK)
+  planned_additional_sale_ceiling  =              0 | SPK_BULTEN_2022_7      | sha OK | yayın 2022-02-10 < 2022-02-21 | alıntı TOKENS 10/10 | değer 0 ← '-' hücresi/beyan
+  planned_max_offer_shares         =      130000000 | SPK_BULTEN_2022_7      | sha OK | yayın 2022-02-10 < 2022-02-21 | alıntı TOKENS 10/10 | değer türetilmiş toplam (özdeşlik OK)
+  first_trading_date               =     2022-02-21 | KAP_1002467            | sha OK | yayın 2022-02-17 < 2022-02-21 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2022-02-15 | KAP_1002467            | sha OK | yayın 2022-02-17 < 2022-02-21 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2022-02-16 | KAP_1002467            | sha OK | yayın 2022-02-17 < 2022-02-21 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 130000000 == 130000000
+
+## OBASE (ilk işlem 2022-08-03; ON_EXCHANGE, ANA)
+  ipo_price_tl                     =           10.5 | KAP_1050472            | sha OK | yayın 2022-08-01 < 2022-08-03 | alıntı EXACT | değer alıntıda
+  shares_offered                   =       14000000 | KAP_1050472            | sha OK | yayın 2022-08-01 < 2022-08-03 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =       45500000 | KAP_1050472            | sha OK | yayın 2022-08-01 < 2022-08-03 | alıntı EXACT | değer alıntıda
+  capital_increase_shares          =       10500000 | SPK_BULTEN_2022_36     | sha OK | yayın 2022-07-21 < 2022-08-03 | alıntı TOKENS 12/12 | değer alıntıda | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  existing_share_sale_shares       =        3500000 | SPK_BULTEN_2022_36     | sha OK | yayın 2022-07-21 < 2022-08-03 | alıntı TOKENS 12/12 | değer alıntıda | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  total_demand_multiple            =           3.78 | KAP_1050170_EK1        | sha OK | yayın 2022-08-01 < 2022-08-03 | alıntı EXACT | değer alıntıda
+  total_demand_filter_status       =     UNFILTERED | KAP_1050170_EK1        | sha OK | yayın 2022-08-01 < 2022-08-03 | alıntı EXACT | değer alıntıda
+  additional_sale_shares           =              0 | KAP_1050170_EK1        | sha OK | yayın 2022-08-01 < 2022-08-03 | alıntı EXACT | değer 0 ← '-' hücresi/beyan
+  ipo_size_tl                      =      147000000 | KAP_1050170_EK1        | sha OK | yayın 2022-08-01 < 2022-08-03 | alıntı EXACT | değer alıntıda
+  ipo_price_try                    =          10.50 | SPK_BULTEN_2022_36     | sha OK | yayın 2022-07-21 < 2022-08-03 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_pre_ipo_capital          =       35000000 | SPK_BULTEN_2022_36     | sha OK | yayın 2022-07-21 < 2022-08-03 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_post_ipo_capital         =       45500000 | SPK_BULTEN_2022_36     | sha OK | yayın 2022-07-21 < 2022-08-03 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_capital_increase_shares  =       10500000 | SPK_BULTEN_2022_36     | sha OK | yayın 2022-07-21 < 2022-08-03 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_existing_share_sale      =        3500000 | SPK_BULTEN_2022_36     | sha OK | yayın 2022-07-21 < 2022-08-03 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_base_offer_shares        =       14000000 | SPK_BULTEN_2022_36     | sha OK | yayın 2022-07-21 < 2022-08-03 | alıntı TOKENS 12/12 | değer türetilmiş toplam (özdeşlik OK)
+  planned_additional_sale_ceiling  =              0 | SPK_BULTEN_2022_36     | sha OK | yayın 2022-07-21 < 2022-08-03 | alıntı TOKENS 12/12 | değer 0 ← '-' hücresi/beyan
+  planned_max_offer_shares         =       14000000 | SPK_BULTEN_2022_36     | sha OK | yayın 2022-07-21 < 2022-08-03 | alıntı TOKENS 12/12 | değer türetilmiş toplam (özdeşlik OK)
+  first_trading_date               =     2022-08-03 | KAP_1050472            | sha OK | yayın 2022-08-01 < 2022-08-03 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2022-07-28 | KAP_1050472            | sha OK | yayın 2022-08-01 < 2022-08-03 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2022-07-29 | KAP_1050472            | sha OK | yayın 2022-08-01 < 2022-08-03 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 14000000 == 14000000
+
+## SEGYO (ilk işlem 2022-06-07; ON_EXCHANGE, ANA)
+  ipo_price_tl                     =            1.1 | KAP_1034640            | sha OK | yayın 2022-06-03 < 2022-06-07 | alıntı EXACT | değer alıntıda
+  shares_offered                   =      203388821 | KAP_1034640            | sha OK | yayın 2022-06-03 < 2022-06-07 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =      813555283 | KAP_1034640            | sha OK | yayın 2022-06-03 < 2022-06-07 | alıntı EXACT | değer alıntıda
+  capital_increase_shares          =      203388821 | KAP_1034528_EK1        | sha OK | yayın 2022-06-03 < 2022-06-07 | alıntı EXACT | değer alıntıda
+  existing_share_sale_shares       =              0 | SPK_BULTEN_2022_25     | sha OK | yayın 2022-05-26 < 2022-06-07 | alıntı TOKENS 9/9 | değer 0 ← '-' hücresi/beyan | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  total_demand_multiple            =           1.58 | KAP_1034528_EK1        | sha OK | yayın 2022-06-03 < 2022-06-07 | alıntı EXACT | değer alıntıda
+  total_demand_filter_status       =     UNFILTERED | KAP_1034528_EK1        | sha OK | yayın 2022-06-03 < 2022-06-07 | alıntı EXACT | değer alıntıda
+  additional_sale_shares           =              0 | KAP_1034528_EK1        | sha OK | yayın 2022-06-03 < 2022-06-07 | alıntı EXACT | değer 0 ← '-' hücresi/beyan
+  ipo_size_tl                      =      223727703 | KAP_1034528_EK1        | sha OK | yayın 2022-06-03 < 2022-06-07 | alıntı EXACT | değer alıntıda
+  ipo_price_try                    =           1.10 | SPK_BULTEN_2022_25     | sha OK | yayın 2022-05-26 < 2022-06-07 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_pre_ipo_capital          =      610166462 | SPK_BULTEN_2022_25     | sha OK | yayın 2022-05-26 < 2022-06-07 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_post_ipo_capital         =      813555283 | SPK_BULTEN_2022_25     | sha OK | yayın 2022-05-26 < 2022-06-07 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_capital_increase_shares  =      203388821 | SPK_BULTEN_2022_25     | sha OK | yayın 2022-05-26 < 2022-06-07 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_existing_share_sale      =              0 | SPK_BULTEN_2022_25     | sha OK | yayın 2022-05-26 < 2022-06-07 | alıntı TOKENS 9/9 | değer 0 ← '-' hücresi/beyan
+  planned_base_offer_shares        =      203388821 | SPK_BULTEN_2022_25     | sha OK | yayın 2022-05-26 < 2022-06-07 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_additional_sale_ceiling  =              0 | SPK_BULTEN_2022_25     | sha OK | yayın 2022-05-26 < 2022-06-07 | alıntı TOKENS 9/9 | değer 0 ← '-' hücresi/beyan
+  planned_max_offer_shares         =      203388821 | SPK_BULTEN_2022_25     | sha OK | yayın 2022-05-26 < 2022-06-07 | alıntı TOKENS 9/9 | değer alıntıda
+  first_trading_date               =     2022-06-07 | KAP_1034640            | sha OK | yayın 2022-06-03 < 2022-06-07 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2022-06-01 | KAP_1034640            | sha OK | yayın 2022-06-03 < 2022-06-07 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2022-06-02 | KAP_1034640            | sha OK | yayın 2022-06-03 < 2022-06-07 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 203388821 == 203388821
+
+## TERA (ilk işlem 2022-12-22; OFF_EXCHANGE_BOOKBUILD, ANA)
+  ipo_price_tl                     =             10 | KAP_1088529            | sha OK | yayın 2022-12-19 < 2022-12-22 | alıntı EXACT | değer alıntıda
+  shares_offered                   =       16500000 | KAP_1088529            | sha OK | yayın 2022-12-19 < 2022-12-22 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =       52500000 | KAP_1088529            | sha OK | yayın 2022-12-19 < 2022-12-22 | alıntı NOSPACE | değer alıntıda
+  capital_increase_shares          =       15000000 | KAP_1088290_EK1        | sha OK | yayın 2022-12-19 < 2022-12-22 | alıntı EXACT | değer alıntıda
+  existing_share_sale_shares       =              0 | SPK_BULTEN_2022_69     | sha OK | yayın 2022-12-09 < 2022-12-22 | alıntı TOKENS 11/11 | değer 0 ← '-' hücresi/beyan | taşıma PLANNED_SPLIT_CARRIED_FULL_BASE_PLUS_STATED_ADDITIONAL_SALE: (a) OK (b) OK (c) 
+  total_demand_multiple            =  78.4928737576 | KAP_1088290_EK1        | sha OK | yayın 2022-12-19 < 2022-12-22 | alıntı yok | türetilmiş: pay/payda alıntı EXACT/EXACT, sayılar alıntıda, 1295132417/16500000 = 78.4928737576 == 78.4928737576
+  total_demand_filter_status       =  NOT_SPECIFIED | KAP_1088290_EK1        | sha OK | yayın 2022-12-19 < 2022-12-22 | alıntı yok | 'filtre' belgede VAR (bak)
+  additional_sale_shares           =        1500000 | KAP_1088290_EK1        | sha OK | yayın 2022-12-19 < 2022-12-22 | alıntı EXACT | değer alıntıda
+  ipo_size_tl                      =      165000000 | KAP_1088290_EK1        | sha OK | yayın 2022-12-19 < 2022-12-22 | alıntı EXACT | değer alıntıda
+  ipo_price_try                    =          10.00 | SPK_BULTEN_2022_69     | sha OK | yayın 2022-12-09 < 2022-12-22 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_pre_ipo_capital          =       37500000 | SPK_BULTEN_2022_69     | sha OK | yayın 2022-12-09 < 2022-12-22 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_post_ipo_capital         =       52500000 | SPK_BULTEN_2022_69     | sha OK | yayın 2022-12-09 < 2022-12-22 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_capital_increase_shares  =       15000000 | SPK_BULTEN_2022_69     | sha OK | yayın 2022-12-09 < 2022-12-22 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_existing_share_sale      =              0 | SPK_BULTEN_2022_69     | sha OK | yayın 2022-12-09 < 2022-12-22 | alıntı TOKENS 11/11 | değer 0 ← '-' hücresi/beyan
+  planned_base_offer_shares        =       15000000 | SPK_BULTEN_2022_69     | sha OK | yayın 2022-12-09 < 2022-12-22 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_additional_sale_ceiling  =        1500000 | SPK_BULTEN_2022_69     | sha OK | yayın 2022-12-09 < 2022-12-22 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_max_offer_shares         =       16500000 | SPK_BULTEN_2022_69     | sha OK | yayın 2022-12-09 < 2022-12-22 | alıntı TOKENS 11/11 | değer türetilmiş toplam (özdeşlik OK)
+  first_trading_date               =     2022-12-22 | KAP_1088529            | sha OK | yayın 2022-12-19 < 2022-12-22 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2022-12-15 | KAP_1088529            | sha OK | yayın 2022-12-19 < 2022-12-22 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2022-12-16 | KAP_1088529            | sha OK | yayın 2022-12-19 < 2022-12-22 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 16500000 == 16500000
+
+## A1CAP (ilk işlem 2023-06-15; OFF_EXCHANGE_BOOKBUILD, YILDIZ)
+  ipo_price_tl                     =             25 | KAP_1158082            | sha OK | yayın 2023-06-12 < 2023-06-15 | alıntı EXACT | değer alıntıda
+  shares_offered                   =       35000000 | KAP_1158082            | sha OK | yayın 2023-06-12 < 2023-06-15 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =      135000000 | KAP_1158082            | sha OK | yayın 2023-06-12 < 2023-06-15 | alıntı EXACT | değer alıntıda
+  capital_increase_shares          =       35000000 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-15 | alıntı TOKENS 10/10 | değer alıntıda | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  existing_share_sale_shares       =              0 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-15 | alıntı TOKENS 10/10 | değer 0 ← '-' hücresi/beyan | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  total_demand_multiple            =           2.43 | KAP_1157884_EK1        | sha OK | yayın 2023-06-09 < 2023-06-15 | alıntı EXACT | değer alıntıda
+  total_demand_filter_status       =  NOT_SPECIFIED | KAP_1157884_EK1        | sha OK | yayın 2023-06-09 < 2023-06-15 | alıntı yok | 'filtre' belgede YOK (uyumlu)
+  additional_sale_shares           =              0 | KAP_1157884_EK1        | sha OK | yayın 2023-06-09 < 2023-06-15 | alıntı EXACT | değer 0 ← '-' hücresi/beyan
+  ipo_size_tl                      =      875000000 | KAP_1157884_EK1        | sha OK | yayın 2023-06-09 < 2023-06-15 | alıntı EXACT | değer alıntıda
+  ipo_price_try                    =          25.00 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-15 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_pre_ipo_capital          =      100000000 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-15 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_post_ipo_capital         =      135000000 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-15 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_capital_increase_shares  =       35000000 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-15 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_existing_share_sale      =              0 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-15 | alıntı TOKENS 10/10 | değer 0 ← '-' hücresi/beyan
+  planned_base_offer_shares        =       35000000 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-15 | alıntı TOKENS 10/10 | değer alıntıda
+  planned_additional_sale_ceiling  =              0 | KAP_1155755_EK1        | sha OK | yayın 2023-06-02 < 2023-06-15 | alıntı EXACT | değer 0 ← '-' hücresi/beyan
+  planned_max_offer_shares         =       35000000 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-15 | alıntı TOKENS 10/10 | değer alıntıda
+  first_trading_date               =     2023-06-15 | KAP_1158082            | sha OK | yayın 2023-06-12 < 2023-06-15 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2023-06-07 | KAP_1158082            | sha OK | yayın 2023-06-12 < 2023-06-15 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2023-06-09 | KAP_1158082            | sha OK | yayın 2023-06-12 < 2023-06-15 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 35000000 == 35000000
+
+## ATAKP (ilk işlem 2023-07-27; OFF_EXCHANGE_BOOKBUILD, YILDIZ)
+  ipo_price_tl                     =           39.5 | KAP_1174704            | sha OK | yayın 2023-07-24 < 2023-07-27 | alıntı EXACT | değer alıntıda
+  shares_offered                   =       28224000 | KAP_1174704            | sha OK | yayın 2023-07-24 < 2023-07-27 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =      138768000 | KAP_1174704            | sha OK | yayın 2023-07-24 < 2023-07-27 | alıntı EXACT | değer alıntıda
+  capital_increase_shares          =       21168000 | SPK_BULTEN_2023_39     | sha OK | yayın 2023-07-13 < 2023-07-27 | alıntı TOKENS 12/12 | değer alıntıda | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  existing_share_sale_shares       =        7056000 | SPK_BULTEN_2023_39     | sha OK | yayın 2023-07-13 < 2023-07-27 | alıntı TOKENS 12/12 | değer alıntıda | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  total_demand_multiple            =           4.97 | KAP_1174403_EK1        | sha OK | yayın 2023-07-23 < 2023-07-27 | alıntı EXACT | değer alıntıda
+  total_demand_filter_status       =  NOT_SPECIFIED | KAP_1174403_EK1        | sha OK | yayın 2023-07-23 < 2023-07-27 | alıntı yok | 'filtre' belgede YOK (uyumlu)
+  additional_sale_shares           =              0 | KAP_1174403_EK1        | sha OK | yayın 2023-07-23 < 2023-07-27 | alıntı EXACT | değer 0 ← '-' hücresi/beyan
+  ipo_size_tl                      =     1114848000 | KAP_1174403_EK1        | sha OK | yayın 2023-07-23 < 2023-07-27 | alıntı EXACT | değer alıntıda
+  ipo_price_try                    =          39.50 | SPK_BULTEN_2023_39     | sha OK | yayın 2023-07-13 < 2023-07-27 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_pre_ipo_capital          =      117600000 | SPK_BULTEN_2023_39     | sha OK | yayın 2023-07-13 < 2023-07-27 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_post_ipo_capital         =      138768000 | SPK_BULTEN_2023_39     | sha OK | yayın 2023-07-13 < 2023-07-27 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_capital_increase_shares  =       21168000 | SPK_BULTEN_2023_39     | sha OK | yayın 2023-07-13 < 2023-07-27 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_existing_share_sale      =        7056000 | SPK_BULTEN_2023_39     | sha OK | yayın 2023-07-13 < 2023-07-27 | alıntı TOKENS 12/12 | değer alıntıda
+  planned_base_offer_shares        =       28224000 | SPK_BULTEN_2023_39     | sha OK | yayın 2023-07-13 < 2023-07-27 | alıntı TOKENS 12/12 | değer türetilmiş toplam (özdeşlik OK)
+  planned_additional_sale_ceiling  =              0 | SPK_BULTEN_2023_39     | sha OK | yayın 2023-07-13 < 2023-07-27 | alıntı TOKENS 12/12 | değer 0 ← '-' hücresi/beyan
+  planned_max_offer_shares         =       28224000 | SPK_BULTEN_2023_39     | sha OK | yayın 2023-07-13 < 2023-07-27 | alıntı TOKENS 12/12 | değer türetilmiş toplam (özdeşlik OK)
+  first_trading_date               =     2023-07-27 | KAP_1174704            | sha OK | yayın 2023-07-24 < 2023-07-27 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2023-07-19 | KAP_1174704            | sha OK | yayın 2023-07-24 < 2023-07-27 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2023-07-21 | KAP_1174704            | sha OK | yayın 2023-07-24 < 2023-07-27 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 28224000 == 28224000
+
+## FORTE (ilk işlem 2023-06-14; ON_EXCHANGE, ANA)
+  ipo_price_tl                     =          12.12 | KAP_1158081            | sha OK | yayın 2023-06-12 < 2023-06-14 | alıntı EXACT | değer alıntıda
+  shares_offered                   =       22000000 | KAP_1158081            | sha OK | yayın 2023-06-12 < 2023-06-14 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =       67000000 | KAP_1158081            | sha OK | yayın 2023-06-12 < 2023-06-14 | alıntı EXACT | değer alıntıda
+  capital_increase_shares          =       22000000 | KAP_1158053_EK1        | sha OK | yayın 2023-06-12 < 2023-06-14 | alıntı EXACT | değer alıntıda
+  existing_share_sale_shares       =              0 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-14 | alıntı TOKENS 11/11 | değer 0 ← '-' hücresi/beyan | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  total_demand_multiple            =            3.1 | KAP_1158053_EK1        | sha OK | yayın 2023-06-12 < 2023-06-14 | alıntı EXACT | değer alıntıda
+  total_demand_filter_status       =     UNFILTERED | KAP_1158053_EK1        | sha OK | yayın 2023-06-12 < 2023-06-14 | alıntı EXACT | değer alıntıda
+  additional_sale_shares           =              0 | KAP_1158053_EK1        | sha OK | yayın 2023-06-12 < 2023-06-14 | alıntı EXACT | değer 0 ← '-' hücresi/beyan
+  ipo_size_tl                      =      266640000 | KAP_1158053_EK1        | sha OK | yayın 2023-06-12 < 2023-06-14 | alıntı EXACT | değer alıntıda
+  ipo_price_try                    =          12.12 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-14 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_pre_ipo_capital          =       45000000 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-14 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_post_ipo_capital         =       67000000 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-14 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_capital_increase_shares  =       22000000 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-14 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_existing_share_sale      =              0 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-14 | alıntı TOKENS 11/11 | değer 0 ← '-' hücresi/beyan
+  planned_base_offer_shares        =       22000000 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-14 | alıntı TOKENS 11/11 | değer alıntıda
+  planned_additional_sale_ceiling  =              0 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-14 | alıntı TOKENS 11/11 | değer 0 ← '-' hücresi/beyan
+  planned_max_offer_shares         =       22000000 | SPK_BULTEN_2023_29     | sha OK | yayın 2023-06-01 < 2023-06-14 | alıntı TOKENS 11/11 | değer alıntıda
+  first_trading_date               =     2023-06-14 | KAP_1158081            | sha OK | yayın 2023-06-12 < 2023-06-14 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2023-06-08 | KAP_1158081            | sha OK | yayın 2023-06-12 < 2023-06-14 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2023-06-09 | KAP_1158081            | sha OK | yayın 2023-06-12 < 2023-06-14 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 22000000 == 22000000
+
+## SOKE (ilk işlem 2023-01-12; OFF_EXCHANGE_BOOKBUILD, YILDIZ)
+  ipo_price_tl                     =            7.5 | KAP_1098380            | sha OK | yayın 2023-01-09 < 2023-01-12 | alıntı EXACT | değer alıntıda
+  shares_offered                   =       77500000 | KAP_1098380            | sha OK | yayın 2023-01-09 < 2023-01-12 | alıntı EXACT | değer alıntıda
+  post_ipo_share_capital           =      386500000 | KAP_1098380            | sha OK | yayın 2023-01-09 < 2023-01-12 | alıntı FAIL 3/4 | değer alıntıda
+  capital_increase_shares          =       77500000 | SPK_BULTEN_2022_72     | sha OK | yayın 2022-12-22 < 2023-01-12 | alıntı TOKENS 9/9 | değer alıntıda | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  existing_share_sale_shares       =              0 | SPK_BULTEN_2022_72     | sha OK | yayın 2022-12-22 < 2023-01-12 | alıntı TOKENS 9/9 | değer 0 ← '-' hücresi/beyan | taşıma PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION: (a) OK (b) OK (c) SPK Ek Pay Satışı '-'
+  total_demand_multiple            =         118.24 | KAP_1096398_EK1        | sha OK | yayın 2023-01-09 < 2023-01-12 | alıntı EXACT | değer alıntıda
+  total_demand_filter_status       =  NOT_SPECIFIED | KAP_1096398_EK1        | sha OK | yayın 2023-01-09 < 2023-01-12 | alıntı yok | 'filtre' belgede YOK (uyumlu)
+  additional_sale_shares           =              0 | KAP_1096398_EK1        | sha OK | yayın 2023-01-09 < 2023-01-12 | alıntı EXACT | değer 0 ← '-' hücresi/beyan
+  ipo_size_tl                      =      581250000 | KAP_1096398_EK1        | sha OK | yayın 2023-01-09 < 2023-01-12 | alıntı EXACT | değer alıntıda
+  ipo_price_try                    =           7.50 | SPK_BULTEN_2022_72     | sha OK | yayın 2022-12-22 < 2023-01-12 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_pre_ipo_capital          =      309000000 | SPK_BULTEN_2022_72     | sha OK | yayın 2022-12-22 < 2023-01-12 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_post_ipo_capital         =      386500000 | SPK_BULTEN_2022_72     | sha OK | yayın 2022-12-22 < 2023-01-12 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_capital_increase_shares  =       77500000 | SPK_BULTEN_2022_72     | sha OK | yayın 2022-12-22 < 2023-01-12 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_existing_share_sale      =              0 | SPK_BULTEN_2022_72     | sha OK | yayın 2022-12-22 < 2023-01-12 | alıntı TOKENS 9/9 | değer 0 ← '-' hücresi/beyan
+  planned_base_offer_shares        =       77500000 | SPK_BULTEN_2022_72     | sha OK | yayın 2022-12-22 < 2023-01-12 | alıntı TOKENS 9/9 | değer alıntıda
+  planned_additional_sale_ceiling  =              0 | SPK_BULTEN_2022_72     | sha OK | yayın 2022-12-22 < 2023-01-12 | alıntı TOKENS 9/9 | değer 0 ← '-' hücresi/beyan
+  planned_max_offer_shares         =       77500000 | SPK_BULTEN_2022_72     | sha OK | yayın 2022-12-22 < 2023-01-12 | alıntı TOKENS 9/9 | değer alıntıda
+  first_trading_date               =     2023-01-12 | KAP_1098380            | sha OK | yayın 2023-01-09 < 2023-01-12 | alıntı EXACT | değer alıntıda
+  bookbuilding_start               =     2023-01-04 | KAP_1098380            | sha OK | yayın 2023-01-09 < 2023-01-12 | alıntı EXACT | değer alıntıda
+  bookbuilding_end                 =     2023-01-06 | KAP_1098380            | sha OK | yayın 2023-01-09 < 2023-01-12 | alıntı EXACT | değer alıntıda
+  PB özdeşlikleri: A OK B OK C OK
+  satılan pay = artırım + ortak satışı + ek satış: 77500000 == 77500000
+
+borsai sys.modules içinde mi: False

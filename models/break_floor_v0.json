@@ -1,0 +1,635 @@
+{
+  "algorithm": "l2_logit_v1_6_grid",
+  "band_rule": {
+    "lower_over_reference": [
+      "0.9",
+      "0.9020"
+    ],
+    "on_mismatch": "BAND_RULE_MISMATCH; yastık rozeti gizli; regime_tags BAND_CHANGED",
+    "upper_over_reference": [
+      "1.098",
+      "1.1"
+    ]
+  },
+  "code_version": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "ec8ca3f85bb18c02bec48b82c95355939353f08e3e1f407735d616b1058849a1",
+    "git_commit": "74b851a5be6ad6b4746ac96a7745d2ee0c9d95f3"
+  },
+  "comparators": {
+    "by_type_F1": {
+      "0": {
+        "events": 6,
+        "n": 47,
+        "rate": 0.1276595744680851
+      },
+      "1": {
+        "events": 19,
+        "n": 35,
+        "rate": 0.5428571428571428
+      }
+    },
+    "zero": {
+      "F1": 0.3048780487804878,
+      "F2": 0.14102564102564102
+    }
+  },
+  "created_at": "2026-10-02T16:21:00+03:00",
+  "decisions_document": {
+    "path": "docs/specs_faz8/KARARLAR.md",
+    "sha256": "8d8bbc971b01472f498cc96d5eddd26cdb868406512426a355df213e74d89ce7"
+  },
+  "description": "Kırılma akşamı modeli (SPEC_BREAK_V0): seri bozulduğu akşam (b = L + 1 ≤ 9) ertesi işlem görmüş seansın taban kapanışı (F1) ve iki ardışık taban (F2) için başlık başına L2-lojistik (V1.6 C ızgarası, iç arz-bırak Brier); özellikler kırılma gününün taban kapanışı (b_floor) ve el değiştirmesi (b_turnover); H99'un 82 kırılma akşamı.",
+  "event_definition": "b = L + 1, first traded non-ceiling close; b in 1..9",
+  "family": "break_floor_v0",
+  "feature_definitions": {
+    "b_floor": "1[Decimal(KAPANIS FIYATI)_b == Decimal(ALT LIMIT FIYATI)_b]: D_b THB/THM ham metni, Decimal eşitliği (adım/yuvarlama yok; tavan etiketinin aynası); z-skor (popülasyon std), σ = 0 ise düşer",
+    "b_turnover": "ln(TOPLAM ISLEM ADEDI_b / shares_offered): 60 haneli Decimal, bir kez binary64; eğitim [p05, p95]'ine (Type-7, ln ölçeğinde) kırpılır, z-skor"
+  },
+  "feature_ranges": {
+    "b_floor": {
+      "max": 1.0,
+      "min": 0.0,
+      "n": 82,
+      "n_missing": 0
+    },
+    "b_turnover": {
+      "max": 1.1691103406911647,
+      "min": -2.774809265822848,
+      "n": 82,
+      "n_missing": 0
+    }
+  },
+  "features": [
+    "b_floor",
+    "b_turnover"
+  ],
+  "horizons": {
+    "F1": {
+      "p_floor": {
+        "C": 1.0,
+        "coef": [
+          0.9866556408087268,
+          0.06286893543556789
+        ],
+        "columns": [
+          "b_floor",
+          "b_turnover"
+        ],
+        "final_fit_attempts": [
+          [
+            1.0,
+            "FIT_OK"
+          ]
+        ],
+        "inner_loocv_brier": {
+          "0.0001": 0.21705254797220827,
+          "0.001": 0.21583213553282043,
+          "0.01": 0.20664934916438127,
+          "0.1": 0.18724292531062958,
+          "1.0": 0.18406603839256774,
+          "10.0": 0.18438148401803614,
+          "100.0": 0.1844336126429016,
+          "ZERO": 0.21719250114311844
+        },
+        "inner_loocv_folds": 82,
+        "inner_loocv_status": {
+          "0.0001": "SCORED",
+          "0.001": "SCORED",
+          "0.01": "SCORED",
+          "0.1": "SCORED",
+          "1.0": "SCORED",
+          "10.0": "SCORED",
+          "100.0": "SCORED",
+          "ZERO": "SCORED"
+        },
+        "intercept": -1.0006869243500793,
+        "kind": "logit",
+        "n_class_0": 57,
+        "n_class_1": 25,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      }
+    },
+    "F2": {
+      "p_floor": {
+        "C": 0.1,
+        "coef": [
+          0.28721801132023284,
+          -0.3079897535288709
+        ],
+        "columns": [
+          "b_floor",
+          "b_turnover"
+        ],
+        "final_fit_attempts": [
+          [
+            0.1,
+            "FIT_OK"
+          ]
+        ],
+        "inner_loocv_brier": {
+          "0.0001": 0.12428098861791555,
+          "0.001": 0.1240754437167039,
+          "0.01": 0.12237173373066924,
+          "0.1": 0.11862632696156962,
+          "1.0": 0.12091342771206062,
+          "10.0": 0.12187547570425816,
+          "100.0": 0.12199182374183508,
+          "ZERO": 0.12430426716140999
+        },
+        "inner_loocv_folds": 78,
+        "inner_loocv_status": {
+          "0.0001": "SCORED",
+          "0.001": "SCORED",
+          "0.01": "SCORED",
+          "0.1": "SCORED",
+          "1.0": "SCORED",
+          "10.0": "SCORED",
+          "100.0": "SCORED",
+          "ZERO": "SCORED"
+        },
+        "intercept": -1.89485164203132,
+        "kind": "logit",
+        "n_class_0": 67,
+        "n_class_1": 11,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      }
+    }
+  },
+  "input_policy": {
+    "codes": "B_LIMIT_NA; B_VOLUME_INVALID; B_FIELD_INVALID; INPUT_SHARES_OFFERED (B3 biçimi, öneksiz); D_b işlem görmediyse B_NOT_TRADED (kayıt yazılmaz)",
+    "not_applicable": "b = 10 → B10; L = 10 → NO_BREAK (ret değil); b = 9 → F2 TARGET_UNDEFINED_F2",
+    "shares_offered_not_pit": "tahmin üretilir, inputs_pit_ok = false → sınıf RETRO (§9.3)",
+    "warnings": "WARN_B_HALF_DAY; WARN_B_INTRADAY_HALT; WARN_B_SPECIAL_TRADES (hacim düzeltilmez); WARN_B_FLOOR_LOCK_ALLDAY (bilgi); B_TURNOVER_CLIPPED_TO_TRAINING_P05_P95; OUT_OF_TRAINING_RANGE; BAND_RULE_MISMATCH (rozet gizli, BAND_CHANGED)"
+  },
+  "model_id": "break_floor_v0",
+  "preprocessing": {
+    "F1": {
+      "columns": [
+        "b_floor",
+        "b_turnover"
+      ],
+      "dropped": {},
+      "f3_filter_mode": null,
+      "f3_filter_mode_tie": false,
+      "f3_filter_nulled_tickers": [],
+      "f5_created": false,
+      "log_transform": [],
+      "mean": {
+        "b_floor": 0.4268292682926829,
+        "b_turnover": 0.03932166309750605
+      },
+      "medians": {},
+      "n_train": 82,
+      "preprocessing_id": "BREAK_V0_B_FLOOR_B_TURNOVER_WINSOR_B_TURNOVER_P05_P95_NO_IMPUTATION_NO_F5",
+      "std": {
+        "b_floor": 0.49461706806520117,
+        "b_turnover": 0.9523415640583185
+      },
+      "winsor": {
+        "b_turnover": {
+          "p05": -2.178885510323231,
+          "p95": 1.0579491580919846
+        }
+      }
+    },
+    "F2": {
+      "columns": [
+        "b_floor",
+        "b_turnover"
+      ],
+      "dropped": {},
+      "f3_filter_mode": null,
+      "f3_filter_mode_tie": false,
+      "f3_filter_nulled_tickers": [],
+      "f5_created": false,
+      "log_transform": [],
+      "mean": {
+        "b_floor": 0.4230769230769231,
+        "b_turnover": 0.031417677739685915
+      },
+      "medians": {},
+      "n_train": 78,
+      "preprocessing_id": "BREAK_V0_B_FLOOR_B_TURNOVER_WINSOR_B_TURNOVER_P05_P95_NO_IMPUTATION_NO_F5",
+      "std": {
+        "b_floor": 0.4940474068717357,
+        "b_turnover": 0.9311373143351197
+      },
+      "winsor": {
+        "b_turnover": {
+          "p05": -2.183673418876317,
+          "p95": 1.0613649977911812
+        }
+      }
+    }
+  },
+  "regime_warning": {
+    "end_d1": null,
+    "start_d1": "2026-09-16",
+    "tag": "FON_KRIZI_2026",
+    "text": "Bu arzın ilk seansları Eylül 2026 fon krizi penceresine düşüyor; eğitim kümesinde (2023-09…2026-08) böyle bir stres yok. Beklenti (önceden yazıldı): model tabanı az tahmin eder."
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "schema_version": "borsai.model/1",
+  "spec": {
+    "algorithm": "l2_logit_v1_6_grid",
+    "band_rule": {
+      "lower_over_reference": [
+        "0.9",
+        "0.9020"
+      ],
+      "on_mismatch": "BAND_RULE_MISMATCH; yastık rozeti gizli; regime_tags BAND_CHANGED",
+      "upper_over_reference": [
+        "1.098",
+        "1.1"
+      ]
+    },
+    "comparators": {
+      "PRODUCT_BREAK_FLOOR": "tavan yolu durum-2 karışımı (predict_path.conditional_after_break atomları); P_ürün(F1) = Σ{w : r ≤ Lo(kapanış_b)/P − 1 + 1e-12}, h = b + 1; F2 Lo∘Lo eşiğiyle, h = b + 2; backtest'te hücreler build_cells(cutoff = D_1(k))",
+      "base_floor_by_type": "eğitimde test arzının b_floor sınıfındaki F1 oranı (yalnız backtest; canlıda dondurulmuş sınıf oranları)",
+      "break_floor_v0@ZERO": "başlık başına eğitim oranı (kapalı biçim)"
+    },
+    "decisions_document": {
+      "path": "docs/specs_faz8/KARARLAR.md",
+      "sha256": "8d8bbc971b01472f498cc96d5eddd26cdb868406512426a355df213e74d89ce7"
+    },
+    "description": "Kırılma akşamı modeli (SPEC_BREAK_V0): seri bozulduğu akşam (b = L + 1 ≤ 9) ertesi işlem görmüş seansın taban kapanışı (F1) ve iki ardışık taban (F2) için başlık başına L2-lojistik (V1.6 C ızgarası, iç arz-bırak Brier); özellikler kırılma gününün taban kapanışı (b_floor) ve el değiştirmesi (b_turnover); H99'un 82 kırılma akşamı.",
+    "event_definition": "b = L + 1, first traded non-ceiling close; b in 1..9",
+    "family": "break_floor_v0",
+    "feature_definitions": {
+      "b_floor": "1[Decimal(KAPANIS FIYATI)_b == Decimal(ALT LIMIT FIYATI)_b]: D_b THB/THM ham metni, Decimal eşitliği (adım/yuvarlama yok; tavan etiketinin aynası); z-skor (popülasyon std), σ = 0 ise düşer",
+      "b_turnover": "ln(TOPLAM ISLEM ADEDI_b / shares_offered): 60 haneli Decimal, bir kez binary64; eğitim [p05, p95]'ine (Type-7, ln ölçeğinde) kırpılır, z-skor"
+    },
+    "features": [
+      "b_floor",
+      "b_turnover"
+    ],
+    "free_parameters_per_head": 3,
+    "grid_version": "v1_6",
+    "heads": [
+      "F1",
+      "F2"
+    ],
+    "input_policy": {
+      "codes": "B_LIMIT_NA; B_VOLUME_INVALID; B_FIELD_INVALID; INPUT_SHARES_OFFERED (B3 biçimi, öneksiz); D_b işlem görmediyse B_NOT_TRADED (kayıt yazılmaz)",
+      "not_applicable": "b = 10 → B10; L = 10 → NO_BREAK (ret değil); b = 9 → F2 TARGET_UNDEFINED_F2",
+      "shares_offered_not_pit": "tahmin üretilir, inputs_pit_ok = false → sınıf RETRO (§9.3)",
+      "warnings": "WARN_B_HALF_DAY; WARN_B_INTRADAY_HALT; WARN_B_SPECIAL_TRADES (hacim düzeltilmez); WARN_B_FLOOR_LOCK_ALLDAY (bilgi); B_TURNOVER_CLIPPED_TO_TRAINING_P05_P95; OUT_OF_TRAINING_RANGE; BAND_RULE_MISMATCH (rozet gizli, BAND_CHANGED)"
+    },
+    "logit": {
+      "C_grid": [
+        "ZERO",
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "class_weight": null,
+      "direction_rule": "UP iff p > 0.5",
+      "endpoint_ZERO": "yalnız sabit terim: p = n_1/n, intercept = ln(p/(1 − p)), coef = 0; kapalı biçim",
+      "estimator": "sklearn.linear_model.LogisticRegression",
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "label": "y_h = 1[ertesi işlem görmüş seans(lar)ın kapanışı alt limitte] (p_floor başlığı; F1 ve F2 bağımsız)",
+      "max_iter": 10000,
+      "minority_lt_2_policy": "NO_TUNING_FIXED_C_0.01",
+      "non_convergence_policy": "CANDIDATE_NOT_CONVERGED_DROPPED_FINAL_FIT_FALLS_BACK_TO_NEXT_RANKED",
+      "single_class_policy": "MODEL_NOT_FIT_SINGLE_CLASS",
+      "solver": "lbfgs",
+      "tie_break": "BIT_EXACT_TIE_TO_SMALLEST_C_ZERO_SMALLEST",
+      "tol": 1e-10,
+      "tuning": "INNER_LOOCV_RAW_UNCLIPPED_BRIER"
+    },
+    "min_train_n": 10,
+    "model_id": "break_floor_v0",
+    "outputs": [
+      "p_floor"
+    ],
+    "plan_id": "H99_BREAK_WALK_FORWARD_E_CUTOFF_B_LE_9_MIN10ROWS_5EV_5NE",
+    "preprocessing_id": "BREAK_V0_B_FLOOR_B_TURNOVER_WINSOR_B_TURNOVER_P05_P95_NO_IMPUTATION_NO_F5",
+    "preprocessing_log": [],
+    "preprocessing_scope": "başlık başına (F1 ve F2'nin eğitim kümeleri farklıdır; SPEC_DEVIATIONS N)",
+    "preprocessing_winsor": [
+      "b_turnover"
+    ],
+    "primary_head": "F1",
+    "regime_warning": {
+      "end_d1": null,
+      "start_d1": "2026-09-16",
+      "tag": "FON_KRIZI_2026",
+      "text": "Bu arzın ilk seansları Eylül 2026 fon krizi penceresine düşüyor; eğitim kümesinde (2023-09…2026-08) böyle bir stres yok. Beklenti (önceden yazıldı): model tabanı az tahmin eder."
+    },
+    "ridge": null,
+    "runtime_pins": {
+      "joblib": "1.5.3",
+      "numpy": "2.5.2",
+      "python": "3.12",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "scorability": {
+      "min_events": 5,
+      "min_nonevents": 5,
+      "min_rows": 10
+    },
+    "spec_document": {
+      "path": "docs/specs_faz8/SPEC_BREAK_V0.md",
+      "sha256": "da98351c2b1bb4d7ef3c9ee5954ff4daade0960eab0ec44daa0b4ba540001f31"
+    },
+    "stage": "POST_BREAK",
+    "structural_zero_rule": {
+      "lower_rounding": "CEIL_TO_TICK_AT_LIMIT_LEVEL",
+      "margin": "0.10",
+      "name": "D10_STRUCTURAL_ZERO",
+      "note": "gösterim sabiti; parametre değil, skorlanmaz (§2.4)",
+      "tick_table": [
+        {
+          "below": "20",
+          "tick": "0.01"
+        },
+        {
+          "below": "50",
+          "tick": "0.02"
+        },
+        {
+          "below": "100",
+          "tick": "0.05"
+        },
+        {
+          "below": "250",
+          "tick": "0.10"
+        },
+        {
+          "below": "500",
+          "tick": "0.25"
+        },
+        {
+          "below": "1000",
+          "tick": "0.50"
+        },
+        {
+          "below": "2500",
+          "tick": "1.00"
+        },
+        {
+          "below": null,
+          "tick": "2.50"
+        }
+      ]
+    },
+    "target_definition": {
+      "F1": "close(D_{b+1}) == lower_limit(D_{b+1})",
+      "F2": "F1 and close(D_{b+2}) == lower_limit(D_{b+2})"
+    },
+    "training": {
+      "cutoff_date": "2026-08-19",
+      "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+      "description": "SESSIONS dosyasından kurulan kırılma tablosu (§7.1): H99'un b ≤ 9 olan 82 arzı (F1), F2 başlığı b ≤ 8 olan 78 arz; shares_offered ve arz fiyatı data/training_table.csv'den; tablo sırası (first_trading_date, ticker)",
+      "n_F1": 82,
+      "n_F2": 78,
+      "sessions_file": "data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_session_outcomes.csv",
+      "sessions_file_sha256": "eca620d3a5e8fed0b118bab556da5ce519257a4b2e14efcd22065f5bcdc93da9",
+      "set": "H99_BREAK_B_LE_9"
+    }
+  },
+  "spec_document": {
+    "path": "docs/specs_faz8/SPEC_BREAK_V0.md",
+    "sha256": "da98351c2b1bb4d7ef3c9ee5954ff4daade0960eab0ec44daa0b4ba540001f31"
+  },
+  "spec_sha256": "8ada9ccf77dc12caa5e9ea00b5bd028456dc8ce7d6857665358737c4b7a84e50",
+  "stage": "POST_BREAK",
+  "structural_zero_rule": {
+    "lower_rounding": "CEIL_TO_TICK_AT_LIMIT_LEVEL",
+    "margin": "0.10",
+    "name": "D10_STRUCTURAL_ZERO",
+    "note": "gösterim sabiti; parametre değil, skorlanmaz (§2.4)",
+    "tick_table": [
+      {
+        "below": "20",
+        "tick": "0.01"
+      },
+      {
+        "below": "50",
+        "tick": "0.02"
+      },
+      {
+        "below": "100",
+        "tick": "0.05"
+      },
+      {
+        "below": "250",
+        "tick": "0.10"
+      },
+      {
+        "below": "500",
+        "tick": "0.25"
+      },
+      {
+        "below": "1000",
+        "tick": "0.50"
+      },
+      {
+        "below": "2500",
+        "tick": "1.00"
+      },
+      {
+        "below": null,
+        "tick": "2.50"
+      }
+    ]
+  },
+  "target_definition": {
+    "F1": "close(D_{b+1}) == lower_limit(D_{b+1})",
+    "F2": "F1 and close(D_{b+2}) == lower_limit(D_{b+2})"
+  },
+  "training": {
+    "break_fields_sha256": "e0cbf778f2c6c19924b7d22458594a1ab8269bee4bce69484a2ada2a6329010f",
+    "cutoff_date": "2026-08-10",
+    "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+    "events_F1": 25,
+    "events_F2": 11,
+    "labels_sha256": "d57609ed1b3bb5f877733f8e5a973b16b6a09ab0d1747d39bb453887485793d5",
+    "n_F1": 82,
+    "n_F2": 78,
+    "sessions_file": "data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_session_outcomes.csv",
+    "sessions_file_sha256": "eca620d3a5e8fed0b118bab556da5ce519257a4b2e14efcd22065f5bcdc93da9",
+    "set": "H99_BREAK_B_LE_9",
+    "tickers_F1": [
+      "DMRGD",
+      "MHRGY",
+      "BORLS",
+      "TABGD",
+      "VRGYO",
+      "MARBL",
+      "SKYMD",
+      "CATES",
+      "BEGYO",
+      "KBORU",
+      "SURGY",
+      "MEGMT",
+      "AVPGY",
+      "BORSK",
+      "OBAMS",
+      "MOGAN",
+      "ENTRA",
+      "RGYAS",
+      "LILAK",
+      "KOTON",
+      "KOCMT",
+      "HRKET",
+      "ONRYT",
+      "OZYSR",
+      "ALKLC",
+      "YIGIT",
+      "HOROZ",
+      "SEGMN",
+      "EFORC",
+      "DCTTR",
+      "BAHKM",
+      "TCKRC",
+      "GUNDG",
+      "AHSGY",
+      "OZATD",
+      "CEMZY",
+      "DURKN",
+      "BINBN",
+      "CGCAM",
+      "SMRVA",
+      "ARMGD",
+      "EGEGY",
+      "GLRMK",
+      "AKFIS",
+      "MOPAS",
+      "SERNT",
+      "BIGEN",
+      "DSTKF",
+      "VSNMD",
+      "ENDAE",
+      "KLYPV",
+      "BALSU",
+      "BULGS",
+      "VAKFA",
+      "PAHOL",
+      "ZERGY",
+      "ARFYE",
+      "MEYSU",
+      "FRMPL",
+      "ZGYO",
+      "UCAYM",
+      "NETCD",
+      "AKHAN",
+      "ATATR",
+      "EMPAE",
+      "GENKM",
+      "LXGYO",
+      "MCARD",
+      "AAGYO",
+      "EKDMR",
+      "SOHOE",
+      "ORZAX",
+      "GOLDA",
+      "EKIM",
+      "ISVEA",
+      "SSAAT",
+      "SARAE",
+      "METEN",
+      "ALBTN",
+      "MASFN",
+      "KARCL",
+      "QUICK"
+    ],
+    "tickers_F2": [
+      "MHRGY",
+      "BORLS",
+      "TABGD",
+      "VRGYO",
+      "MARBL",
+      "SKYMD",
+      "CATES",
+      "BEGYO",
+      "KBORU",
+      "SURGY",
+      "MEGMT",
+      "AVPGY",
+      "BORSK",
+      "OBAMS",
+      "MOGAN",
+      "ENTRA",
+      "RGYAS",
+      "LILAK",
+      "KOTON",
+      "KOCMT",
+      "HRKET",
+      "ONRYT",
+      "OZYSR",
+      "ALKLC",
+      "YIGIT",
+      "HOROZ",
+      "SEGMN",
+      "EFORC",
+      "DCTTR",
+      "BAHKM",
+      "TCKRC",
+      "GUNDG",
+      "AHSGY",
+      "OZATD",
+      "CEMZY",
+      "DURKN",
+      "BINBN",
+      "CGCAM",
+      "SMRVA",
+      "ARMGD",
+      "EGEGY",
+      "GLRMK",
+      "AKFIS",
+      "MOPAS",
+      "SERNT",
+      "BIGEN",
+      "DSTKF",
+      "VSNMD",
+      "ENDAE",
+      "KLYPV",
+      "BALSU",
+      "BULGS",
+      "VAKFA",
+      "PAHOL",
+      "ZERGY",
+      "ARFYE",
+      "MEYSU",
+      "FRMPL",
+      "ZGYO",
+      "AKHAN",
+      "ATATR",
+      "EMPAE",
+      "GENKM",
+      "LXGYO",
+      "MCARD",
+      "AAGYO",
+      "EKDMR",
+      "SOHOE",
+      "ORZAX",
+      "EKIM",
+      "ISVEA",
+      "SSAAT",
+      "SARAE",
+      "METEN",
+      "ALBTN",
+      "MASFN",
+      "KARCL",
+      "QUICK"
+    ],
+    "tickers_sha256": "a6b9557400ebba42067289f782f67338b14e6ee21a74528328b6f7d214b6f967",
+    "tickers_sha256_F2": "fc59946f7a2ab2e961003bac64c94530dc385ec6c5e4c3b90c3626905ff2ae38"
+  }
+}

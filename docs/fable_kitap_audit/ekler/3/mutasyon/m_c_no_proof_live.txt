@@ -1,0 +1,35 @@
+### m_c_no_proof_live :: tests/test_scoring.py -k test_5
+.F..F.....                                                               [100%]
+=================================== FAILURES ===================================
+_____________________________ test_5b_late_record ______________________________
+
+tmp_path = PosixPath('/private/var/folders/zr/drr97wqd4hl77c1q0bszd1vc0000gn/T/pytest-of-ahmet/pytest-48/test_5b_late_record0')
+
+    def test_5b_late_record(tmp_path):
+        cls, ev = scenario(tmp_path, [("model", "2026-09-01T10:00:00Z"), ("outcome", None), ("record", "2026-09-20T10:00:00Z")])
+>       assert cls == sc.CLASS_LATE and ev["model_prospective"] and not ev["record_live"]
+E       AssertionError: assert ('LIVE' == 'LATE_RECORD'
+E         
+E         - LATE_RECORD
+E         + LIVE)
+
+tests/test_scoring.py:83: AssertionError
+_______________________ test_5e_inputs_not_pit_is_retro ________________________
+
+tmp_path = PosixPath('/private/var/folders/zr/drr97wqd4hl77c1q0bszd1vc0000gn/T/pytest-of-ahmet/pytest-48/test_5e_inputs_not_pit_is_retr0')
+
+    def test_5e_inputs_not_pit_is_retro(tmp_path):
+        cls, _ = scenario(tmp_path, [("model", "2026-09-01T10:00:00Z"), ("outcome", None), ("record", "2026-09-20T10:00:00Z")],
+                          pit_ok=False)
+>       assert cls == sc.CLASS_RETRO
+E       AssertionError: assert 'LIVE' == 'RETRO'
+E         
+E         - RETRO
+E         + LIVE
+
+tests/test_scoring.py:99: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_scoring.py::test_5b_late_record - AssertionError: assert ('...
+FAILED tests/test_scoring.py::test_5e_inputs_not_pit_is_retro - AssertionErro...
+2 failed, 8 passed, 24 deselected in 10.73s
+exit=1

@@ -1,0 +1,23 @@
+members 135 open set 71 sealed 64 Counter({'OPEN': 66, 'SEALED': 64, 'EXPOSED_ARCHIVE': 4, 'EXPOSED_CODEX': 1})
+ingest commits: {'2f914dd': 64, '9e1e992': 71}
+(first,delta) record commits: {('1dcceff', '28aaa3b'): 135}
+{'first_ok': 135}
+new-8-model records before ingest (OOT_BLIND eligible): open 0/71, sealed 64/64
+cohort gate spot check (5 members x all open ingests): True
+proof times: {'1dcceff': '2026-09-24T22:39:24Z', '28aaa3b': '2026-09-29T06:40:55Z', '77b54f7': '2026-09-25T13:45:54Z', '9e1e992': '2026-09-25T13:05:56Z', '2f914dd': '2026-09-29T15:30:41Z', '71b9071': '2026-09-29T17:49:25Z', '7ade6a8': '2026-09-25T13:05:58Z', '5a96e25': '2026-09-29T15:30:43Z'}
+oot_pre_h99 v1_5_h99 mine: {"n": 68, "n_blocks": 28, "model": 0.230642, "rule": 0.258795, "diff": -0.028153, "ci": [-0.08070336933148989, 0.022488934222306776], "wins": 36, "losses": 32}
+   scores_oot: {"diff": -0.028153016892313466, "ci95": [-0.08070336933148989, 0.022488934222306776], "n": 68, "n_blocks": 28, "wins": 36, "losses": 32, "verdict": "ay\u0131rt edilemiyor"}
+oot_pre_h99_sealed v1_5_h99 mine: {"n": 62, "n_blocks": 27, "model": 0.246271, "rule": 0.258137, "diff": -0.011866, "ci": [-0.07059419116770631, 0.04119699497885959], "wins": 32, "losses": 30}
+   scores_oot: {"diff": -0.011865819293017024, "ci95": [-0.07059419116770631, 0.04119699497885959], "n": 62, "n_blocks": 27, "wins": 32, "losses": 30, "verdict": "ay\u0131rt edilemiyor"}
+oot_pre_h99 ceiling_hazard_v0 mine: {"n": 68, "n_blocks": 28, "model": 0.268865, "rule": 0.200238, "diff": 0.068627, "ci": [0.0010879852173890522, 0.13129420309459733], "wins": 25, "losses": 43}
+   scores_oot: {"diff": 0.06862695733536095, "ci95": [0.0010879852173890522, 0.13129420309459733], "n": 68, "n_blocks": 28, "wins": 25, "losses": 43, "verdict": "ge\u00e7emiyor"}
+oot_pre_h99_sealed ceiling_hazard_v0 mine: {"n": 62, "n_blocks": 27, "model": 0.270112, "rule": 0.197279, "diff": 0.072833, "ci": [-0.0008143088786751569, 0.1388043212581849], "wins": 26, "losses": 36}
+   scores_oot: {"diff": 0.07283261260629621, "ci95": [-0.0008143088786751569, 0.1388043212581849], "n": 62, "n_blocks": 27, "wins": 26, "losses": 36, "verdict": "ay\u0131rt edilemiyor"}
+oot_pre_h99 pb_v0 mine: {"n": 59, "n_blocks": 28, "model": 0.239819, "rule": 0.248033, "diff": -0.008214, "ci": [-0.054994527811804264, 0.03582773514204329], "wins": 30, "losses": 29}
+   scores_oot: {"diff": -0.008213984135132366, "ci95": [-0.054994527811804264, 0.03582773514204329], "n": 59, "n_blocks": 28, "wins": 30, "losses": 29, "verdict": "ay\u0131rt edilemiyor"}
+oot_pre_h99_sealed pb_v0 mine: {"n": 53, "n_blocks": 26, "model": 0.285794, "rule": 0.255517, "diff": 0.030277, "ci": [-0.026276116014591202, 0.08825315289272163], "wins": 24, "losses": 29}
+   scores_oot: {"diff": 0.03027658193108609, "ci95": [-0.026276116014591202, 0.08825315289272163], "n": 53, "n_blocks": 26, "wins": 24, "losses": 29, "verdict": "ay\u0131rt edilemiyor"}
+scores_oot v1_5_h99 open counters: {'n_not_applicable_regime': 0, 'n_oot_retro': 0, 'n_pending': 0, 'n_refused': 3, 'n_scored': 68, 'n_skipped': 0, 'n_target_unavailable': 0}
+VAULT_OPEN: {'cohort': {'n_member': 135, 'n_open': 71, 'path': 'registry/oot/cohort_pre_h99.csv', 'sha256': '7d05b334d73985882debf7f31ecfc81b3eac501b756f9da44f41e3bf893760a7'}, 'manifest_oot_before': {'n_rows': 914, 'path': 'data/raw/bist/MANIFEST_OOT.csv', 'sha256': 'cf33d57d30fd3c91e05d523af7c68d5d70ba65517e25d270ed091d937c515301', 'source': 'HEAD'}, 'n_sealed': 64, 'redownload': {'n_manifest_rows': 914, 'n_mismatch': 0, 'n_redownloaded': 914, 'n_sha_equal': 914}}
+MANIFEST_OOT rows: 1168
+exit 0

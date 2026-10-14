@@ -1,0 +1,55 @@
+{
+  "record_rel_path": "registry/post_d1/SNTA1/20300107T170000Z_cccccccccccc.json",
+  "record_file": "20300107T170000Z_cccccccccccc.json",
+  "ticker": "SNTA1",
+  "recorded_at_utc": "2030-01-07T17:00:00Z",
+  "recorded_at_istanbul": "2030-01-07T20:00:00+03:00",
+  "d1": "2030-01-07",
+  "ceiling_close_d1": 1,
+  "summary": {
+    "n_models": 1,
+    "n_not_applicable": 0,
+    "n_predicted": 1,
+    "n_refused": 0
+  },
+  "t_open": "2030-01-08T09:40:00+03:00",
+  "python_note": "T_open'dan ÖNCE: commit + push + push_proof (proje sahibi)",
+  "base_record_file": "registry/records/SNTA1/20300105T100000Z_aaaaaaaaaaaa.json",
+  "parity": {
+    "n_record_models": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "max_abs": 9.999999999732445e-7,
+    "n_bit_equal": 0,
+    "unsupported": [],
+    "missing_in_record": [],
+    "mismatches": [
+      {
+        "model_id": "post_d1_hazard_v0",
+        "ok": false,
+        "bit_equal": false,
+        "max_abs": 9.999999999732445e-7,
+        "n_numbers": 167,
+        "failures": [
+          "S[3]: kayıt 0.357673713830244, uygulama 0.357672713830244, |Δ| = 9.999999999732445e-7"
+        ]
+      }
+    ],
+    "incident_rel_path": null
+  },
+  "comparators": {
+    "n_checked": 1,
+    "max_abs": 0.0,
+    "failures": []
+  },
+  "todo": [
+    "cd /REPO",
+    "git add registry/post_d1/SNTA1/",
+    "git commit -m \"BORSAI_POST_D1_SNTA1: post-D1 record before T_open\" -- registry/post_d1/SNTA1/",
+    "git push origin main",
+    "/REPO/.venv/bin/python -m borsai.push_proof $(git rev-parse HEAD)",
+    "git add registry/push_proofs/",
+    "git commit -m \"BORSAI_PUSH_PROOF: $(git rev-parse HEAD)\" -- registry/push_proofs/",
+    "git push origin main"
+  ]
+}

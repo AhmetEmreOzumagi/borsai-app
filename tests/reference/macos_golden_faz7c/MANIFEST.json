@@ -1,0 +1,97 @@
+{
+  "borsai_dirty": false,
+  "borsai_source_sha256": "516c0a3e7288e6eef4dbcbe4e9732e3297b34c88b472ea071137495a537b8048",
+  "comparator_ledgers": {
+    "base_rate": {
+      "path": "tests/reference/macos_golden/base_rate_fold_ledger.csv",
+      "sha256": "898d2d849cc21a0461c88b816338c9d64d7b93b7d4ffafe726bfd3c56d5147e2"
+    },
+    "v1_5_h99": {
+      "path": "tests/reference/macos_golden/v1_5_h99_fold_ledger.csv",
+      "sha256": "5c56da37bf7cece261fc5472ff0a2de8e242169755afc3aefb3c6c12b7fb049b"
+    }
+  },
+  "created_at": "2026-09-27T20:47:14+03:00",
+  "description": "Faz 7C: düşen arz modeli v0 adaylarının (SPEC_C_V0) bu makinedeki walk-forward fold ledger'ları (h99 PLAN_FALL_H99'da, pooled ve @ZERO PLAN_FALL_POOLED'da, addsale PLAN_FALL_ADDSALE'de; D5 ve D10) ve nihai fit önizlemeleri. Regresyon testi bunlara karşı BİREBİR (bayt) çalışır; docs/MODELS.md Faz 7C bölümü bunlardan üretilir. Modeller DONDURULMADI; önizlemeler models/'e yazılmadı.",
+  "final_fit_note": "models/'e yazılmadı; dondurma görevi bit-eşitliği created_at, code_version ve runtime dışında sınar",
+  "final_fit_previews": {
+    "fall_d10_v0_addsale": {
+      "file": "fall_d10_v0_addsale_final_fit_preview.json",
+      "sha256": "8c33da312573ffed6703a6a412b63af595ca0403584dab3a826baf57aaec4b8f"
+    },
+    "fall_d10_v0_h99": {
+      "file": "fall_d10_v0_h99_final_fit_preview.json",
+      "sha256": "a6c9e65eb567e5de9c09a853d49e76d51756a1c1e5cf4a3f1cfaefa1dd70866f"
+    },
+    "fall_d10_v0_pooled": {
+      "file": "fall_d10_v0_pooled_final_fit_preview.json",
+      "sha256": "9e37a0fd33858353b1fb84e847a57b95ce998a0908d63006c354bc6abaadaccc"
+    },
+    "fall_d10_v0_pooled@ZERO": {
+      "file": "fall_d10_v0_pooled@ZERO_final_fit_preview.json",
+      "sha256": "883ab7b913299ea369b801af3cd7b436199cf4debb51fae02bf2afb14f1da166"
+    }
+  },
+  "git_commit": "3c93f9c731bdda0280e00c5e7f90b7f805572dca",
+  "machine": {
+    "platform": "Darwin 27.0.0 arm64 / CPython 3.12.14"
+  },
+  "runs": {
+    "fall_d10_v0_addsale": {
+      "data_version_sha256": "2ee8d51be3f026ad05ff7b4894f9512809556b3da2fd2d0b06256b7de5ee525a",
+      "file": "fall_d10_v0_addsale_fold_ledger.csv",
+      "ledger_sha256": "6e93e4be713cf117df3b21140b407b14ea9f8cddb994aaac591faceaa9541517",
+      "log_entry": {
+        "context": "faz7c_golden",
+        "started_at": "2026-09-27T20:46:30+03:00"
+      },
+      "model_id": "fall_d10_v0_addsale",
+      "plan_id": "H99_PLUS_OOT_OPEN_AS_PRESENT_FALL_WALK_FORWARD_STRICT_PRIOR_DATE_MIN_TRAIN_10",
+      "spec_sha256": "b0b04566f98742978a62c44327fc5e5c1389fb7e333a86f4dfd4e0c4ac2172a1"
+    },
+    "fall_d10_v0_h99": {
+      "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+      "file": "fall_d10_v0_h99_fold_ledger.csv",
+      "ledger_sha256": "01992680803ff35b7e7ee922e8a5597af02a3a587fa8d49aff919f2e31ae641b",
+      "log_entry": {
+        "context": "faz7c_golden",
+        "started_at": "2026-09-27T20:45:13+03:00"
+      },
+      "model_id": "fall_d10_v0_h99",
+      "plan_id": "H99_F3_AS_PRESENT_FALL_WALK_FORWARD_STRICT_PRIOR_DATE_MIN_TRAIN_10",
+      "spec_sha256": "e21c0a32bb9861db0a6fd0e6ee0086d0c862160556fcac6bcede24a109adb46e"
+    },
+    "fall_d10_v0_pooled": {
+      "data_version_sha256": "2ee8d51be3f026ad05ff7b4894f9512809556b3da2fd2d0b06256b7de5ee525a",
+      "file": "fall_d10_v0_pooled_fold_ledger.csv",
+      "ledger_sha256": "e1c26cb68a26c06c2ca9291733edea10c8b98fc2486b011f60bd51349c3f6591",
+      "log_entry": {
+        "context": "faz7c_golden",
+        "started_at": "2026-09-27T20:45:28+03:00"
+      },
+      "model_id": "fall_d10_v0_pooled",
+      "plan_id": "H99_PLUS_OOT_OPEN_F3_AS_PRESENT_FALL_WALK_FORWARD_STRICT_PRIOR_DATE_MIN_TRAIN_10",
+      "spec_sha256": "1054f2c2214734effce3cb65a150fbff646f7d1060b750c3d02d3aef3a0ec28f"
+    },
+    "fall_d10_v0_pooled@ZERO": {
+      "data_version_sha256": "2ee8d51be3f026ad05ff7b4894f9512809556b3da2fd2d0b06256b7de5ee525a",
+      "file": "fall_d10_v0_pooled@ZERO_fold_ledger.csv",
+      "ledger_sha256": "d08777b75c317a43fc12f9f2b50f2155dae44e850e121ab8d7a68985a4d67dd9",
+      "log_entry": {
+        "context": "faz7c_golden",
+        "started_at": "2026-09-27T20:47:03+03:00"
+      },
+      "model_id": "fall_d10_v0_pooled@ZERO",
+      "plan_id": "H99_PLUS_OOT_OPEN_F3_AS_PRESENT_FALL_WALK_FORWARD_STRICT_PRIOR_DATE_MIN_TRAIN_10",
+      "spec_sha256": "0c96245fb80f6d538199d4fd6d73707ddcb7f5f28c6d8f9f65108f796ef35094"
+    }
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  }
+}

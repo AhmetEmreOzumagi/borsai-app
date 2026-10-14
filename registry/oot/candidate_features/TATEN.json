@@ -1,0 +1,237 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "TATEN",
+  "company": "Tatlıpınar Enerji Üretim A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "2233460",
+      "source_id": "KAP_1184942_EK1",
+      "source_document": "KAP 1184942 ek 1",
+      "source_published_at": "2023-08-14T06:52:28+03:00",
+      "source_sha256": "6af1b4753ddc9a645d163e6c0fad124ea1863372fef1ec218fd3da84d46a6c0b",
+      "source_path": "registry/oot/source_docs/TATEN/KAP_1184942_ek1.pdf",
+      "quote": "Toplam 70.200.000 100,0 2.356.053 281.550.455 100,0 2.233.460 70.200.000 100,0",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden (başvuru) 2.356.053; talebi karşılanan 2.233.460",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "employees": "237",
+        "retail": "2233047",
+        "domestic_institutional": "165",
+        "foreign_institutional": "11"
+      },
+      "source_id": "KAP_1184942_EK1",
+      "source_document": "KAP 1184942 ek 1",
+      "source_published_at": "2023-08-14T06:52:28+03:00",
+      "source_sha256": "6af1b4753ddc9a645d163e6c0fad124ea1863372fef1ec218fd3da84d46a6c0b",
+      "source_path": "registry/oot/source_docs/TATEN/KAP_1184942_ek1.pdf",
+      "quote": [
+        "702.000 1,0 275 702.012 0,2 237 682.126 1,0",
+        "49.140.000 70,0 2.355.601 160.367.397 57,0 2.233.047 49.159.874 70,0",
+        "10.179.000 14,5 165 96.517.396 34,3 165 10.179.000 14,5",
+        "Kurumsal 10.179.000 14,5 12 23.963.650 8,5 11 10.179.000 14,5"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "employees = Ağaoğlu Şirketler Grubu Çalışanları; başvuru: çalışanlar 275, bireysel 2.355.601, yurt içi kurumsal 165, yurt dışı kurumsal 12",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "3.3",
+      "source_id": "KAP_1184942_EK1",
+      "source_document": "KAP 1184942 ek 1",
+      "source_published_at": "2023-08-14T06:52:28+03:00",
+      "source_sha256": "6af1b4753ddc9a645d163e6c0fad124ea1863372fef1ec218fd3da84d46a6c0b",
+      "source_path": "registry/oot/source_docs/TATEN/KAP_1184942_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılar tahsisat tutarının yaklaşık 3,3 katı",
+      "note": "belge 'yaklaşık' diyor; çalışanlar yaklaşık 1,0 kat",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "3,3",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "9.5",
+      "source_id": "KAP_1184942_EK1",
+      "source_document": "KAP 1184942 ek 1",
+      "source_published_at": "2023-08-14T06:52:28+03:00",
+      "source_sha256": "6af1b4753ddc9a645d163e6c0fad124ea1863372fef1ec218fd3da84d46a6c0b",
+      "source_path": "registry/oot/source_docs/TATEN/KAP_1184942_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılar tahsisat tutarının yaklaşık 9,5 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "9,5",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "2.4",
+      "source_id": "KAP_1184942_EK1",
+      "source_document": "KAP 1184942 ek 1",
+      "source_published_at": "2023-08-14T06:52:28+03:00",
+      "source_sha256": "6af1b4753ddc9a645d163e6c0fad124ea1863372fef1ec218fd3da84d46a6c0b",
+      "source_path": "registry/oot/source_docs/TATEN/KAP_1184942_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılar tahsisat tutarının 2,4 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,4",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "employees": "682126",
+        "retail": "49159874",
+        "domestic_institutional": "10179000",
+        "foreign_institutional": "10179000"
+      },
+      "source_id": "KAP_1184942_EK1",
+      "source_document": "KAP 1184942 ek 1",
+      "source_published_at": "2023-08-14T06:52:28+03:00",
+      "source_sha256": "6af1b4753ddc9a645d163e6c0fad124ea1863372fef1ec218fd3da84d46a6c0b",
+      "source_path": "registry/oot/source_docs/TATEN/KAP_1184942_ek1.pdf",
+      "quote": [
+        "702.000 1,0 275 702.012 0,2 237 682.126 1,0",
+        "49.140.000 70,0 2.355.601 160.367.397 57,0 2.233.047 49.159.874 70,0",
+        "10.179.000 14,5 165 96.517.396 34,3 165 10.179.000 14,5",
+        "Kurumsal 10.179.000 14,5 12 23.963.650 8,5 11 10.179.000 14,5"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "70.0",
+      "source_id": "KAP_1184942_EK1",
+      "source_document": "KAP 1184942 ek 1",
+      "source_published_at": "2023-08-14T06:52:28+03:00",
+      "source_sha256": "6af1b4753ddc9a645d163e6c0fad124ea1863372fef1ec218fd3da84d46a6c0b",
+      "source_path": "registry/oot/source_docs/TATEN/KAP_1184942_ek1.pdf",
+      "quote": "49.140.000 70,0 2.355.601 160.367.397 57,0 2.233.047 49.159.874 70,0",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %70,0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "14.5",
+      "source_id": "KAP_1184942_EK1",
+      "source_document": "KAP 1184942 ek 1",
+      "source_published_at": "2023-08-14T06:52:28+03:00",
+      "source_sha256": "6af1b4753ddc9a645d163e6c0fad124ea1863372fef1ec218fd3da84d46a6c0b",
+      "source_path": "registry/oot/source_docs/TATEN/KAP_1184942_ek1.pdf",
+      "quote": "10.179.000 14,5 165 96.517.396 34,3 165 10.179.000 14,5",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %14,5",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "14.5",
+      "source_id": "KAP_1184942_EK1",
+      "source_document": "KAP 1184942 ek 1",
+      "source_published_at": "2023-08-14T06:52:28+03:00",
+      "source_sha256": "6af1b4753ddc9a645d163e6c0fad124ea1863372fef1ec218fd3da84d46a6c0b",
+      "source_path": "registry/oot/source_docs/TATEN/KAP_1184942_ek1.pdf",
+      "quote": "Kurumsal 10.179.000 14,5 12 23.963.650 8,5 11 10.179.000 14,5",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %14,5",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç belgesi ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "İnfo Yatırım Menkul Değerler A.Ş.; Vakıf Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1180970_EK1",
+      "source_document": "KAP 1180970 ek 1",
+      "source_published_at": "2023-08-04T18:17:00+03:00",
+      "source_sha256": "3b27b9b0aa0966325995f514a14de8afcb9c66ea21a99ee67338295e4900355e",
+      "source_path": "registry/oot/source_docs/TATEN/KAP_1180970_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Info ve Vakıf Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "TSSD (OCR) iki aracı kurumu birlikte sayıyor ('Info' OCR yazımı), konsorsiyum lideri ayrıca belirtilmiyor; sonuç bildirimini İnfo Yatırım yayımlamış",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1185339",
+      "source_document": "KAP 1185339",
+      "source_published_at": "2023-08-14T18:35:41+03:00",
+      "source_sha256": "307025c624cdfd951fd411f1ebe6dcda7d6e6708090874548457a24924eee39c",
+      "source_path": "registry/oot/source_docs/TATEN/KAP_1185339_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1185339",
+      "source_document": "KAP 1185339",
+      "source_published_at": "2023-08-14T18:35:41+03:00",
+      "source_sha256": "307025c624cdfd951fd411f1ebe6dcda7d6e6708090874548457a24924eee39c",
+      "source_path": "registry/oot/source_docs/TATEN/KAP_1185339_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1185339": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1185339",
+      "published_at": "2023-08-14T18:35:41+03:00",
+      "sha256": "307025c624cdfd951fd411f1ebe6dcda7d6e6708090874548457a24924eee39c",
+      "path": "registry/oot/source_docs/TATEN/KAP_1185339_bildirim.pdf"
+    },
+    "KAP_1184942_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1184942 ek 1",
+      "published_at": "2023-08-14T06:52:28+03:00",
+      "sha256": "6af1b4753ddc9a645d163e6c0fad124ea1863372fef1ec218fd3da84d46a6c0b",
+      "path": "registry/oot/source_docs/TATEN/KAP_1184942_ek1.pdf"
+    },
+    "KAP_1180970_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1180970 ek 1",
+      "published_at": "2023-08-04T18:17:00+03:00",
+      "sha256": "3b27b9b0aa0966325995f514a14de8afcb9c66ea21a99ee67338295e4900355e",
+      "path": "registry/oot/source_docs/TATEN/KAP_1180970_ek1.pdf"
+    }
+  }
+}

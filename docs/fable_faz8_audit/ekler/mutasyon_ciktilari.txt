@@ -1,0 +1,102 @@
+# mutasyon_ciktilari — BORSAI_FAZ8_FABLE_REPRO_AUDIT adım 4 (klon /tmp/borsai_faz8_audit/clone, HEAD c84ba64; sürücü ekler/mutate.sh)
+# Her mutasyon ayrı uygulandı, hedef test(ler) koştu, geri alındı. rc=1 = KIRMIZI (beklenen). Kasa kodu maskesi: <SEALED>.
+
+## Özet (summary.txt)
+klon HEAD: c84ba64; borsai kaynağı: /private/tmp/borsai_faz8_audit/clone/borsai
+0_taban_yesil rc=0 dur=51s :: tests/test_faz8_break.py::test_2_b_floor_is_raw_text_decimal_equality tests/test_faz8_break.py::test_3_loader_whitelist_access_counter tests/test_faz8_break.py::test_4_plan_counts_and_cutoffs tests/test_faz8_break.py::test_4b_same_day_rule_synthetic tests/test_faz8_break.py::test_7_structural_zero_on_h99 tests/test_faz8_break.py::test_7b_structural_zero_boundary_and_rounding tests/test_faz8_break.py::test_1b_streak_matches_table_and_snapshot_dates tests/test_faz8_break.py::test_2b_turnover_quantiles_match_profile_section_4 tests/test_faz8_model.py::test_5b_zero_rate_is_exact_fraction tests/test_faz8_model.py::test_10_too_good_triggers tests/test_faz8_model.py::test_15c_ledger_columns_fixed_and_report_renders_synthetic tests/test_faz8_golden.py::test_b3_ledger_structure_and_plan tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact tests/test_faz8_golden.py::test_b6_models_md_faz8_section tests/test_faz7_vault.py::test_scores_oot_code_rule_mutations :: 15 passed in 49.61s
+a_b_floor_float_equality rc=1 dur=1s :: tests/test_faz8_break.py::test_2_b_floor_is_raw_text_decimal_equality :: 1 failed in 0.12s
+b_label_low_touch rc=1 dur=10s :: tests/test_faz8_break.py::test_3_loader_whitelist_access_counter tests/test_faz8_golden.py::test_b3_ledger_structure_and_plan tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact :: 3 failed in 9.51s
+c_cutoff_le rc=1 dur=12s :: tests/test_faz8_break.py::test_4_plan_counts_and_cutoffs tests/test_faz8_break.py::test_4b_same_day_rule_synthetic tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact :: 3 failed in 10.53s
+d_cells_cutoff_T rc=1 dur=36s :: tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact tests/test_faz8_model.py::test_15c_ledger_columns_fixed_and_report_renders_synthetic :: 1 failed, 1 passed in 35.16s
+e_whitelist_extra_column rc=1 dur=1s :: tests/test_faz8_break.py::test_3_loader_whitelist_access_counter :: 1 failed in 0.23s
+f_structural_zero_9_minus_b rc=1 dur=2s :: tests/test_faz8_break.py::test_7_structural_zero_on_h99 tests/test_faz8_break.py::test_7b_structural_zero_boundary_and_rounding tests/test_faz8_golden.py::test_b3_ledger_structure_and_plan :: 2 failed, 1 passed in 0.51s
+g_product_threshold_one_tick rc=1 dur=23s :: tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact tests/test_faz8_golden.py::test_b6_models_md_faz8_section :: 1 failed, 1 passed in 21.33s
+h_near_era_2023_12_01 rc=1 dur=7s :: tests/test_faz8_break.py::test_4_plan_counts_and_cutoffs tests/test_faz8_golden.py::test_b3_ledger_structure_and_plan tests/test_faz8_golden.py::test_b6_models_md_faz8_section :: 3 failed in 6.60s
+i_zero_includes_test_row rc=1 dur=24s :: tests/test_faz8_model.py::test_5b_zero_rate_is_exact_fraction tests/test_faz8_golden.py::test_b3_ledger_structure_and_plan tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact :: 2 failed, 1 passed in 23.27s
+j_turnover_capital_instead_of_shares rc=1 dur=12s :: tests/test_faz8_break.py::test_1b_streak_matches_table_and_snapshot_dates tests/test_faz8_break.py::test_2b_turnover_quantiles_match_profile_section_4 tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact :: 3 failed in 10.86s
+k_clip_bounds_include_test_ipo rc=1 dur=11s :: tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact :: 1 failed in 10.20s
+l_too_good_threshold_0_20 rc=1 dur=8s :: tests/test_faz8_model.py::test_10_too_good_triggers tests/test_faz8_golden.py::test_b6_models_md_faz8_section :: 2 failed in 6.65s
+m_vault_guard_source_sha_disabled rc=1 dur=3s :: tests/test_faz7_vault.py::test_scores_oot_code_rule_mutations :: 1 failed in 2.40s
+klon temiz mi (git status --porcelain, .venv dışında): 0 satır
+
+## Her koşunun FAILED/ERROR satırları ve ilk assert mesajı
+### 0_taban_yesil
+  15 passed in 49.61s
+
+### a_b_floor_float_equality
+  FAILED tests/test_faz8_break.py::test_2_b_floor_is_raw_text_decimal_equality
+  E       AssertionError: assert 1 == 0
+  1 failed in 0.12s
+
+### b_label_low_touch
+  FAILED tests/test_faz8_break.py::test_3_loader_whitelist_access_counter - Ass...
+  FAILED tests/test_faz8_golden.py::test_b3_ledger_structure_and_plan - Asserti...
+  FAILED tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact - Asser...
+  E       AssertionError: assert {'session_num...it', 'ticker'} == {'session_num...it', 'ticker'}
+  3 failed in 9.51s
+
+### c_cutoff_le
+  FAILED tests/test_faz8_break.py::test_4_plan_counts_and_cutoffs - AssertionEr...
+  FAILED tests/test_faz8_break.py::test_4b_same_day_rule_synthetic - AssertionE...
+  FAILED tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact - Asser...
+  E                   AssertionError: assert (0 is not None and '2023-11-02' < '2023-11-02')
+  3 failed in 10.53s
+
+### d_cells_cutoff_T
+  FAILED tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact - borsa...
+  E               borsai.post_break.BreakError: TABGD|2023-11-01: hücre gözlemi D_1(k)'dan önce değil
+  1 failed, 1 passed in 35.16s
+
+### e_whitelist_extra_column
+  FAILED tests/test_faz8_break.py::test_3_loader_whitelist_access_counter - Ass...
+  E       AssertionError: assert {'session_num...it', 'ticker'} == {'session_num...it', 'ticker'}
+  1 failed in 0.23s
+
+### f_structural_zero_9_minus_b
+  FAILED tests/test_faz8_break.py::test_7_structural_zero_on_h99 - AssertionErr...
+  FAILED tests/test_faz8_break.py::test_7b_structural_zero_boundary_and_rounding
+  E       AssertionError: assert (24 == 16)
+  2 failed, 1 passed in 0.51s
+
+### g_product_threshold_one_tick
+  FAILED tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact - Asser...
+  E       AssertionError: assert b'model_id,fo...,0,0,FIT_OK\n' == b'model_id,fo...,0,0,FIT_OK\n'
+  1 failed, 1 passed in 21.33s
+
+### h_near_era_2023_12_01
+  FAILED tests/test_faz8_break.py::test_4_plan_counts_and_cutoffs - assert 76 =...
+  FAILED tests/test_faz8_golden.py::test_b3_ledger_structure_and_plan - assert ...
+  FAILED tests/test_faz8_golden.py::test_b6_models_md_faz8_section - assert "# ...
+  E       assert 76 == 69
+  3 failed in 6.60s
+
+### i_zero_includes_test_row
+  FAILED tests/test_faz8_model.py::test_5b_zero_rate_is_exact_fraction - assert...
+  FAILED tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact - Asser...
+  E               assert 0.3333333333333333 == 0.0
+  2 failed, 1 passed in 23.27s
+
+### j_turnover_capital_instead_of_shares
+  FAILED tests/test_faz8_break.py::test_1b_streak_matches_table_and_snapshot_dates
+  FAILED tests/test_faz8_break.py::test_2b_turnover_quantiles_match_profile_section_4
+  FAILED tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact - Asser...
+  E           AssertionError: assert ('22.6' == '22.6'
+  3 failed in 10.86s
+
+### k_clip_bounds_include_test_ipo
+  FAILED tests/test_faz8_golden.py::test_b4_ledger_reproduces_bit_exact - Asser...
+  E       AssertionError: assert b'model_id,fo...,0,0,FIT_OK\n' == b'model_id,fo...,0,0,FIT_OK\n'
+  1 failed in 10.20s
+
+### l_too_good_threshold_0_20
+  FAILED tests/test_faz8_model.py::test_10_too_good_triggers - AssertionError: ...
+  FAILED tests/test_faz8_golden.py::test_b6_models_md_faz8_section - assert "# ...
+  E       AssertionError: assert [] == ['birincil fark < -0.160']
+  2 failed in 6.65s
+
+### m_vault_guard_source_sha_disabled
+  FAILED tests/test_faz7_vault.py::test_scores_oot_code_rule_mutations - Assert...
+  E       AssertionError: assert [] == ['borsai_source_sha256']
+  1 failed in 2.40s
+
+# maskelenen kasa kodu geçişi: 0

@@ -1,0 +1,319 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "UNLU",
+  "company": "Ünlü Yatırım Holding A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_939957",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "6.9",
+      "source_id": "KAP_939957",
+      "source_document": "KAP 939957",
+      "source_published_at": "2021-06-03T18:23:42+03:00",
+      "source_sha256": "2a1014046efce5cd12b639ee4d957201788aa0505d2e4300d42fee9ec3706b20",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939957_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 6,9",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_26",
+          "quote": "8.263.851 Ünlü Yatırım Holding A.Ş. 137.730.842 175.000.000 37.269.158 - - 6,90 (5)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "45533009",
+      "source_id": "KAP_939957",
+      "source_document": "KAP 939957",
+      "source_published_at": "2021-06-03T18:23:42+03:00",
+      "source_sha256": "2a1014046efce5cd12b639ee4d957201788aa0505d2e4300d42fee9ec3706b20",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939957_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 45.533.009",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "175000000",
+      "source_id": "KAP_939957",
+      "source_document": "KAP 939957",
+      "source_published_at": "2021-06-03T18:23:42+03:00",
+      "source_sha256": "2a1014046efce5cd12b639ee4d957201788aa0505d2e4300d42fee9ec3706b20",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939957_bildirim.pdf",
+      "quote": "sermayesini temsil eden 175.000.000 TL",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "capital_increase_shares": {
+      "value": "37269158",
+      "source_id": "KAP_939485_EK1",
+      "source_document": "KAP 939485 ek 1",
+      "source_published_at": "2021-06-02T07:58:01+03:00",
+      "source_sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf",
+      "quote": "sermaye artışı yoluyla halka arz edilen 37.269.158 TL",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "existing_share_sale_shares": {
+      "value": "8263851",
+      "source_id": "KAP_939485_EK1",
+      "source_document": "KAP 939485 ek 1",
+      "source_published_at": "2021-06-02T07:58:01+03:00",
+      "source_sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf",
+      "quote": "ortak satışı yoluyla halka arz edilen 8.263.851 TL",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "total_demand_multiple": {
+      "value": "1.1658212836",
+      "source_id": "KAP_939485_EK1",
+      "source_document": "KAP 939485 ek 1",
+      "source_published_at": "2021-06-02T07:58:01+03:00",
+      "source_sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf",
+      "origin": "CALCULATED_FROM_SOURCE_TOTALS",
+      "numerator": "53083351",
+      "numerator_quote": "Toplam 45.533.009 % 100,00 21.198 53.083.351 % 100,00 20.792 45.533.009 % 100,00",
+      "denominator": "45533009",
+      "denominator_quote": "Toplam 45.533.009 % 100,00 21.198 53.083.351 % 100,00 20.792 45.533.009 % 100,00",
+      "definition": "TOPLAM_TALEP_LOT_53083351 / DAGITILAN_TOPLAM_LOT_45533009 (tablo Toplam satırı, Talep Lot ve Dağıtım Lot sütunları; aynı birim; ek satış yok; belge toplam katı yazmıyor)",
+      "denominator_includes_additional_sale": false,
+      "note": "payda metindeki 'toplam 45.533.009 TL nominal değerli payların tamamı satılmıştır' ile aynı",
+      "derived": true,
+      "formula": "53083351 / 45533009 (10 ondalık ROUND_HALF_UP)",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "1,17",
+      "correction_kind": "PRECISION_ONLY"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_939485_EK1",
+      "source_document": "KAP 939485 ek 1",
+      "source_published_at": "2021-06-02T07:58:01+03:00",
+      "source_sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_939485_EK1",
+      "source_document": "KAP 939485 ek 1",
+      "source_published_at": "2021-06-02T07:58:01+03:00",
+      "source_sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf",
+      "quote": "olmak üzere toplam 45.533.009 TL nominal değerli payların tamamı satılmıştır",
+      "zero_from_statement": true,
+      "note": "satılan toplam 45.533.009 = SPK planlanan taban (bedelli 37.269.158 + mevcut pay satışı 8.263.851); SPK satırında ek pay satışı '-'",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": null,
+      "missing_reason": "sonuç eki gerçekleşen arzın TL tutarını yazmıyor (yalnız fiyat 6,90 TL ve nominaller)",
+      "provenance": "MISSING"
+    },
+    "ipo_price_try": {
+      "value": "6.90",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/UNLU/SPK_BULTEN_2021-26.pdf",
+      "quote": "8.263.851 Ünlü Yatırım Holding A.Ş. 137.730.842 175.000.000 37.269.158 - - 6,90 (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-05-31",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "137730842",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/UNLU/SPK_BULTEN_2021-26.pdf",
+      "quote": "8.263.851 Ünlü Yatırım Holding A.Ş. 137.730.842 175.000.000 37.269.158 - - 6,90 (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-05-31",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "175000000",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/UNLU/SPK_BULTEN_2021-26.pdf",
+      "quote": "8.263.851 Ünlü Yatırım Holding A.Ş. 137.730.842 175.000.000 37.269.158 - - 6,90 (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-05-31",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "37269158",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/UNLU/SPK_BULTEN_2021-26.pdf",
+      "quote": "8.263.851 Ünlü Yatırım Holding A.Ş. 137.730.842 175.000.000 37.269.158 - - 6,90 (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-05-31",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "8263851",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/UNLU/SPK_BULTEN_2021-26.pdf",
+      "quote": "8.263.851 Ünlü Yatırım Holding A.Ş. 137.730.842 175.000.000 37.269.158 - - 6,90 (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-05-31",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "45533009",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/UNLU/SPK_BULTEN_2021-26.pdf",
+      "quote": "8.263.851 Ünlü Yatırım Holding A.Ş. 137.730.842 175.000.000 37.269.158 - - 6,90 (5)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-05-31",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/UNLU/SPK_BULTEN_2021-26.pdf",
+      "quote": "8.263.851 Ünlü Yatırım Holding A.Ş. 137.730.842 175.000.000 37.269.158 - - 6,90 (5)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-05-31",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "45533009",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/UNLU/SPK_BULTEN_2021-26.pdf",
+      "quote": "8.263.851 Ünlü Yatırım Holding A.Ş. 137.730.842 175.000.000 37.269.158 - - 6,90 (5)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-05-31",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2021-06-07",
+      "source_id": "KAP_939957",
+      "source_document": "KAP 939957",
+      "source_published_at": "2021-06-03T18:23:42+03:00",
+      "source_sha256": "2a1014046efce5cd12b639ee4d957201788aa0505d2e4300d42fee9ec3706b20",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939957_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 07/06/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-05-31",
+      "source_id": "KAP_939957",
+      "source_document": "KAP 939957",
+      "source_published_at": "2021-06-03T18:23:42+03:00",
+      "source_sha256": "2a1014046efce5cd12b639ee4d957201788aa0505d2e4300d42fee9ec3706b20",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939957_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 31/05/2021-01/06/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-06-01",
+      "source_id": "KAP_939957",
+      "source_document": "KAP 939957",
+      "source_published_at": "2021-06-03T18:23:42+03:00",
+      "source_sha256": "2a1014046efce5cd12b639ee4d957201788aa0505d2e4300d42fee9ec3706b20",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939957_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 31/05/2021-01/06/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_939957": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 939957",
+      "published_at": "2021-06-03T18:23:42+03:00",
+      "sha256": "2a1014046efce5cd12b639ee4d957201788aa0505d2e4300d42fee9ec3706b20",
+      "path": "registry/oot/source_docs/UNLU/KAP_939957_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_26": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/26",
+      "published_at": "2021-05-27T23:59:59+03:00",
+      "sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "path": "registry/oot/source_docs/UNLU/SPK_BULTEN_2021-26.pdf"
+    },
+    "KAP_939485_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 939485 ek 1",
+      "published_at": "2021-06-02T07:58:01+03:00",
+      "sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf"
+    }
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "bookbuilding_end": "2026-08-27",
+  "bookbuilding_start": "2026-08-26",
+  "company": "İntetra Teknoloji ve Bilişim Hizmetleri A.Ş.",
+  "contamination_check": {
+    "bookbuilding_information_after_start_inspected": false,
+    "final_demand_result_inspected": false,
+    "intet_in_historical99_cohort": false,
+    "intet_market_price_inspected": false,
+    "intet_outcome_inspected": false,
+    "post_cutoff_information_used": false
+  },
+  "descriptive_context": {
+    "allocation": "No separate allocation groups; equal distribution per approved pretrade documents (cross-checked, consistent across sources).",
+    "classification": "NON_MODEL",
+    "effect_on_v1_5_prediction": "NO_EFFECT_ON_V1_5_PREDICTION",
+    "financials_descriptive_only": {
+      "2024": {
+        "gross_profit_tl_approx": "653.8 million",
+        "revenue_tl_approx": "1.7 billion"
+      },
+      "2025": {
+        "gross_profit_tl_approx": "793.9 million",
+        "revenue_tl_approx": "2.5 billion"
+      },
+      "2026_Q1": {
+        "gross_profit_tl_approx": "183.8 million",
+        "revenue_tl_approx": "629.0 million"
+      },
+      "note": "Descriptive only, task-provided, not independently re-verified line-by-line this session, not annualized, not used as a V1.5 feature or valuation input."
+    },
+    "fund_use_conflict_note": "Task-provided fund_use split (65% investment financing / 35% working capital) was NOT independently reproduced this session. One independently found secondary source instead reported a three-way split (60% investment financing / 30% working capital / 10% debt repayment). This is a descriptive-only, non-V1.5 field; the discrepancy is recorded here verbatim rather than silently resolved, and does NOT constitute a SOURCES_CONFLICT under section 3 (which governs core V1.5-relevant pretrade fields only, all of which converged with zero material conflict).",
+    "ipo_discount_percent": 20,
+    "issuer_lockup_years": 1,
+    "label": "NON_MODEL_DESCRIPTIVE_CONTEXT",
+    "price_stability_budget": "Up to 20% of gross IPO proceeds (task-provided; not independently re-derived from a machine-readable primary source this session -- recorded as provided, not verified beyond the 30-day price-stability window itself, which was independently corroborated).",
+    "price_stability_days": 30,
+    "sale_method": "Borsa'da Satış / Sabit Fiyatla Talep Toplama",
+    "shareholder_lockup_years": 1
+  },
+  "frozen_input_sha256": {
+    "artifacts/ipo_master/historical99/HISTORICAL99_FROZEN_COHORT_V1/canonical/HISTORICAL99_FROZEN_COHORT_V1_canonical_feature_readiness.csv": "630044a5d576113c8668b41b91acd0ad1e3d1d195660463d1e57932e203b7623",
+    "artifacts/ipo_master/historical99/HISTORICAL99_FROZEN_COHORT_V1/canonical/HISTORICAL99_FROZEN_COHORT_V1_canonical_membership.csv": "b15c2e2c9e1a6ad9f702a469e6ba7c03eeef4828fd29afb59dbe780d8a2a1801",
+    "artifacts/ipo_master/historical99/HISTORICAL99_FROZEN_COHORT_V1/canonical/HISTORICAL99_FROZEN_COHORT_V1_canonical_pretrade_master.csv": "573f4c77c5ac9f9d3aaf7715a5b054ff412991120c73f2c03065521c7fc9173b",
+    "artifacts/modeling/V1_5_PREREGISTRATION.md": "156435859e4ea81d078a56435a6bf6a7f04bd1fea289fc15b1baccebb4c2ce2d",
+    "artifacts/modeling/runtime/V1_5_REQUIREMENTS_LOCK.txt": "8284b56716be79e39bcdd50c858aaef8dffb9f52344836c6c6c806561f144b0c",
+    "artifacts/modeling/runtime/V1_5_RUNTIME_MANIFEST.json": "d0f49406879e4705390136f3c108464fdd0e11030236bfd937af72319d404c67",
+    "artifacts/outcomes/historical99/HISTORICAL99_FROZEN_COHORT_V1/OFFICIAL_BIST_OUTCOME_V1/canonical/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_session_outcomes.csv": "aacf5990e764550c539f8cc37a5534d5315e272fa22b8f470ac8d63bc210caca",
+    "artifacts/outcomes/historical99/HISTORICAL99_FROZEN_COHORT_V1/OFFICIAL_BIST_OUTCOME_V1/canonical/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_d1_d10_session_grid.csv": "650bd98d31736cc63854958afdfb51929fffa87e154fd96c52f4b873e12df40b",
+    "artifacts/outcomes/historical99/HISTORICAL99_FROZEN_COHORT_V1/OFFICIAL_BIST_OUTCOME_V1/canonical/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_d1_d3_d5_d10_targets.csv": "64dce0bb3b2aff28f5dfd5f335da8f423a5cf0839430cac1df200bfed4417f9c",
+    "config/model_v1_5_spec.json": "1245bf0f96c63cabdbd740cf043e9f3c58f8fc50af48472933c29e05dce211b1",
+    "scripts/modeling/candidate_models.py": "f49df50989d345a900830f5f663303a6aa4d095fe819174fc1c0d9207cfb5565",
+    "scripts/modeling/fold_engine.py": "d5fd48a893512b47f8b720ae6371cc261b66fb1aa950f68945ce32a2b9f097d9",
+    "scripts/modeling/logistic_policy.py": "08527ede03f3cb95ff46c180cae126a0831f1fe102425374e5534f4259c7e1fd",
+    "scripts/modeling/metrics.py": "809116038ac614c92105cf7b20556113f3401c46e07b8c5ac246b5cc9e5c83d6",
+    "scripts/modeling/preprocessing.py": "777920e4ba0982b522d26e1cfdd079ca3bac3f5fed82be25e20c8af1005f8e44",
+    "scripts/modeling/target_extraction.py": "252c480c165c7685f47fbe3dc5983b1410c8216d59369ba81301b02037f3690e"
+  },
+  "phase_complete": true,
+  "prediction_classification": "PRE_BOOKBUILD_PROSPECTIVE",
+  "prediction_classification_reason": "Bookbuilding is expected 2026-08-26 through 2026-08-27; freeze executed strictly before that window opened, using the real system clock. Not TRUE_LIVE_V1_5_FROZEN: src/halka_arz_audit/true_live_freeze.py's registry schema requires non-empty confidence/prediction_interval/risk_label content fields for which no frozen V1.5 formula exists; inventing one would violate the no-new-scientific-choice constraint, so that gate was deliberately not used (same reasoning as the BKRGY precedent).",
+  "prediction_cutoff": "2026-08-25",
+  "prediction_local_date": "2026-08-25",
+  "prediction_row_count": 4,
+  "prediction_timestamp_istanbul": "2026-08-25T10:51:58.254302+03:00",
+  "pretrade_sources": {
+    "FIYAT_TESPIT_RAPORU": {
+      "document_sha256": "",
+      "note": "Document located and confirmed to exist at intermediary (Bulls Yatırım) URL; not machine-text-extractable this session (encoded PDF stream), so used as corroborating existence/URL evidence alongside independently converging secondary sources, not as the sole source for any field.",
+      "published_at": "2026-08-20",
+      "source": "FIYAT_TESPIT_RAPORU_VIA_ARACI_KURUM",
+      "source_id": "BULLS_YATIRIM_FTR",
+      "url": "https://bullsyatirim.com/upload/files/intet/ek-6-intetra-teknoloji-ve-bilisim-hizmetleri-a.s.-fiyat-tespit-raporu.pdf"
+    },
+    "SECONDARY_CROSS_CHECK": {
+      "note": "ipo_price, shares_offered_final, capital_increase_shares, secondary_sale_shares (named seller: Mehmet Ömerbeyoğlu), pre/post_ipo_share_capital, ipo_size_tl, public_float_percent, bookbuilding dates, equal-distribution/no-allocation-groups method, 1-year lockup, and 30-day price stability window all cross-checked across >=3 independent sources with zero material conflict.",
+      "source": "INDEPENDENT_SECONDARY_AGGREGATOR_CROSS_CHECK_NOT_PRIMARY_EVIDENCE",
+      "source_id": "MULTIPLE",
+      "urls": [
+        "https://www.getmidas.com/midasin-kulaklari-ow/intetra-teknoloji-halka-arz-p-705517",
+        "https://www.borsamatik.com.tr/intetra-teknoloji-talep-toplama-tarihleri-belli-oldu-haber-180393",
+        "https://halkarz.com/intetra-teknoloji-ve-bilisim-hizmetleri-a-s/",
+        "https://www.borsaningundemi.com/haber/intetra-teknoloji-halka-arz-oluyor-borsada-satis-tarihleri-26-27-agustos-1905825"
+      ]
+    },
+    "SPK_APPROVAL": {
+      "document_sha256": "",
+      "note": "SPK approved the prospectus 2026-08-20; specific KAP Bildirim ID not located via search this session.",
+      "published_at": "2026-08-20",
+      "source": "SPK_IZAHNAME_ONAYI",
+      "source_id": "SPK_APPROVAL_2026-08-20",
+      "url": "https://www.kap.org.tr/tr/sirket-bilgileri/ozet"
+    }
+  },
+  "prohibitions_confirmed": {
+    "no_confidence_risk_semantics_invented": true,
+    "no_market20_r1_r2_r3_modification": true,
+    "no_production_weight_update": true,
+    "no_v1_5_tuning": true,
+    "no_v2_market20_used": true
+  },
+  "protected_hashes_after": {
+    "bkrgy_prospective_r1": {
+      "file_count": 4,
+      "inventory_sha256": "95847aac8cab303ae5d9fca0c6a91df9e324883973fdaab522425d4af8a56c28",
+      "status": "PRESENT",
+      "total_bytes": 27503
+    },
+    "bkrgy_prospective_r2": {
+      "file_count": 4,
+      "inventory_sha256": "c41c698862372aee19024a64b38f7908895f3f84394cc491ba54808aba7be6aa",
+      "status": "PRESENT",
+      "total_bytes": 21138
+    },
+    "frozen_v1_5_benchmark": {
+      "file_count": 6,
+      "inventory_sha256": "a393d2d0e34d1a28ee858a0074d1a0aa673f73df7ac6deea5cab6192793e5f05",
+      "status": "PRESENT",
+      "total_bytes": 973507
+    },
+    "historical99_outcome_tree": {
+      "file_count": 13,
+      "inventory_sha256": "4f018da8b29626197c979c0cb70f50ef38e61fbd8e90dccddb6026df244dae31",
+      "status": "PRESENT",
+      "total_bytes": 12160480
+    },
+    "historical99_pretrade_tree": {
+      "file_count": 10,
+      "inventory_sha256": "42230316cbae8ecee69a1b2b508159c48aa21e108e1febf5424a297b2e5f13c3",
+      "status": "PRESENT",
+      "total_bytes": 493209
+    },
+    "market20_frozen_r1": {
+      "file_count": 17,
+      "inventory_sha256": "a24a6e340175270d0898f6d28512f056cad334434793b2261f24ddd0143bc079",
+      "status": "PRESENT",
+      "total_bytes": 214863
+    },
+    "market20_frozen_r2": {
+      "file_count": 23,
+      "inventory_sha256": "5bddb081809810e7422ba83afcaeab60fd048344ed062bf018ffb05f98d12482",
+      "status": "PRESENT",
+      "total_bytes": 349147
+    },
+    "market20_frozen_r3": {
+      "file_count": 23,
+      "inventory_sha256": "dbf301e26502ed38c30f09a881cb0178073b4b83a680af33f436337e82fd46ca",
+      "status": "PRESENT",
+      "total_bytes": 352015
+    },
+    "retrospective_oos_predictions": {
+      "file_count": 7,
+      "inventory_sha256": "53383563b54c28d56a4e5e958cbea27356a2a84ca8c59e8c88d9da09a2503d40",
+      "status": "PRESENT",
+      "total_bytes": 48946
+    },
+    "v1_5_model_spec": {
+      "file_count": 1,
+      "inventory_sha256": "381148dd97575c9e105b973c9dde0f7b26767e4ce4a5bc3bfdc6aa2810ef64dc",
+      "status": "PRESENT",
+      "total_bytes": 28105
+    },
+    "v1_5_preregistration": {
+      "file_count": 1,
+      "inventory_sha256": "d1480925488acdd54c0b96409950dbec743e65331f90f8a38d7db01ebc48f8cd",
+      "status": "PRESENT",
+      "total_bytes": 22412
+    }
+  },
+  "protected_hashes_before": {
+    "bkrgy_prospective_r1": {
+      "file_count": 4,
+      "inventory_sha256": "95847aac8cab303ae5d9fca0c6a91df9e324883973fdaab522425d4af8a56c28",
+      "status": "PRESENT",
+      "total_bytes": 27503
+    },
+    "bkrgy_prospective_r2": {
+      "file_count": 4,
+      "inventory_sha256": "c41c698862372aee19024a64b38f7908895f3f84394cc491ba54808aba7be6aa",
+      "status": "PRESENT",
+      "total_bytes": 21138
+    },
+    "frozen_v1_5_benchmark": {
+      "file_count": 6,
+      "inventory_sha256": "a393d2d0e34d1a28ee858a0074d1a0aa673f73df7ac6deea5cab6192793e5f05",
+      "status": "PRESENT",
+      "total_bytes": 973507
+    },
+    "historical99_outcome_tree": {
+      "file_count": 13,
+      "inventory_sha256": "4f018da8b29626197c979c0cb70f50ef38e61fbd8e90dccddb6026df244dae31",
+      "status": "PRESENT",
+      "total_bytes": 12160480
+    },
+    "historical99_pretrade_tree": {
+      "file_count": 10,
+      "inventory_sha256": "42230316cbae8ecee69a1b2b508159c48aa21e108e1febf5424a297b2e5f13c3",
+      "status": "PRESENT",
+      "total_bytes": 493209
+    },
+    "market20_frozen_r1": {
+      "file_count": 17,
+      "inventory_sha256": "a24a6e340175270d0898f6d28512f056cad334434793b2261f24ddd0143bc079",
+      "status": "PRESENT",
+      "total_bytes": 214863
+    },
+    "market20_frozen_r2": {
+      "file_count": 23,
+      "inventory_sha256": "5bddb081809810e7422ba83afcaeab60fd048344ed062bf018ffb05f98d12482",
+      "status": "PRESENT",
+      "total_bytes": 349147
+    },
+    "market20_frozen_r3": {
+      "file_count": 23,
+      "inventory_sha256": "dbf301e26502ed38c30f09a881cb0178073b4b83a680af33f436337e82fd46ca",
+      "status": "PRESENT",
+      "total_bytes": 352015
+    },
+    "retrospective_oos_predictions": {
+      "file_count": 7,
+      "inventory_sha256": "53383563b54c28d56a4e5e958cbea27356a2a84ca8c59e8c88d9da09a2503d40",
+      "status": "PRESENT",
+      "total_bytes": 48946
+    },
+    "v1_5_model_spec": {
+      "file_count": 1,
+      "inventory_sha256": "381148dd97575c9e105b973c9dde0f7b26767e4ce4a5bc3bfdc6aa2810ef64dc",
+      "status": "PRESENT",
+      "total_bytes": 28105
+    },
+    "v1_5_preregistration": {
+      "file_count": 1,
+      "inventory_sha256": "d1480925488acdd54c0b96409950dbec743e65331f90f8a38d7db01ebc48f8cd",
+      "status": "PRESENT",
+      "total_bytes": 22412
+    }
+  },
+  "protected_hashes_unchanged": true,
+  "ready_status": "INTET_PREBOOKBUILD_PROSPECTIVE_V1_5_FROZEN_AWAITING_REALIZATION",
+  "scientific_artifact_sha256": {
+    "artifacts/predictions/prospective/INTET_20260825_V1_5/INTET_20260825_V1_5_frozen_prediction_ledger.csv": "486a1b07d59599b801fd32bd268f8cd165433d4e1e40759a9f596097355d6df2",
+    "artifacts/predictions/prospective/INTET_20260825_V1_5/INTET_20260825_V1_5_pretrade_evidence_packet.csv": "4c0b99148a1fb9bc6e21bdf5eb9bd53d2ba0f746275f238778412211b341685c",
+    "artifacts/predictions/prospective/INTET_20260825_V1_5/INTET_20260825_V1_5_training_eligibility_summary.csv": "02fdcbeb4d2635fba82d2aa56254144451e7d6529ae3a548d813bab0e3cd2a91"
+  },
+  "single_phase_prospective_no_phase_b_possible_yet": true,
+  "status": "INTET_V1_5_PREBOOKBUILD_PROSPECTIVE_PREDICTION_FROZEN",
+  "task_id": "BORSAI_INTET_V1_5_PREBOOKBUILD_PROSPECTIVE_PREDICTION_FREEZE_01",
+  "ticker": "INTET"
+}

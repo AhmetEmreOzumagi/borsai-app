@@ -1,0 +1,354 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "KMPUR",
+  "company": "Kimteks Poliüretan Sanayi ve Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1024003",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "29",
+      "source_id": "KAP_1024003",
+      "source_document": "KAP 1024003",
+      "source_published_at": "2022-04-26T18:14:46+03:00",
+      "source_sha256": "b8e86858fb8cfa18980871d17cd3fecf3b25abd4d90e99c795cd3115cd1ffbc7",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1024003_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 29",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2022_18",
+          "quote": "Kimteks Poliüretan 21.450.000 4.950.000 29,00 110.000.000 121.550.000 11.550.000 - Sanayi ve Ticaret A.Ş. (1) (2) (3)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "33000000",
+      "source_id": "KAP_1024003",
+      "source_document": "KAP 1024003",
+      "source_published_at": "2022-04-26T18:14:46+03:00",
+      "source_sha256": "b8e86858fb8cfa18980871d17cd3fecf3b25abd4d90e99c795cd3115cd1ffbc7",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1024003_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 33.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "121550000",
+      "source_id": "KAP_1024003",
+      "source_document": "KAP 1024003",
+      "source_published_at": "2022-04-26T18:14:46+03:00",
+      "source_sha256": "b8e86858fb8cfa18980871d17cd3fecf3b25abd4d90e99c795cd3115cd1ffbc7",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1024003_bildirim.pdf",
+      "quote": "sermayesini temsil eden 121.550.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "11550000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/KMPUR/SPK_BULTEN_2022-18.pdf",
+      "quote": "Kimteks Poliüretan 21.450.000 4.950.000 29,00 110.000.000 121.550.000 11.550.000 - Sanayi ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1023408_EK1",
+          "quote": "Halka arz edilen 33.000.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_planned_base": "33000000 = 11550000 + 21450000",
+        "c_no_additional_sale": {
+          "source_id": "KAP_1023408_EK1",
+          "used": "NONE",
+          "quote": "Toplam 33.000.000 %100 38.129 54.250.452 %100 36.988 33.000.000 %100",
+          "note": "dağıtılan toplam 33.000.000 = taban; SPK planlanan ek satış 4.950.000 kullanılmamış"
+        }
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "21450000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/KMPUR/SPK_BULTEN_2022-18.pdf",
+      "quote": "Kimteks Poliüretan 21.450.000 4.950.000 29,00 110.000.000 121.550.000 11.550.000 - Sanayi ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1023408_EK1",
+          "quote": "Halka arz edilen 33.000.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_planned_base": "33000000 = 11550000 + 21450000",
+        "c_no_additional_sale": {
+          "source_id": "KAP_1023408_EK1",
+          "used": "NONE",
+          "quote": "Toplam 33.000.000 %100 38.129 54.250.452 %100 36.988 33.000.000 %100",
+          "note": "dağıtılan toplam 33.000.000 = taban; SPK planlanan ek satış 4.950.000 kullanılmamış"
+        }
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "1.64",
+      "source_id": "KAP_1023408_EK1",
+      "source_document": "KAP 1023408 ek 1",
+      "source_published_at": "2022-04-25T10:20:55+03:00",
+      "source_sha256": "3ff00b8fd8ca42db38580ba0ba9b077c7556db241563b05aad4b24834564294c",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1023408_ek1.pdf",
+      "quote": "halka arz edilen 33.000.000 TL nominal değerli payların 1,64 katına denk gelen 54.250.452 nominal değerli pay talebi gelmiştir",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (halka arz edilen 33.000.000 TL nominal paya göre)",
+      "denominator_includes_additional_sale": false,
+      "note": "planlanan 4.950.000 ek satış kullanılmamış; payda satılan toplam = taban",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_1023408_EK1",
+      "source_document": "KAP 1023408 ek 1",
+      "source_published_at": "2022-04-25T10:20:55+03:00",
+      "source_sha256": "3ff00b8fd8ca42db38580ba0ba9b077c7556db241563b05aad4b24834564294c",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1023408_ek1.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1023408_EK1",
+      "source_document": "KAP 1023408 ek 1",
+      "source_published_at": "2022-04-25T10:20:55+03:00",
+      "source_sha256": "3ff00b8fd8ca42db38580ba0ba9b077c7556db241563b05aad4b24834564294c",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1023408_ek1.pdf",
+      "quote": "Halka arz edilen 33.000.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir.",
+      "zero_from_statement": true,
+      "note": "satılan toplam 33.000.000 = planlanan taban (11.550.000 bedelli + 21.450.000 mevcut pay satışı); planlanan 4.950.000 ek satış kullanılmamış",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": "957000000",
+      "source_id": "KAP_1023408_EK1",
+      "source_document": "KAP 1023408 ek 1",
+      "source_published_at": "2022-04-25T10:20:55+03:00",
+      "source_sha256": "3ff00b8fd8ca42db38580ba0ba9b077c7556db241563b05aad4b24834564294c",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1023408_ek1.pdf",
+      "quote": "Toplam halka arz büyüklüğü 957.000.000 TL olarak gerçekleşmiştir.",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "29.00",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/KMPUR/SPK_BULTEN_2022-18.pdf",
+      "quote": "Kimteks Poliüretan 21.450.000 4.950.000 29,00 110.000.000 121.550.000 11.550.000 - Sanayi ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "110000000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/KMPUR/SPK_BULTEN_2022-18.pdf",
+      "quote": "Kimteks Poliüretan 21.450.000 4.950.000 29,00 110.000.000 121.550.000 11.550.000 - Sanayi ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "121550000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/KMPUR/SPK_BULTEN_2022-18.pdf",
+      "quote": "Kimteks Poliüretan 21.450.000 4.950.000 29,00 110.000.000 121.550.000 11.550.000 - Sanayi ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "11550000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/KMPUR/SPK_BULTEN_2022-18.pdf",
+      "quote": "Kimteks Poliüretan 21.450.000 4.950.000 29,00 110.000.000 121.550.000 11.550.000 - Sanayi ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "21450000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/KMPUR/SPK_BULTEN_2022-18.pdf",
+      "quote": "Kimteks Poliüretan 21.450.000 4.950.000 29,00 110.000.000 121.550.000 11.550.000 - Sanayi ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "33000000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/KMPUR/SPK_BULTEN_2022-18.pdf",
+      "quote": "Kimteks Poliüretan 21.450.000 4.950.000 29,00 110.000.000 121.550.000 11.550.000 - Sanayi ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "4950000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/KMPUR/SPK_BULTEN_2022-18.pdf",
+      "quote": "Kimteks Poliüretan 21.450.000 4.950.000 29,00 110.000.000 121.550.000 11.550.000 - Sanayi ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "37950000",
+      "source_id": "SPK_BULTEN_2022_18",
+      "source_document": "SPK Bülteni 2022/18",
+      "source_published_at": "2022-04-14T23:59:59+03:00",
+      "source_sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "source_path": "registry/oot/source_docs/KMPUR/SPK_BULTEN_2022-18.pdf",
+      "quote": "Kimteks Poliüretan 21.450.000 4.950.000 29,00 110.000.000 121.550.000 11.550.000 - Sanayi ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-14",
+        "bookbuilding_start": "2022-04-20",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2022-04-28",
+      "source_id": "KAP_1024003",
+      "source_document": "KAP 1024003",
+      "source_published_at": "2022-04-26T18:14:46+03:00",
+      "source_sha256": "b8e86858fb8cfa18980871d17cd3fecf3b25abd4d90e99c795cd3115cd1ffbc7",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1024003_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 28/04/2022",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2022-04-20",
+      "source_id": "KAP_1024003",
+      "source_document": "KAP 1024003",
+      "source_published_at": "2022-04-26T18:14:46+03:00",
+      "source_sha256": "b8e86858fb8cfa18980871d17cd3fecf3b25abd4d90e99c795cd3115cd1ffbc7",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1024003_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 20-22/04/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2022-04-22",
+      "source_id": "KAP_1024003",
+      "source_document": "KAP 1024003",
+      "source_published_at": "2022-04-26T18:14:46+03:00",
+      "source_sha256": "b8e86858fb8cfa18980871d17cd3fecf3b25abd4d90e99c795cd3115cd1ffbc7",
+      "source_path": "registry/oot/source_docs/KMPUR/KAP_1024003_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 20-22/04/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1024003": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1024003",
+      "published_at": "2022-04-26T18:14:46+03:00",
+      "sha256": "b8e86858fb8cfa18980871d17cd3fecf3b25abd4d90e99c795cd3115cd1ffbc7",
+      "path": "registry/oot/source_docs/KMPUR/KAP_1024003_bildirim.pdf"
+    },
+    "SPK_BULTEN_2022_18": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2022/18",
+      "published_at": "2022-04-14T23:59:59+03:00",
+      "sha256": "ea5004d8aa2a54204332cfa6d846ceb97e91e7b79e5c9f799644d04272278d83",
+      "path": "registry/oot/source_docs/KMPUR/SPK_BULTEN_2022-18.pdf"
+    },
+    "KAP_1023408_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1023408 ek 1",
+      "published_at": "2022-04-25T10:20:55+03:00",
+      "sha256": "3ff00b8fd8ca42db38580ba0ba9b077c7556db241563b05aad4b24834564294c",
+      "path": "registry/oot/source_docs/KMPUR/KAP_1023408_ek1.pdf"
+    }
+  }
+}

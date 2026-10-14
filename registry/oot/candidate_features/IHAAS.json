@@ -1,0 +1,236 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "IHAAS",
+  "company": "İhlas Haber Ajansı A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "73432",
+      "source_id": "KAP_973160_EK1",
+      "source_document": "KAP 973160 ek 1",
+      "source_published_at": "2021-10-28T12:03:06+03:00",
+      "source_sha256": "812a7542422cf5861044c698975a3a52646cea112c1c77fd82a7f68b6b012614",
+      "source_path": "registry/oot/source_docs/IHAAS/KAP_973160_ek1.pdf",
+      "quote": "TOPLAM 73.432 22.000.000 100,00%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "metin: 'Halka arza toplamda 73.432 olarak yatırımcı katılmıştır'; dağıtım tablosu toplamıyla aynı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "73.432",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "73246",
+        "domestic_institutional": "27",
+        "foreign_retail": "159"
+      },
+      "source_id": "KAP_973160_EK1",
+      "source_document": "KAP 973160 ek 1",
+      "source_published_at": "2021-10-28T12:03:06+03:00",
+      "source_sha256": "812a7542422cf5861044c698975a3a52646cea112c1c77fd82a7f68b6b012614",
+      "source_path": "registry/oot/source_docs/IHAAS/KAP_973160_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel* 73.246 21.934.534 99,70%",
+        "Yurtiçi Kurumsal** 27 13.356 0,06%",
+        "Yurtdışı Bireysel* 159 52.110 0,24%"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "73.246",
+        "Yurtiçi Kurumsal": "27",
+        "Yurtdışı Bireysel": "159"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '73.246', 'Yurtiçi Kurumsal': '27', 'Yurtdışı Bireysel': '159'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı yok ('herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'), grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "21934534",
+        "domestic_institutional": "13356",
+        "foreign_retail": "52110"
+      },
+      "source_id": "KAP_973160_EK1",
+      "source_document": "KAP 973160 ek 1",
+      "source_published_at": "2021-10-28T12:03:06+03:00",
+      "source_sha256": "812a7542422cf5861044c698975a3a52646cea112c1c77fd82a7f68b6b012614",
+      "source_path": "registry/oot/source_docs/IHAAS/KAP_973160_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel* 73.246 21.934.534 99,70%",
+        "Yurtiçi Kurumsal** 27 13.356 0,06%",
+        "Yurtdışı Bireysel* 159 52.110 0,24%"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "21.934.534",
+        "Yurtiçi Kurumsal": "13.356",
+        "Yurtdışı Bireysel": "52.110"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '21.934.534', 'Yurtiçi Kurumsal': '13.356', 'Yurtdışı Bireysel': '52.110'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "99.70",
+      "source_id": "KAP_973160_EK1",
+      "source_document": "KAP 973160 ek 1",
+      "source_published_at": "2021-10-28T12:03:06+03:00",
+      "source_sha256": "812a7542422cf5861044c698975a3a52646cea112c1c77fd82a7f68b6b012614",
+      "source_path": "registry/oot/source_docs/IHAAS/KAP_973160_ek1.pdf",
+      "quote": "Yurtiçi Bireysel* 73.246 21.934.534 99,70%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "99,70",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.06",
+      "source_id": "KAP_973160_EK1",
+      "source_document": "KAP 973160 ek 1",
+      "source_published_at": "2021-10-28T12:03:06+03:00",
+      "source_sha256": "812a7542422cf5861044c698975a3a52646cea112c1c77fd82a7f68b6b012614",
+      "source_path": "registry/oot/source_docs/IHAAS/KAP_973160_ek1.pdf",
+      "quote": "Yurtiçi Kurumsal** 27 13.356 0,06%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,06",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok; tabloda yalnız 'Yurtdışı Bireysel' %0,24",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "0",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "0",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "belgede yurt dışı kurumsal grup yok; 0 yazılı değil; yurtdışı bireysel %0,24; alan null"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (\"Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış\") ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Tera Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_972071_EK1",
+      "source_document": "KAP 972071 ek 1",
+      "source_published_at": "2021-10-22T18:32:37+03:00",
+      "source_sha256": "266a17c2de7ecda5f10a67e0da31a121fd474ed1c68f63a126849c028fa79237",
+      "source_path": "registry/oot/source_docs/IHAAS/KAP_972071_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Tera Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "sonuç bildirimini de Tera Yatırım yayımlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Tera Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_973648",
+      "source_document": "KAP 973648",
+      "source_published_at": "2021-11-01T18:25:52+03:00",
+      "source_sha256": "9d8b2851ab6159999968471920fa452f24d1f4e532892e2fa41d3d8744fe5776",
+      "source_path": "registry/oot/source_docs/IHAAS/KAP_973648_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_973648",
+      "source_document": "KAP 973648",
+      "source_published_at": "2021-11-01T18:25:52+03:00",
+      "source_sha256": "9d8b2851ab6159999968471920fa452f24d1f4e532892e2fa41d3d8744fe5776",
+      "source_path": "registry/oot/source_docs/IHAAS/KAP_973648_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_973648": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 973648",
+      "published_at": "2021-11-01T18:25:52+03:00",
+      "sha256": "9d8b2851ab6159999968471920fa452f24d1f4e532892e2fa41d3d8744fe5776",
+      "path": "registry/oot/source_docs/IHAAS/KAP_973648_bildirim.pdf"
+    },
+    "KAP_973160_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 973160 ek 1",
+      "published_at": "2021-10-28T12:03:06+03:00",
+      "sha256": "812a7542422cf5861044c698975a3a52646cea112c1c77fd82a7f68b6b012614",
+      "path": "registry/oot/source_docs/IHAAS/KAP_973160_ek1.pdf"
+    },
+    "KAP_972071_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 972071 ek 1",
+      "published_at": "2021-10-22T18:32:37+03:00",
+      "sha256": "266a17c2de7ecda5f10a67e0da31a121fd474ed1c68f63a126849c028fa79237",
+      "path": "registry/oot/source_docs/IHAAS/KAP_972071_ek1.pdf"
+    }
+  }
+}

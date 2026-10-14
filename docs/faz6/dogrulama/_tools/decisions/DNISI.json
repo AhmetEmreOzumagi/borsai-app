@@ -1,0 +1,178 @@
+{
+ "ticker": "DNISI",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_872779",
+  "KAP_872784",
+  "KAP_870773",
+  "KAP_870773_EK1"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": null,
+   "missing_reason": "BOUND_ONLY: KAP_872779 yalnız alt sınır veriyor ('27 katın üzerinde'; ikinci talep toplama günü itibarıyla); kesin toplam kat ya da toplam talep nominali yazılmıyor. Borsada satış (Birincil Piyasa).",
+   "evidence": {
+    "source_id": "KAP_872779",
+    "quote": "ikinci talep toplama günü olan 28.08.2020 tarihinde 8.700.000 TL nominal tutarlı halka arza 27 katın üzerinde talep gelmiştir"
+   }
+  },
+  "total_demand_filter_status": {
+   "value": null,
+   "missing_reason": "f3 yok"
+  },
+  "ipo_size_tl": {
+   "value": null,
+   "missing_reason": "KAP_872779 gerçekleşen arzın TL tutarını yazmıyor (8.700.000 TL nominal ve 3,52 TL fiyat); fiyat x pay hesaplanmadı"
+  },
+  "capital_increase_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok"
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_872779",
+   "zero_from_statement": true,
+   "quote": "toplam 8.700.000 TL nominal değerli payların tamamının satışı 3,52 TL'lik halka arz fiyatından gerçekleşmiştir",
+   "note": "satılan toplam 8.700.000 = SPK planlanan taban (bedelli 8.700.000; mevcut pay satışı '-'); SPK satırında ek pay satışı '-'"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_872779",
+   "quote": "28.08.2020 tarihi itibari ile halka arz müzayedesi tamamlanmış ve toplam 8.700.000 TL nominal değerli payların tamamının satışı 3,52 TL'lik halka arz fiyatından gerçekleşmiştir."
+  },
+  "additional_sale_usage_statement": null,
+  "investor_count": {
+   "value": "175971",
+   "source_id": "KAP_872779",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "olmak üzere toplam 175.971 yatırımcı 8.700.000 TL nominal değerli payın alımını gerçekleştirmiştir",
+   "note": "talep eden sayısı belgede yok"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "175623",
+    "domestic_institutional": "130",
+    "foreign_retail": "217",
+    "foreign_institutional": "1"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_872779",
+   "quote": "Halka arzda, 175.623 yerli gerçek kişi yatırımcı, 217 yabancı gerçek kişi yatırımcı, 130 yerli tüzel kişi yatırımcı ve 1 yabancı tüzel kişi yatırımcı olmak üzere toplam 175.971 yatırımcı"
+  },
+  "retail_demand_multiple": {
+   "value": null,
+   "missing_reason": "KAP_872779 grup talebi ya da grup katı vermiyor"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "KAP_872779 grup talebi ya da grup katı vermiyor"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "KAP_872779 grup talebi ya da grup katı vermiyor"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "8685458.50",
+    "domestic_institutional": "6539.00",
+    "foreign_retail": "7970.50",
+    "foreign_institutional": "32.00"
+   },
+   "source_id": "KAP_872779",
+   "quote": [
+    "Yurtiçi Bireysel 8.685.458,50 99,83 175.623 Yatırımcılar",
+    "Yurtiçi Kurumsal 6.539,00 0,08 130 Yatırımcılar",
+    "Yabancı 7.970,50 0,09 217 Bireysel Yatırımcılar",
+    "Yabancı Kurumsal 32,00 0,0004 1 Yatırımcılar"
+   ],
+   "note": "Diğer grubu ve MKK sicil kaydı bulunmayanlar yurtiçi bireysele dahil edilmiş (belge notu)"
+  },
+  "retail_allocation_pct": {
+   "value": "99.83",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_872779",
+   "quote": "Yurtiçi Bireysel 8.685.458,50 99,83 175.623 Yatırımcılar"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "0.08",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_872779",
+   "quote": "Yurtiçi Kurumsal 6.539,00 0,08 130 Yatırımcılar"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": "0.0004",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_872779",
+   "quote": "Yabancı Kurumsal 32,00 0,0004 1 Yatırımcılar",
+   "note": "yabancı bireysel ayrıca 0,09"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç bildirimi ve TSSD dağıtım yöntemini adlandırmıyor"
+  },
+  "lead_broker": {
+   "value": "GEDİK YATIRIM MENKUL DEĞERLER A.Ş.",
+   "source_id": "KAP_872779",
+   "quote": [
+    "KAMUYU AYDINLATMA PLATFORMU GEDİK YATIRIM MENKUL DEĞERLER A.Ş. Özel Durum Açıklaması (Genel)",
+    "Halka arzına aracılık ettiğimiz Dinamik Isı Makina Yalıtım Malzemeleri Sanayi ve Ticaret A.Ş."
+   ],
+   "note": "yayımlayan kurum 'aracılık ettiğimiz' diyor; TSSD de Gedik Yatırım'ı aracı olarak anıyor (OCR bozuk)"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "TSSD ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "TSSD ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {
+  "capital_increase_shares": {
+   "codex_value": "8.700.000",
+   "verdict": "NOT_APPLICABLE",
+   "note": "SPK bülteni planından; sonuç bildirimi ayrım yazmıyor (TSSD: yalnız sermaye artırımı 8.700.000)"
+  },
+  "existing_share_sale_shares": {
+   "codex_value": "0",
+   "verdict": "NOT_APPLICABLE",
+   "note": "SPK bülteni planından; sonuç bildirimi ayrım yazmıyor"
+  },
+  "additional_sale_shares": {
+   "codex_value": "0",
+   "verdict": "FOUND_SAME",
+   "note": "satılan toplam = planlanan taban"
+  },
+  "distribution_method": {
+   "codex_value": "Borsa Birincil Piyasada sabit fiyatla talep toplama ve satış yöntemi",
+   "verdict": "NOT_FOUND_IN_DOCS",
+   "note": "Codex alıntısı indirilmemiş KAP satırı başlığı; eldeki belgelerde bu ifade yok; ayrıca satış yöntemi, dağıtım yöntemi değil"
+  },
+  "lead_broker": {
+   "codex_value": "GEDİK YATIRIM MENKUL DEĞERLER A.Ş.",
+   "verdict": "FOUND_SAME"
+  }
+ },
+ "notes": "Borsada satış; sonuç bildirimi toplam katı yalnız alt sınır olarak veriyor ('27 katın üzerinde'); f3 değeri 27 bir alt sınırdır, kesin kat değil. Codex f3 ve katılımcı sayısını bulamamıştı. | Doğrulayıcı düzeltmesi: f3 alt sınır olduğu için null yapıldı (BOUND_ONLY kuralı).",
+ "needs_search": false
+}

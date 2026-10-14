@@ -1,0 +1,219 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "BVSAN",
+  "company": "Bülbüloğlu Vinç Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "373600",
+      "source_id": "KAP_1108806_EK1",
+      "source_document": "KAP 1108806 ek 1",
+      "source_published_at": "2023-02-02T12:32:31+03:00",
+      "source_sha256": "518823a8918292d67856c3a6436d6d63bf4c2a3de01c014cedef41aa93dae01b",
+      "source_path": "registry/oot/source_docs/BVSAN/KAP_1108806_ek1.pdf",
+      "quote": "Halka arza toplamda 403.573 yatırımcı katılmış olup 373.600 yatırımcıya dağıtım gerçekleşmiştir.",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "katılan (başvuru) 403.573 (ilk ekte 403.568); dağıtım yapılan 373.600",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "373396",
+        "employees": "105",
+        "domestic_institutional": "88",
+        "foreign_institutional": "11"
+      },
+      "source_id": "KAP_1108806_EK1",
+      "source_document": "KAP 1108806 ek 1",
+      "source_published_at": "2023-02-02T12:32:31+03:00",
+      "source_sha256": "518823a8918292d67856c3a6436d6d63bf4c2a3de01c014cedef41aa93dae01b",
+      "source_path": "registry/oot/source_docs/BVSAN/KAP_1108806_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel Yatırımcılar 6.095.000 53,0% 403.320 1.346.732.564 89,73% 373.396 6.095.000 53,0%",
+        "Şirket Çalışanları 230.000 2,0% 105 330.554 0,02% 105 230.000 2,0%",
+        "2.875.000 25,0% 134 126.430.188 8,43% 88 2.875.000 25,0%",
+        "2.300.000 20,0% 14 27.367.644 1,82% 11 2.300.000 20,0%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "employees = Şirket Çalışanları; başvuru: bireysel 403.320, çalışanlar 105, yurt içi kurumsal 134, yurt dışı kurumsal 14",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "220.9",
+      "source_id": "KAP_1108806_EK1",
+      "source_document": "KAP 1108806 ek 1",
+      "source_published_at": "2023-02-02T12:32:31+03:00",
+      "source_sha256": "518823a8918292d67856c3a6436d6d63bf4c2a3de01c014cedef41aa93dae01b",
+      "source_path": "registry/oot/source_docs/BVSAN/KAP_1108806_ek1.pdf",
+      "quote": "Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 220,9 katı",
+      "note": "belge 'yaklaşık' ve 'filtrelenmemiş' diyor; şirket çalışanları yaklaşık 1,4 kat",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "43.9",
+      "source_id": "KAP_1108806_EK1",
+      "source_document": "KAP 1108806 ek 1",
+      "source_published_at": "2023-02-02T12:32:31+03:00",
+      "source_sha256": "518823a8918292d67856c3a6436d6d63bf4c2a3de01c014cedef41aa93dae01b",
+      "source_path": "registry/oot/source_docs/BVSAN/KAP_1108806_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara nihai tahsisat tutarının yaklaşık 43,9 katı",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "11.9",
+      "source_id": "KAP_1108806_EK1",
+      "source_document": "KAP 1108806 ek 1",
+      "source_published_at": "2023-02-02T12:32:31+03:00",
+      "source_sha256": "518823a8918292d67856c3a6436d6d63bf4c2a3de01c014cedef41aa93dae01b",
+      "source_path": "registry/oot/source_docs/BVSAN/KAP_1108806_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara nihai tahsisat tutarının yaklaşık 11,9 katı filtrelenmemiş talep gelmiştir",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "6095000",
+        "employees": "230000",
+        "domestic_institutional": "2875000",
+        "foreign_institutional": "2300000"
+      },
+      "source_id": "KAP_1108806_EK1",
+      "source_document": "KAP 1108806 ek 1",
+      "source_published_at": "2023-02-02T12:32:31+03:00",
+      "source_sha256": "518823a8918292d67856c3a6436d6d63bf4c2a3de01c014cedef41aa93dae01b",
+      "source_path": "registry/oot/source_docs/BVSAN/KAP_1108806_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel Yatırımcılar 6.095.000 53,0% 403.320 1.346.732.564 89,73% 373.396 6.095.000 53,0%",
+        "Şirket Çalışanları 230.000 2,0% 105 330.554 0,02% 105 230.000 2,0%",
+        "2.875.000 25,0% 134 126.430.188 8,43% 88 2.875.000 25,0%",
+        "2.300.000 20,0% 14 27.367.644 1,82% 11 2.300.000 20,0%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "53.0",
+      "source_id": "KAP_1108806_EK1",
+      "source_document": "KAP 1108806 ek 1",
+      "source_published_at": "2023-02-02T12:32:31+03:00",
+      "source_sha256": "518823a8918292d67856c3a6436d6d63bf4c2a3de01c014cedef41aa93dae01b",
+      "source_path": "registry/oot/source_docs/BVSAN/KAP_1108806_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılar 6.095.000 53,0% 403.320 1.346.732.564 89,73% 373.396 6.095.000 53,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %53,0; şirket çalışanları %2,0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "25.0",
+      "source_id": "KAP_1108806_EK1",
+      "source_document": "KAP 1108806 ek 1",
+      "source_published_at": "2023-02-02T12:32:31+03:00",
+      "source_sha256": "518823a8918292d67856c3a6436d6d63bf4c2a3de01c014cedef41aa93dae01b",
+      "source_path": "registry/oot/source_docs/BVSAN/KAP_1108806_ek1.pdf",
+      "quote": "2.875.000 25,0% 134 126.430.188 8,43% 88 2.875.000 25,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "20.0",
+      "source_id": "KAP_1108806_EK1",
+      "source_document": "KAP 1108806 ek 1",
+      "source_published_at": "2023-02-02T12:32:31+03:00",
+      "source_sha256": "518823a8918292d67856c3a6436d6d63bf4c2a3de01c014cedef41aa93dae01b",
+      "source_path": "registry/oot/source_docs/BVSAN/KAP_1108806_ek1.pdf",
+      "quote": "2.300.000 20,0% 14 27.367.644 1,82% 11 2.300.000 20,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız talep toplama/aracılık yöntemini yazıyor (“Sabit Fiyatla Talep Toplama” ve “En İyi Gayret Aracılığı”); dağıtım yöntemi adlandırılmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Tera Yatırım",
+      "source_id": "KAP_1108806_EK1",
+      "source_document": "KAP 1108806 ek 1",
+      "source_published_at": "2023-02-02T12:32:31+03:00",
+      "source_sha256": "518823a8918292d67856c3a6436d6d63bf4c2a3de01c014cedef41aa93dae01b",
+      "source_path": "registry/oot/source_docs/BVSAN/KAP_1108806_ek1.pdf",
+      "quote": "Tera Yatırım Konsorsiyum Liderliğinde",
+      "note": "belgede kısa adla; TSSD: 'halka arzda satışa aracılık edecek Tera Yatırım'; bildirimi Tera Yatırım Menkul Değerler A.Ş. yayımlamış",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1109196",
+      "source_document": "KAP 1109196",
+      "source_published_at": "2023-02-02T18:10:19+03:00",
+      "source_sha256": "8f0438ab5896abad7a9cf6a6ee9b5fcb547fcc04e0a0e8595a5ddbb3217db18a",
+      "source_path": "registry/oot/source_docs/BVSAN/KAP_1109196_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1109196",
+      "source_document": "KAP 1109196",
+      "source_published_at": "2023-02-02T18:10:19+03:00",
+      "source_sha256": "8f0438ab5896abad7a9cf6a6ee9b5fcb547fcc04e0a0e8595a5ddbb3217db18a",
+      "source_path": "registry/oot/source_docs/BVSAN/KAP_1109196_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1109196": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1109196",
+      "published_at": "2023-02-02T18:10:19+03:00",
+      "sha256": "8f0438ab5896abad7a9cf6a6ee9b5fcb547fcc04e0a0e8595a5ddbb3217db18a",
+      "path": "registry/oot/source_docs/BVSAN/KAP_1109196_bildirim.pdf"
+    },
+    "KAP_1108806_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1108806 ek 1",
+      "published_at": "2023-02-02T12:32:31+03:00",
+      "sha256": "518823a8918292d67856c3a6436d6d63bf4c2a3de01c014cedef41aa93dae01b",
+      "path": "registry/oot/source_docs/BVSAN/KAP_1108806_ek1.pdf"
+    }
+  }
+}

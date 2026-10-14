@@ -1,0 +1,84 @@
+# Canlı POST_D1 akışı (BORSAI_FAZ5_POST_D1_LIVE_20260924), commit A test koşuları
+
+## Taban (görev başı, HEAD b8763fc, kod değişmeden)
+
+komut: .venv/bin/pytest -q -p no:cacheprovider
+1 failed, 496 passed in 274.79s (0:04:34)
+kırmızı: tests/test_faz5_post_d1.py::test_14_models_goldens_and_read_only_paths_unchanged
+  AssertionError: git diff 72a000f -- scores registry … = registry/push_proofs/<7c18c0f kanıtı>.json
+  kök neden: proje sahibinin push kanıtı commit'i 988025c (Faz 5 dışı, meşru); düzeltme SPEC_DEVIATIONS H46
+
+## Commit A öncesi tam koşu (çalışma ağacı = commit A içeriği)
+
+komut: .venv/bin/pytest -q -p no:cacheprovider
+545 passed in 313.04s (0:05:13)
+EXIT 0 SECS 314
+
+## Yeni ve genişleyen testler (ayrıntılı)
+
+tests/test_faz5_live.py::test_13a_live PASSED
+tests/test_faz5_live.py::test_13a2_boundary_is_strict_and_uses_instants PASSED
+tests/test_faz5_live.py::test_13b_proof_at_or_after_t_open_is_late_record PASSED
+tests/test_faz5_live.py::test_13c_d2_bulletin_before_model_is_retro PASSED
+tests/test_faz5_live.py::test_13c2_h_ge_2_outcome_row_also_counts_as_ingest PASSED
+tests/test_faz5_live.py::test_13d_non_d1_bulletin_sha_makes_pit_false_retro_and_guard_red PASSED
+tests/test_faz5_live.py::test_13e_no_base_record_no_post_d1_record PASSED
+tests/test_faz5_live.py::test_13f_cancel_only_before_t_open PASSED
+tests/test_faz5_live.py::test_13g_half_day_d2_cal_still_0940 PASSED
+tests/test_faz5_live.py::test_13h_unannounced_closure_on_next_day_same_rule PASSED
+tests/test_faz5_live.py::test_13i_comparator_copy_equals_faz2c_j1_row PASSED
+tests/test_faz5_live.py::test_13j_t_open_from_constant_no_local_clock PASSED
+tests/test_faz5_live.py::test_record_schema_is_7_4_exactly PASSED
+tests/test_faz5_live.py::test_record_models_equal_direct_predict PASSED
+tests/test_faz5_live.py::test_record_uses_only_d1_bulletins PASSED
+tests/test_faz5_live.py::test_record_refuses_without_d1_and_on_bad_params PASSED
+tests/test_faz5_live.py::test_duplicate_post_d1_record PASSED
+tests/test_faz5_live.py::test_base_record_selection_matches_scoring_primary PASSED
+tests/test_faz5_live.py::test_d1_block_fields_are_raw_text_and_columns_named PASSED
+tests/test_faz5_live.py::test_select_primary_post_d1 PASSED
+tests/test_faz5_live.py::test_need_names_post_d1_never_d1 PASSED
+tests/test_faz5_live.py::test_post_d1_row_metrics_are_shared_functions_and_d1_not_scored PASSED
+tests/test_faz5_live.py::test_path_not_produced PASSED
+tests/test_faz5_live.py::test_post_d1_cells_small_n_rules_and_labels PASSED
+tests/test_faz5_live.py::test_scale_mix_post_d1 PASSED
+tests/test_faz5_live.py::test_denominator_rows PASSED
+tests/test_faz5_live.py::test_denominator_live_row_end_to_end PASSED
+tests/test_faz5_live.py::test_real_seven_are_retro_info_only PASSED
+tests/test_faz5_live.py::test_scores_json_structure_unchanged_by_post_d1 PASSED
+tests/test_faz5_live.py::test_l8_card_does_not_call_it_cutoff PASSED
+tests/test_faz5_live.py::test_l9_variant_counter_is_20_and_allowance_retires PASSED
+tests/test_faz5_live.py::test_committed_post_d1_scores_match_recomputation PASSED
+tests/test_faz5_live.py::test_post_d1_doc_section_has_no_verdict_words PASSED
+tests/test_faz5_live.py::test_l4_netgl_end_to_end PASSED
+tests/test_faz5_live.py::test_l4_committed_prova_output_matches PASSED
+tests/test_faz5_live.py::test_l5_thb_d1_columns_match_pinned_2026_header PASSED
+tests/test_faz5_live.py::test_l5_outcomes_regenerate_byte_equal PASSED
+tests/test_faz5_live.py::test_update_downloads_d1_bulletins_h1_ok_rest_pending PASSED
+tests/test_faz5_live.py::test_l6_calendar_end_is_labelled_error PASSED
+tests/test_faz5_live.py::test_sequence_guard_blocks_on_uncommitted_post_d1 PASSED
+tests/test_faz5_live.py::test_claude_md_rule_1_sentence_verbatim PASSED
+tests/test_outcome_guard.py::test_sequence_rule_outcomes_follow_models_and_records PASSED
+tests/test_outcome_guard.py::test_sequence_rule_covers_every_post_cutoff_bulletin_and_outcome PASSED
+tests/test_outcome_guard.py::test_text_mentions_of_post_cutoff_bulletins_follow_models PASSED
+tests/test_outcome_guard.py::test_new_ipos_appear_in_data_only_as_outcomes PASSED
+tests/test_outcome_guard.py::test_10_outcome_before_model_is_red PASSED
+tests/test_outcome_guard.py::test_10b_correct_order_is_green_and_later_model_is_not_bound PASSED
+tests/test_outcome_guard.py::test_10c_outcome_before_record_is_red PASSED
+tests/test_outcome_guard.py::test_10d_uncommitted_outcome_checked_against_head PASSED
+tests/test_outcome_guard.py::test_10e_post_d1_model_listed_but_not_committed_is_red PASSED
+tests/test_outcome_guard.py::test_10f_post_d1_model_then_outcome_is_green_parallel_branch_is_red PASSED
+tests/test_outcome_guard.py::test_registry_carries_no_outcome_fields PASSED
+tests/test_outcome_guard.py::test_reference_files_hold_no_post_listing_outcomes PASSED
+tests/test_outcome_guard.py::test_source_documents_predate_first_trading_day PASSED
+tests/test_outcome_guard.py::test_post_d1_records_carry_only_d1_fields PASSED
+tests/test_outcome_guard.py::test_outcome_rows_h_ge_2_follow_bulletin_commits PASSED
+tests/test_outcome_guard.py::test_post_d1_guard_green_on_valid_synthetic_record PASSED
+tests/test_outcome_guard.py::test_post_d1_guard_red_on_h_ge_2_key PASSED
+tests/test_outcome_guard.py::test_post_d1_guard_red_on_d1_field_outside_d1_block PASSED
+tests/test_outcome_guard.py::test_post_d1_guard_red_on_non_d1_bulletin_sha_or_name PASSED
+tests/test_outcome_guard.py::test_post_d1_outcome_row_before_bulletin_commit_is_red PASSED
+============================= 61 passed in 27.54s ==============================
+
+## L4 provası
+
+komut: .venv/bin/python tests/faz5_live_support.py > docs/faz5/ekler/prova_netgl.txt   (çıkış 0, PROVA_OK)

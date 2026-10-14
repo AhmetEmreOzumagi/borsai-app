@@ -1,0 +1,530 @@
+{
+  "model_id": "ceiling_path_v0",
+  "state": "STREAK_ONGOING",
+  "j_or_t": 3,
+  "source_kind": "OUTPUT",
+  "source_file": null,
+  "params_sha256": "3e97e8788266f807a06604316d562de939a3e84ab6fcc9c0be1ce87790c6952d",
+  "closes": [
+    {
+      "h": 1,
+      "origin": "FILE",
+      "close": "28.06",
+      "session_date": "2030-01-07"
+    },
+    {
+      "h": 2,
+      "origin": "FILE",
+      "close": "30.86",
+      "session_date": "2030-01-08"
+    },
+    {
+      "h": 3,
+      "origin": "FILE",
+      "close": "33.94",
+      "session_date": "2030-01-09"
+    }
+  ],
+  "assumed": false,
+  "limit_path_mismatch": 0,
+  "mismatch": null,
+  "result": {
+    "state": "STREAK_ONGOING",
+    "j": 3,
+    "S_j": 0.125,
+    "S_cond": {
+      "4": 0.5,
+      "5": 0.25,
+      "6": 0.125,
+      "7": 0.0625,
+      "8": 0.03125,
+      "9": 0.015625,
+      "10": 0.0078125
+    },
+    "P_L_cond": {
+      "3": 0.5,
+      "4": 0.25,
+      "5": 0.125,
+      "6": 0.0625,
+      "7": 0.03125,
+      "8": 0.015625,
+      "9": 0.0078125,
+      "10": 0.0078125
+    },
+    "limit_path_mismatch": 0,
+    "D1": {
+      "status": "REALIZED",
+      "realized_return": 0.09952978056426333
+    },
+    "D2": {
+      "status": "REALIZED",
+      "realized_return": 0.20924764890282133
+    },
+    "D3": {
+      "status": "REALIZED",
+      "realized_return": 0.3299373040752351
+    },
+    "D4": {
+      "status": "OK",
+      "return": 0.46094195857671516,
+      "p_up": 1.0,
+      "mean": 0.35242598875005515,
+      "q10": 0.19728901192851045,
+      "q50": 0.46094195857671516,
+      "q90": 0.46238244514106586,
+      "limit_path_return": 0.46238244514106586,
+      "S_h": 0.5,
+      "p_limit_path": 0.5,
+      "n_atoms": 68,
+      "post_break": {
+        "cells": [
+          {
+            "group": "B",
+            "m": 1,
+            "n": 67,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                1
+              ]
+            ]
+          }
+        ],
+        "status": "OK"
+      }
+    },
+    "D5": {
+      "status": "OK",
+      "return": 0.3169234452691303,
+      "p_up": 1.0,
+      "mean": 0.34332254312311694,
+      "q10": 0.07797652576410652,
+      "q50": 0.3169234452691303,
+      "q90": 0.6081504702194357,
+      "limit_path_return": 0.6081504702194357,
+      "S_h": 0.25,
+      "p_limit_path": 0.25,
+      "n_atoms": 132,
+      "post_break": {
+        "cells": [
+          {
+            "group": "B",
+            "m": 2,
+            "n": 64,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                2
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 1,
+            "n": 67,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                1
+              ]
+            ]
+          }
+        ],
+        "status": "OK"
+      }
+    },
+    "D6": {
+      "status": "OK",
+      "return": 0.29976631260347397,
+      "p_up": 0.9083333333333333,
+      "mean": 0.33561530763025477,
+      "q10": 0.0011413937174908906,
+      "q50": 0.29976631260347397,
+      "q90": 0.7688087774294671,
+      "limit_path_return": 0.7688087774294671,
+      "S_h": 0.125,
+      "p_limit_path": 0.125,
+      "n_atoms": 192,
+      "post_break": {
+        "cells": [
+          {
+            "group": "B",
+            "m": 3,
+            "n": 60,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                3
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 2,
+            "n": 64,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                2
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 1,
+            "n": 67,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                1
+              ]
+            ]
+          }
+        ],
+        "status": "OK"
+      }
+    },
+    "D7": {
+      "status": "OK",
+      "return": 0.28347395451210566,
+      "p_up": 0.9074074074074073,
+      "mean": 0.3298727535615703,
+      "q10": 0.0060001329669356895,
+      "q50": 0.28347395451210566,
+      "q90": 0.772402091350096,
+      "limit_path_return": 0.945141065830721,
+      "S_h": 0.0625,
+      "p_limit_path": 0.0625,
+      "n_atoms": 246,
+      "post_break": {
+        "cells": [
+          {
+            "group": "B",
+            "m": 4,
+            "n": 54,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                4
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 3,
+            "n": 60,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                3
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 2,
+            "n": 64,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                2
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 1,
+            "n": 67,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                1
+              ]
+            ]
+          }
+        ],
+        "status": "OK"
+      }
+    },
+    "D8": {
+      "status": "OK",
+      "return": 0.24438754648649685,
+      "p_up": 0.8518518518518519,
+      "mean": 0.3414348205800266,
+      "q10": -0.03846582363099549,
+      "q50": 0.24438754648649685,
+      "q90": 0.8723478651351169,
+      "limit_path_return": 1.1394984326018809,
+      "S_h": 0.03125,
+      "p_limit_path": 0.03125,
+      "n_atoms": 294,
+      "post_break": {
+        "cells": [
+          {
+            "group": "B",
+            "m": 5,
+            "n": 48,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                5
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 4,
+            "n": 54,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                4
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 3,
+            "n": 60,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                3
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 2,
+            "n": 64,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                2
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 1,
+            "n": 67,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                1
+              ]
+            ]
+          }
+        ],
+        "status": "OK"
+      }
+    },
+    "D9": {
+      "status": "OK",
+      "return": 0.2525924254229832,
+      "p_up": 0.8791666666666667,
+      "mean": 0.36637485915701806,
+      "q10": -0.0530643480201759,
+      "q50": 0.2525924254229832,
+      "q90": 0.926680975239849,
+      "limit_path_return": 1.3530564263322884,
+      "S_h": 0.015625,
+      "p_limit_path": 0.015625,
+      "n_atoms": 334,
+      "post_break": {
+        "cells": [
+          {
+            "group": "B",
+            "m": 6,
+            "n": 40,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                6
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 5,
+            "n": 48,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                5
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 4,
+            "n": 54,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                4
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 3,
+            "n": 60,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                3
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 2,
+            "n": 64,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                2
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 1,
+            "n": 67,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                1
+              ]
+            ]
+          }
+        ],
+        "status": "OK"
+      }
+    },
+    "D10": {
+      "status": "OK",
+      "return": 0.23114196148678912,
+      "p_up": 0.8411458333333333,
+      "mean": 0.39547395975845245,
+      "q10": -0.04404653400172165,
+      "q50": 0.23114196148678912,
+      "q90": 1.1169367869954434,
+      "limit_path_return": 1.588166144200627,
+      "S_h": 0.0078125,
+      "p_limit_path": 0.0078125,
+      "n_atoms": 362,
+      "post_break": {
+        "cells": [
+          {
+            "group": "B",
+            "m": 7,
+            "n": 28,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                7
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 6,
+            "n": 40,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                6
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 5,
+            "n": 48,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                5
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 4,
+            "n": 54,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                4
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 3,
+            "n": 60,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                3
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 2,
+            "n": 64,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                2
+              ]
+            ]
+          },
+          {
+            "group": "B",
+            "m": 1,
+            "n": 67,
+            "pooled": false,
+            "sources": [
+              [
+                "B",
+                1
+              ]
+            ]
+          }
+        ],
+        "status": "OK"
+      }
+    }
+  }
+}

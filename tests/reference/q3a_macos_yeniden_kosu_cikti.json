@@ -1,0 +1,97 @@
+{
+ "n_new": 351,
+ "n_old": 351,
+ "seconds": 256.0,
+ "ridge_point_prediction_return": {
+  "string_exact": 131,
+  "differ": 220,
+  "max_abs_diff": 2.7200464103316335e-15,
+  "worst": [
+   [
+    2.7200464103316335e-15,
+    "HISTORICAL99_FROZEN_V1_5_BENCHMARK_V1|D5|ALBTN",
+    "-0.070219348969199957",
+    "-0.070219348969197237"
+   ],
+   [
+    1.6653345369377348e-15,
+    "HISTORICAL99_FROZEN_V1_5_BENCHMARK_V1|D10|QUICK",
+    "-0.20086069174473808",
+    "-0.20086069174473975"
+   ],
+   [
+    1.4710455076283324e-15,
+    "HISTORICAL99_FROZEN_V1_5_BENCHMARK_V1|D3|ALBTN",
+    "-0.01060629073843472",
+    "-0.010606290738433249"
+   ]
+  ]
+ },
+ "logistic_probability_above_ipo_raw": {
+  "string_exact": 293,
+  "differ": 58,
+  "max_abs_diff": Infinity,
+  "worst": [
+   [
+    Infinity,
+    "HISTORICAL99_FROZEN_V1_5_BENCHMARK_V1|D3|BETAE",
+    "",
+    "0.99178712098749289"
+   ],
+   [
+    3.0573615861229086e-09,
+    "HISTORICAL99_FROZEN_V1_5_BENCHMARK_V1|D5|ORZAX",
+    "0.82720524257759032",
+    "0.82720523952022873"
+   ],
+   [
+    2.3039697927274005e-09,
+    "HISTORICAL99_FROZEN_V1_5_BENCHMARK_V1|D5|SOHOE",
+    "0.8290628585686749",
+    "0.82906286087264469"
+   ]
+  ]
+ },
+ "ridge_selected_alpha": {
+  "string_exact": 351,
+  "differ": 0,
+  "max_abs_diff": 0,
+  "worst": []
+ },
+ "logistic_selected_C": {
+  "string_exact": 350,
+  "differ": 1,
+  "max_abs_diff": Infinity,
+  "worst": [
+   [
+    Infinity,
+    "HISTORICAL99_FROZEN_V1_5_BENCHMARK_V1|D3|BETAE",
+    "",
+    "1"
+   ]
+  ]
+ },
+ "ridge_status": {
+  "string_exact": 351,
+  "differ": 0,
+  "max_abs_diff": 0,
+  "worst": []
+ },
+ "logistic_status": {
+  "string_exact": 350,
+  "differ": 1,
+  "max_abs_diff": Infinity,
+  "worst": [
+   [
+    Infinity,
+    "HISTORICAL99_FROZEN_V1_5_BENCHMARK_V1|D3|BETAE",
+    "MODEL_NOT_FIT_OPTIMIZER_DID_NOT_CONVERGE",
+    "FIT_OK"
+   ]
+  ]
+ },
+ "MAE_D1": "0.02970448869658594",
+ "MAE_D3": "0.12007453605906018",
+ "MAE_D5": "0.22203575470086492",
+ "MAE_D10": "0.4477362239966257"
+}

@@ -1,0 +1,213 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "KLRHO",
+  "company": "Kiler Holding A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "44487",
+      "source_id": "KAP_1040982_EK1",
+      "source_document": "KAP 1040982 ek 1",
+      "source_published_at": "2022-07-04T09:24:47+03:00",
+      "source_sha256": "eb0c2a0f21f041548d5c50150bead3263eed89d89069139559ec032f811dcd28",
+      "source_path": "registry/oot/source_docs/KLRHO/KAP_1040982_ek1.pdf",
+      "quote": "Toplam 97.500.000 100% 45.375 120.795.917 100% 44.487 97.500.000 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 45.375; dağıtım yapılan 44.487",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "45.375",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "45.375",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "45.375 belgede talep eden sayısı; dağıtım yapılan yatırımcı sayısı 44.487 (ALLOCATED tercih edildi)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "44478",
+        "domestic_institutional": "9"
+      },
+      "source_id": "KAP_1040982_EK1",
+      "source_document": "KAP 1040982 ek 1",
+      "source_published_at": "2022-07-04T09:24:47+03:00",
+      "source_sha256": "eb0c2a0f21f041548d5c50150bead3263eed89d89069139559ec032f811dcd28",
+      "source_path": "registry/oot/source_docs/KLRHO/KAP_1040982_ek1.pdf",
+      "quote": [
+        "Yurt İçi 72.069.784 87.750.000 90% 45.364 72.169.826 60% 44.478 73,9% B ireysel",
+        "Yurt İçi 9.750.000 10% 11 48.626.091 40% 9 25.430.216 26,1% Kurumsal"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "0.8224481595",
+      "source_id": "KAP_1040982_EK1",
+      "source_document": "KAP 1040982 ek 1",
+      "source_published_at": "2022-07-04T09:24:47+03:00",
+      "source_sha256": "eb0c2a0f21f041548d5c50150bead3263eed89d89069139559ec032f811dcd28",
+      "source_path": "registry/oot/source_docs/KLRHO/KAP_1040982_ek1.pdf",
+      "quote": "Yurt İçi 72.069.784 87.750.000 90% 45.364 72.169.826 60% 44.478 73,9% B ireysel",
+      "derived": true,
+      "formula": "Yurt İçi Bireysel talep 72.169.826 / planlanan tahsisat 87.750.000",
+      "note": "belge grup katı yazmıyor; gerçekleşen dağıtıma (72.069.784) göre 1,0014",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "4.9872913846",
+      "source_id": "KAP_1040982_EK1",
+      "source_document": "KAP 1040982 ek 1",
+      "source_published_at": "2022-07-04T09:24:47+03:00",
+      "source_sha256": "eb0c2a0f21f041548d5c50150bead3263eed89d89069139559ec032f811dcd28",
+      "source_path": "registry/oot/source_docs/KLRHO/KAP_1040982_ek1.pdf",
+      "quote": "Yurt İçi 9.750.000 10% 11 48.626.091 40% 9 25.430.216 26,1% Kurumsal",
+      "derived": true,
+      "formula": "Yurt İçi Kurumsal talep 48.626.091 / planlanan tahsisat 9.750.000",
+      "note": "gerçekleşen dağıtıma (25.430.216) göre 1,9121",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup tabloda yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "72069784",
+        "domestic_institutional": "25430216"
+      },
+      "source_id": "KAP_1040982_EK1",
+      "source_document": "KAP 1040982 ek 1",
+      "source_published_at": "2022-07-04T09:24:47+03:00",
+      "source_sha256": "eb0c2a0f21f041548d5c50150bead3263eed89d89069139559ec032f811dcd28",
+      "source_path": "registry/oot/source_docs/KLRHO/KAP_1040982_ek1.pdf",
+      "quote": [
+        "Yurt İçi 72.069.784 87.750.000 90% 45.364 72.169.826 60% 44.478 73,9% B ireysel",
+        "Yurt İçi 9.750.000 10% 11 48.626.091 40% 9 25.430.216 26,1% Kurumsal"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "73.9",
+      "source_id": "KAP_1040982_EK1",
+      "source_document": "KAP 1040982 ek 1",
+      "source_published_at": "2022-07-04T09:24:47+03:00",
+      "source_sha256": "eb0c2a0f21f041548d5c50150bead3263eed89d89069139559ec032f811dcd28",
+      "source_path": "registry/oot/source_docs/KLRHO/KAP_1040982_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcı tahsisatı da %90’dan %73,9’a azaltılmıştır.",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "26.1",
+      "source_id": "KAP_1040982_EK1",
+      "source_document": "KAP 1040982 ek 1",
+      "source_published_at": "2022-07-04T09:24:47+03:00",
+      "source_sha256": "eb0c2a0f21f041548d5c50150bead3263eed89d89069139559ec032f811dcd28",
+      "source_path": "registry/oot/source_docs/KLRHO/KAP_1040982_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcı tahsisatı %10’dan %26,1’e çıkarılmış",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup tabloda yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız talep toplama yöntemini ('Sabit Fiyatla Talep Toplama') yazıyor; dağıtım yöntemi adlandırılmıyor; TSSD kısa biçim",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Tacirler Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1039542_EK1",
+      "source_document": "KAP 1039542 ek 1",
+      "source_published_at": "2022-06-27T19:07:13+03:00",
+      "source_sha256": "85d87974dfed652680acb40758bdd1eab7b1f163eee953cee48fe92bd5c03cbc",
+      "source_path": "registry/oot/source_docs/KLRHO/KAP_1039542_ek1.pdf",
+      "quote": "Halka Arza Aracılık Eden Yetkili Kuruluş Sorumlu Olduğu Kısım: Tacirler Yatırım Menkul Değerler A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim, OCR) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1041306",
+      "source_document": "KAP 1041306",
+      "source_published_at": "2022-07-04T18:15:26+03:00",
+      "source_sha256": "e43ef9baaa0cddea630570c466c447f849bc05513bf9ddc43b47afe66a49f938",
+      "source_path": "registry/oot/source_docs/KLRHO/KAP_1041306_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1041306",
+      "source_document": "KAP 1041306",
+      "source_published_at": "2022-07-04T18:15:26+03:00",
+      "source_sha256": "e43ef9baaa0cddea630570c466c447f849bc05513bf9ddc43b47afe66a49f938",
+      "source_path": "registry/oot/source_docs/KLRHO/KAP_1041306_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1041306": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1041306",
+      "published_at": "2022-07-04T18:15:26+03:00",
+      "sha256": "e43ef9baaa0cddea630570c466c447f849bc05513bf9ddc43b47afe66a49f938",
+      "path": "registry/oot/source_docs/KLRHO/KAP_1041306_bildirim.pdf"
+    },
+    "KAP_1040982_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1040982 ek 1",
+      "published_at": "2022-07-04T09:24:47+03:00",
+      "sha256": "eb0c2a0f21f041548d5c50150bead3263eed89d89069139559ec032f811dcd28",
+      "path": "registry/oot/source_docs/KLRHO/KAP_1040982_ek1.pdf"
+    },
+    "KAP_1039542_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1039542 ek 1",
+      "published_at": "2022-06-27T19:07:13+03:00",
+      "sha256": "85d87974dfed652680acb40758bdd1eab7b1f163eee953cee48fe92bd5c03cbc",
+      "path": "registry/oot/source_docs/KLRHO/KAP_1039542_ek1.pdf"
+    }
+  }
+}

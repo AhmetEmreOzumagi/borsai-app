@@ -1,0 +1,250 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "ARZUM",
+  "company": "Arzum Elektrikli Ev Aletleri Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "189328",
+      "source_id": "KAP_893966_EK1",
+      "source_document": "KAP 893966 ek 1",
+      "source_published_at": "2020-12-21T08:41:10+03:00",
+      "source_sha256": "242ee43868b79a40bc067d21d1a43b89fda295e4e93be13775699fdcf667dfdd",
+      "source_path": "registry/oot/source_docs/ARZUM/KAP_893966_ek1.pdf",
+      "quote": "Toplam 13.306.475 %100,0 207.206 662.267.333 %100,0 189.328 15.302.446 %100,0",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 207.206; dağıtım yapılan 189.328",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "207.206",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "207.206",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "207.206 talep eden kişi sayısı; dağıtım yapılan kişi sayısı 189.328 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "189008",
+        "domestic_institutional": "243",
+        "employees": "77"
+      },
+      "source_id": "KAP_893966_EK1",
+      "source_document": "KAP 893966 ek 1",
+      "source_published_at": "2020-12-21T08:41:10+03:00",
+      "source_sha256": "242ee43868b79a40bc067d21d1a43b89fda295e4e93be13775699fdcf667dfdd",
+      "source_path": "registry/oot/source_docs/ARZUM/KAP_893966_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 9.846.791 %74,0 206.886 581.237.826 87,8% 189.008 10.834.809 70,8%",
+        "Yurt İçi Kurumsal 3.326.619 %25,0 243 80.804.373 12,2% 243 4.314.637 28,2%",
+        "Şirket Çalışanları 133.065 %1,0 77 225.134 0,0% 77 153.000 1,0%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 206.886, kurumsal 243, çalışan 77",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "206.886",
+        "Yurt İçi Kurumsal": "243",
+        "Şirket Çalışanları": "77"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '206.886', 'Yurt İçi Kurumsal': '243', 'Şirket Çalışanları': '77'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex talep eden sayılarını almış; dağıtım yapılan: bireysel 189.008, kurumsal 243, çalışan 77"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "53.6",
+      "source_id": "KAP_893966_EK1",
+      "source_document": "KAP 893966 ek 1",
+      "source_published_at": "2020-12-21T08:41:10+03:00",
+      "source_sha256": "242ee43868b79a40bc067d21d1a43b89fda295e4e93be13775699fdcf667dfdd",
+      "source_path": "registry/oot/source_docs/ARZUM/KAP_893966_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara ayrılan tahsisat tutarının 53,6 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "53,6",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "18.7",
+      "source_id": "KAP_893966_EK1",
+      "source_document": "KAP 893966 ek 1",
+      "source_published_at": "2020-12-21T08:41:10+03:00",
+      "source_sha256": "242ee43868b79a40bc067d21d1a43b89fda295e4e93be13775699fdcf667dfdd",
+      "source_path": "registry/oot/source_docs/ARZUM/KAP_893966_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara ayrılan tahsisat tutarının 18,7 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "18,7",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok (tabloda yalnız yurt içi bireysel, yurt içi kurumsal, şirket çalışanları)",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "10834809",
+        "domestic_institutional": "4314637",
+        "employees": "153000"
+      },
+      "source_id": "KAP_893966_EK1",
+      "source_document": "KAP 893966 ek 1",
+      "source_published_at": "2020-12-21T08:41:10+03:00",
+      "source_sha256": "242ee43868b79a40bc067d21d1a43b89fda295e4e93be13775699fdcf667dfdd",
+      "source_path": "registry/oot/source_docs/ARZUM/KAP_893966_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 9.846.791 %74,0 206.886 581.237.826 87,8% 189.008 10.834.809 70,8%",
+        "Yurt İçi Kurumsal 3.326.619 %25,0 243 80.804.373 12,2% 243 4.314.637 28,2%",
+        "Şirket Çalışanları 133.065 %1,0 77 225.134 0,0% 77 153.000 1,0%"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "10.834.809",
+        "Yurt İçi Kurumsal": "4.314.637",
+        "Şirket Çalışanları": "153.000"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '10.834.809', 'Yurt İçi Kurumsal': '4.314.637', 'Şirket Çalışanları': '153.000'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "70.8",
+      "source_id": "KAP_893966_EK1",
+      "source_document": "KAP 893966 ek 1",
+      "source_published_at": "2020-12-21T08:41:10+03:00",
+      "source_sha256": "242ee43868b79a40bc067d21d1a43b89fda295e4e93be13775699fdcf667dfdd",
+      "source_path": "registry/oot/source_docs/ARZUM/KAP_893966_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 9.846.791 %74,0 206.886 581.237.826 87,8% 189.008 10.834.809 70,8%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %74,0",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "70,8",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "28.2",
+      "source_id": "KAP_893966_EK1",
+      "source_document": "KAP 893966 ek 1",
+      "source_published_at": "2020-12-21T08:41:10+03:00",
+      "source_sha256": "242ee43868b79a40bc067d21d1a43b89fda295e4e93be13775699fdcf667dfdd",
+      "source_path": "registry/oot/source_docs/ARZUM/KAP_893966_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 3.326.619 %25,0 243 80.804.373 12,2% 243 4.314.637 28,2%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %25,0",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "28,2",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD penceresi dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Yapı Kredi Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_892908_EK1",
+      "source_document": "KAP 892908 ek 1",
+      "source_published_at": "2020-12-11T23:47:38+03:00",
+      "source_sha256": "3c1fb33a23b1208c4891539a7613a8f28d0d459b044b723a8078d7346890f0d3",
+      "source_path": "registry/oot/source_docs/ARZUM/KAP_892908_ek1.pdf",
+      "quote": "aracık edecek Yapı Kredi Yatırm Menkul Değerler A.Ş.'nin",
+      "note": "TSSD OCR metni ('aracık', 'Yatırm' OCR hatası); sonuç bildirimini yayımlayan kurum da YAPI KREDİ YATIRIM MENKUL DEĞERLER A.Ş.",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": "YAPI KREDİ YATIRIM MENKUL DEĞERLER A.Ş.",
+      "codex_check": {
+        "codex_value": "YAPI KREDİ YATIRIM MENKUL DEĞERLER A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "yazım farkı"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_894223",
+      "source_document": "KAP 894223",
+      "source_published_at": "2020-12-22T15:45:01+03:00",
+      "source_sha256": "f09607b03a8bb7a9b41332378db9156c6a587b3410d88ea1fde2fdd6a3a9e755",
+      "source_path": "registry/oot/source_docs/ARZUM/KAP_894223_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_894223",
+      "source_document": "KAP 894223",
+      "source_published_at": "2020-12-22T15:45:01+03:00",
+      "source_sha256": "f09607b03a8bb7a9b41332378db9156c6a587b3410d88ea1fde2fdd6a3a9e755",
+      "source_path": "registry/oot/source_docs/ARZUM/KAP_894223_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_894223": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 894223",
+      "published_at": "2020-12-22T15:45:01+03:00",
+      "sha256": "f09607b03a8bb7a9b41332378db9156c6a587b3410d88ea1fde2fdd6a3a9e755",
+      "path": "registry/oot/source_docs/ARZUM/KAP_894223_bildirim.pdf"
+    },
+    "KAP_893966_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 893966 ek 1",
+      "published_at": "2020-12-21T08:41:10+03:00",
+      "sha256": "242ee43868b79a40bc067d21d1a43b89fda295e4e93be13775699fdcf667dfdd",
+      "path": "registry/oot/source_docs/ARZUM/KAP_893966_ek1.pdf"
+    },
+    "KAP_892908_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 892908 ek 1",
+      "published_at": "2020-12-11T23:47:38+03:00",
+      "sha256": "3c1fb33a23b1208c4891539a7613a8f28d0d459b044b723a8078d7346890f0d3",
+      "path": "registry/oot/source_docs/ARZUM/KAP_892908_ek1.pdf"
+    }
+  }
+}

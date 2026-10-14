@@ -1,0 +1,62 @@
+### m_j_ipos_row_deleted :: tests/test_registry_ipos.py tests/test_scoring.py::test_7_denominator
+.F.F.F                                                                   [100%]
+=================================== FAILURES ===================================
+__________________ test_known_seven_present_and_match_inputs ___________________
+
+ipos = (['ticker', 'company', 'first_trading_date', 'listing_source_id', 'status', 'skip_reason', ...], [{'ticker': 'CITAS', ...ayrimenkul Yatırım Ortaklığı A.Ş.', 'first_trading_date': '2026-09-02', 'listing_source_id': 'KAP_1655891', ...}, ...])
+
+    def test_known_seven_present_and_match_inputs(ipos):
+        _, rows = ipos
+        ipo_rows = {r["ticker"]: r for r in rows if r["status"] in reg.IPO_STATUSES}
+>       assert set(reg.KNOWN_TICKERS) <= set(ipo_rows)
+E       AssertionError: assert {'BKRGY', 'CI... 'TKNKA', ...} <= {'BKRGY', 'CI...NKA', 'VEYAS'}
+E         
+E         Extra items in the left set:
+E         'NETGL'
+
+tests/test_registry_ipos.py:31: AssertionError
+___________ test_completeness_against_official_trading_start_notices ___________
+
+ipos = (['ticker', 'company', 'first_trading_date', 'listing_source_id', 'status', 'skip_reason', ...], [{'ticker': 'CITAS', ...ayrimenkul Yatırım Ortaklığı A.Ş.', 'first_trading_date': '2026-09-02', 'listing_source_id': 'KAP_1655891', ...}, ...])
+
+    def test_completeness_against_official_trading_start_notices(ipos):
+        """Tamlık denetimi (§4): dönemin resmi 'Payların İşlem Görmeye Başlaması' bildirimlerinin her biri
+        (ilk işlemi kapsamda olan) bir arz satırına karşılık gelir; eksik = hata."""
+        _, rows = ipos
+        by_source = {r["listing_source_id"]: r for r in rows}
+        in_scope = []
+        for n in ENUM["paylarin_islem_gormeye_baslamasi"]:
+            row = by_source.get(f"KAP_{n['kap_id']}")
+            if row is None:
+                # kapsam dışı tek istisna: ilk işlemi 2026-08-07'den önce olan H99 üyesi
+>               assert n["related_stocks"] == "QUICK", n
+E               AssertionError: {'kap_id': 1663155, 'published_at': '2026-09-15T18:10:17+03:00', 'related_stocks': 'NETGL'}
+E               assert 'NETGL' == 'QUICK'
+E                 
+E                 - QUICK
+E                 + NETGL
+
+tests/test_registry_ipos.py:57: AssertionError
+______________________________ test_7_denominator ______________________________
+
+scores = {'schema_version': 'borsai.scores/1', 'generated_at_utc': '2026-10-11T23:26:25Z', 'as_of_session': '2026-09-30', 'code...borsai_source_sha256': '3dcef9955cf82cd02be96f1fc1209ed6413ffa79d92e18f96ed765c4cab1fb30', 'borsai_dirty': False}, ...}
+
+    def test_7_denominator(scores):
+        header, rows = reg.read_ipos()
+        assert reg.validate_ipos(header, rows) == []
+        for r in rows:
+            if r["status"] != "FROZEN":
+                assert reg.valid_skip_reason(r["skip_reason"])
+>       assert set(reg.KNOWN_TICKERS) <= {r["ticker"] for r in rows}
+E       AssertionError: assert {'BKRGY', 'CI... 'TKNKA', ...} <= {'AKMEN', 'AL... 'CITAS', ...}
+E         
+E         Extra items in the left set:
+E         'NETGL'
+
+tests/test_scoring.py:208: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_registry_ipos.py::test_known_seven_present_and_match_inputs
+FAILED tests/test_registry_ipos.py::test_completeness_against_official_trading_start_notices
+FAILED tests/test_scoring.py::test_7_denominator - AssertionError: assert {'B...
+3 failed, 3 passed in 10.73s
+exit=1

@@ -1,0 +1,323 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "YYLGD",
+  "company": "Yayla Agro Gıda Sanayi ve Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1030618",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "12.5",
+      "source_id": "KAP_1030618",
+      "source_document": "KAP 1030618",
+      "source_published_at": "2022-05-16T18:04:17+03:00",
+      "source_sha256": "982ec9a3667d5a02826ad062af227f1f9dc6ccb63b9a791d6aa1985e860fe7e4",
+      "source_path": "registry/oot/source_docs/YYLGD/KAP_1030618_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 12,5",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2022_19",
+          "quote": "Yayla Agro Gıda 28.400.000 12,50 430.000.000 472.600.000 42.600.000 - - Sanayi ve Ticaret A.Ş. (1) (2)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "71000000",
+      "source_id": "KAP_1030618",
+      "source_document": "KAP 1030618",
+      "source_published_at": "2022-05-16T18:04:17+03:00",
+      "source_sha256": "982ec9a3667d5a02826ad062af227f1f9dc6ccb63b9a791d6aa1985e860fe7e4",
+      "source_path": "registry/oot/source_docs/YYLGD/KAP_1030618_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 71.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "472600000",
+      "source_id": "KAP_1030618",
+      "source_document": "KAP 1030618",
+      "source_published_at": "2022-05-16T18:04:17+03:00",
+      "source_sha256": "982ec9a3667d5a02826ad062af227f1f9dc6ccb63b9a791d6aa1985e860fe7e4",
+      "source_path": "registry/oot/source_docs/YYLGD/KAP_1030618_bildirim.pdf",
+      "quote": "sermayesini temsil eden 472.600.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "42600000",
+      "source_id": "KAP_1030504_EK1",
+      "source_document": "KAP 1030504 ek 1",
+      "source_published_at": "2022-05-16T12:00:07+03:00",
+      "source_sha256": "3d9c76105a24e405141c6dde04a886e0a5186f05ace766610d52a0fdecc7b4d7",
+      "source_path": "registry/oot/source_docs/YYLGD/KAP_1030504_ek1.pdf",
+      "quote": "sermaye artışı yoluyla halka arz edilen 42.600.000 TL",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "28400000",
+      "source_id": "KAP_1030504_EK1",
+      "source_document": "KAP 1030504 ek 1",
+      "source_published_at": "2022-05-16T12:00:07+03:00",
+      "source_sha256": "3d9c76105a24e405141c6dde04a886e0a5186f05ace766610d52a0fdecc7b4d7",
+      "source_path": "registry/oot/source_docs/YYLGD/KAP_1030504_ek1.pdf",
+      "quote": "ortak satışı yoluyla halka arz edilen 28.400.000 TL olmak üzere toplam 71.000.000 TL nominal değerli payların tamamı satılmıştır",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "2.64",
+      "source_id": "KAP_1030504_EK1",
+      "source_document": "KAP 1030504 ek 1",
+      "source_published_at": "2022-05-16T12:00:07+03:00",
+      "source_sha256": "3d9c76105a24e405141c6dde04a886e0a5186f05ace766610d52a0fdecc7b4d7",
+      "source_path": "registry/oot/source_docs/YYLGD/KAP_1030504_ek1.pdf",
+      "quote": "halka arz edilen 71.000.000 TL nominal değerli payların 2,64 katına denk gelen 187.667.736 TL nominal değerli filtrelenmemiş pay talebi gelmiştir",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (halka arz edilen 71.000.000 TL nominal paya göre; filtrelenmemiş)",
+      "denominator_includes_additional_sale": false,
+      "note": "planlanan ek satış yok (SPK '-'); iki sürüm (KAP_1030460_EK2, KAP_1030504_EK1) aynı metin; ikincisi yalnız ilgili şirket eklemesi",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_1030504_EK1",
+      "source_document": "KAP 1030504 ek 1",
+      "source_published_at": "2022-05-16T12:00:07+03:00",
+      "source_sha256": "3d9c76105a24e405141c6dde04a886e0a5186f05ace766610d52a0fdecc7b4d7",
+      "source_path": "registry/oot/source_docs/YYLGD/KAP_1030504_ek1.pdf",
+      "quote": "187.667.736 TL nominal değerli filtrelenmemiş pay talebi gelmiştir",
+      "locator": "belgede filtrelenmiş toplam verilmiyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1030504_EK1",
+      "source_document": "KAP 1030504 ek 1",
+      "source_published_at": "2022-05-16T12:00:07+03:00",
+      "source_sha256": "3d9c76105a24e405141c6dde04a886e0a5186f05ace766610d52a0fdecc7b4d7",
+      "source_path": "registry/oot/source_docs/YYLGD/KAP_1030504_ek1.pdf",
+      "quote": "olmak üzere toplam 71.000.000 TL nominal değerli payların tamamı satılmıştır",
+      "zero_from_statement": true,
+      "note": "SPK satırında ek satış '-'; satılan toplam 71.000.000 = planlanan taban (42.600.000 bedelli + 28.400.000 mevcut pay satışı)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_size_tl": {
+      "value": null,
+      "missing_reason": "sonuç ekleri gerçekleşen arzın TL tutarını yazmıyor (yalnız fiyat 12,50 ve nominal 71.000.000); hesaplanmadı",
+      "provenance": "MISSING"
+    },
+    "ipo_price_try": {
+      "value": "12.50",
+      "source_id": "SPK_BULTEN_2022_19",
+      "source_document": "SPK Bülteni 2022/19",
+      "source_published_at": "2022-04-22T23:59:59+03:00",
+      "source_sha256": "92f01403223d8ec4e6d87e4f1b5ff54820ec43892122493ea860f3ae621b3684",
+      "source_path": "registry/oot/source_docs/YYLGD/SPK_BULTEN_2022-19.pdf",
+      "quote": "Yayla Agro Gıda 28.400.000 12,50 430.000.000 472.600.000 42.600.000 - - Sanayi ve Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2022-04-22",
+        "bookbuilding_start": "2022-05-11",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "430000000",
+      "source_id": "SPK_BULTEN_2022_19",
+      "source_document": "SPK Bülteni 2022/19",
+      "source_published_at": "2022-04-22T23:59:59+03:00",
+      "source_sha256": "92f01403223d8ec4e6d87e4f1b5ff54820ec43892122493ea860f3ae621b3684",
+      "source_path": "registry/oot/source_docs/YYLGD/SPK_BULTEN_2022-19.pdf",
+      "quote": "Yayla Agro Gıda 28.400.000 12,50 430.000.000 472.600.000 42.600.000 - - Sanayi ve Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-22",
+        "bookbuilding_start": "2022-05-11",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "472600000",
+      "source_id": "SPK_BULTEN_2022_19",
+      "source_document": "SPK Bülteni 2022/19",
+      "source_published_at": "2022-04-22T23:59:59+03:00",
+      "source_sha256": "92f01403223d8ec4e6d87e4f1b5ff54820ec43892122493ea860f3ae621b3684",
+      "source_path": "registry/oot/source_docs/YYLGD/SPK_BULTEN_2022-19.pdf",
+      "quote": "Yayla Agro Gıda 28.400.000 12,50 430.000.000 472.600.000 42.600.000 - - Sanayi ve Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-22",
+        "bookbuilding_start": "2022-05-11",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "42600000",
+      "source_id": "SPK_BULTEN_2022_19",
+      "source_document": "SPK Bülteni 2022/19",
+      "source_published_at": "2022-04-22T23:59:59+03:00",
+      "source_sha256": "92f01403223d8ec4e6d87e4f1b5ff54820ec43892122493ea860f3ae621b3684",
+      "source_path": "registry/oot/source_docs/YYLGD/SPK_BULTEN_2022-19.pdf",
+      "quote": "Yayla Agro Gıda 28.400.000 12,50 430.000.000 472.600.000 42.600.000 - - Sanayi ve Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-22",
+        "bookbuilding_start": "2022-05-11",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "28400000",
+      "source_id": "SPK_BULTEN_2022_19",
+      "source_document": "SPK Bülteni 2022/19",
+      "source_published_at": "2022-04-22T23:59:59+03:00",
+      "source_sha256": "92f01403223d8ec4e6d87e4f1b5ff54820ec43892122493ea860f3ae621b3684",
+      "source_path": "registry/oot/source_docs/YYLGD/SPK_BULTEN_2022-19.pdf",
+      "quote": "Yayla Agro Gıda 28.400.000 12,50 430.000.000 472.600.000 42.600.000 - - Sanayi ve Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-22",
+        "bookbuilding_start": "2022-05-11",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "71000000",
+      "source_id": "SPK_BULTEN_2022_19",
+      "source_document": "SPK Bülteni 2022/19",
+      "source_published_at": "2022-04-22T23:59:59+03:00",
+      "source_sha256": "92f01403223d8ec4e6d87e4f1b5ff54820ec43892122493ea860f3ae621b3684",
+      "source_path": "registry/oot/source_docs/YYLGD/SPK_BULTEN_2022-19.pdf",
+      "quote": "Yayla Agro Gıda 28.400.000 12,50 430.000.000 472.600.000 42.600.000 - - Sanayi ve Ticaret A.Ş. (1) (2)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-22",
+        "bookbuilding_start": "2022-05-11",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2022_19",
+      "source_document": "SPK Bülteni 2022/19",
+      "source_published_at": "2022-04-22T23:59:59+03:00",
+      "source_sha256": "92f01403223d8ec4e6d87e4f1b5ff54820ec43892122493ea860f3ae621b3684",
+      "source_path": "registry/oot/source_docs/YYLGD/SPK_BULTEN_2022-19.pdf",
+      "quote": "Yayla Agro Gıda 28.400.000 12,50 430.000.000 472.600.000 42.600.000 - - Sanayi ve Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-22",
+        "bookbuilding_start": "2022-05-11",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "71000000",
+      "source_id": "SPK_BULTEN_2022_19",
+      "source_document": "SPK Bülteni 2022/19",
+      "source_published_at": "2022-04-22T23:59:59+03:00",
+      "source_sha256": "92f01403223d8ec4e6d87e4f1b5ff54820ec43892122493ea860f3ae621b3684",
+      "source_path": "registry/oot/source_docs/YYLGD/SPK_BULTEN_2022-19.pdf",
+      "quote": "Yayla Agro Gıda 28.400.000 12,50 430.000.000 472.600.000 42.600.000 - - Sanayi ve Ticaret A.Ş. (1) (2)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-04-22",
+        "bookbuilding_start": "2022-05-11",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2022-05-20",
+      "source_id": "KAP_1030618",
+      "source_document": "KAP 1030618",
+      "source_published_at": "2022-05-16T18:04:17+03:00",
+      "source_sha256": "982ec9a3667d5a02826ad062af227f1f9dc6ccb63b9a791d6aa1985e860fe7e4",
+      "source_path": "registry/oot/source_docs/YYLGD/KAP_1030618_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 20/05/2022",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2022-05-11",
+      "source_id": "KAP_1030618",
+      "source_document": "KAP 1030618",
+      "source_published_at": "2022-05-16T18:04:17+03:00",
+      "source_sha256": "982ec9a3667d5a02826ad062af227f1f9dc6ccb63b9a791d6aa1985e860fe7e4",
+      "source_path": "registry/oot/source_docs/YYLGD/KAP_1030618_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 11-12-13/05/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2022-05-13",
+      "source_id": "KAP_1030618",
+      "source_document": "KAP 1030618",
+      "source_published_at": "2022-05-16T18:04:17+03:00",
+      "source_sha256": "982ec9a3667d5a02826ad062af227f1f9dc6ccb63b9a791d6aa1985e860fe7e4",
+      "source_path": "registry/oot/source_docs/YYLGD/KAP_1030618_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 11-12-13/05/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1030618": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1030618",
+      "published_at": "2022-05-16T18:04:17+03:00",
+      "sha256": "982ec9a3667d5a02826ad062af227f1f9dc6ccb63b9a791d6aa1985e860fe7e4",
+      "path": "registry/oot/source_docs/YYLGD/KAP_1030618_bildirim.pdf"
+    },
+    "SPK_BULTEN_2022_19": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2022/19",
+      "published_at": "2022-04-22T23:59:59+03:00",
+      "sha256": "92f01403223d8ec4e6d87e4f1b5ff54820ec43892122493ea860f3ae621b3684",
+      "path": "registry/oot/source_docs/YYLGD/SPK_BULTEN_2022-19.pdf"
+    },
+    "KAP_1030504_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1030504 ek 1",
+      "published_at": "2022-05-16T12:00:07+03:00",
+      "sha256": "3d9c76105a24e405141c6dde04a886e0a5186f05ace766610d52a0fdecc7b4d7",
+      "path": "registry/oot/source_docs/YYLGD/KAP_1030504_ek1.pdf"
+    }
+  }
+}

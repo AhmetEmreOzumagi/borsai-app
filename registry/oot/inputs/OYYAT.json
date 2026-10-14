@@ -1,0 +1,321 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "OYYAT",
+  "company": "Oyak Yatırım Menkul Değerler A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_941172",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "18.65",
+      "source_id": "KAP_941172",
+      "source_document": "KAP 941172",
+      "source_published_at": "2021-06-08T18:03:02+03:00",
+      "source_sha256": "f33e89c48d3a194112f51ceba214825524411e99f104a1897f1004170e06dd7b",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_941172_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 18,65",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_26",
+          "quote": "Oyak Yatırım Menkul 22.530.000 4.700.000 88.330.000 94.000.000 5.670.000 - 18,65 Değerler A.Ş. (3) (4)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "28200000",
+      "source_id": "KAP_941172",
+      "source_document": "KAP 941172",
+      "source_published_at": "2021-06-08T18:03:02+03:00",
+      "source_sha256": "f33e89c48d3a194112f51ceba214825524411e99f104a1897f1004170e06dd7b",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_941172_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 28.200.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "94000000",
+      "source_id": "KAP_941172",
+      "source_document": "KAP 941172",
+      "source_published_at": "2021-06-08T18:03:02+03:00",
+      "source_sha256": "f33e89c48d3a194112f51ceba214825524411e99f104a1897f1004170e06dd7b",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_941172_bildirim.pdf",
+      "quote": "sermayesini temsil eden 94.000.000 TL",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "capital_increase_shares": {
+      "value": "5670000",
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "quote": "artırılacak 5.670.000 TL nominal değerli pay",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "existing_share_sale_shares": {
+      "value": "22530000",
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "quote": "Ordu Yardımlaşma Kurumu’nun sahip olduğu 22.530.000 TL nominal değerli pay",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "total_demand_multiple": {
+      "value": "2.1",
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "quote": "Halka arzda toplam 50.834 yatırımcıdan halka arz edilen 28.200.000 TL nominal değerli payların 2,1 katına denk gelen 58.031.418 TL nominal değerli dağıtıma konu pay talebi gelmiştir.",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (halka arz edilen 28.200.000 TL nominal paya göre)",
+      "denominator_includes_additional_sale": false,
+      "note": "belge katı açıkça yazıyor; aynı belgedeki toplamlarla 58.031.418 / 28.200.000 = 2.0578517021 (belge bir ondalığa yuvarlamış). Ek satış kullanılmadı, payda = nihai gerçekleşen arz",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "locator": "belgede 'filtre' ifadesi yok; talep 'dağıtıma konu pay talebi' olarak adlandırılmış",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "quote": "Halka arz kapsamında ek satış hakkı kullanılmamıştır.",
+      "zero_from_statement": true,
+      "note": "belge ek satışın kullanılmadığını açıkça yazıyor; satılan toplam 28.200.000 = SPK planlanan taban (5.670.000 + 22.530.000); planlanan 4.700.000 ek satış kullanılmamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "ipo_size_tl": {
+      "value": "525930000",
+      "source_id": "KAP_940320_EK2",
+      "source_document": "KAP 940320 ek 2",
+      "source_published_at": "2021-06-06T21:09:25+03:00",
+      "source_sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf",
+      "quote": "halka arz büyüklüğü 525.930.000 TL olarak gerçekleşmiştir",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_price_try": {
+      "value": "18.65",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/OYYAT/SPK_BULTEN_2021-26.pdf",
+      "quote": "Oyak Yatırım Menkul 22.530.000 4.700.000 88.330.000 94.000.000 5.670.000 - 18,65 Değerler A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-06-02",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "88330000",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/OYYAT/SPK_BULTEN_2021-26.pdf",
+      "quote": "Oyak Yatırım Menkul 22.530.000 4.700.000 88.330.000 94.000.000 5.670.000 - 18,65 Değerler A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-06-02",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "94000000",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/OYYAT/SPK_BULTEN_2021-26.pdf",
+      "quote": "Oyak Yatırım Menkul 22.530.000 4.700.000 88.330.000 94.000.000 5.670.000 - 18,65 Değerler A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-06-02",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "5670000",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/OYYAT/SPK_BULTEN_2021-26.pdf",
+      "quote": "Oyak Yatırım Menkul 22.530.000 4.700.000 88.330.000 94.000.000 5.670.000 - 18,65 Değerler A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-06-02",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "22530000",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/OYYAT/SPK_BULTEN_2021-26.pdf",
+      "quote": "Oyak Yatırım Menkul 22.530.000 4.700.000 88.330.000 94.000.000 5.670.000 - 18,65 Değerler A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-06-02",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "28200000",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/OYYAT/SPK_BULTEN_2021-26.pdf",
+      "quote": "Oyak Yatırım Menkul 22.530.000 4.700.000 88.330.000 94.000.000 5.670.000 - 18,65 Değerler A.Ş. (3) (4)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-06-02",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "4700000",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/OYYAT/SPK_BULTEN_2021-26.pdf",
+      "quote": "Oyak Yatırım Menkul 22.530.000 4.700.000 88.330.000 94.000.000 5.670.000 - 18,65 Değerler A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-06-02",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "32900000",
+      "source_id": "SPK_BULTEN_2021_26",
+      "source_document": "SPK Bülteni 2021/26",
+      "source_published_at": "2021-05-27T23:59:59+03:00",
+      "source_sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "source_path": "registry/oot/source_docs/OYYAT/SPK_BULTEN_2021-26.pdf",
+      "quote": "Oyak Yatırım Menkul 22.530.000 4.700.000 88.330.000 94.000.000 5.670.000 - 18,65 Değerler A.Ş. (3) (4)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-05-27",
+        "bookbuilding_start": "2021-06-02",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2021-06-10",
+      "source_id": "KAP_941172",
+      "source_document": "KAP 941172",
+      "source_published_at": "2021-06-08T18:03:02+03:00",
+      "source_sha256": "f33e89c48d3a194112f51ceba214825524411e99f104a1897f1004170e06dd7b",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_941172_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 10/06/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-06-02",
+      "source_id": "KAP_941172",
+      "source_document": "KAP 941172",
+      "source_published_at": "2021-06-08T18:03:02+03:00",
+      "source_sha256": "f33e89c48d3a194112f51ceba214825524411e99f104a1897f1004170e06dd7b",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_941172_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 02-04/06/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-06-04",
+      "source_id": "KAP_941172",
+      "source_document": "KAP 941172",
+      "source_published_at": "2021-06-08T18:03:02+03:00",
+      "source_sha256": "f33e89c48d3a194112f51ceba214825524411e99f104a1897f1004170e06dd7b",
+      "source_path": "registry/oot/source_docs/OYYAT/KAP_941172_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 02-04/06/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_941172": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 941172",
+      "published_at": "2021-06-08T18:03:02+03:00",
+      "sha256": "f33e89c48d3a194112f51ceba214825524411e99f104a1897f1004170e06dd7b",
+      "path": "registry/oot/source_docs/OYYAT/KAP_941172_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_26": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/26",
+      "published_at": "2021-05-27T23:59:59+03:00",
+      "sha256": "b388a527a7866848e20c4ce0b9d175692e8deafcad8dae6885d377a103e41ec1",
+      "path": "registry/oot/source_docs/OYYAT/SPK_BULTEN_2021-26.pdf"
+    },
+    "KAP_940320_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 940320 ek 2",
+      "published_at": "2021-06-06T21:09:25+03:00",
+      "sha256": "bf2a9130a673527a46361531d6df7ebf541689f4d6626610e6779dbffe4beba4",
+      "path": "registry/oot/source_docs/OYYAT/KAP_940320_ek2.pdf"
+    }
+  }
+}

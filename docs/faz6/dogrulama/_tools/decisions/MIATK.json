@@ -1,0 +1,220 @@
+{
+ "ticker": "MIATK",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_978449",
+  "KAP_978449_EK1",
+  "KAP_978451",
+  "KAP_977369_EK1",
+  "KAP_978546"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "2.54",
+   "origin": "SOURCE_REPORTED",
+   "source_id": "KAP_978449_EK1",
+   "quote": "Borsa İstanbul tarafından paylaşılan verilere göre filtre edilmiş talepler sonucunda halka arz büyüklüğünün toplamda 2,54 katına denk gelen 502.687.317 TL karşılığı, 31.815.653 TL nominal değerli talep gelmiştir.",
+   "definition": "belgedeki toplam kat (filtre edilmiş talep; 12.500.000 TL nominal arza göre)",
+   "denominator_includes_additional_sale": false,
+   "note": "belge yalnız filtre edilmiş talebi veriyor (filtrelenmemiş toplam yok); ek satış planlanmamış; 31.815.653 / 12.500.000 = 2,5453"
+  },
+  "total_demand_filter_status": {
+   "value": "FILTERED",
+   "source_id": "KAP_978449_EK1",
+   "quote": "filtre edilmiş talepler sonucunda halka arz büyüklüğünün toplamda 2,54 katına denk gelen"
+  },
+  "ipo_size_tl": {
+   "value": "197500000",
+   "source_id": "KAP_978449_EK1",
+   "quote": "belirlenen halka arz fiyatı ile halka arz büyüklüğü 197.500.000 TL olarak gerçekleşmiştir"
+  },
+  "capital_increase_shares": {
+   "value": "8000000",
+   "source_id": "KAP_978449_EK1",
+   "quote": "Şirket’in çıkarılmış sermayesinin 30.000.000 TL’den 38.000.000 TL’ye artırılması nedeniyle ihraç edilen 8.000.000 TL nominal değerli paylar"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "belgede tek sayı olarak yazılı değil; türetme (mevcut ortaklar 1.530.000 + 1.485.000 + 1.485.000 = 4.500.000 (= toplam 12.500.000 − sermaye artırımı 8.000.000)) görev kuralı gereği kullanılmadı",
+   "derived_candidate": {
+    "value": "4500000",
+    "source_id": "KAP_978449_EK1",
+    "quote": "mevcut ortaklardan Ali Gökhan BELTEKİN’in sahip olduğu 1.530.000 TL, İhsan ÜNAL’ın sahip olduğu 1.485.000 TL ve Mehmet Cengiz BAĞMANCI’nın sahip olduğu 1.485.000 TL olmak üzere toplam 12.500.000 TL nominal değerli paylar halka arz edilmiştir",
+    "formula": "mevcut ortaklar 1.530.000 + 1.485.000 + 1.485.000 = 4.500.000 (= toplam 12.500.000 − sermaye artırımı 8.000.000)"
+   }
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_978449_EK1",
+   "zero_from_statement": true,
+   "quote": "Toplam: 196,813 12,500,000 197,500,000.00",
+   "note": "SPK satırında ek satış '-'; dağıtılan toplam 12.500.000 = planlanan taban (bedelli 8.000.000 + mevcut pay satışı 4.500.000)"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_978449_EK1",
+   "quote": "Halka arza toplamda 196.813 yatırımcı katılmış olup tamamına dağıtım yapılmıştır.",
+   "note": "dağıtım tablosu toplamı 12.500.000 nominal"
+  },
+  "additional_sale_usage_statement": null,
+  "investor_count": {
+   "value": "196813",
+   "source_id": "KAP_978449_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "Halka arza toplamda 196.813 yatırımcı katılmış olup tamamına dağıtım yapılmıştır."
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "196391",
+    "domestic_institutional": "72",
+    "foreign_retail": "349",
+    "foreign_institutional": "1"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_978449_EK1",
+   "quote": [
+    "Yurtiçi Bireysel Yatırımcılar 196,391 12,472,163 197,060,175.40",
+    "Yurtiçi Kurumsal Yatırımcılar 72 4,866 76,882.80",
+    "Yurtdışı Bireysel Yatırımcılar 349 22,900 361,820.00",
+    "Yurtdışı Kurumsal 1 71 1,121.80"
+   ],
+   "note": "tablo İngilizce binlik ayırıcı kullanıyor"
+  },
+  "retail_demand_multiple": {
+   "value": null,
+   "missing_reason": "borsada satış; grup tahsisatı yok ('herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'), grup talebi yazılmıyor"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "12472163",
+    "domestic_institutional": "4866",
+    "foreign_retail": "22900",
+    "foreign_institutional": "71"
+   },
+   "source_id": "KAP_978449_EK1",
+   "quote": [
+    "Yurtiçi Bireysel Yatırımcılar 196,391 12,472,163 197,060,175.40",
+    "Yurtiçi Kurumsal Yatırımcılar 72 4,866 76,882.80",
+    "Yurtdışı Bireysel Yatırımcılar 349 22,900 361,820.00",
+    "Yurtdışı Kurumsal 1 71 1,121.80"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": null,
+   "missing_reason": "tablonun 'Oran (%)' başlıklı sütunu oran değil TL tutar içeriyor (197,060,175.40); belgede yüzde yazılmıyor. Nominalden hesap 12.472.163 / 12.500.000 = %99,7773 (yazılmadığı için alana konmadı)"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": null,
+   "missing_reason": "belgede yüzde yazılmıyor ('Oran (%)' sütunu TL tutar: 76,882.80); nominalden hesap 4.866 / 12.500.000 = %0,038928"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": null,
+   "missing_reason": "belgede yüzde yazılmıyor ('Oran (%)' sütunu TL tutar: 1,121.80); nominalden hesap 71 / 12.500.000 = %0,000568"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "belge yalnız satış yöntemini yazıyor (\"Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış\") ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor (yalnız 'yüksek talep giren yatırımcılara maksimum 72 şer adet pay dağıtılmıştır')"
+  },
+  "lead_broker": {
+   "value": "Metro Yatırım Menkul Değerler A.Ş.",
+   "source_id": "KAP_977369_EK1",
+   "quote": "satışa aracılık edecek Metro Yatırım Menkul Değerler A.Ş.'nin",
+   "note": "sonuç bildirimini de Metro Yatırım yayımlamış"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {
+  "total_demand_multiple": {
+   "codex_value": "2,54",
+   "verdict": "FOUND_SAME",
+   "note": "belgede açık, filtre edilmiş"
+  },
+  "capital_increase_shares": {
+   "codex_value": "8.000.000",
+   "verdict": "FOUND_SAME",
+   "note": "sonuç ekinde açık"
+  },
+  "existing_share_sale_shares": {
+   "codex_value": "4.500.000",
+   "verdict": "FOUND_SAME",
+   "note": "sonuç ekinde üç ortak ayrı ayrı (1.530.000 + 1.485.000 + 1.485.000); toplam türetildi"
+  },
+  "additional_sale_shares": {
+   "codex_value": "0",
+   "verdict": "FOUND_SAME",
+   "note": "ek satış planlanmamış; dağıtılan toplam = taban"
+  },
+  "ipo_size_tl": {
+   "codex_value": "197.500.000",
+   "verdict": "FOUND_SAME"
+  },
+  "investor_count": {
+   "codex_value": "196.813",
+   "verdict": "FOUND_SAME"
+  },
+  "investor_count_by_group": {
+   "codex_value": "{'Yurtiçi Bireysel': '196.391', 'Yurtiçi Kurumsal': '72', 'Yurtdışı Bireysel': '349', 'Yurtdışı Kurumsal': '1'}",
+   "verdict": "FOUND_SAME"
+  },
+  "distributed_by_group": {
+   "codex_value": "{'Yurtiçi Bireysel': '12.472.163', 'Yurtiçi Kurumsal': '4.866', 'Yurtdışı Bireysel': '22.900', 'Yurtdışı Kurumsal': '71'}",
+   "verdict": "FOUND_SAME"
+  },
+  "retail_allocation_pct": {
+   "codex_value": "99,7773",
+   "verdict": "NOT_FOUND_IN_DOCS",
+   "note": "belgede yüzde yazılmıyor; Codex nominalden hesaplamış (12.472.163 / 12.500.000); alan null"
+  },
+  "domestic_institutional_allocation_pct": {
+   "codex_value": "0,038928",
+   "verdict": "NOT_FOUND_IN_DOCS",
+   "note": "belgede yüzde yazılmıyor; Codex nominalden hesaplamış; alan null"
+  },
+  "foreign_institutional_allocation_pct": {
+   "codex_value": "0,000568",
+   "verdict": "NOT_FOUND_IN_DOCS",
+   "note": "belgede yüzde yazılmıyor; Codex nominalden hesaplamış; alan null"
+  },
+  "distribution_method": {
+   "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+  },
+  "lead_broker": {
+   "codex_value": "Metro Yatırım Menkul Değerler A.Ş.",
+   "verdict": "FOUND_SAME"
+  }
+ },
+ "notes": "Borsa Birincil Piyasa sabit fiyatla talep toplama; sonuç belgesi toplam katı (2,54) açıkça ve filtre edilmiş talep olarak yazıyor. Sermaye artırımı 8.000.000 + ortak satışı 4.500.000 (üç ortak ayrı ayrı yazılı); ek satış yok. Dağıtım tablosunda 'Oran (%)' sütunu aslında TL tutar. | Doğrulayıcı son işlemi: türetilmiş ayrım alanları boşaltıldı (postprocess.py).",
+ "needs_search": false
+}

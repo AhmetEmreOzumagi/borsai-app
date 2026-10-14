@@ -1,0 +1,222 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "ARDYZ",
+  "company": "ARD Grup Bilişim Teknolojileri A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "18055",
+      "source_id": "KAP_816932",
+      "source_document": "KAP 816932",
+      "source_published_at": "2020-02-04T11:25:10+03:00",
+      "source_sha256": "a2a75260fcbad6bb31bee69f487705f175f56dcbcde0cd3976042fd0ecd38e01",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_816932_bildirim.pdf",
+      "quote": "Toplam 7.500.000 100,00% 18.055",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talebi karşılanan başvuru sayısı; talep eden sayısı belgede yok",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "18.055",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "17962",
+        "domestic_institutional": "56",
+        "foreign_retail": "36",
+        "foreign_institutional": "1"
+      },
+      "source_id": "KAP_816932",
+      "source_document": "KAP 816932",
+      "source_published_at": "2020-02-04T11:25:10+03:00",
+      "source_sha256": "a2a75260fcbad6bb31bee69f487705f175f56dcbcde0cd3976042fd0ecd38e01",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_816932_bildirim.pdf",
+      "quote": [
+        "Yurtiçi Bireysel 7.455.117 99,40% 17.962 Yatırımcılar",
+        "Yurtiçi Kurumsal 24.020 0,32% 56 Yatırımcılar",
+        "Yabancı Bireysel 13.973 0,19% 36 Yatırımcılar",
+        "Yabancı Kurumsal 368 0,00% 1 Yatırımcılar"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "KAP_816932 grup talebi ya da kat vermiyor (borsada satış, yalnız dağıtım)",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "KAP_816932 grup talebi ya da kat vermiyor",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "KAP_816932 grup talebi ya da kat vermiyor",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "7455117",
+        "domestic_institutional": "24020",
+        "foreign_retail": "13973",
+        "foreign_institutional": "368",
+        "unregistered": "6522"
+      },
+      "source_id": "KAP_816932",
+      "source_document": "KAP 816932",
+      "source_published_at": "2020-02-04T11:25:10+03:00",
+      "source_sha256": "a2a75260fcbad6bb31bee69f487705f175f56dcbcde0cd3976042fd0ecd38e01",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_816932_bildirim.pdf",
+      "quote": [
+        "Yurtiçi Bireysel 7.455.117 99,40% 17.962 Yatırımcılar",
+        "Yurtiçi Kurumsal 24.020 0,32% 56 Yatırımcılar",
+        "Yabancı Bireysel 13.973 0,19% 36 Yatırımcılar",
+        "Yabancı Kurumsal 368 0,00% 1 Yatırımcılar",
+        "Hatalı Hesap No. 6.522 0,09% - gibi)"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.40",
+      "source_id": "KAP_816932",
+      "source_document": "KAP 816932",
+      "source_published_at": "2020-02-04T11:25:10+03:00",
+      "source_sha256": "a2a75260fcbad6bb31bee69f487705f175f56dcbcde0cd3976042fd0ecd38e01",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_816932_bildirim.pdf",
+      "quote": "Yurtiçi Bireysel 7.455.117 99,40% 17.962 Yatırımcılar",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.32",
+      "source_id": "KAP_816932",
+      "source_document": "KAP 816932",
+      "source_published_at": "2020-02-04T11:25:10+03:00",
+      "source_sha256": "a2a75260fcbad6bb31bee69f487705f175f56dcbcde0cd3976042fd0ecd38e01",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_816932_bildirim.pdf",
+      "quote": "Yurtiçi Kurumsal 24.020 0,32% 56 Yatırımcılar",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.00",
+      "source_id": "KAP_816932",
+      "source_document": "KAP 816932",
+      "source_published_at": "2020-02-04T11:25:10+03:00",
+      "source_sha256": "a2a75260fcbad6bb31bee69f487705f175f56dcbcde0cd3976042fd0ecd38e01",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_816932_bildirim.pdf",
+      "quote": "Yabancı Kurumsal 368 0,00% 1 Yatırımcılar",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "belgede 0,00% (368 TL nominal); yabancı bireysel ayrıca 0,19%",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç bildirimi, listeleme bildirimi ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa Birincil Piyasada sabit fiyatla talep toplama ve satış yöntemi",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa Birincil Piyasada sabit fiyatla talep toplama ve satış yöntemi",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "Codex alıntısı indirilmemiş bir KAP satırının başlığı; eldeki belgelerde 'sabit fiyatla talep toplama' yok; ayrıca bu satış yöntemi, dağıtım yöntemi değil"
+      }
+    },
+    "lead_broker": {
+      "value": "Metro Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_814441_EK1",
+      "source_document": "KAP 814441 ek 1",
+      "source_published_at": "2020-01-24T19:54:04+03:00",
+      "source_sha256": "fee9ac455e73431ed43c7d56ca3214d61d953cbf01b912c99033c631de4b7871",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_814441_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Metro Yatırım Menkul Değerler A.Ş.",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": "METRO YATIRIM MENKUL DEĞERLER A.Ş.",
+      "codex_check": {
+        "codex_value": "METRO YATIRIM MENKUL DEĞERLER A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "yazım farkı (büyük harf)"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_817020",
+      "source_document": "KAP 817020",
+      "source_published_at": "2020-02-04T18:07:35+03:00",
+      "source_sha256": "0c1a302ef2b0e63219766d8b6cabf453be1ce8517008486bf93fb0dade87cb0b",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_817020_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (In the Exchange)",
+      "source_id": "KAP_817020",
+      "source_document": "KAP 817020",
+      "source_published_at": "2020-02-04T18:07:35+03:00",
+      "source_sha256": "0c1a302ef2b0e63219766d8b6cabf453be1ce8517008486bf93fb0dade87cb0b",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_817020_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (In the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_817020": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 817020",
+      "published_at": "2020-02-04T18:07:35+03:00",
+      "sha256": "0c1a302ef2b0e63219766d8b6cabf453be1ce8517008486bf93fb0dade87cb0b",
+      "path": "registry/oot/source_docs/ARDYZ/KAP_817020_bildirim.pdf"
+    },
+    "KAP_816932": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 816932",
+      "published_at": "2020-02-04T11:25:10+03:00",
+      "sha256": "a2a75260fcbad6bb31bee69f487705f175f56dcbcde0cd3976042fd0ecd38e01",
+      "path": "registry/oot/source_docs/ARDYZ/KAP_816932_bildirim.pdf"
+    },
+    "KAP_814441_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 814441 ek 1",
+      "published_at": "2020-01-24T19:54:04+03:00",
+      "sha256": "fee9ac455e73431ed43c7d56ca3214d61d953cbf01b912c99033c631de4b7871",
+      "path": "registry/oot/source_docs/ARDYZ/KAP_814441_ek1.pdf"
+    }
+  }
+}

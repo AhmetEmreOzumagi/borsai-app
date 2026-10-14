@@ -1,0 +1,311 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "SNICA",
+ "company": "Sanica Isı Sanayi A.Ş.",
+ "first_trading_date": "2022-11-24",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Yurt içi bireysele oransal; kurumsala takdire bağlı dağıtım",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_1079649_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f5520184683b68140356",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1079649",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1079649",
+   "published_at": "2022-11-11T23:32:50+03:00",
+   "source_sha256": "e7787a89c958004687dc2672ded25f60b62b492f9daa3da2d9cea751bbf400e2",
+   "source_file": "source_docs/SNICA/KAP_1079649_ek1.pdf",
+   "page": 48,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Yurt İçi Bireysel Yatırımcılara Dağıtım: Oransal Dağıtım Yöntemine göre yapılacaktır.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1079649_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f5520184683b68140356",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1079649",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1079649",
+     "published_at": "2022-11-11T23:32:50+03:00",
+     "source_sha256": "e7787a89c958004687dc2672ded25f60b62b492f9daa3da2d9cea751bbf400e2",
+     "source_file": "source_docs/SNICA/KAP_1079649_ek1.pdf",
+     "page": 48,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Yurt İçi Kurumsal Yatırımcılara Dağıtım: Her bir Yurt İçi Kurumsal Yatırımcıya verilecek pay miktarına Gedik Yatırım tarafından karar verilecektir. Yurt Dışı Kurumsal Yatırımcılara Dağıtım: Her bir Yurt Dışı Kurumsal Yatırımcıya verilecek pay miktarına Gedik Yatırım tarafindan karar verilecektir."
+    },
+    {
+     "source_id": "KAP_1079646_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f552018468337cee02bb",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1079646",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1079646",
+     "published_at": "2022-11-11T23:32:01+03:00",
+     "source_sha256": "9a6b22cdbfd1bd7bba77d2d020aabdbd2923c4a9d2d1e519c79c31d85924ed8a",
+     "source_file": "source_docs/SNICA/KAP_1079646_ek1.pdf",
+     "page": 25,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "20.000.000 TL nominal değerdeki %50 oranındaki kısmı Yurt İçi Bireysel Yatırımcılar'a - 16.000.000 TL nominal değerdeki %40 oranındaki kısmı Yurt Içi Kurumsal Yatırımcılar'a - 4.000.000 TL nominal değerdeki %10 oranındaki kısmı Yurt Dışı Kurumsal Yatırımcılar'a tahsis edilmiştir."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Borsa dışı sabit fiyatla talep toplama (Gedik Yatırım liderliğinde konsorsiyum). Tahsisat: yurt içi bireysel %50, yurt içi kurumsal %40, yurt dışı kurumsal %10 (özet s.25; izahname 25.2.3.a KAP_1079650_EK1 s.21). Yurt içi bireysel: oransal (ilk aşamada herkese 1 pay, sonra arzın talebi karşılama oranı). Yurt içi ve yurt dışı kurumsal: her yatırımcıya verilecek miktara Gedik Yatırım karar verir (takdire bağlı; yetkili kuruluşun takdiri).",
+   "codex_value": "oransal dağıtım",
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_planned": {
+   "value": "TRUE",
+   "unit": "boolean",
+   "status": "VERIFIED",
+   "source_id": "KAP_1079650_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f5520184683fdbb203a3",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1079650",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1079650",
+   "published_at": "2022-11-11T23:33:06+03:00",
+   "source_sha256": "c57bd9b15b906f01b137d7370a15baabac655372e1279f765ad3d47626779a56",
+   "source_file": "source_docs/SNICA/KAP_1079650_ek1.pdf",
+   "page": 31,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: ¡PASASI ми Fiyat istikrarı işlemlerinin yapılması planlanmaktadır.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "Fiyat istikrarı işlemlerini Gedik Yatırım yapar; kaynak Şirket ve Halka Arz Edenler'in brüt halka arz gelirinin bir kısmı (s.32). Garanti yok (26.5.1).",
+   "codex_value": true,
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_days": {
+   "value": "30",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_1079650_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f5520184683fdbb203a3",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1079650",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1079650",
+   "published_at": "2022-11-11T23:33:06+03:00",
+   "source_sha256": "c57bd9b15b906f01b137d7370a15baabac655372e1279f765ad3d47626779a56",
+   "source_file": "source_docs/SNICA/KAP_1079650_ek1.pdf",
+   "page": 32,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5.2. Fiyat istikrarı işlemlerinin gerçekleştirilebileceği zaman aralığı: Payların borsada işlem görmeye başlamasından itibaren 30 gündür.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "",
+   "codex_value": "30",
+   "codex_verdict": "VERIFIED"
+  },
+  "issuer_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1079650_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f5520184683fdbb203a3",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1079650",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1079650",
+   "published_at": "2022-11-11T23:33:06+03:00",
+   "source_sha256": "c57bd9b15b906f01b137d7370a15baabac655372e1279f765ad3d47626779a56",
+   "source_file": "source_docs/SNICA/KAP_1079650_ek1.pdf",
+   "page": 34,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "a) Ihraççı tarafından verilen taahhüt: Şirket yönetim kurulunun 05.09.2022 tarih ve 2022/19 sayıh toplantısında: \"Şirket paylarmn Borsa Istanhul A Ş.'de işlem görmeye başladığı tarilten itibaren 1 (hir) yıl boyunca: i) Herhangi bir bedelli sermaye artırımı yapılmamasına",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1079650_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f5520184683fdbb203a3",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1079650",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1079650",
+     "published_at": "2022-11-11T23:33:06+03:00",
+     "source_sha256": "c57bd9b15b906f01b137d7370a15baabac655372e1279f765ad3d47626779a56",
+     "source_file": "source_docs/SNICA/KAP_1079650_ek1.pdf",
+     "page": 34,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Sirket 02.11.2022 tarihli yazıda paylarının Borsa Istanbul A.Ş.de işlem görmeyc başlamasından itibaren. payların borsa fiyatından bağımsız olarak. 1 yıl süreyle hiçbir şekilde bedelsiz, sermaye artırımı y'apılımayacağını ve pay geri ahım programı açıklanmayacağımı beyan etmiştir."
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "1 yıl = 365. Kapsam: bedelli sermaye artırımı yapmama, dolaşımdaki payı artıracak yeni satış/halka arz yapmama, bu yönde karar/açıklama yapmama (OCR 'hir' = 'bir'). Ek beyan: 1 yıl bedelsiz sermaye artırımı yapmama ve pay geri alım programı açıklamama. Başlangıç: Borsa İstanbul'da işlem görmeye başlama."
+  },
+  "shareholder_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1079650_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f5520184683fdbb203a3",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1079650",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1079650",
+   "published_at": "2022-11-11T23:33:06+03:00",
+   "source_sha256": "c57bd9b15b906f01b137d7370a15baabac655372e1279f765ad3d47626779a56",
+   "source_file": "source_docs/SNICA/KAP_1079650_ek1.pdf",
+   "page": 34,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "b) Ortaklar tarafından verilen taahhütler: Șırket ortaklarından Hüscyin Nesimi Fatinoğlu, Ali Fatinoğlu, Uğur Fatinoğlu. Emre Fatinoğlu ve Saadet Fatinoğlu ayrı ayrı verdikleri 07.09.2022 tarihli taahhütleri ile Şirket sermayesinde sahip oldukları paylanı. Şirket paylarımın Borsa İstanbulda işlem görmeye başlamasından itibaren, payların borsa fiyatından bağımsız olarak. 1 yıl süreyle hiçbir şekilde borsada satmayacaklarını",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1079650_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f5520184683fdbb203a3",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1079650",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1079650",
+     "published_at": "2022-11-11T23:33:06+03:00",
+     "source_sha256": "c57bd9b15b906f01b137d7370a15baabac655372e1279f765ad3d47626779a56",
+     "source_file": "source_docs/SNICA/KAP_1079650_ek1.pdf",
+     "page": 34,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "c) Sermaye piyasası mevzuatı kapsamında verilen tahhütler: Şirket ortaklarından Hüseyin Nesimi Fatinoğlu (avnı zamanda yönetim kontrolüne sahiptir) ile Ali Fatinoğlu. VII-128.1 sayıh Pay Tebliğinin 8'inci maddesi çerçevesinde. Şirket paylarımın Borsa Istanbulida işlem görmeye başlamasından itibaren bir yıl süreyle: (i) Sahip olduğu Şirket paylarımı halka arz fiyatımı alundaki bir fiyattan borsada satmayacağını"
+    }
+   ],
+   "components": [
+    {
+     "who": "Hüseyin Nesimi Fatinoğlu (yönetim kontrolü)",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Ali Fatinoğlu (halka arz eden)",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Uğur Fatinoğlu (halka arz eden)",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Emre Fatinoğlu (halka arz eden)",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Saadet Fatinoğlu",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Hüseyin Nesimi Fatinoğlu",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Ali Fatinoğlu",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "b) Tüm mevcut ortaklar (Hüseyin Nesimi, Ali, Uğur, Emre, Saadet Fatinoğlu) 1 yıl borsa fiyatından bağımsız hiçbir şekilde borsada satmama. c) Hüseyin Nesimi ve Ali Fatinoğlu için Pay Tebliği 8. madde 1 yıl halka arz fiyatının altında satmama. En kısa süre 365. d) Yetkili kuruluşlar tarafından verilen taahhütler: Yoktur. Özet (KAP_1079646_EK1 s.26) aynı 1 yıllık tüm ortak taahhüdünü tekrarlıyor."
+  },
+  "sector": {
+   "value": "İnşaat malzemeleri; panel radyatör, kombi ve plastik boru üretimi",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_1079647_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f55301846835e37f0171",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1079647",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1079647",
+   "published_at": "2022-11-11T23:32:17+03:00",
+   "source_sha256": "2ba416b0d22dbaf5e64ad2bfbea7a2df440ce80c55f7f0f1e453b81f7d6da204",
+   "source_file": "source_docs/SNICA/KAP_1079647_ek1.pdf",
+   "page": 8,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Esas sözleşme'nin \"Amaç ve Konu\" başlıklı 4'üncü maddesi uyarınca Şirket, rulo sacdan yapılan her türlü panel radyatör ve kombi ile plastik hammadde ve yardımcı hammaddelerden yapılan her türlü plastik boru ve türevleri ile bağlantılı parçalarının üretimi, alımı, satımı ve ihracatı faaliyetlerini yürütmektedir.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1079646_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f552018468337cee02bb",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1079646",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1079646",
+     "published_at": "2022-11-11T23:32:01+03:00",
+     "source_sha256": "9a6b22cdbfd1bd7bba77d2d020aabdbd2923c4a9d2d1e519c79c31d85924ed8a",
+     "source_file": "source_docs/SNICA/KAP_1079646_ek1.pdf",
+     "page": 12,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Sanica Isı'nın kuruluş esas sözleşmesi 29.01.1982 tarihinde tescil edilmiş olup, Şirket 40 yıllık kurumsal yapısıyla İnşaat Malzemeleri Sektöründe faaliyet göstermektedir."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Ürün grupları: panel radyatör, boru ve bağlantı parçaları (perde rayı dahil), kombi (hermetik ve yoğuşmalı). Üretim tesisleri Manisa Akhisar OSB, Elazığ OSB ve Beylikdüzü. Alıntı izahname 7.1.1 faaliyet bölümünden (esas sözleşmeye atıf yapan izahname ana metni).",
+   "codex_value": "ısıtma sistemleri ve plastik boru üretimi",
+   "codex_verdict": "VERIFIED"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahname I. Borsa Görüşü (KAP_1079646_EK1 s.7) yalnız Yıldız Pazar, hukukçu raporu ve sorumluluk ifadesi maddelerini içeriyor; katılım endeksi / Katılım Finans İlkeleri Bilgi Formu cümlesi yok. İzahname EKLER listesinde (KAP_1079650_EK1 s.51-52, EK 1-10) Katılım Finans İlkeleri Bilgi Formu yok. qfind 'katılım|katilim|faizsiz|islami|icazet|Endeks|Bilgi Formu|İlkeleri' uygunluk beyanı vermedi (yalnız genel kurula katılım, fuar katılımı, İMSAD endeksleri). TSSD kısa, izahnameye atıf.",
+   "looked_at": [
+    "KAP_1079646_EK1",
+    "KAP_1079647_EK1",
+    "KAP_1079648_EK1",
+    "KAP_1079649_EK1",
+    "KAP_1079650_EK1",
+    "KAP_1079665_EK1",
+    "KAP_1079665"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_1079646_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1079646",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f552018468337cee02bb",
+   "published_at": "2022-11-11T23:32:01+03:00",
+   "sha256": "9a6b22cdbfd1bd7bba77d2d020aabdbd2923c4a9d2d1e519c79c31d85924ed8a",
+   "file": "source_docs/SNICA/KAP_1079646_ek1.pdf"
+  },
+  "KAP_1079647_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1079647",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f55301846835e37f0171",
+   "published_at": "2022-11-11T23:32:17+03:00",
+   "sha256": "2ba416b0d22dbaf5e64ad2bfbea7a2df440ce80c55f7f0f1e453b81f7d6da204",
+   "file": "source_docs/SNICA/KAP_1079647_ek1.pdf"
+  },
+  "KAP_1079649_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1079649",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f5520184683b68140356",
+   "published_at": "2022-11-11T23:32:50+03:00",
+   "sha256": "e7787a89c958004687dc2672ded25f60b62b492f9daa3da2d9cea751bbf400e2",
+   "file": "source_docs/SNICA/KAP_1079649_ek1.pdf"
+  },
+  "KAP_1079650_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1079650",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d8467f5520184683fdbb203a3",
+   "published_at": "2022-11-11T23:33:06+03:00",
+   "sha256": "c57bd9b15b906f01b137d7370a15baabac655372e1279f765ad3d47626779a56",
+   "file": "source_docs/SNICA/KAP_1079650_ek1.pdf"
+  }
+ }
+}

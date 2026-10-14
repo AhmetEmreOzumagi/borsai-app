@@ -1,0 +1,227 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "SOKE",
+  "company": "Söke Değirmencilik Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "787164",
+      "source_id": "KAP_1096398_EK1",
+      "source_document": "KAP 1096398 ek 1",
+      "source_published_at": "2023-01-09T09:51:34+03:00",
+      "source_sha256": "c366b5335561b7beb53bd81e1001504b7be1f728788b30dbeb2a8dc85f1f6e56",
+      "source_path": "registry/oot/source_docs/SOKE/KAP_1096398_ek1.pdf",
+      "quote": "Toplam 77.500.000 %100 860.816 9.163.694.911 %100 787.164 77.500.000 %100",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "başvuru sayısı 860.816; talebi karşılanan başvuru 787.164",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "786945",
+        "domestic_institutional": "215",
+        "foreign_institutional": "4"
+      },
+      "source_id": "KAP_1096398_EK1",
+      "source_document": "KAP 1096398 ek 1",
+      "source_published_at": "2023-01-09T09:51:34+03:00",
+      "source_sha256": "c366b5335561b7beb53bd81e1001504b7be1f728788b30dbeb2a8dc85f1f6e56",
+      "source_path": "registry/oot/source_docs/SOKE/KAP_1096398_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 50.375.000 %65 860.530 8.018.283.506 %87,5 786.945 50.375.000 %65",
+        "Yurt İçi Kurumsal 23.250.000 %30 276 1.102.431.405 %12,0 215 23.250.000 %30",
+        "Yurt Dışı Kurumsal 3.875.000 %5 10 42.980.000 %0,5 4 3.875.000 %5"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "159.17",
+      "source_id": "KAP_1096398_EK1",
+      "source_document": "KAP 1096398 ek 1",
+      "source_published_at": "2023-01-09T09:51:34+03:00",
+      "source_sha256": "c366b5335561b7beb53bd81e1001504b7be1f728788b30dbeb2a8dc85f1f6e56",
+      "source_path": "registry/oot/source_docs/SOKE/KAP_1096398_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara tahsis edilen payların 159,17 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "159,17",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "47.42",
+      "source_id": "KAP_1096398_EK1",
+      "source_document": "KAP 1096398 ek 1",
+      "source_published_at": "2023-01-09T09:51:34+03:00",
+      "source_sha256": "c366b5335561b7beb53bd81e1001504b7be1f728788b30dbeb2a8dc85f1f6e56",
+      "source_path": "registry/oot/source_docs/SOKE/KAP_1096398_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara tahsis edilen payların 47,42 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "47,42",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "11.09",
+      "source_id": "KAP_1096398_EK1",
+      "source_document": "KAP 1096398 ek 1",
+      "source_published_at": "2023-01-09T09:51:34+03:00",
+      "source_sha256": "c366b5335561b7beb53bd81e1001504b7be1f728788b30dbeb2a8dc85f1f6e56",
+      "source_path": "registry/oot/source_docs/SOKE/KAP_1096398_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara tahsis edilen payların 11,09 katı talep gelmiştir.",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "11,09",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "50375000",
+        "domestic_institutional": "23250000",
+        "foreign_institutional": "3875000"
+      },
+      "source_id": "KAP_1096398_EK1",
+      "source_document": "KAP 1096398 ek 1",
+      "source_published_at": "2023-01-09T09:51:34+03:00",
+      "source_sha256": "c366b5335561b7beb53bd81e1001504b7be1f728788b30dbeb2a8dc85f1f6e56",
+      "source_path": "registry/oot/source_docs/SOKE/KAP_1096398_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 50.375.000 %65 860.530 8.018.283.506 %87,5 786.945 50.375.000 %65",
+        "Yurt İçi Kurumsal 23.250.000 %30 276 1.102.431.405 %12,0 215 23.250.000 %30",
+        "Yurt Dışı Kurumsal 3.875.000 %5 10 42.980.000 %0,5 4 3.875.000 %5"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "65",
+      "source_id": "KAP_1096398_EK1",
+      "source_document": "KAP 1096398 ek 1",
+      "source_published_at": "2023-01-09T09:51:34+03:00",
+      "source_sha256": "c366b5335561b7beb53bd81e1001504b7be1f728788b30dbeb2a8dc85f1f6e56",
+      "source_path": "registry/oot/source_docs/SOKE/KAP_1096398_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 50.375.000 %65 860.530 8.018.283.506 %87,5 786.945 50.375.000 %65",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "30",
+      "source_id": "KAP_1096398_EK1",
+      "source_document": "KAP 1096398 ek 1",
+      "source_published_at": "2023-01-09T09:51:34+03:00",
+      "source_sha256": "c366b5335561b7beb53bd81e1001504b7be1f728788b30dbeb2a8dc85f1f6e56",
+      "source_path": "registry/oot/source_docs/SOKE/KAP_1096398_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 23.250.000 %30 276 1.102.431.405 %12,0 215 23.250.000 %30",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "5",
+      "source_id": "KAP_1096398_EK1",
+      "source_document": "KAP 1096398 ek 1",
+      "source_published_at": "2023-01-09T09:51:34+03:00",
+      "source_sha256": "c366b5335561b7beb53bd81e1001504b7be1f728788b30dbeb2a8dc85f1f6e56",
+      "source_path": "registry/oot/source_docs/SOKE/KAP_1096398_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal 3.875.000 %5 10 42.980.000 %0,5 4 3.875.000 %5",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD penceresi dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "QNB Finans Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1089556_EK1",
+      "source_document": "KAP 1089556 ek 1",
+      "source_published_at": "2022-12-23T18:11:10+03:00",
+      "source_sha256": "6e04585246b211cc1ec0c276938fb551dfe51288d809a10880e30e42723e6b4e",
+      "source_path": "registry/oot/source_docs/SOKE/KAP_1089556_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek QNB Finans Yatırım Menkul Değerler A.Ş.'nin",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim, OCR) penceresinde fiyat istikrarı yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1098380",
+      "source_document": "KAP 1098380",
+      "source_published_at": "2023-01-09T18:11:41+03:00",
+      "source_sha256": "2e1ce19677433dd8563b77b2f427667c286f4975540b277e8b096ef9eb766949",
+      "source_path": "registry/oot/source_docs/SOKE/KAP_1098380_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1098380",
+      "source_document": "KAP 1098380",
+      "source_published_at": "2023-01-09T18:11:41+03:00",
+      "source_sha256": "2e1ce19677433dd8563b77b2f427667c286f4975540b277e8b096ef9eb766949",
+      "source_path": "registry/oot/source_docs/SOKE/KAP_1098380_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1098380": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1098380",
+      "published_at": "2023-01-09T18:11:41+03:00",
+      "sha256": "2e1ce19677433dd8563b77b2f427667c286f4975540b277e8b096ef9eb766949",
+      "path": "registry/oot/source_docs/SOKE/KAP_1098380_bildirim.pdf"
+    },
+    "KAP_1096398_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1096398 ek 1",
+      "published_at": "2023-01-09T09:51:34+03:00",
+      "sha256": "c366b5335561b7beb53bd81e1001504b7be1f728788b30dbeb2a8dc85f1f6e56",
+      "path": "registry/oot/source_docs/SOKE/KAP_1096398_ek1.pdf"
+    },
+    "KAP_1089556_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1089556 ek 1",
+      "published_at": "2022-12-23T18:11:10+03:00",
+      "sha256": "6e04585246b211cc1ec0c276938fb551dfe51288d809a10880e30e42723e6b4e",
+      "path": "registry/oot/source_docs/SOKE/KAP_1089556_ek1.pdf"
+    }
+  }
+}

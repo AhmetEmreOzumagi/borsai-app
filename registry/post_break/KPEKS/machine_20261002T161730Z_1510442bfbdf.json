@@ -1,0 +1,240 @@
+{
+  "break_day": {
+    "b_floor": 1,
+    "band_ratio": {
+      "lower_over_reference": "0.900132275132275132275132275132275132275132275132275132275132",
+      "rule_ok": true,
+      "upper_over_reference": "1.09986772486772486772486772486772486772486772486772486772487"
+    },
+    "fields_raw": {
+      "aof": "143.215",
+      "close": "136.1",
+      "halt": "0",
+      "high": "159.2",
+      "low": "136.1",
+      "lower_limit": "136.1",
+      "open": "157.9",
+      "reference_price": "151.2",
+      "special_trade_turnover": "0",
+      "special_trade_volume": "0",
+      "trade_count": "142904",
+      "turnover": "4573065641.8",
+      "upper_limit": "166.3",
+      "volume": "31931483"
+    },
+    "h": 6,
+    "half_day": 0,
+    "halt_flag": 0,
+    "session_date": "2026-08-28",
+    "warnings": []
+  },
+  "code": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "3dcef9955cf82cd02be96f1fc1209ed6413ffa79d92e18f96ed765c4cab1fb30",
+    "git_head": "71cf0791d53d3b48e5914f760fa075a7626c6a15",
+    "predict_break_sha256": "848818a56094ceb5123327a65da04ff44c8fa54c97515ea2ff3e821a0b3e265a"
+  },
+  "comparators": {
+    "PRODUCT_BREAK_FLOOR": {
+      "F1": null,
+      "F2": null,
+      "source_model_id": null,
+      "source_record": null,
+      "status": "NOT_AVAILABLE"
+    },
+    "base_floor_by_type": null
+  },
+  "exposure_class": "MACHINE_SEQUENCED",
+  "features": {
+    "b_floor": 1,
+    "b_turnover_ln": 0.24072460485960198,
+    "b_turnover_ratio": "1.27217063745019920318725099601593625498007968127490039840637",
+    "clipped": {
+      "F1": false,
+      "F2": false
+    },
+    "z": {
+      "F1": {
+        "b_floor": 1.1588171308956141,
+        "b_turnover": 0.2114818352606971
+      },
+      "F2": {
+        "b_floor": 1.1677484162422844,
+        "b_turnover": 0.22478631658035533
+      }
+    }
+  },
+  "inputs_ref": {
+    "file": "registry/inputs/KPEKS.json",
+    "inputs_pit_ok": true,
+    "ipo_price_tl": "94",
+    "sha256": "d9cebca6890818a4f0ebcb233b27b364a26d1906bcb5ae9e4de525d9930aca87",
+    "shares_offered": {
+      "source_published_at": "2026-08-17T08:54:17+03:00",
+      "value": "25100000"
+    }
+  },
+  "models": [
+    {
+      "file": "models/break_floor_v0.json",
+      "model_id": "break_floor_v0",
+      "not_applicable": null,
+      "output": {
+        "F1": {
+          "p_floor": 0.5389117003850694
+        },
+        "F2": {
+          "p_floor": 0.16401056260438845
+        },
+        "warnings": []
+      },
+      "params_sha256": "81f07e7810ca5b9513ebc577e14182798ea0b227f105df1551950d6ce40a3eab",
+      "refused": null,
+      "spec_sha256": "8ada9ccf77dc12caa5e9ea00b5bd028456dc8ce7d6857665358737c4b7a84e50",
+      "status": "PREDICTED"
+    },
+    {
+      "file": "models/break_floor_v0@ZERO.json",
+      "model_id": "break_floor_v0@ZERO",
+      "not_applicable": null,
+      "output": {
+        "F1": {
+          "p_floor": 0.3048780487804878
+        },
+        "F2": {
+          "p_floor": 0.14102564102564102
+        },
+        "warnings": []
+      },
+      "params_sha256": "f460acc84717fb489eb81d96fce01ff44f4eb850b9fc66f0c50fb8858000bd3b",
+      "refused": null,
+      "spec_sha256": "73d719f0124063e19079dcb0a4158b98b4095196dbebe53be55339c309f54e3c",
+      "status": "PREDICTED"
+    }
+  ],
+  "models_index": {
+    "model_ids": [
+      "break_floor_v0",
+      "break_floor_v0@ZERO"
+    ],
+    "path": "models/INDEX_POST_BREAK.json",
+    "sha256": "899cf90c805d45313e187e2297f9207229d119f57c1ca56b009ace24ff8e8c5e"
+  },
+  "produced_at_utc": "2026-10-02T16:17:30Z",
+  "record_stage": "POST_BREAK",
+  "record_type": "MACHINE",
+  "schema_version": "borsai.post_break_machine_record/1",
+  "streak": {
+    "L": 5,
+    "b": 6,
+    "break_date": "2026-08-28",
+    "sessions": [
+      {
+        "ceiling_close": 1,
+        "close_raw": "103.4",
+        "date": "2026-08-21",
+        "h": 1,
+        "thb": {
+          "file": "data/raw/bist/thb/2026/thb202608211.zip",
+          "sha256": "2d805d3384cfb131735d4c7ac02ca46948e0e12471a5ec1b51f88e6020a2083a"
+        },
+        "thm": {
+          "file": "data/raw/bist/thm/2026/thm202608211.zip",
+          "sha256": "bfc2dda6c79903b587b64b6ed6bed05ae5f3b7e063c0d7c91fd998c408ce0b11"
+        },
+        "upper_limit_raw": "103.4"
+      },
+      {
+        "ceiling_close": 1,
+        "close_raw": "113.7",
+        "date": "2026-08-24",
+        "h": 2,
+        "thb": {
+          "file": "data/raw/bist/thb/2026/thb202608241.zip",
+          "sha256": "961e5d96786797aac2e334da59f42ac3447ea3b414e181e8b2165206a244261e"
+        },
+        "thm": {
+          "file": "data/raw/bist/thm/2026/thm202608241.zip",
+          "sha256": "7934cc123f3786d4e8c82f6ad99f324340e17ca030dee18cbc963a90a42d7ecd"
+        },
+        "upper_limit_raw": "113.7"
+      },
+      {
+        "ceiling_close": 1,
+        "close_raw": "125",
+        "date": "2026-08-25",
+        "h": 3,
+        "thb": {
+          "file": "data/raw/bist/thb/2026/thb202608251.zip",
+          "sha256": "278401e988d33e4e4bcdf5b65e9394c8ff063ddf031811aa996c2c5ff9e74b29"
+        },
+        "thm": {
+          "file": "data/raw/bist/thm/2026/thm202608251.zip",
+          "sha256": "ebc0ee5e44e1ea927d15ebdfe88ed8538d7d53ceda41a08744bd21e9d567127a"
+        },
+        "upper_limit_raw": "125"
+      },
+      {
+        "ceiling_close": 1,
+        "close_raw": "137.5",
+        "date": "2026-08-26",
+        "h": 4,
+        "thb": {
+          "file": "data/raw/bist/thb/2026/thb202608261.zip",
+          "sha256": "f4f26e09b8758150018ff16346b59f63a0802e85e69609d9bed6686f7350affd"
+        },
+        "thm": {
+          "file": "data/raw/bist/thm/2026/thm202608261.zip",
+          "sha256": "6677d98d5e1b93a71311200a09f7b358c7d4ef61a285a5a679130af2ffa2521c"
+        },
+        "upper_limit_raw": "137.5"
+      },
+      {
+        "ceiling_close": 1,
+        "close_raw": "151.2",
+        "date": "2026-08-27",
+        "h": 5,
+        "thb": {
+          "file": "data/raw/bist/thb/2026/thb202608271.zip",
+          "sha256": "765aa48d7f237381a8bb14cdd192992d6376866191aad605450b28e28a02fc2a"
+        },
+        "thm": {
+          "file": "data/raw/bist/thm/2026/thm202608271.zip",
+          "sha256": "f720953b189c338b444246d79bf6600fc8a893840c0e2aac959231365161453d"
+        },
+        "upper_limit_raw": "151.2"
+      },
+      {
+        "ceiling_close": 0,
+        "close_raw": "136.1",
+        "date": "2026-08-28",
+        "h": 6,
+        "thb": {
+          "file": "data/raw/bist/thb/2026/thb202608281.zip",
+          "sha256": "755107e2602842c68acfef1ec527867d6ef707b128c4a0b50cb3dc45b14d7fa4"
+        },
+        "thm": {
+          "file": "data/raw/bist/thm/2026/thm202608281.zip",
+          "sha256": "a2f173121b01061d1ccc882f6bc97a938a155405f539f9744b2f4512f6eb5184"
+        },
+        "upper_limit_raw": "166.3"
+      }
+    ]
+  },
+  "structural_zero_D10": {
+    "P": "94",
+    "band_rule_ok": true,
+    "impossible": false,
+    "k_b": 3.5126548600934586,
+    "min10": "89.40",
+    "r_b": 4
+  },
+  "summary": {
+    "n_models": 2,
+    "n_not_applicable": 0,
+    "n_predicted": 2,
+    "n_refused": 0
+  },
+  "t_open": "2026-08-31T09:40:00+03:00",
+  "ticker": "KPEKS"
+}

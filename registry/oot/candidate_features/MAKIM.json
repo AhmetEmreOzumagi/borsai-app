@@ -1,0 +1,222 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "MAKIM",
+  "company": "Makim Makina Teknolojileri Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "170496",
+      "source_id": "KAP_1036836_EK1",
+      "source_document": "KAP 1036836 ek 1",
+      "source_published_at": "2022-06-13T09:11:08+03:00",
+      "source_sha256": "687fd05fb3cc0db56e943065f4e25162d22fa4363b62fd12b54354b1e9c74185",
+      "source_path": "registry/oot/source_docs/MAKIM/KAP_1036836_ek1.pdf",
+      "quote": "Toplam 18.000.000 %100 177.499 99.796.500 %100 170.496 18.000.000 %100",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 177.499; dağıtım yapılan 170.496",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "170457",
+        "domestic_institutional": "39"
+      },
+      "source_id": "KAP_1036836_EK1",
+      "source_document": "KAP 1036836 ek 1",
+      "source_published_at": "2022-06-13T09:11:08+03:00",
+      "source_sha256": "687fd05fb3cc0db56e943065f4e25162d22fa4363b62fd12b54354b1e9c74185",
+      "source_path": "registry/oot/source_docs/MAKIM/KAP_1036836_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 9.000.000 %50 177.442 42.832.850 %42,92 170.457 9.000.000 %50",
+        "Yurt İçi Kurumsal 9.000.000 %50 57 56.963.650 %57,08 39 9.000.000 %50"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 177.442, yurt içi kurumsal 57; yurt dışı kurumsal grup yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "4.76",
+      "source_id": "KAP_1036836_EK1",
+      "source_document": "KAP 1036836 ek 1",
+      "source_published_at": "2022-06-13T09:11:08+03:00",
+      "source_sha256": "687fd05fb3cc0db56e943065f4e25162d22fa4363b62fd12b54354b1e9c74185",
+      "source_path": "registry/oot/source_docs/MAKIM/KAP_1036836_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 4,76 katı",
+      "note": "belge 'yaklaşık' diyor; nihai tahsisat = planlanan 9.000.000",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "4,76",
+        "verdict": "FOUND_SAME",
+        "note": "belgede 'yaklaşık'"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "6.33",
+      "source_id": "KAP_1036836_EK1",
+      "source_document": "KAP 1036836 ek 1",
+      "source_published_at": "2022-06-13T09:11:08+03:00",
+      "source_sha256": "687fd05fb3cc0db56e943065f4e25162d22fa4363b62fd12b54354b1e9c74185",
+      "source_path": "registry/oot/source_docs/MAKIM/KAP_1036836_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara ise nihai tahsisat tutarının yaklaşık 6,33 katı",
+      "note": "belge 'yaklaşık' diyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "6,33",
+        "verdict": "FOUND_SAME",
+        "note": "belgede 'yaklaşık'"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belgede yurt dışı kurumsal yatırımcı grubu yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "9000000",
+        "domestic_institutional": "9000000"
+      },
+      "source_id": "KAP_1036836_EK1",
+      "source_document": "KAP 1036836 ek 1",
+      "source_published_at": "2022-06-13T09:11:08+03:00",
+      "source_sha256": "687fd05fb3cc0db56e943065f4e25162d22fa4363b62fd12b54354b1e9c74185",
+      "source_path": "registry/oot/source_docs/MAKIM/KAP_1036836_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 9.000.000 %50 177.442 42.832.850 %42,92 170.457 9.000.000 %50",
+        "Yurt İçi Kurumsal 9.000.000 %50 57 56.963.650 %57,08 39 9.000.000 %50"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "50",
+      "source_id": "KAP_1036836_EK1",
+      "source_document": "KAP 1036836 ek 1",
+      "source_published_at": "2022-06-13T09:11:08+03:00",
+      "source_sha256": "687fd05fb3cc0db56e943065f4e25162d22fa4363b62fd12b54354b1e9c74185",
+      "source_path": "registry/oot/source_docs/MAKIM/KAP_1036836_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 9.000.000 %50 177.442 42.832.850 %42,92 170.457 9.000.000 %50",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %50",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "50",
+      "source_id": "KAP_1036836_EK1",
+      "source_document": "KAP 1036836 ek 1",
+      "source_published_at": "2022-06-13T09:11:08+03:00",
+      "source_sha256": "687fd05fb3cc0db56e943065f4e25162d22fa4363b62fd12b54354b1e9c74185",
+      "source_path": "registry/oot/source_docs/MAKIM/KAP_1036836_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 9.000.000 %50 57 56.963.650 %57,08 39 9.000.000 %50",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %50",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "belgede yurt dışı kurumsal yatırımcı grubu yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız talep toplama yöntemini yazıyor (“Sabit Fiyatla Talep Toplama” yöntemi); dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede var ama talep toplama/satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Halk Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1034724_EK1",
+      "source_document": "KAP 1034724 ek 1",
+      "source_published_at": "2022-06-03T20:50:59+03:00",
+      "source_sha256": "8847fd4d5364dc8a207bb170d623651aeae5622a8155c137f447b30ce68c449c",
+      "source_path": "registry/oot/source_docs/MAKIM/KAP_1034724_ek1.pdf",
+      "quote": "satya aracıhk edecek Halk Yatırım Menkal Değerler A.Ş.'nin",
+      "note": "TSSD OCR metni ('satya aracıhk', 'Menkal' OCR yazımı); sonuç bildirimini yayımlayan kurum HALK YATIRIM MENKUL DEĞERLER A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde fiyat istikrarı yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_1037272",
+      "source_document": "KAP 1037272",
+      "source_published_at": "2022-06-14T18:14:08+03:00",
+      "source_sha256": "1fa48a9fc273e5940c94d63155abbc1934da4e786ec4c1415ef632e321ccad5c",
+      "source_path": "registry/oot/source_docs/MAKIM/KAP_1037272_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1037272",
+      "source_document": "KAP 1037272",
+      "source_published_at": "2022-06-14T18:14:08+03:00",
+      "source_sha256": "1fa48a9fc273e5940c94d63155abbc1934da4e786ec4c1415ef632e321ccad5c",
+      "source_path": "registry/oot/source_docs/MAKIM/KAP_1037272_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1037272": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1037272",
+      "published_at": "2022-06-14T18:14:08+03:00",
+      "sha256": "1fa48a9fc273e5940c94d63155abbc1934da4e786ec4c1415ef632e321ccad5c",
+      "path": "registry/oot/source_docs/MAKIM/KAP_1037272_bildirim.pdf"
+    },
+    "KAP_1036836_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1036836 ek 1",
+      "published_at": "2022-06-13T09:11:08+03:00",
+      "sha256": "687fd05fb3cc0db56e943065f4e25162d22fa4363b62fd12b54354b1e9c74185",
+      "path": "registry/oot/source_docs/MAKIM/KAP_1036836_ek1.pdf"
+    },
+    "KAP_1034724_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1034724 ek 1",
+      "published_at": "2022-06-03T20:50:59+03:00",
+      "sha256": "8847fd4d5364dc8a207bb170d623651aeae5622a8155c137f447b30ce68c449c",
+      "path": "registry/oot/source_docs/MAKIM/KAP_1034724_ek1.pdf"
+    }
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "as_of_session": "2026-09-30",
+  "code": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "f501510d12c3a4e1513d03afa5b4ab2e59a2c5b2b8758e9b9e1a7891baef27bb",
+    "git_head": "cf5019ceaea9251153c75ba25a6b727a6d965a12"
+  },
+  "definitions": {
+    "class": "SPEC_POST_D1_V0 §7.3: LIVE = model_prospective_post_d1 VE push_kanıtı(kayıt commit'i).created_at < T_open; LATE_RECORD = model_prospective_post_d1 VE değil VE inputs_pit_ok_post_d1; RETRO aksi. T_open = D_1'i izleyen ilk resmi seans (ilan dışı kapanışlar düşülmüş) 09:40:00+03:00. model_prospective_post_d1 = commit_frozen(m) atası outcome_ingest_commit_post_d1 (tarihi > D_1 ilk bülten ya da h ≥ 2 dolu satır) VE modelin push kanıtı var.",
+    "comparators_source": "kayıttaki comparators_conditional kopyası; Faz 2C j = 1 satırıyla |Δ| ≤ 1e-12 parite",
+    "diff": "model − karşılaştırılan; negatif = model iyi",
+    "scale": "live_post_d1",
+    "small_n": {
+      "insufficient_below": 30,
+      "min_blocks": 6,
+      "row_table_only_below": 10
+    },
+    "t_open": "D_1'i izleyen ilk resmi seans (ilan dışı kapanışlar düşülmüş) 09:40:00+03:00 (Ek-9)",
+    "targets": "yalnız h ≥ 2: k = 2..10 tavan etiketleri; path_conditional varsa D3/D5/D10; D1 skorlanmaz"
+  },
+  "generated_at_utc": "2026-10-01T13:15:13Z",
+  "inputs": {
+    "calendar_sha256": "15d4d975db53a42006c1e57bab7b5f11eab52f281069cc90f0c38361770bf9cb+273ca0e7f815c7bb1a0ce562ba7060d2dc806603f2112cdde460195cbebc6432",
+    "models_index_post_d1_sha256": "94ac36faffac6017d54ff406b97b37623c27633c847bd0117fb51bf42975b820",
+    "models_index_sha256": "7e636e8bf64b25d79bac04f4bf78b9f870cded8d4d1c10009b6926941e4edb59",
+    "outcomes_sha256": "f0f2af393aa36783e3def8e17c25bca76d79fc865f7aa101fe6bac036d7eaaf9",
+    "post_d1_records_sha256": null,
+    "unannounced_closures": []
+  },
+  "models": [
+    {
+      "card": {
+        "n_runs_same_data": 1,
+        "n_variants_same_data": 23,
+        "params_sha256_8": "3f764026",
+        "parent_model_id": "ceiling_hazard_v0",
+        "spec_training_cutoff": "2026-08-19",
+        "stage": "POST_D1",
+        "training_last_session_date": "2026-08-13",
+        "training_last_session_date_meaning": "δ eğitim arzlarının 10 seansının en geç tarihi (JSON alanı training.cutoff_date; kesim değil, SPEC_DEVIATIONS H43)",
+        "training_n": 81
+      },
+      "conditional_j1": {
+        "cells": [],
+        "class_definition": "SPEC_POST_D1_V0 §7.3: LIVE = model_prospective_post_d1 VE push_kanıtı(kayıt commit'i).created_at < T_open; LATE_RECORD = model_prospective_post_d1 VE değil VE inputs_pit_ok_post_d1; RETRO aksi. T_open = D_1'i izleyen ilk resmi seans (ilan dışı kapanışlar düşülmüş) 09:40:00+03:00. model_prospective_post_d1 = commit_frozen(m) atası outcome_ingest_commit_post_d1 (tarihi > D_1 ilk bülten ya da h ≥ 2 dolu satır) VE modelin push kanıtı var.",
+        "comparators": {
+          "S_cond": [
+            "ceiling_hazard_v0",
+            "ceiling_hazard_v0@INF",
+            "base_km_expanding",
+            "base_km_last10",
+            "base_always_ceiling"
+          ],
+          "path": [
+            "ceiling_path_v0"
+          ]
+        },
+        "definition": "SPEC_POST_D1_V0 §4, §7: D1'i tavanda kapatan arzda S_cond[k] = S_k / S_1, k = 2..10; RPS_1 = (1/9) Σ_{k=2..10} (S_cond[k] − 1[L ≥ k])², Brier k = 2 ve k = 10; D1 hedefi skorlanmaz; hiçbir ölçekle birleşmez",
+        "denominator": [
+          {
+            "ceiling_close_D1": 1,
+            "class": null,
+            "d1": "2026-08-18",
+            "listed_first_trading_date": "2026-08-18",
+            "record_id": null,
+            "skip_reason": null,
+            "stage_status": "RETRO",
+            "ticker": "CITAS"
+          },
+          {
+            "ceiling_close_D1": 1,
+            "class": null,
+            "d1": "2026-08-20",
+            "listed_first_trading_date": "2026-08-20",
+            "record_id": null,
+            "skip_reason": null,
+            "stage_status": "RETRO",
+            "ticker": "TKNKA"
+          },
+          {
+            "ceiling_close_D1": 0,
+            "class": null,
+            "d1": "2026-08-20",
+            "listed_first_trading_date": "2026-08-20",
+            "record_id": null,
+            "skip_reason": null,
+            "stage_status": "RETRO",
+            "ticker": "VEYAS"
+          },
+          {
+            "ceiling_close_D1": 1,
+            "class": null,
+            "d1": "2026-08-21",
+            "listed_first_trading_date": "2026-08-21",
+            "record_id": null,
+            "skip_reason": null,
+            "stage_status": "RETRO",
+            "ticker": "KPEKS"
+          },
+          {
+            "ceiling_close_D1": 1,
+            "class": null,
+            "d1": "2026-09-01",
+            "listed_first_trading_date": "2026-09-01",
+            "record_id": null,
+            "skip_reason": null,
+            "stage_status": "RETRO",
+            "ticker": "INTET"
+          },
+          {
+            "ceiling_close_D1": 0,
+            "class": null,
+            "d1": "2026-09-02",
+            "listed_first_trading_date": "2026-09-02",
+            "record_id": null,
+            "skip_reason": null,
+            "stage_status": "RETRO",
+            "ticker": "BKRGY"
+          },
+          {
+            "ceiling_close_D1": 1,
+            "class": null,
+            "d1": "2026-09-17",
+            "listed_first_trading_date": "2026-09-17",
+            "record_id": null,
+            "skip_reason": null,
+            "stage_status": "RETRO",
+            "ticker": "NETGL"
+          }
+        ],
+        "descriptive": [],
+        "j": 1,
+        "n_calendar_not_available": 0,
+        "n_d1_label_na": 0,
+        "n_late": 0,
+        "n_live": 0,
+        "n_no_record": 0,
+        "n_not_applicable": 0,
+        "n_pending": 0,
+        "n_refused": 0,
+        "n_retro": 7,
+        "n_scored": 0,
+        "n_skipped": 0,
+        "n_target_unavailable": 0,
+        "n_undefined": 0,
+        "n_undetermined": 0,
+        "primary_cell": {
+          "horizon_or_k": null,
+          "metric": "RPS",
+          "output": "S_cond",
+          "rule_ids": [
+            "ceiling_hazard_v0"
+          ]
+        },
+        "rows": [],
+        "scale": "live_post_d1",
+        "title": "D1 sonrası güncelleme (canlı POST_D1, j = 1)"
+      },
+      "kind": "post_d1",
+      "model_id": "post_d1_hazard_v0",
+      "primary_cell": {
+        "horizon_or_k": null,
+        "metric": "RPS",
+        "output": "S_cond",
+        "rule_ids": [
+          "ceiling_hazard_v0"
+        ]
+      },
+      "stage": "POST_D1"
+    }
+  ],
+  "retro_info": [
+    {
+      "class_evidence": {
+        "basis": "MODEL_FROZEN_AFTER_D2_OUTCOME: model, D_1'den sonraki ilk sonuç verisi repoya girdikten sonra donduruldu (SPEC_POST_D1_V0 §7.3, §7.5). Yalnız bilgi: hiçbir n'e girmez.",
+        "checked_against": "f1f9d444132e89f0377b026b76d775a82685c649",
+        "d1": "2026-08-18",
+        "model_frozen_at": "2026-09-24T16:28:40+03:00",
+        "model_params_sha256": "3f7640267cd0f6b114ec88cf29e811587daa18c191866f9fa2d6910bc949e5dc",
+        "model_prospective": false,
+        "n_post_d1_records": 0,
+        "outcome_ingest_basis": "COMMITTED",
+        "outcome_ingest_commit": "f1f9d444132e89f0377b026b76d775a82685c649"
+      },
+      "d1": "2026-08-18",
+      "model_id": "post_d1_hazard_v0",
+      "record_id": null,
+      "ticker": "CITAS"
+    },
+    {
+      "class_evidence": {
+        "basis": "MODEL_FROZEN_AFTER_D2_OUTCOME: model, D_1'den sonraki ilk sonuç verisi repoya girdikten sonra donduruldu (SPEC_POST_D1_V0 §7.3, §7.5). Yalnız bilgi: hiçbir n'e girmez.",
+        "checked_against": "f1f9d444132e89f0377b026b76d775a82685c649",
+        "d1": "2026-08-20",
+        "model_frozen_at": "2026-09-24T16:28:40+03:00",
+        "model_params_sha256": "3f7640267cd0f6b114ec88cf29e811587daa18c191866f9fa2d6910bc949e5dc",
+        "model_prospective": false,
+        "n_post_d1_records": 0,
+        "outcome_ingest_basis": "COMMITTED",
+        "outcome_ingest_commit": "f1f9d444132e89f0377b026b76d775a82685c649"
+      },
+      "d1": "2026-08-20",
+      "model_id": "post_d1_hazard_v0",
+      "record_id": null,
+      "ticker": "TKNKA"
+    },
+    {
+      "class_evidence": {
+        "basis": "MODEL_FROZEN_AFTER_D2_OUTCOME: model, D_1'den sonraki ilk sonuç verisi repoya girdikten sonra donduruldu (SPEC_POST_D1_V0 §7.3, §7.5). Yalnız bilgi: hiçbir n'e girmez.",
+        "checked_against": "f1f9d444132e89f0377b026b76d775a82685c649",
+        "d1": "2026-08-20",
+        "model_frozen_at": "2026-09-24T16:28:40+03:00",
+        "model_params_sha256": "3f7640267cd0f6b114ec88cf29e811587daa18c191866f9fa2d6910bc949e5dc",
+        "model_prospective": false,
+        "n_post_d1_records": 0,
+        "outcome_ingest_basis": "COMMITTED",
+        "outcome_ingest_commit": "f1f9d444132e89f0377b026b76d775a82685c649"
+      },
+      "d1": "2026-08-20",
+      "model_id": "post_d1_hazard_v0",
+      "record_id": null,
+      "ticker": "VEYAS"
+    },
+    {
+      "class_evidence": {
+        "basis": "MODEL_FROZEN_AFTER_D2_OUTCOME: model, D_1'den sonraki ilk sonuç verisi repoya girdikten sonra donduruldu (SPEC_POST_D1_V0 §7.3, §7.5). Yalnız bilgi: hiçbir n'e girmez.",
+        "checked_against": "f1f9d444132e89f0377b026b76d775a82685c649",
+        "d1": "2026-08-21",
+        "model_frozen_at": "2026-09-24T16:28:40+03:00",
+        "model_params_sha256": "3f7640267cd0f6b114ec88cf29e811587daa18c191866f9fa2d6910bc949e5dc",
+        "model_prospective": false,
+        "n_post_d1_records": 0,
+        "outcome_ingest_basis": "COMMITTED",
+        "outcome_ingest_commit": "f1f9d444132e89f0377b026b76d775a82685c649"
+      },
+      "d1": "2026-08-21",
+      "model_id": "post_d1_hazard_v0",
+      "record_id": null,
+      "ticker": "KPEKS"
+    },
+    {
+      "class_evidence": {
+        "basis": "MODEL_FROZEN_AFTER_D2_OUTCOME: model, D_1'den sonraki ilk sonuç verisi repoya girdikten sonra donduruldu (SPEC_POST_D1_V0 §7.3, §7.5). Yalnız bilgi: hiçbir n'e girmez.",
+        "checked_against": "f1f9d444132e89f0377b026b76d775a82685c649",
+        "d1": "2026-09-01",
+        "model_frozen_at": "2026-09-24T16:28:40+03:00",
+        "model_params_sha256": "3f7640267cd0f6b114ec88cf29e811587daa18c191866f9fa2d6910bc949e5dc",
+        "model_prospective": false,
+        "n_post_d1_records": 0,
+        "outcome_ingest_basis": "COMMITTED",
+        "outcome_ingest_commit": "f1f9d444132e89f0377b026b76d775a82685c649"
+      },
+      "d1": "2026-09-01",
+      "model_id": "post_d1_hazard_v0",
+      "record_id": null,
+      "ticker": "INTET"
+    },
+    {
+      "class_evidence": {
+        "basis": "MODEL_FROZEN_AFTER_D2_OUTCOME: model, D_1'den sonraki ilk sonuç verisi repoya girdikten sonra donduruldu (SPEC_POST_D1_V0 §7.3, §7.5). Yalnız bilgi: hiçbir n'e girmez.",
+        "checked_against": "f1f9d444132e89f0377b026b76d775a82685c649",
+        "d1": "2026-09-02",
+        "model_frozen_at": "2026-09-24T16:28:40+03:00",
+        "model_params_sha256": "3f7640267cd0f6b114ec88cf29e811587daa18c191866f9fa2d6910bc949e5dc",
+        "model_prospective": false,
+        "n_post_d1_records": 0,
+        "outcome_ingest_basis": "COMMITTED",
+        "outcome_ingest_commit": "f1f9d444132e89f0377b026b76d775a82685c649"
+      },
+      "d1": "2026-09-02",
+      "model_id": "post_d1_hazard_v0",
+      "record_id": null,
+      "ticker": "BKRGY"
+    },
+    {
+      "class_evidence": {
+        "basis": "MODEL_FROZEN_AFTER_D2_OUTCOME: model, D_1'den sonraki ilk sonuç verisi repoya girdikten sonra donduruldu (SPEC_POST_D1_V0 §7.3, §7.5). Yalnız bilgi: hiçbir n'e girmez.",
+        "checked_against": "f1f9d444132e89f0377b026b76d775a82685c649",
+        "d1": "2026-09-17",
+        "model_frozen_at": "2026-09-24T16:28:40+03:00",
+        "model_params_sha256": "3f7640267cd0f6b114ec88cf29e811587daa18c191866f9fa2d6910bc949e5dc",
+        "model_prospective": false,
+        "n_post_d1_records": 0,
+        "outcome_ingest_basis": "COMMITTED",
+        "outcome_ingest_commit": "f1f9d444132e89f0377b026b76d775a82685c649"
+      },
+      "d1": "2026-09-17",
+      "model_id": "post_d1_hazard_v0",
+      "record_id": null,
+      "ticker": "NETGL"
+    }
+  ],
+  "schema_version": "borsai.scores_post_d1/1"
+}

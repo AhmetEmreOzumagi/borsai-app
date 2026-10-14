@@ -1,0 +1,164 @@
+{
+  "schema_version": "borsai.legacy_roles/1",
+  "source": "docs/specs/SPEC_SCORING.md §6 'Legacy dondurmaların rolleri' tablosu; docs/PROVENANCE.md §3a",
+  "note": "Legacy kayıtlar kural 1'in 'tüm modeller birlikte' şartını sağlamaz (yalnız V1.5). İçerikleri değiştirilmez; bu dosya yalnız rollerini bağlar. Sınıf (LIVE/LATE_RECORD/RETRO) burada etiketlenmez.",
+  "records": [
+    {
+      "record": "NETGL_20260916_V1_5",
+      "ticker": "NETGL",
+      "model_id": "v1_5_h99",
+      "role": "PRIMARY",
+      "time_proof": "GIT_PUSH",
+      "has_official_f3": true,
+      "f3": "2.84",
+      "prediction_timestamp_self_reported": "2026-09-16T13:45:51.571400+03:00",
+      "old_repo_commit": "5f70acedcd1e31cc9045ad073a0b317a5691b44e",
+      "push_proof_created_at": "2026-09-16T11:32:27Z",
+      "push_proof_file": "registry/legacy_frozen/NETGL_20260916_V1_5/push_proof.json",
+      "push_proof_repo_slug": "AhmetEmreOzumagi/borsai-halka-arz-modeli",
+      "spec_note": "SPEC_SCORING §6: birincil; zaman kanıtı git+push (eski repo commit'i, GitHub status created_at)",
+      "legacy_import": true,
+      "content_modified": false,
+      "source_repo": "~/Desktop/Halka_Arz_Modeli (arşiv); dosya başına eski yol/sha/commit: docs/PROVENANCE.md §3b",
+      "files": {
+        "registry/legacy_frozen/NETGL_20260916_V1_5/NETGL_20260916_V1_5_frozen_prediction_ledger.csv": "920284024211cbdefee4b3337d16f64cad1e56a72191eb7fb8d92145bdf57007",
+        "registry/legacy_frozen/NETGL_20260916_V1_5/NETGL_20260916_V1_5_prediction_freeze_manifest.json": "7187a40bb1199d5ea8ef1aaa0f58d8985ae466ea8030c0c553fd51d7cbafbee9",
+        "registry/legacy_frozen/NETGL_20260916_V1_5/NETGL_20260916_V1_5_pretrade_evidence_packet.csv": "fd1d21d7c5bd90e0838d70e231adb6bbdb35a9762a0b8d995bec689dcd0dafe6",
+        "registry/legacy_frozen/NETGL_20260916_V1_5/NETGL_20260916_V1_5_push_proof_manifest.json": "6be331dcf48ae2206e3c390340c74e9d13da3e2566c5fc436d7f57525f849a13",
+        "registry/legacy_frozen/NETGL_20260916_V1_5/NETGL_20260916_V1_5_training_eligibility_summary.csv": "b27e5cf841278629aa43ae77b06913dd11736e08a173390ff9b62270bd78465f",
+        "registry/legacy_frozen/NETGL_20260916_V1_5/netgl_input_contract.json": "59f6285b5ed47b5b7590518e289bb58c887dd7b038e10e205fc2a634a7452a97",
+        "registry/legacy_frozen/NETGL_20260916_V1_5/push_proof.json": "276851c15083e8d18e8b5469bf6ca885d353f46bdb1805406ab40364194f4a07",
+        "registry/legacy_frozen/true_live_v1_5_registry.csv": "ab28ab44217e58355b7b8e93ad9ced88aea3fd5261cb10ef369f5636c83d0fe9"
+      }
+    },
+    {
+      "record": "BKRGY_20260827_V1_5_POST_BOOKBUILD_PRE_LISTING",
+      "ticker": "BKRGY",
+      "model_id": "v1_5_h99",
+      "role": "PRIMARY",
+      "time_proof": "SELF_REPORTED",
+      "has_official_f3": true,
+      "f3": "1.77",
+      "prediction_timestamp_self_reported": "2026-08-27T16:34:21.160123+03:00",
+      "old_repo_first_commit": "d7e8453402e0d8873bfb6dc52cb3a37bb95f467f",
+      "old_repo_first_commit_date": "2026-09-06",
+      "spec_note": "SPEC_SCORING §6: birincil; LEGACY_SELF_REPORTED (kanıtlı canlı metrikte değil, ayrı alt satır)",
+      "legacy_import": true,
+      "content_modified": false,
+      "source_repo": "~/Desktop/Halka_Arz_Modeli (arşiv); dosya başına eski yol/sha/commit: docs/PROVENANCE.md §3b",
+      "files": {
+        "registry/legacy_frozen/BKRGY_20260827_V1_5_POST_BOOKBUILD_PRE_LISTING/BKRGY_20260827_V1_5_POST_BOOKBUILD_PRE_LISTING_frozen_prediction_ledger.csv": "af0f02fd7aa42b93c9ef850d7b2876f609e04d8bb407b39c1d2d478c4cc3c706",
+        "registry/legacy_frozen/BKRGY_20260827_V1_5_POST_BOOKBUILD_PRE_LISTING/BKRGY_20260827_V1_5_POST_BOOKBUILD_PRE_LISTING_prediction_freeze_manifest.json": "b5ef1ef603631aa8351589573bcd7ce1b775e76a8695f581b5c08e29a4ab0035",
+        "registry/legacy_frozen/BKRGY_20260827_V1_5_POST_BOOKBUILD_PRE_LISTING/BKRGY_20260827_V1_5_POST_BOOKBUILD_PRE_LISTING_pretrade_evidence_packet.csv": "1e72653af9e3c44c2e8755908ac7574f5d36ce8a39697bd12767f854bf4f71c6",
+        "registry/legacy_frozen/BKRGY_20260827_V1_5_POST_BOOKBUILD_PRE_LISTING/BKRGY_20260827_V1_5_POST_BOOKBUILD_PRE_LISTING_training_eligibility_summary.csv": "fbf26b359a5993bfe9cfe456c79e81ca88f30e536f53b7a7fa4c670911dfa776"
+      }
+    },
+    {
+      "record": "INTET_20260831_V1_5_POST_BOOKBUILD_PRE_LISTING",
+      "ticker": "INTET",
+      "model_id": "v1_5_h99",
+      "role": "PRIMARY",
+      "time_proof": "SELF_REPORTED",
+      "has_official_f3": true,
+      "f3": "1.7",
+      "prediction_timestamp_self_reported": "2026-08-31T10:52:15.484732+03:00",
+      "old_repo_first_commit": "d7e8453402e0d8873bfb6dc52cb3a37bb95f467f",
+      "old_repo_first_commit_date": "2026-09-06",
+      "spec_note": "SPEC_SCORING §6: birincil; LEGACY_SELF_REPORTED. Eski kayıttaki kaynak kimliği 'INTET_KESIN_TALEP_SONUCU_UNIDENTIFIED'; resmi sonuç bildirimi KAP 1655573 (2026-08-28T11:39:53+03:00), registry/inputs/INTET.json",
+      "legacy_import": true,
+      "content_modified": false,
+      "source_repo": "~/Desktop/Halka_Arz_Modeli (arşiv); dosya başına eski yol/sha/commit: docs/PROVENANCE.md §3b",
+      "files": {
+        "registry/legacy_frozen/INTET_20260831_V1_5_POST_BOOKBUILD_PRE_LISTING/INTET_20260831_V1_5_POST_BOOKBUILD_PRE_LISTING_frozen_prediction_ledger.csv": "3d5ca35e92ef2a4598d549f796741759b77f06e0fa2c77390a45b7ce3cbd9e58",
+        "registry/legacy_frozen/INTET_20260831_V1_5_POST_BOOKBUILD_PRE_LISTING/INTET_20260831_V1_5_POST_BOOKBUILD_PRE_LISTING_prediction_freeze_manifest.json": "62689de2bf50c6d0904d1c7c4883a3528c7dbb35fd23be9351af71de0bf67566",
+        "registry/legacy_frozen/INTET_20260831_V1_5_POST_BOOKBUILD_PRE_LISTING/INTET_20260831_V1_5_POST_BOOKBUILD_PRE_LISTING_pretrade_evidence_packet.csv": "7d1f290806debcf0289a812695b14925bdda9b8b5999432f8878afb1b47502e7",
+        "registry/legacy_frozen/INTET_20260831_V1_5_POST_BOOKBUILD_PRE_LISTING/INTET_20260831_V1_5_POST_BOOKBUILD_PRE_LISTING_training_eligibility_summary.csv": "caa0d1b610edc6546290180237534f8f62e25e7088bf9d3c2b0440a1657f82a1"
+      }
+    },
+    {
+      "record": "TKNKA_20260819_V1_5_FULL20",
+      "ticker": "TKNKA",
+      "model_id": "v1_5_full20",
+      "role": "PRIMARY_SEPARATE_MODEL",
+      "time_proof": "SELF_REPORTED",
+      "has_official_f3": true,
+      "f3": "6.45",
+      "prediction_timestamp_self_reported": "2026-08-19T14:48:53+03:00",
+      "old_repo_first_commit": "c2a56fbc83936b27989953e3ab9c9ed84edada3c",
+      "old_repo_first_commit_date": "2026-09-06",
+      "spec_note": "SPEC_SCORING §6: AYRI model v1_5_full20 (n = 20/20/20/19); v1_5_h99 sütununa yazılmaz; tek satırlık kendi listesi (n = 1, metrik yok)",
+      "legacy_import": true,
+      "content_modified": false,
+      "source_repo": "~/Desktop/Halka_Arz_Modeli (arşiv); dosya başına eski yol/sha/commit: docs/PROVENANCE.md §3b",
+      "files": {
+        "registry/legacy_frozen/TKNKA_20260819_V1_5_FULL20/TKNKA_TRUE_LIVE_V1_5_FREEZE_20260819.md": "9688b29824958a85bb6dff9730023b5a35332621ebeabb20c93c2e7d6afa3813"
+      }
+    },
+    {
+      "record": "BKRGY_20260825_V1_5",
+      "ticker": "BKRGY",
+      "model_id": "v1_5_h99",
+      "role": "INVALID_USE",
+      "time_proof": "SELF_REPORTED",
+      "has_official_f3": false,
+      "f3": null,
+      "prediction_timestamp_self_reported": null,
+      "old_repo_first_commit": "d7e8453402e0d8873bfb6dc52cb3a37bb95f467f",
+      "old_repo_first_commit_date": "2026-09-06",
+      "spec_note": "SPEC_SCORING §6: geçersiz kullanım (f3'süz, f5 = 1; model bugün RET eder); hiçbir metriğe, hiçbir n'e girmez",
+      "legacy_import": true,
+      "content_modified": false,
+      "source_repo": "~/Desktop/Halka_Arz_Modeli (arşiv); dosya başına eski yol/sha/commit: docs/PROVENANCE.md §3b",
+      "files": {
+        "registry/legacy_frozen/BKRGY_20260825_V1_5/BKRGY_20260825_V1_5_frozen_prediction_ledger.csv": "be99d022c9984e173ab7b291fbba07bd55f8e171c6bff24ff5e3a1bab965d951",
+        "registry/legacy_frozen/BKRGY_20260825_V1_5/BKRGY_20260825_V1_5_prediction_freeze_manifest.json": "511c45bb99f8a9799340dbaa3da33286d56567ea7ecf393cedfe253535b0534a",
+        "registry/legacy_frozen/BKRGY_20260825_V1_5/BKRGY_20260825_V1_5_pretrade_evidence_packet.csv": "eeeb3acd3f8cefead337dc47bc3fc2cbb28c21cd6fc140bbe94ed80f8930dc3b",
+        "registry/legacy_frozen/BKRGY_20260825_V1_5/BKRGY_20260825_V1_5_training_eligibility_summary.csv": "c60b5b7344c4cd5de5858fad17c4ed3de6407ddb1e360c2e93dca18f7857bf0c"
+      }
+    },
+    {
+      "record": "BKRGY_20260825_V1_5_R2",
+      "ticker": "BKRGY",
+      "model_id": "v1_5_h99",
+      "role": "INVALID_USE",
+      "time_proof": "SELF_REPORTED",
+      "has_official_f3": false,
+      "f3": null,
+      "prediction_timestamp_self_reported": "2026-08-25T00:00:00+03:00",
+      "old_repo_first_commit": "d7e8453402e0d8873bfb6dc52cb3a37bb95f467f",
+      "old_repo_first_commit_date": "2026-09-06",
+      "spec_note": "SPEC_SCORING §6: geçersiz kullanım (f3'süz, f5 = 1); hiçbir metriğe, hiçbir n'e girmez",
+      "legacy_import": true,
+      "content_modified": false,
+      "source_repo": "~/Desktop/Halka_Arz_Modeli (arşiv); dosya başına eski yol/sha/commit: docs/PROVENANCE.md §3b",
+      "files": {
+        "registry/legacy_frozen/BKRGY_20260825_V1_5_R2/BKRGY_20260825_V1_5_R2_frozen_prediction_ledger.csv": "be99d022c9984e173ab7b291fbba07bd55f8e171c6bff24ff5e3a1bab965d951",
+        "registry/legacy_frozen/BKRGY_20260825_V1_5_R2/BKRGY_20260825_V1_5_R2_prediction_freeze_manifest.json": "b9472d63bf41528090819c1f99b3e860fa129ec2c5b3c75dff67465315e36c76",
+        "registry/legacy_frozen/BKRGY_20260825_V1_5_R2/BKRGY_20260825_V1_5_R2_pretrade_evidence_packet.csv": "eeeb3acd3f8cefead337dc47bc3fc2cbb28c21cd6fc140bbe94ed80f8930dc3b",
+        "registry/legacy_frozen/BKRGY_20260825_V1_5_R2/BKRGY_20260825_V1_5_R2_training_eligibility_summary.csv": "c60b5b7344c4cd5de5858fad17c4ed3de6407ddb1e360c2e93dca18f7857bf0c"
+      }
+    },
+    {
+      "record": "INTET_20260825_V1_5",
+      "ticker": "INTET",
+      "model_id": "v1_5_h99",
+      "role": "INVALID_USE",
+      "time_proof": "SELF_REPORTED",
+      "has_official_f3": false,
+      "f3": null,
+      "prediction_timestamp_self_reported": "2026-08-25T10:51:58.254302+03:00",
+      "old_repo_first_commit": "d7e8453402e0d8873bfb6dc52cb3a37bb95f467f",
+      "old_repo_first_commit_date": "2026-09-06",
+      "spec_note": "SPEC_SCORING §6: geçersiz kullanım (PRE, f3'süz, f5 = 1); hiçbir metriğe, hiçbir n'e girmez",
+      "legacy_import": true,
+      "content_modified": false,
+      "source_repo": "~/Desktop/Halka_Arz_Modeli (arşiv); dosya başına eski yol/sha/commit: docs/PROVENANCE.md §3b",
+      "files": {
+        "registry/legacy_frozen/INTET_20260825_V1_5/INTET_20260825_V1_5_frozen_prediction_ledger.csv": "486a1b07d59599b801fd32bd268f8cd165433d4e1e40759a9f596097355d6df2",
+        "registry/legacy_frozen/INTET_20260825_V1_5/INTET_20260825_V1_5_prediction_freeze_manifest.json": "c74ce7ed675ec9d4a42edd164ab37ae7d3c71835897341096613778339cb48c2",
+        "registry/legacy_frozen/INTET_20260825_V1_5/INTET_20260825_V1_5_pretrade_evidence_packet.csv": "4c0b99148a1fb9bc6e21bdf5eb9bd53d2ba0f746275f238778412211b341685c",
+        "registry/legacy_frozen/INTET_20260825_V1_5/INTET_20260825_V1_5_training_eligibility_summary.csv": "02fdcbeb4d2635fba82d2aa56254144451e7d6529ae3a548d813bab0e3cd2a91"
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+BORSAI_FAZ9_SNAPSHOT_20261013 — test günlüğü (yerel koşular ve CI; push proje sahibinde)
+
+TABAN e6c2e07 (HEAD; origin/main = e5a4d0f), ağaç temiz (izinli izlenmeyenler: docs/prompts/FAZ9_SNAPSHOT.md, TUFE_2026_09.md, FAZ10_FABLE_STREAK_SPEC.md)
+
+[adım 0] .venv/bin/pytest -q -n 6 --dist loadgroup            → 952 passed in 761.37s (0:12:41)
+[adım 0] bash app/scripts/test.sh                              → cargo 167 passed / 0 failed; vitest 24 dosya, 377 test; parity 8 passed; golden_unchanged YEŞİL; EXIT 0
+[adım 0] .venv/bin/python app/parity/gen_golden.py --check     → {"checked": 35, "different": []}
+[adım 0] Sicil künyesi registry/push_proofs okuyor mu          → evet (registry::read_proofs: künyede "push kanıtı var", şeritte kanıt sayısı) → K-SNAP-1 listesine girdi (31 dosya)
+
+[adım 0b] prova klonu /tmp/borsai_snap_20261013/repo (git clone --local; .venv ve app/node_modules bağ; CARGO_TARGET_DIR klon dizininde, debug hedefi APFS kopyası)
+          A + B (arka uç) taslağı: BORSAI_REPO=<klon> cargo test --workspace -- --include-ignored --exact --skip (5 e2e)
+                                                               → 174 passed, 0 failed (ilk derlemede tek kırmızı: tests/build_embed.rs git beyaz liste
+                                                                 pini [&str; 4] ≠ [&str; 2] → K-PIN-SNAP, güncellendi)
+          A + B taslağı: npm test                              → 2 failed | 375 passed (377): sade_invoke.test.ts Analiz komut pini
+                 "Analiz (resmi): j varsayılanı …" ve "Analiz sekmesi her zaman listeyi açar …" (streak_view → arz_streak; bu görevin
+                 değişikliği) → güncellendi; + 7 yeni iddia → 384 passed
+          e2e.rs / stage*.rs'te kişisel modda boş görünüm bekleyen iddia: yok (sade_invoke "bağımsız mod … repo modu gerekli" anlık
+                 görüntüsüz yapılandırmayla aynen geçer)
+          A + B taslağı: bash app/scripts/test.sh              → cargo 176 passed / 0 failed; vitest 384; parity 8 passed; golden_unchanged YEŞİL
+          A + B taslağı: bash app/tests/e2e_personal_isolation.sh → YEŞİL
+          kirli ağaç sondası (klonda registry/ipos.csv + 1 bayt; geçici test, klonla silindi)
+                 → BUILD_INFO.git_status_snapshot = " M registry/ipos.csv\n"; git_status_models_scores = ""; build_dirty = true;
+                   manifest satırı registry/ipos.csv … 6805
+          klon silindi (rm -rf /tmp/borsai_snap_20261013)
+
+[adım A, commit öncesi] bash app/scripts/test.sh                → cargo 174 passed / 0 failed; vitest 377; parity 8 passed; golden_unchanged YEŞİL; EXIT 0
+[adım A, commit öncesi] gen_golden --check                      → {"checked": 35, "different": []}
+[adım A, commit öncesi] pytest test_5c tek başına (APP_TASKS satırı ile) → 1 passed
+[adım A, commit öncesi] .venv/bin/pytest -q -n 6 --dist loadgroup → 1 failed, 951 passed in 755.17s (0:12:35)
+          kırmızı: tests/test_faz8_break.py::test_14b_old_specs_models_and_cutoff_unchanged — yalnız commit'lenmemiş app/ (temizlik)
+[commit A 526b84f]
+[adım A] npx tauri build --bundles app,dmg (A klonu, release)   → BorsAi_0.1.0_aarch64.dmg 3 753 772 bayt; borsai-app 10 025 216 bayt
+                                                                 (önceki 3 562 647 / 8 720 512)
+
+[adım B, commit öncesi] bash app/scripts/test.sh                → cargo 176 passed / 0 failed; vitest 384; parity 8 passed; golden_unchanged YEŞİL; EXIT 0
+[adım B, commit öncesi] bash app/tests/e2e_personal_isolation.sh → YEŞİL (anlık görüntü 64 dosya, derleme 526b84f)
+[adım B] BORSAI_UPDATE_UI_FIXTURES=1 BORSAI_REPO=<repo> cargo test --test sade --test stage3 -- --include-ignored
+                                                               → 14 + 23 passed; 97 fikstür yeniden yazıldı; git diff -- app/tests/fixtures: 0 satır
+[adım B] görüntü koşusu (screens_v2.sh kalıbı; VITE_BORSAI_DEMO=1 VITE_BORSAI_DEMO_V2=1 VITE_BORSAI_DEMO_SNAP=1, BORSAI_DATA_DIR geçici,
+          repo ayarı boş) → snap_01_monitor, snap_02_analiz_netgl, snap_03_sicil, snap_04_model_performansi (sips -Z 1440);
+          Sicil giriş cümlesi düzeltmesinden sonra yeniden çekildi; asıl repo registry/ ve data/ sha listesi öncesiyle aynı (2246 dosya);
+          uygulama verisinde yalnız snapshot/526b84f
+[adım B] npm test (Sicil giriş cümlesi sonrası)                  → 24 dosya, 384 passed
+[adım B, commit öncesi] .venv/bin/pytest -q -n 6 --dist loadgroup → 1 failed, 951 passed in 814.88s (0:13:34) (yine yalnız test_14b, commit'lenmemiş app/)
+[commit B 4a945dd]
+[adım B sonrası, temiz app/] pytest test_14b + test_5c          → 2 passed in 4.49s
+[adım B sonrası] git diff --stat e6c2e07 -- borsai models scores registry data app/parity → boş
+[adım B] npx tauri build --bundles app,dmg                      → dmg 3 761 237 bayt; borsai-app 10 025 264 bayt
+
+[adım B2, orkestratör kararı: COMPLETENESS.csv gömülü kümeden çıkar]
+[adım B2, commit öncesi] bash app/scripts/test.sh               → cargo 176 passed / 0 failed; vitest 384; parity 8 passed; golden_unchanged YEŞİL; EXIT 0
+[adım B2, commit öncesi] bash app/tests/e2e_personal_isolation.sh → YEŞİL (anlık görüntü 63 dosya, 627365 bayt, derleme 4a945dd)
+[adım B2] gen_golden --check                                     → {"checked": 35, "different": []}
+[commit B2 73e76fa]
+[adım B2 sonrası] pytest test_14b + test_5c                      → 2 passed in 4.49s
+[adım B2 sonrası] .venv/bin/pytest -q -n 6 --dist loadgroup      → 952 passed in 722.68s (0:12:02)
+[adım B2] npx tauri build --bundles app,dmg                     → dmg 3 695 153 bayt; borsai-app 9 414 320 bayt
+
+[CI] proje sahibi push etti (origin/main = 73e76fa) ve gh workflow run build.yml --ref main çalıştırdı
+     koşu 38438091552 (73e76fa), YEŞİL: https://github.com/AhmetEmreOzumagi/borsai/actions/runs/38438091552
+     test-windows  9 dk 59 sn (17:22:18–17:32:17 UTC): cargo test --workspace --no-fail-fast → 166 passed / 0 failed / 12 ignored
+                   (yeni: registry_snapshot birim 2, plan_snapshot_pins_spec_and_mirrors_repo, plan_snapshot_scope_rules,
+                   snapshot_git_facts_match_embedded, snapshot_manifest_integrity, snapshot_one_byte_mutation_fails_closed,
+                   snapshot_mode_views_equal_repo_views, personal_snapshot_isolation: hepsi ok); npm test → 24 dosya, 384 passed;
+                   bilgi adımı: K-WIN-5 bilinen fark (9 fikstürde price_hint 1.1^k son hane, |Δ| ≤ 5.7e-14), golden_parity 1 passed
+     build-macos   2 dk 44 sn: BorsAi_0.1.0_aarch64.dmg → artefakt BorsAi-macos-73e76fa (zip 3 678 663 bayt)
+     build-windows 4 dk 43 sn: BorsAi_0.1.0_x64-setup.exe → artefakt BorsAi-windows-73e76fa (zip 2 895 768 bayt)
+     uyarılar: yalnız GitHub "Node.js 20 deprecated" bilgilendirmesi (actions/checkout@v4, setup-node@v4, upload-artifact@v4)
+
+[SON KABUL, HEAD 73e76fa + docs/app/SNAPSHOT_RAPOR.md ve bu dosya commit'siz]
+[son] bash app/scripts/test.sh                                   → cargo 176 passed / 0 failed; vitest 24 dosya, 384 test; parity 8 passed in 19.82s; golden_unchanged YEŞİL; EXIT 0
+[son] .venv/bin/python app/parity/gen_golden.py --check          → {"checked": 35, "different": []}
+[son] bash app/tests/e2e_personal_isolation.sh                   → YEŞİL; özet:
+       === 0. asıl repo registry sha listesi (öncesi) ===
+       === 1. geçici klon ===
+       === 2. beyan + kişisel kayıt + resmi kayıt görüntüleme ===
+       test personal_isolation ... E2E| U39 şerit BKRGY: j = Some(0), bozuldu = true, dosya durumu = FOUND (kaynak yalnız dosya)
+       E2E| U39 kişisel kayıt: <TMP>/appdata/scenarios/<ULID>.json
+       E2E| U39 resmi kayıt görüntülendi: registry/records/BKRGY/20260922T121936Z_459846d44a17.json (6 model)
+       E2E| U39 data/outcomes: 8 dosya, sha listesi aynı
+       E2E| U39 registry: 1865 dosya, sha listesi aynı
+       E2E| U39 scores: 4 dosya, sha listesi aynı
+       test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 6 filtered out; finished in 27.58s
+       === 2b. kişisel mod: gömülü sicil anlık görüntüsü (K-SNAP-4) ===
+       test personal_snapshot_isolation ... E2E| K-SNAP-4 anlık görüntü: 63 dosya, 627365 bayt, derleme 73e76fa, son sonuç Some("2026-09-30"), durum READY
+       E2E| K-SNAP-4 ekranlar: Monitör 7 arz, Sicil 7 arz / 31 kanıt, Performans 6 satır, kapı 12 çıktı; 46 okuma komutu
+       E2E| K-SNAP-4 anlık görüntü: 64 dosyanın sha'sı aynı; değişen yalnız ["scenarios/<ULID>.json"]
+       E2E| K-SNAP-4 repo git status -- registry data scores: "" (öncesiyle aynı)
+       test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 6 filtered out; finished in 2.83s
+       anlık görüntü dizini: <app_data_dir>/snapshot/73e76fa
+       uygulama verisi: yalnız snapshot/ ve scenarios/ (1 kişisel kayıt)
+       anlık görüntü: manifestteki 63 dosyanın sha256'sı diskteki dosyayla aynı (shasum); fazla dosya yok
+       anlık görüntüde observed_streak_user: YOK
+       === 3. geçici klon: sonuç, sicil ve skor ağaçları değişmedi ===
+       geçici klon git status --porcelain -- data registry scores: BOŞ
+       === 4. beyan yalnız uygulama verisinde ===
+       registry/ data/ scores/ içinde observed_streak_user: YOK
+       === 5. statik tarama: observed_streak_user'ı kim okuyor ===
+       app/src-tauri/src/commands/scenario.rs
+       app/src/api.ts
+       app/src/screens/results.ts
+       app/src/screens/scenarios.ts
+       app/src/state.ts
+       app/src/types.ts
+       scores / registry / freeze / parity okuyucuları beyan alanını okumuyor
+       === 6. ASIL REPO denetimi ===
+       asıl repo registry/ sha listesi öncesiyle BİREBİR AYNI (1865 dosya)
+       asıl repo git status --porcelain -- registry data scores: BOŞ
+       === e2e_personal_isolation: YEŞİL ===
+[son] .venv/bin/pytest -q (sıralı, ayrılan yok)                  → 952 passed in 1062.49s (0:17:42) (17:43:35–18:01:18 UTC; test.sh, gen_golden ve e2e aynı anda koştu)
+[son] hijyen (SEALED 64 kod, sözcük sınırıyla; th[bm]+8 hane)     → SNAPSHOT_RAPOR.md, bu dosya, FAZ9_SNAPSHOT.md, README.md, app/README.md: kasa 0, bülten 0 (5 dosya);
+                                                                 snap_01..04 OCR metni: kasa 0, bülten 0

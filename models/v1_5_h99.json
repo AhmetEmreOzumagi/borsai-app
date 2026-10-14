@@ -1,0 +1,531 @@
+{
+  "algorithm": "V1_5_RIDGE_LOGIT",
+  "code_version": {
+    "borsai_dirty": true,
+    "borsai_source_sha256": "17e7374070328e7dbb3a887605167f4670315bb15a4c5d819a4feaf65a4ca004",
+    "git_commit": "ff3eee64eadd70c61e8b2eff657fd98cb94a0d04"
+  },
+  "created_at": "2026-09-21T21:10:24+03:00",
+  "description": "V1.5 (BORSAI_V1_5_PREREG_20260814) portu: ufuk başına Ridge (getiri) ve L2-lojistik (P(kapanış > arz)), f1–f5, fold içi V1.3 ön işleme, iç LOOCV ile hiperparametre seçimi.",
+  "feature_definitions": {
+    "f1": "arz büyüklüğü TL: kaynakta bildirilen ipo_size_tl, yoksa ipo_price_tl × shares_offered; ön işlemede doğal log",
+    "f2": "shares_offered / post_ipo_share_capital × 100; 10 ondalık ROUND_HALF_UP",
+    "f3": "total_demand_multiple (toplam talep katı); eksik ≠ 0; ön işlemede fold içi p05/p95 winsor",
+    "f4": "capital_increase_shares / shares_offered × 100; 10 ondalık ROUND_HALF_UP",
+    "f5": "1 yalnız f3 eksikse, değilse 0"
+  },
+  "feature_ranges": {
+    "f1": {
+      "max": 6825000000.0,
+      "min": 290870000.0,
+      "n": 99,
+      "n_missing": 0
+    },
+    "f2": {
+      "max": 40.4749055586,
+      "min": 10.0314889789,
+      "n": 99,
+      "n_missing": 0
+    },
+    "f3": {
+      "max": 14.6,
+      "min": 1.0,
+      "n": 97,
+      "n_missing": 2
+    },
+    "f4": {
+      "max": 100.0,
+      "min": 22.2222222222,
+      "n": 99,
+      "n_missing": 0
+    }
+  },
+  "features": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5"
+  ],
+  "horizons": {
+    "D1": {
+      "p_up": {
+        "C": 0.1,
+        "coef": [
+          -0.36428382963139727,
+          0.23877686644002138,
+          0.3287337012433358,
+          -0.022775625369449548,
+          -0.4382447970187697
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "inner_loocv_brier": {
+          "0.01": 0.08794457753458179,
+          "0.1": 0.07364011134856921,
+          "1.0": 0.07395942142275601,
+          "10.0": 0.07599591527631845
+        },
+        "intercept": 2.4350011676663375,
+        "kind": "logit",
+        "n_class_0": 10,
+        "n_class_1": 89,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      },
+      "return": {
+        "alpha": 100.0,
+        "coef": [
+          -0.006109568237524172,
+          0.006166132603621725,
+          0.008170157909692003,
+          -0.0025110682879776573,
+          -0.008447090618803032
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "inner_loocv_mae": {
+          "0.1": 0.0323149343244045,
+          "1.0": 0.03225199890590781,
+          "10.0": 0.03174887515561959,
+          "100.0": 0.031000551778741777
+        },
+        "intercept": 0.07742476639192436,
+        "kind": "ridge"
+      }
+    },
+    "D10": {
+      "p_up": {
+        "C": 1.0,
+        "coef": [
+          -0.8953439956841492,
+          -0.1508079014501232,
+          1.1937477315188683,
+          0.047597332596937866,
+          -0.5782160495800999
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "inner_loocv_brier": {
+          "0.01": 0.19211519592618936,
+          "0.1": 0.16408381294871985,
+          "1.0": 0.16080961807541397,
+          "10.0": 0.16223247807848537
+        },
+        "intercept": 1.2918172222855577,
+        "kind": "logit",
+        "n_class_0": 29,
+        "n_class_1": 70,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      },
+      "return": {
+        "alpha": 0.1,
+        "coef": [
+          -0.24571421904799765,
+          -0.022304976104134507,
+          0.2819530660199487,
+          -0.04268861033015592,
+          -0.0752555359831123
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "inner_loocv_mae": {
+          "0.1": 0.4141915944832637,
+          "1.0": 0.4143867345891382,
+          "10.0": 0.41757551754607836,
+          "100.0": 0.46280919407446797
+        },
+        "intercept": 0.47251414813533843,
+        "kind": "ridge"
+      }
+    },
+    "D3": {
+      "p_up": {
+        "C": 1.0,
+        "coef": [
+          -0.9026022365876633,
+          0.41683200168938916,
+          1.4629751304098058,
+          -0.02624851340539738,
+          -0.6906216503738454
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "inner_loocv_brier": {
+          "0.01": 0.14275389306695493,
+          "0.1": 0.11213054398633883,
+          "1.0": 0.10433886087204969,
+          "10.0": 0.104820768142825
+        },
+        "intercept": 2.3979214454873223,
+        "kind": "logit",
+        "n_class_0": 19,
+        "n_class_1": 80,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      },
+      "return": {
+        "alpha": 10.0,
+        "coef": [
+          -0.04768735519777623,
+          0.02949105416832746,
+          0.06893564003099464,
+          0.0037043080464757776,
+          -0.03973259212944201
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "inner_loocv_mae": {
+          "0.1": 0.11784228157186202,
+          "1.0": 0.11774014975069673,
+          "10.0": 0.11704088868664426,
+          "100.0": 0.12345962667588396
+        },
+        "intercept": 0.20969361395763192,
+        "kind": "ridge"
+      }
+    },
+    "D5": {
+      "p_up": {
+        "C": 1.0,
+        "coef": [
+          -0.7792411710964781,
+          0.29944154826258784,
+          1.3790760236597681,
+          0.09621198526967044,
+          -0.6579458566407539
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "inner_loocv_brier": {
+          "0.01": 0.15920592860612826,
+          "0.1": 0.12954888499931302,
+          "1.0": 0.12471922896402808,
+          "10.0": 0.1267087958753957
+        },
+        "intercept": 1.9799616668844853,
+        "kind": "logit",
+        "n_class_0": 22,
+        "n_class_1": 77,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      },
+      "return": {
+        "alpha": 10.0,
+        "coef": [
+          -0.08967328061991792,
+          0.03377800355140635,
+          0.12209885946181304,
+          -0.007224869296256626,
+          -0.05861656578958688
+        ],
+        "columns": [
+          "f1",
+          "f2",
+          "f3",
+          "f4",
+          "f5"
+        ],
+        "inner_loocv_mae": {
+          "0.1": 0.19735223109295294,
+          "1.0": 0.19726726803927927,
+          "10.0": 0.1966874459249412,
+          "100.0": 0.21842977598139443
+        },
+        "intercept": 0.31207871117449043,
+        "kind": "ridge"
+      }
+    }
+  },
+  "input_policy": {
+    "f3_filter_status_conflict": "REFUSE",
+    "f3_missing": "REFUSE",
+    "f3_missing_reason": "AUDIT §1.2-d: f5 katsayısı yalnız 2 gözlemden (ALBTN, ENDAE) öğrenildi; f3'süz çağrı 'talep bilgisi henüz yok' durumunu 'hiç gelmedi' diye okur.",
+    "out_of_training_range": "WARN",
+    "return_output": "CLIP_TO_PHYSICAL_BOUNDS_AND_FLAG"
+  },
+  "model_id": "v1_5_h99",
+  "preprocessing": {
+    "columns": [
+      "f1",
+      "f2",
+      "f3",
+      "f4",
+      "f5"
+    ],
+    "dropped": {},
+    "f3_filter_mode": "NOT_SPECIFIED",
+    "f3_filter_mode_tie": false,
+    "f3_filter_nulled_tickers": [],
+    "f5_created": true,
+    "log_transform": [
+      "f1"
+    ],
+    "mean": {
+      "f1": 21.177452573847184,
+      "f2": 24.062689797143435,
+      "f3": 3.5509772626010103,
+      "f4": 74.95793126803636,
+      "f5": 0.020202020202020204
+    },
+    "medians": {
+      "f1": 1402170000.0,
+      "f2": 25.0,
+      "f3": 3.24,
+      "f4": 75.0
+    },
+    "n_train": 99,
+    "preprocessing_id": "V1_3_FOLD_LOCAL_11_STEP_PREPROCESSING+DETERMINISTIC_F3_MODE",
+    "std": {
+      "f1": 0.704076848861664,
+      "f2": 6.571072097185678,
+      "f3": 2.0402234582184606,
+      "f4": 17.751461498204904,
+      "f5": 0.14069079067862747
+    },
+    "winsor": {
+      "f3": {
+        "p05": 1.14870997716,
+        "p95": 8.332
+      }
+    }
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "schema_version": "borsai.model/1",
+  "spec": {
+    "algorithm": "V1_5_RIDGE_LOGIT",
+    "description": "V1.5 (BORSAI_V1_5_PREREG_20260814) portu: ufuk başına Ridge (getiri) ve L2-lojistik (P(kapanış > arz)), f1–f5, fold içi V1.3 ön işleme, iç LOOCV ile hiperparametre seçimi.",
+    "feature_version": "BORSAI_FEATURES_V1_5_PORT_1",
+    "features": [
+      "f1",
+      "f2",
+      "f3",
+      "f4",
+      "f5"
+    ],
+    "horizons": [
+      "D1",
+      "D3",
+      "D5",
+      "D10"
+    ],
+    "input_policy": {
+      "f3_filter_status_conflict": "REFUSE",
+      "f3_missing": "REFUSE",
+      "f3_missing_reason": "AUDIT §1.2-d: f5 katsayısı yalnız 2 gözlemden (ALBTN, ENDAE) öğrenildi; f3'süz çağrı 'talep bilgisi henüz yok' durumunu 'hiç gelmedi' diye okur.",
+      "out_of_training_range": "WARN",
+      "return_output": "CLIP_TO_PHYSICAL_BOUNDS_AND_FLAG"
+    },
+    "legacy_identity": "BORSAI_V1_5_PREREG_20260814",
+    "legacy_spec_sha256": "1245bf0f96c63cabdbd740cf043e9f3c58f8fc50af48472933c29e05dce211b1",
+    "logit": {
+      "C_grid": [
+        0.01,
+        0.1,
+        1.0,
+        10.0
+      ],
+      "class_weight": null,
+      "direction_rule": "UP iff p > 0.5",
+      "estimator": "sklearn.linear_model.LogisticRegression",
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "max_iter": 10000,
+      "minority_lt_2_policy": "NO_TUNING_FIXED_C_0.01",
+      "non_convergence_policy": "MODEL_NOT_FIT_OPTIMIZER_DID_NOT_CONVERGE",
+      "single_class_policy": "MODEL_NOT_FIT_SINGLE_CLASS",
+      "solver": "lbfgs",
+      "tie_break": "BIT_EXACT_TIE_TO_SMALLEST_C",
+      "tol": 1e-10,
+      "tuning": "INNER_LOOCV_RAW_UNCLIPPED_BRIER"
+    },
+    "min_train_n": 10,
+    "model_id": "v1_5_h99",
+    "preprocessing_id": "V1_3_FOLD_LOCAL_11_STEP_PREPROCESSING+DETERMINISTIC_F3_MODE",
+    "ridge": {
+      "alpha_grid": [
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "estimator": "sklearn.linear_model.Ridge",
+      "fit_intercept": true,
+      "solver": "svd",
+      "tie_break": "BIT_EXACT_TIE_TO_LARGEST_ALPHA",
+      "tuning": "INNER_LOOCV_MAE_RETURN_SPACE"
+    },
+    "runtime_pins": {
+      "joblib": "1.5.3",
+      "numpy": "2.5.2",
+      "python": "3.12",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "training": {
+      "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+      "description": "data/training_table.csv'nin 99 satırının hepsi, tablo sırasıyla (first_trading_date, ticker)",
+      "n": 99,
+      "set": "H99_ALL_ROWS"
+    }
+  },
+  "spec_sha256": "a37ab09d4048b5d6b50bd767a950e465c24c716eaf05beb47159bcfb5934bf47",
+  "training": {
+    "cutoff_date": "2026-08-19",
+    "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+    "first_trading_date_range": [
+      "2023-09-22",
+      "2026-08-06"
+    ],
+    "n": 99,
+    "set": "H99_ALL_ROWS",
+    "targets_sha256": {
+      "D1": "62a670993946893f771bdc39841bcd3af5bc39c2e639995db60adca214d718a4",
+      "D10": "48432418e0f2e48bbdac91b95c3b0ebbf4992ee8c7e9a1dccd22e2299067fb2d",
+      "D3": "0465300b74653802492ef186e82231a75d872ee3d0a888263f75dc914d21b8bf",
+      "D5": "a77b63e284b0c86167d8f8b1eaf820da8e8290b823a90711e1d3f758b55c56e9"
+    },
+    "tickers": [
+      "HATSN",
+      "DMRGD",
+      "MEKAG",
+      "DOFER",
+      "MHRGY",
+      "BORLS",
+      "TABGD",
+      "VRGYO",
+      "MARBL",
+      "BINHO",
+      "EKOS",
+      "AGROT",
+      "SKYMD",
+      "CATES",
+      "BEGYO",
+      "KBORU",
+      "SURGY",
+      "MEGMT",
+      "AVPGY",
+      "PATEK",
+      "BORSK",
+      "LMKDC",
+      "ALVES",
+      "OBAMS",
+      "ARTMS",
+      "MOGAN",
+      "ODINE",
+      "ENTRA",
+      "RGYAS",
+      "LILAK",
+      "KOTON",
+      "ALTNY",
+      "KOCMT",
+      "HRKET",
+      "ONRYT",
+      "OZYSR",
+      "ALKLC",
+      "YIGIT",
+      "HOROZ",
+      "SEGMN",
+      "EFORC",
+      "DCTTR",
+      "BAHKM",
+      "TCKRC",
+      "GUNDG",
+      "AHSGY",
+      "OZATD",
+      "CEMZY",
+      "DURKN",
+      "BINBN",
+      "CGCAM",
+      "SMRVA",
+      "ARMGD",
+      "EGEGY",
+      "GLRMK",
+      "AKFIS",
+      "MOPAS",
+      "SERNT",
+      "BIGEN",
+      "DSTKF",
+      "VSNMD",
+      "ENDAE",
+      "KLYPV",
+      "BALSU",
+      "BULGS",
+      "DOFRB",
+      "ECOGR",
+      "VAKFA",
+      "PAHOL",
+      "ZERGY",
+      "ARFYE",
+      "MEYSU",
+      "FRMPL",
+      "ZGYO",
+      "UCAYM",
+      "NETCD",
+      "AKHAN",
+      "BESTE",
+      "ATATR",
+      "EMPAE",
+      "GENKM",
+      "SVGYO",
+      "LXGYO",
+      "MCARD",
+      "AAGYO",
+      "EKDMR",
+      "BETAE",
+      "SOHOE",
+      "ORZAX",
+      "GOLDA",
+      "EKIM",
+      "ISVEA",
+      "SSAAT",
+      "SARAE",
+      "METEN",
+      "ALBTN",
+      "MASFN",
+      "KARCL",
+      "QUICK"
+    ],
+    "tickers_sha256": "dca11401234cc3a66a155fd1b546ff1f26ac09b519278011b1ee84a47896174f"
+  }
+}

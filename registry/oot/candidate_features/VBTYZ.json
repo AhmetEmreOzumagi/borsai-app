@@ -1,0 +1,247 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "VBTYZ",
+  "company": "VBT YAZILIM A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "49228",
+      "source_id": "KAP_947841_EK1",
+      "source_document": "KAP 947841 ek 1",
+      "source_published_at": "2021-07-07T17:26:01+03:00",
+      "source_sha256": "8772d7f80906aeaec82287686b0fa762a3a0cf737027a5ab26409cda4adf487c",
+      "source_path": "registry/oot/source_docs/VBTYZ/KAP_947841_ek1.pdf",
+      "quote": "Toplam: 49.228 8.000.000 100,00",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "dağıtım tablosu kişi sayısı; metin: 'Halka arza toplamda 49.228 yatırımcı katılmıştır.'",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "49.228",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "49082",
+        "domestic_institutional": "59",
+        "foreign_retail": "87",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_947841_EK1",
+      "source_document": "KAP 947841 ek 1",
+      "source_published_at": "2021-07-07T17:26:01+03:00",
+      "source_sha256": "8772d7f80906aeaec82287686b0fa762a3a0cf737027a5ab26409cda4adf487c",
+      "source_path": "registry/oot/source_docs/VBTYZ/KAP_947841_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar 49.082 7.965.665 99,57",
+        "Yurtiçi Kurumsal Yatırımcılar 59 18.041 0,23",
+        "Yurtdışı Bireysel Yatırımcılar 87 16.294 0,20",
+        "Yurtdışı Kurumsal Yatırımcılar 0 0 0,00"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "49.082",
+        "Yurtiçi Kurumsal": "59",
+        "Yurtdışı Bireysel": "87",
+        "Yurtdışı Kurumsal": "0"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '49.082', 'Yurtiçi Kurumsal': '59', 'Yurtdışı Bireysel': '87', 'Yurtdışı Kurumsal': '0'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır', grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "7965665",
+        "domestic_institutional": "18041",
+        "foreign_retail": "16294",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_947841_EK1",
+      "source_document": "KAP 947841 ek 1",
+      "source_published_at": "2021-07-07T17:26:01+03:00",
+      "source_sha256": "8772d7f80906aeaec82287686b0fa762a3a0cf737027a5ab26409cda4adf487c",
+      "source_path": "registry/oot/source_docs/VBTYZ/KAP_947841_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar 49.082 7.965.665 99,57",
+        "Yurtiçi Kurumsal Yatırımcılar 59 18.041 0,23",
+        "Yurtdışı Bireysel Yatırımcılar 87 16.294 0,20",
+        "Yurtdışı Kurumsal Yatırımcılar 0 0 0,00"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "7.965.665",
+        "Yurtiçi Kurumsal": "18.041",
+        "Yurtdışı Bireysel": "16.294",
+        "Yurtdışı Kurumsal": "0"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '7.965.665', 'Yurtiçi Kurumsal': '18.041', 'Yurtdışı Bireysel': '16.294', 'Yurtdışı Kurumsal': '0'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "99.57",
+      "source_id": "KAP_947841_EK1",
+      "source_document": "KAP 947841 ek 1",
+      "source_published_at": "2021-07-07T17:26:01+03:00",
+      "source_sha256": "8772d7f80906aeaec82287686b0fa762a3a0cf737027a5ab26409cda4adf487c",
+      "source_path": "registry/oot/source_docs/VBTYZ/KAP_947841_ek1.pdf",
+      "quote": "Yurtiçi Bireysel Yatırımcılar 49.082 7.965.665 99,57",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "99,57",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.23",
+      "source_id": "KAP_947841_EK1",
+      "source_document": "KAP 947841 ek 1",
+      "source_published_at": "2021-07-07T17:26:01+03:00",
+      "source_sha256": "8772d7f80906aeaec82287686b0fa762a3a0cf737027a5ab26409cda4adf487c",
+      "source_path": "registry/oot/source_docs/VBTYZ/KAP_947841_ek1.pdf",
+      "quote": "Yurtiçi Kurumsal Yatırımcılar 59 18.041 0,23",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,23",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.00",
+      "source_id": "KAP_947841_EK1",
+      "source_document": "KAP 947841 ek 1",
+      "source_published_at": "2021-07-07T17:26:01+03:00",
+      "source_sha256": "8772d7f80906aeaec82287686b0fa762a3a0cf737027a5ab26409cda4adf487c",
+      "source_path": "registry/oot/source_docs/VBTYZ/KAP_947841_ek1.pdf",
+      "quote": "Yurtdışı Kurumsal Yatırımcılar 0 0 0,00",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,00",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa Birincil Piyasada sabit fiyatla talep toplama ve satış yöntemi",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa Birincil Piyasada sabit fiyatla talep toplama ve satış yöntemi",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "belgede benzer ifade satış yöntemi olarak geçiyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”), dağıtım yöntemi değil; Codex alıntısı indirilmemiş KAP satırı başlığı; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Metro Yatırım Menkul Değerler A.Ş. ve A1 Capital Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_944368_EK1",
+      "source_document": "KAP 944368 ek 1",
+      "source_published_at": "2021-06-28T10:01:07+03:00",
+      "source_sha256": "655e46dbbe68a1a8694aabee4b7e7fb45901f2c44d3676db8d3ff75522ceabb4",
+      "source_path": "registry/oot/source_docs/VBTYZ/KAP_944368_ek1.pdf",
+      "quote": "aracılık edecek Metro Yatırım Menkul Değerler A.S.'nin www.metroyatirim.com.tr ve A1 Capital Yatırım Menkul Değerler A.Ş.?' nin",
+      "note": "TSSD (OCR) iki aracı kurum sayıyor; sonuç bildirimini Metro Yatırım yayımladı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": "METRO YATIRIM MENKUL DEĞERLER A.Ş.",
+      "codex_check": {
+        "codex_value": "METRO YATIRIM MENKUL DEĞERLER A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "TSSD'de aracı kurum olarak yazılı (yanında A1 Capital de var)"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR) penceresinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD penceresinde yok",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_949088",
+      "source_document": "KAP 949088",
+      "source_published_at": "2021-07-08T18:29:06+03:00",
+      "source_sha256": "8ba6c01b68053651c5ea3daf6e05cc4865f6cb5735651efd6df6d39b8e783925",
+      "source_path": "registry/oot/source_docs/VBTYZ/KAP_949088_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_949088",
+      "source_document": "KAP 949088",
+      "source_published_at": "2021-07-08T18:29:06+03:00",
+      "source_sha256": "8ba6c01b68053651c5ea3daf6e05cc4865f6cb5735651efd6df6d39b8e783925",
+      "source_path": "registry/oot/source_docs/VBTYZ/KAP_949088_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_949088": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 949088",
+      "published_at": "2021-07-08T18:29:06+03:00",
+      "sha256": "8ba6c01b68053651c5ea3daf6e05cc4865f6cb5735651efd6df6d39b8e783925",
+      "path": "registry/oot/source_docs/VBTYZ/KAP_949088_bildirim.pdf"
+    },
+    "KAP_947841_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 947841 ek 1",
+      "published_at": "2021-07-07T17:26:01+03:00",
+      "sha256": "8772d7f80906aeaec82287686b0fa762a3a0cf737027a5ab26409cda4adf487c",
+      "path": "registry/oot/source_docs/VBTYZ/KAP_947841_ek1.pdf"
+    },
+    "KAP_944368_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 944368 ek 1",
+      "published_at": "2021-06-28T10:01:07+03:00",
+      "sha256": "655e46dbbe68a1a8694aabee4b7e7fb45901f2c44d3676db8d3ff75522ceabb4",
+      "path": "registry/oot/source_docs/VBTYZ/KAP_944368_ek1.pdf"
+    }
+  }
+}

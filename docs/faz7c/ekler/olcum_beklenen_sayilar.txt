@@ -1,0 +1,47 @@
+## 1. Ek satış bayrağı
+  '0' -> 0; '35000000' -> 1; '' -> ADDITIONAL_SALE_MISSING; None -> ADDITIONAL_SALE_MISSING; 'DATA_NOT_FOUND' -> ADDITIONAL_SALE_MISSING; '-1' -> INPUT_NEGATIVE
+  bayrak = 1: H99 6 / 95 dolu alan; açık küme 13 / 70
+## 2. Eğitim kümeleri
+  H99_F3_AS_PRESENT: n 94, D10 olay 26, D5 olay 18, kohort {'H99': 94, 'OOT_OPEN': 0}
+  H99_PLUS_OOT_OPEN_F3_AS_PRESENT: n 161, D10 olay 39, D5 olay 29, kohort {'H99': 94, 'OOT_OPEN': 67}
+  H99_PLUS_OOT_OPEN_AS_PRESENT: n 165, D10 olay 40, D5 olay 30, kohort {'H99': 95, 'OOT_OPEN': 70}
+## 3. Tablolar ve kasa kodu
+  training_table.csv b307cd0e3a015f5d251512541007c5b16f8458224ab047e493c01551ccda7fb5 (data_version.json: b307cd0e3a015f5d251512541007c5b16f8458224ab047e493c01551ccda7fb5)
+  training_table_v2.csv 5adda8b2003d0d10a7245e06cb6bc3b126260c3a84dabc27cac966b781da3e6a (data_version_v2.json: 5adda8b2003d0d10a7245e06cb6bc3b126260c3a84dabc27cac966b781da3e6a)
+  data_version.json a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977 (spec a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977)
+  data_version_v2.json 2ee8d51be3f026ad05ff7b4894f9512809556b3da2fd2d0b06256b7de5ee525a (spec 2ee8d51be3f026ad05ff7b4894f9512809556b3da2fd2d0b06256b7de5ee525a)
+  data/ çalışma ağacı değişikliği: 0 satır
+  kohort bekçisi (data/, 64 kasa kodu): 0 sorun
+## 4. f1r (ceiling_hazard_v1_real / _pooled ile)
+  fall_d10_v0_h99: 94/94 satırda f1r ham değeri bit-eşit (Decimal metni)
+  fall_d10_v0_pooled: 161/161 satırda f1r ham değeri bit-eşit (Decimal metni)
+## 5. @ZERO
+  D10: p_up 0.7577639751552795; float(1 − Fraction(39, 161)) = 0.7577639751552795; bit-eşit True
+  D5: p_up 0.8198757763975155; float(1 − Fraction(29, 161)) = 0.8198757763975155; bit-eşit True
+## 6. Fold planları
+  fall_d10_v0_h99 D5: test arzı 94, skorlanabilir 82, yakın dönem 75 (22 ay), f3 dışlamalı fold 0 (yakın dönem 0), sızıntı D_h 0, D10 94
+  fall_d10_v0_h99 D10: test arzı 94, skorlanabilir 82, yakın dönem 75 (22 ay), f3 dışlamalı fold 0 (yakın dönem 0), sızıntı D_h 0, D10 0
+  fall_d10_v0_pooled D5: test arzı 94, skorlanabilir 94, yakın dönem 75 (22 ay), f3 dışlamalı fold 39 (yakın dönem 20), sızıntı D_h 0, D10 98
+  fall_d10_v0_pooled D10: test arzı 94, skorlanabilir 94, yakın dönem 75 (22 ay), f3 dışlamalı fold 41 (yakın dönem 22), sızıntı D_h 0, D10 0
+  fall_d10_v0_addsale D5: test arzı 95, skorlanabilir 95, yakın dönem 76 (22 ay), f3 dışlamalı fold 0 (yakın dönem 0), sızıntı D_h 0, D10 103
+  fall_d10_v0_addsale D10: test arzı 95, skorlanabilir 95, yakın dönem 76 (22 ay), f3 dışlamalı fold 0 (yakın dönem 0), sızıntı D_h 0, D10 0
+  fall_d10_v0_pooled@ZERO D5: test arzı 94, skorlanabilir 94, yakın dönem 75 (22 ay), f3 dışlamalı fold 39 (yakın dönem 20), sızıntı D_h 0, D10 98
+  fall_d10_v0_pooled@ZERO D10: test arzı 94, skorlanabilir 94, yakın dönem 75 (22 ay), f3 dışlamalı fold 41 (yakın dönem 22), sızıntı D_h 0, D10 0
+  yakın dönem D10 ticker'ları h99 = pooled: True (75)
+## 7. Karşılaştırıcılar
+  base_rate: pin 898d2d849cc2…, dosya 898d2d849cc2…, Faz 1A MANIFEST 898d2d849cc2…
+  v1_5_h99: pin 5c56da37bf7c…, dosya 5c56da37bf7c…, Faz 1A MANIFEST 5c56da37bf7c…
+  V1.5 D10 Brier ledger'dan 0.18834296523191446 (81 fold); günlük 0.18834296523191446 (n 81); |Δ| = 0
+## 8. Bayt-eşitlik
+  macos_golden: 7/7 dosya SHA256SUMS ile aynı; çalışma ağacı değişikliği 0
+  macos_golden_faz1b: 19/19 dosya SHA256SUMS ile aynı; çalışma ağacı değişikliği 0
+  macos_golden_faz4: 3/3 dosya SHA256SUMS ile aynı; çalışma ağacı değişikliği 0
+  macos_golden_faz5: 2/2 dosya SHA256SUMS ile aynı; çalışma ağacı değişikliği 0
+  macos_golden_faz7: 10/10 dosya SHA256SUMS ile aynı; çalışma ağacı değişikliği 0
+  gen_golden --check: {"checked": 25, "different": []}
+## 9. Günlük (commit B)
+  fall_d10_v0_h99: context faz7c_golden, spec_document_sha256 = SPEC_C_V0.md True, decisions KARARLAR_C True, veri sürümü H99, borsai_dirty False
+  fall_d10_v0_pooled: context faz7c_golden, spec_document_sha256 = SPEC_C_V0.md True, decisions KARARLAR_C True, veri sürümü v2, borsai_dirty False
+  fall_d10_v0_addsale: context faz7c_golden, spec_document_sha256 = SPEC_C_V0.md True, decisions KARARLAR_C True, veri sürümü v2, borsai_dirty False
+  fall_d10_v0_pooled@ZERO: context faz7c_golden, spec_document_sha256 = SPEC_C_V0.md True, decisions KARARLAR_C True, veri sürümü v2, borsai_dirty False
+  exploration satırı 2054; kaynak sha ['25edc9a6e40c59a518cf54fa5a28fb4fe9d891bbac511cfa2fdb7f2b5e046f5b'] (dosya 25edc9a6e40c59a518cf54fa5a28fb4fe9d891bbac511cfa2fdb7f2b5e046f5b); CSV satırlarıyla aynı True

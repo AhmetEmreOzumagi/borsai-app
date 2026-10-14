@@ -1,0 +1,90 @@
+# Sıra kanıtları; alındığı an: 2026-09-26T20:31:32Z; HEAD 4e081d8
+
+## 1. Şartname push kanıtı < commit A zamanı
+$ registry/push_proofs/6a16c160e0149fd868dd11b877b3ab050634499d.json -> created_at, proven_commit_sha, method
+{'created_at': '2026-09-25T18:09:45Z', 'proven_commit_sha': '6a16c160e0149fd868dd11b877b3ab050634499d', 'method': 'GITHUB_COMMIT_STATUS_CREATED_AT', 'repo_slug': 'AhmetEmreOzumagi/borsai'}
+$ TZ=UTC git log --format="%h %ci | UTC %cd | %s" --date=format-local:%Y-%m-%dT%H:%M:%SZ -6
+4e081d8 2026-09-26 23:28:04 +0300 | UTC 2026-09-26T20:28:04Z | BORSAI_FAZ7_PROSPECTUS: verified prospectus fields for the 135 pre-H99 members (7 fields, source manifests, verification report)
+f5d7609 2026-09-26 22:57:11 +0300 | UTC 2026-09-26T19:57:11Z | BORSAI_FAZ7_REPORT: implementation and backtest report
+70b67d1 2026-09-26 22:45:08 +0300 | UTC 2026-09-26T19:45:08Z | BORSAI_FAZ7_B: ceiling hazard v1 walk-forward backtest, near-era cells, golden ledgers and MODELS.md Faz 7 section (not frozen)
+2a21a96 2026-09-26 03:10:01 +0300 | UTC 2026-09-26T00:10:01Z | BORSAI_FAZ7_A: ceiling hazard v1 code, CPI series, training table v2, rules and tests, no backtest results
+41b7e7d 2026-09-25 21:09:45 +0300 | UTC 2026-09-25T18:09:45Z | BORSAI_PUSH_PROOFS: Faz 7 hazard v1 spec (6a16c16)
+6a16c16 2026-09-25 19:51:25 +0300 | UTC 2026-09-25T16:51:25Z | BORSAI_FAZ7_SPEC: ceiling hazard v1 family spec with pre-registered near-era, vault and live tests
+=> kanıt 2026-09-25T18:09:45Z < A (2a21a96) 2026-09-26T00:10:01Z: EVET
+
+## 2. Şartname değişmedi
+$ git diff 6a16c16 f5d7609 -- docs/specs_faz7/SPEC_HAZARD_V1.md | wc -c
+       0
+$ sha256 6a16c16 / HEAD:
+25229cea8f6f235db6562f3dee4992e6b8e22e0cbc23b44b25eeb6d2704d0944
+25229cea8f6f235db6562f3dee4992e6b8e22e0cbc23b44b25eeb6d2704d0944
+$ git log -- docs/specs_faz7/KARARLAR.md (tek commit beklenir) ve diff 2a21a96..f5d7609 | wc -c
+2a21a96 BORSAI_FAZ7_A: ceiling hazard v1 code, CPI series, training table v2, rules and tests, no backtest results
+       0
+
+## 3. Commit A ağacında sonuç yok
+$ git ls-tree -r --name-only 2a21a96 -- tests/reference/macos_golden_faz7 | wc -l
+       0
+$ git show 2a21a96:docs/MODELS.md | grep -c "Faz 7"
+0
+$ git show 2a21a96:experiments/log.jsonl | grep -c faz7_golden ; grep -c ceiling_hazard_v1
+0
+0
+$ git show --stat 70b67d1 | grep -E "log.jsonl|MODELS.md|macos_golden_faz7" | head -4
+    BORSAI_FAZ7_B: ceiling hazard v1 walk-forward backtest, near-era cells, golden ledgers and MODELS.md Faz 7 section (not frozen)
+ docs/MODELS.md                                     | 135 +++++
+ experiments/log.jsonl                              |   4 +
+ tests/reference/macos_golden_faz7/MANIFEST.json    | 119 ++++
+
+## 4. Kod ve veri sonuçtan sonra değişmedi
+$ git diff 2a21a96 f5d7609 -- borsai data | wc -c
+       0
+$ git diff --stat 2a21a96 f5d7609 (B ve R commitlerinde değişen yollar)
+ docs/MODELS.md                                     | 135 +++++
+ docs/faz7/IMPL_RAPOR.md                            | 387 +++++++++++++
+ docs/faz7/ekler/impl_test_runs.txt                 |  36 ++
+ docs/faz7/ekler/olcum_beklenen_sayilar.py          | 222 ++++++++
+ docs/faz7/ekler/olcum_beklenen_sayilar.txt         |  66 +++
+ experiments/log.jsonl                              |   4 +
+ tests/faz7_support.py                              |   7 +
+ tests/reference/macos_golden_faz7/MANIFEST.json    | 119 ++++
+ tests/reference/macos_golden_faz7/SHA256SUMS       |  10 +
+ .../base_km_expanding__pooled_fold_ledger.csv      |  98 ++++
+ .../base_km_last10__pooled_fold_ledger.csv         |  98 ++++
+ .../ceiling_hazard_v1_clip_final_fit_preview.json  | 467 ++++++++++++++++
+ .../ceiling_hazard_v1_clip_fold_ledger.csv         |  88 +++
+ ...ing_hazard_v1_pooled@INF_final_fit_preview.json | 424 +++++++++++++++
+ .../ceiling_hazard_v1_pooled@INF_fold_ledger.csv   |  98 ++++
+ ...ceiling_hazard_v1_pooled_final_fit_preview.json | 599 +++++++++++++++++++++
+ .../ceiling_hazard_v1_pooled_fold_ledger.csv       |  98 ++++
+ .../ceiling_hazard_v1_real_final_fit_preview.json  | 497 +++++++++++++++++
+ .../ceiling_hazard_v1_real_fold_ledger.csv         |  88 +++
+ tests/test_faz5_live.py                            |  16 +-
+ tests/test_faz7_golden.py                          | 318 +++++++++++
+ 21 files changed, 3872 insertions(+), 3 deletions(-)
+
+## 5. Günlükteki resmi koşular: git_commit, borsai_dirty, şartname belgesi sha, veri sürümü
+ceiling_hazard_v1_clip 2a21a96 dirty False 2026-09-26T03:21:05+03:00 spec_doc 25229cea8f6f dv a0c7d082dacd
+ceiling_hazard_v1_real 2a21a96 dirty False 2026-09-26T03:21:14+03:00 spec_doc 25229cea8f6f dv a0c7d082dacd
+ceiling_hazard_v1_pooled 2a21a96 dirty False 2026-09-26T03:21:24+03:00 spec_doc 25229cea8f6f dv 2ee8d51be3f0
+ceiling_hazard_v1_pooled@INF 2a21a96 dirty False 2026-09-26T03:22:00+03:00 spec_doc 25229cea8f6f dv 2ee8d51be3f0
+MANIFEST 2a21a96 dirty False 2026-09-26T03:22:09+03:00
+
+## 6. T2: app altın vektörleri ve eski altın dizinler
+$ .venv/bin/python app/parity/gen_golden.py --check
+{"checked": 25, "different": []}
+$ git diff --stat 6a16c16 f5d7609 -- tests/reference/macos_golden tests/reference/macos_golden_faz1b tests/reference/macos_golden_faz4 tests/reference/macos_golden_faz5 app/parity/golden
+ app/parity/golden/MANIFEST.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ git diff 6a16c16 f5d7609 -- app/parity/golden/MANIFEST.json (yalnız pin satırı)
+-    "borsai/predict_hazard.py": "a1523ac810a2a800f5583f347f1c248fe9d7fc7eaa567873b9b3d8858e7b2518",
++    "borsai/predict_hazard.py": "6ceeeb46ff8576ee7ee020b2155b19ed8f2fdf38f5a91a80345fb7ddec184cd9",
+$ v0 / @INF / PB tavan ledger sha256 (ilk 12) ve pinler 976b4dcea981 / 90b610463de4:
+976b4dcea981  tests/reference/macos_golden_faz1b/ceiling_hazard_v0_fold_ledger.csv
+90b610463de4  tests/reference/macos_golden_faz1b/ceiling_hazard_v0@INF_fold_ledger.csv
+c92ce859ac67  tests/reference/macos_golden_faz1b/pb_ceiling_v0_fold_ledger.csv
+cd7d7312777c  tests/reference/macos_golden_faz1b/pb_ceiling_v0@INF_fold_ledger.csv
+
+## 7. Açık küme sonuçları (S5 77b54f7) v1 kodundan (2a21a96) önce: v1 için OOT_RETRO (§7.2)
+77b54f7 ata(2a21a96) rc=0 (0 = evet)
+2a21a96 ata(77b54f7) rc=1 (1 = hayır -> frozen_ok yanlış -> OOT_RETRO)

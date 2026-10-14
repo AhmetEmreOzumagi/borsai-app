@@ -1,0 +1,143 @@
+{
+ "netgl_replay_seconds": 5.3,
+ "netgl_replay_predictions": [
+  {
+   "horizon": "D1",
+   "n_train": "99",
+   "ridge_alpha": "100",
+   "ridge_predicted_return": "0.076954688088716278",
+   "ridge_predicted_price_tl": "27.483883640024036",
+   "logistic_c": "0.10000000000000001",
+   "p_up": "0.9129597115025806",
+   "direction": "UP",
+   "confidence": "Çok düşük",
+   "prediction_interval": "DISABLED_IN_V1_1_PILOT",
+   "risk_label": "NOT_EMITTED_NO_FROZEN_CANDIDATE_RISK_FORMULA_IN_V1_5_CONTRACT"
+  },
+  {
+   "horizon": "D3",
+   "n_train": "99",
+   "ridge_alpha": "10",
+   "ridge_predicted_return": "0.18466171832930664",
+   "ridge_predicted_price_tl": "30.232567051763905",
+   "logistic_c": "1",
+   "p_up": "0.85749530759852677",
+   "direction": "UP",
+   "confidence": "Çok düşük",
+   "prediction_interval": "DISABLED_IN_V1_1_PILOT",
+   "risk_label": "NOT_EMITTED_NO_FROZEN_CANDIDATE_RISK_FORMULA_IN_V1_5_CONTRACT"
+  },
+  {
+   "horizon": "D5",
+   "n_train": "99",
+   "ridge_alpha": "10",
+   "ridge_predicted_return": "0.25515244136301285",
+   "ridge_predicted_price_tl": "32.031490303584086",
+   "logistic_c": "1",
+   "p_up": "0.79701081974860621",
+   "direction": "UP",
+   "confidence": "Çok düşük",
+   "prediction_interval": "DISABLED_IN_V1_1_PILOT",
+   "risk_label": "NOT_EMITTED_NO_FROZEN_CANDIDATE_RISK_FORMULA_IN_V1_5_CONTRACT"
+  },
+  {
+   "horizon": "D10",
+   "n_train": "99",
+   "ridge_alpha": "0.10000000000000001",
+   "ridge_predicted_return": "0.25833537523396033",
+   "ridge_predicted_price_tl": "32.11271877597067",
+   "logistic_c": "1",
+   "p_up": "0.60228870212907804",
+   "direction": "UP",
+   "confidence": "Çok düşük",
+   "prediction_interval": "DISABLED_IN_V1_1_PILOT",
+   "risk_label": "NOT_EMITTED_NO_FROZEN_CANDIDATE_RISK_FORMULA_IN_V1_5_CONTRACT"
+  }
+ ],
+ "manual_predictions": [
+  {
+   "horizon": "D1",
+   "n_train": "99",
+   "ridge_alpha": "100",
+   "ridge_predicted_return": "0.08585824227862536",
+   "ridge_predicted_price_tl": "21.717164845572508",
+   "logistic_c": "0.10000000000000001",
+   "p_up": "0.94749252611925694",
+   "direction": "UP"
+  },
+  {
+   "horizon": "D3",
+   "n_train": "99",
+   "ridge_alpha": "10",
+   "ridge_predicted_return": "0.29483397951546364",
+   "ridge_predicted_price_tl": "25.896679590309269",
+   "logistic_c": "1",
+   "p_up": "0.98539601291580037",
+   "direction": "UP"
+  },
+  {
+   "horizon": "D5",
+   "n_train": "99",
+   "ridge_alpha": "10",
+   "ridge_predicted_return": "0.47204696423107972",
+   "ridge_predicted_price_tl": "29.440939284621592",
+   "logistic_c": "1",
+   "p_up": "0.97672289740642648",
+   "direction": "UP"
+  },
+  {
+   "horizon": "D10",
+   "n_train": "99",
+   "ridge_alpha": "0.10000000000000001",
+   "ridge_predicted_return": "0.91284055915090123",
+   "ridge_predicted_price_tl": "38.256811183018023",
+   "logistic_c": "1",
+   "p_up": "0.96081766434919269",
+   "direction": "UP"
+  }
+ ],
+ "manual_candidate_feature_hash": "a3a02ec59015032dde3427cc05e6f5b24665fabfde69843a2ef5dd7d1262f022",
+ "manual_contract_top_keys": [
+  "case_id",
+  "company",
+  "computation_provenance",
+  "contamination_check",
+  "first_trading_date",
+  "frozen_input_sha256",
+  "governing_spec",
+  "prediction_classification",
+  "prediction_local_date",
+  "prediction_timestamp_istanbul",
+  "predictions",
+  "pretrade_evidence",
+  "pretrade_source",
+  "task_id",
+  "ticker",
+  "training_eligibility"
+ ],
+ "refusal_probes": {
+  "f3_missing": "GateFailure: POST_BOOKBUILD_V1_5_BLOCKED_F3_NOT_AVAILABLE: official_total_demand_multiple not available",
+  "f3_zero": "GateFailure: POST_BOOKBUILD_V1_5_BLOCKED_F3_NOT_AVAILABLE: official_total_demand_multiple must be > 0",
+  "secondary_started": "GateFailure: POST_BOOKBUILD_PRE_LISTING_WINDOW_MISSED: secondary_trading_start_status='STARTED'",
+  "outcome_observed": "GateFailure: FAIL_CONTAMINATION: a D1/D3/D5/D10 outcome has already been observed",
+  "cap_inc_numeric_zero": "GateFailure: POST_BOOKBUILD_V1_5_INPUT_CONTRACT_INCOMPLETE: missing/empty required fields: ['capital_increase_shares']",
+  "cap_inc_string_zero_gate_only": "PASSED_GATES",
+  "future_prediction_ts": "GateFailure: POST_BOOKBUILD_V1_5_TIMESTAMP_INVALID: prediction_timestamp is in the future relative to system clock",
+  "source_after_prediction": "GateFailure: SOURCES_CONFLICT: source_publication_timestamp is after prediction_timestamp",
+  "missing_first_trading_date": "GateFailure: POST_BOOKBUILD_V1_5_INPUT_CONTRACT_INCOMPLETE: missing required field: first_trading_date (needed by the TRUE_LIVE packet schema; PostBookbuildInputContract its"
+ },
+ "no_flag": "ComputationStop: HISTORICAL99_OUTCOME_READ_NOT_AUTHORIZED: fitting V1.5 requires the training tickers' realized R_h/Y_h (candidate_models",
+ "h99_ticker": "FreezeStop: QUICK found in frozen HISTORICAL99 cohort -- contamination",
+ "lowlevel_f3_none_ridge": {
+  "status": "FIT_OK",
+  "features": [
+   "f1",
+   "f2",
+   "f3",
+   "f4",
+   "f5"
+  ],
+  "alpha": 100.0,
+  "has_prediction": true
+ }
+}

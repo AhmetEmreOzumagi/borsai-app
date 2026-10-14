@@ -1,0 +1,253 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "UNLU",
+  "company": "Ünlü Yatırım Holding A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "20792",
+      "source_id": "KAP_939485_EK1",
+      "source_document": "KAP 939485 ek 1",
+      "source_published_at": "2021-06-02T07:58:01+03:00",
+      "source_sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf",
+      "quote": "Toplam 45.533.009 % 100,00 21.198 53.083.351 % 100,00 20.792 45.533.009 % 100,00",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 21.198; dağıtım yapılan 20.792",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "21.198",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "21.198",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex talep eden sayısını almış (belgede var); fields'ta dağıtım yapılan 20.792 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "20717",
+        "domestic_institutional": "71",
+        "foreign_institutional": "4"
+      },
+      "source_id": "KAP_939485_EK1",
+      "source_document": "KAP 939485 ek 1",
+      "source_published_at": "2021-06-02T07:58:01+03:00",
+      "source_sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 22.766.505 %50,00 21.123 19.675.126 %37,06 20.717 19.643.745 %43,14",
+        "Yurt İçi Kurumsal 18.213.204 %40,00 71 24.638.521 %46,41 71 21.150.134 %46,45",
+        "Yurt Dışı Kurumsal 4.553.300 %10,00 4 8.769.704 %16,52 4 4.739.130 %10,41"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 21.123, yurt içi kurumsal 71, yurt dışı kurumsal 4",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "21.123",
+        "Yurt İçi Kurumsal": "71",
+        "Yurt Dışı Kurumsal": "4"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '21.123', 'Yurt İçi Kurumsal': '71', 'Yurt Dışı Kurumsal': '4'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex talep eden sayılarını almış; fields'ta dağıtım yapılan (bireysel 20.717; diğerleri aynı)"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "0.864213721",
+      "source_id": "KAP_939485_EK1",
+      "source_document": "KAP 939485 ek 1",
+      "source_published_at": "2021-06-02T07:58:01+03:00",
+      "source_sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 22.766.505 %50,00 21.123 19.675.126 %37,06 20.717 19.643.745 %43,14",
+      "derived": true,
+      "formula": "grup talebi 19.675.126 lot / planlanan tahsisat 22.766.505 lot",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "1.3527834531",
+      "source_id": "KAP_939485_EK1",
+      "source_document": "KAP 939485 ek 1",
+      "source_published_at": "2021-06-02T07:58:01+03:00",
+      "source_sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 18.213.204 %40,00 71 24.638.521 %46,41 71 21.150.134 %46,45",
+      "derived": true,
+      "formula": "grup talebi 24.638.521 lot / planlanan tahsisat 18.213.204 lot",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "1.9260105857",
+      "source_id": "KAP_939485_EK1",
+      "source_document": "KAP 939485 ek 1",
+      "source_published_at": "2021-06-02T07:58:01+03:00",
+      "source_sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal 4.553.300 %10,00 4 8.769.704 %16,52 4 4.739.130 %10,41",
+      "derived": true,
+      "formula": "grup talebi 8.769.704 lot / planlanan tahsisat 4.553.300 lot",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "19643745",
+        "domestic_institutional": "21150134",
+        "foreign_institutional": "4739130"
+      },
+      "source_id": "KAP_939485_EK1",
+      "source_document": "KAP 939485 ek 1",
+      "source_published_at": "2021-06-02T07:58:01+03:00",
+      "source_sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 22.766.505 %50,00 21.123 19.675.126 %37,06 20.717 19.643.745 %43,14",
+        "Yurt İçi Kurumsal 18.213.204 %40,00 71 24.638.521 %46,41 71 21.150.134 %46,45",
+        "Yurt Dışı Kurumsal 4.553.300 %10,00 4 8.769.704 %16,52 4 4.739.130 %10,41"
+      ],
+      "unit": "lot",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "19.643.745",
+        "Yurt İçi Kurumsal": "21.150.134",
+        "Yurt Dışı Kurumsal": "4.739.130"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '19.643.745', 'Yurt İçi Kurumsal': '21.150.134', 'Yurt Dışı Kurumsal': '4.739.130'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "43.14",
+      "source_id": "KAP_939485_EK1",
+      "source_document": "KAP 939485 ek 1",
+      "source_published_at": "2021-06-02T07:58:01+03:00",
+      "source_sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 22.766.505 %50,00 21.123 19.675.126 %37,06 20.717 19.643.745 %43,14",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "43,14",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "46.45",
+      "source_id": "KAP_939485_EK1",
+      "source_document": "KAP 939485 ek 1",
+      "source_published_at": "2021-06-02T07:58:01+03:00",
+      "source_sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 18.213.204 %40,00 71 24.638.521 %46,41 71 21.150.134 %46,45",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "46,45",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "10.41",
+      "source_id": "KAP_939485_EK1",
+      "source_document": "KAP 939485 ek 1",
+      "source_published_at": "2021-06-02T07:58:01+03:00",
+      "source_sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal 4.553.300 %10,00 4 8.769.704 %16,52 4 4.739.130 %10,41",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "10,41",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama” yöntemi); dağıtım yöntemi adlandırılmıyor; TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": null,
+      "missing_reason": "sonuç eki imza/aracı kurum adı içermiyor; yalnız KAP bildirim başlığında gönderen YAPI KREDİ YATIRIM MENKUL DEĞERLER A.Ş. (aracılık rolü yazılı değil); TSSD pencereleri boş",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "YAPI KREDİ YATIRIM MENKUL DEĞERLER  A.Ş.",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "YAPI KREDİ YATIRIM MENKUL DEĞERLER  A.Ş.",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "yalnız KAP bildiriminin gönderen kurumu; belge metninde aracılık rolü yok, alan null"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş; sonuç belgesinde yok",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_939957",
+      "source_document": "KAP 939957",
+      "source_published_at": "2021-06-03T18:23:42+03:00",
+      "source_sha256": "2a1014046efce5cd12b639ee4d957201788aa0505d2e4300d42fee9ec3706b20",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939957_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_939957",
+      "source_document": "KAP 939957",
+      "source_published_at": "2021-06-03T18:23:42+03:00",
+      "source_sha256": "2a1014046efce5cd12b639ee4d957201788aa0505d2e4300d42fee9ec3706b20",
+      "source_path": "registry/oot/source_docs/UNLU/KAP_939957_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_939957": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 939957",
+      "published_at": "2021-06-03T18:23:42+03:00",
+      "sha256": "2a1014046efce5cd12b639ee4d957201788aa0505d2e4300d42fee9ec3706b20",
+      "path": "registry/oot/source_docs/UNLU/KAP_939957_bildirim.pdf"
+    },
+    "KAP_939485_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 939485 ek 1",
+      "published_at": "2021-06-02T07:58:01+03:00",
+      "sha256": "67f28eeba59046e9e583dd8612720326f66339259518b1c9bef2a23205e023d4",
+      "path": "registry/oot/source_docs/UNLU/KAP_939485_ek1.pdf"
+    }
+  }
+}

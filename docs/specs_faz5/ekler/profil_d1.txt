@@ -1,0 +1,167 @@
+# D1 tek değişkenli profil — H99, yalnız 1. seans alanları (thb_raw_*/thm_raw_*), Decimal ham metinden
+# SESSIONS: HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_session_outcomes.csv; training_table sütunları: ('ticker', 'first_trading_date', 'ipo_price_tl', 'shares_offered', 'post_ipo_share_capital', 'ceiling_close_D1')
+# Sonuç sütunlarıyla birleştirme YOK; ceiling_close_D1 yalnız alt küme seçimi için.
+
+## 1. Satır durumu ve seans tipi (99 arz, D1)
+  row_status: {'OFFICIAL_VERIFIED': 99}
+  security_trading_status: {'ACTIVE_NOT_SUSPENDED': 99}
+  session_type: {'OPEN_FULL_DAY': 99}
+  D1 referans == arz fiyatı (Decimal): 95 / 99
+  trade_count > 0: 99 / 99; volume > 0: 99 / 99
+  |AOF×hacim − ciro| / ciro > 1e-3: 0 / 99 (özel işlem bildirimi payı; yalnız bilgi)
+
+## 99 arz (tamamı): n = 99
+### 2. Limit eşitlikleri (Decimal, ham metin)
+  kapanış == üst limit: 81 / 99 (0.818)
+  en düşük == üst limit (gün boyu tek fiyat = kilit): 70 / 99 (0.707)
+  açılış == üst limit: 78 / 99 (0.788)
+  en yüksek == üst limit: 87 / 99 (0.879)
+  AOF == üst limit: 71 / 99 (0.717)
+  en düşük == alt limit: 6 / 99 (0.061)
+  kilit VE açılış == üst limit: 70 / 99   (kilit ⇒ açılış = en yüksek = kapanış = üst limit; tutarlılık: 0 aykırı)
+### 3. Sürekli alanlar
+  dip = (U − en düşük)/U (n = 99):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0 / 0 / 0 / 0 / 0.05354 / 0.1814 / 0.1818
+  ortalama = 0.03224
+  dip | dip > 0 (n = 29):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0.03554 / 0.04657 / 0.07584 / 0.09045 / 0.1678 / 0.1818 / 0.1818
+  ortalama = 0.1101
+  aof_gap = (U − AOF)/U (n = 99):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0 / 0 / 0 / 0 / 0.00544 / 0.1297 / 0.1814
+  ortalama = 0.01828
+  el değiştirme = hacim / shares_offered (n = 99, pay/pay):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0.0007325 / 0.001054 / 0.001728 / 0.008716 / 0.3837 / 1.547 / 2.886
+  ortalama = 0.2907
+  ln(el değiştirme) (n = 99):
+  min / p05 / p25 / p50 / p75 / p95 / max = -7.219 / -6.856 / -6.361 / -4.743 / -0.9579 / 0.4359 / 1.06
+  ortalama = -3.966
+  hacim / post_ipo_share_capital (n = 99):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0.0001393 / 0.0002122 / 0.0004679 / 0.002369 / 0.08356 / 0.2786 / 0.808
+  ortalama = 0.06399
+  hacim (pay adedi) (n = 99):
+  min / p05 / p25 / p50 / p75 / p95 / max = 8951 / 3.361e+04 / 1.385e+05 / 4.662e+05 / 2.209e+07 / 1.25e+08 / 2.199e+08
+  ortalama = 2.24e+07
+  sözleşme sayısı (n = 99):
+  min / p05 / p25 / p50 / p75 / p95 / max = 1757 / 2172 / 4874 / 1.004e+04 / 7.554e+04 / 4.254e+05 / 1.071e+06
+  ortalama = 9.089e+04
+  ln(sözleşme sayısı) (n = 99):
+  min / p05 / p25 / p50 / p75 / p95 / max = 7.471 / 7.683 / 8.492 / 9.214 / 11.23 / 12.96 / 13.88
+  ortalama = 9.873
+  pay / sözleşme (n = 99):
+  min / p05 / p25 / p50 / p75 / p95 / max = 2.818 / 7.729 / 19.11 / 52.41 / 173.9 / 691.2 / 8593
+  ortalama = 236.6
+  ciro (TL) (n = 99):
+  min / p05 / p25 / p50 / p75 / p95 / max = 5.511e+05 / 8.45e+05 / 2.486e+06 / 1.407e+07 / 7.553e+08 / 4.47e+09 / 7.467e+09
+  ortalama = 7.531e+08
+  el değiştirme > 1 (hacim > arz edilen pay): 12 / 99
+  el değiştirme ≥ 0.5: 22 / 99
+  el değiştirme < 0.1: 69 / 99
+  kilitli alt kümede el değiştirme p25/p50/p75: 0.00142 / 0.00281 / 0.0102
+  kilitsiz alt kümede el değiştirme p25/p50/p75: 0.531 / 0.754 / 1.36
+
+## D1 tavan kapatanlar (ceiling_close_D1 = 1): n = 81
+### 2. Limit eşitlikleri (Decimal, ham metin)
+  kapanış == üst limit: 81 / 81 (1.000)
+  en düşük == üst limit (gün boyu tek fiyat = kilit): 70 / 81 (0.864)
+  açılış == üst limit: 75 / 81 (0.926)
+  en yüksek == üst limit: 81 / 81 (1.000)
+  AOF == üst limit: 71 / 81 (0.877)
+  en düşük == alt limit: 0 / 81 (0.000)
+  kilit VE açılış == üst limit: 70 / 81   (kilit ⇒ açılış = en yüksek = kapanış = üst limit; tutarlılık: 0 aykırı)
+### 3. Sürekli alanlar
+  dip = (U − en düşük)/U (n = 81):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0 / 0 / 0 / 0 / 0 / 0.0697 / 0.09334
+  ortalama = 0.008818
+  dip | dip > 0 (n = 11):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0.03554 / 0.04013 / 0.04938 / 0.06061 / 0.08242 / 0.09122 / 0.09334
+  ortalama = 0.06493
+  aof_gap = (U − AOF)/U (n = 81):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0 / 0 / 0 / 0 / 0 / 0.01602 / 0.0325
+  ortalama = 0.001666
+  el değiştirme = hacim / shares_offered (n = 81, pay/pay):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0.0007325 / 0.0009841 / 0.001519 / 0.004202 / 0.01714 / 0.5402 / 1.964
+  ortalama = 0.09724
+  ln(el değiştirme) (n = 81):
+  min / p05 / p25 / p50 / p75 / p95 / max = -7.219 / -6.924 / -6.49 / -5.472 / -4.066 / -0.6158 / 0.6748
+  ortalama = -4.838
+  hacim / post_ipo_share_capital (n = 81):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0.0001393 / 0.0002109 / 0.0004188 / 0.0012 / 0.004017 / 0.1389 / 0.6402
+  ortalama = 0.026
+  hacim (pay adedi) (n = 81):
+  min / p05 / p25 / p50 / p75 / p95 / max = 8951 / 3.162e+04 / 1.07e+05 / 3.398e+05 / 1.171e+06 / 4.565e+07 / 1.964e+08
+  ortalama = 8.863e+06
+  sözleşme sayısı (n = 81):
+  min / p05 / p25 / p50 / p75 / p95 / max = 1757 / 2001 / 3855 / 7542 / 2.724e+04 / 1.151e+05 / 5.796e+05
+  ortalama = 3.585e+04
+  ln(sözleşme sayısı) (n = 81):
+  min / p05 / p25 / p50 / p75 / p95 / max = 7.471 / 7.601 / 8.257 / 8.928 / 10.21 / 11.65 / 13.27
+  ortalama = 9.296
+  pay / sözleşme (n = 81):
+  min / p05 / p25 / p50 / p75 / p95 / max = 2.818 / 6.838 / 15.32 / 43.93 / 97.5 / 690.2 / 8593
+  ortalama = 218.7
+  ciro (TL) (n = 81):
+  min / p05 / p25 / p50 / p75 / p95 / max = 5.511e+05 / 8.29e+05 / 2.205e+06 / 6.599e+06 / 2.914e+07 / 1.046e+09 / 3.664e+09
+  ortalama = 2.094e+08
+  el değiştirme > 1 (hacim > arz edilen pay): 1 / 81
+  el değiştirme ≥ 0.5: 6 / 81
+  el değiştirme < 0.1: 69 / 81
+  kilitli alt kümede el değiştirme p25/p50/p75: 0.00142 / 0.00281 / 0.0102
+  kilitsiz alt kümede el değiştirme p25/p50/p75: 0.389 / 0.531 / 0.704
+
+## D1 tavan kapatmayanlar (ceiling_close_D1 = 0): n = 18
+### 2. Limit eşitlikleri (Decimal, ham metin)
+  kapanış == üst limit: 0 / 18 (0.000)
+  en düşük == üst limit (gün boyu tek fiyat = kilit): 0 / 18 (0.000)
+  açılış == üst limit: 3 / 18 (0.167)
+  en yüksek == üst limit: 6 / 18 (0.333)
+  AOF == üst limit: 0 / 18 (0.000)
+  en düşük == alt limit: 6 / 18 (0.333)
+  kilit VE açılış == üst limit: 0 / 18   (kilit ⇒ açılış = en yüksek = kapanış = üst limit; tutarlılık: 0 aykırı)
+### 3. Sürekli alanlar
+  dip = (U − en düşük)/U (n = 18):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0.07813 / 0.07972 / 0.09069 / 0.153 / 0.1815 / 0.1818 / 0.1818
+  ortalama = 0.1376
+  dip | dip > 0 (n = 18):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0.07813 / 0.07972 / 0.09069 / 0.153 / 0.1815 / 0.1818 / 0.1818
+  ortalama = 0.1376
+  aof_gap = (U − AOF)/U (n = 18):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0.01015 / 0.03058 / 0.05292 / 0.0897 / 0.132 / 0.1607 / 0.1814
+  ortalama = 0.09306
+  el değiştirme = hacim / shares_offered (n = 18, pay/pay):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0.1127 / 0.253 / 0.7735 / 1.117 / 1.512 / 1.9 / 2.886
+  ortalama = 1.161
+  ln(el değiştirme) (n = 18):
+  min / p05 / p25 / p50 / p75 / p95 / max = -2.183 / -1.416 / -0.2579 / 0.1096 / 0.413 / 0.6226 / 1.06
+  ortalama = -0.0421
+  hacim / post_ipo_share_capital (n = 18):
+  min / p05 / p25 / p50 / p75 / p95 / max = 0.01184 / 0.06071 / 0.1228 / 0.1715 / 0.2637 / 0.4805 / 0.808
+  ortalama = 0.2349
+  hacim (pay adedi) (n = 18):
+  min / p05 / p25 / p50 / p75 / p95 / max = 7.536e+06 / 1.884e+07 / 3.56e+07 / 6.238e+07 / 1.133e+08 / 2.047e+08 / 2.199e+08
+  ortalama = 8.333e+07
+  sözleşme sayısı (n = 18):
+  min / p05 / p25 / p50 / p75 / p95 / max = 2.097e+04 / 1.273e+05 / 1.838e+05 / 2.367e+05 / 4.045e+05 / 7.966e+05 / 1.071e+06
+  ortalama = 3.386e+05
+  ln(sözleşme sayısı) (n = 18):
+  min / p05 / p25 / p50 / p75 / p95 / max = 9.951 / 11.6 / 12.12 / 12.37 / 12.91 / 13.58 / 13.88
+  ortalama = 12.47
+  pay / sözleşme (n = 18):
+  min / p05 / p25 / p50 / p75 / p95 / max = 50.49 / 60.01 / 136.3 / 232.8 / 416.2 / 732.2 / 1245
+  ortalama = 317
+  ciro (TL) (n = 18):
+  min / p05 / p25 / p50 / p75 / p95 / max = 2.626e+08 / 7.08e+08 / 2.048e+09 / 2.58e+09 / 4.507e+09 / 6.512e+09 / 7.467e+09
+  ortalama = 3.2e+09
+  el değiştirme > 1 (hacim > arz edilen pay): 11 / 18
+  el değiştirme ≥ 0.5: 16 / 18
+  el değiştirme < 0.1: 0 / 18
+  kilitli alt kümede el değiştirme p25/p50/p75:   (kilitli yok)
+  kilitsiz alt kümede el değiştirme p25/p50/p75: 0.773 / 1.12 / 1.51
+
+## 4. D1 tavan kapatanlarda kilit oranının yıllara göre dağılımı (yalnız özellik; sonuç yok)
+  2023: n = 18, kilit = 17, el değiştirme medyanı = 0.0018
+  2024: n = 27, kilit = 24, el değiştirme medyanı = 0.00592
+  2025: n = 12, kilit = 8, el değiştirme medyanı = 0.0354
+  2026: n = 24, kilit = 21, el değiştirme medyanı = 0.00284
+
+## 5. Aylık blok sayısı (D1 tavan kapatanlar; aralık koşulu ≥ 6 blok için bilgi)
+  ayrı YYYY-MM: 24

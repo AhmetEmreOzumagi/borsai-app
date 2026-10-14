@@ -1,0 +1,349 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "KLSER",
+  "company": "Kaleseramik, Çanakkale Kalebodur Seramik Sanayi A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1174705",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "25",
+      "source_id": "KAP_1174705",
+      "source_document": "KAP 1174705",
+      "source_published_at": "2023-07-24T18:02:34+03:00",
+      "source_sha256": "d4ad66e80cff356a4144b405596c34aa555e3d005b070f9b9f18ecefe9f5220e",
+      "source_path": "registry/oot/source_docs/KLSER/KAP_1174705_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 25",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2023_39",
+          "quote": "Kaleseramik, Çanakkale 25,00 Kalebodur Seramik Sanayi 405.388.195,51 514.778.660,51 109.390.465,00 - - - (1) AŞ",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "109390465",
+      "source_id": "KAP_1174705",
+      "source_document": "KAP 1174705",
+      "source_published_at": "2023-07-24T18:02:34+03:00",
+      "source_sha256": "d4ad66e80cff356a4144b405596c34aa555e3d005b070f9b9f18ecefe9f5220e",
+      "source_path": "registry/oot/source_docs/KLSER/KAP_1174705_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 109.390.465",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "514778660.51",
+      "source_id": "KAP_1174705",
+      "source_document": "KAP 1174705",
+      "source_published_at": "2023-07-24T18:02:34+03:00",
+      "source_sha256": "d4ad66e80cff356a4144b405596c34aa555e3d005b070f9b9f18ecefe9f5220e",
+      "source_path": "registry/oot/source_docs/KLSER/KAP_1174705_bildirim.pdf",
+      "quote": "sermayesini temsil eden 514.778.660,51 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "109390465.00",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/KLSER/SPK_BULTEN_2023-39.pdf",
+      "quote": "Kaleseramik, Çanakkale 25,00 Kalebodur Seramik Sanayi 405.388.195,51 514.778.660,51 109.390.465,00 - - - (1) AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1174431_EK1",
+          "quote": "halka arz edilen 109.390.465 adet payın tamamı satılmıştır."
+        },
+        "b_shares_offered_equals_planned_base": "109390465 = 109390465.00 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/KLSER/SPK_BULTEN_2023-39.pdf",
+      "quote": "Kaleseramik, Çanakkale 25,00 Kalebodur Seramik Sanayi 405.388.195,51 514.778.660,51 109.390.465,00 - - - (1) AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1174431_EK1",
+          "quote": "halka arz edilen 109.390.465 adet payın tamamı satılmıştır."
+        },
+        "b_shares_offered_equals_planned_base": "109390465 = 109390465.00 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "3.3",
+      "source_id": "KAP_1174431_EK1",
+      "source_document": "KAP 1174431 ek 1",
+      "source_published_at": "2023-07-24T09:30:21+03:00",
+      "source_sha256": "a291d961a44d9ada24c9927c0fcc16d9c33d1c910594c87f9259fa0ea154ddd7",
+      "source_path": "registry/oot/source_docs/KLSER/KAP_1174431_ek1.pdf",
+      "quote": "Böylece, halka arzda planlanan tahsisatın toplam 3,3 katı talep toplanmıştır.",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (365.921.942 adet talep / 109.390.465 adet planlanan tahsisat)",
+      "denominator_includes_additional_sale": false,
+      "note": "ek satış planlanmamış; planlanan = satılan 109.390.465; aynı belgedeki toplamlardan 3,3450990633",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_1174431_EK1",
+      "source_document": "KAP 1174431 ek 1",
+      "source_published_at": "2023-07-24T09:30:21+03:00",
+      "source_sha256": "a291d961a44d9ada24c9927c0fcc16d9c33d1c910594c87f9259fa0ea154ddd7",
+      "source_path": "registry/oot/source_docs/KLSER/KAP_1174431_ek1.pdf",
+      "quote": "Halka arzda, toplam 9.148.048.550,00 TL tutarında ve 365.921.942 adet paya karşılık gelen, toplam 2.002.245 adet filtrelenmemiş başvuru alınmıştır.",
+      "locator": "filtre ifadesi toplam talebi (365.921.942 adet) oluşturan başvurular için yazılmış; 3,3 katın payı bu toplam (tablo TOPLAM satırı ile aynı)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1174431_EK1",
+      "source_document": "KAP 1174431 ek 1",
+      "source_published_at": "2023-07-24T09:30:21+03:00",
+      "source_sha256": "a291d961a44d9ada24c9927c0fcc16d9c33d1c910594c87f9259fa0ea154ddd7",
+      "source_path": "registry/oot/source_docs/KLSER/KAP_1174431_ek1.pdf",
+      "quote": "halka arz edilen 109.390.465 adet payın tamamı satılmıştır.",
+      "zero_from_statement": true,
+      "note": "SPK satırında ek satış '-'; satılan toplam 109.390.465 = planlanan taban (bedelli 109.390.465)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_size_tl": {
+      "value": "2734761625",
+      "source_id": "KAP_1174431_EK1",
+      "source_document": "KAP 1174431 ek 1",
+      "source_published_at": "2023-07-24T09:30:21+03:00",
+      "source_sha256": "a291d961a44d9ada24c9927c0fcc16d9c33d1c910594c87f9259fa0ea154ddd7",
+      "source_path": "registry/oot/source_docs/KLSER/KAP_1174431_ek1.pdf",
+      "quote": "Halka arz boyutu 2.734.761.625 TL",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_price_try": {
+      "value": "25.00",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/KLSER/SPK_BULTEN_2023-39.pdf",
+      "quote": "Kaleseramik, Çanakkale 25,00 Kalebodur Seramik Sanayi 405.388.195,51 514.778.660,51 109.390.465,00 - - - (1) AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-19",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "405388195.51",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/KLSER/SPK_BULTEN_2023-39.pdf",
+      "quote": "Kaleseramik, Çanakkale 25,00 Kalebodur Seramik Sanayi 405.388.195,51 514.778.660,51 109.390.465,00 - - - (1) AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-19",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "514778660.51",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/KLSER/SPK_BULTEN_2023-39.pdf",
+      "quote": "Kaleseramik, Çanakkale 25,00 Kalebodur Seramik Sanayi 405.388.195,51 514.778.660,51 109.390.465,00 - - - (1) AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-19",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "109390465.00",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/KLSER/SPK_BULTEN_2023-39.pdf",
+      "quote": "Kaleseramik, Çanakkale 25,00 Kalebodur Seramik Sanayi 405.388.195,51 514.778.660,51 109.390.465,00 - - - (1) AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-19",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/KLSER/SPK_BULTEN_2023-39.pdf",
+      "quote": "Kaleseramik, Çanakkale 25,00 Kalebodur Seramik Sanayi 405.388.195,51 514.778.660,51 109.390.465,00 - - - (1) AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-19",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "109390465.00",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/KLSER/SPK_BULTEN_2023-39.pdf",
+      "quote": "Kaleseramik, Çanakkale 25,00 Kalebodur Seramik Sanayi 405.388.195,51 514.778.660,51 109.390.465,00 - - - (1) AŞ",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-19",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/KLSER/SPK_BULTEN_2023-39.pdf",
+      "quote": "Kaleseramik, Çanakkale 25,00 Kalebodur Seramik Sanayi 405.388.195,51 514.778.660,51 109.390.465,00 - - - (1) AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-19",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "109390465.00",
+      "source_id": "SPK_BULTEN_2023_39",
+      "source_document": "SPK Bülteni 2023/39",
+      "source_published_at": "2023-07-13T23:59:59+03:00",
+      "source_sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "source_path": "registry/oot/source_docs/KLSER/SPK_BULTEN_2023-39.pdf",
+      "quote": "Kaleseramik, Çanakkale 25,00 Kalebodur Seramik Sanayi 405.388.195,51 514.778.660,51 109.390.465,00 - - - (1) AŞ",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-07-13",
+        "bookbuilding_start": "2023-07-19",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2023-07-27",
+      "source_id": "KAP_1174705",
+      "source_document": "KAP 1174705",
+      "source_published_at": "2023-07-24T18:02:34+03:00",
+      "source_sha256": "d4ad66e80cff356a4144b405596c34aa555e3d005b070f9b9f18ecefe9f5220e",
+      "source_path": "registry/oot/source_docs/KLSER/KAP_1174705_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 27/07/2023",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2023-07-19",
+      "source_id": "KAP_1174705",
+      "source_document": "KAP 1174705",
+      "source_published_at": "2023-07-24T18:02:34+03:00",
+      "source_sha256": "d4ad66e80cff356a4144b405596c34aa555e3d005b070f9b9f18ecefe9f5220e",
+      "source_path": "registry/oot/source_docs/KLSER/KAP_1174705_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 19-21/07/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2023-07-21",
+      "source_id": "KAP_1174705",
+      "source_document": "KAP 1174705",
+      "source_published_at": "2023-07-24T18:02:34+03:00",
+      "source_sha256": "d4ad66e80cff356a4144b405596c34aa555e3d005b070f9b9f18ecefe9f5220e",
+      "source_path": "registry/oot/source_docs/KLSER/KAP_1174705_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 19-21/07/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1174705": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1174705",
+      "published_at": "2023-07-24T18:02:34+03:00",
+      "sha256": "d4ad66e80cff356a4144b405596c34aa555e3d005b070f9b9f18ecefe9f5220e",
+      "path": "registry/oot/source_docs/KLSER/KAP_1174705_bildirim.pdf"
+    },
+    "SPK_BULTEN_2023_39": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2023/39",
+      "published_at": "2023-07-13T23:59:59+03:00",
+      "sha256": "012f66fbe5a02aa6c038b7df6ca9c4157f6fadb82a9795b2ff00549804a293b7",
+      "path": "registry/oot/source_docs/KLSER/SPK_BULTEN_2023-39.pdf"
+    },
+    "KAP_1174431_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1174431 ek 1",
+      "published_at": "2023-07-24T09:30:21+03:00",
+      "sha256": "a291d961a44d9ada24c9927c0fcc16d9c33d1c910594c87f9259fa0ea154ddd7",
+      "path": "registry/oot/source_docs/KLSER/KAP_1174431_ek1.pdf"
+    }
+  }
+}

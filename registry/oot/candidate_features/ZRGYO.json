@@ -1,0 +1,207 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "ZRGYO",
+  "company": "Ziraat Gayrimenkul Yatırım Ortaklığı A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "277511",
+      "source_id": "KAP_933977_EK2",
+      "source_document": "KAP 933977 ek 2",
+      "source_published_at": "2021-05-03T08:20:08+03:00",
+      "source_sha256": "734f6d4b52c933d005915bb0b120d5df1f81af0880d0b23ff2e41d78ed88eddb",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_933977_ek2.pdf",
+      "quote": "Halka arzda, toplam 277.511 başvuru sayısı ile 3.125.194.547 adet pay talep edilmiş olup",
+      "semantic": "APPLICANT_COUNT",
+      "note": "metin katmanında yalnız başvuru sayısı okunabiliyor; tablo metin katmanı bozuk (dikey karakter dizisi). Sayfa görüntüsünde 'Talebi Karşılanan Başvuru Sayısı' toplamı 267.705 okunuyor (bireysel 247.137, çalışan 20.439, kurumsal 129) — alıntılanamadığı için değer olarak yazılmadı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "277.511",
+        "verdict": "FOUND_SAME",
+        "note": "başvuru sayısı (APPLICANT_COUNT); talebi karşılanan 267.705 yalnız bozuk tablo metninde/görüntüde"
+      }
+    },
+    "investor_count_by_group": {
+      "value": null,
+      "missing_reason": "grup bazlı sayılar yalnız tabloda; KAP_933977_EK2 tablo metin katmanı bozuk, birebir alıntı yapılamıyor. Görüntüden okunan (doğrulama için): başvuru 256.830 / 20.551 / 130; talebi karşılanan 247.137 / 20.439 / 129 (bireysel / Ziraat Finans Grubu çalışanları / yurt içi kurumsal)",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": {
+        "Yurt İçi Bireysel": "256.830",
+        "Ziraat Finans Grubu Çalışanları": "20.551",
+        "Yurt İçi Kurumsal": "130"
+      },
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '256.830', 'Ziraat Finans Grubu Çalışanları': '20.551', 'Yurt İçi Kurumsal': '130'}",
+        "verdict": "FOUND_SAME",
+        "note": "sayfa görüntüsündeki başvuru sayılarıyla aynı; tablo metin katmanı bozuk olduğundan fields'ta null (alıntılanamıyor)"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "2.63",
+      "source_id": "KAP_933977_EK2",
+      "source_document": "KAP 933977 ek 2",
+      "source_published_at": "2021-05-03T08:20:08+03:00",
+      "source_sha256": "734f6d4b52c933d005915bb0b120d5df1f81af0880d0b23ff2e41d78ed88eddb",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_933977_ek2.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılar’a ayrılan tahsisat tutarının 2,63 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,63",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "2.80",
+      "source_id": "KAP_933977_EK2",
+      "source_document": "KAP 933977 ek 2",
+      "source_published_at": "2021-05-03T08:20:08+03:00",
+      "source_sha256": "734f6d4b52c933d005915bb0b120d5df1f81af0880d0b23ff2e41d78ed88eddb",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_933977_ek2.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılar’a ayrılan tahsisat tutarının da 2,80 katı talep gelmiştir",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,80",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok (gruplar: yurt içi bireysel, Ziraat Finans Grubu çalışanları, yurt içi kurumsal)",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": null,
+      "missing_reason": "yalnız tabloda; tablo metin katmanı bozuk, birebir alıntı yapılamıyor. Görüntüden okunan (doğrulama için): bireysel 797.915.400, çalışan 82.138.350, kurumsal 293.351.250 (toplam 1.173.405.000)",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": {
+        "Yurt İçi Bireysel": "797.915.400",
+        "Ziraat Finans Grubu Çalışanları": "82.138.350",
+        "Yurt İçi Kurumsal": "293.351.250"
+      },
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '797.915.400', 'Ziraat Finans Grubu Çalışanları': '82.138.350', 'Yurt İçi Kurumsal': '293.351.250'}",
+        "verdict": "FOUND_SAME",
+        "note": "sayfa görüntüsüyle aynı; fields'ta null (alıntılanamıyor)"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": null,
+      "missing_reason": "yalnız tabloda; metin katmanı bozuk. Görüntüden okunan gerçekleşen oran %68,00 (planlanan %73,00)",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "68,00",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "68,00",
+        "verdict": "FOUND_SAME",
+        "note": "sayfa görüntüsüyle aynı; fields'ta null (alıntılanamıyor)"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yalnız tabloda; metin katmanı bozuk. Görüntüden okunan gerçekleşen oran %25,00 (planlanan %20,00)",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "25,00",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "25,00",
+        "verdict": "FOUND_SAME",
+        "note": "sayfa görüntüsüyle aynı; fields'ta null (alıntılanamıyor)"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama” yöntemi); dağıtım yöntemi adlandırılmıyor; TSSD indirilmedi",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "ZİRAAT YATIRIM MENKUL DEĞERLER A.Ş.",
+      "source_id": "KAP_933977_EK2",
+      "source_document": "KAP 933977 ek 2",
+      "source_published_at": "2021-05-03T08:20:08+03:00",
+      "source_sha256": "734f6d4b52c933d005915bb0b120d5df1f81af0880d0b23ff2e41d78ed88eddb",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_933977_ek2.pdf",
+      "quote": "Saygılarımızla, ZİRAAT YATIRIM MENKUL DEĞERLER A.Ş.",
+      "basis": "RESULT_NOTICE_PUBLISHER",
+      "note": "sonuç ekini imzalayan/yayımlayan kurum; belge 'aracılık' rolünü açıkça yazmıyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "ZİRAAT YATIRIM MENKUL DEĞERLER A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "imzalayan/yayımlayan kurum"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD ve izahname indirilmedi; sonuç belgesinde yok",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD ve izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD ve izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD ve izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_934472",
+      "source_document": "KAP 934472",
+      "source_published_at": "2021-05-04T18:02:13+03:00",
+      "source_sha256": "3444d3ab0a5ef0e65de6e0d6473421152ecdbed2cb6144a36f0e1f13d86fb2cf",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_934472_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_934472",
+      "source_document": "KAP 934472",
+      "source_published_at": "2021-05-04T18:02:13+03:00",
+      "source_sha256": "3444d3ab0a5ef0e65de6e0d6473421152ecdbed2cb6144a36f0e1f13d86fb2cf",
+      "source_path": "registry/oot/source_docs/ZRGYO/KAP_934472_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_934472": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 934472",
+      "published_at": "2021-05-04T18:02:13+03:00",
+      "sha256": "3444d3ab0a5ef0e65de6e0d6473421152ecdbed2cb6144a36f0e1f13d86fb2cf",
+      "path": "registry/oot/source_docs/ZRGYO/KAP_934472_bildirim.pdf"
+    },
+    "KAP_933977_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 933977 ek 2",
+      "published_at": "2021-05-03T08:20:08+03:00",
+      "sha256": "734f6d4b52c933d005915bb0b120d5df1f81af0880d0b23ff2e41d78ed88eddb",
+      "path": "registry/oot/source_docs/ZRGYO/KAP_933977_ek2.pdf"
+    }
+  }
+}

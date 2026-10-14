@@ -1,0 +1,281 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "ELITE",
+  "company": "Elite Naturel Organik Gıda Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "136696",
+      "source_id": "KAP_976738_EK1",
+      "source_document": "KAP 976738 ek 1",
+      "source_published_at": "2021-11-10T09:19:48+03:00",
+      "source_sha256": "0132be7946eaee8e9a6c566231acf8315ce24175b3830195e0ddd8618b7e6410",
+      "source_path": "registry/oot/source_docs/ELITE/KAP_976738_ek1.pdf",
+      "quote": "Toplam 12.000.000 %100 141.802 65.244.993 %100,0 136.696 12.000.000 %100,0",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 141.802; dağıtım yapılan 136.696",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "141.802",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "141.802",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "141.802 talep eden kişi sayısı; dağıtım yapılan 136.696 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "136612",
+        "domestic_institutional": "76",
+        "foreign_institutional": "8"
+      },
+      "source_id": "KAP_976738_EK1",
+      "source_document": "KAP 976738 ek 1",
+      "source_published_at": "2021-11-10T09:19:48+03:00",
+      "source_sha256": "0132be7946eaee8e9a6c566231acf8315ce24175b3830195e0ddd8618b7e6410",
+      "source_path": "registry/oot/source_docs/ELITE/KAP_976738_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 4.800.000 %40 141.711 27.446.965 %42,1 136.612 4.800.000 %40,0",
+        "Yurt İçi Kurumsal 4.800.000 %40 83 31.662.538 %48,5 76 4.980.000 %41,5",
+        "Yurt Dışı Kurumsal 2.400.000 %20 8 6.135.490 %9,4 8 2.220.000 %18,5"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 141.711, yurt içi kurumsal 83, yurt dışı kurumsal 8",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "141.711",
+        "Yurt İçi Kurumsal": "83",
+        "Yurt Dışı Kurumsal": "8"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '141.711', 'Yurt İçi Kurumsal': '83', 'Yurt Dışı Kurumsal': '8'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex talep eden sayılarını almış; dağıtım yapılan: 136.612, 76, 8"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "5.7",
+      "source_id": "KAP_976738_EK1",
+      "source_document": "KAP 976738 ek 1",
+      "source_published_at": "2021-11-10T09:19:48+03:00",
+      "source_sha256": "0132be7946eaee8e9a6c566231acf8315ce24175b3830195e0ddd8618b7e6410",
+      "source_path": "registry/oot/source_docs/ELITE/KAP_976738_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 5,7 katı",
+      "note": "belgede 'yaklaşık'; nihai tahsisata göre (27.446.965 / 4.800.000 = 5,718)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "5,7",
+        "verdict": "FOUND_SAME",
+        "note": "belgede 'yaklaşık'"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "6.4",
+      "source_id": "KAP_976738_EK1",
+      "source_document": "KAP 976738 ek 1",
+      "source_published_at": "2021-11-10T09:19:48+03:00",
+      "source_sha256": "0132be7946eaee8e9a6c566231acf8315ce24175b3830195e0ddd8618b7e6410",
+      "source_path": "registry/oot/source_docs/ELITE/KAP_976738_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara nihai tahsisat tutarının yaklaşık 6,4 katı",
+      "note": "belgede 'yaklaşık'; nihai tahsisata göre (31.662.538 / 4.980.000)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "6,4",
+        "verdict": "FOUND_SAME",
+        "note": "belgede 'yaklaşık'"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "2.8",
+      "source_id": "KAP_976738_EK1",
+      "source_document": "KAP 976738 ek 1",
+      "source_published_at": "2021-11-10T09:19:48+03:00",
+      "source_sha256": "0132be7946eaee8e9a6c566231acf8315ce24175b3830195e0ddd8618b7e6410",
+      "source_path": "registry/oot/source_docs/ELITE/KAP_976738_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara nihai tahsisat tutarının yaklaşık 2,8 katı",
+      "note": "belgede 'yaklaşık'; nihai tahsisata göre (6.135.490 / 2.220.000)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,8",
+        "verdict": "FOUND_SAME",
+        "note": "belgede 'yaklaşık'"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "4800000",
+        "domestic_institutional": "4980000",
+        "foreign_institutional": "2220000"
+      },
+      "source_id": "KAP_976738_EK1",
+      "source_document": "KAP 976738 ek 1",
+      "source_published_at": "2021-11-10T09:19:48+03:00",
+      "source_sha256": "0132be7946eaee8e9a6c566231acf8315ce24175b3830195e0ddd8618b7e6410",
+      "source_path": "registry/oot/source_docs/ELITE/KAP_976738_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 4.800.000 %40 141.711 27.446.965 %42,1 136.612 4.800.000 %40,0",
+        "Yurt İçi Kurumsal 4.800.000 %40 83 31.662.538 %48,5 76 4.980.000 %41,5",
+        "Yurt Dışı Kurumsal 2.400.000 %20 8 6.135.490 %9,4 8 2.220.000 %18,5"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "4.800.000",
+        "Yurt İçi Kurumsal": "4.980.000",
+        "Yurt Dışı Kurumsal": "2.220.000"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '4.800.000', 'Yurt İçi Kurumsal': '4.980.000', 'Yurt Dışı Kurumsal': '2.220.000'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "40.0",
+      "source_id": "KAP_976738_EK1",
+      "source_document": "KAP 976738 ek 1",
+      "source_published_at": "2021-11-10T09:19:48+03:00",
+      "source_sha256": "0132be7946eaee8e9a6c566231acf8315ce24175b3830195e0ddd8618b7e6410",
+      "source_path": "registry/oot/source_docs/ELITE/KAP_976738_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 4.800.000 %40 141.711 27.446.965 %42,1 136.612 4.800.000 %40,0",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %40",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "40,0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "41.5",
+      "source_id": "KAP_976738_EK1",
+      "source_document": "KAP 976738 ek 1",
+      "source_published_at": "2021-11-10T09:19:48+03:00",
+      "source_sha256": "0132be7946eaee8e9a6c566231acf8315ce24175b3830195e0ddd8618b7e6410",
+      "source_path": "registry/oot/source_docs/ELITE/KAP_976738_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 4.800.000 %40 83 31.662.538 %48,5 76 4.980.000 %41,5",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %40",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "41,5",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "18.5",
+      "source_id": "KAP_976738_EK1",
+      "source_document": "KAP 976738 ek 1",
+      "source_published_at": "2021-11-10T09:19:48+03:00",
+      "source_sha256": "0132be7946eaee8e9a6c566231acf8315ce24175b3830195e0ddd8618b7e6410",
+      "source_path": "registry/oot/source_docs/ELITE/KAP_976738_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal 2.400.000 %20 8 6.135.490 %9,4 8 2.220.000 %18,5",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %20",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "18,5",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama” yöntemi); dağıtım yöntemi adlandırılmıyor; TSSD başvuru ayrıntısını izahnameye atfediyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Halk Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_975455_EK1",
+      "source_document": "KAP 975455 ek 1",
+      "source_published_at": "2021-11-05T23:47:00+03:00",
+      "source_sha256": "29072b7158dd59bf399c89c77ad5ff250d55d22e71c462729ada67aefdf0a1ad",
+      "source_path": "registry/oot/source_docs/ELITE/KAP_975455_ek1.pdf",
+      "quote": "araçılık edecek Halk Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "TSSD OCR metni ('araçılık'); sonuç bildirimini de Halk Yatırım yayımlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Halk Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_977081",
+      "source_document": "KAP 977081",
+      "source_published_at": "2021-11-11T18:04:39+03:00",
+      "source_sha256": "5a30b1e838905f83dd5f35bbcb05e297175e075b269232ffb1c366882b35b25f",
+      "source_path": "registry/oot/source_docs/ELITE/KAP_977081_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_977081",
+      "source_document": "KAP 977081",
+      "source_published_at": "2021-11-11T18:04:39+03:00",
+      "source_sha256": "5a30b1e838905f83dd5f35bbcb05e297175e075b269232ffb1c366882b35b25f",
+      "source_path": "registry/oot/source_docs/ELITE/KAP_977081_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_977081": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 977081",
+      "published_at": "2021-11-11T18:04:39+03:00",
+      "sha256": "5a30b1e838905f83dd5f35bbcb05e297175e075b269232ffb1c366882b35b25f",
+      "path": "registry/oot/source_docs/ELITE/KAP_977081_bildirim.pdf"
+    },
+    "KAP_976738_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 976738 ek 1",
+      "published_at": "2021-11-10T09:19:48+03:00",
+      "sha256": "0132be7946eaee8e9a6c566231acf8315ce24175b3830195e0ddd8618b7e6410",
+      "path": "registry/oot/source_docs/ELITE/KAP_976738_ek1.pdf"
+    },
+    "KAP_975455_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 975455 ek 1",
+      "published_at": "2021-11-05T23:47:00+03:00",
+      "sha256": "29072b7158dd59bf399c89c77ad5ff250d55d22e71c462729ada67aefdf0a1ad",
+      "path": "registry/oot/source_docs/ELITE/KAP_975455_ek1.pdf"
+    }
+  }
+}

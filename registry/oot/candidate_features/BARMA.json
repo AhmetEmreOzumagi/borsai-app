@@ -1,0 +1,206 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "BARMA",
+  "company": "Barem Ambalaj Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "277158",
+      "source_id": "KAP_1052265_EK1",
+      "source_document": "KAP 1052265 ek 1",
+      "source_published_at": "2022-08-05T12:56:26+03:00",
+      "source_sha256": "259ee93aaed47cfd3d5c683edecce9d80db3bfe14a81fcc736224b803b2425e4",
+      "source_path": "registry/oot/source_docs/BARMA/KAP_1052265_ek1.pdf",
+      "quote": "Toplam: 277.158 10.500.000 100,00",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "tablo 'Yatırımcı Sayısı' dağıtım tablosunda; metin: 'Halka arza toplamda 277.158 yatırımcı katılmıştır.'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "276728",
+        "domestic_institutional": "60",
+        "foreign_retail": "369",
+        "foreign_institutional": "1"
+      },
+      "source_id": "KAP_1052265_EK1",
+      "source_document": "KAP 1052265 ek 1",
+      "source_published_at": "2022-08-05T12:56:26+03:00",
+      "source_sha256": "259ee93aaed47cfd3d5c683edecce9d80db3bfe14a81fcc736224b803b2425e4",
+      "source_path": "registry/oot/source_docs/BARMA/KAP_1052265_ek1.pdf",
+      "quote": [
+        "- Bireysel Yatırımcı (*) 276.728 10.483.004 99,84",
+        "- Kurumsal Yatırımcı (**) 60 2.618 0,02",
+        "- Bireysel Yatırımcı (*) 369 14.333 0,14",
+        "- Kurumsal Yatırımcı (**) 1 45 0,00"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "ilk iki satır Yurt İçi Yatırımcı (276.788) altında, son iki satır Yurt Dışı Yatırımcı (370) altında",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır', grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "10483004",
+        "domestic_institutional": "2618",
+        "foreign_retail": "14333",
+        "foreign_institutional": "45"
+      },
+      "source_id": "KAP_1052265_EK1",
+      "source_document": "KAP 1052265 ek 1",
+      "source_published_at": "2022-08-05T12:56:26+03:00",
+      "source_sha256": "259ee93aaed47cfd3d5c683edecce9d80db3bfe14a81fcc736224b803b2425e4",
+      "source_path": "registry/oot/source_docs/BARMA/KAP_1052265_ek1.pdf",
+      "quote": [
+        "- Bireysel Yatırımcı (*) 276.728 10.483.004 99,84",
+        "- Kurumsal Yatırımcı (**) 60 2.618 0,02",
+        "- Bireysel Yatırımcı (*) 369 14.333 0,14",
+        "- Kurumsal Yatırımcı (**) 1 45 0,00"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.84",
+      "source_id": "KAP_1052265_EK1",
+      "source_document": "KAP 1052265 ek 1",
+      "source_published_at": "2022-08-05T12:56:26+03:00",
+      "source_sha256": "259ee93aaed47cfd3d5c683edecce9d80db3bfe14a81fcc736224b803b2425e4",
+      "source_path": "registry/oot/source_docs/BARMA/KAP_1052265_ek1.pdf",
+      "quote": "- Bireysel Yatırımcı (*) 276.728 10.483.004 99,84",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yurt içi bireysel; yurt dışı bireysel ayrıca 0,14",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.02",
+      "source_id": "KAP_1052265_EK1",
+      "source_document": "KAP 1052265 ek 1",
+      "source_published_at": "2022-08-05T12:56:26+03:00",
+      "source_sha256": "259ee93aaed47cfd3d5c683edecce9d80db3bfe14a81fcc736224b803b2425e4",
+      "source_path": "registry/oot/source_docs/BARMA/KAP_1052265_ek1.pdf",
+      "quote": "- Kurumsal Yatırımcı (**) 60 2.618 0,02",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.00",
+      "source_id": "KAP_1052265_EK1",
+      "source_document": "KAP 1052265 ek 1",
+      "source_published_at": "2022-08-05T12:56:26+03:00",
+      "source_sha256": "259ee93aaed47cfd3d5c683edecce9d80db3bfe14a81fcc736224b803b2425e4",
+      "source_path": "registry/oot/source_docs/BARMA/KAP_1052265_ek1.pdf",
+      "quote": "- Kurumsal Yatırımcı (**) 1 45 0,00",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”, Borsa İstanbul Birincil Piyasa) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "İnfo Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1050036_EK1",
+      "source_document": "KAP 1050036 ek 1",
+      "source_published_at": "2022-07-29T22:56:02+03:00",
+      "source_sha256": "8586a1436650f089de4d36663e808c45165b8fed42e629abf52dc5cd38502b00",
+      "source_path": "registry/oot/source_docs/BARMA/KAP_1050036_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek İnfo Yatırım Menkul Değerler A.Ş.'nin",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1052471",
+      "source_document": "KAP 1052471",
+      "source_published_at": "2022-08-05T18:05:12+03:00",
+      "source_sha256": "33791243585c6621bd9e2957a78b6312d4ed8655318f2062aaedae44af5c74a6",
+      "source_path": "registry/oot/source_docs/BARMA/KAP_1052471_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_1052471",
+      "source_document": "KAP 1052471",
+      "source_published_at": "2022-08-05T18:05:12+03:00",
+      "source_sha256": "33791243585c6621bd9e2957a78b6312d4ed8655318f2062aaedae44af5c74a6",
+      "source_path": "registry/oot/source_docs/BARMA/KAP_1052471_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1052471": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1052471",
+      "published_at": "2022-08-05T18:05:12+03:00",
+      "sha256": "33791243585c6621bd9e2957a78b6312d4ed8655318f2062aaedae44af5c74a6",
+      "path": "registry/oot/source_docs/BARMA/KAP_1052471_bildirim.pdf"
+    },
+    "KAP_1052265_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1052265 ek 1",
+      "published_at": "2022-08-05T12:56:26+03:00",
+      "sha256": "259ee93aaed47cfd3d5c683edecce9d80db3bfe14a81fcc736224b803b2425e4",
+      "path": "registry/oot/source_docs/BARMA/KAP_1052265_ek1.pdf"
+    },
+    "KAP_1050036_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1050036 ek 1",
+      "published_at": "2022-07-29T22:56:02+03:00",
+      "sha256": "8586a1436650f089de4d36663e808c45165b8fed42e629abf52dc5cd38502b00",
+      "path": "registry/oot/source_docs/BARMA/KAP_1050036_ek1.pdf"
+    }
+  }
+}

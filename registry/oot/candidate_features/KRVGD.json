@@ -1,0 +1,270 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "KRVGD",
+  "company": "Kervan Gıda Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "251732",
+      "source_id": "KAP_890414_EK2",
+      "source_document": "KAP 890414 ek 2",
+      "source_published_at": "2020-11-30T04:38:45+03:00",
+      "source_sha256": "3c09cc46ababea7c5068948cfac3758d5fad5591b16f3f95047ec70ad1681923",
+      "source_path": "registry/oot/source_docs/KRVGD/KAP_890414_ek2.pdf",
+      "quote": "Toplam 49.500.000 100,0% 268.847 875.183.534 100,0% 251.732 51.750.000 100,0%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 268.847; dağıtım yapılan 251.732",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "268.847",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "268.847",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "268.847 talep eden; dağıtım yapılan 251.732 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "251570",
+        "domestic_institutional": "153",
+        "foreign_institutional": "9"
+      },
+      "source_id": "KAP_890414_EK2",
+      "source_document": "KAP 890414 ek 2",
+      "source_published_at": "2020-11-30T04:38:45+03:00",
+      "source_sha256": "3c09cc46ababea7c5068948cfac3758d5fad5591b16f3f95047ec70ad1681923",
+      "source_path": "registry/oot/source_docs/KRVGD/KAP_890414_ek2.pdf",
+      "quote": [
+        "Yurtiçi Bireysel 14.850.000 30,0% 268.612 584.433.901 66,8% 251.570 17.100.000 33,0%",
+        "Yurtiçi Kurumsal 24.750.000 50,0% 225 265.085.635 30,3% 153 24.750.000 47,8%",
+        "Yurtdışı Kurumsal 9.900.000 20,0% 10 25.663.998 2,9% 9 9.900.000 19,1%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 268.612, yurt içi kurumsal 225, yurt dışı kurumsal 10",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "268.612",
+        "Yurtiçi Kurumsal": "225",
+        "Yurtdışı Kurumsal": "10"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '268.612', 'Yurtiçi Kurumsal': '225', 'Yurtdışı Kurumsal': '10'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex talep eden sayılarını almış; dağıtım yapılan 251.570 / 153 / 9"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "34.2",
+      "source_id": "KAP_890414_EK2",
+      "source_document": "KAP 890414 ek 2",
+      "source_published_at": "2020-11-30T04:38:45+03:00",
+      "source_sha256": "3c09cc46ababea7c5068948cfac3758d5fad5591b16f3f95047ec70ad1681923",
+      "source_path": "registry/oot/source_docs/KRVGD/KAP_890414_ek2.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara ayrılan tahsisat tutarının 34,2 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "34,2",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "10.7",
+      "source_id": "KAP_890414_EK2",
+      "source_document": "KAP 890414 ek 2",
+      "source_published_at": "2020-11-30T04:38:45+03:00",
+      "source_sha256": "3c09cc46ababea7c5068948cfac3758d5fad5591b16f3f95047ec70ad1681923",
+      "source_path": "registry/oot/source_docs/KRVGD/KAP_890414_ek2.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara ayrılan tahsisat tutarının 10,7 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "10,7",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "2.6",
+      "source_id": "KAP_890414_EK2",
+      "source_document": "KAP 890414 ek 2",
+      "source_published_at": "2020-11-30T04:38:45+03:00",
+      "source_sha256": "3c09cc46ababea7c5068948cfac3758d5fad5591b16f3f95047ec70ad1681923",
+      "source_path": "registry/oot/source_docs/KRVGD/KAP_890414_ek2.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara ayrılan tahsisat tutarının da 2,6 katı talep gelmiştir",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,6",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "17100000",
+        "domestic_institutional": "24750000",
+        "foreign_institutional": "9900000"
+      },
+      "source_id": "KAP_890414_EK2",
+      "source_document": "KAP 890414 ek 2",
+      "source_published_at": "2020-11-30T04:38:45+03:00",
+      "source_sha256": "3c09cc46ababea7c5068948cfac3758d5fad5591b16f3f95047ec70ad1681923",
+      "source_path": "registry/oot/source_docs/KRVGD/KAP_890414_ek2.pdf",
+      "quote": [
+        "Yurtiçi Bireysel 14.850.000 30,0% 268.612 584.433.901 66,8% 251.570 17.100.000 33,0%",
+        "Yurtiçi Kurumsal 24.750.000 50,0% 225 265.085.635 30,3% 153 24.750.000 47,8%",
+        "Yurtdışı Kurumsal 9.900.000 20,0% 10 25.663.998 2,9% 9 9.900.000 19,1%"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "17.100.000",
+        "Yurtiçi Kurumsal": "24.750.000",
+        "Yurtdışı Kurumsal": "9.900.000"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '17.100.000', 'Yurtiçi Kurumsal': '24.750.000', 'Yurtdışı Kurumsal': '9.900.000'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "33.0",
+      "source_id": "KAP_890414_EK2",
+      "source_document": "KAP 890414 ek 2",
+      "source_published_at": "2020-11-30T04:38:45+03:00",
+      "source_sha256": "3c09cc46ababea7c5068948cfac3758d5fad5591b16f3f95047ec70ad1681923",
+      "source_path": "registry/oot/source_docs/KRVGD/KAP_890414_ek2.pdf",
+      "quote": "Yurtiçi Bireysel 14.850.000 30,0% 268.612 584.433.901 66,8% 251.570 17.100.000 33,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %30,0; ek satışın tamamı bireysele",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "33,0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "47.8",
+      "source_id": "KAP_890414_EK2",
+      "source_document": "KAP 890414 ek 2",
+      "source_published_at": "2020-11-30T04:38:45+03:00",
+      "source_sha256": "3c09cc46ababea7c5068948cfac3758d5fad5591b16f3f95047ec70ad1681923",
+      "source_path": "registry/oot/source_docs/KRVGD/KAP_890414_ek2.pdf",
+      "quote": "Yurtiçi Kurumsal 24.750.000 50,0% 225 265.085.635 30,3% 153 24.750.000 47,8%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %50,0",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "47,8",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "19.1",
+      "source_id": "KAP_890414_EK2",
+      "source_document": "KAP 890414 ek 2",
+      "source_published_at": "2020-11-30T04:38:45+03:00",
+      "source_sha256": "3c09cc46ababea7c5068948cfac3758d5fad5591b16f3f95047ec70ad1681923",
+      "source_path": "registry/oot/source_docs/KRVGD/KAP_890414_ek2.pdf",
+      "quote": "Yurtdışı Kurumsal 9.900.000 20,0% 10 25.663.998 2,9% 9 9.900.000 19,1%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %20,0",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "19,1",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD pencereleri dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "OYAK Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_889459_EK1",
+      "source_document": "KAP 889459 ek 1",
+      "source_published_at": "2020-11-20T22:09:15+03:00",
+      "source_sha256": "e048f316ca1e7d081b10faa1e9d8ca11bf462f96697c733974b876c82bb12caf",
+      "source_path": "registry/oot/source_docs/KRVGD/KAP_889459_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek OYAK Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "TSSD imza sayfasında '(Konsorsiyum Lideri)' olarak geçiyor (OCR)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": "OYAK YATIRIM MENKUL DEĞERLER A.Ş.",
+      "codex_check": {
+        "codex_value": "OYAK YATIRIM MENKUL DEĞERLER A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "yazım farkı"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR) metninde fiyat istikrarı geçmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_890999",
+      "source_document": "KAP 890999",
+      "source_published_at": "2020-12-02T17:40:13+03:00",
+      "source_sha256": "41bed23ef84ee96e91c77b45cd09600915df84f6e969e89c37a1d85e8631f2bd",
+      "source_path": "registry/oot/source_docs/KRVGD/KAP_890999_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_890999",
+      "source_document": "KAP 890999",
+      "source_published_at": "2020-12-02T17:40:13+03:00",
+      "source_sha256": "41bed23ef84ee96e91c77b45cd09600915df84f6e969e89c37a1d85e8631f2bd",
+      "source_path": "registry/oot/source_docs/KRVGD/KAP_890999_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_890999": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 890999",
+      "published_at": "2020-12-02T17:40:13+03:00",
+      "sha256": "41bed23ef84ee96e91c77b45cd09600915df84f6e969e89c37a1d85e8631f2bd",
+      "path": "registry/oot/source_docs/KRVGD/KAP_890999_bildirim.pdf"
+    },
+    "KAP_890414_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 890414 ek 2",
+      "published_at": "2020-11-30T04:38:45+03:00",
+      "sha256": "3c09cc46ababea7c5068948cfac3758d5fad5591b16f3f95047ec70ad1681923",
+      "path": "registry/oot/source_docs/KRVGD/KAP_890414_ek2.pdf"
+    },
+    "KAP_889459_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 889459 ek 1",
+      "published_at": "2020-11-20T22:09:15+03:00",
+      "sha256": "e048f316ca1e7d081b10faa1e9d8ca11bf462f96697c733974b876c82bb12caf",
+      "path": "registry/oot/source_docs/KRVGD/KAP_889459_ek1.pdf"
+    }
+  }
+}

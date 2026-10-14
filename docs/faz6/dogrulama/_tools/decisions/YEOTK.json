@@ -1,0 +1,221 @@
+{
+ "ticker": "YEOTK",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_961151",
+  "KAP_961151_EK1",
+  "KAP_959832_EK1",
+  "KAP_959861_EK1",
+  "KAP_961251"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "6.6",
+   "origin": "SOURCE_REPORTED",
+   "source_id": "KAP_961151_EK1",
+   "quote": "Borsa İstanbul tarafından paylaşılan verilere göre toplam filtre edilmemiş 6,6 katına denk gelen 33.125.924 pay karşılığı 126.177 adet emir ile toplam 662.518.480 TL talep toplanmıştır.",
+   "definition": "belgedeki toplam kat (filtre edilmemiş; 5.000.000 TL nominal satılan paya göre)",
+   "denominator_includes_additional_sale": false,
+   "note": "ek satış (planlanan 1.000.000) kullanılmadı; 33.125.924 / 5.000.000 = 6,6252. Mükerrer tarama sonrası kabul edilen 31.993.163 pay (filtrelenmiş) / 5.000.000 = 6,3986; belge bunu kat olarak yazmıyor"
+  },
+  "total_demand_filter_status": {
+   "value": "UNFILTERED",
+   "source_id": "KAP_961151_EK1",
+   "quote": "toplam filtre edilmemiş 6,6 katına denk gelen 33.125.924 pay",
+   "note": "filtrelenmiş: 'Mükerrer taramanın ardından 31.993.163 pay karşılığı 121.489 adet emir ile toplam 639.863.260 TL talep kabul edilmiş'"
+  },
+  "ipo_size_tl": {
+   "value": "100000000",
+   "source_id": "KAP_961151_EK1",
+   "quote": "belirlenen halka arz fiyatı ile halka arz büyüklüğü 100.000.000 TL olarak gerçekleşmiştir"
+  },
+  "capital_increase_shares": {
+   "value": "4000000",
+   "source_id": "KAP_961151_EK1",
+   "quote": "YEO’nun çıkarılmış sermayesinin 20.000.000 TL’den 24.000.000 TL’ye çıkarılması nedeniyle 4.000.000 TL nominal değerli 4.000.000 adet payın"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "belgede tek sayı olarak yazılı değil; türetme (mevcut ortaklar 218.200 + 218.200 + 218.100 + 100.000 + 100.000 + 100.000 + 45.500 = 1.000.000 (= toplam 5.000.000 − sermaye artırımı 4.000.000)) görev kuralı gereği kullanılmadı",
+   "derived_candidate": {
+    "value": "1000000",
+    "source_id": "KAP_961151_EK1",
+    "quote": "mevcut ortaklardan Tolunay Yıldız’ın sahip olduğu 218.200 TL nominal değerli 218.200 adet pay, Orhan Yıldız’ın sahip olduğu 218.200 TL nominal değerli 218.200 adet pay, Özbey Yıldız’ın sahip olduğu 218.100 TL nominal değerli 218.100 adet pay, Barış Esen’in sahip olduğu 100.000 TL nominal değerli 100.000 adet pay, Sinan Karahan’ın sahip olduğu 100.000 TL nominal değerli 100.000 adet pay, Yasin Düven’in sahip olduğu 100.000 TL nominal değerli 100.000 adet pay ve Caner Karataş’ın sahip olduğu 45.500 TL nominal değerli 45.500 adet pay olmak üzere toplam 5.000.000 TL nominal değerli 5.000.000 adet (B) grubu pay halka arz edilmiştir.",
+    "formula": "mevcut ortaklar 218.200 + 218.200 + 218.100 + 100.000 + 100.000 + 100.000 + 45.500 = 1.000.000 (= toplam 5.000.000 − sermaye artırımı 4.000.000)"
+   }
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_961151_EK1",
+   "zero_from_statement": true,
+   "quote": "toplam 639.863.260 TL talep kabul edilmiş ve 5.000.000 TL nominal değerli payların satışı gerçekleşmiştir",
+   "note": "satılan toplam 5.000.000 = SPK planlanan taban (bedelli 4.000.000 + mevcut pay satışı 1.000.000); planlanan 1.000.000 ek satış kullanılmamış"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_961151_EK1",
+   "quote": "toplam 639.863.260 TL talep kabul edilmiş ve 5.000.000 TL nominal değerli payların satışı gerçekleşmiştir"
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_961151_EK1",
+   "used": "NONE",
+   "quote": "olmak üzere toplam 121.489 yatırımcıya 5.000.000 TL nominal değerli paylar dağıtılmıştır",
+   "note": "yalnız taban dağıtıldı; ek satış ifadesi yok"
+  },
+  "investor_count": {
+   "value": "121489",
+   "source_id": "KAP_961151_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "olmak üzere toplam 121.489 yatırımcıya 5.000.000 TL nominal değerli paylar dağıtılmıştır",
+   "note": "filtrelenmemiş talep 126.177 adet emir (kişi değil)"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "121131",
+    "domestic_legal_entity": "80",
+    "domestic_institutional": "36",
+    "foreign_retail": "240",
+    "foreign_legal_entity": "2"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_961151_EK1",
+   "quote": "Yurt İçi Gerçek 121.131 4.985.073 %99,70 Tüzel 80 3.357 %0,07 Kurumsal 36 1.581 %0,03 Yurt Dışı Gerçek 240 9.902 %0,20 Tüzel 2 87 %0,00",
+   "note": "tablo: Yurt İçi (Gerçek, Tüzel, Kurumsal), Yurt Dışı (Gerçek, Tüzel); retail = Yurt İçi Gerçek; metinde 'yurt içi gerçek ve tüzel kişi olarak 121.211 yatırımcı'"
+  },
+  "retail_demand_multiple": {
+   "value": null,
+   "missing_reason": "borsada satış; grup tahsisatı yok ('Halka arzda herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'), grup talebi yazılmıyor"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "4985073",
+    "domestic_legal_entity": "3357",
+    "domestic_institutional": "1581",
+    "foreign_retail": "9902",
+    "foreign_legal_entity": "87"
+   },
+   "source_id": "KAP_961151_EK1",
+   "quote": "Yurt İçi Gerçek 121.131 4.985.073 %99,70 Tüzel 80 3.357 %0,07 Kurumsal 36 1.581 %0,03 Yurt Dışı Gerçek 240 9.902 %0,20 Tüzel 2 87 %0,00"
+  },
+  "retail_allocation_pct": {
+   "value": "99.70",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_961151_EK1",
+   "quote": "Yurt İçi Gerçek 121.131 4.985.073 %99,70",
+   "note": "yalnız Yurt İçi Gerçek; Yurt İçi Tüzel %0,07 ayrı"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "0.03",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_961151_EK1",
+   "quote": "Kurumsal 36 1.581 %0,03"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": null,
+   "missing_reason": "yurt dışı kurumsal grup yok; tabloda Yurt Dışı Gerçek %0,20 ve Yurt Dışı Tüzel %0,00 (tüzel kişi, kurumsal olarak adlandırılmıyor)"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "belge yalnız satış yöntemini yazıyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor"
+  },
+  "lead_broker": {
+   "value": "Global Menkul Değerler A.Ş.",
+   "source_id": "KAP_959861_EK1",
+   "quote": "aracılık edecek Global Menkul Değerler A.Ş.'nin",
+   "note": "sonuç bildirimini de Global Menkul Değerler yayımlamış; KAP_959832_EK1 aynı TSSD"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {
+  "total_demand_multiple": {
+   "codex_value": "6,6",
+   "verdict": "FOUND_SAME",
+   "note": "belgede açık, filtre edilmemiş"
+  },
+  "capital_increase_shares": {
+   "codex_value": "4.000.000",
+   "verdict": "FOUND_SAME",
+   "note": "sonuç ekinde açık"
+  },
+  "existing_share_sale_shares": {
+   "codex_value": "1.000.000",
+   "verdict": "FOUND_SAME",
+   "note": "sonuç ekinde yedi ortak ayrı ayrı yazılı; toplam türetildi"
+  },
+  "additional_sale_shares": {
+   "codex_value": "0",
+   "verdict": "FOUND_SAME",
+   "note": "satılan toplam = taban; planlanan 1.000.000 ek satış kullanılmadı"
+  },
+  "ipo_size_tl": {
+   "codex_value": "100.000.000",
+   "verdict": "FOUND_SAME"
+  },
+  "investor_count": {
+   "codex_value": "121.489",
+   "verdict": "FOUND_SAME"
+  },
+  "investor_count_by_group": {
+   "codex_value": "{'Yurt İçi Gerçek': '121.131', 'Yurt İçi Tüzel': '80', 'Yurt İçi Kurumsal': '36', 'Yurt Dışı Gerçek': '240', 'Yurt Dışı Tüzel': '2'}",
+   "verdict": "FOUND_SAME"
+  },
+  "distributed_by_group": {
+   "codex_value": "{'Yurt İçi Gerçek': '4.985.073', 'Yurt İçi Tüzel': '3.357', 'Yurt İçi Kurumsal': '1.581', 'Yurt Dışı Gerçek': '9.902', 'Yurt Dışı Tüzel': '87'}",
+   "verdict": "FOUND_SAME"
+  },
+  "retail_allocation_pct": {
+   "codex_value": "99,70",
+   "verdict": "FOUND_SAME"
+  },
+  "domestic_institutional_allocation_pct": {
+   "codex_value": "0,03",
+   "verdict": "FOUND_SAME"
+  },
+  "foreign_institutional_allocation_pct": {
+   "codex_value": "0",
+   "verdict": "NOT_FOUND_IN_DOCS",
+   "note": "belgede yurt dışı kurumsal grup yok; Yurt Dışı Tüzel %0,00; alan null"
+  },
+  "distribution_method": {
+   "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "belgede benzer ifade satış yöntemi olarak geçiyor (“Sabit Fiyatla Talep Toplama ve Satış Yöntemi”), dağıtım yöntemi değil; alan null"
+  },
+  "lead_broker": {
+   "codex_value": "Global Menkul Değerler A.Ş.",
+   "verdict": "FOUND_SAME"
+  }
+ },
+ "notes": "Borsa Birincil Piyasa sabit fiyatla talep toplama; sonuç belgesi toplam filtre edilmemiş katı (6,6) açıkça yazıyor. Sermaye artırımı 4.000.000 + ortak satışı 1.000.000 (yedi ortak ayrı ayrı); planlanan 1.000.000 ek satış kullanılmadı. | Doğrulayıcı son işlemi: türetilmiş ayrım alanları boşaltıldı (postprocess.py).",
+ "needs_search": false
+}

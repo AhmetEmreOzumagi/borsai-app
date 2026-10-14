@@ -1,0 +1,67 @@
+== HEAD ==
+197a741 BORSAI_FAZ7C_REPORT: implementation and backtest report
+acaca2d BORSAI_FAZ7C_B: falling-IPO model v0 walk-forward backtest, near-era cell, golden ledgers, exploration log lines and MODELS.md section (not frozen)
+77d0ee5 BORSAI_FAZ7C_A3: MODELS.md Faz 7C section between Faz 4 and Faz 7 (existing Faz 7 section tests slice up to Faz 5); SPEC_DEVIATIONS K15 (no model or backtest change)
+1239e45 BORSAI_FAZ7C_A2: predict_fall accepts the sorted-key JSON horizons (D10, D5); round-trip parity test; SPEC_DEVIATIONS K14 (no model or backtest change)
+7be8394 BORSAI_APP_EK3_SPEC: app addendum 3 (ceiling hazard v1 port and CPI table, ceiling-streak summary card, post-D1 row and flow, out-of-time panel, falling-IPO card)
+3c93f9c BORSAI_FAZ7C_A: falling-IPO model v0 code, recipes, plans, rules and tests, no backtest results
+f89e41a BORSAI_PUSH_PROOFS: Faz 7 freeze (66adbca) and C spec (4fe4e51)
+ecd8973 BORSAI_FAZ7_FREEZE_B: frozen-model tests, MODELS.md freeze note, freeze report
+
+== (vi) şartname push kanıtı < A commit zamanı ==
+SPEC commit 4fe4e51: 2026-09-27T17:12:26+03:00
+push kanıtı created_at (UTC): 2026-09-27T15:30:43Z proven: 4fe4e51 method: GITHUB_COMMIT_STATUS_CREATED_AT
+A commit 3c93f9c: 2026-09-27T20:45:02+03:00  (UTC: 2026-09-27T17:45:02Z)
+4fe4e51 A'nın atası mı: evet
+resmi koşu git_commit (günlük): 3c93f9c dirty False 2026-09-27T20:45:13+03:00
+
+== (vi) git diff 4fe4e51 197a741 -- SPEC_C_V0.md (bayt) ==
+       0
+SPEC_C_V0.md sha256: d75c17cfec097121…; KESIF.md ve ekler değişti mi (4fe4e51..HEAD):        0 satır
+
+== (vi) KARARLAR_C tek commit'te ve sonra değişmedi ==
+3c93f9c BORSAI_FAZ7C_A: falling-IPO model v0 code, recipes, plans, rules and tests, no backtest results
+KARARLAR_C sha256: 2b60bec41924ac35…; HEAD içeriği == 3c93f9c içeriği: evet
+KARARLAR_C için ayrı push kanıtı: 24 kanıt dosyası; 3c93f9c ya da torunu için kanıt var mı: 
+
+== (vi) A ağacında faz7c altın dizini, MODELS.md bölümü, günlükte faz7c satırı yok ==
+A: macos_golden_faz7c dosya sayısı: 0
+A: MODELS.md '## Faz 7C' başlığı: 0
+A: günlükte fall_d10_v0 / exploration satırı: 0
+A: günlük satır sayısı 79, HEAD 2137 (fark = 4 backtest + 2054 exploration = 2058?)
+B (acaca2d): günlük +2058 satır; A2/A3'te günlük değişti mi:        0
+
+== (vii) git diff 3c93f9c 197a741 -- borsai ==
+ borsai/predict_fall.py | 2 +-
+ borsai/report.py       | 9 +++++----
+ 2 files changed, 6 insertions(+), 5 deletions(-)
+A2 (1239e45) dosyaları:
+  1239e45 BORSAI_FAZ7C_A2: predict_fall accepts the sorted-key JSON horizons (D10, D5); round-trip parity test; SPEC_DEVIATIONS K14 (no model or backtest change)
+
+ borsai/predict_fall.py    | 2 +-
+ docs/SPEC_DEVIATIONS.md   | 1 +
+ tests/test_faz7c_model.py | 6 +++++-
+ 3 files changed, 7 insertions(+), 2 deletions(-)
+A3 (77d0ee5) dosyaları:
+  77d0ee5 BORSAI_FAZ7C_A3: MODELS.md Faz 7C section between Faz 4 and Faz 7 (existing Faz 7 section tests slice up to Faz 5); SPEC_DEVIATIONS K15 (no model or backtest change)
+
+ borsai/report.py             | 9 +++++----
+ docs/SPEC_DEVIATIONS.md      | 3 ++-
+ tests/test_faz7c_backtest.py | 8 ++++++--
+ 3 files changed, 13 insertions(+), 7 deletions(-)
+B (acaca2d) borsai/ değişikliği:        0 satır; R (197a741) borsai/:        0 satır
+A2/A3 tests/ değişiklikleri:
+ tests/test_faz7c_backtest.py | 8 ++++++--
+ tests/test_faz7c_model.py    | 6 +++++-
+ 2 files changed, 11 insertions(+), 3 deletions(-)
+
+== (vii) MANIFEST git_commit ve borsai kaynak sha ==
+git_commit 3c93f9c dirty False borsai_source_sha256 516c0a3e7288
+
+== commit zamanları ==
+4fe4e51 2026-09-27T17:12:26+03:00 BORSAI_FAZ7_C_SPEC: falling-IPO minority discovery on H99 and th
+3c93f9c 2026-09-27T20:45:02+03:00 BORSAI_FAZ7C_A: falling-IPO model v0 code, recipes, plans, rules
+1239e45 2026-09-27T20:56:33+03:00 BORSAI_FAZ7C_A2: predict_fall accepts the sorted-key JSON horizo
+77d0ee5 2026-09-27T21:12:25+03:00 BORSAI_FAZ7C_A3: MODELS.md Faz 7C section between Faz 4 and Faz 
+acaca2d 2026-09-27T21:26:30+03:00 BORSAI_FAZ7C_B: falling-IPO model v0 walk-forward backtest, near
+197a741 2026-09-27T21:41:17+03:00 BORSAI_FAZ7C_REPORT: implementation and backtest report

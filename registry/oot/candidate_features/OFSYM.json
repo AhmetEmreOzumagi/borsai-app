@@ -1,0 +1,198 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "OFSYM",
+  "company": "Ofis Yem Gıda Sanayi Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "1425001",
+      "source_id": "KAP_1185325_EK1",
+      "source_document": "KAP 1185325 ek 1",
+      "source_published_at": "2023-08-14T18:27:08+03:00",
+      "source_sha256": "2fd56de10d722f61277fb3ff5a0868539db72c90fc2666bb2ad16873278936aa",
+      "source_path": "registry/oot/source_docs/OFSYM/KAP_1185325_ek1.pdf",
+      "quote": "1.425.001 22.750.000 %100",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "dağıtım sonuçları tablosunun toplam satırı (yatırımcı sayısı / dağıtılan nominal); talep eden sayısı yazılmıyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "1.425.001",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "1422620",
+        "domestic_institutional": "292",
+        "foreign_retail": "2089"
+      },
+      "source_id": "KAP_1185325_EK1",
+      "source_document": "KAP 1185325 ek 1",
+      "source_published_at": "2023-08-14T18:27:08+03:00",
+      "source_sha256": "2fd56de10d722f61277fb3ff5a0868539db72c90fc2666bb2ad16873278936aa",
+      "source_path": "registry/oot/source_docs/OFSYM/KAP_1185325_ek1.pdf",
+      "quote": [
+        "- Gerçek Kişi 1.422.620 22.712.754 %99,84",
+        "- Kurumsal 292 4.647 %0,02",
+        "- Gerçek Kişi 2.089 32.599 %0,14"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "ilk iki satır 'Yurt içi Yatırımcı', üçüncü satır 'Yurt dışı Yatırımcı' başlığı altında; retail = yurt içi gerçek kişi",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "Borsa'da satış; sonuç eki grup tahsisatı ya da grup katı yazmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "Borsa'da satış; grup katı yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "Borsa'da satış; grup katı yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "22712754",
+        "domestic_institutional": "4647",
+        "foreign_retail": "32599"
+      },
+      "source_id": "KAP_1185325_EK1",
+      "source_document": "KAP 1185325 ek 1",
+      "source_published_at": "2023-08-14T18:27:08+03:00",
+      "source_sha256": "2fd56de10d722f61277fb3ff5a0868539db72c90fc2666bb2ad16873278936aa",
+      "source_path": "registry/oot/source_docs/OFSYM/KAP_1185325_ek1.pdf",
+      "quote": [
+        "- Gerçek Kişi 1.422.620 22.712.754 %99,84",
+        "- Kurumsal 292 4.647 %0,02",
+        "- Gerçek Kişi 2.089 32.599 %0,14"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.84",
+      "source_id": "KAP_1185325_EK1",
+      "source_document": "KAP 1185325 ek 1",
+      "source_published_at": "2023-08-14T18:27:08+03:00",
+      "source_sha256": "2fd56de10d722f61277fb3ff5a0868539db72c90fc2666bb2ad16873278936aa",
+      "source_path": "registry/oot/source_docs/OFSYM/KAP_1185325_ek1.pdf",
+      "quote": "- Gerçek Kişi 1.422.620 22.712.754 %99,84",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.02",
+      "source_id": "KAP_1185325_EK1",
+      "source_document": "KAP 1185325 ek 1",
+      "source_published_at": "2023-08-14T18:27:08+03:00",
+      "source_sha256": "2fd56de10d722f61277fb3ff5a0868539db72c90fc2666bb2ad16873278936aa",
+      "source_path": "registry/oot/source_docs/OFSYM/KAP_1185325_ek1.pdf",
+      "quote": "- Kurumsal 292 4.647 %0,02",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "sonuç ekinde yurt dışı kurumsal satırı yok (yalnız yurt dışı gerçek kişi %0,14)",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç belgesi ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Garanti Yatırım Menkul Kıymetler A.Ş.",
+      "source_id": "KAP_1181138_EK1",
+      "source_document": "KAP 1181138 ek 1",
+      "source_published_at": "2023-08-04T22:36:31+03:00",
+      "source_sha256": "89fbd6258257c5d02b989613654100c2262b81713b25e9855b7a3465de34c392",
+      "source_path": "registry/oot/source_docs/OFSYM/KAP_1181138_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Garanti Yatırım Menkul Kıymetler A.Ş.'nin",
+      "note": "sonuç bildirimini yayımlayan kurum da GARANTİ YATIRIM MENKUL KIYMETLER A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1185338",
+      "source_document": "KAP 1185338",
+      "source_published_at": "2023-08-14T18:35:17+03:00",
+      "source_sha256": "0fa61c1fb9f7b571a081afd8f8bc7575aa6ebbff90b4c56ae27ca47215ae990c",
+      "source_path": "registry/oot/source_docs/OFSYM/KAP_1185338_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_1185338",
+      "source_document": "KAP 1185338",
+      "source_published_at": "2023-08-14T18:35:17+03:00",
+      "source_sha256": "0fa61c1fb9f7b571a081afd8f8bc7575aa6ebbff90b4c56ae27ca47215ae990c",
+      "source_path": "registry/oot/source_docs/OFSYM/KAP_1185338_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1185338": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1185338",
+      "published_at": "2023-08-14T18:35:17+03:00",
+      "sha256": "0fa61c1fb9f7b571a081afd8f8bc7575aa6ebbff90b4c56ae27ca47215ae990c",
+      "path": "registry/oot/source_docs/OFSYM/KAP_1185338_bildirim.pdf"
+    },
+    "KAP_1185325_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1185325 ek 1",
+      "published_at": "2023-08-14T18:27:08+03:00",
+      "sha256": "2fd56de10d722f61277fb3ff5a0868539db72c90fc2666bb2ad16873278936aa",
+      "path": "registry/oot/source_docs/OFSYM/KAP_1185325_ek1.pdf"
+    },
+    "KAP_1181138_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1181138 ek 1",
+      "published_at": "2023-08-04T22:36:31+03:00",
+      "sha256": "89fbd6258257c5d02b989613654100c2262b81713b25e9855b7a3465de34c392",
+      "path": "registry/oot/source_docs/OFSYM/KAP_1181138_ek1.pdf"
+    }
+  }
+}

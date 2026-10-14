@@ -1,0 +1,261 @@
+{
+  "conditional_rows": {
+    "ceiling_path_v0": 40,
+    "ceiling_path_v0@INF": 40,
+    "pb_ceiling_path_v0": 40
+  },
+  "coverage_exemptions": [
+    {
+      "code": "S_H_THRESHOLD",
+      "model_id": "ceiling_path_v0@INF",
+      "reason": "sıfır model: özellik yoktur, S sabittir; S_h eşiğinin iki yanı aynı dosyada bulunamaz"
+    },
+    {
+      "code": "POST_BREAK_POOLING",
+      "reason": "dondurulmuş hücrelerde havuzlama tetiklenmez: her hücre ≥ 11 gözlem; havuzlama ve kırpma yalnız yamalı parametrelerle sınanır",
+      "where": "_patched_params.jsonl"
+    },
+    {
+      "code": "OUT_OF_TRAINING_RANGE",
+      "feature": "f4",
+      "reason": "f4 = sermaye artırımı / satılan × 100 ≤ 100 (INPUT_INCONSISTENT) ve eğitim üst sınırı 100",
+      "side": "high"
+    },
+    {
+      "code": "OUT_OF_TRAINING_RANGE",
+      "feature": "pb3",
+      "reason": "pb3 > 100 PB3_RANGE ile reddedilir; eğitim üst sınırı 100",
+      "side": "high"
+    },
+    {
+      "code": "F3_FILTER_STATUS_CONFLICT",
+      "reason": "kayıtlı hiçbir modelde f3_filter_mode açık (FILTERED/UNFILTERED) değil; ret yolu yalnız yamalı parametreyle sınanır",
+      "where": "_patched_params.jsonl"
+    },
+    {
+      "code": "REGIME_UNKNOWN",
+      "only_models": [
+        "ceiling_hazard_v1_pooled",
+        "ceiling_hazard_v1_pooled@INF"
+      ],
+      "reason": "rejim terimi yalnız pooled ve pooled@INF'te; öteki modeller alloc_regime anahtarını okumaz"
+    },
+    {
+      "code": "TUFE_*",
+      "only_models": [
+        "ceiling_hazard_v1_real",
+        "ceiling_hazard_v1_pooled"
+      ],
+      "reason": "deflatör (f1r) yalnız real ve pooled'da; clip ve @INF TÜFE istemez"
+    },
+    {
+      "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+      "feature": "f1",
+      "only_models": [
+        "ceiling_hazard_v1_clip"
+      ],
+      "reason": "f1 (ham TL) yalnız clip'te; real/pooled f1r kullanır"
+    },
+    {
+      "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+      "feature": "f1r",
+      "only_models": [
+        "ceiling_hazard_v1_real",
+        "ceiling_hazard_v1_pooled"
+      ],
+      "reason": "f1r yalnız real ve pooled'da"
+    },
+    {
+      "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+      "model_id": "ceiling_hazard_v1_pooled@INF",
+      "reason": "@INF'te özellik yok: kırpma yok, clipped ve clipped_features her satırda null"
+    },
+    {
+      "code": "F3_MISSING",
+      "model_id": "ceiling_hazard_v1_pooled@INF",
+      "reason": "@INF girdi kullanmaz"
+    },
+    {
+      "code": "INPUT_SHARES_OFFERED",
+      "model_id": "post_d1_hazard_v0",
+      "reason": "ana model (ceiling_hazard_v0) shares_offered'ı önce reddeder; dal evaluate_d1 birim testinde sınanır"
+    },
+    {
+      "code": "OUT_OF_TRAINING_RANGE",
+      "feature": "d1_lock",
+      "model_id": "post_d1_hazard_v0",
+      "reason": "d1_lock ∈ {0, 1} ve eğitim aralığı [0, 1]"
+    },
+    {
+      "code": "OUT_OF_TRAINING_RANGE",
+      "feature": "add_sale",
+      "only_models": [
+        "fall_d10_v0_h99",
+        "fall_d10_v0_pooled",
+        "fall_d10_v0_addsale"
+      ],
+      "reason": "add_sale ∈ {0, 1} ve eğitim aralığı [0, 1]",
+      "side": "low"
+    },
+    {
+      "code": "OUT_OF_TRAINING_RANGE",
+      "feature": "add_sale",
+      "only_models": [
+        "fall_d10_v0_h99",
+        "fall_d10_v0_pooled",
+        "fall_d10_v0_addsale"
+      ],
+      "reason": "add_sale ∈ {0, 1} ve eğitim aralığı [0, 1]",
+      "side": "high"
+    },
+    {
+      "code": "F3_MISSING",
+      "model_id": "fall_d10_v0_addsale",
+      "reason": "addsale f3 kullanmaz (yalnız ek satış)"
+    },
+    {
+      "code": "F3_MISSING",
+      "model_id": "fall_d10_v0_pooled@ZERO",
+      "reason": "@ZERO girdi okumaz"
+    },
+    {
+      "code": "TUFE_*",
+      "only_models": [
+        "fall_d10_v0_h99",
+        "fall_d10_v0_pooled"
+      ],
+      "reason": "(C)'de deflatör (f1r) yalnız h99 ve pooled'da; addsale ve @ZERO TÜFE istemez"
+    },
+    {
+      "code": "FEATURE_CLIPPED_TO_TRAINING_P05_P95",
+      "feature": "f1r|f3",
+      "only_models": [
+        "fall_d10_v0_h99",
+        "fall_d10_v0_pooled"
+      ],
+      "reason": "(C)'de kırpma yalnız h99 ve pooled'da (f1r, f3; ham değer, ln öncesi)"
+    },
+    {
+      "code": "ADDITIONAL_SALE_MISSING",
+      "model_id": "fall_d10_v0_pooled@ZERO",
+      "reason": "@ZERO hiçbir girdi okumaz; ret yok"
+    },
+    {
+      "code": "F3_FILTER_STATUS_CONFLICT",
+      "only_models": [
+        "fall_d10_v0_h99",
+        "fall_d10_v0_pooled"
+      ],
+      "reason": "dondurulmuş (C) modellerinde f3_filter_mode NOT_SPECIFIED; çelişki yolu yamalı parametreyle",
+      "where": "_patched_params.jsonl"
+    }
+  ],
+  "fall_model_ids": [
+    "fall_d10_v0_h99",
+    "fall_d10_v0_pooled",
+    "fall_d10_v0_addsale",
+    "fall_d10_v0_pooled@ZERO"
+  ],
+  "fall_oot_open_rows": 71,
+  "generator": "app/parity/gen_golden.py",
+  "model_ids": [
+    "v1_5_h99",
+    "base_always_ceiling",
+    "base_train_median",
+    "base_train_mean",
+    "base_zero",
+    "base_rate",
+    "base_last10_rate",
+    "v1_6_h99",
+    "v1_5_market20_v0",
+    "pb_v0",
+    "ceiling_hazard_v0",
+    "ceiling_hazard_v0@INF",
+    "pb_ceiling_v0",
+    "pb_ceiling_v0@INF",
+    "base_km_expanding",
+    "base_km_last10",
+    "ceiling_path_v0",
+    "ceiling_path_v0@INF",
+    "pb_ceiling_path_v0",
+    "ceiling_hazard_v1_clip",
+    "ceiling_hazard_v1_real",
+    "ceiling_hazard_v1_pooled",
+    "ceiling_hazard_v1_pooled@INF",
+    "fall_d10_v0_h99",
+    "fall_d10_v0_pooled",
+    "fall_d10_v0_addsale",
+    "fall_d10_v0_pooled@ZERO"
+  ],
+  "models_index_post_d1_sha256": "94ac36faffac6017d54ff406b97b37623c27633c847bd0117fb51bf42975b820",
+  "models_index_sha256": "7e636e8bf64b25d79bac04f4bf78b9f870cded8d4d1c10009b6926941e4edb59",
+  "n_cases": 938,
+  "oot_open_rows": 71,
+  "oot_sealed_rows_excluded_by_guard": true,
+  "patched_rows": 61,
+  "post_d1_model_ids": [
+    "post_d1_hazard_v0"
+  ],
+  "post_d1_parent": {
+    "model_id": "ceiling_hazard_v0",
+    "sha256": "caa4dc867a9fc20d9f57cf6269e157ee1fafc9527c5144e53797bf48af0ffb67"
+  },
+  "post_d1_path": {
+    "model_id": "ceiling_path_v0",
+    "sha256": "3e97e8788266f807a06604316d562de939a3e84ab6fcc9c0be1ce87790c6952d"
+  },
+  "post_d1_rows": {
+    "post_d1_hazard_v0": 238
+  },
+  "post_d1_synthetic_d1": {
+    "rule": "synth_d1: C_1 = predict_path limit yolu; kapanış = C_1 (P 0.85); kilit P 0.8; hacim pay × [1e-4, 0.6] log-tekdüze; sonuç dosyası okunmaz",
+    "seed": 20260922
+  },
+  "predict_sources_sha256": {
+    "borsai/features.py": "c092fa5133e850b2949470772c45d0f22aec7d3e64c2935c532377185a245a94",
+    "borsai/horizons.py": "4a1e4e896ee79d27e24019ca98396163030b85ccca468b087f3c32ad691a9858",
+    "borsai/predict.py": "4fb68a9e4294e2755b5541f16c2e1b41ee804a914ab013dd6f436efac42401c2",
+    "borsai/predict_fall.py": "6e9aa3f03341eecd70eba9dec43559b419f2f97303e4bc2f7f2304eb3631370a",
+    "borsai/predict_hazard.py": "6ceeeb46ff8576ee7ee020b2155b19ed8f2fdf38f5a91a80345fb7ddec184cd9",
+    "borsai/predict_market20.py": "5b766e6100dd759059f7c702d75d7a2985e911083db13be06403389afb3db2d8",
+    "borsai/predict_path.py": "40e4940695db2d8fe991fdae30bc18ee2534a604dfc66f6089a97f5598754b86",
+    "borsai/predict_pb.py": "a7f6e5f81cd312845220275cf4027bb67a8b12021c93d025f08bdede12b853c4",
+    "borsai/predict_post_d1.py": "03c102bc42ae0b0863b0a4ba459a91f246aefc34858d159fdc79be397a24ca7d",
+    "borsai/survival.py": "e6283941cfccae6c74e6ab3276b5a61093bb923e29eaff9cb1554373bef477f3",
+    "borsai/tufe.py": "f7952382d16f80fddb68bef7a3382ab4483bf8b21b5736e7bc5bdb0fae15eaf3"
+  },
+  "python": "3.12.14",
+  "rows": {
+    "base_always_ceiling": 392,
+    "base_km_expanding": 392,
+    "base_km_last10": 392,
+    "base_last10_rate": 392,
+    "base_rate": 392,
+    "base_train_mean": 392,
+    "base_train_median": 392,
+    "base_zero": 392,
+    "ceiling_hazard_v0": 392,
+    "ceiling_hazard_v0@INF": 392,
+    "ceiling_hazard_v1_clip": 616,
+    "ceiling_hazard_v1_pooled": 616,
+    "ceiling_hazard_v1_pooled@INF": 616,
+    "ceiling_hazard_v1_real": 616,
+    "ceiling_path_v0": 468,
+    "ceiling_path_v0@INF": 468,
+    "fall_d10_v0_addsale": 635,
+    "fall_d10_v0_h99": 635,
+    "fall_d10_v0_pooled": 635,
+    "fall_d10_v0_pooled@ZERO": 635,
+    "pb_ceiling_path_v0": 468,
+    "pb_ceiling_v0": 392,
+    "pb_ceiling_v0@INF": 392,
+    "pb_v0": 392,
+    "v1_5_h99": 392,
+    "v1_5_market20_v0": 395,
+    "v1_6_h99": 392
+  },
+  "schema_version": "borsai.app_golden/1",
+  "seed": 20260922,
+  "tufe_prefix_sha256": "3d61cbcfca2453cfce476d4cfaae38a3c77c68a4d168641162d1627e731a567b",
+  "tufe_through_month": "2026-08"
+}

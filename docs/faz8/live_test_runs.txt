@@ -1,0 +1,88 @@
+BORSAI_FAZ8_LIVE_BREAK_20261002 — test koşuları (adım sırasıyla)
+
+== Adım 0: taban (HEAD fd88be3 = origin/main; ağaçta yalnız docs/prompts/FAZ8_LIVE_BREAK.md) ==
+models/INDEX_POST_BREAK.json sha256 899cf90c805d45313e187e2297f9207229d119f57c1ca56b009ace24ff8e8c5e (2 giriş); experiments/log.jsonl
+2146 satır; registry/post_break/ yok; scores/scores_break.json yok.
+.venv/bin/pytest -q -n 6 --dist loadgroup        920 passed, 1 failed in 530.07s (0:08:50)
+  tek kırmızı: tests/test_faz8_golden.py::test_b7_old_outputs_unchanged
+    `git diff --name-only 5d84e88 -- … registry …` çıktısında üç models/ dosyasına ek olarak
+    registry/push_proofs/4d3c9a26be65ee4b3b8f204945f36cdae7eedd5a.json (proje sahibinin push kanıtı commit'i fd88be3,
+    BORSAI_PUSH_PROOFS: Faz 8 freeze). Kasa testi (test_real_scores_oot_in_memory_run_equals_committed_file) temiz ağaçta yeşil.
+  → DUR; proje sahibine soruldu (AskUserQuestion). Karar: test_b7'nin bütün yol listesi sabit 5d84e88..57dcd0c aralığına
+    sabitlenir (o aralıkta yalnız üç dondurma dosyası); çalışma ağacına karşı yeni "sonrası" iddiası yazılmaz; bu görevin kendi
+    değişiklikleri tests/test_faz8_live.py'de yalnız konusu BORSAI_FAZ8_LIVE_ ile başlayan commit'ler üzerinden sınanır (registry ve
+    scores'ta yalnız eklenen registry/post_break/** ve scores/scores_break.json); log.jsonl "yalnız ekleme" ayağı aynen
+    (SPEC_DEVIATIONS N33).
+  Öngörülen ikinci engel aynı soruda soruldu: tests/test_outcome_guard.py::test_registry_carries_no_outcome_fields makine kaydının
+    break_day.fields_raw {close, upper_limit} anahtarları yüzünden B'de kırmızı olur. Karar: hariç tutma demetine
+    "registry/post_break/" eklenir (H35 kalıbı); dizini yeni post_break_record_problems bekçisi denetler (ek test + mutasyon).
+.venv/bin/python app/parity/gen_golden.py --check {"checked": 35, "different": []}
+bash app/scripts/test.sh                          exit 0 (57 s): cargo 151 passed / 0 failed, npm (vitest) 20 dosya 305 passed,
+                                                  parity (app/parity/test_gen_golden.py) 8 passed, golden_unchanged YEŞİL
+
+== Adım 0b: prova (geçici klon, oturumun scratchpad'inde; .venv ve app/node_modules sembolik bağ; CARGO_TARGET_DIR klona özel) ==
+Klon fd88be3'ten (git clone --local); A'nın kodu ve testleri (git diff + izlenmeyen dosyalar) → klonda commit
+"BORSAI_FAZ8_LIVE_A: prova (klon)" → .venv/bin/python -m borsai.scoring --break (5.7 s: 7 kayıt yazıldı, 0 yazılmayan; değerler beklenen
+tabloyla birebir) → çıktılar + gerçek dosya testleri klonda commit "BORSAI_FAZ8_LIVE_B: prova (klon)".
+.venv/bin/pytest -q -n 6 --dist loadgroup        951 passed, 1 failed in 630.52s (0:10:30) — 952 test (taban 921 + A'nın 27 + B'nin 4)
+  tek kırmızı: tests/test_faz8_break.py::test_14b_old_specs_models_and_cutoff_unchanged — `git status --porcelain -- … app`
+    çıktısı "?? app/node_modules": klonda node_modules sembolik bağı izlenmeyen dosya görünüyor (ana repoda dizin olarak yok sayılır).
+    Sınıf: prova ortamı artefaktı (ne K-PIN-L ne kod hatası); bağ klonun .git/info/exclude'una yazılınca tek başına 1 passed.
+  (i) K-PIN-L türü: adım 0'da ölçülen/öngörülen üçü dışında yok (test_5c, test_b7 — proje sahibi kararıyla sabit aralık —,
+      test_registry_carries_no_outcome_fields hariç tutması; üçü de A'da güncellendi, provada yeşil).
+  (ii) kod hatası: yok. (iii) başka: yok.
+bash app/scripts/test.sh (klon)                   exit 0 (132 s; ilk derleme): cargo 151 / 0, npm 305, parity 8, golden_unchanged YEŞİL
+gen_golden --check (klon)                         {"checked": 35, "different": []}
+Mutasyonlar (ikinci klon, her biri yedekten geri yüklenir; yalnız ilgili testler):
+  M1 kayıt bekçisi kapalı → KIRMIZI (2) · M2 ingest bülten terimi ≥ D_b → KIRMIZI (2) · M3 parite toleransı 1.0 → KIRMIZI (1) ·
+  M4 sıra bekçisinde POST_BREAK dalı yok → KIRMIZI (2) · M5 NA seri tavan sayılır → KIRMIZI (1 hata) · M6 F1 = 0 iken F2 okunur →
+  ilk koşuda YEŞİL (yakalanmadı: sentetik ZBB'nin D3'ü taban değildi) → senaryo "MMF" yapıldı (D3 tabanda) → KIRMIZI ·
+  M7 mükerrer denetimi yok → KIRMIZI (2) · M8 PIT yok sayılır → KIRMIZI (1) · M9 b_floor sınıf oranı ters → KIRMIZI (1) ·
+  M10 "geçiyor" n ≥ 10'da → KIRMIZI (1). Sonuç 10/10 kırmızı.
+Klonlar ve cargo hedef dizini silindi.
+
+== Adım 1: A öncesi (HEAD fd88be3 + A commit'siz; kasa testi ayrıldı) ==
+.venv/bin/pytest -q -n 6 --dist loadgroup --deselect tests/test_faz7_vault.py::test_real_scores_oot_in_memory_run_equals_committed_file
+                                                  947 passed, 1 deselected in 1142.47s (0:19:02) — 948 = 921 + 27 yeni
+                                                  (tests/test_faz8_live.py 23, tests/test_outcome_guard.py 4)
+bash app/scripts/test.sh                          exit 0 (39 s): cargo 151 / 0, npm 305, parity 8, golden_unchanged YEŞİL
+.venv/bin/python app/parity/gen_golden.py --check {"checked": 35, "different": []}
+
+== Adım 1 sonrası: commit A 71cf0791d53d3b48e5914f760fa075a7626c6a15 ==
+.venv/bin/pytest -q tests/test_faz7_vault.py::test_real_scores_oot_in_memory_run_equals_committed_file \
+  tests/test_faz8_model.py::test_5c_old_goldens_and_app_pins_unchanged \
+  tests/test_faz8_live.py::test_task_commits_only_add_post_break_records_and_scores_break
+                                                  3 passed in 90.52s (kasa testi A'dan hemen sonra tek başına yeşil)
+
+== Adım 2: B (HEAD = A, ağaç temiz) ==
+.venv/bin/python -m borsai.scoring --break        5.5 s; 7 kayıt yazıldı (arz başına bir), yazılmayan yok; scores/scores_break.json,
+                                                  docs/SCORES_BREAK.md; git status: yalnız bu 9 dosya (??). Değerler beklenen tabloyla
+                                                  b / D_b / b_floor birebir, maks |Δp| = 0.0 (F1 ve F2, 7 arz).
+İkinci koşu                                        0 yeni kayıt ("existing" 7); scores_break.json farkı yalnız generated_at_utc
+                                                  (16:17:30Z → 16:17:54Z; code alanı aynı: HEAD aynı, borsai temiz); SCORES_BREAK.md
+                                                  farkı yalnız "Üretim …" satırı. Commit'lenen çıktılar ikinci koşunundur.
+B öncesi (HEAD = A + B çıktıları ve gerçek dosya testleri commit'siz), paralel, ayrılan yok:
+.venv/bin/pytest -q -n 6 --dist loadgroup         946 passed, 6 failed in 676.02s (0:11:16) — 952 test
+  altısı da çalışma ağacı temizlik iddiası (`git status --porcelain`), yalnız commit'siz B çıktıları (?? registry/post_break/,
+  ?? scores/scores_break.json) yüzünden; commit B'den sonra yeşil olmaları beklenir (son kabulde ölçüldü):
+    tests/test_faz7c_model.py::test_tables_and_data_versions_unchanged          (status -- data models registry scores legacy)
+    tests/test_scoring.py::test_faz4_scores_json_existing_blocks_unchanged      (status -- registry data)
+    tests/test_faz4_ceiling_path.py::test_new_models_are_retro_with_no_record_and_no_metric (status -- registry)
+    tests/test_faz8_break.py::test_14b_old_specs_models_and_cutoff_unchanged    (status -- models registry data scores legacy app)
+    tests/test_faz5_post_d1.py::test_14_models_goldens_and_read_only_paths_unchanged (status -- registry data models legacy)
+    tests/test_faz7c_golden.py::test_models_dir_registry_scores_unchanged       (status -- models registry scores)
+  Yeni gerçek dosya testleri (4) commit öncesi de yeşil (dosyalar diskte).
+bash app/scripts/test.sh                          exit 0 (58 s): cargo 151 / 0, npm 305, parity 8, golden_unchanged YEŞİL
+.venv/bin/python app/parity/gen_golden.py --check {"checked": 35, "different": []}
+
+== Adım 3: son kabul (commit B 7ee0027031964397e81583c947d8a6117edd9604 sonrası; deselect'siz, sıralı) ==
+.venv/bin/pytest -q                               952 passed in 1098.57s (0:18:18) — 2026-10-02T16:31:29Z → 16:49:48Z
+                                                  (B öncesindeki altı temizlik kırmızısı commit'ten sonra yeşil; kasa testi dahil)
+bash app/scripts/test.sh                          exit 0 (56 s): cargo 151 / 0, npm (vitest) 20 dosya 305 passed, parity 8 passed,
+                                                  golden_unchanged YEŞİL
+.venv/bin/python app/parity/gen_golden.py --check {"checked": 35, "different": []}
+git status --porcelain --untracked-files=all       boş (R'den önce)
+
+== Adım 4: R (docs/faz8/LIVE_RAPOR.md, bu dosya) ==
+Hijyen denetimi R dosyalarıyla (commit öncesi): test_faz8_break::test_14 (docs/faz8/ tarar), test_faz8_live::test_hygiene_…,
+test_outcome_guard::test_text_mentions_of_post_cutoff_bulletins_follow_models — 3 passed.

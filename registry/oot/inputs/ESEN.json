@@ -1,0 +1,326 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "ESEN",
+  "company": "Esenboğa Elektrik Üretim A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_879366",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "8.5",
+      "source_id": "KAP_879366",
+      "source_document": "KAP 879366",
+      "source_published_at": "2020-10-07T18:15:13+03:00",
+      "source_sha256": "f689c98deebae427b7fe43fbfad31eda634c4b4b3382fdd0b334d98a6258e61e",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_879366_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 8,5",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2020_59",
+          "quote": "Esenboğa Elektrik Üretim A.Ş. 40.000.000 64.000.000 24.000.000 - - - 8,5",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "24000000",
+      "source_id": "KAP_879366",
+      "source_document": "KAP 879366",
+      "source_published_at": "2020-10-07T18:15:13+03:00",
+      "source_sha256": "f689c98deebae427b7fe43fbfad31eda634c4b4b3382fdd0b334d98a6258e61e",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_879366_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 24.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "64000000",
+      "source_id": "KAP_879366",
+      "source_document": "KAP 879366",
+      "source_published_at": "2020-10-07T18:15:13+03:00",
+      "source_sha256": "f689c98deebae427b7fe43fbfad31eda634c4b4b3382fdd0b334d98a6258e61e",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_879366_bildirim.pdf",
+      "quote": "sermayesini temsil eden 64 milyon TL",
+      "unit_expansion": "'64 milyon' = 64000000",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "capital_increase_shares": {
+      "value": "24000000",
+      "source_id": "SPK_BULTEN_2020_59",
+      "source_document": "SPK Bülteni 2020/59",
+      "source_published_at": "2020-09-24T23:59:59+03:00",
+      "source_sha256": "f91575a4e5a9370b39f0ed92340beb71fe1732d7aee273be44e643213c7c7e63",
+      "source_path": "registry/oot/source_docs/ESEN/SPK_BULTEN_2020-59.pdf",
+      "quote": "Esenboğa Elektrik Üretim A.Ş. 40.000.000 64.000.000 24.000.000 - - - 8,5",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_878967",
+          "quote": "toplam 24.000.000 TL nominal değerli payların tamamının satışı 8,50 TL satış fiyatından gerçekleşmiştir"
+        },
+        "b_shares_offered_equals_planned_base": "24000000 = 24000000 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "existing_share_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2020_59",
+      "source_document": "SPK Bülteni 2020/59",
+      "source_published_at": "2020-09-24T23:59:59+03:00",
+      "source_sha256": "f91575a4e5a9370b39f0ed92340beb71fe1732d7aee273be44e643213c7c7e63",
+      "source_path": "registry/oot/source_docs/ESEN/SPK_BULTEN_2020-59.pdf",
+      "quote": "Esenboğa Elektrik Üretim A.Ş. 40.000.000 64.000.000 24.000.000 - - - 8,5",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_878967",
+          "quote": "toplam 24.000.000 TL nominal değerli payların tamamının satışı 8,50 TL satış fiyatından gerçekleşmiştir"
+        },
+        "b_shares_offered_equals_planned_base": "24000000 = 24000000 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "total_demand_multiple": {
+      "value": null,
+      "missing_reason": "SALE_METHOD_ON_EXCHANGE_NO_BOOKBUILD_MULTIPLE: KAP_878967 yalnız dağıtım/talebi karşılanan başvuru sayısı veriyor; toplam talep ya da kat yok",
+      "checked_sources": [
+        "KAP_878967",
+        "KAP_878969",
+        "KAP_879366",
+        "KAP_876786",
+        "KAP_876786_EK1"
+      ],
+      "provenance": "MISSING"
+    },
+    "total_demand_filter_status": {
+      "value": null,
+      "missing_reason": "f3 yok; filtre durumu uygulanamaz (H99: NOT_APPLICABLE)",
+      "provenance": "MISSING"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_878967",
+      "source_document": "KAP 878967",
+      "source_published_at": "2020-10-07T11:13:48+03:00",
+      "source_sha256": "80f7887e33a4a55a8ef2751f4a62295284e9c3492d8f5d07c54afd18fada6003",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_878967_bildirim.pdf",
+      "quote": "toplam 24.000.000 TL nominal değerli payların tamamının satışı 8,50 TL satış fiyatından gerçekleşmiştir",
+      "zero_from_statement": true,
+      "note": "satılan toplam 24.000.000 = SPK planlanan taban (bedelli 24.000.000; mevcut pay satışı '-'); SPK satırında ek pay satışı '-'",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": null,
+      "missing_reason": "KAP_878967 gerçekleşen arzın TL tutarını yazmıyor (24.000.000 TL nominal ve 8,50 TL fiyat); fiyat x pay hesaplanmadı",
+      "provenance": "MISSING"
+    },
+    "ipo_price_try": {
+      "value": "8.5",
+      "source_id": "SPK_BULTEN_2020_59",
+      "source_document": "SPK Bülteni 2020/59",
+      "source_published_at": "2020-09-24T23:59:59+03:00",
+      "source_sha256": "f91575a4e5a9370b39f0ed92340beb71fe1732d7aee273be44e643213c7c7e63",
+      "source_path": "registry/oot/source_docs/ESEN/SPK_BULTEN_2020-59.pdf",
+      "quote": "Esenboğa Elektrik Üretim A.Ş. 40.000.000 64.000.000 24.000.000 - - - 8,5",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2020-09-24",
+        "bookbuilding_start": "2020-10-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "40000000",
+      "source_id": "SPK_BULTEN_2020_59",
+      "source_document": "SPK Bülteni 2020/59",
+      "source_published_at": "2020-09-24T23:59:59+03:00",
+      "source_sha256": "f91575a4e5a9370b39f0ed92340beb71fe1732d7aee273be44e643213c7c7e63",
+      "source_path": "registry/oot/source_docs/ESEN/SPK_BULTEN_2020-59.pdf",
+      "quote": "Esenboğa Elektrik Üretim A.Ş. 40.000.000 64.000.000 24.000.000 - - - 8,5",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2020-09-24",
+        "bookbuilding_start": "2020-10-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "64000000",
+      "source_id": "SPK_BULTEN_2020_59",
+      "source_document": "SPK Bülteni 2020/59",
+      "source_published_at": "2020-09-24T23:59:59+03:00",
+      "source_sha256": "f91575a4e5a9370b39f0ed92340beb71fe1732d7aee273be44e643213c7c7e63",
+      "source_path": "registry/oot/source_docs/ESEN/SPK_BULTEN_2020-59.pdf",
+      "quote": "Esenboğa Elektrik Üretim A.Ş. 40.000.000 64.000.000 24.000.000 - - - 8,5",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2020-09-24",
+        "bookbuilding_start": "2020-10-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "24000000",
+      "source_id": "SPK_BULTEN_2020_59",
+      "source_document": "SPK Bülteni 2020/59",
+      "source_published_at": "2020-09-24T23:59:59+03:00",
+      "source_sha256": "f91575a4e5a9370b39f0ed92340beb71fe1732d7aee273be44e643213c7c7e63",
+      "source_path": "registry/oot/source_docs/ESEN/SPK_BULTEN_2020-59.pdf",
+      "quote": "Esenboğa Elektrik Üretim A.Ş. 40.000.000 64.000.000 24.000.000 - - - 8,5",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2020-09-24",
+        "bookbuilding_start": "2020-10-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2020_59",
+      "source_document": "SPK Bülteni 2020/59",
+      "source_published_at": "2020-09-24T23:59:59+03:00",
+      "source_sha256": "f91575a4e5a9370b39f0ed92340beb71fe1732d7aee273be44e643213c7c7e63",
+      "source_path": "registry/oot/source_docs/ESEN/SPK_BULTEN_2020-59.pdf",
+      "quote": "Esenboğa Elektrik Üretim A.Ş. 40.000.000 64.000.000 24.000.000 - - - 8,5",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2020-09-24",
+        "bookbuilding_start": "2020-10-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "24000000",
+      "source_id": "SPK_BULTEN_2020_59",
+      "source_document": "SPK Bülteni 2020/59",
+      "source_published_at": "2020-09-24T23:59:59+03:00",
+      "source_sha256": "f91575a4e5a9370b39f0ed92340beb71fe1732d7aee273be44e643213c7c7e63",
+      "source_path": "registry/oot/source_docs/ESEN/SPK_BULTEN_2020-59.pdf",
+      "quote": "Esenboğa Elektrik Üretim A.Ş. 40.000.000 64.000.000 24.000.000 - - - 8,5",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2020-09-24",
+        "bookbuilding_start": "2020-10-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2020_59",
+      "source_document": "SPK Bülteni 2020/59",
+      "source_published_at": "2020-09-24T23:59:59+03:00",
+      "source_sha256": "f91575a4e5a9370b39f0ed92340beb71fe1732d7aee273be44e643213c7c7e63",
+      "source_path": "registry/oot/source_docs/ESEN/SPK_BULTEN_2020-59.pdf",
+      "quote": "Esenboğa Elektrik Üretim A.Ş. 40.000.000 64.000.000 24.000.000 - - - 8,5",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2020-09-24",
+        "bookbuilding_start": "2020-10-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "24000000",
+      "source_id": "SPK_BULTEN_2020_59",
+      "source_document": "SPK Bülteni 2020/59",
+      "source_published_at": "2020-09-24T23:59:59+03:00",
+      "source_sha256": "f91575a4e5a9370b39f0ed92340beb71fe1732d7aee273be44e643213c7c7e63",
+      "source_path": "registry/oot/source_docs/ESEN/SPK_BULTEN_2020-59.pdf",
+      "quote": "Esenboğa Elektrik Üretim A.Ş. 40.000.000 64.000.000 24.000.000 - - - 8,5",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2020-09-24",
+        "bookbuilding_start": "2020-10-01",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2020-10-09",
+      "source_id": "KAP_879366",
+      "source_document": "KAP 879366",
+      "source_published_at": "2020-10-07T18:15:13+03:00",
+      "source_sha256": "f689c98deebae427b7fe43fbfad31eda634c4b4b3382fdd0b334d98a6258e61e",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_879366_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 09/10/2020",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2020-10-01",
+      "source_id": "KAP_879366",
+      "source_document": "KAP 879366",
+      "source_published_at": "2020-10-07T18:15:13+03:00",
+      "source_sha256": "f689c98deebae427b7fe43fbfad31eda634c4b4b3382fdd0b334d98a6258e61e",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_879366_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 01-02/10/2020 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2020-10-02",
+      "source_id": "KAP_879366",
+      "source_document": "KAP 879366",
+      "source_published_at": "2020-10-07T18:15:13+03:00",
+      "source_sha256": "f689c98deebae427b7fe43fbfad31eda634c4b4b3382fdd0b334d98a6258e61e",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_879366_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 01-02/10/2020 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_879366": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 879366",
+      "published_at": "2020-10-07T18:15:13+03:00",
+      "sha256": "f689c98deebae427b7fe43fbfad31eda634c4b4b3382fdd0b334d98a6258e61e",
+      "path": "registry/oot/source_docs/ESEN/KAP_879366_bildirim.pdf"
+    },
+    "SPK_BULTEN_2020_59": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2020/59",
+      "published_at": "2020-09-24T23:59:59+03:00",
+      "sha256": "f91575a4e5a9370b39f0ed92340beb71fe1732d7aee273be44e643213c7c7e63",
+      "path": "registry/oot/source_docs/ESEN/SPK_BULTEN_2020-59.pdf"
+    },
+    "KAP_878967": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 878967",
+      "published_at": "2020-10-07T11:13:48+03:00",
+      "sha256": "80f7887e33a4a55a8ef2751f4a62295284e9c3492d8f5d07c54afd18fada6003",
+      "path": "registry/oot/source_docs/ESEN/KAP_878967_bildirim.pdf"
+    }
+  }
+}

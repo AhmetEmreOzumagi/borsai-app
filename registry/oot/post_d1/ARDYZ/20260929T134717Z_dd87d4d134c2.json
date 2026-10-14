@@ -1,0 +1,222 @@
+{
+  "base_record": {
+    "file": "registry/oot/records/ARDYZ/20260924T221306Z_b99d4a9914fb.json",
+    "model_inputs_sha256": "191384f472fc3a65a935ce381be3ba06f9ce2c83fd1649e65c49f25815bd3bfc",
+    "selected_by": "OOT_EARLIEST_ACTIVE_RECORD",
+    "sha256": "b99d4a9914fbb151ccbbda7a8c75f1f819458bdc0e7d2e4e1c491618ee4cf69b"
+  },
+  "code": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "f501510d12c3a4e1513d03afa5b4ab2e59a2c5b2b8758e9b9e1a7891baef27bb",
+    "git_head": "2f914dd76117babbc52f5b8853e43a891f3a53f8"
+  },
+  "comparators_conditional": {
+    "base_always_ceiling": {
+      "S": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "S_cond": {
+        "10": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 1.0,
+        "8": 1.0,
+        "9": 1.0
+      },
+      "record_cell_sha256": null,
+      "source": "SPEC_DEVIATIONS_C4"
+    },
+    "base_km_expanding": {
+      "S": [
+        0.8181818181818181,
+        0.7070707070707071,
+        0.6666666666666666,
+        0.5353535353535352,
+        0.4141414141414141,
+        0.3333333333333333,
+        0.2727272727272727,
+        0.2121212121212121,
+        0.1717171717171717,
+        0.1414141414141414
+      ],
+      "S_cond": {
+        "10": 0.17283950617283952,
+        "2": 0.8641975308641976,
+        "3": 0.8148148148148149,
+        "4": 0.6543209876543209,
+        "5": 0.5061728395061729,
+        "6": 0.40740740740740744,
+        "7": 0.3333333333333333,
+        "8": 0.25925925925925924,
+        "9": 0.20987654320987656
+      },
+      "record_cell_sha256": "d0f7fbd6fc51bdb5a7c80446c338f250d72446a432cf04c9e8093cc5002634bb",
+      "source": "base_record"
+    },
+    "base_km_last10": {
+      "S": [
+        0.5,
+        0.4,
+        0.32000000000000006,
+        0.25600000000000006,
+        0.20480000000000007,
+        0.16384000000000007,
+        0.13107200000000005,
+        0.10485760000000005,
+        0.07340032000000003,
+        0.058720256000000026
+      ],
+      "S_cond": {
+        "10": 0.11744051200000005,
+        "2": 0.8,
+        "3": 0.6400000000000001,
+        "4": 0.5120000000000001,
+        "5": 0.40960000000000013,
+        "6": 0.32768000000000014,
+        "7": 0.2621440000000001,
+        "8": 0.2097152000000001,
+        "9": 0.14680064000000007
+      },
+      "record_cell_sha256": "64a8b0bbe81e98953a8595bb7906d66f474a2b0d856704d33bf6c381dc183d5c",
+      "source": "base_record"
+    },
+    "ceiling_hazard_v0": {
+      "S": null,
+      "S_cond": null,
+      "record_cell_sha256": "426fdc3134bf691910763ba43ec9124f90edcae3aef566ea9189a47a13308ea0",
+      "source": "base_record"
+    },
+    "ceiling_hazard_v0@INF": {
+      "S": null,
+      "S_cond": null,
+      "record_cell_sha256": null,
+      "source": "base_record"
+    }
+  },
+  "d1": {
+    "ceiling_close_D1": 1,
+    "fields_raw": {
+      "aof": "6.36",
+      "close": "6.36",
+      "halt": "0",
+      "high": "6.36",
+      "low": "6.36",
+      "lower_limit": "4.24",
+      "open": "6.36",
+      "reference_price": "5.3",
+      "special_trade_turnover": "0",
+      "special_trade_volume": "0",
+      "trade_count": "460",
+      "turnover": "538761.96",
+      "upper_limit": "6.36",
+      "volume": "84711"
+    },
+    "half_day": 0,
+    "halt_flag": 0,
+    "lock_consistency": {
+      "close_at_U": true,
+      "high_at_U": true,
+      "open_at_U": true
+    },
+    "session_date": "2020-02-06",
+    "session_h": 1,
+    "thb": {
+      "downloaded_at": "2026-09-29T13:34:58+03:00",
+      "file": "quarantine/thb/2020/thb202002061.zip",
+      "http_last_modified": "Thu, 06 Feb 2020 15:17:45 GMT",
+      "internal_filename": "thb202002061.csv",
+      "sha256": "e6915f37773f2e895db7e216f824d8374baa652e1d748ee0863b7b12f8df8ce5",
+      "url": "https://www.borsaistanbul.com/data/thb/2020/02/thb202002061.zip"
+    },
+    "thm": {
+      "downloaded_at": "2026-09-29T13:35:00+03:00",
+      "file": "quarantine/thm/2020/thm202002061.zip",
+      "http_last_modified": "Thu, 06 Feb 2020 05:02:47 GMT",
+      "internal_filename": "thm202002061.csv",
+      "sha256": "3828af5442dea0ce9868e22e3451dc747c7676573f6706ec1a1b30b1479f54b4",
+      "url": "https://www.borsaistanbul.com/data/thm/2020/02/thm202002061.zip"
+    }
+  },
+  "d1_features": {
+    "clipped": null,
+    "d1_lock": 1,
+    "d1_turnover_ln": -4.4834128361689185,
+    "d1_turnover_ratio": "0.0112948",
+    "warnings": [],
+    "z": null
+  },
+  "d1_rows": {
+    "file": "registry/oot/d1_rows/ARDYZ.json",
+    "sha256": "fa10ea9ce795f2bd7a688f529114e51cbfbaf270c56d917f2bb6f528bcc06bb6"
+  },
+  "exposure_class": "MACHINE_SEQUENCED",
+  "models": [
+    {
+      "algorithm": "discrete_time_hazard_offset_logit_l2",
+      "file": "models/post_d1_hazard_v0.json",
+      "kind": "post_d1",
+      "model_id": "post_d1_hazard_v0",
+      "output": {
+        "P_L": null,
+        "P_close_ceiling": null,
+        "S": null,
+        "clipped": null,
+        "conditional_j1": null,
+        "d1_features": null,
+        "hazard": null,
+        "model_id": "post_d1_hazard_v0",
+        "not_applicable": null,
+        "path_conditional": null,
+        "refused": {
+          "code": "F3_MISSING",
+          "field": "total_demand_multiple",
+          "reason": "Toplam talep katı (f3) yok; bu model f3'süz tahmin vermez. f3'süz tavan tahmini pb_ceiling_v0'dan gelir."
+        },
+        "stage": "POST_D1",
+        "warnings": []
+      },
+      "params_sha256": "3f7640267cd0f6b114ec88cf29e811587daa18c191866f9fa2d6910bc949e5dc",
+      "refusal": {
+        "code": "F3_MISSING",
+        "field": "total_demand_multiple",
+        "reason": "Toplam talep katı (f3) yok; bu model f3'süz tahmin vermez. f3'süz tavan tahmini pb_ceiling_v0'dan gelir."
+      },
+      "spec_sha256": "9d01c3c08cabe1bb6611c599edfe713319faec3e048a6491e649c32ba68898f4",
+      "stage": "POST_D1",
+      "status": "REFUSED"
+    }
+  ],
+  "models_index": {
+    "model_ids": [
+      "post_d1_hazard_v0"
+    ],
+    "path": "models/INDEX_POST_D1.json",
+    "sha256": "94ac36faffac6017d54ff406b97b37623c27633c847bd0117fb51bf42975b820"
+  },
+  "record_stage": "OOT_POST_D1",
+  "record_type": "PREDICTION",
+  "recorded_at_basis": "LOCAL_CLOCK_SELF_REPORTED: zaman kanıtı bu kaydı içeren commit'in push kanıtıdır; kayıt, kohortun sonucu repoya girmeden push edilir (KARARLAR D3, D6)",
+  "recorded_at_istanbul": "2026-09-29T16:47:17+03:00",
+  "recorded_at_utc": "2026-09-29T13:47:17Z",
+  "scale": "OOT_PRE_H99",
+  "schema_version": "borsai.oot_post_d1_record/1",
+  "summary": {
+    "n_models": 1,
+    "n_not_applicable": 0,
+    "n_predicted": 0,
+    "n_refused": 1
+  },
+  "ticker": "ARDYZ"
+}

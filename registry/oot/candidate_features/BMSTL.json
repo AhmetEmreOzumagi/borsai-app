@@ -1,0 +1,195 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "BMSTL",
+  "company": "BMS Birleşik Metal Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "209262",
+      "source_id": "KAP_1023429_EK1",
+      "source_document": "KAP 1023429 ek 1",
+      "source_published_at": "2022-04-25T11:55:41+03:00",
+      "source_sha256": "02b75cd2babb29a4a641b7b42a00271ddc2b0f51d1c7b202be2983b0a8eb2cf7",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023429_ek1.pdf",
+      "quote": "209.262 10.875.000 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "dağıtım tablosundaki toplam yatırımcı sayısı; talep eden sayısı yazılı değil",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "208906",
+        "domestic_institutional": "70",
+        "foreign_retail": "286"
+      },
+      "source_id": "KAP_1023429_EK1",
+      "source_document": "KAP 1023429 ek 1",
+      "source_published_at": "2022-04-25T11:55:41+03:00",
+      "source_sha256": "02b75cd2babb29a4a641b7b42a00271ddc2b0f51d1c7b202be2983b0a8eb2cf7",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023429_ek1.pdf",
+      "quote": [
+        "- Gerçek Kişi 208.906 10.856.565 99,83048%",
+        "- Kurumsal 70 3.602 0,03312%",
+        "- Gerçek Kişi 286 14.833 0,13640%"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "sonuç eki grup bazında talep/kat vermiyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "sonuç eki grup bazında talep/kat vermiyor",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "sonuç eki grup bazında talep/kat vermiyor; yurt dışı kurumsal satırı yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "10856565",
+        "domestic_institutional": "3602",
+        "foreign_retail": "14833"
+      },
+      "source_id": "KAP_1023429_EK1",
+      "source_document": "KAP 1023429 ek 1",
+      "source_published_at": "2022-04-25T11:55:41+03:00",
+      "source_sha256": "02b75cd2babb29a4a641b7b42a00271ddc2b0f51d1c7b202be2983b0a8eb2cf7",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023429_ek1.pdf",
+      "quote": [
+        "- Gerçek Kişi 208.906 10.856.565 99,83048%",
+        "- Kurumsal 70 3.602 0,03312%",
+        "- Gerçek Kişi 286 14.833 0,13640%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.83048",
+      "source_id": "KAP_1023429_EK1",
+      "source_document": "KAP 1023429 ek 1",
+      "source_published_at": "2022-04-25T11:55:41+03:00",
+      "source_sha256": "02b75cd2babb29a4a641b7b42a00271ddc2b0f51d1c7b202be2983b0a8eb2cf7",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023429_ek1.pdf",
+      "quote": "- Gerçek Kişi 208.906 10.856.565 99,83048%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yurt içi gerçek kişi; ayrıca yurt dışı gerçek kişi %0,13640",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.03312",
+      "source_id": "KAP_1023429_EK1",
+      "source_document": "KAP 1023429 ek 1",
+      "source_published_at": "2022-04-25T11:55:41+03:00",
+      "source_sha256": "02b75cd2babb29a4a641b7b42a00271ddc2b0f51d1c7b202be2983b0a8eb2cf7",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023429_ek1.pdf",
+      "quote": "- Kurumsal 70 3.602 0,03312%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "dağıtım tablosunda yurt dışı kurumsal satırı yok (yalnız yurt dışı gerçek kişi)",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD penceresi dağıtım yöntemini adlandırmıyor (TSSD başvuru şekli için izahnameye atıf yapıyor)",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Garanti Yatırım Menkul Kıymetler A.Ş.",
+      "source_id": "KAP_1021298_EK1",
+      "source_document": "KAP 1021298 ek 1",
+      "source_published_at": "2022-04-15T19:00:31+03:00",
+      "source_sha256": "c0941c5de75188d59639cb5bb4b79d74d51cd927e281fde4659dcea594222187",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1021298_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Garanti Yatırım Menkul Kıymetler A.Ş.'nin",
+      "note": "TSSD OCR metni; sonuç bildirimini yayımlayan kurum da GARANTİ YATIRIM MENKUL KIYMETLER A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde fiyat istikrarı yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencerelerinde yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_1023551",
+      "source_document": "KAP 1023551",
+      "source_published_at": "2022-04-25T18:06:51+03:00",
+      "source_sha256": "c1dfa109a44dc983d3cc3da849db9c01902a6e60d06dff5ad37ced42de23ec58",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023551_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_1023551",
+      "source_document": "KAP 1023551",
+      "source_published_at": "2022-04-25T18:06:51+03:00",
+      "source_sha256": "c1dfa109a44dc983d3cc3da849db9c01902a6e60d06dff5ad37ced42de23ec58",
+      "source_path": "registry/oot/source_docs/BMSTL/KAP_1023551_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1023551": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1023551",
+      "published_at": "2022-04-25T18:06:51+03:00",
+      "sha256": "c1dfa109a44dc983d3cc3da849db9c01902a6e60d06dff5ad37ced42de23ec58",
+      "path": "registry/oot/source_docs/BMSTL/KAP_1023551_bildirim.pdf"
+    },
+    "KAP_1023429_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1023429 ek 1",
+      "published_at": "2022-04-25T11:55:41+03:00",
+      "sha256": "02b75cd2babb29a4a641b7b42a00271ddc2b0f51d1c7b202be2983b0a8eb2cf7",
+      "path": "registry/oot/source_docs/BMSTL/KAP_1023429_ek1.pdf"
+    },
+    "KAP_1021298_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1021298 ek 1",
+      "published_at": "2022-04-15T19:00:31+03:00",
+      "sha256": "c0941c5de75188d59639cb5bb4b79d74d51cd927e281fde4659dcea594222187",
+      "path": "registry/oot/source_docs/BMSTL/KAP_1021298_ek1.pdf"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+# Tam test (BORSAI_FAZ7C_FABLE_REPRO_AUDIT adım 2), HEAD 197a741, ana ağaç (yeniden üretim, mutasyon ve iz koşularıyla eşzamanlı)
+## .venv/bin/pytest -q -p no:cacheprovider
+806 passed in 1721.02s (0:28:41)
+PYTEST_RC=0
+
+## bash app/scripts/test.sh
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 3 filtered out; finished in 0.00s
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.24s
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.20s
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.56s
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.30s
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.95s
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+ Test Files  16 passed (16)
+      Tests  222 passed (222)
+4 passed in 6.58s
+=== 1. 16 eski altın dosya bayt-eşit (taban 0b67f5d) ===
+OK   v1_5_h99                   392 satır
+OK   base_always_ceiling        392 satır
+OK   base_train_median          392 satır
+OK   base_train_mean            392 satır
+OK   base_zero                  392 satır
+OK   base_rate                  392 satır
+OK   base_last10_rate           392 satır
+OK   v1_6_h99                   392 satır
+OK   v1_5_market20_v0           395 satır
+OK   pb_v0                      392 satır
+OK   ceiling_hazard_v0          392 satır
+OK   ceiling_hazard_v0@INF      392 satır
+OK   pb_ceiling_v0              392 satır
+OK   pb_ceiling_v0@INF          392 satır
+OK   base_km_expanding          392 satır
+OK   base_km_last10             392 satır
+=== 2. _patched_params.jsonl ilk 19 satır bayt-eşit ===
+OK   ilk 19 satır aynı; bugün 31 satır
+=== 3. dec_cases.json eski bölümleri bayt-eşit ===
+OK   9 eski bölüm aynı; yeni bölüm: ['limit_path']
+=== 4. beklenen değişiklikler (bilgi) ===
+=== golden_unchanged: YEŞİL (U46) ===
+APP_RC=0

@@ -1,0 +1,36 @@
+[ÖLÇTÜM] membership satır 99 sütun 15
+    historical_anchor {'QUICK': 99}
+    historical_anchor_date {'2026-08-06': 99}
+    original_target_universe_size {'100': 99}
+    current_frozen_cohort_size {'99': 99}
+    known_membership_gap_count {'1': 99}
+    membership_gap_status {'DEFERRED_RECONCILIATION': 99}
+[ÖLÇTÜM] membership_source: {'CANONICAL20_PROTECTED_INPUT': 20, 'VERIFIED_FINAL_EXTERNAL_ACQUISITION_EVIDENCE': 79}
+[ÖLÇTÜM] kanonik 20: ['AAGYO', 'ALBTN', 'ATATR', 'BETAE', 'EKDMR', 'EKIM', 'EMPAE', 'GENKM', 'GOLDA', 'ISVEA', 'KARCL', 'LXGYO', 'MASFN', 'MCARD', 'METEN', 'ORZAX', 'QUICK', 'SARAE', 'SSAAT', 'SVGYO'] | sıra no: 1 … 20
+[ÖLÇTÜM] kanonik 20 ilk işlem aralığı: 2026-02-19 … 2026-08-06
+[ÖLÇTÜM] dış kanıt grubu n = 79 | QUICK'ten sonra ilk işlem: 0 | SOHOE kaynağı: VERIFIED_FINAL_EXTERNAL_ACQUISITION_EVIDENCE 2026-07-06
+[ÖLÇTÜM] ilk işlem günleri: 2023-09-22 ( HATSN )… 2026-08-06 | farklı gün: 96 | ikişer arz günleri: ['2023-12-14', '2025-02-13', '2026-03-06'] | yıl: {'2023': 19, '2024': 33, '2025': 18, '2026': 29}
+[ÖLÇTÜM] membership ↔ MASTER ilk işlem günü farkı: 0 | ticker kümeleri eşit: True
+[ÖLÇTÜM] PROV point_in_time_status: {'PASS': 20, 'UNKNOWN': 79} | conflict_status: {'NO_CONFLICT': 99} | superseded_result_status: {'DATA_NOT_FOUND': 98, 'SUPERSEDED_DO_NOT_CANONICALIZE': 1}
+[ÖLÇTÜM] READY pit == PROV pit farkı: 0
+[ÖLÇTÜM] MASTER data_completeness_status: {'PARTIAL': 99} | DATA_NOT_FOUND sayısı: distribution_method 79 lead_broker 79 sector 79
+[ÖLÇTÜM] MASTER sütun sayısı 38 PROV 22 READY 23 SESSIONS 40 TARGETS 18 field_prov 11880 × 15 PB 99 × 32
+[ÖLÇTÜM] field_provenance: (arz,seans) çifti 990 | alan adı sayısı 1 | sütunlar: ['ticker', 'session_number', 'target_session_date', 'canonical_field', 'source_kind', 'source_column_tr']
+[ÖLÇTÜM] Takvim A: 2023-09-22 … 2026-08-19 gün 1063 ardışık True | status: {'OPEN_FULL_DAY': 722, 'WEEKEND_EXCLUDED': 304, 'OFFICIAL_FULL_CLOSURE': 31, 'OPEN_HALF_DAY': 6} | counts: {('OPEN_FULL_DAY', 'TRUE'): 722, ('WEEKEND_EXCLUDED', 'FALSE'): 304, ('OFFICIAL_FULL_CLOSURE', 'FALSE'): 31, ('OPEN_HALF_DAY', 'TRUE'): 6}
+[ÖLÇTÜM] A seans 728 yarım gün ['2024-04-09', '2024-10-28', '2025-06-05', '2025-10-28', '2026-03-19', '2026-05-26'] | used_by_historical99 TRUE 433 == SESSIONS farklı tarih 433 True | semantics: {'BIST_PAY_NTH_OFFICIAL_OPEN_SESSION_V1': 1063} | kaynak sha/yıl: {'2023': {'5741cd3d'}, '2024': {'f65074e5'}, '2025': {'ed0ae563'}, '2026': {'e45fa97e'}}
+[ÖLÇTÜM] D_h = takvim A'dan n'inci seans; SESSIONS ile uyuşmayan arz: 0 []
+[ÖLÇTÜM] TARGETS target_session_date ≠ SESSIONS: 0 | en geç hedef seansı: 2026-08-19 | D1 == MASTER ftd farkı: 0
+[ÖLÇTÜM] Takvim B: 2023-01-01 … 2026-08-19 gün 1327 seans 910 yarım 8 ardışık True | verification: {'EXTENDS_BEYOND_R1_CANONICAL_RANGE_VERIFIED_BY_RECONSTRUCTION_RULE_ONLY': 264, 'VERIFIED_EXACT_MATCH_VS_R1_CANONICAL_CALENDAR': 1063}
+[ÖLÇTÜM] A ∩ B ortak gün 1063 | seans bayrağı farklı: 0 | A yarım günler B'de yarım: True | B yarım günler: ['2023-04-20', '2023-06-27', '2024-04-09', '2024-10-28', '2025-06-05', '2025-10-28', '2026-03-19', '2026-05-26']
+[ÖLÇTÜM] B uzatma: 2026-08-20 … 2026-12-31 gün 134 seans 95 yarım ['2026-10-28'] tam kapanış ['2026-08-30', '2026-10-29'] | verification: {'FAZ2A_TRANSCRIBED_SESSION_SET_EQUALS_XU100_DATES_THROUGH_20260921': 33, 'FAZ2A_TRANSCRIBED_NOT_YET_CROSS_CHECKED_AGAINST_XU100': 101} | kaynak sha: {'e45fa97e'}
+[ÖLÇTÜM] XU100 eski: kayıt 9682 1986-01-31 … 2026-08-19 | yeni: kayıt 9705 1986-01-31 … 2026-09-21 | indexName≠XU100: 0 | eski kayıt yeni dosyada farklı/eksik: 0 | yeni ek kayıt: 23 | tekrarlı tarih yeni: 0
+[ÖLÇTÜM] B uzatması 2026-08-20…09-21 seans günleri 23 == XU100 kayıt günleri 23 True
+[ÖLÇTÜM] Takvim B seansı olup eski XU100'de kapanışı olmayan günler: ['2023-02-09', '2023-02-10', '2023-02-13', '2023-02-14', '2023-04-24']
+[ÖLÇTÜM] Takvim A seansı olup XU100'de olmayan: [] | XU100'de olup A seansı olmayan (A aralığı): []
+[ÖLÇTÜM] Takvim C: 2020-01-01 … 2023-09-21 gün 1360 seans 930 yarım 9 | locator: {'OFFICIAL_FULL_CLOSURES_LITERAL_TRANSCRIPTION': 52, 'NOT_LISTED_IN_OFFICIAL_FULL_CLOSURES_OR_OFFICIAL_HALF_DAYS': 921, 'CALENDAR_ARITHMETIC_WEEKEND_NOT_A_HOLIDAY_TABLE_ENTRY': 373, 'OFFICIAL_HALF_DAYS_LITERAL_TRANSCRIPTION': 9, 'NOT_LISTED_IN_HOLIDAY_TABLE_NO_XU100_CLOSE_UNANNOUNCED_CLOSURE': 5} | verification: {'FAZ6_TRANSCRIBED_SESSION_SET_EQUALS_XU100_DATES_20200101_20230921': 1355, 'FAZ6_XU100_GAP_ONLY_THB_HEAD_PROBE_PENDING_S5': 5}
+[ÖLÇTÜM] C XU100-boşluk kapanışları: ['2023-02-09', '2023-02-10', '2023-02-13', '2023-02-14', '2023-04-24'] | C seansı olup yeni XU100'de olmayan: [] | XU100'de olup C seansı olmayan: []
+[ÖLÇTÜM] C bülten kanıtı satır 42 | karar: {'NOT_PUBLISHED': 37, 'PUBLISHED_NO_TRADING': 4, 'TRADING_SESSION': 1} | kaynak: {'HOLIDAY_TABLE': 37, 'XU100_GAP': 5} | TRADING_SESSION günleri: ['2023-04-24'] | PUBLISHED_NO_TRADING: ['2023-02-09', '2023-02-10', '2023-02-13', '2023-02-14']
+[ÖLÇTÜM] C hafta içi kapanış sayısı: 42 == kanıt satırı: True | kümeler eşit: True
+[ÖLÇTÜM] C ↔ A ardışık: True
+[ÖLÇTÜM] PB pit_status: {'PASS': 99} | price_source_semantics: {'SPK_APPROVED_PLANNED_IPO_PRICE': 99} | SPK<B<T sırası ihlali: 0 | canonical ftd ≠ MASTER: 0
+[ÖLÇTÜM] SPK→talep toplama gün (min/medyan/maks): 4 6 13 | talep→ilk işlem: 4 8 12

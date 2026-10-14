@@ -1,0 +1,70 @@
+{
+  "table": "data/training_table.csv",
+  "sha256": "b307cd0e3a015f5d251512541007c5b16f8458224ab047e493c01551ccda7fb5",
+  "bytes": 29934,
+  "row_count": 99,
+  "column_count": 31,
+  "columns": [
+    "ticker",
+    "first_trading_date",
+    "point_in_time_status",
+    "ipo_price_tl",
+    "shares_offered",
+    "post_ipo_share_capital",
+    "capital_increase_shares",
+    "existing_share_sale_shares",
+    "total_demand_multiple",
+    "total_demand_multiple_origin",
+    "total_demand_filter_status",
+    "additional_sale_shares",
+    "R_D1",
+    "R_D3",
+    "R_D5",
+    "R_D10",
+    "Y_D1",
+    "Y_D3",
+    "Y_D5",
+    "Y_D10",
+    "ceiling_close_D1",
+    "ceiling_close_D2",
+    "ceiling_close_D3",
+    "ceiling_close_D4",
+    "ceiling_close_D5",
+    "ceiling_close_D6",
+    "ceiling_close_D7",
+    "ceiling_close_D8",
+    "ceiling_close_D9",
+    "ceiling_close_D10",
+    "ceiling_streak_L"
+  ],
+  "row_order": "first_trading_date ASC, ticker ASC",
+  "encoding": "UTF-8, no BOM, LF",
+  "missing_value": "empty cell (source sentinel DATA_NOT_FOUND)",
+  "first_trading_date_min": "2023-09-22",
+  "first_trading_date_max": "2026-08-06",
+  "outcome_sessions_through": "2026-08-19",
+  "builder": "data/build_training_table.py",
+  "builder_sha256": "0d0626db87c743a39d7ec55c77b8682d0ca4285702ad2941d62444e512236801",
+  "sources": [
+    {
+      "path": "data/raw/HISTORICAL99_FROZEN_COHORT_V1_canonical_pretrade_master.csv",
+      "sha256": "6011917a549a4ac638ef4a70948ea8904be1244f9b894b10b370ae8a691b6d0a"
+    },
+    {
+      "path": "data/raw/HISTORICAL99_FROZEN_COHORT_V1_canonical_feature_readiness.csv",
+      "sha256": "73fbaefe6539d7f3ada1da015d5007e68d98baa686783b407516d737f1bd1d17"
+    },
+    {
+      "path": "data/raw/HISTORICAL99_FROZEN_COHORT_V1_canonical_provenance.csv",
+      "sha256": "5d2f55466af25325d24e062a1fdd4bf05e03a46ff0ba588584eb76dc6faeecc1"
+    },
+    {
+      "path": "data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_d1_d3_d5_d10_targets.csv",
+      "sha256": "bdad71422d67424a29dfc9284013c91354bc36acad9ff9ed6aa06f641ca4c050"
+    },
+    {
+      "path": "data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_session_outcomes.csv",
+      "sha256": "eca620d3a5e8fed0b118bab556da5ce519257a4b2e14efcd22065f5bcdc93da9"
+    }
+  ]
+}

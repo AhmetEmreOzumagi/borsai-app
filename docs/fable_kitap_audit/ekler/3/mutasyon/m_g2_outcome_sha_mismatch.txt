@@ -1,0 +1,24 @@
+### m_g2_outcome_sha_mismatch :: tests/test_faz5_live.py::test_l5_outcomes_regenerate_byte_equal tests/test_outcome_guard.py::test_outcome_rows_h_ge_2_follow_bulletin_commits tests/test_faz8_live.py::test_real_seven_machine_records_match_expected_and_pass_guard
+F..                                                                      [100%]
+=================================== FAILURES ===================================
+____________________ test_l5_outcomes_regenerate_byte_equal ____________________
+
+    def test_l5_outcomes_regenerate_byte_equal():
+        """Ağsız regresyon: pinli yerel bültenlerden data/outcomes/*.csv yeniden üretilince bayt-eşit (REQUIRED genişledi, sonuç
+        değişmedi)."""
+        calendar = oc.load_calendar()
+        built = oc.build_outcomes(calendar, oc.as_of_session(calendar), write=False)
+        assert built
+        for t, o in built.items():
+>           assert oc._rows_bytes(o["rows"]) == oc.outcome_path(t).read_bytes(), t
+E           AssertionError: NETGL
+E           assert b'h,session_d...6a0ed5fa,OK\n' == b'h,session_d...6a0ed5fa,OK\n'
+E             
+E             At index 1129 diff: b'a' != b'0'
+E             Use -v to get more diff
+
+tests/test_faz5_live.py:657: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_faz5_live.py::test_l5_outcomes_regenerate_byte_equal - Asse...
+1 failed, 2 passed in 5.75s
+exit=1

@@ -1,0 +1,171 @@
+# BorsAi herkese açık ayna: testler ve Windows/macOS paketleri (FAZ9_PUBLIC_MIRROR K-MIR-4, proje sahibi kararı 2026-10-13).
+# Özel repodaki .github/workflows/build.yml'nin kopyası + Python testleri (test-python). Yalnız elle (workflow_dispatch) ya da
+# v* etiketiyle koşar; push'ta koşmaz. Secret kullanmaz; yazma izni yok.
+# Release BU iş akışında oluşturulmaz: aynanın git geçmişi tek commit'tir, buradan derlenen pakette Sicil künyesinin "kaydı
+# ekleyen commit"i ayna commit'i olur ve push kanıtı görünmez. Release paketlerini özel repo CI'ı üretir; proje sahibi
+# `gh release create` ile bu depoya yükler (README, "Kaynak ve kanıt"). Buradaki paketler yalnız doğrulama artefaktıdır.
+# Ortam isteyen Rust testleri (#[ignore]: BORSAI_REPO, .venv) burada ignore kalır; --include-ignored yok.
+# Ham bülten/resmi belge ya da özel repo geçmişi isteyen pytest'ler aynada açıkça atlanır (tests/conftest.py).
+name: build
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  test-windows:
+    name: test-windows
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      # Gömülü model ve skor dosyalarının sha'ları LF baytları üzerindedir (.gitattributes eol=lf; çifte emniyet)
+      - name: git core.autocrlf false
+        run: git config --global core.autocrlf false
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: app/src-tauri -> target
+      - name: npm ci
+        working-directory: app
+        run: npm ci
+      # U34 (tests/no_network.rs) `cargo metadata --offline --filter-platform aarch64-apple-darwin` koşar: macOS paketleri de
+      # önbellekte olmalı (cargo fetch hedef verilmezse bütün platformların paketlerini indirir)
+      - name: cargo fetch --locked
+        working-directory: app/src-tauri
+        run: cargo fetch --locked
+      # --no-fail-fast: ilk kırmızı test ikilisinde durulmaz, bütün kırmızılar tek koşuda görünür (adım yine kırmızı olur)
+      # Aynada atlanan tek test: sade.rs::snapshot_mode_views_equal_repo_views, gömülü sicil kayıtlarının push kanıtını ister;
+      # kanıt "kaydı ekleyen commit"e bağlıdır ve o commit yalnız özel repo geçmişindedir (özel repo CI'ında koşar)
+      - name: cargo test --workspace
+        working-directory: app/src-tauri
+        run: cargo test --workspace --no-fail-fast -- --exact --skip snapshot_mode_views_equal_repo_views
+      # cargo kırmızı olsa da vitest koşar (iş yine kırmızı; bütün kırmızılar tek koşuda)
+      - name: npm test
+        if: ${{ !cancelled() }}
+        working-directory: app
+        run: npm test
+      # K-WIN-5 kanıtı (yalnız bilgi; işi kırmızı yapmaz): Windows'ta yeniden üretilen fikstürlerin depodakinden farkı
+      # (yalnız sayısal son basamak farkı beklenir), karşılaştırıcının tolerans dökümü ve golden paritenin model başına
+      # bit-eşit satır sayısı / maks |Δ| tablosu
+      - name: Windows sayısal fark dökümü (bilgi)
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        shell: bash
+        working-directory: app/src-tauri
+        run: |
+          cat target/tmp/fixture_numeric/*.txt 2>/dev/null | head -n 400 || true
+          BORSAI_UPDATE_UI_FIXTURES=1 cargo test --test stage2 --test stage3 -q > /dev/null 2>&1 || true
+          # karşılaştırılmayan (compare = false) fikstürler skor dosyalarına bağlıdır, bilerek eski kalır: dökümden çıkar
+          X=(':(exclude)../tests/fixtures/ui/score_hints.json' ':(exclude)../tests/fixtures/ui/summary_real_*'
+             ':(exclude)../tests/fixtures/ui/summary_fall_real_*' ':(exclude)../tests/fixtures/ui/summary_post_d1_*')
+          git --no-pager diff --stat -- ../tests/fixtures/ui "${X[@]}"
+          git --no-pager diff -U0 --word-diff=plain -- ../tests/fixtures/ui "${X[@]}" | head -n 400
+          git checkout -- ../tests/fixtures/ui
+          cargo test -p borsai_predict --test golden golden_parity -- --nocapture 2>&1 | grep -E "bit-eşit|test result" || true
+
+  # Python araştırma hattı (borsai/): pytest. Referans ortam macOS arm64 + CPython 3.12 (pyproject.toml); kilitli sürümler.
+  test-python:
+    name: test-python
+    runs-on: macos-latest
+    timeout-minutes: 90
+    steps:
+      - name: git core.autocrlf false
+        run: git config --global core.autocrlf false
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: pip install -r requirements.lock
+        run: python -m pip install -r requirements.lock
+      - name: pytest -q
+        run: python -m pytest -q -rs
+      - name: parite (app/parity)
+        if: ${{ !cancelled() }}
+        run: python -m pytest -q app/parity/test_gen_golden.py && python app/parity/gen_golden.py --check
+
+  build-windows:
+    name: build-windows
+    runs-on: windows-latest
+    needs: test-windows
+    timeout-minutes: 45
+    steps:
+      - name: git core.autocrlf false
+        run: git config --global core.autocrlf false
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: app/src-tauri -> target
+      - name: npm ci
+        working-directory: app
+        run: npm ci
+      - name: tauri build (nsis)
+        working-directory: app
+        run: npm run tauri build
+      - name: sha7
+        shell: bash
+        run: echo "SHA7=${GITHUB_SHA::7}" >> "$GITHUB_ENV"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BorsAi-windows-${{ env.SHA7 }}
+          path: app/src-tauri/target/release/bundle/nsis/*.exe
+          if-no-files-found: error
+
+  build-macos:
+    name: build-macos
+    runs-on: macos-latest
+    timeout-minutes: 45
+    steps:
+      - name: git core.autocrlf false
+        run: git config --global core.autocrlf false
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: app/src-tauri -> target
+      - name: npm ci
+        working-directory: app
+        run: npm ci
+      - name: tauri build (dmg)
+        working-directory: app
+        run: npm run tauri build
+      - name: sha7
+        shell: bash
+        run: echo "SHA7=${GITHUB_SHA::7}" >> "$GITHUB_ENV"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BorsAi-macos-${{ env.SHA7 }}
+          path: app/src-tauri/target/release/bundle/dmg/*.dmg
+          if-no-files-found: error

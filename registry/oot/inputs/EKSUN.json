@@ -1,0 +1,332 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "EKSUN",
+  "company": "Eksun Gıda Tarım Sanayi ve Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1127128",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "48.9",
+      "source_id": "KAP_1127128",
+      "source_document": "KAP 1127128",
+      "source_published_at": "2023-03-22T18:10:34+03:00",
+      "source_sha256": "2e8c9776126abcd8e73198bbe74a0110c483422d5b3cea41e5bbc7f954789370",
+      "source_path": "registry/oot/source_docs/EKSUN/KAP_1127128_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 48,9",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2023_14",
+          "quote": "Eksun Gıda Tarım Sanayi ve 49.957.498 70.000.000 20.042.502 - - - 48,90 Ticaret AŞ",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "20042502",
+      "source_id": "KAP_1127128",
+      "source_document": "KAP 1127128",
+      "source_published_at": "2023-03-22T18:10:34+03:00",
+      "source_sha256": "2e8c9776126abcd8e73198bbe74a0110c483422d5b3cea41e5bbc7f954789370",
+      "source_path": "registry/oot/source_docs/EKSUN/KAP_1127128_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 20.042.502",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "70000000",
+      "source_id": "KAP_1127128",
+      "source_document": "KAP 1127128",
+      "source_published_at": "2023-03-22T18:10:34+03:00",
+      "source_sha256": "2e8c9776126abcd8e73198bbe74a0110c483422d5b3cea41e5bbc7f954789370",
+      "source_path": "registry/oot/source_docs/EKSUN/KAP_1127128_bildirim.pdf",
+      "quote": "sermayesini temsil eden 70.000.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "20042502",
+      "source_id": "KAP_1126548_EK1",
+      "source_document": "KAP 1126548 ek 1",
+      "source_published_at": "2023-03-21T08:39:04+03:00",
+      "source_sha256": "8234ad7b6bbc6c8c7c1722b8d8b0e3f575c182afb46af7dfffcefc44db603fd2",
+      "source_path": "registry/oot/source_docs/EKSUN/KAP_1126548_ek1.pdf",
+      "quote": "Halka arz sonucunda 48,90 TL’den sermaye artışı yoluyla halka arz edilen 20.042.502 TL nominal payların tamamı satılmıştır.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2023_14",
+      "source_document": "SPK Bülteni 2023/14",
+      "source_published_at": "2023-03-09T23:59:59+03:00",
+      "source_sha256": "aa3ea11f25159ae7690cc7bdc57f741f451f478160614eec21ccd45a7b36aab1",
+      "source_path": "registry/oot/source_docs/EKSUN/SPK_BULTEN_2023-14.pdf",
+      "quote": "Eksun Gıda Tarım Sanayi ve 49.957.498 70.000.000 20.042.502 - - - 48,90 Ticaret AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1126548_EK1",
+          "quote": "Halka arz sonucunda 48,90 TL’den sermaye artışı yoluyla halka arz edilen 20.042.502 TL nominal payların tamamı satılmıştır."
+        },
+        "b_shares_offered_equals_planned_base": "20042502 = 20042502 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "15.03",
+      "source_id": "KAP_1126548_EK1",
+      "source_document": "KAP 1126548 ek 1",
+      "source_published_at": "2023-03-21T08:39:04+03:00",
+      "source_sha256": "8234ad7b6bbc6c8c7c1722b8d8b0e3f575c182afb46af7dfffcefc44db603fd2",
+      "source_path": "registry/oot/source_docs/EKSUN/KAP_1126548_ek1.pdf",
+      "quote": "Halka arzda toplam 1.282.759 yatırımcıdan halka arz edilen 20.042.502 TL nominal değerli payların 15,03 katına denk gelen 301.146.986 TL nominal değerli filtrelenmemiş pay talebi gelmiştir.",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (filtrelenmemiş talep / halka arz edilen 20.042.502 TL nominal)",
+      "denominator_includes_additional_sale": false,
+      "note": "ek satış öngörülmemiş (SPK '-'); 301.146.986 / 20.042.502 = 15,0254",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_1126548_EK1",
+      "source_document": "KAP 1126548 ek 1",
+      "source_published_at": "2023-03-21T08:39:04+03:00",
+      "source_sha256": "8234ad7b6bbc6c8c7c1722b8d8b0e3f575c182afb46af7dfffcefc44db603fd2",
+      "source_path": "registry/oot/source_docs/EKSUN/KAP_1126548_ek1.pdf",
+      "quote": "payların 15,03 katına denk gelen 301.146.986 TL nominal değerli filtrelenmemiş pay talebi gelmiştir",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1126548_EK1",
+      "source_document": "KAP 1126548 ek 1",
+      "source_published_at": "2023-03-21T08:39:04+03:00",
+      "source_sha256": "8234ad7b6bbc6c8c7c1722b8d8b0e3f575c182afb46af7dfffcefc44db603fd2",
+      "source_path": "registry/oot/source_docs/EKSUN/KAP_1126548_ek1.pdf",
+      "quote": "Halka arz sonucunda 48,90 TL’den sermaye artışı yoluyla halka arz edilen 20.042.502 TL nominal payların tamamı satılmıştır.",
+      "zero_from_statement": true,
+      "note": "satılan toplam 20.042.502 = SPK planlanan taban (bedelli 20.042.502 + mevcut pay satışı '-'); SPK satırında ek pay satışı '-'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_size_tl": {
+      "value": null,
+      "missing_reason": "sonuç eki halka arz büyüklüğünü TL tutar olarak yazmıyor (yalnız fiyat 48,90 TL ve nominal 20.042.502; çarpım yapılmadı)",
+      "provenance": "MISSING"
+    },
+    "ipo_price_try": {
+      "value": "48.90",
+      "source_id": "SPK_BULTEN_2023_14",
+      "source_document": "SPK Bülteni 2023/14",
+      "source_published_at": "2023-03-09T23:59:59+03:00",
+      "source_sha256": "aa3ea11f25159ae7690cc7bdc57f741f451f478160614eec21ccd45a7b36aab1",
+      "source_path": "registry/oot/source_docs/EKSUN/SPK_BULTEN_2023-14.pdf",
+      "quote": "Eksun Gıda Tarım Sanayi ve 49.957.498 70.000.000 20.042.502 - - - 48,90 Ticaret AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2023-03-09",
+        "bookbuilding_start": "2023-03-15",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "49957498",
+      "source_id": "SPK_BULTEN_2023_14",
+      "source_document": "SPK Bülteni 2023/14",
+      "source_published_at": "2023-03-09T23:59:59+03:00",
+      "source_sha256": "aa3ea11f25159ae7690cc7bdc57f741f451f478160614eec21ccd45a7b36aab1",
+      "source_path": "registry/oot/source_docs/EKSUN/SPK_BULTEN_2023-14.pdf",
+      "quote": "Eksun Gıda Tarım Sanayi ve 49.957.498 70.000.000 20.042.502 - - - 48,90 Ticaret AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-03-09",
+        "bookbuilding_start": "2023-03-15",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "70000000",
+      "source_id": "SPK_BULTEN_2023_14",
+      "source_document": "SPK Bülteni 2023/14",
+      "source_published_at": "2023-03-09T23:59:59+03:00",
+      "source_sha256": "aa3ea11f25159ae7690cc7bdc57f741f451f478160614eec21ccd45a7b36aab1",
+      "source_path": "registry/oot/source_docs/EKSUN/SPK_BULTEN_2023-14.pdf",
+      "quote": "Eksun Gıda Tarım Sanayi ve 49.957.498 70.000.000 20.042.502 - - - 48,90 Ticaret AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-03-09",
+        "bookbuilding_start": "2023-03-15",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "20042502",
+      "source_id": "SPK_BULTEN_2023_14",
+      "source_document": "SPK Bülteni 2023/14",
+      "source_published_at": "2023-03-09T23:59:59+03:00",
+      "source_sha256": "aa3ea11f25159ae7690cc7bdc57f741f451f478160614eec21ccd45a7b36aab1",
+      "source_path": "registry/oot/source_docs/EKSUN/SPK_BULTEN_2023-14.pdf",
+      "quote": "Eksun Gıda Tarım Sanayi ve 49.957.498 70.000.000 20.042.502 - - - 48,90 Ticaret AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2023-03-09",
+        "bookbuilding_start": "2023-03-15",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2023_14",
+      "source_document": "SPK Bülteni 2023/14",
+      "source_published_at": "2023-03-09T23:59:59+03:00",
+      "source_sha256": "aa3ea11f25159ae7690cc7bdc57f741f451f478160614eec21ccd45a7b36aab1",
+      "source_path": "registry/oot/source_docs/EKSUN/SPK_BULTEN_2023-14.pdf",
+      "quote": "Eksun Gıda Tarım Sanayi ve 49.957.498 70.000.000 20.042.502 - - - 48,90 Ticaret AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-03-09",
+        "bookbuilding_start": "2023-03-15",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "20042502",
+      "source_id": "SPK_BULTEN_2023_14",
+      "source_document": "SPK Bülteni 2023/14",
+      "source_published_at": "2023-03-09T23:59:59+03:00",
+      "source_sha256": "aa3ea11f25159ae7690cc7bdc57f741f451f478160614eec21ccd45a7b36aab1",
+      "source_path": "registry/oot/source_docs/EKSUN/SPK_BULTEN_2023-14.pdf",
+      "quote": "Eksun Gıda Tarım Sanayi ve 49.957.498 70.000.000 20.042.502 - - - 48,90 Ticaret AŞ",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-03-09",
+        "bookbuilding_start": "2023-03-15",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2023_14",
+      "source_document": "SPK Bülteni 2023/14",
+      "source_published_at": "2023-03-09T23:59:59+03:00",
+      "source_sha256": "aa3ea11f25159ae7690cc7bdc57f741f451f478160614eec21ccd45a7b36aab1",
+      "source_path": "registry/oot/source_docs/EKSUN/SPK_BULTEN_2023-14.pdf",
+      "quote": "Eksun Gıda Tarım Sanayi ve 49.957.498 70.000.000 20.042.502 - - - 48,90 Ticaret AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2023-03-09",
+        "bookbuilding_start": "2023-03-15",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "20042502",
+      "source_id": "SPK_BULTEN_2023_14",
+      "source_document": "SPK Bülteni 2023/14",
+      "source_published_at": "2023-03-09T23:59:59+03:00",
+      "source_sha256": "aa3ea11f25159ae7690cc7bdc57f741f451f478160614eec21ccd45a7b36aab1",
+      "source_path": "registry/oot/source_docs/EKSUN/SPK_BULTEN_2023-14.pdf",
+      "quote": "Eksun Gıda Tarım Sanayi ve 49.957.498 70.000.000 20.042.502 - - - 48,90 Ticaret AŞ",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-03-09",
+        "bookbuilding_start": "2023-03-15",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2023-03-24",
+      "source_id": "KAP_1127128",
+      "source_document": "KAP 1127128",
+      "source_published_at": "2023-03-22T18:10:34+03:00",
+      "source_sha256": "2e8c9776126abcd8e73198bbe74a0110c483422d5b3cea41e5bbc7f954789370",
+      "source_path": "registry/oot/source_docs/EKSUN/KAP_1127128_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 24/03/2023",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2023-03-15",
+      "source_id": "KAP_1127128",
+      "source_document": "KAP 1127128",
+      "source_published_at": "2023-03-22T18:10:34+03:00",
+      "source_sha256": "2e8c9776126abcd8e73198bbe74a0110c483422d5b3cea41e5bbc7f954789370",
+      "source_path": "registry/oot/source_docs/EKSUN/KAP_1127128_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 15-17/03/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2023-03-17",
+      "source_id": "KAP_1127128",
+      "source_document": "KAP 1127128",
+      "source_published_at": "2023-03-22T18:10:34+03:00",
+      "source_sha256": "2e8c9776126abcd8e73198bbe74a0110c483422d5b3cea41e5bbc7f954789370",
+      "source_path": "registry/oot/source_docs/EKSUN/KAP_1127128_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 15-17/03/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1127128": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1127128",
+      "published_at": "2023-03-22T18:10:34+03:00",
+      "sha256": "2e8c9776126abcd8e73198bbe74a0110c483422d5b3cea41e5bbc7f954789370",
+      "path": "registry/oot/source_docs/EKSUN/KAP_1127128_bildirim.pdf"
+    },
+    "SPK_BULTEN_2023_14": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2023/14",
+      "published_at": "2023-03-09T23:59:59+03:00",
+      "sha256": "aa3ea11f25159ae7690cc7bdc57f741f451f478160614eec21ccd45a7b36aab1",
+      "path": "registry/oot/source_docs/EKSUN/SPK_BULTEN_2023-14.pdf"
+    },
+    "KAP_1126548_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1126548 ek 1",
+      "published_at": "2023-03-21T08:39:04+03:00",
+      "sha256": "8234ad7b6bbc6c8c7c1722b8d8b0e3f575c182afb46af7dfffcefc44db603fd2",
+      "path": "registry/oot/source_docs/EKSUN/KAP_1126548_ek1.pdf"
+    }
+  }
+}

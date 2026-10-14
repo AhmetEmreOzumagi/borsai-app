@@ -1,0 +1,227 @@
+{
+ "ticker": "GENIL",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_954020",
+  "KAP_954020_EK1",
+  "KAP_954020_EK2",
+  "KAP_950539_EK1",
+  "KAP_954206"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "6.7",
+   "origin": "SOURCE_REPORTED",
+   "source_id": "KAP_954020_EK2",
+   "quote": "halka arz edilen 62.500.000 TL nominal değerli payların 6,7 katına denk gelen 418.528.945 TL nominal değerli filtrelenmemiş pay talebi gelmiştir",
+   "definition": "belgedeki toplam kat (payda: ek satış hariç taban 62.500.000)",
+   "denominator_includes_additional_sale": false,
+   "note": "Doğrulayıcı düzeltmesi: belge katı açıkça yazdığı için SOURCE_REPORTED alındı. Ek satış dahil nihai arz (68.750.000) paydasıyla 6,0876937455 olurdu."
+  },
+  "total_demand_filter_status": {
+   "value": "UNFILTERED",
+   "source_id": "KAP_954020_EK2",
+   "quote": "418.528.945 TL nominal değerli filtrelenmemiş pay talebi gelmiştir"
+  },
+  "ipo_size_tl": {
+   "value": "738054687.50",
+   "source_id": "KAP_954020_EK2",
+   "quote": "halka arz büyüklüğü 738.054.687,50 TL olarak gerçekleşmiştir"
+  },
+  "capital_increase_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok ('Halka arz edilen 62.500.000 TL nominal değerli payların satışı' tek toplam; yalnız ek satışın Abidin Gülmüş'e ait olduğu yazılı)"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde taban için ayrım yok (ek satış 6.250.000 ortağa ait olarak yazılı, taban 62.500.000 ayrıştırılmıyor)"
+  },
+  "additional_sale_shares": {
+   "value": "6250000",
+   "source_id": "KAP_954020_EK2",
+   "quote": "ek satışa sunulan Abidin Gülmüş’e ait 6.250.000 TL nominal değerli payların da satışı gerçekleştirilmiş, halka arz edilen toplam pay adedi 68.750.000 olmuştur"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_954020_EK2",
+   "quote": "Halka arz edilen 62.500.000 TL nominal değerli payların satışı ile beraber ek satışa sunulan Abidin Gülmüş’e ait 6.250.000 TL nominal değerli payların da satışı gerçekleştirilmiş, halka arz edilen toplam pay adedi 68.750.000 olmuştur."
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_954020_EK2",
+   "used": "FULL",
+   "quote": "ek satışa sunulan Abidin Gülmüş’e ait 6.250.000 TL nominal değerli payların da satışı gerçekleştirilmiş",
+   "note": "SPK satırında planlanan ek pay satışı 6.250.000; tamamı kullanılmış"
+  },
+  "investor_count": {
+   "value": "49079",
+   "source_id": "KAP_954020_EK2",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "Toplam 62.500.000 100,0% 51.564 418.528.945 100,00% 49.079 68.750.000 100,00%",
+   "note": "talep eden kişi sayısı tabloda 51.564, metinde 'toplam 51.574 yatırımcıdan' (belge içi tutarsızlık); dağıtım yapılan 49.079"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "48606",
+    "company_employees": "265",
+    "domestic_institutional": "194",
+    "foreign_institutional": "14"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_954020_EK2",
+   "quote": [
+    "Yurt İçi Bireysel 21.250.000 34,0% 51.073 167.378.030 39,99% 48.606 24.375.000 35,46%",
+    "Şirket Çalışanları 625.000 1,0% 265 1.075.893 0,26% 265 625.000 0,91%",
+    "21.875.000 35,0% 212 212.501.232 50,77% 194 26.320.000 38,28%",
+    "18.750.000 30,0% 14 37.573.790 8,98% 14 17.430.000 25,35%"
+   ],
+   "note": "talep eden: bireysel 51.073, çalışan 265, yurt içi kurumsal 212, yurt dışı kurumsal 14"
+  },
+  "retail_demand_multiple": {
+   "value": "7.9",
+   "source_id": "KAP_954020_EK2",
+   "quote": "Yurt İçi Bireysel Yatırımcılara tahsis edilen payların 7,9 katı"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": "9.7",
+   "source_id": "KAP_954020_EK2",
+   "quote": "Yurt İçi Kurumsal Yatırımcılara tahsis edilen payların 9,7 katı"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": "2.0",
+   "source_id": "KAP_954020_EK2",
+   "quote": "Yurt Dışı Kurumsal Yatırımcılara tahsis edilen payların 2,0 katı"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "24375000",
+    "company_employees": "625000",
+    "domestic_institutional": "26320000",
+    "foreign_institutional": "17430000"
+   },
+   "source_id": "KAP_954020_EK2",
+   "unit": "lot",
+   "quote": [
+    "Yurt İçi Bireysel 21.250.000 34,0% 51.073 167.378.030 39,99% 48.606 24.375.000 35,46%",
+    "Şirket Çalışanları 625.000 1,0% 265 1.075.893 0,26% 265 625.000 0,91%",
+    "21.875.000 35,0% 212 212.501.232 50,77% 194 26.320.000 38,28%",
+    "18.750.000 30,0% 14 37.573.790 8,98% 14 17.430.000 25,35%"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "35.46",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_954020_EK2",
+   "quote": "nihai halka arz büyüklüğünün %35,46’ine denk gelen paylar Yurtiçi Bireysel Yatırımcılar’a"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "38.28",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_954020_EK2",
+   "quote": "%38,28’ine denk gelen 26.320.000 TL nominal değerli paylar Yurt İçi Kurumsal Yatırımcılar’a"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": "25.35",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_954020_EK2",
+   "quote": "%25,35’ine denk gelen paylar Yurt Dışı Kurumsal Yatırımcılar’a dağıtılmıştır"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç eki yalnız 'talep toplama işlemleri' diyor; dağıtım yöntemi adlandırılmıyor; TSSD (OCR) dağıtım yöntemini izahnameye atfediyor"
+  },
+  "lead_broker": {
+   "value": "OYAK Yatırım Menkul Değerler A.Ş.",
+   "source_id": "KAP_950539_EK1",
+   "quote": "halka arzda satışa aracılık edecek OYAK Yatırım Menkul Degerler A.Ş.'nin",
+   "note": "OCR metninde 'Degerler'; sonuç bildirimini de aynı kurum yayımladı"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD (3 sayfa, OCR) fiyat istikrarından söz etmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "eldeki belgelerde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "eldeki belgelerde yok"
+  }
+ },
+ "codex_check": {
+  "total_demand_multiple": {
+   "codex_value": "6,7",
+   "verdict": "FOUND_SAME",
+   "note": "belgedeki kat 6,7 (doğrulayıcı düzeltmesi sonrası)"
+  },
+  "ipo_size_tl": {
+   "codex_value": "738.054.687,50",
+   "verdict": "FOUND_SAME"
+  },
+  "additional_sale_shares": {
+   "codex_value": "6.250.000",
+   "verdict": "FOUND_SAME"
+  },
+  "investor_count": {
+   "codex_value": "51.574",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "Codex metindeki talep eden sayısını (51.574; tabloda 51.564) almış; fields'ta dağıtım yapılan 49.079 (ALLOCATED tercih)"
+  },
+  "investor_count_by_group": {
+   "codex_value": "{'Yurt İçi Bireysel': '51.073', 'Şirket Çalışanları': '265', 'Yurt İçi Kurumsal': '212', 'Yurt Dışı Kurumsal': '14'}",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "Codex talep eden sayılarını almış (belgede var); fields'ta dağıtım yapılan sayılar (48.606 / 265 / 194 / 14)"
+  },
+  "retail_demand_multiple": {
+   "codex_value": "7,9",
+   "verdict": "FOUND_SAME"
+  },
+  "domestic_institutional_demand_multiple": {
+   "codex_value": "9,7",
+   "verdict": "FOUND_SAME"
+  },
+  "foreign_institutional_demand_multiple": {
+   "codex_value": "2,0",
+   "verdict": "FOUND_SAME"
+  },
+  "distributed_by_group": {
+   "codex_value": "{'Yurt İçi Bireysel': '24.375.000', 'Şirket Çalışanları': '625.000', 'Yurt İçi Kurumsal': '26.320.000', 'Yurt Dışı Kurumsal': '17.430.000'}",
+   "verdict": "FOUND_SAME"
+  },
+  "retail_allocation_pct": {
+   "codex_value": "35,46",
+   "verdict": "FOUND_SAME"
+  },
+  "domestic_institutional_allocation_pct": {
+   "codex_value": "38,28",
+   "verdict": "FOUND_SAME"
+  },
+  "foreign_institutional_allocation_pct": {
+   "codex_value": "25,35",
+   "verdict": "FOUND_SAME"
+  },
+  "distribution_method": {
+   "codex_value": "Sabit Fiyatla Talep Toplama",
+   "verdict": "NOT_FOUND_IN_DOCS",
+   "note": "sonuç ekinde 'Sabit Fiyatla Talep Toplama' ifadesi yok (yalnız 'talep toplama işlemleri'); ayrıca bu satış yöntemi, dağıtım yöntemi değil"
+  },
+  "lead_broker": {
+   "codex_value": "Oyak Yatırım Menkul Değerler A.Ş.",
+   "verdict": "FOUND_SAME",
+   "note": "TSSD'de aracı kurum olarak yazılı"
+  }
+ },
+ "notes": "Yeniden üretilen dossier/GENIL.md ile karşılaştırıldı: metinler (KAP_954020, EK1, EK2, TSSD KAP_950539_EK1) bu dosyanın yazıldığı blib.fulltext metniyle aynı; tüm alanlar tam metinden. Belge katı (6,7) ek satış hariç tabana göre; f3 H99 kuralıyla ek satış dahil nihai arza göre hesaplandı (6,0877). Ek satış (6.250.000) tamamen kullanılmış. | Doğrulayıcı: f3 SOURCE_REPORTED 6,7 olarak düzeltildi.",
+ "needs_search": false
+}

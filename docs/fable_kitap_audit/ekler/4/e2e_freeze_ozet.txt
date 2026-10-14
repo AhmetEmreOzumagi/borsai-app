@@ -1,0 +1,23 @@
+E2E| adım 6 kayıt (PB): registry/records/SNTA1/20261011T160254Z_ed7282d429eb.json · model sayısı: 27
+E2E| parite: 27/27 desteklenen model, |Δ|max = 0e0
+E2E| U30 uygulama verisinde kayıt kopyası: 0
+E2E| parite: 27/27 desteklenen model, |Δ|max = 0e0
+E2E| U31 adım 5: T = 2026-10-10 ≤ bugün (2026-10-11) → KIRMIZI uyarı
+E2E| U31 geç kayıt yazıldı: registry/records/SNTB2/20261011T160256Z_801369fc02c7.json · model sayısı: 27
+E2E| U31 iptal reddi (Python): FreezeError: iptal ilk işlem gününden (2026-10-10) itibaren yapılamaz (SPEC_SCORING §6)
+E2E| U59 yeni kayıt: 27 model · tufe "2026-08" = "134.75" (yayım "2026-09-03") · parite: 27/27 desteklenen model, |Δ|max = 0e0
+E2E| U50 eski kayıt 20260922T121936Z_459846d44a17.json: parite: 16/16 desteklenen model, |Δ|max = 0e0 · kayıt INDEX'ten eski: 11 model kayıtta yok (ceiling_path_v0, ceiling_path_v0@INF, pb_ceiling_path_v0, ceiling_hazard_v1_clip, ceiling_hazard_v1_real, ceiling_hazard_v1_pooled, ceiling_hazard_v1_pooled@INF, fall_d10_v0_h99, fall_d10_v0_pooled, fall_d10_v0_addsale, fall_d10_v0_pooled@ZERO)
+E2E| U50 eski kayıt 20260922T121935Z_6356b36ec865.json: parite: 16/16 desteklenen model, |Δ|max = 0e0 · kayıt INDEX'ten eski: 11 model kayıtta yok (ceiling_path_v0, ceiling_path_v0@INF, pb_ceiling_path_v0, ceiling_hazard_v1_clip, ceiling_hazard_v1_real, ceiling_hazard_v1_pooled, ceiling_hazard_v1_pooled@INF, fall_d10_v0_h99, fall_d10_v0_pooled, fall_d10_v0_addsale, fall_d10_v0_pooled@ZERO)
+E2E| U50 eski kayıt 20260922T121935Z_6dccd49888dc.json: parite: 16/16 desteklenen model, |Δ|max = 0e0 · kayıt INDEX'ten eski: 11 model kayıtta yok (ceiling_path_v0, ceiling_path_v0@INF, pb_ceiling_path_v0, ceiling_hazard_v1_clip, ceiling_hazard_v1_real, ceiling_hazard_v1_pooled, ceiling_hazard_v1_pooled@INF, fall_d10_v0_h99, fall_d10_v0_pooled, fall_d10_v0_addsale, fall_d10_v0_pooled@ZERO)
+E2E| U50 eski kayıt 20260922T121935Z_4ef4794c6b2b.json: parite: 16/16 desteklenen model, |Δ|max = 0e0 · kayıt INDEX'ten eski: 11 model kayıtta yok (ceiling_path_v0, ceiling_path_v0@INF, pb_ceiling_path_v0, ceiling_hazard_v1_clip, ceiling_hazard_v1_real, ceiling_hazard_v1_pooled, ceiling_hazard_v1_pooled@INF, fall_d10_v0_h99, fall_d10_v0_pooled, fall_d10_v0_addsale, fall_d10_v0_pooled@ZERO)
+E2E| U50 eski kayıt 20260922T121936Z_65a39d7392dd.json: parite: 16/16 desteklenen model, |Δ|max = 0e0 · kayıt INDEX'ten eski: 11 model kayıtta yok (ceiling_path_v0, ceiling_path_v0@INF, pb_ceiling_path_v0, ceiling_hazard_v1_clip, ceiling_hazard_v1_real, ceiling_hazard_v1_pooled, ceiling_hazard_v1_pooled@INF, fall_d10_v0_h99, fall_d10_v0_pooled, fall_d10_v0_addsale, fall_d10_v0_pooled@ZERO)
+E2E| U50 eski kayıt 20260922T121935Z_653e87af9823.json: parite: 16/16 desteklenen model, |Δ|max = 0e0 · kayıt INDEX'ten eski: 11 model kayıtta yok (ceiling_path_v0, ceiling_path_v0@INF, pb_ceiling_path_v0, ceiling_hazard_v1_clip, ceiling_hazard_v1_real, ceiling_hazard_v1_pooled, ceiling_hazard_v1_pooled@INF, fall_d10_v0_h99, fall_d10_v0_pooled, fall_d10_v0_addsale, fall_d10_v0_pooled@ZERO)
+E2E| U50 eski kayıt 20260922T121935Z_0f4695ad423c.json: parite: 16/16 desteklenen model, |Δ|max = 0e0 · kayıt INDEX'ten eski: 11 model kayıtta yok (ceiling_path_v0, ceiling_path_v0@INF, pb_ceiling_path_v0, ceiling_hazard_v1_clip, ceiling_hazard_v1_real, ceiling_hazard_v1_pooled, ceiling_hazard_v1_pooled@INF, fall_d10_v0_h99, fall_d10_v0_pooled, fall_d10_v0_addsale, fall_d10_v0_pooled@ZERO)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 5 filtered out; finished in 42.19s
+=== 4. U29: kişisel kayıt sicile düşse bile skorlanamaz (record_type yok); U30: iptal sonrası active_records ===
+U29 active_records(SNTA1) = 1 ['20261011T160254Z_ed7282d429eb.json']
+U29 kişisel kayıt dosyası sayılmadı: record_type yok
+U30 iptal kaydı 20261011T160256Z_d9c81e003c79.json -> 20261011T160256Z_259bddf7f670.json ; active_records içinde değil; etkin kayıt = 1 ['20261011T160254Z_ed7282d429eb.json']
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 5 filtered out; finished in 0.03s
+=== e2e_freeze_tmp_repo: YEŞİL ===
+EXIT=0

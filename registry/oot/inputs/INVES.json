@@ -1,0 +1,342 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "INVES",
+  "company": "Investco Holding A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1004618",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "24",
+      "source_id": "KAP_1004618",
+      "source_document": "KAP 1004618",
+      "source_published_at": "2022-02-25T18:10:04+03:00",
+      "source_sha256": "b43daf8c879c1944bdabcf6e676a7b8ca32b1ecf62c8c0b12a5d65948783dbec",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004618_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 24",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2022_8",
+          "quote": "Investco Holding 24,00 150.000.000 187.500.000 37.500.000 - - - A.Ş. (3)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "37500000",
+      "source_id": "KAP_1004618",
+      "source_document": "KAP 1004618",
+      "source_published_at": "2022-02-25T18:10:04+03:00",
+      "source_sha256": "b43daf8c879c1944bdabcf6e676a7b8ca32b1ecf62c8c0b12a5d65948783dbec",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004618_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 37.500.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "187500000",
+      "source_id": "KAP_1004618",
+      "source_document": "KAP 1004618",
+      "source_published_at": "2022-02-25T18:10:04+03:00",
+      "source_sha256": "b43daf8c879c1944bdabcf6e676a7b8ca32b1ecf62c8c0b12a5d65948783dbec",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004618_bildirim.pdf",
+      "quote": "sermayesini temsil eden 187.500.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "37500000",
+      "source_id": "KAP_1004143_EK1",
+      "source_document": "KAP 1004143 ek 1",
+      "source_published_at": "2022-02-24T18:14:41+03:00",
+      "source_sha256": "e57a138a177052de60506c07029506c8f3fb8232c524e2acd80d35e6a134fd16",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004143_ek1.pdf",
+      "quote": "Şirket’in çıkarılmış sermayesinin 150.000.000 TL’den 187.500.000 TL’ye artırılması nedeniyle ihraç edilen 37.500.000 TL nominal değerli paylar halka arz edilmiştir.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2022_8",
+      "source_document": "SPK Bülteni 2022/8",
+      "source_published_at": "2022-02-17T23:59:59+03:00",
+      "source_sha256": "23104855f62253046e5490a9de886d7d2796ac0954bd4b614200f6ce889a2961",
+      "source_path": "registry/oot/source_docs/INVES/SPK_BULTEN_2022-8.pdf",
+      "quote": "Investco Holding 24,00 150.000.000 187.500.000 37.500.000 - - - A.Ş. (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1004143_EK1",
+          "quote": "Halka arza toplamda 122.203 yatırımcı katılmış olup tamamına dağıtım yapılmıştır."
+        },
+        "b_shares_offered_equals_planned_base": "37500000 = 37500000 + 0",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "1.46",
+      "source_id": "KAP_1004143_EK1",
+      "source_document": "KAP 1004143 ek 1",
+      "source_published_at": "2022-02-24T18:14:41+03:00",
+      "source_sha256": "e57a138a177052de60506c07029506c8f3fb8232c524e2acd80d35e6a134fd16",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004143_ek1.pdf",
+      "quote": "filtre edilmiş talepler sonucunda halka arz büyüklüğünün toplamda 1,46 katına denk gelen 1.314.717.648 TL karşılığı, 54.779.902 TL nominal değerli talep gelmiştir",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (halka arz büyüklüğü 37.500.000 TL nominal / 900.000.000 TL'ye göre; filtre edilmiş; Borsa İstanbul verisi)",
+      "note": "planlanan ek satış yok (SPK '-'); belgede filtre edilmemiş toplam verilmiyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_filter_status": {
+      "value": "FILTERED",
+      "source_id": "KAP_1004143_EK1",
+      "source_document": "KAP 1004143 ek 1",
+      "source_published_at": "2022-02-24T18:14:41+03:00",
+      "source_sha256": "e57a138a177052de60506c07029506c8f3fb8232c524e2acd80d35e6a134fd16",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004143_ek1.pdf",
+      "quote": "Borsa İstanbul tarafından paylaşılan verilere göre filtre edilmiş talepler sonucunda halka arz büyüklüğünün toplamda 1,46 katına",
+      "locator": "filtrelenmemiş toplam verilmiyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1004143_EK1",
+      "source_document": "KAP 1004143 ek 1",
+      "source_published_at": "2022-02-24T18:14:41+03:00",
+      "source_sha256": "e57a138a177052de60506c07029506c8f3fb8232c524e2acd80d35e6a134fd16",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004143_ek1.pdf",
+      "quote": "Toplam: 122.203 37.500.000 1,00",
+      "zero_from_statement": true,
+      "note": "SPK satırında ek satış '-'; dağıtılan toplam 37.500.000 = planlanan taban (bedelli 37.500.000)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_size_tl": {
+      "value": "900000000",
+      "source_id": "KAP_1004143_EK1",
+      "source_document": "KAP 1004143 ek 1",
+      "source_published_at": "2022-02-24T18:14:41+03:00",
+      "source_sha256": "e57a138a177052de60506c07029506c8f3fb8232c524e2acd80d35e6a134fd16",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004143_ek1.pdf",
+      "quote": "belirlenen halka arz fiyatı ile halka arz büyüklüğü 900.000.000 TL olarak gerçekleşmiştir",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_price_try": {
+      "value": "24.00",
+      "source_id": "SPK_BULTEN_2022_8",
+      "source_document": "SPK Bülteni 2022/8",
+      "source_published_at": "2022-02-17T23:59:59+03:00",
+      "source_sha256": "23104855f62253046e5490a9de886d7d2796ac0954bd4b614200f6ce889a2961",
+      "source_path": "registry/oot/source_docs/INVES/SPK_BULTEN_2022-8.pdf",
+      "quote": "Investco Holding 24,00 150.000.000 187.500.000 37.500.000 - - - A.Ş. (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2022-02-17",
+        "bookbuilding_start": "2022-02-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "150000000",
+      "source_id": "SPK_BULTEN_2022_8",
+      "source_document": "SPK Bülteni 2022/8",
+      "source_published_at": "2022-02-17T23:59:59+03:00",
+      "source_sha256": "23104855f62253046e5490a9de886d7d2796ac0954bd4b614200f6ce889a2961",
+      "source_path": "registry/oot/source_docs/INVES/SPK_BULTEN_2022-8.pdf",
+      "quote": "Investco Holding 24,00 150.000.000 187.500.000 37.500.000 - - - A.Ş. (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-02-17",
+        "bookbuilding_start": "2022-02-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "187500000",
+      "source_id": "SPK_BULTEN_2022_8",
+      "source_document": "SPK Bülteni 2022/8",
+      "source_published_at": "2022-02-17T23:59:59+03:00",
+      "source_sha256": "23104855f62253046e5490a9de886d7d2796ac0954bd4b614200f6ce889a2961",
+      "source_path": "registry/oot/source_docs/INVES/SPK_BULTEN_2022-8.pdf",
+      "quote": "Investco Holding 24,00 150.000.000 187.500.000 37.500.000 - - - A.Ş. (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-02-17",
+        "bookbuilding_start": "2022-02-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "37500000",
+      "source_id": "SPK_BULTEN_2022_8",
+      "source_document": "SPK Bülteni 2022/8",
+      "source_published_at": "2022-02-17T23:59:59+03:00",
+      "source_sha256": "23104855f62253046e5490a9de886d7d2796ac0954bd4b614200f6ce889a2961",
+      "source_path": "registry/oot/source_docs/INVES/SPK_BULTEN_2022-8.pdf",
+      "quote": "Investco Holding 24,00 150.000.000 187.500.000 37.500.000 - - - A.Ş. (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2022-02-17",
+        "bookbuilding_start": "2022-02-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2022_8",
+      "source_document": "SPK Bülteni 2022/8",
+      "source_published_at": "2022-02-17T23:59:59+03:00",
+      "source_sha256": "23104855f62253046e5490a9de886d7d2796ac0954bd4b614200f6ce889a2961",
+      "source_path": "registry/oot/source_docs/INVES/SPK_BULTEN_2022-8.pdf",
+      "quote": "Investco Holding 24,00 150.000.000 187.500.000 37.500.000 - - - A.Ş. (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-02-17",
+        "bookbuilding_start": "2022-02-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "37500000",
+      "source_id": "SPK_BULTEN_2022_8",
+      "source_document": "SPK Bülteni 2022/8",
+      "source_published_at": "2022-02-17T23:59:59+03:00",
+      "source_sha256": "23104855f62253046e5490a9de886d7d2796ac0954bd4b614200f6ce889a2961",
+      "source_path": "registry/oot/source_docs/INVES/SPK_BULTEN_2022-8.pdf",
+      "quote": "Investco Holding 24,00 150.000.000 187.500.000 37.500.000 - - - A.Ş. (3)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-02-17",
+        "bookbuilding_start": "2022-02-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2022_8",
+      "source_document": "SPK Bülteni 2022/8",
+      "source_published_at": "2022-02-17T23:59:59+03:00",
+      "source_sha256": "23104855f62253046e5490a9de886d7d2796ac0954bd4b614200f6ce889a2961",
+      "source_path": "registry/oot/source_docs/INVES/SPK_BULTEN_2022-8.pdf",
+      "quote": "Investco Holding 24,00 150.000.000 187.500.000 37.500.000 - - - A.Ş. (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2022-02-17",
+        "bookbuilding_start": "2022-02-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "37500000",
+      "source_id": "SPK_BULTEN_2022_8",
+      "source_document": "SPK Bülteni 2022/8",
+      "source_published_at": "2022-02-17T23:59:59+03:00",
+      "source_sha256": "23104855f62253046e5490a9de886d7d2796ac0954bd4b614200f6ce889a2961",
+      "source_path": "registry/oot/source_docs/INVES/SPK_BULTEN_2022-8.pdf",
+      "quote": "Investco Holding 24,00 150.000.000 187.500.000 37.500.000 - - - A.Ş. (3)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-02-17",
+        "bookbuilding_start": "2022-02-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2022-03-01",
+      "source_id": "KAP_1004618",
+      "source_document": "KAP 1004618",
+      "source_published_at": "2022-02-25T18:10:04+03:00",
+      "source_sha256": "b43daf8c879c1944bdabcf6e676a7b8ca32b1ecf62c8c0b12a5d65948783dbec",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004618_bildirim.pdf",
+      "quote": "01/03/2022 tarihinden itibaren",
+      "locator": "yapılandırılmış alanda yazım hatası ('İşlem Görmeye Başlayacağı Tarih 01/03/2021'); açıklama metnindeki tarih kullanıldı (KAP evren listesiyle aynı)",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2022-02-22",
+      "source_id": "KAP_1004618",
+      "source_document": "KAP 1004618",
+      "source_published_at": "2022-02-25T18:10:04+03:00",
+      "source_sha256": "b43daf8c879c1944bdabcf6e676a7b8ca32b1ecf62c8c0b12a5d65948783dbec",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004618_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 22-23/02/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2022-02-23",
+      "source_id": "KAP_1004618",
+      "source_document": "KAP 1004618",
+      "source_published_at": "2022-02-25T18:10:04+03:00",
+      "source_sha256": "b43daf8c879c1944bdabcf6e676a7b8ca32b1ecf62c8c0b12a5d65948783dbec",
+      "source_path": "registry/oot/source_docs/INVES/KAP_1004618_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 22-23/02/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1004618": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1004618",
+      "published_at": "2022-02-25T18:10:04+03:00",
+      "sha256": "b43daf8c879c1944bdabcf6e676a7b8ca32b1ecf62c8c0b12a5d65948783dbec",
+      "path": "registry/oot/source_docs/INVES/KAP_1004618_bildirim.pdf"
+    },
+    "SPK_BULTEN_2022_8": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2022/8",
+      "published_at": "2022-02-17T23:59:59+03:00",
+      "sha256": "23104855f62253046e5490a9de886d7d2796ac0954bd4b614200f6ce889a2961",
+      "path": "registry/oot/source_docs/INVES/SPK_BULTEN_2022-8.pdf"
+    },
+    "KAP_1004143_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1004143 ek 1",
+      "published_at": "2022-02-24T18:14:41+03:00",
+      "sha256": "e57a138a177052de60506c07029506c8f3fb8232c524e2acd80d35e6a134fd16",
+      "path": "registry/oot/source_docs/INVES/KAP_1004143_ek1.pdf"
+    }
+  },
+  "notes": [
+    "BIST bildiriminin 'İşlem Görmeye Başlayacağı Tarih' alanı 01/03/2021 (yazım hatası); açıklama metni 01/03/2022"
+  ]
+}

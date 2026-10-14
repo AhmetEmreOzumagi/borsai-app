@@ -1,0 +1,54 @@
+BORSAI_FAZ6_S6_SCORING_20260925 — test koşuları (yalnız sayı)
+
+Komutlar: `.venv/bin/pytest -q -p no:cacheprovider` (önbellek dizini yazılmasın diye; test kümesi `pytest -q` ile aynı) ve
+`bash app/scripts/test.sh`. Saatler UTC.
+
+Adım 0 — taban (HEAD b3f9f6f; çalışma ağacında yalnız iki görev dosyası izlenmiyordu)
+- outcomes_oot.s2_gate_problems() = [], s3_gate_problems() = []
+- 77b54f7 push kanıtı: registry/push_proofs/77b54f785fd03480dbb7cc9573eedce0d3cd0c57.json var
+- app/parity/gen_golden.py --check: 25 dosya denetlendi, fark yok
+- pytest:  13:46:53 → 13:54:22; 607 passed (7 dk 28 s); çıkış 0
+- test.sh: 13:55:28 → 13:56:00; cargo 94 geçti / 0 kaldı; npm 222; parity 4; golden_unchanged YEŞİL; çıkış 0
+
+Commit C öncesi (HEAD aea4082 = Fable'ın kör commit'i, üstünde C değişiklikleri çalışma ağacında)
+- tests/test_faz6_s6.py tek başına: 18 passed
+- pytest:  14:00:15 → 14:07:37; 625 passed (607 + 18 yeni; 7 dk 21 s); çıkış 0
+- test.sh: 14:07:37 → 14:08:13; cargo 94 geçti / 0 kaldı; npm 222; parity 4; golden_unchanged YEŞİL; çıkış 0
+- Commit C: e79a4b7
+
+Mutasyon (yalnız tests/test_faz6_s6.py koşuldu; her mutasyondan sonra borsai/scoring.py yedekten geri kondu, bayt-eşitliği denetlendi)
+- m1 §3 bölüm sınırı kaldırıldı (bütün dosyanın tabloları okunur): 8 kırmızı
+- m2 --oot ayrıca scores.json'a yazar: 1 kırmızı
+- m3 "geçiyor" terazinin adı olmadan: 2 kırmızı
+- m4 küme eleman sayısı denetimi kaldırıldı: 2 kırmızı
+- m5 küme build_oot_scores'a verilmez: 1 kırmızı
+- 5 mutasyonun 5'i kırmızı; mutasyonsuz 18/18 yeşil.
+
+Adım 2: `python -m borsai.scoring --oot` çıkış 1 (ValueError, s6_denetim.txt B1). Hiçbir dosya yazılmadı. Adım 3 ve 4 koşulmadı (DUR).
+
+S6 devamı (DUR'dan sonra; bağımsız düzeltme ve devam aynı yeni oturumda). Komutlar aynı; saatler UTC.
+
+BORSAI_FAZ6_S6_FIX (taban HEAD e79a4b7; çalışma ağacında yalnız izinli izlenmeyenler)
+- app/parity/gen_golden.py --check: 25 dosya denetlendi, fark yok
+- pytest:  14:23:57 → 14:30:36; 625 passed (6 dk 38 s); çıkış 0
+- test.sh: 14:30:36 → 14:31:11; cargo 94 geçti / 0 kaldı; npm 222; parity 4; golden_unchanged YEŞİL; çıkış 0
+- tests/test_faz6_s6_fix.py (12 test): e79a4b7 kodunda 12 failed, düzeltmeyle 12 passed (ayrıntı docs/faz6/S6_FIX_RAPOR.md §5)
+- pytest:  14:40:27 → 14:47:54; 637 passed (625 + 12; 7 dk 27 s); çıkış 0
+- test.sh: 14:47:54 → 14:48:21; cargo 94 / 0; npm 222; parity 4; golden_unchanged YEŞİL; çıkış 0
+- Commit FIX: 1c2fb02
+
+BORSAI_FAZ6_S6_RENDER (proje sahibi kararları; SPEC_DEVIATIONS I46, I47)
+- test_render_post_d1_counters_and_row_definition: 1c2fb02 render'ında 1 failed; düzeltmeyle yeşil
+- pytest:  15:22:31 → 15:28:57; 638 passed (637 + 1; 6 dk 25 s); çıkış 0
+- test.sh: 15:28:57 → 15:29:28; cargo 94 / 0; npm 222; parity 4; golden_unchanged YEŞİL; çıkış 0
+- outcomes_oot.s2_gate_problems() = [], s3_gate_problems() = []; 77b54f7 push kanıtı var
+- Commit RENDER: 96f7d62
+
+Adım 2: `python -m borsai.scoring --oot` 15:29:47 → 15:30:20, çıkış 0. T4'ün hepsi tuttu (s6_denetim.txt, YENİDEN KOŞU).
+
+Adım 3 (commit S6)
+- scores_oot.json ve SCORES_OOT.md izlenmezken pytest: 15:31:35 → 15:38:50; 638 passed; çıkış 0. Bu dosyalar yüzünden kırmızı olan
+  temizlik bekçisi yok, deselect gerekmedi.
+- Commit S6: cf60cea
+- deselect'siz pytest: 15:39:10 → 15:47:02; 638 passed (7 dk 51 s); çıkış 0
+- test.sh: 15:47:02 → 15:47:37; cargo 94 / 0; npm 222; parity 4; golden_unchanged YEŞİL; çıkış 0

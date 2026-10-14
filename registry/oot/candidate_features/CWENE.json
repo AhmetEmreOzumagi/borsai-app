@@ -1,0 +1,207 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "CWENE",
+  "company": "CW Enerji Mühendislik Ticaret ve Sanayi A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "2243594",
+      "source_id": "KAP_1144114_EK1",
+      "source_document": "KAP 1144114 ek 1",
+      "source_published_at": "2023-05-02T10:29:42+03:00",
+      "source_sha256": "2424480ee0454122e6fad3cfc1092b92b106a2edbfb682e19067b783ec96d64e",
+      "source_path": "registry/oot/source_docs/CWENE/KAP_1144114_ek1.pdf",
+      "quote": "25.000.000 %100 2.360.209 124.365.483 %100 2.243.594 30.000.000 %100",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "başvuru sayısı 2.360.209; dağıtım yatırımcı sayısı 2.243.594",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "2243383",
+        "domestic_institutional": "211"
+      },
+      "source_id": "KAP_1144114_EK1",
+      "source_document": "KAP 1144114 ek 1",
+      "source_published_at": "2023-05-02T10:29:42+03:00",
+      "source_sha256": "2424480ee0454122e6fad3cfc1092b92b106a2edbfb682e19067b783ec96d64e",
+      "source_path": "registry/oot/source_docs/CWENE/KAP_1144114_ek1.pdf",
+      "quote": [
+        "20.000.000 %80,00 2.359.956 85.236.750 %68,54 2.243.383 25.000.000 %83,33",
+        "Kurumsal 5.000.000 %20,00 253 39.128.733 %31,46 211 5.000.000 %16,67"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "başvuru: bireysel 2.359.956, yurt içi kurumsal 253; yurt dışı kurumsal grup yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "4.26",
+      "source_id": "KAP_1144114_EK1",
+      "source_document": "KAP 1144114 ek 1",
+      "source_published_at": "2023-05-02T10:29:42+03:00",
+      "source_sha256": "2424480ee0454122e6fad3cfc1092b92b106a2edbfb682e19067b783ec96d64e",
+      "source_path": "registry/oot/source_docs/CWENE/KAP_1144114_ek1.pdf",
+      "quote": "Bireysel Yatırımcılara tahsis edilen payların 4,26 katı",
+      "note": "belge 'ek satış hariç' diyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "7.83",
+      "source_id": "KAP_1144114_EK1",
+      "source_document": "KAP 1144114 ek 1",
+      "source_published_at": "2023-05-02T10:29:42+03:00",
+      "source_sha256": "2424480ee0454122e6fad3cfc1092b92b106a2edbfb682e19067b783ec96d64e",
+      "source_path": "registry/oot/source_docs/CWENE/KAP_1144114_ek1.pdf",
+      "quote": "Kurumsal Yatırımcılara tahsis edilen payların 7,83 katı talep gelmiştir",
+      "note": "Yurt İçi Kurumsal; ek satış hariç",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "sonuç ekinde yurt dışı kurumsal yatırımcı grubu yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "25000000",
+        "domestic_institutional": "5000000"
+      },
+      "source_id": "KAP_1144114_EK1",
+      "source_document": "KAP 1144114 ek 1",
+      "source_published_at": "2023-05-02T10:29:42+03:00",
+      "source_sha256": "2424480ee0454122e6fad3cfc1092b92b106a2edbfb682e19067b783ec96d64e",
+      "source_path": "registry/oot/source_docs/CWENE/KAP_1144114_ek1.pdf",
+      "quote": [
+        "20.000.000 %80,00 2.359.956 85.236.750 %68,54 2.243.383 25.000.000 %83,33",
+        "Kurumsal 5.000.000 %20,00 253 39.128.733 %31,46 211 5.000.000 %16,67"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "83.33",
+      "source_id": "KAP_1144114_EK1",
+      "source_document": "KAP 1144114 ek 1",
+      "source_published_at": "2023-05-02T10:29:42+03:00",
+      "source_sha256": "2424480ee0454122e6fad3cfc1092b92b106a2edbfb682e19067b783ec96d64e",
+      "source_path": "registry/oot/source_docs/CWENE/KAP_1144114_ek1.pdf",
+      "quote": "20.000.000 %80,00 2.359.956 85.236.750 %68,54 2.243.383 25.000.000 %83,33",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %80,00; ek satış payları bireysele dağıtılmış",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "16.67",
+      "source_id": "KAP_1144114_EK1",
+      "source_document": "KAP 1144114 ek 1",
+      "source_published_at": "2023-05-02T10:29:42+03:00",
+      "source_sha256": "2424480ee0454122e6fad3cfc1092b92b106a2edbfb682e19067b783ec96d64e",
+      "source_path": "registry/oot/source_docs/CWENE/KAP_1144114_ek1.pdf",
+      "quote": "Kurumsal 5.000.000 %20,00 253 39.128.733 %31,46 211 5.000.000 %16,67",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %20,00",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "sonuç ekinde yurt dışı kurumsal grup yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Deniz Yatırım Menkul Kıymetler A.Ş.; QNB Finans Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1138973_EK1",
+      "source_document": "KAP 1138973 ek 1",
+      "source_published_at": "2023-04-14T20:08:13+03:00",
+      "source_sha256": "1d52ef0df2fea4bea2361b06102c0dc55bb32a2e63c4cc2c662963218cd346ea",
+      "source_path": "registry/oot/source_docs/CWENE/KAP_1138973_ek1.pdf",
+      "quote": "edecek Deniz Yatırım Menkul Kıymetler A.Ş.'nin (www.denizsatirun.com) ve QNB Finaus Vatirim Menkul Degerler A.Ş.",
+      "note": "TSSD (OCR, bozuk yazım 'QNB Finaus Vatirim Menkul Degerler') iki aracı kurum sayıyor; konsorsiyum lideri belirtilmiyor. Sonuç bildirimini ve TSSD bildirimini QNB Finans Yatırım yayımlamış.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1144878",
+      "source_document": "KAP 1144878",
+      "source_published_at": "2023-05-02T18:10:03+03:00",
+      "source_sha256": "7c66704bd6a1f3382b64bd02e8e8107c63bd50a21794a51d9cf2d45fb1995d38",
+      "source_path": "registry/oot/source_docs/CWENE/KAP_1144878_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1144878",
+      "source_document": "KAP 1144878",
+      "source_published_at": "2023-05-02T18:10:03+03:00",
+      "source_sha256": "7c66704bd6a1f3382b64bd02e8e8107c63bd50a21794a51d9cf2d45fb1995d38",
+      "source_path": "registry/oot/source_docs/CWENE/KAP_1144878_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1144878": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1144878",
+      "published_at": "2023-05-02T18:10:03+03:00",
+      "sha256": "7c66704bd6a1f3382b64bd02e8e8107c63bd50a21794a51d9cf2d45fb1995d38",
+      "path": "registry/oot/source_docs/CWENE/KAP_1144878_bildirim.pdf"
+    },
+    "KAP_1144114_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1144114 ek 1",
+      "published_at": "2023-05-02T10:29:42+03:00",
+      "sha256": "2424480ee0454122e6fad3cfc1092b92b106a2edbfb682e19067b783ec96d64e",
+      "path": "registry/oot/source_docs/CWENE/KAP_1144114_ek1.pdf"
+    },
+    "KAP_1138973_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1138973 ek 1",
+      "published_at": "2023-04-14T20:08:13+03:00",
+      "sha256": "1d52ef0df2fea4bea2361b06102c0dc55bb32a2e63c4cc2c662963218cd346ea",
+      "path": "registry/oot/source_docs/CWENE/KAP_1138973_ek1.pdf"
+    }
+  }
+}

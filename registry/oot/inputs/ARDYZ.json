@@ -1,0 +1,324 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "ARDYZ",
+  "company": "ARD Grup Bilişim Teknolojileri A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_817020",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "5.3",
+      "source_id": "KAP_817020",
+      "source_document": "KAP 817020",
+      "source_published_at": "2020-02-04T18:07:35+03:00",
+      "source_sha256": "0c1a302ef2b0e63219766d8b6cabf453be1ce8517008486bf93fb0dade87cb0b",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_817020_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 5,3",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2020_6",
+          "quote": "Ard Grup Bilişim 3.500.000 18.000.000 22.000.000 4.000.000 - - 5,30 Teknolojileri A.Ş. (1) (2)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "7500000",
+      "source_id": "KAP_817020",
+      "source_document": "KAP 817020",
+      "source_published_at": "2020-02-04T18:07:35+03:00",
+      "source_sha256": "0c1a302ef2b0e63219766d8b6cabf453be1ce8517008486bf93fb0dade87cb0b",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_817020_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 7.500.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "22000000",
+      "source_id": "KAP_817020",
+      "source_document": "KAP 817020",
+      "source_published_at": "2020-02-04T18:07:35+03:00",
+      "source_sha256": "0c1a302ef2b0e63219766d8b6cabf453be1ce8517008486bf93fb0dade87cb0b",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_817020_bildirim.pdf",
+      "quote": "22.000.000 TL nominal değerli sermayesini temsil eden",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "capital_increase_shares": {
+      "value": "4000000",
+      "source_id": "SPK_BULTEN_2020_6",
+      "source_document": "SPK Bülteni 2020/6",
+      "source_published_at": "2020-01-16T23:59:59+03:00",
+      "source_sha256": "38bc1ac63e2d04aa059e0b20d403aeb6c4328c5bdd1ac1fc221ce5b95c10419f",
+      "source_path": "registry/oot/source_docs/ARDYZ/SPK_BULTEN_2020-6.pdf",
+      "quote": "Ard Grup Bilişim 3.500.000 18.000.000 22.000.000 4.000.000 - - 5,30 Teknolojileri A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_816932",
+          "quote": "toplam 7.500.000 TL nominal değerli payların tamamının satışı 5,30 TL satış fiyatından gerçekleşmiştir"
+        },
+        "b_shares_offered_equals_planned_base": "7500000 = 4000000 + 3500000",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "existing_share_sale_shares": {
+      "value": "3500000",
+      "source_id": "SPK_BULTEN_2020_6",
+      "source_document": "SPK Bülteni 2020/6",
+      "source_published_at": "2020-01-16T23:59:59+03:00",
+      "source_sha256": "38bc1ac63e2d04aa059e0b20d403aeb6c4328c5bdd1ac1fc221ce5b95c10419f",
+      "source_path": "registry/oot/source_docs/ARDYZ/SPK_BULTEN_2020-6.pdf",
+      "quote": "Ard Grup Bilişim 3.500.000 18.000.000 22.000.000 4.000.000 - - 5,30 Teknolojileri A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_816932",
+          "quote": "toplam 7.500.000 TL nominal değerli payların tamamının satışı 5,30 TL satış fiyatından gerçekleşmiştir"
+        },
+        "b_shares_offered_equals_planned_base": "7500000 = 4000000 + 3500000",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "total_demand_multiple": {
+      "value": null,
+      "missing_reason": "SALE_METHOD_ON_EXCHANGE_NO_BOOKBUILD_MULTIPLE: KAP_816932 yalnız dağıtım/talebi karşılanan başvuru sayısı veriyor; toplam talep ya da kat yok",
+      "checked_sources": [
+        "KAP_816932",
+        "KAP_817020",
+        "KAP_814441",
+        "KAP_814441_EK1"
+      ],
+      "provenance": "MISSING"
+    },
+    "total_demand_filter_status": {
+      "value": null,
+      "missing_reason": "f3 yok; filtre durumu uygulanamaz (H99: NOT_APPLICABLE)",
+      "provenance": "MISSING"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_816932",
+      "source_document": "KAP 816932",
+      "source_published_at": "2020-02-04T11:25:10+03:00",
+      "source_sha256": "a2a75260fcbad6bb31bee69f487705f175f56dcbcde0cd3976042fd0ecd38e01",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_816932_bildirim.pdf",
+      "quote": "toplam 7.500.000 TL nominal değerli payların tamamının satışı 5,30 TL satış fiyatından gerçekleşmiştir",
+      "zero_from_statement": true,
+      "note": "satılan toplam 7.500.000 = SPK planlanan taban (bedelli 4.000.000 + mevcut pay satışı 3.500.000); SPK satırında ek pay satışı '-'",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": null,
+      "missing_reason": "KAP_816932 gerçekleşen arzın TL tutarını yazmıyor (yalnız 7.500.000 TL nominal ve 5,30 TL fiyat); fiyat x pay hesaplanmadı",
+      "provenance": "MISSING"
+    },
+    "ipo_price_try": {
+      "value": "5.30",
+      "source_id": "SPK_BULTEN_2020_6",
+      "source_document": "SPK Bülteni 2020/6",
+      "source_published_at": "2020-01-16T23:59:59+03:00",
+      "source_sha256": "38bc1ac63e2d04aa059e0b20d403aeb6c4328c5bdd1ac1fc221ce5b95c10419f",
+      "source_path": "registry/oot/source_docs/ARDYZ/SPK_BULTEN_2020-6.pdf",
+      "quote": "Ard Grup Bilişim 3.500.000 18.000.000 22.000.000 4.000.000 - - 5,30 Teknolojileri A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2020-01-16",
+        "bookbuilding_start": "2020-01-29",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "18000000",
+      "source_id": "SPK_BULTEN_2020_6",
+      "source_document": "SPK Bülteni 2020/6",
+      "source_published_at": "2020-01-16T23:59:59+03:00",
+      "source_sha256": "38bc1ac63e2d04aa059e0b20d403aeb6c4328c5bdd1ac1fc221ce5b95c10419f",
+      "source_path": "registry/oot/source_docs/ARDYZ/SPK_BULTEN_2020-6.pdf",
+      "quote": "Ard Grup Bilişim 3.500.000 18.000.000 22.000.000 4.000.000 - - 5,30 Teknolojileri A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2020-01-16",
+        "bookbuilding_start": "2020-01-29",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "22000000",
+      "source_id": "SPK_BULTEN_2020_6",
+      "source_document": "SPK Bülteni 2020/6",
+      "source_published_at": "2020-01-16T23:59:59+03:00",
+      "source_sha256": "38bc1ac63e2d04aa059e0b20d403aeb6c4328c5bdd1ac1fc221ce5b95c10419f",
+      "source_path": "registry/oot/source_docs/ARDYZ/SPK_BULTEN_2020-6.pdf",
+      "quote": "Ard Grup Bilişim 3.500.000 18.000.000 22.000.000 4.000.000 - - 5,30 Teknolojileri A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2020-01-16",
+        "bookbuilding_start": "2020-01-29",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "4000000",
+      "source_id": "SPK_BULTEN_2020_6",
+      "source_document": "SPK Bülteni 2020/6",
+      "source_published_at": "2020-01-16T23:59:59+03:00",
+      "source_sha256": "38bc1ac63e2d04aa059e0b20d403aeb6c4328c5bdd1ac1fc221ce5b95c10419f",
+      "source_path": "registry/oot/source_docs/ARDYZ/SPK_BULTEN_2020-6.pdf",
+      "quote": "Ard Grup Bilişim 3.500.000 18.000.000 22.000.000 4.000.000 - - 5,30 Teknolojileri A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2020-01-16",
+        "bookbuilding_start": "2020-01-29",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "3500000",
+      "source_id": "SPK_BULTEN_2020_6",
+      "source_document": "SPK Bülteni 2020/6",
+      "source_published_at": "2020-01-16T23:59:59+03:00",
+      "source_sha256": "38bc1ac63e2d04aa059e0b20d403aeb6c4328c5bdd1ac1fc221ce5b95c10419f",
+      "source_path": "registry/oot/source_docs/ARDYZ/SPK_BULTEN_2020-6.pdf",
+      "quote": "Ard Grup Bilişim 3.500.000 18.000.000 22.000.000 4.000.000 - - 5,30 Teknolojileri A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2020-01-16",
+        "bookbuilding_start": "2020-01-29",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "7500000",
+      "source_id": "SPK_BULTEN_2020_6",
+      "source_document": "SPK Bülteni 2020/6",
+      "source_published_at": "2020-01-16T23:59:59+03:00",
+      "source_sha256": "38bc1ac63e2d04aa059e0b20d403aeb6c4328c5bdd1ac1fc221ce5b95c10419f",
+      "source_path": "registry/oot/source_docs/ARDYZ/SPK_BULTEN_2020-6.pdf",
+      "quote": "Ard Grup Bilişim 3.500.000 18.000.000 22.000.000 4.000.000 - - 5,30 Teknolojileri A.Ş. (1) (2)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2020-01-16",
+        "bookbuilding_start": "2020-01-29",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2020_6",
+      "source_document": "SPK Bülteni 2020/6",
+      "source_published_at": "2020-01-16T23:59:59+03:00",
+      "source_sha256": "38bc1ac63e2d04aa059e0b20d403aeb6c4328c5bdd1ac1fc221ce5b95c10419f",
+      "source_path": "registry/oot/source_docs/ARDYZ/SPK_BULTEN_2020-6.pdf",
+      "quote": "Ard Grup Bilişim 3.500.000 18.000.000 22.000.000 4.000.000 - - 5,30 Teknolojileri A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2020-01-16",
+        "bookbuilding_start": "2020-01-29",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "7500000",
+      "source_id": "SPK_BULTEN_2020_6",
+      "source_document": "SPK Bülteni 2020/6",
+      "source_published_at": "2020-01-16T23:59:59+03:00",
+      "source_sha256": "38bc1ac63e2d04aa059e0b20d403aeb6c4328c5bdd1ac1fc221ce5b95c10419f",
+      "source_path": "registry/oot/source_docs/ARDYZ/SPK_BULTEN_2020-6.pdf",
+      "quote": "Ard Grup Bilişim 3.500.000 18.000.000 22.000.000 4.000.000 - - 5,30 Teknolojileri A.Ş. (1) (2)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2020-01-16",
+        "bookbuilding_start": "2020-01-29",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2020-02-06",
+      "source_id": "KAP_817020",
+      "source_document": "KAP 817020",
+      "source_published_at": "2020-02-04T18:07:35+03:00",
+      "source_sha256": "0c1a302ef2b0e63219766d8b6cabf453be1ce8517008486bf93fb0dade87cb0b",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_817020_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 06/02/2020",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2020-01-29",
+      "source_id": "KAP_817020",
+      "source_document": "KAP 817020",
+      "source_published_at": "2020-02-04T18:07:35+03:00",
+      "source_sha256": "0c1a302ef2b0e63219766d8b6cabf453be1ce8517008486bf93fb0dade87cb0b",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_817020_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 29-30/01/2020 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2020-01-30",
+      "source_id": "KAP_817020",
+      "source_document": "KAP 817020",
+      "source_published_at": "2020-02-04T18:07:35+03:00",
+      "source_sha256": "0c1a302ef2b0e63219766d8b6cabf453be1ce8517008486bf93fb0dade87cb0b",
+      "source_path": "registry/oot/source_docs/ARDYZ/KAP_817020_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 29-30/01/2020 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_817020": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 817020",
+      "published_at": "2020-02-04T18:07:35+03:00",
+      "sha256": "0c1a302ef2b0e63219766d8b6cabf453be1ce8517008486bf93fb0dade87cb0b",
+      "path": "registry/oot/source_docs/ARDYZ/KAP_817020_bildirim.pdf"
+    },
+    "SPK_BULTEN_2020_6": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2020/6",
+      "published_at": "2020-01-16T23:59:59+03:00",
+      "sha256": "38bc1ac63e2d04aa059e0b20d403aeb6c4328c5bdd1ac1fc221ce5b95c10419f",
+      "path": "registry/oot/source_docs/ARDYZ/SPK_BULTEN_2020-6.pdf"
+    },
+    "KAP_816932": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 816932",
+      "published_at": "2020-02-04T11:25:10+03:00",
+      "sha256": "a2a75260fcbad6bb31bee69f487705f175f56dcbcde0cd3976042fd0ecd38e01",
+      "path": "registry/oot/source_docs/ARDYZ/KAP_816932_bildirim.pdf"
+    }
+  }
+}

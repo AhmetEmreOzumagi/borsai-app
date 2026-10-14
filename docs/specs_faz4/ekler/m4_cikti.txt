@@ -1,0 +1,155 @@
+== 1. kirilma gunu dagilimi (L; L=10 sansurlu) ==
+ L= 0 18
+ L= 1 11
+ L= 2 4
+ L= 3 13
+ L= 4 12
+ L= 5 8
+ L= 6 6
+ L= 7 6
+ L= 8 4
+ L= 9 3
+ L= 10 14
+== 2. ust limit / referans orani (990 seans) ==
+  n=990 min=+1.0960 p10=+1.0993 p25=+1.0995 med=+1.0997 p75=+1.0999 p90=+1.1000 max=+1.1000 ort=+1.0997 sd=0.0004  tam 1.1 olan: 209
+ D1 referans == arz fiyati: 95 /99; farkli: [('BORLS', '25.3', '25.29'), ('AVPGY', '55.1', '55.08'), ('ARTMS', '25.36', '25.35'), ('LILAK', '37.4', '37.39')]
+ referans(D_k) == kapanis(D_{k-1}) (k>=2): 891 /891
+== 3. fiyat adimi tablosu adaylari ve yuvarlama modu (ust limit = yuvarla(referans*1.1)) ==
+  adim raw fiyata gore, mod FLOOR: ust limit tutan 990/990, alt limit tutan 229/990
+  adim raw fiyata gore, mod CEIL: ust limit tutan 209/990, alt limit tutan 990/990
+  adim raw fiyata gore, mod HALF_UP: ust limit tutan 567/990, alt limit tutan 667/990
+  adim raw fiyata gore, mod HALF_EVEN: ust limit tutan 623/990, alt limit tutan 624/990
+  adim ref fiyata gore, mod FLOOR: ust limit tutan 931/990, alt limit tutan 209/990
+  adim ref fiyata gore, mod CEIL: ust limit tutan 204/990, alt limit tutan 940/990
+  adim ref fiyata gore, mod HALF_UP: ust limit tutan 537/990, alt limit tutan 648/990
+  adim ref fiyata gore, mod HALF_EVEN: ust limit tutan 594/990, alt limit tutan 605/990
+  FLOOR/raw ile tutmayan ust limitler (ilk 15): []
+== 4. limit yolu C_h: gerceklesen (L>=h) vs 1.1^h ve deterministik yuvarlama ==
+ h=1 n=81 R_h-(1.1^h-1): n=81 min=-0.0011 p10=-0.0005 p25=-0.0003 med=+0.0000 p75=+0.0000 p90=+0.0000 max=+0.0003 ort=-0.0002 sd=0.0003
+      R_h-(det.yol-1): n=81 min=+0.0000 p10=+0.0000 p25=+0.0000 med=+0.0000 p75=+0.0000 p90=+0.0000 max=+0.0008 ort=+0.0000 sd=0.0001 tam esit 79/81
+ h=3 n=66 R_h-(1.1^h-1): n=66 min=-0.0025 p10=-0.0018 p25=-0.0013 med=-0.0008 p75=-0.0004 p90=-0.0002 max=+0.0000 ort=-0.0009 sd=0.0006
+      R_h-(det.yol-1): n=66 min=+0.0000 p10=+0.0000 p25=+0.0000 med=+0.0000 p75=+0.0000 p90=+0.0000 max=+0.0016 ort=+0.0000 sd=0.0002 tam esit 65/66
+ h=5 n=41 R_h-(1.1^h-1): n=41 min=-0.0036 p10=-0.0034 p25=-0.0027 med=-0.0019 p75=-0.0017 p90=-0.0011 max=-0.0004 ort=-0.0021 sd=0.0009
+      R_h-(det.yol-1): n=41 min=+0.0000 p10=+0.0000 p25=+0.0000 med=+0.0000 p75=+0.0000 p90=+0.0000 max=+0.0024 ort=+0.0001 sd=0.0004 tam esit 40/41
+ h=10 n=14 R_h-(1.1^h-1): n=14 min=-0.0141 p10=-0.0100 p25=-0.0091 med=-0.0069 p75=-0.0058 p90=-0.0053 max=-0.0046 ort=-0.0076 sd=0.0025
+      R_h-(det.yol-1): n=14 min=+0.0000 p10=+0.0000 p25=+0.0000 med=+0.0000 p75=+0.0000 p90=+0.0000 max=+0.0000 ort=+0.0000 sd=0.0000 tam esit 14/14
+== 5. L=t<h durum sayilari (h in 1,3,5,10; t=0 ayri) ==
+ h=1: L>=h 81; L<h 18; t=0 18; t>=1 0; ayrinti {0: 18}
+ h=3: L>=h 66; L<h 33; t=0 18; t>=1 15; ayrinti {0: 18, 1: 11, 2: 4}
+ h=5: L>=h 41; L<h 58; t=0 18; t>=1 40; ayrinti {0: 18, 1: 11, 2: 4, 3: 13, 4: 12}
+ h=10: L>=h 14; L<h 85; t=0 18; t>=1 67; ayrinti {0: 18, 1: 11, 2: 4, 3: 13, 4: 12, 5: 8, 6: 6, 7: 6, 8: 4, 9: 3}
+== 6. kirilma sonrasi getiri  G(t,h) = close(D_h)/close(D_t) - 1  (t>=1: D_t son tavan gunu; t=0: arz fiyati) ==
+ -- h sabit, t=0 ve t>=1 ayri --
+ h=1 t=0 : n=18 min=-0.1000 p10=-0.0998 p25=-0.0856 med=-0.0011 p75=+0.0129 p90=+0.0325 max=+0.0680 ort=-0.0234 sd=0.0537
+ h=1 t>=1: n=0
+ h=3 t=0 : n=18 min=-0.2346 p10=-0.2130 p25=-0.1771 med=-0.0496 p75=-0.0002 p90=+0.0422 max=+0.0792 ort=-0.0769 sd=0.1013
+ h=3 t>=1: n=15 min=-0.1897 p10=-0.1703 p25=-0.1339 med=-0.0893 p75=-0.0762 p90=-0.0339 max=+0.0679 ort=-0.0934 sd=0.0621
+ h=5 t=0 : n=18 min=-0.2967 p10=-0.2848 p25=-0.2273 med=-0.0718 p75=+0.0000 p90=+0.0792 max=+0.1968 ort=-0.0919 sd=0.1500
+ h=5 t>=1: n=40 min=-0.3399 p10=-0.1899 p25=-0.1659 med=-0.0989 p75=-0.0330 p90=+0.0207 max=+0.2918 ort=-0.0826 sd=0.1170
+ h=10 t=0 : n=18 min=-0.3393 p10=-0.3256 p25=-0.2661 med=-0.0824 p75=+0.0036 p90=+0.0706 max=+0.1945 ort=-0.1041 sd=0.1592
+ h=10 t>=1: n=67 min=-0.4664 p10=-0.3105 p25=-0.2523 med=-0.1652 p75=-0.0139 p90=+0.3323 max=+0.6166 ort=-0.0882 sd=0.2485
+ -- gecen seans sayisi m = h - t (tum h=1..10 birlestirilmis, t>=1; her arz-h cifti bir gozlem) --
+ m=1: n=67 min=-0.1000 p10=-0.0999 p25=-0.0997 med=-0.0949 p75=-0.0394 p90=+0.0077 max=+0.0985 ort=-0.0658 sd=0.0508
+ m=2: n=64 min=-0.1898 p10=-0.1896 p25=-0.1890 med=-0.1294 p75=-0.0198 p90=+0.0492 max=+0.1828 ort=-0.0981 sd=0.0980
+ m=3: n=60 min=-0.2708 p10=-0.2697 p25=-0.2116 med=-0.1308 p75=-0.0168 p90=+0.1003 max=+0.3008 ort=-0.1022 sd=0.1462
+ m=4: n=54 min=-0.3425 p10=-0.3040 p25=-0.2366 med=-0.1539 p75=-0.0296 p90=+0.2048 max=+0.3911 ort=-0.1045 sd=0.1883
+ m=5: n=48 min=-0.3813 p10=-0.3057 p25=-0.2508 med=-0.1589 p75=+0.0257 p90=+0.3169 max=+0.5296 ort=-0.0823 sd=0.2404
+ m=6: n=40 min=-0.4402 p10=-0.3204 p25=-0.2375 med=-0.1508 p75=+0.0953 p90=+0.3832 max=+0.6813 ort=-0.0544 sd=0.2722
+ m=7: n=28 min=-0.4094 p10=-0.3133 p25=-0.2449 med=-0.1534 p75=+0.1548 p90=+0.4635 max=+0.6166 ort=-0.0313 sd=0.3065
+ m=8: n=15 min=-0.4524 p10=-0.3405 p25=-0.2367 med=-0.1653 p75=-0.1081 p90=+0.0745 max=+0.3307 ort=-0.1460 sd=0.1876
+ m=9: n=11 min=-0.4664 p10=-0.2905 p25=-0.2143 med=-0.1663 p75=-0.1122 p90=+0.1405 max=+0.3169 ort=-0.1324 sd=0.1987
+ -- ayni sey t=0 icin (m=h) --
+ m=1: n=18 min=-0.1000 p10=-0.0998 p25=-0.0856 med=-0.0011 p75=+0.0129 p90=+0.0325 max=+0.0680 ort=-0.0234 sd=0.0537
+ m=2: n=18 min=-0.1900 p10=-0.1616 p25=-0.1169 med=-0.0517 p75=+0.0029 p90=+0.0320 max=+0.1160 ort=-0.0539 sd=0.0831
+ m=3: n=18 min=-0.2346 p10=-0.2130 p25=-0.1771 med=-0.0496 p75=-0.0002 p90=+0.0422 max=+0.0792 ort=-0.0769 sd=0.1013
+ m=4: n=18 min=-0.2912 p10=-0.2527 p25=-0.2263 med=-0.0557 p75=+0.0000 p90=+0.0414 max=+0.1528 ort=-0.0933 sd=0.1309
+ m=5: n=18 min=-0.2967 p10=-0.2848 p25=-0.2273 med=-0.0718 p75=+0.0000 p90=+0.0792 max=+0.1968 ort=-0.0919 sd=0.1500
+ m=6: n=18 min=-0.3259 p10=-0.2825 p25=-0.2220 med=-0.0895 p75=-0.0011 p90=+0.0439 max=+0.1480 ort=-0.1049 sd=0.1353
+ m=7: n=18 min=-0.3207 p10=-0.3025 p25=-0.2046 med=-0.0979 p75=+0.0048 p90=+0.0997 max=+0.1520 ort=-0.0960 sd=0.1457
+ m=8: n=18 min=-0.3395 p10=-0.2930 p25=-0.2443 med=-0.0752 p75=-0.0009 p90=+0.0335 max=+0.1528 ort=-0.1100 sd=0.1419
+ m=9: n=18 min=-0.3363 p10=-0.3142 p25=-0.2719 med=-0.0692 p75=-0.0008 p90=+0.0275 max=+0.0880 ort=-0.1182 sd=0.1409
+ m=10: n=18 min=-0.3393 p10=-0.3256 p25=-0.2661 med=-0.0824 p75=+0.0036 p90=+0.0706 max=+0.1945 ort=-0.1041 sd=0.1592
+ -- ilk kirilma gunu getirisi (m=1) t gruplarina gore --
+ t=0: n=18 min=-0.1000 p10=-0.0998 p25=-0.0856 med=-0.0011 p75=+0.0129 p90=+0.0325 max=+0.0680 ort=-0.0234 sd=0.0537
+ t=1: n=11 min=-0.1000 p10=-0.0997 p25=-0.0972 med=-0.0894 p75=-0.0199 p90=+0.0182 max=+0.0540 ort=-0.0570 sd=0.0530
+ t=2,3: n=17 min=-0.1000 p10=-0.1000 p25=-0.0998 med=-0.0995 p75=-0.0759 p90=+0.0052 max=+0.0754 ort=-0.0726 sd=0.0525
+ t>=4: n=39 min=-0.1000 p10=-0.0999 p25=-0.0997 med=-0.0943 p75=-0.0394 p90=-0.0039 max=+0.0985 ort=-0.0652 sd=0.0490
+ -- seans basina ortalama log-getiri kirilma sonrasi: ln(1+G)/m, t>=1 --
+ m=1: n=67 min=-0.1054 p10=-0.1053 p25=-0.1050 med=-0.0997 p75=-0.0402 p90=+0.0077 max=+0.0939 ort=-0.0694 sd=0.0522
+ m=2: n=64 min=-0.1053 p10=-0.1051 p25=-0.1048 med=-0.0693 p75=-0.0100 p90=+0.0240 max=+0.0840 ort=-0.0544 sd=0.0521
+ m=3: n=60 min=-0.1053 p10=-0.1048 p25=-0.0793 med=-0.0467 p75=-0.0057 p90=+0.0318 max=+0.0877 ort=-0.0401 sd=0.0517
+ m=5: n=48 min=-0.0960 p10=-0.0730 p25=-0.0578 med=-0.0346 p75=+0.0051 p90=+0.0550 max=+0.0850 ort=-0.0233 sd=0.0483
+ m=9: n=11 min=-0.0698 p10=-0.0381 p25=-0.0269 med=-0.0202 p75=-0.0133 p90=+0.0146 max=+0.0306 ort=-0.0186 sd=0.0248
+== 7. kirilma sonrasi getiri fiziksel sinir icinde mi (0.9^m-1 <= G <= 1.1^m-1) ==
+ toplam gozlem 567 sinir disi 0
+== 8. kirilma sonrasi yeniden tavan ve taban (kapanis == ust limit / alt limit) sayilari, m gecen seans ==
+ m=1: n=85 tavan=0 taban=36
+ m=2: n=82 tavan=11 taban=25
+ m=3: n=78 tavan=15 taban=17
+ m=4: n=72 tavan=10 taban=7
+ m=5: n=66 tavan=11 taban=2
+ m=6: n=58 tavan=8 taban=2
+ m=7: n=46 tavan=6 taban=2
+ m=8: n=33 tavan=0 taban=2
+ m=9: n=29 tavan=0 taban=0
+== 9. R_h > 0 (Y_h) oranlari: L>=h grubu ve L<h grubu ==
+ h=1: L>=h n=81 Y=1 81; L<h n=18 Y=1 8 (0.444)
+ h=3: L>=h n=66 Y=1 66; L<h n=33 Y=1 14 (0.424)
+ h=5: L>=h n=41 Y=1 41; L<h n=58 Y=1 36 (0.621)
+ h=10: L>=h n=14 Y=1 14; L<h n=85 Y=1 56 (0.659)
+== 10. kirilma sonrasi getirinin (t>=1, m=1..9 birlesik) medyani ve MAE-optimal sabitin ipucu: sadece tanimlayici ==
+  n=387 min=-0.4664 p10=-0.2707 p25=-0.1901 med=-0.1105 p75=-0.0232 p90=+0.1827 max=+0.6813 ort=-0.0856 sd=0.1874
+== 11. D1 referansi = arz fiyatinin fiyat adimina yuvarlanmasi mi? (4 farkli arz) ==
+  BORLS arz 25.29 ref 25.3 adim 0.02 {'FLOOR': '25.28', 'CEIL': '25.30', 'HALF_UP': '25.30', 'HALF_EVEN': '25.28'} tutan: ['CEIL', 'HALF_UP']
+  AVPGY arz 55.08 ref 55.1 adim 0.05 {'FLOOR': '55.05', 'CEIL': '55.10', 'HALF_UP': '55.10', 'HALF_EVEN': '55.10'} tutan: ['CEIL', 'HALF_UP', 'HALF_EVEN']
+  ARTMS arz 25.35 ref 25.36 adim 0.02 {'FLOOR': '25.34', 'CEIL': '25.36', 'HALF_UP': '25.36', 'HALF_EVEN': '25.36'} tutan: ['CEIL', 'HALF_UP', 'HALF_EVEN']
+  LILAK arz 37.39 ref 37.4 adim 0.02 {'FLOOR': '37.38', 'CEIL': '37.40', 'HALF_UP': '37.40', 'HALF_EVEN': '37.40'} tutan: ['CEIL', 'HALF_UP', 'HALF_EVEN']
+ arz fiyati adim izgarasinda olan arz sayisi: 95 /99
+== 12. limit yolu C_h (arz fiyati once HALF_UP ile adima oturtulur, sonra FLOOR ile h kez ust limit) vs gerceklesen ==
+ h=1: n=81 kapanis == C_h(det) 81/81
+ h=2: n=70 kapanis == C_h(det) 70/70
+ h=3: n=66 kapanis == C_h(det) 66/66
+ h=4: n=53 kapanis == C_h(det) 53/53
+ h=5: n=41 kapanis == C_h(det) 41/41
+ h=6: n=33 kapanis == C_h(det) 33/33
+ h=7: n=27 kapanis == C_h(det) 27/27
+ h=8: n=21 kapanis == C_h(det) 21/21
+ h=9: n=17 kapanis == C_h(det) 17/17
+ h=10: n=14 kapanis == C_h(det) 14/14
+== 13. C_h(det)/arz-1 ile 1.1^h-1 farki, 99 arzin hepsinde (tahmin aninda hesaplanabilir) ==
+ h=1: n=99 min=-0.0011 p10=-0.0005 p25=-0.0003 med=+0.0000 p75=+0.0000 p90=+0.0000 max=+0.0003 ort=-0.0002 sd=0.0003
+ h=3: n=99 min=-0.0043 p10=-0.0018 p25=-0.0013 med=-0.0008 p75=-0.0004 p90=-0.0002 max=+0.0000 ort=-0.0009 sd=0.0007
+ h=5: n=99 min=-0.0172 p10=-0.0036 p25=-0.0030 med=-0.0019 p75=-0.0016 p90=-0.0011 max=-0.0004 ort=-0.0024 sd=0.0018
+ h=10: n=99 min=-0.0537 p10=-0.0098 p25=-0.0089 med=-0.0077 p75=-0.0058 p90=-0.0048 max=-0.0037 ort=-0.0079 sd=0.0052
+== 14. walk-forward hucre buyuklukleri: test arzi k (f3 dolu), kesim T=ilk islem gunu; hucre (g,m): Z=t=0 (m=h), B=t>=1 (m=h-t); gozlem ancak seans(D_{t+m}) < T ise ==
+ HATSN 2023-09-22 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[0, 0, 0, 0, 0, 0, 0, 0, 0] toplamZ=0 toplamB=0
+ DMRGD 2023-09-29 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[0, 0, 0, 0, 0, 0, 0, 0, 0] toplamZ=0 toplamB=0
+ MEKAG 2023-10-12 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[1, 0, 0, 0, 0, 0, 0, 0, 0] toplamZ=0 toplamB=1
+ DOFER 2023-10-16 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[1, 1, 0, 0, 0, 0, 0, 0, 0] toplamZ=0 toplamB=2
+ MHRGY 2023-10-18 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[1, 1, 0, 0, 0, 0, 0, 0, 0] toplamZ=0 toplamB=2
+ BORLS 2023-10-19 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[1, 1, 0, 0, 0, 0, 0, 0, 0] toplamZ=0 toplamB=2
+ TABGD 2023-10-26 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[1, 1, 0, 0, 0, 0, 0, 0, 0] toplamZ=0 toplamB=2
+ VRGYO 2023-10-27 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[3, 1, 0, 0, 0, 0, 0, 0, 0] toplamZ=0 toplamB=4
+ MARBL 2023-11-08 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[5, 5, 4, 4, 2, 0, 0, 0, 0] toplamZ=0 toplamB=20
+ BINHO 2023-11-20 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[6, 6, 4, 4, 3, 2, 0, 0, 0] toplamZ=0 toplamB=25
+ EKOS 2023-11-21 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[6, 6, 5, 4, 3, 2, 0, 0, 0] toplamZ=0 toplamB=26
+ AGROT 2023-11-23 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[6, 6, 5, 5, 3, 2, 0, 0, 0] toplamZ=0 toplamB=27
+ SKYMD 2023-12-06 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[7, 6, 5, 5, 3, 2, 0, 0, 0] toplamZ=0 toplamB=28
+ CATES 2023-12-07 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[7, 6, 5, 5, 3, 2, 0, 0, 0] toplamZ=0 toplamB=28
+ ... son fold: QUICK 2026-08-06 Z= [17, 17, 17, 17, 17, 16, 15, 15, 15, 15] B= [67, 63, 59, 53, 47, 38, 26, 14, 11]
+ N_MIN=5: hucre n<N_MIN olan fold sayisi (97 test arzi) Z m=1,3,5,10: [41, 41, 41, 41]; B m=1,3,5,9: [8, 10, 18, 34]
+ N_MIN=8: hucre n<N_MIN olan fold sayisi (97 test arzi) Z m=1,3,5,10: [53, 53, 53, 54]; B m=1,3,5,9: [15, 18, 19, 61]
+ N_MIN=10: hucre n<N_MIN olan fold sayisi (97 test arzi) Z m=1,3,5,10: [56, 56, 57, 59]; B m=1,3,5,9: [17, 18, 28, 93]
+ N_MIN=15: hucre n<N_MIN olan fold sayisi (97 test arzi) Z m=1,3,5,10: [92, 93, 93, 94]; B m=1,3,5,9: [25, 28, 37, 97]
+ skorlanabilir fold (tavan plani kurali): 87 ilk EKOS 2023-11-21
+  EKOS 2023-11-21 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[6, 6, 5, 4, 3, 2, 0, 0, 0]
+  AGROT 2023-11-23 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[6, 6, 5, 5, 3, 2, 0, 0, 0]
+  SKYMD 2023-12-06 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[7, 6, 5, 5, 3, 2, 0, 0, 0]
+  CATES 2023-12-07 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[7, 6, 5, 5, 3, 2, 0, 0, 0]
+  BEGYO 2023-12-08 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[7, 6, 5, 5, 3, 2, 0, 0, 0]
+  KBORU 2023-12-14 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[8, 6, 5, 5, 3, 2, 0, 0, 0]
+  SURGY 2023-12-14 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[8, 6, 5, 5, 3, 2, 0, 0, 0]
+  MEGMT 2023-12-15 Z=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] B=[10, 7, 5, 5, 3, 2, 0, 0, 0]
+  N_MIN=5: skorlanabilir foldlarda Z toplam<N_MIN: 9, B toplam<N_MIN: 0, Z[1]<N_MIN: 31, B[1]<N_MIN: 0, B[9]<N_MIN: 24, Z[10]<N_MIN: 31
+  N_MIN=8: skorlanabilir foldlarda Z toplam<N_MIN: 9, B toplam<N_MIN: 0, Z[1]<N_MIN: 43, B[1]<N_MIN: 5, B[9]<N_MIN: 51, Z[10]<N_MIN: 44
+  N_MIN=10: skorlanabilir foldlarda Z toplam<N_MIN: 9, B toplam<N_MIN: 0, Z[1]<N_MIN: 46, B[1]<N_MIN: 7, B[9]<N_MIN: 83, Z[10]<N_MIN: 49

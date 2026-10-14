@@ -1,0 +1,340 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "ULUFA",
+  "company": "Ulusal Faktoring A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_976329",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "2.49",
+      "source_id": "KAP_976329",
+      "source_document": "KAP 976329",
+      "source_published_at": "2021-11-09T18:09:10+03:00",
+      "source_sha256": "f2d789fe65516083f6c190ba55803878cfd3af9b86665ae730559b9d8af053b6",
+      "source_path": "registry/oot/source_docs/ULUFA/KAP_976329_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 2,49",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_52",
+          "quote": "Ulusal Faktoring A.Ş. 100.000.000 133.500.000 33.500.000 - 7.500.000 (2) 7.500.000 (3) 2,49 (4)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "48500000",
+      "source_id": "KAP_976329",
+      "source_document": "KAP 976329",
+      "source_published_at": "2021-11-09T18:09:10+03:00",
+      "source_sha256": "f2d789fe65516083f6c190ba55803878cfd3af9b86665ae730559b9d8af053b6",
+      "source_path": "registry/oot/source_docs/ULUFA/KAP_976329_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 48.500.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "133500000",
+      "source_id": "KAP_976329",
+      "source_document": "KAP 976329",
+      "source_published_at": "2021-11-09T18:09:10+03:00",
+      "source_sha256": "f2d789fe65516083f6c190ba55803878cfd3af9b86665ae730559b9d8af053b6",
+      "source_path": "registry/oot/source_docs/ULUFA/KAP_976329_bildirim.pdf",
+      "quote": "sermayesini temsil eden 133.500.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "33500000",
+      "source_id": "SPK_BULTEN_2021_52",
+      "source_document": "SPK Bülteni 2021/52",
+      "source_published_at": "2021-10-21T23:59:59+03:00",
+      "source_sha256": "49ceb734debd012743e9b13f07d96b8264a7c3cef28a0e0a435e9661dedd6ceb",
+      "source_path": "registry/oot/source_docs/ULUFA/SPK_BULTEN_2021-52.pdf",
+      "quote": "Ulusal Faktoring A.Ş. 100.000.000 133.500.000 33.500.000 - 7.500.000 (2) 7.500.000 (3) 2,49 (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_BASE_PLUS_STATED_ADDITIONAL_SALE",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_976273_EK1",
+          "quote": "Böylece, ek satış dahil halka arz edilen toplam 48.500.000,-TL nominal değerli payların halka arz büyüklüğü 120.765.000,-TL olmuştur."
+        },
+        "b_shares_offered_equals_base_plus_stated_additional": "48500000 = 33500000 + 7500000 + 7500000",
+        "c_additional_sale_stated": {
+          "source_id": "KAP_976273_EK1",
+          "quote": "Toplam talep tutarının ek satış hariç halka arz edilen toplam 41.000.000 TL nominal değerli paylardan yüksek olması nedeniyle ek satışa konu 7.500.000 TL nominal değerli paylar da satışa konu edilmek suretiyle Yurtiçi Kurumsal Yatırımcılara dağıtılmıştır."
+        }
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "existing_share_sale_shares": {
+      "value": "7500000",
+      "source_id": "SPK_BULTEN_2021_52",
+      "source_document": "SPK Bülteni 2021/52",
+      "source_published_at": "2021-10-21T23:59:59+03:00",
+      "source_sha256": "49ceb734debd012743e9b13f07d96b8264a7c3cef28a0e0a435e9661dedd6ceb",
+      "source_path": "registry/oot/source_docs/ULUFA/SPK_BULTEN_2021-52.pdf",
+      "quote": "Ulusal Faktoring A.Ş. 100.000.000 133.500.000 33.500.000 - 7.500.000 (2) 7.500.000 (3) 2,49 (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_BASE_PLUS_STATED_ADDITIONAL_SALE",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_976273_EK1",
+          "quote": "Böylece, ek satış dahil halka arz edilen toplam 48.500.000,-TL nominal değerli payların halka arz büyüklüğü 120.765.000,-TL olmuştur."
+        },
+        "b_shares_offered_equals_base_plus_stated_additional": "48500000 = 33500000 + 7500000 + 7500000",
+        "c_additional_sale_stated": {
+          "source_id": "KAP_976273_EK1",
+          "quote": "Toplam talep tutarının ek satış hariç halka arz edilen toplam 41.000.000 TL nominal değerli paylardan yüksek olması nedeniyle ek satışa konu 7.500.000 TL nominal değerli paylar da satışa konu edilmek suretiyle Yurtiçi Kurumsal Yatırımcılara dağıtılmıştır."
+        }
+      },
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "15.000.000",
+      "correction_kind": "VALUE"
+    },
+    "total_demand_multiple": {
+      "value": "23.9",
+      "source_id": "KAP_976273_EK1",
+      "source_document": "KAP 976273 ek 1",
+      "source_published_at": "2021-11-09T16:19:34+03:00",
+      "source_sha256": "638deb8a4867f63c5adfd8cda7996fe4184090560f5789c07969edf36c374b55",
+      "source_path": "registry/oot/source_docs/ULUFA/KAP_976273_ek1.pdf",
+      "quote": "53.884 yatırımcıdan halka arz edilen 48.500.000,-TL nominal değerli payların yaklaşık 23,9 katına denk gelen toplam 1.159.019.219 TL nominal değerli talep toplanmıştır.",
+      "origin": "SOURCE_REPORTED_APPROX",
+      "definition": "belgedeki toplam kat ('yaklaşık'; ek satış dahil 48.500.000 TL nominal paya göre)",
+      "denominator_includes_additional_sale": true,
+      "note": "düzeltilmiş bildirim (KAP_976273) kullanıldı; ilk bildirim KAP_975535 bireysel talebi hatalı yazmış ('yaklaşık 22,5 katına denk gelen toplam 1.095.010.163'). 1.159.019.219 / 48.500.000 = 23,8973; taban 41.000.000 paydası ile 28,2688",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_976273_EK1",
+      "source_document": "KAP 976273 ek 1",
+      "source_published_at": "2021-11-09T16:19:34+03:00",
+      "source_sha256": "638deb8a4867f63c5adfd8cda7996fe4184090560f5789c07969edf36c374b55",
+      "source_path": "registry/oot/source_docs/ULUFA/KAP_976273_ek1.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "7500000",
+      "source_id": "KAP_976273_EK1",
+      "source_document": "KAP 976273 ek 1",
+      "source_published_at": "2021-11-09T16:19:34+03:00",
+      "source_sha256": "638deb8a4867f63c5adfd8cda7996fe4184090560f5789c07969edf36c374b55",
+      "source_path": "registry/oot/source_docs/ULUFA/KAP_976273_ek1.pdf",
+      "quote": "Toplam talep tutarının ek satış hariç halka arz edilen toplam 41.000.000 TL nominal değerli paylardan yüksek olması nedeniyle ek satışa konu 7.500.000 TL nominal değerli paylar da satışa konu edilmek suretiyle Yurtiçi Kurumsal Yatırımcılara dağıtılmıştır.",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": "120765000",
+      "source_id": "KAP_976273_EK1",
+      "source_document": "KAP 976273 ek 1",
+      "source_published_at": "2021-11-09T16:19:34+03:00",
+      "source_sha256": "638deb8a4867f63c5adfd8cda7996fe4184090560f5789c07969edf36c374b55",
+      "source_path": "registry/oot/source_docs/ULUFA/KAP_976273_ek1.pdf",
+      "quote": "ek satış dahil halka arz edilen toplam 48.500.000,-TL nominal değerli payların halka arz büyüklüğü 120.765.000,-TL olmuştur",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "2.49",
+      "source_id": "SPK_BULTEN_2021_52",
+      "source_document": "SPK Bülteni 2021/52",
+      "source_published_at": "2021-10-21T23:59:59+03:00",
+      "source_sha256": "49ceb734debd012743e9b13f07d96b8264a7c3cef28a0e0a435e9661dedd6ceb",
+      "source_path": "registry/oot/source_docs/ULUFA/SPK_BULTEN_2021-52.pdf",
+      "quote": "Ulusal Faktoring A.Ş. 100.000.000 133.500.000 33.500.000 - 7.500.000 (2) 7.500.000 (3) 2,49 (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-10-21",
+        "bookbuilding_start": "2021-11-04",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "100000000",
+      "source_id": "SPK_BULTEN_2021_52",
+      "source_document": "SPK Bülteni 2021/52",
+      "source_published_at": "2021-10-21T23:59:59+03:00",
+      "source_sha256": "49ceb734debd012743e9b13f07d96b8264a7c3cef28a0e0a435e9661dedd6ceb",
+      "source_path": "registry/oot/source_docs/ULUFA/SPK_BULTEN_2021-52.pdf",
+      "quote": "Ulusal Faktoring A.Ş. 100.000.000 133.500.000 33.500.000 - 7.500.000 (2) 7.500.000 (3) 2,49 (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-10-21",
+        "bookbuilding_start": "2021-11-04",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "133500000",
+      "source_id": "SPK_BULTEN_2021_52",
+      "source_document": "SPK Bülteni 2021/52",
+      "source_published_at": "2021-10-21T23:59:59+03:00",
+      "source_sha256": "49ceb734debd012743e9b13f07d96b8264a7c3cef28a0e0a435e9661dedd6ceb",
+      "source_path": "registry/oot/source_docs/ULUFA/SPK_BULTEN_2021-52.pdf",
+      "quote": "Ulusal Faktoring A.Ş. 100.000.000 133.500.000 33.500.000 - 7.500.000 (2) 7.500.000 (3) 2,49 (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-10-21",
+        "bookbuilding_start": "2021-11-04",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "33500000",
+      "source_id": "SPK_BULTEN_2021_52",
+      "source_document": "SPK Bülteni 2021/52",
+      "source_published_at": "2021-10-21T23:59:59+03:00",
+      "source_sha256": "49ceb734debd012743e9b13f07d96b8264a7c3cef28a0e0a435e9661dedd6ceb",
+      "source_path": "registry/oot/source_docs/ULUFA/SPK_BULTEN_2021-52.pdf",
+      "quote": "Ulusal Faktoring A.Ş. 100.000.000 133.500.000 33.500.000 - 7.500.000 (2) 7.500.000 (3) 2,49 (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-10-21",
+        "bookbuilding_start": "2021-11-04",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "7500000",
+      "source_id": "SPK_BULTEN_2021_52",
+      "source_document": "SPK Bülteni 2021/52",
+      "source_published_at": "2021-10-21T23:59:59+03:00",
+      "source_sha256": "49ceb734debd012743e9b13f07d96b8264a7c3cef28a0e0a435e9661dedd6ceb",
+      "source_path": "registry/oot/source_docs/ULUFA/SPK_BULTEN_2021-52.pdf",
+      "quote": "Ulusal Faktoring A.Ş. 100.000.000 133.500.000 33.500.000 - 7.500.000 (2) 7.500.000 (3) 2,49 (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-10-21",
+        "bookbuilding_start": "2021-11-04",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "41000000",
+      "source_id": "SPK_BULTEN_2021_52",
+      "source_document": "SPK Bülteni 2021/52",
+      "source_published_at": "2021-10-21T23:59:59+03:00",
+      "source_sha256": "49ceb734debd012743e9b13f07d96b8264a7c3cef28a0e0a435e9661dedd6ceb",
+      "source_path": "registry/oot/source_docs/ULUFA/SPK_BULTEN_2021-52.pdf",
+      "quote": "Ulusal Faktoring A.Ş. 100.000.000 133.500.000 33.500.000 - 7.500.000 (2) 7.500.000 (3) 2,49 (4)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-10-21",
+        "bookbuilding_start": "2021-11-04",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "7500000",
+      "source_id": "SPK_BULTEN_2021_52",
+      "source_document": "SPK Bülteni 2021/52",
+      "source_published_at": "2021-10-21T23:59:59+03:00",
+      "source_sha256": "49ceb734debd012743e9b13f07d96b8264a7c3cef28a0e0a435e9661dedd6ceb",
+      "source_path": "registry/oot/source_docs/ULUFA/SPK_BULTEN_2021-52.pdf",
+      "quote": "Ulusal Faktoring A.Ş. 100.000.000 133.500.000 33.500.000 - 7.500.000 (2) 7.500.000 (3) 2,49 (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı)",
+      "pit_pb": {
+        "bulletin_date": "2021-10-21",
+        "bookbuilding_start": "2021-11-04",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "48500000",
+      "source_id": "SPK_BULTEN_2021_52",
+      "source_document": "SPK Bülteni 2021/52",
+      "source_published_at": "2021-10-21T23:59:59+03:00",
+      "source_sha256": "49ceb734debd012743e9b13f07d96b8264a7c3cef28a0e0a435e9661dedd6ceb",
+      "source_path": "registry/oot/source_docs/ULUFA/SPK_BULTEN_2021-52.pdf",
+      "quote": "Ulusal Faktoring A.Ş. 100.000.000 133.500.000 33.500.000 - 7.500.000 (2) 7.500.000 (3) 2,49 (4)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-10-21",
+        "bookbuilding_start": "2021-11-04",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2021-11-11",
+      "source_id": "KAP_976329",
+      "source_document": "KAP 976329",
+      "source_published_at": "2021-11-09T18:09:10+03:00",
+      "source_sha256": "f2d789fe65516083f6c190ba55803878cfd3af9b86665ae730559b9d8af053b6",
+      "source_path": "registry/oot/source_docs/ULUFA/KAP_976329_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 11/11/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-11-04",
+      "source_id": "KAP_976329",
+      "source_document": "KAP 976329",
+      "source_published_at": "2021-11-09T18:09:10+03:00",
+      "source_sha256": "f2d789fe65516083f6c190ba55803878cfd3af9b86665ae730559b9d8af053b6",
+      "source_path": "registry/oot/source_docs/ULUFA/KAP_976329_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 04-05/11/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-11-05",
+      "source_id": "KAP_976329",
+      "source_document": "KAP 976329",
+      "source_published_at": "2021-11-09T18:09:10+03:00",
+      "source_sha256": "f2d789fe65516083f6c190ba55803878cfd3af9b86665ae730559b9d8af053b6",
+      "source_path": "registry/oot/source_docs/ULUFA/KAP_976329_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 04-05/11/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_976329": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 976329",
+      "published_at": "2021-11-09T18:09:10+03:00",
+      "sha256": "f2d789fe65516083f6c190ba55803878cfd3af9b86665ae730559b9d8af053b6",
+      "path": "registry/oot/source_docs/ULUFA/KAP_976329_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_52": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/52",
+      "published_at": "2021-10-21T23:59:59+03:00",
+      "sha256": "49ceb734debd012743e9b13f07d96b8264a7c3cef28a0e0a435e9661dedd6ceb",
+      "path": "registry/oot/source_docs/ULUFA/SPK_BULTEN_2021-52.pdf"
+    },
+    "KAP_976273_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 976273 ek 1",
+      "published_at": "2021-11-09T16:19:34+03:00",
+      "sha256": "638deb8a4867f63c5adfd8cda7996fe4184090560f5789c07969edf36c374b55",
+      "path": "registry/oot/source_docs/ULUFA/KAP_976273_ek1.pdf"
+    }
+  }
+}

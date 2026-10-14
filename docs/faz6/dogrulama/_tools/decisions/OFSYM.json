@@ -1,0 +1,170 @@
+{
+ "ticker": "OFSYM",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_1185325",
+  "KAP_1185325_EK1",
+  "KAP_1181138_EK1",
+  "KAP_1181253_EK1",
+  "KAP_1185338"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "2.74",
+   "origin": "SOURCE_REPORTED",
+   "source_id": "KAP_1185325_EK1",
+   "quote": "Borsa İstanbul tarafından paylaşılan verilere göre, nominal halka arz büyüklüğü olan 22.750.000 TL’nin 2,74 katına denk gelen filtrelenmemiş 62.404.593 TL nominal değerli talep gelmiştir.",
+   "definition": "belgedeki toplam kat (nominal halka arz büyüklüğüne göre; Borsa İstanbul verisi)",
+   "denominator_includes_additional_sale": false,
+   "note": "ek satış planlanmamış (SPK satırı '-'); aynı belgedeki toplamlardan 62.404.593 / 22.750.000 = 2,743059033. Borsa'da satış arzı, ancak belge katı açıkça yazıyor."
+  },
+  "total_demand_filter_status": {
+   "value": "UNFILTERED",
+   "source_id": "KAP_1185325_EK1",
+   "quote": "Borsa İstanbul tarafından paylaşılan verilere göre, nominal halka arz büyüklüğü olan 22.750.000 TL’nin 2,74 katına denk gelen filtrelenmemiş 62.404.593 TL nominal değerli talep gelmiştir."
+  },
+  "ipo_size_tl": {
+   "value": null,
+   "missing_reason": "sonuç eki TL tutarını yazmıyor (yalnız 'nominal halka arz büyüklüğü olan 22.750.000 TL' ve fiyat 27,20 TL); fiyat × pay hesaplanmadı"
+  },
+  "capital_increase_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (yalnız 'sermaye artırımı ve ortak satışı yoluyla satışa sunulan 22.750.000'; 16.250.000 / 6.500.000 ayrımı yalnız TSSD/SPK planında)"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesinde ayrım yok (ortak satışı nominali ayrıca yazılı değil)"
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_1185325_EK1",
+   "zero_from_statement": true,
+   "quote": "Halka arz sonucunda sermaye artırımı ve ortak satışı yoluyla satışa sunulan 22.750.000 TL nominal değerli payların satışı gerçekleşmiştir.",
+   "note": "SPK satırında ek satış '-'; satılan toplam 22.750.000 = planlanan taban (bedelli 16.250.000 + mevcut pay satışı 6.500.000)"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_1185325_EK1",
+   "quote": "Halka arz sonucunda sermaye artırımı ve ortak satışı yoluyla satışa sunulan 22.750.000 TL nominal değerli payların satışı gerçekleşmiştir."
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_1185325_EK1",
+   "used": "NONE",
+   "quote": "Halka arz sonucunda sermaye artırımı ve ortak satışı yoluyla satışa sunulan 22.750.000 TL nominal değerli payların satışı gerçekleşmiştir.",
+   "note": "ek satış planlanmamıştı; satılan = taban"
+  },
+  "investor_count": {
+   "value": "1425001",
+   "source_id": "KAP_1185325_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "1.425.001 22.750.000 %100",
+   "note": "dağıtım sonuçları tablosunun toplam satırı (yatırımcı sayısı / dağıtılan nominal); talep eden sayısı yazılmıyor"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "1422620",
+    "domestic_institutional": "292",
+    "foreign_retail": "2089"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_1185325_EK1",
+   "quote": [
+    "- Gerçek Kişi 1.422.620 22.712.754 %99,84",
+    "- Kurumsal 292 4.647 %0,02",
+    "- Gerçek Kişi 2.089 32.599 %0,14"
+   ],
+   "note": "ilk iki satır 'Yurt içi Yatırımcı', üçüncü satır 'Yurt dışı Yatırımcı' başlığı altında; retail = yurt içi gerçek kişi"
+  },
+  "retail_demand_multiple": {
+   "value": null,
+   "missing_reason": "Borsa'da satış; sonuç eki grup tahsisatı ya da grup katı yazmıyor"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "Borsa'da satış; grup katı yok"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "Borsa'da satış; grup katı yok"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "22712754",
+    "domestic_institutional": "4647",
+    "foreign_retail": "32599"
+   },
+   "source_id": "KAP_1185325_EK1",
+   "quote": [
+    "- Gerçek Kişi 1.422.620 22.712.754 %99,84",
+    "- Kurumsal 292 4.647 %0,02",
+    "- Gerçek Kişi 2.089 32.599 %0,14"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "99.84",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1185325_EK1",
+   "quote": "- Gerçek Kişi 1.422.620 22.712.754 %99,84"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "0.02",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1185325_EK1",
+   "quote": "- Kurumsal 292 4.647 %0,02"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": null,
+   "missing_reason": "sonuç ekinde yurt dışı kurumsal satırı yok (yalnız yurt dışı gerçek kişi %0,14)"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç belgesi ve TSSD dağıtım yöntemini adlandırmıyor"
+  },
+  "lead_broker": {
+   "value": "Garanti Yatırım Menkul Kıymetler A.Ş.",
+   "source_id": "KAP_1181138_EK1",
+   "quote": "halka arzda satışa aracılık edecek Garanti Yatırım Menkul Kıymetler A.Ş.'nin",
+   "note": "sonuç bildirimini yayımlayan kurum da GARANTİ YATIRIM MENKUL KIYMETLER A.Ş."
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD'de yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {
+  "additional_sale_shares": {
+   "codex_value": "0",
+   "verdict": "FOUND_SAME",
+   "note": "satılan toplam = taban; SPK ek satış '-'"
+  },
+  "total_demand_multiple": {
+   "codex_value": "2,74",
+   "verdict": "FOUND_SAME"
+  },
+  "investor_count": {
+   "codex_value": "1.425.001",
+   "verdict": "FOUND_SAME"
+  }
+ },
+ "notes": "Borsa İstanbul Birincil Piyasa'da sabit fiyatla (27,20 TL) satış. Sonuç eki katı (2,74, filtrelenmemiş) açıkça veriyor; TL arz büyüklüğü yazılmıyor. Ek satış yok.",
+ "needs_search": false
+}

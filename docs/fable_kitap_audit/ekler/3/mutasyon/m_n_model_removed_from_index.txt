@@ -1,0 +1,188 @@
+### m_n_model_removed_from_index :: tests/test_models.py tests/test_freeze_records.py::test_committed_record_consistency
+F........................FFFFFFF                                         [100%]
+=================================== FAILURES ===================================
+________________ test_index_lists_all_frozen_models_with_hashes ________________
+
+    def test_index_lists_all_frozen_models_with_hashes():
+        index = load_index(INDEX_PATH)
+        assert index["schema_version"] == "borsai.model_index/1"
+        ids = [e["model_id"] for e in index["models"]]
+        # Faz 7 dondurması (SPEC_DEVIATIONS J23): dört v1 girişi sonda; Faz 7C dondurmasından sonra ardından dört (C) girişi (K19);
+        # ayrıntı tests/test_faz7_frozen.py, tests/test_faz7c_frozen.py
+>       assert len(ids) == len(set(ids)) and set(ids) == EXPECTED_IDS | set(fs7.frozen_tail_ids())
+                                                                            ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_models.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def frozen_tail_ids() -> list[str]:
+        """models/INDEX.json'un Faz 7 öncesi 19 girişinden (a0df5b7, metin olarak aynı) sonraki dondurulmuş kimlikler. İzinli durumlar
+        yalnız şunlardır: boş (Faz 7 dondurmasından önce), `FAZ7_MODEL_IDS` (Faz 7 dondurması, 23 giriş) ya da `FAZ7_MODEL_IDS` +
+        `FAZ7C_MODEL_IDS` (Faz 7C dondurması, 27 giriş; SPEC_DEVIATIONS K19). "19 + dondurulmuş Faz 7/7C" sayan testler bunu kullanır."""
+        from borsai.specs import FAZ7_MODEL_IDS, FAZ7C_MODEL_IDS
+    
+        entries = json.loads((ROOT / "models" / "INDEX.json").read_text(encoding="utf-8"))["models"]
+        base = json.loads(pre_faz7_index_bytes())["models"]
+>       assert len(base) == N_PRE_FAZ7 and entries[:N_PRE_FAZ7] == base, "INDEX'in ilk 19 girişi Faz 7 öncesiyle aynı değil"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: INDEX'in ilk 19 girişi Faz 7 öncesiyle aynı değil
+
+tests/faz7_support.py:133: AssertionError
+___________________ test_committed_record_consistency[BKRGY] ___________________
+
+ticker = 'BKRGY'
+
+    @pytest.mark.parametrize("ticker", sorted(reg.KNOWN_TICKERS))
+    def test_committed_record_consistency(ticker):
+        (path, rec), *_ = fz.active_records(ticker)
+        assert path.name.split("_")[1][:12] == sha256_bytes(path.read_bytes())[:12]
+        assert rec["ticker"] == ticker and rec["input_sha256"] == sha256_file(inputs_path(ticker))
+        assert rec["inputs"]["document"] == reg.load_inputs(inputs_path(ticker))[0]
+        # Kayıt, yazıldığı andaki models/INDEX.json'ın fotoğrafıdır (`models_index.sha256`). INDEX'e yalnız sona
+        # eklenir ve dondurulmuş dosya değişmez (kural 1, 5): kayıttaki liste bugünkü INDEX'in ön ekidir ve
+        # parametre sha'ları aynı kalır. Sonradan dondurulan model o arz için RETRO'dur (scores.json: retro_info).
+        ids = [c["model_id"] for c in rec["models"]]
+>       assert ids == MODEL_IDS[:len(ids)]
+E       AssertionError: assert ['v1_5_h99', ...se_rate', ...] == ['v1_5_h99', ...se_rate', ...]
+E         
+E         At index 7 diff: 'v1_6_h99' != 'v1_5_market20_v0'
+E         Use -v to get more diff
+
+tests/test_freeze_records.py:196: AssertionError
+___________________ test_committed_record_consistency[CITAS] ___________________
+
+ticker = 'CITAS'
+
+    @pytest.mark.parametrize("ticker", sorted(reg.KNOWN_TICKERS))
+    def test_committed_record_consistency(ticker):
+        (path, rec), *_ = fz.active_records(ticker)
+        assert path.name.split("_")[1][:12] == sha256_bytes(path.read_bytes())[:12]
+        assert rec["ticker"] == ticker and rec["input_sha256"] == sha256_file(inputs_path(ticker))
+        assert rec["inputs"]["document"] == reg.load_inputs(inputs_path(ticker))[0]
+        # Kayıt, yazıldığı andaki models/INDEX.json'ın fotoğrafıdır (`models_index.sha256`). INDEX'e yalnız sona
+        # eklenir ve dondurulmuş dosya değişmez (kural 1, 5): kayıttaki liste bugünkü INDEX'in ön ekidir ve
+        # parametre sha'ları aynı kalır. Sonradan dondurulan model o arz için RETRO'dur (scores.json: retro_info).
+        ids = [c["model_id"] for c in rec["models"]]
+>       assert ids == MODEL_IDS[:len(ids)]
+E       AssertionError: assert ['v1_5_h99', ...se_rate', ...] == ['v1_5_h99', ...se_rate', ...]
+E         
+E         At index 7 diff: 'v1_6_h99' != 'v1_5_market20_v0'
+E         Use -v to get more diff
+
+tests/test_freeze_records.py:196: AssertionError
+___________________ test_committed_record_consistency[INTET] ___________________
+
+ticker = 'INTET'
+
+    @pytest.mark.parametrize("ticker", sorted(reg.KNOWN_TICKERS))
+    def test_committed_record_consistency(ticker):
+        (path, rec), *_ = fz.active_records(ticker)
+        assert path.name.split("_")[1][:12] == sha256_bytes(path.read_bytes())[:12]
+        assert rec["ticker"] == ticker and rec["input_sha256"] == sha256_file(inputs_path(ticker))
+        assert rec["inputs"]["document"] == reg.load_inputs(inputs_path(ticker))[0]
+        # Kayıt, yazıldığı andaki models/INDEX.json'ın fotoğrafıdır (`models_index.sha256`). INDEX'e yalnız sona
+        # eklenir ve dondurulmuş dosya değişmez (kural 1, 5): kayıttaki liste bugünkü INDEX'in ön ekidir ve
+        # parametre sha'ları aynı kalır. Sonradan dondurulan model o arz için RETRO'dur (scores.json: retro_info).
+        ids = [c["model_id"] for c in rec["models"]]
+>       assert ids == MODEL_IDS[:len(ids)]
+E       AssertionError: assert ['v1_5_h99', ...se_rate', ...] == ['v1_5_h99', ...se_rate', ...]
+E         
+E         At index 7 diff: 'v1_6_h99' != 'v1_5_market20_v0'
+E         Use -v to get more diff
+
+tests/test_freeze_records.py:196: AssertionError
+___________________ test_committed_record_consistency[KPEKS] ___________________
+
+ticker = 'KPEKS'
+
+    @pytest.mark.parametrize("ticker", sorted(reg.KNOWN_TICKERS))
+    def test_committed_record_consistency(ticker):
+        (path, rec), *_ = fz.active_records(ticker)
+        assert path.name.split("_")[1][:12] == sha256_bytes(path.read_bytes())[:12]
+        assert rec["ticker"] == ticker and rec["input_sha256"] == sha256_file(inputs_path(ticker))
+        assert rec["inputs"]["document"] == reg.load_inputs(inputs_path(ticker))[0]
+        # Kayıt, yazıldığı andaki models/INDEX.json'ın fotoğrafıdır (`models_index.sha256`). INDEX'e yalnız sona
+        # eklenir ve dondurulmuş dosya değişmez (kural 1, 5): kayıttaki liste bugünkü INDEX'in ön ekidir ve
+        # parametre sha'ları aynı kalır. Sonradan dondurulan model o arz için RETRO'dur (scores.json: retro_info).
+        ids = [c["model_id"] for c in rec["models"]]
+>       assert ids == MODEL_IDS[:len(ids)]
+E       AssertionError: assert ['v1_5_h99', ...se_rate', ...] == ['v1_5_h99', ...se_rate', ...]
+E         
+E         At index 7 diff: 'v1_6_h99' != 'v1_5_market20_v0'
+E         Use -v to get more diff
+
+tests/test_freeze_records.py:196: AssertionError
+___________________ test_committed_record_consistency[NETGL] ___________________
+
+ticker = 'NETGL'
+
+    @pytest.mark.parametrize("ticker", sorted(reg.KNOWN_TICKERS))
+    def test_committed_record_consistency(ticker):
+        (path, rec), *_ = fz.active_records(ticker)
+        assert path.name.split("_")[1][:12] == sha256_bytes(path.read_bytes())[:12]
+        assert rec["ticker"] == ticker and rec["input_sha256"] == sha256_file(inputs_path(ticker))
+        assert rec["inputs"]["document"] == reg.load_inputs(inputs_path(ticker))[0]
+        # Kayıt, yazıldığı andaki models/INDEX.json'ın fotoğrafıdır (`models_index.sha256`). INDEX'e yalnız sona
+        # eklenir ve dondurulmuş dosya değişmez (kural 1, 5): kayıttaki liste bugünkü INDEX'in ön ekidir ve
+        # parametre sha'ları aynı kalır. Sonradan dondurulan model o arz için RETRO'dur (scores.json: retro_info).
+        ids = [c["model_id"] for c in rec["models"]]
+>       assert ids == MODEL_IDS[:len(ids)]
+E       AssertionError: assert ['v1_5_h99', ...se_rate', ...] == ['v1_5_h99', ...se_rate', ...]
+E         
+E         At index 7 diff: 'v1_6_h99' != 'v1_5_market20_v0'
+E         Use -v to get more diff
+
+tests/test_freeze_records.py:196: AssertionError
+___________________ test_committed_record_consistency[TKNKA] ___________________
+
+ticker = 'TKNKA'
+
+    @pytest.mark.parametrize("ticker", sorted(reg.KNOWN_TICKERS))
+    def test_committed_record_consistency(ticker):
+        (path, rec), *_ = fz.active_records(ticker)
+        assert path.name.split("_")[1][:12] == sha256_bytes(path.read_bytes())[:12]
+        assert rec["ticker"] == ticker and rec["input_sha256"] == sha256_file(inputs_path(ticker))
+        assert rec["inputs"]["document"] == reg.load_inputs(inputs_path(ticker))[0]
+        # Kayıt, yazıldığı andaki models/INDEX.json'ın fotoğrafıdır (`models_index.sha256`). INDEX'e yalnız sona
+        # eklenir ve dondurulmuş dosya değişmez (kural 1, 5): kayıttaki liste bugünkü INDEX'in ön ekidir ve
+        # parametre sha'ları aynı kalır. Sonradan dondurulan model o arz için RETRO'dur (scores.json: retro_info).
+        ids = [c["model_id"] for c in rec["models"]]
+>       assert ids == MODEL_IDS[:len(ids)]
+E       AssertionError: assert ['v1_5_h99', ...se_rate', ...] == ['v1_5_h99', ...se_rate', ...]
+E         
+E         At index 7 diff: 'v1_6_h99' != 'v1_5_market20_v0'
+E         Use -v to get more diff
+
+tests/test_freeze_records.py:196: AssertionError
+___________________ test_committed_record_consistency[VEYAS] ___________________
+
+ticker = 'VEYAS'
+
+    @pytest.mark.parametrize("ticker", sorted(reg.KNOWN_TICKERS))
+    def test_committed_record_consistency(ticker):
+        (path, rec), *_ = fz.active_records(ticker)
+        assert path.name.split("_")[1][:12] == sha256_bytes(path.read_bytes())[:12]
+        assert rec["ticker"] == ticker and rec["input_sha256"] == sha256_file(inputs_path(ticker))
+        assert rec["inputs"]["document"] == reg.load_inputs(inputs_path(ticker))[0]
+        # Kayıt, yazıldığı andaki models/INDEX.json'ın fotoğrafıdır (`models_index.sha256`). INDEX'e yalnız sona
+        # eklenir ve dondurulmuş dosya değişmez (kural 1, 5): kayıttaki liste bugünkü INDEX'in ön ekidir ve
+        # parametre sha'ları aynı kalır. Sonradan dondurulan model o arz için RETRO'dur (scores.json: retro_info).
+        ids = [c["model_id"] for c in rec["models"]]
+>       assert ids == MODEL_IDS[:len(ids)]
+E       AssertionError: assert ['v1_5_h99', ...se_rate', ...] == ['v1_5_h99', ...se_rate', ...]
+E         
+E         At index 7 diff: 'v1_6_h99' != 'v1_5_market20_v0'
+E         Use -v to get more diff
+
+tests/test_freeze_records.py:196: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_models.py::test_index_lists_all_frozen_models_with_hashes
+FAILED tests/test_freeze_records.py::test_committed_record_consistency[BKRGY]
+FAILED tests/test_freeze_records.py::test_committed_record_consistency[CITAS]
+FAILED tests/test_freeze_records.py::test_committed_record_consistency[INTET]
+FAILED tests/test_freeze_records.py::test_committed_record_consistency[KPEKS]
+FAILED tests/test_freeze_records.py::test_committed_record_consistency[NETGL]
+FAILED tests/test_freeze_records.py::test_committed_record_consistency[TKNKA]
+FAILED tests/test_freeze_records.py::test_committed_record_consistency[VEYAS]
+8 failed, 24 passed in 3.68s
+exit=1

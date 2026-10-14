@@ -1,0 +1,291 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "ISSEN",
+  "company": "İşbir Sentetik Dokuma Sanayi A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "79708",
+      "source_id": "KAP_977700_EK1",
+      "source_document": "KAP 977700 ek 1",
+      "source_published_at": "2021-11-15T13:12:28+03:00",
+      "source_sha256": "0f0710f122d02df6a7b8e80986c53623a4e9c3efb94c59967fbb044554d56ca9",
+      "source_path": "registry/oot/source_docs/ISSEN/KAP_977700_ek1.pdf",
+      "quote": "TOPLAM 25.850.000 100% 5.170.000 85.082 218.963.629 100% 79.708 31.020.000 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 85.082; dağıtım yapılan 79.708",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "85.082",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "85.082",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "85.082 talep eden kişi sayısı; dağıtım yapılan 79.708 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "75908",
+        "high_application_retail": "3527",
+        "employees": "142",
+        "domestic_institutional": "131",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_977700_EK1",
+      "source_document": "KAP 977700 ek 1",
+      "source_published_at": "2021-11-15T13:12:28+03:00",
+      "source_sha256": "0f0710f122d02df6a7b8e80986c53623a4e9c3efb94c59967fbb044554d56ca9",
+      "source_path": "registry/oot/source_docs/ISSEN/KAP_977700_ek1.pdf",
+      "quote": [
+        "9.047.500 35% 81.028 26.103.621 11,9% 75.908 11.297.500 36,4%",
+        "5.945.500 23% 3.767 122.821.800 56,1% 3.527 9.950.500 32,1%",
+        "517.000 2% 150 611.120 0,3% 142 517.000 1,7%",
+        "7.755.000 30% 137 69.427.088 31,7% 131 9.255.000 29,8%",
+        "2.585.000 10% 0 0 0,0% 0 0 0%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 81.028, yüksek başvurulu 3.767, çalışan 150, yurt içi kurumsal 137, yurt dışı kurumsal 0",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "81.028",
+        "Yurt İçi Yüksek Başvurulu": "3.767",
+        "Şirket Çalışanları": "150",
+        "Yurt İçi Kurumsal": "137",
+        "Yurt Dışı Kurumsal": "0"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '81.028', 'Yurt İçi Yüksek Başvurulu': '3.767', 'Şirket Çalışanları': '150', 'Yurt İçi Kurumsal': '137', 'Yurt Dışı Kurumsal': '0'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex talep eden sayılarını almış; dağıtım yapılan: 75.908, 3.527, 142, 131, 0"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "2.3",
+      "source_id": "KAP_977700_EK1",
+      "source_document": "KAP 977700 ek 1",
+      "source_published_at": "2021-11-15T13:12:28+03:00",
+      "source_sha256": "0f0710f122d02df6a7b8e80986c53623a4e9c3efb94c59967fbb044554d56ca9",
+      "source_path": "registry/oot/source_docs/ISSEN/KAP_977700_ek1.pdf",
+      "quote": "toplam 81.028 bireysel yatırımcıdan kendilerine tahsis edilen pay miktarının 2,3 katı olan 26.103.621 TL nominal değerli pay talebi gelmiştir",
+      "note": "yalnız Yurtiçi Bireysel; ayrı Yüksek Başvurulu grubu 12,3 katı (gruplar birleştirilmedi)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,3",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "7.5",
+      "source_id": "KAP_977700_EK1",
+      "source_document": "KAP 977700 ek 1",
+      "source_published_at": "2021-11-15T13:12:28+03:00",
+      "source_sha256": "0f0710f122d02df6a7b8e80986c53623a4e9c3efb94c59967fbb044554d56ca9",
+      "source_path": "registry/oot/source_docs/ISSEN/KAP_977700_ek1.pdf",
+      "quote": "toplam 137 Yurtiçi Kurumsal Yatırımcı’dan kendilerine tahsis edilen pay miktarının 7,5 katı olan 69.427.088 TL nominal değerli pay talebi gelmiştir",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "7,5",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "0",
+      "source_id": "KAP_977700_EK1",
+      "source_document": "KAP 977700 ek 1",
+      "source_published_at": "2021-11-15T13:12:28+03:00",
+      "source_sha256": "0f0710f122d02df6a7b8e80986c53623a4e9c3efb94c59967fbb044554d56ca9",
+      "source_path": "registry/oot/source_docs/ISSEN/KAP_977700_ek1.pdf",
+      "quote": "nominal değerli paylar Yurtdışı Kurumsal Yatırımcılar’a tahsis edilmiş olup, Yurtdışı Kurumsal Yatırımcılar’dan talep gelmemiştir",
+      "derived": true,
+      "formula": "yurt dışı kurumsal talep 0 / planlanan tahsisat 2.585.000 = 0",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0",
+        "verdict": "FOUND_SAME",
+        "note": "belge 'talep gelmemiştir' diyor; türetildi"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "11297500",
+        "high_application_retail": "9950500",
+        "employees": "517000",
+        "domestic_institutional": "9255000",
+        "foreign_institutional": "0"
+      },
+      "source_id": "KAP_977700_EK1",
+      "source_document": "KAP 977700 ek 1",
+      "source_published_at": "2021-11-15T13:12:28+03:00",
+      "source_sha256": "0f0710f122d02df6a7b8e80986c53623a4e9c3efb94c59967fbb044554d56ca9",
+      "source_path": "registry/oot/source_docs/ISSEN/KAP_977700_ek1.pdf",
+      "quote": [
+        "9.047.500 35% 81.028 26.103.621 11,9% 75.908 11.297.500 36,4%",
+        "5.945.500 23% 3.767 122.821.800 56,1% 3.527 9.950.500 32,1%",
+        "517.000 2% 150 611.120 0,3% 142 517.000 1,7%",
+        "7.755.000 30% 137 69.427.088 31,7% 131 9.255.000 29,8%",
+        "2.585.000 10% 0 0 0,0% 0 0 0%"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "11.297.500",
+        "Yurt İçi Yüksek Başvurulu": "9.950.500",
+        "Şirket Çalışanları": "517.000",
+        "Yurt İçi Kurumsal": "9.255.000",
+        "Yurt Dışı Kurumsal": "0"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '11.297.500', 'Yurt İçi Yüksek Başvurulu': '9.950.500', 'Şirket Çalışanları': '517.000', 'Yurt İçi Kurumsal': '9.255.000', 'Yurt Dışı Kurumsal': '0'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "36.4",
+      "source_id": "KAP_977700_EK1",
+      "source_document": "KAP 977700 ek 1",
+      "source_published_at": "2021-11-15T13:12:28+03:00",
+      "source_sha256": "0f0710f122d02df6a7b8e80986c53623a4e9c3efb94c59967fbb044554d56ca9",
+      "source_path": "registry/oot/source_docs/ISSEN/KAP_977700_ek1.pdf",
+      "quote": "9.047.500 35% 81.028 26.103.621 11,9% 75.908 11.297.500 36,4%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yalnız Yurtiçi Bireysel; Yüksek Başvurulu %32,1; planlanan bireysel %35",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "36,4",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "29.8",
+      "source_id": "KAP_977700_EK1",
+      "source_document": "KAP 977700 ek 1",
+      "source_published_at": "2021-11-15T13:12:28+03:00",
+      "source_sha256": "0f0710f122d02df6a7b8e80986c53623a4e9c3efb94c59967fbb044554d56ca9",
+      "source_path": "registry/oot/source_docs/ISSEN/KAP_977700_ek1.pdf",
+      "quote": "7.755.000 30% 137 69.427.088 31,7% 131 9.255.000 29,8%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %30",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "29,8",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0",
+      "source_id": "KAP_977700_EK1",
+      "source_document": "KAP 977700 ek 1",
+      "source_published_at": "2021-11-15T13:12:28+03:00",
+      "source_sha256": "0f0710f122d02df6a7b8e80986c53623a4e9c3efb94c59967fbb044554d56ca9",
+      "source_path": "registry/oot/source_docs/ISSEN/KAP_977700_ek1.pdf",
+      "quote": "2.585.000 10% 0 0 0,0% 0 0 0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %10; talep gelmediği için bireysel ve yüksek başvurulu gruplara aktarıldı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor (sonuç eki yalnız 'İzahnamenin 25.2.3.b maddesi kapsamında' tahsisat değişikliğine atıf yapıyor)",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "'sabit fiyat' ifadesi sonuç ekinde ve TSSD'de yok; ayrıca satış yöntemi, dağıtım yöntemi değil"
+      }
+    },
+    "lead_broker": {
+      "value": "Garanti Yatırım Menkul Kıymetler A.Ş.",
+      "source_id": "KAP_975412_EK2",
+      "source_document": "KAP 975412 ek 2",
+      "source_published_at": "2021-11-05T22:26:46+03:00",
+      "source_sha256": "b128b41a9501494b6bcf9770db1334fa9dda186c9eb72edfcca3d138f1243b2c",
+      "source_path": "registry/oot/source_docs/ISSEN/KAP_975412_ek2.pdf",
+      "quote": "Arza Aracılık Eden Yetkili Kuruluş Sorumlu Olduğu Kısım: Garanti Yatırım Menkul Kıymetler A.Ş:",
+      "note": "TSSD OCR metni; sonuç bildirimini de Garanti Yatırım yayımlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Garanti Yatırım Menkul Kıymetler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_978115",
+      "source_document": "KAP 978115",
+      "source_published_at": "2021-11-16T18:21:07+03:00",
+      "source_sha256": "8c812e23d8d133e75b844ff4c5b8e52d4f90f804e55eebcf49087d0d433cea8e",
+      "source_path": "registry/oot/source_docs/ISSEN/KAP_978115_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_978115",
+      "source_document": "KAP 978115",
+      "source_published_at": "2021-11-16T18:21:07+03:00",
+      "source_sha256": "8c812e23d8d133e75b844ff4c5b8e52d4f90f804e55eebcf49087d0d433cea8e",
+      "source_path": "registry/oot/source_docs/ISSEN/KAP_978115_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_978115": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 978115",
+      "published_at": "2021-11-16T18:21:07+03:00",
+      "sha256": "8c812e23d8d133e75b844ff4c5b8e52d4f90f804e55eebcf49087d0d433cea8e",
+      "path": "registry/oot/source_docs/ISSEN/KAP_978115_bildirim.pdf"
+    },
+    "KAP_977700_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 977700 ek 1",
+      "published_at": "2021-11-15T13:12:28+03:00",
+      "sha256": "0f0710f122d02df6a7b8e80986c53623a4e9c3efb94c59967fbb044554d56ca9",
+      "path": "registry/oot/source_docs/ISSEN/KAP_977700_ek1.pdf"
+    },
+    "KAP_975412_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 975412 ek 2",
+      "published_at": "2021-11-05T22:26:46+03:00",
+      "sha256": "b128b41a9501494b6bcf9770db1334fa9dda186c9eb72edfcca3d138f1243b2c",
+      "path": "registry/oot/source_docs/ISSEN/KAP_975412_ek2.pdf"
+    }
+  }
+}

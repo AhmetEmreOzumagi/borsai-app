@@ -1,0 +1,1303 @@
+{
+  "as_of_session": "2027-12-31",
+  "code": {
+    "borsai_source_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "git_head": "0000000000000000000000000000000000000000"
+  },
+  "generated_at_utc": "2027-01-01T00:00:00Z",
+  "inputs": {
+    "models_index_sha256": "a448a5cce6e93eed063fe670d64287a0956ed5c06b7dafd4568f6f6a90fadd89",
+    "outcomes_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "records_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "models": [
+    {
+      "backtest": {
+        "cells": [
+          {
+            "ci95": [
+              0.0015,
+              0.0079
+            ],
+            "diff": 0.0046,
+            "horizon_or_k": "D1",
+            "losses": 65,
+            "metric": "MAE",
+            "model_value": 0.0297,
+            "n": 89,
+            "output": "return",
+            "rule_id": "base_train_median",
+            "rule_value": 0.0251,
+            "ties": 0,
+            "verdict": "geçemiyor",
+            "wins": 24
+          },
+          {
+            "ci95": [
+              -0.006,
+              -0.0011
+            ],
+            "diff": -0.0035,
+            "horizon_or_k": "D1",
+            "losses": 37,
+            "metric": "MAE",
+            "model_value": 0.0297,
+            "n": 89,
+            "output": "return",
+            "rule_id": "base_train_mean",
+            "rule_value": 0.0332,
+            "ties": 0,
+            "verdict": "geçiyor",
+            "wins": 52
+          },
+          {
+            "ci95": [
+              -0.1343,
+              -0.0321
+            ],
+            "diff": -0.0839,
+            "horizon_or_k": "D5",
+            "losses": 29,
+            "metric": "MAE",
+            "model_value": 0.222,
+            "n": 87,
+            "output": "return",
+            "rule_id": "base_train_median",
+            "rule_value": 0.3059,
+            "ties": 0,
+            "verdict": "geçiyor",
+            "wins": 58
+          },
+          {
+            "ci95": [
+              -0.0286,
+              0.0115
+            ],
+            "diff": -0.0078,
+            "horizon_or_k": "D1",
+            "losses": 39,
+            "metric": "Brier",
+            "model_value": 0.0943,
+            "n": 80,
+            "output": "p_up",
+            "rule_id": "base_rate",
+            "rule_value": 0.1022,
+            "ties": 0,
+            "verdict": "ayırt edilemiyor",
+            "wins": 41
+          },
+          {
+            "ci95": null,
+            "diff": -0.0001,
+            "horizon_or_k": "D1",
+            "losses": 0,
+            "metric": "accuracy",
+            "model_value": 0.8875,
+            "n": 80,
+            "output": "p_up",
+            "rule_id": "base_always_ceiling",
+            "rule_value": 0.8876,
+            "ties": 80,
+            "verdict": null,
+            "wins": 0
+          }
+        ],
+        "title": "Geçmiş veri testi (retrospektif, tasarıma maruz)"
+      },
+      "card": {
+        "n_variants_same_data": 2,
+        "params_sha256_8": "bf809859",
+        "training_cutoff": "2026-08-19",
+        "training_n": 99
+      },
+      "kind": "linear",
+      "live": {
+        "cells": [
+          {
+            "ci95": [
+              0.001,
+              0.005
+            ],
+            "diff": 0.003,
+            "horizon_or_k": "D1",
+            "losses": 23,
+            "metric": "MAE",
+            "model_value": 0.031,
+            "n": 35,
+            "output": "return",
+            "rule_id": "base_train_median",
+            "rule_value": 0.028,
+            "ties": 0,
+            "verdict": "geçemiyor",
+            "wins": 12
+          },
+          {
+            "ci95": [
+              -0.009,
+              -0.001
+            ],
+            "diff": -0.005,
+            "horizon_or_k": "D1",
+            "losses": 13,
+            "metric": "MAE",
+            "model_value": 0.031,
+            "n": 35,
+            "output": "return",
+            "rule_id": "base_train_mean",
+            "rule_value": 0.036,
+            "ties": 0,
+            "verdict": "geçiyor",
+            "wins": 22
+          },
+          {
+            "ci95": [
+              -0.006,
+              0.004
+            ],
+            "diff": -0.001,
+            "horizon_or_k": "D1",
+            "losses": 17,
+            "metric": "MAE",
+            "model_value": 0.031,
+            "n": 35,
+            "output": "return",
+            "rule_id": "base_zero",
+            "rule_value": 0.032,
+            "ties": 0,
+            "verdict": "ayırt edilemiyor",
+            "wins": 18
+          },
+          {
+            "ci95": null,
+            "diff": 0.0,
+            "horizon_or_k": "D1",
+            "losses": 0,
+            "metric": "accuracy",
+            "model_value": 0.86,
+            "n": 35,
+            "output": "p_up",
+            "rule_id": "base_always_ceiling",
+            "rule_value": 0.86,
+            "ties": 35,
+            "verdict": null,
+            "wins": 0
+          }
+        ],
+        "n_late": 12,
+        "n_live": 23,
+        "n_pending": 0,
+        "n_refused": 0,
+        "n_scored": 35,
+        "n_skipped": 1,
+        "n_target_unavailable": 0,
+        "rows": [
+          {
+            "class": "LATE_RECORD",
+            "d1": "2027-01-02",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0562
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_5feceb66ffc8.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT01"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-02-05",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0549
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.0731,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_6b86b273ff34.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT02"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-03-08",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0563
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_d4735e3a265e.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT03"
+          },
+          {
+            "class": "LATE_RECORD",
+            "d1": "2027-04-11",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0654
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_4e07408562be.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT04"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-05-14",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0531
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": -0.03,
+                "y": 0
+              }
+            },
+            "record_id": "20270101T000000Z_4b227777d4dd.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT05"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-06-17",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0655
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.0731,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_ef2d127de37b.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT06"
+          },
+          {
+            "class": "LATE_RECORD",
+            "d1": "2027-07-20",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0697
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_e7f6c011776e.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT07"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-08-23",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0677
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_7902699be42c.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT08"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-09-26",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0512
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.0731,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_2c624232cdd2.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT09"
+          },
+          {
+            "class": "LATE_RECORD",
+            "d1": "2027-01-03",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0531
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_19581e27de7c.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT10"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-02-06",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0615
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.0731,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_4a44dc153642.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT11"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-03-09",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0541
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_4fc82b26aecb.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT12"
+          },
+          {
+            "class": "LATE_RECORD",
+            "d1": "2027-04-12",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0644
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_6b51d431df5d.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT13"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-05-15",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.052
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": -0.03,
+                "y": 0
+              }
+            },
+            "record_id": "20270101T000000Z_3fdba35f04dc.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT14"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-06-18",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0595
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_8527a891e224.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT15"
+          },
+          {
+            "class": "LATE_RECORD",
+            "d1": "2027-07-21",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0517
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_e629fa6598d7.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT16"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-08-24",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0688
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": -0.03,
+                "y": 0
+              }
+            },
+            "record_id": "20270101T000000Z_b17ef6d19c7a.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT17"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-09-27",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0568
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_4523540f1504.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT18"
+          },
+          {
+            "class": "LATE_RECORD",
+            "d1": "2027-01-04",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0665
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.0731,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_4ec9599fc203.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT19"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-02-07",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0675
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_9400f1b21cb5.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT20"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-03-10",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0658
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": -0.03,
+                "y": 0
+              }
+            },
+            "record_id": "20270101T000000Z_f5ca38f748a1.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT21"
+          },
+          {
+            "class": "LATE_RECORD",
+            "d1": "2027-04-13",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0635
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_6f4b6612125f.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT22"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-05-16",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0691
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.0731,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_785f3ec7eb32.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT23"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-06-19",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0527
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.0731,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_535fa30d7e25.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT24"
+          },
+          {
+            "class": "LATE_RECORD",
+            "d1": "2027-07-22",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0602
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": -0.03,
+                "y": 0
+              }
+            },
+            "record_id": "20270101T000000Z_c2356069e9d1.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT25"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-08-25",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0542
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_b7a56873cd77.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT26"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-09-02",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0533
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_5f9c4ab08cac.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT27"
+          },
+          {
+            "class": "LATE_RECORD",
+            "d1": "2027-01-05",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0542
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_670671cd9740.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT28"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-02-08",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0618
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_59e19706d51d.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT29"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-03-11",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0507
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.0512,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_35135aaa6cc2.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT30"
+          },
+          {
+            "class": "LATE_RECORD",
+            "d1": "2027-04-14",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0618
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_624b60c58c9d.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT31"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-05-17",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0512
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": -0.03,
+                "y": 0
+              }
+            },
+            "record_id": "20270101T000000Z_eb1e33e8a81b.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT32"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-06-20",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0521
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_e29c9c180c62.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT33"
+          },
+          {
+            "class": "LATE_RECORD",
+            "d1": "2027-07-23",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.065
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.0731,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_c6f3ac57944a.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT34"
+          },
+          {
+            "class": "LIVE",
+            "d1": "2027-08-26",
+            "prediction": {
+              "D1": {
+                "p_up": 0.9,
+                "return": 0.0609
+              }
+            },
+            "realized": {
+              "D1": {
+                "return": 0.1,
+                "y": 1
+              }
+            },
+            "record_id": "20270101T000000Z_86e501496586.json",
+            "rules": {
+              "base_always_ceiling": {
+                "D1": {
+                  "return": 0.1
+                }
+              },
+              "base_train_median": {
+                "D1": {
+                  "return": 0.1
+                }
+              }
+            },
+            "status": "OK",
+            "ticker": "SNT35"
+          }
+        ],
+        "self_reported_rows": [],
+        "title": "Canlı sicil (prospektif)"
+      },
+      "model_id": "v1_5_h99",
+      "primary_cell": {
+        "horizon_or_k": "D5",
+        "metric": "MAE",
+        "output": "return",
+        "rule_id": "base_train_median"
+      }
+    }
+  ],
+  "retro_info": [],
+  "schema_version": "borsai.scores/1",
+  "skipped": [
+    {
+      "skip_reason": "NO_RECORD_BEFORE_LISTING",
+      "status": "SKIPPED",
+      "ticker": "SNT99"
+    }
+  ],
+  "synthetic": true,
+  "synthetic_note": "SPEC_APP kabul testleri için kurgusal veri; SNTxx arzları gerçek değildir. Backtest hücreleri docs/MODELS.md'deki v1_5_h99 değerlerinin kopyasıdır."
+}

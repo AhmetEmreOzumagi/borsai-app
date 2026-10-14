@@ -1,0 +1,198 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "TARKM",
+  "company": "Tarkim Bitki Koruma Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "2675408",
+      "source_id": "KAP_1192598_EK1",
+      "source_document": "KAP 1192598 ek 1",
+      "source_published_at": "2023-09-07T15:52:25+03:00",
+      "source_sha256": "a269fed915fd8dd26f3fecabd5b02b53ffd766e6bef5a3b0dd2404db494b862f",
+      "source_path": "registry/oot/source_docs/TARKM/KAP_1192598_ek1.pdf",
+      "quote": "Toplam 2.675.408 5.000.000 %100,0000",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "dağıtım sonuçları tablosunun toplam satırı; talep eden sayısı yazılmıyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "2671321",
+        "domestic_institutional": "27",
+        "foreign_retail": "4060"
+      },
+      "source_id": "KAP_1192598_EK1",
+      "source_document": "KAP 1192598 ek 1",
+      "source_published_at": "2023-09-07T15:52:25+03:00",
+      "source_sha256": "a269fed915fd8dd26f3fecabd5b02b53ffd766e6bef5a3b0dd2404db494b862f",
+      "source_path": "registry/oot/source_docs/TARKM/KAP_1192598_ek1.pdf",
+      "quote": [
+        "- Gerçek Kişi 2.671.321 4.992.451 99,8490",
+        "- Kurumsal 27 35 0,0007",
+        "- Gerçek Kişi 4.060 7.514 0,1503"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "ilk iki satır 'Yurt İçi Yatırımcı', üçüncü satır 'Yurt Dışı Yatırımcı' başlığı altında; yurt dışı kurumsal satırı '-'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "Borsa'da satış; sonuç eki grup tahsisatı ya da grup katı yazmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "Borsa'da satış; grup katı yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "Borsa'da satış; grup katı yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "4992451",
+        "domestic_institutional": "35",
+        "foreign_retail": "7514"
+      },
+      "source_id": "KAP_1192598_EK1",
+      "source_document": "KAP 1192598 ek 1",
+      "source_published_at": "2023-09-07T15:52:25+03:00",
+      "source_sha256": "a269fed915fd8dd26f3fecabd5b02b53ffd766e6bef5a3b0dd2404db494b862f",
+      "source_path": "registry/oot/source_docs/TARKM/KAP_1192598_ek1.pdf",
+      "quote": [
+        "- Gerçek Kişi 2.671.321 4.992.451 99,8490",
+        "- Kurumsal 27 35 0,0007",
+        "- Gerçek Kişi 4.060 7.514 0,1503"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.849",
+      "source_id": "KAP_1192598_EK1",
+      "source_document": "KAP 1192598 ek 1",
+      "source_published_at": "2023-09-07T15:52:25+03:00",
+      "source_sha256": "a269fed915fd8dd26f3fecabd5b02b53ffd766e6bef5a3b0dd2404db494b862f",
+      "source_path": "registry/oot/source_docs/TARKM/KAP_1192598_ek1.pdf",
+      "quote": "- Gerçek Kişi 2.671.321 4.992.451 99,8490",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.0007",
+      "source_id": "KAP_1192598_EK1",
+      "source_document": "KAP 1192598 ek 1",
+      "source_published_at": "2023-09-07T15:52:25+03:00",
+      "source_sha256": "a269fed915fd8dd26f3fecabd5b02b53ffd766e6bef5a3b0dd2404db494b862f",
+      "source_path": "registry/oot/source_docs/TARKM/KAP_1192598_ek1.pdf",
+      "quote": "- Kurumsal 27 35 0,0007",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "sonuç ekinde yurt dışı kurumsal satırı '-' (dağıtım yok)",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç belgesi ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Halk Yatırım Menkul Değerler A.Ş.; Vakıf Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1191088_EK1",
+      "source_document": "KAP 1191088 ek 1",
+      "source_published_at": "2023-09-01T20:43:47+03:00",
+      "source_sha256": "b1f984ef2a0a789a18ea080f49c1f8d4f74122a8eeae6fd1ce34e2176a0b2a69",
+      "source_path": "registry/oot/source_docs/TARKM/KAP_1191088_ek1.pdf",
+      "quote": [
+        "Aracılık Eden Yetkili Kuruluş Sorumlu Olduğu Kısım: Halk Yatırım Menkul Değerler A.S.",
+        "Aracılık Eden Yetkili Kuruluş Sorumlu Olduğu Kısım: Vakıf Yatırım Menkul Değerler A.Ş."
+      ],
+      "note": "TSSD (OCR) iki yetkili kuruluşu sayıyor; konsorsiyum lideri belirtilmiyor. Sonuç bildirimini Halk Yatırım yayımlamış.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1192776",
+      "source_document": "KAP 1192776",
+      "source_published_at": "2023-09-07T18:10:12+03:00",
+      "source_sha256": "d1ffdefb17fe3a41cac747b97ff388cd18a11ba78083e5ffa18d5f675758037e",
+      "source_path": "registry/oot/source_docs/TARKM/KAP_1192776_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_1192776",
+      "source_document": "KAP 1192776",
+      "source_published_at": "2023-09-07T18:10:12+03:00",
+      "source_sha256": "d1ffdefb17fe3a41cac747b97ff388cd18a11ba78083e5ffa18d5f675758037e",
+      "source_path": "registry/oot/source_docs/TARKM/KAP_1192776_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1192776": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1192776",
+      "published_at": "2023-09-07T18:10:12+03:00",
+      "sha256": "d1ffdefb17fe3a41cac747b97ff388cd18a11ba78083e5ffa18d5f675758037e",
+      "path": "registry/oot/source_docs/TARKM/KAP_1192776_bildirim.pdf"
+    },
+    "KAP_1192598_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1192598 ek 1",
+      "published_at": "2023-09-07T15:52:25+03:00",
+      "sha256": "a269fed915fd8dd26f3fecabd5b02b53ffd766e6bef5a3b0dd2404db494b862f",
+      "path": "registry/oot/source_docs/TARKM/KAP_1192598_ek1.pdf"
+    },
+    "KAP_1191088_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1191088 ek 1",
+      "published_at": "2023-09-01T20:43:47+03:00",
+      "sha256": "b1f984ef2a0a789a18ea080f49c1f8d4f74122a8eeae6fd1ce34e2176a0b2a69",
+      "path": "registry/oot/source_docs/TARKM/KAP_1191088_ek1.pdf"
+    }
+  }
+}

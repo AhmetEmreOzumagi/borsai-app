@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>BorsAi — Tahmin sonucu</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Sans+Condensed:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0A0F1A}
+a{color:#5B9BFF}a:hover{color:#A3C6FF}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #5B9BFF;outline-offset:2px}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes growx{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.6s cubic-bezier(.4,0,.2,1) forwards}
+.grow{transform-origin:bottom;animation:grow .9s cubic-bezier(.2,.7,.2,1) both}
+.gsvg{transform-box:fill-box;transform-origin:center;animation:grow .8s cubic-bezier(.2,.7,.2,1) both}
+.growx{transform-origin:left;animation:growx 1.1s cubic-bezier(.2,.7,.2,1) both}
+.fade{animation:fade .7s ease both}
+@media (prefers-reduced-motion: reduce){.draw,.grow,.gsvg,.growx,.fade{animation:none!important;stroke-dashoffset:0!important}}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #0A0F1A; color: #F4F7FC; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 14px; line-height: 1.5; font-variant-numeric: tabular-nums">
+  <header style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 0 24px; min-height: 56px; background: #0D1423; border-bottom: 1px solid #22304A">
+    <a href="Main.dc.html" style="font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #F4F7FC; text-decoration: none">BorsAi</a>
+    <nav aria-label="Bölümler" style="display: flex; flex-wrap: wrap; align-self: stretch; font-size: 14px; font-weight: 500">
+      <a href="Main.dc.html" style="display: flex; align-items: center; padding: 0 12px; min-height: 56px; color: #B7C3D7; text-decoration: none">Monitör</a><a href="Arz.dc.html" style="display: flex; align-items: center; padding: 0 12px; min-height: 56px; color: #B7C3D7; text-decoration: none">Analiz</a><a href="Dogruluk.dc.html" style="display: flex; align-items: center; padding: 0 12px; min-height: 56px; color: #B7C3D7; text-decoration: none">Model performansı</a><a href="Sicil.dc.html" style="display: flex; align-items: center; padding: 0 12px; min-height: 56px; color: #B7C3D7; text-decoration: none">Sicil</a><a href="Kayitlarim.dc.html" style="display: flex; align-items: center; padding: 0 12px; min-height: 56px; color: #B7C3D7; text-decoration: none">Kayıtlarım</a>
+    </nav>
+    <div style="flex: 1 1 140px; display: flex; justify-content: center">
+      <input type="search" aria-label="Kod ara" placeholder="Kod ara" style="width: 100%; max-width: 220px; height: 36px; box-sizing: border-box; padding: 0 12px; background: #0F1829; border: 1px solid #1E3360; border-radius: 6px; color: #F4F7FC; font: inherit; font-size: 13px">
+    </div>
+    <span title="Bu tahmin sicile ve doğruluk hesabına girmez" style="display: inline-flex; align-items: center; gap: 6px; min-height: 26px; padding: 0 10px; border: 1px solid rgba(132,185,255,0.45); border-radius: 13px; font-size: 12px; font-weight: 500; color: #A3C6FF; white-space: nowrap">Senaryo</span>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font-size: 12px; color: #B7C3D7"><span>Veri 30.09.2026</span><span style="color: #F4F7FC; font-weight: 500">02.10.2026 22:19</span></div>
+    <a href="Giris.dc.html" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 14px; border-radius: 6px; background: #2F6FEB; color: #FFFFFF; font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap">Yeni arz gir</a>
+    <a href="Ayarlar.dc.html" aria-label="Ayarlar" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 6px; border: 1px solid #1E3360; color: #B7C3D7"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg></a>
+  </header>
+
+  <main style="padding: 20px 24px 40px; display: flex; flex-direction: column; gap: 20px">
+
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px">
+      <div>
+        <div style="font-size: 13px; color: #8C9AB3"><a href="Giris.dc.html" style="text-decoration: none">Yeni arz girişi</a> / Tahmin sonucu</div>
+        <h1 style="margin: 2px 0 0; font-size: 26px; font-weight: 700; letter-spacing: -0.01em">NETGL için tahmin</h1>
+        <p style="margin: 2px 0 0; color: #B7C3D7; max-width: 80ch">Talep toplama sonrası aşama, sicildeki girdi belgesinden kopyalanan değerlerle. Bu bir senaryodur: sicile ve doğruluk hesabına girmez.</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px">
+        <a href="Giris.dc.html" style="display: inline-flex; align-items: center; min-height: 38px; padding: 0 14px; border: 1px solid #3A4D72; border-radius: 6px; color: #F4F7FC; font-size: 14px; font-weight: 500; text-decoration: none">Girdileri düzenle</a>
+        <a href="Dondur.dc.html" style="display: inline-flex; align-items: center; min-height: 38px; padding: 0 14px; border: 1px solid #3A4D72; border-radius: 6px; color: #F4F7FC; font-size: 14px; font-weight: 500; text-decoration: none">Resmi kayıt için hazırla</a>
+      </div>
+    </div>
+
+    <p style="margin: 0; font-size: 17px; color: #B7C3D7; max-width: 95ch">Model bu arz için ortalama <span style="color: #FFB648; font-weight: 600">3,28 gün</span> tavan bekliyor. En olası yol <span style="color: #F4F7FC; font-weight: 600">3 gün tavan, 4. gün bozulma</span>. 5. gün getirisi tahmini <span style="color: #FFB648; font-weight: 600">+%25,5</span>.</p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+
+      <section aria-labelledby="kac" style="flex: 1 1 420px; min-width: 0; background: #131C2F; border: 1px solid #22304A; border-radius: 10px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04)">
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px 16px; padding: 16px 18px 12px"><div><h2 id="kac" style="margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -0.005em">Kaç gün tavan?</h2><div style="font-size: 13px; color: #8C9AB3">Seri uzunluğunun dağılımı, listeleme öncesi</div></div><div><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #FFB648">ceiling_hazard_v0</span></div></div>
+        <div style="padding: 0 18px 18px; display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; align-items: baseline; gap: 10px"><span style="font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 40px; font-weight: 600; color: #FFB648">{{ el }}</span><span style="color: #B7C3D7">gün bekleniyor, medyan 3</span></div>
+          <div style="display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 4px; align-items: end; height: 120px; border-bottom: 1px solid #2C3C5A"><div class="grow" style="height: 99px; border-radius: 2px 2px 0 0; background: rgba(255,182,72,0.16); box-shadow: inset 0 2px 0 #FFB648; animation-delay: 0.30s"></div><div class="grow" style="height: 61px; border-radius: 2px 2px 0 0; background: rgba(255,182,72,0.16); box-shadow: inset 0 2px 0 #FFB648; animation-delay: 0.35s"></div><div class="grow" style="height: 53px; border-radius: 2px 2px 0 0; background: rgba(255,182,72,0.16); box-shadow: inset 0 2px 0 #FFB648; animation-delay: 0.40s"></div><div class="grow" style="height: 110px; border-radius: 2px 2px 0 0; background: #FFB648; animation-delay: 0.45s"></div><div class="grow" style="height: 73px; border-radius: 2px 2px 0 0; background: rgba(255,182,72,0.16); box-shadow: inset 0 2px 0 #FFB648; animation-delay: 0.50s"></div><div class="grow" style="height: 49px; border-radius: 2px 2px 0 0; background: rgba(255,182,72,0.16); box-shadow: inset 0 2px 0 #FFB648; animation-delay: 0.55s"></div><div class="grow" style="height: 33px; border-radius: 2px 2px 0 0; background: rgba(255,182,72,0.16); box-shadow: inset 0 2px 0 #FFB648; animation-delay: 0.60s"></div><div class="grow" style="height: 22px; border-radius: 2px 2px 0 0; background: rgba(255,182,72,0.16); box-shadow: inset 0 2px 0 #FFB648; animation-delay: 0.65s"></div><div class="grow" style="height: 15px; border-radius: 2px 2px 0 0; background: rgba(255,182,72,0.16); box-shadow: inset 0 2px 0 #FFB648; animation-delay: 0.70s"></div><div class="grow" style="height: 10px; border-radius: 2px 2px 0 0; background: rgba(255,182,72,0.16); box-shadow: inset 0 2px 0 #FFB648; animation-delay: 0.75s"></div><div class="grow" style="height: 20px; border-radius: 2px 2px 0 0; background: rgba(255,182,72,0.16); box-shadow: inset 0 2px 0 #FFB648; animation-delay: 0.80s"></div></div>
+          <div style="display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 4px; text-align: center; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 12px; color: #8C9AB3"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span></div>
+          <div style="font-size: 12px; color: #8C9AB3">Çubuk k: serinin tam k gün sürme olasılığı. 0: ilk gün tavan yok; 10: on gün boyunca tavan.</div>
+          <table style="width: 100%; border-collapse: collapse; font-size: 13px">
+            <thead><tr style="color: #8C9AB3; font-size: 12px; text-align: right"><th scope="col" style="text-align: left; padding: 6px 0; font-weight: 500"></th><th scope="col" style="padding: 6px 4px; font-weight: 500">Beklenen</th><th scope="col" style="padding: 6px 4px; font-weight: 500">Medyan</th><th scope="col" style="padding: 6px 4px; font-weight: 500">3+ gün</th><th scope="col" style="padding: 6px 4px; font-weight: 500">5+ gün</th><th scope="col" style="padding: 6px 0 6px 4px; font-weight: 500">10 gün</th></tr></thead>
+            <tbody style="text-align: right; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif">
+              <tr style="border-top: 1px solid #1A2539; color: #FFB648; font-weight: 600"><td style="text-align: left; padding: 7px 0; font-family: 'IBM Plex Sans', system-ui, sans-serif">Model</td><td style="padding: 7px 4px">3,28</td><td style="padding: 7px 4px">3</td><td style="padding: 7px 4px">0,61</td><td style="padding: 7px 4px">0,27</td><td style="padding: 7px 0 7px 4px">0,04</td></tr>
+              <tr style="border-top: 1px solid #1A2539; color: #B7C3D7"><td style="text-align: left; padding: 7px 0; font-family: 'IBM Plex Sans', system-ui, sans-serif">Basit kural, son 10 arz</td><td style="padding: 7px 4px">2,21</td><td style="padding: 7px 4px">0</td><td style="padding: 7px 4px">0,32</td><td style="padding: 7px 4px">0,20</td><td style="padding: 7px 0 7px 4px">0,06</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size: 12px; color: #8C9AB3">Geçmiş testte model bu kurala göre hatasını yaklaşık %25 azalttı (87 arz).</div>
+        </div>
+      </section>
+
+      <section aria-labelledby="hesap" style="flex: 1.25 1 520px; min-width: 0; background: #131C2F; border: 1px solid #22304A; border-radius: 10px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04); box-shadow: inset 0 2px 0 #FFB648">
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px 16px; padding: 16px 18px 12px"><div><h2 id="hesap" style="margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -0.005em">Seri j gün sürdüyse yarın ne olur?</h2><div style="font-size: 13px; color: #8C9AB3">Gün sayısını seç; yarının tavan ve bozulma olasılığı anında hesaplanır</div></div><div><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #FFB648">ceiling_hazard_v0</span></div></div>
+
+          <div style="padding: 0 18px 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 18px 32px; align-items: start">
+          <div style="display: flex; flex-direction: column; gap: 14px; min-width: 0">
+            <div>
+              <div style="font-size: 13px; color: #B7C3D7; margin-bottom: 8px">Kaç gün üst üste tavan oldu?</div>
+              <div role="group" aria-label="Tavan gün sayısı" style="display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 6px"><button type="button" onClick="{{ s0 }}" aria-pressed="{{ b0pr }}" aria-label="0 gün" style="min-width: 0; height: 36px; padding: 0; border: 1px solid {{ b0bd }}; border-radius: 6px; background: {{ b0bg }}; color: {{ b0fg }}; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">0</button><button type="button" onClick="{{ s1 }}" aria-pressed="{{ b1pr }}" aria-label="1 gün" style="min-width: 0; height: 36px; padding: 0; border: 1px solid {{ b1bd }}; border-radius: 6px; background: {{ b1bg }}; color: {{ b1fg }}; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">1</button><button type="button" onClick="{{ s2 }}" aria-pressed="{{ b2pr }}" aria-label="2 gün" style="min-width: 0; height: 36px; padding: 0; border: 1px solid {{ b2bd }}; border-radius: 6px; background: {{ b2bg }}; color: {{ b2fg }}; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">2</button><button type="button" onClick="{{ s3 }}" aria-pressed="{{ b3pr }}" aria-label="3 gün" style="min-width: 0; height: 36px; padding: 0; border: 1px solid {{ b3bd }}; border-radius: 6px; background: {{ b3bg }}; color: {{ b3fg }}; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">3</button><button type="button" onClick="{{ s4 }}" aria-pressed="{{ b4pr }}" aria-label="4 gün" style="min-width: 0; height: 36px; padding: 0; border: 1px solid {{ b4bd }}; border-radius: 6px; background: {{ b4bg }}; color: {{ b4fg }}; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">4</button><button type="button" onClick="{{ s5 }}" aria-pressed="{{ b5pr }}" aria-label="5 gün" style="min-width: 0; height: 36px; padding: 0; border: 1px solid {{ b5bd }}; border-radius: 6px; background: {{ b5bg }}; color: {{ b5fg }}; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">5</button><button type="button" onClick="{{ s6 }}" aria-pressed="{{ b6pr }}" aria-label="6 gün" style="min-width: 0; height: 36px; padding: 0; border: 1px solid {{ b6bd }}; border-radius: 6px; background: {{ b6bg }}; color: {{ b6fg }}; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">6</button><button type="button" onClick="{{ s7 }}" aria-pressed="{{ b7pr }}" aria-label="7 gün" style="min-width: 0; height: 36px; padding: 0; border: 1px solid {{ b7bd }}; border-radius: 6px; background: {{ b7bg }}; color: {{ b7fg }}; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">7</button><button type="button" onClick="{{ s8 }}" aria-pressed="{{ b8pr }}" aria-label="8 gün" style="min-width: 0; height: 36px; padding: 0; border: 1px solid {{ b8bd }}; border-radius: 6px; background: {{ b8bg }}; color: {{ b8fg }}; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">8</button><button type="button" onClick="{{ s9 }}" aria-pressed="{{ b9pr }}" aria-label="9 gün" style="min-width: 0; height: 36px; padding: 0; border: 1px solid {{ b9bd }}; border-radius: 6px; background: {{ b9bg }}; color: {{ b9fg }}; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">9</button></div>
+              <div style="margin-top: 6px; font-size: 12px; color: #8C9AB3">Arz işlem görmeye başladıktan sonra gün sayısını seç; yarının olasılığı anında güncellenir.</div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 4px"><div style="display: flex; flex-direction: column; align-items: center; gap: 3px"><span style="font-size: 11px; color: #8C9AB3">D1</span><span style="width: 100%; box-sizing: border-box; padding: 5px 0; text-align: center; border-radius: 4px; border: 1px dashed {{ c1bd }}; background: {{ c1bg }}; color: {{ c1fg }}; font-size: 12px; font-weight: 500">{{ c1tx }}</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 3px"><span style="font-size: 11px; color: #8C9AB3">D2</span><span style="width: 100%; box-sizing: border-box; padding: 5px 0; text-align: center; border-radius: 4px; border: 1px dashed {{ c2bd }}; background: {{ c2bg }}; color: {{ c2fg }}; font-size: 12px; font-weight: 500">{{ c2tx }}</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 3px"><span style="font-size: 11px; color: #8C9AB3">D3</span><span style="width: 100%; box-sizing: border-box; padding: 5px 0; text-align: center; border-radius: 4px; border: 1px dashed {{ c3bd }}; background: {{ c3bg }}; color: {{ c3fg }}; font-size: 12px; font-weight: 500">{{ c3tx }}</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 3px"><span style="font-size: 11px; color: #8C9AB3">D4</span><span style="width: 100%; box-sizing: border-box; padding: 5px 0; text-align: center; border-radius: 4px; border: 1px dashed {{ c4bd }}; background: {{ c4bg }}; color: {{ c4fg }}; font-size: 12px; font-weight: 500">{{ c4tx }}</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 3px"><span style="font-size: 11px; color: #8C9AB3">D5</span><span style="width: 100%; box-sizing: border-box; padding: 5px 0; text-align: center; border-radius: 4px; border: 1px dashed {{ c5bd }}; background: {{ c5bg }}; color: {{ c5fg }}; font-size: 12px; font-weight: 500">{{ c5tx }}</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 3px"><span style="font-size: 11px; color: #8C9AB3">D6</span><span style="width: 100%; box-sizing: border-box; padding: 5px 0; text-align: center; border-radius: 4px; border: 1px dashed {{ c6bd }}; background: {{ c6bg }}; color: {{ c6fg }}; font-size: 12px; font-weight: 500">{{ c6tx }}</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 3px"><span style="font-size: 11px; color: #8C9AB3">D7</span><span style="width: 100%; box-sizing: border-box; padding: 5px 0; text-align: center; border-radius: 4px; border: 1px dashed {{ c7bd }}; background: {{ c7bg }}; color: {{ c7fg }}; font-size: 12px; font-weight: 500">{{ c7tx }}</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 3px"><span style="font-size: 11px; color: #8C9AB3">D8</span><span style="width: 100%; box-sizing: border-box; padding: 5px 0; text-align: center; border-radius: 4px; border: 1px dashed {{ c8bd }}; background: {{ c8bg }}; color: {{ c8fg }}; font-size: 12px; font-weight: 500">{{ c8tx }}</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 3px"><span style="font-size: 11px; color: #8C9AB3">D9</span><span style="width: 100%; box-sizing: border-box; padding: 5px 0; text-align: center; border-radius: 4px; border: 1px dashed {{ c9bd }}; background: {{ c9bg }}; color: {{ c9fg }}; font-size: 12px; font-weight: 500">{{ c9tx }}</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 3px"><span style="font-size: 11px; color: #8C9AB3">D10</span><span style="width: 100%; box-sizing: border-box; padding: 5px 0; text-align: center; border-radius: 4px; border: 1px dashed {{ c10bd }}; background: {{ c10bg }}; color: {{ c10fg }}; font-size: 12px; font-weight: 500">{{ c10tx }}</span></div></div>
+            <p style="margin: 0; font-size: 15px; color: #B7C3D7">{{ sentence }}</p>
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #22304A; border: 1px solid #22304A; border-radius: 6px; overflow: hidden">
+              <div style="background: #131C2F; padding: 12px 14px"><div style="font-size: 12px; color: #8C9AB3">Yarın da tavan</div><div style="font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 34px; font-weight: 600; line-height: 1.15; color: #FFB648">{{ pNext }}</div><div style="font-size: 12px; color: #8C9AB3">bozulma <span style="color: #F4F7FC; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif">{{ pBreak }}</span></div></div>
+              <div style="background: #131C2F; padding: 12px 14px"><div style="font-size: 12px; color: #8C9AB3">Beklenen kalan gün</div><div style="font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 34px; font-weight: 600; line-height: 1.15; color: #FFB648">{{ rem }}</div><div style="font-size: 12px; color: #8C9AB3">koşullu medyan seri <span style="color: #F4F7FC; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif">{{ med }} gün</span></div></div>
+              <div style="background: #131C2F; padding: 10px 14px"><div style="font-size: 12px; color: #8C9AB3">En az 5 gün sürme</div><div style="font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 20px; font-weight: 600; color: #FFB648">{{ p5 }}</div></div>
+              <div style="background: #131C2F; padding: 10px 14px"><div style="font-size: 12px; color: #8C9AB3">10 gün boyunca tavan</div><div style="font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; font-size: 20px; font-weight: 600; color: #FFB648">{{ p10 }}</div></div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+            <svg viewBox="0 0 420 170" width="100%" role="img" aria-label="Seride kalma olasılığı, koşulsuz ve seçilen güne koşullu" style="display: block">
+              <g stroke="#1A2539"><line x1="34" y1="20" x2="394" y2="20"></line><line x1="34" y1="80" x2="394" y2="80"></line><line x1="34" y1="140" x2="394" y2="140"></line></g>
+              <g fill="#8C9AB3" font-family="IBM Plex Sans Condensed, IBM Plex Sans, sans-serif" font-size="11" text-anchor="end"><text x="26" y="24">1</text><text x="26" y="84">0,5</text><text x="26" y="144">0</text></g>
+              <g fill="#8C9AB3" font-family="IBM Plex Sans Condensed, IBM Plex Sans, sans-serif" font-size="11" text-anchor="middle"><text x="34" y="160">0</text><text x="70" y="160">1</text><text x="106" y="160">2</text><text x="142" y="160">3</text><text x="178" y="160">4</text><text x="214" y="160">5</text><text x="250" y="160">6</text><text x="286" y="160">7</text><text x="322" y="160">8</text><text x="358" y="160">9</text><text x="394" y="160">10</text></g>
+              <rect x="34" y="20" width="{{ jw }}" height="120" fill="rgba(30,203,138,0.096)"></rect>
+              <polyline points="34,20.0 70,41.9 106,55.4 142,67.0 178,91.3 214,107.5 250,118.3 286,125.5 322,130.3 358,133.5 394,135.7" fill="none" stroke="#50607D" stroke-width="1.6" stroke-dasharray="4 4"></polyline>
+              <polyline points="{{ curve }}" fill="none" stroke="#FFB648" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></polyline>
+              <circle cx="{{ nx }}" cy="{{ ny }}" r="5" fill="#FFB648"></circle>
+            </svg>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12px; color: #B7C3D7"><span style="color: #FFB648">seçilen güne koşullu</span><span>koşulsuz (listeleme öncesi)</span><span style="color: #5FE4B0">yeşil alan: geçmiş günler</span></div>
+            <p style="margin: 0; font-size: 12px; color: #8C9AB3">Hesap modelin listeleme öncesi eğrisinden yapılır: P(L ≥ k | L ≥ j) = S<sub>k</sub> / S<sub>j</sub>. Model yeniden çalıştırılmaz. Senaryoda D1 bülteni yok; D1 sonrası güncelleme yalnız resmi kayıtta çalışır.</p>
+          </div>
+          </div>
+      </section>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+      <section aria-labelledby="getiri" style="flex: 1.25 1 520px; min-width: 0; background: #131C2F; border: 1px solid #22304A; border-radius: 10px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04)">
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px 16px; padding: 16px 18px 12px"><div><h2 id="getiri" style="margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -0.005em">Getiri tahmini</h2><div style="font-size: 13px; color: #8C9AB3">Arz fiyatına göre; fiyat arz × (1 + getiri)</div></div><div><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #FFB648">v1_5_h99</span></div></div>
+        <div style="padding: 0 18px 16px">
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px">
+            <thead><tr style="color: #8C9AB3; font-size: 12px; text-align: right"><th scope="col" style="text-align: left; padding: 6px 0 6px 8px; font-weight: 500">Gün</th><th scope="col" style="text-align: left; padding: 6px 8px; font-weight: 500">Tahmin</th><th scope="col" style="padding: 6px 8px; font-weight: 500">Fiyat</th><th scope="col" style="padding: 6px 8px; font-weight: 500">Arz üstü olasılığı</th><th scope="col" style="text-align: left; padding: 6px 0 6px 12px; font-weight: 500">Geçmiş test</th></tr></thead>
+            <tbody>
+<tr style="border-top: 1px solid #1A2539;"><td style="padding: 9px 0 9px 8px; font-weight: 600">D1</td><td style="padding: 9px 8px; width: 40%"><div style="display: flex; align-items: center; gap: 10px"><div style="flex: 1; height: 6px; border-radius: 1px; background: #1A2539"><div class="growx" style="width: 25.7%; height: 6px; border-radius: 1px; background: #FFB648; animation-delay: 0.40s"></div></div><span style="font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; color: #FFB648; font-weight: 600; min-width: 62px; text-align: right">+%7,70</span></div></td><td style="padding: 9px 8px; text-align: right; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif">27,48</td><td style="padding: 9px 8px; text-align: right; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; color: #F4F7FC">0,91</td><td style="padding: 9px 0 9px 12px"><span style="color: #8C9AB3">bilgi</span></td></tr>
+<tr style="border-top: 1px solid #1A2539;"><td style="padding: 9px 0 9px 8px; font-weight: 600">D3</td><td style="padding: 9px 8px; width: 40%"><div style="display: flex; align-items: center; gap: 10px"><div style="flex: 1; height: 6px; border-radius: 1px; background: #1A2539"><div class="growx" style="width: 61.6%; height: 6px; border-radius: 1px; background: #FFB648; animation-delay: 0.48s"></div></div><span style="font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; color: #FFB648; font-weight: 600; min-width: 62px; text-align: right">+%18,47</span></div></td><td style="padding: 9px 8px; text-align: right; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif">30,23</td><td style="padding: 9px 8px; text-align: right; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; color: #F4F7FC">0,86</td><td style="padding: 9px 0 9px 12px"><span style="color: #8C9AB3">bilgi</span></td></tr>
+<tr style="border-top: 1px solid #1A2539; background: #16284A;"><td style="padding: 9px 0 9px 8px; font-weight: 600">D5</td><td style="padding: 9px 8px; width: 40%"><div style="display: flex; align-items: center; gap: 10px"><div style="flex: 1; height: 6px; border-radius: 1px; background: #1A2539"><div class="growx" style="width: 85.0%; height: 6px; border-radius: 1px; background: #FFB648; animation-delay: 0.56s"></div></div><span style="font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; color: #FFB648; font-weight: 600; min-width: 62px; text-align: right">+%25,52</span></div></td><td style="padding: 9px 8px; text-align: right; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif">32,03</td><td style="padding: 9px 8px; text-align: right; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; color: #F4F7FC">0,80</td><td style="padding: 9px 0 9px 12px"><span style="display: inline-flex; align-items: center; gap: 6px; color: #5FE4B0; font-weight: 500"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5l2.6 2.5L10 3.5" fill="none" stroke="#1ECB8A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>birincil, geçti</span></td></tr>
+<tr style="border-top: 1px solid #1A2539;"><td style="padding: 9px 0 9px 8px; font-weight: 600">D10</td><td style="padding: 9px 8px; width: 40%"><div style="display: flex; align-items: center; gap: 10px"><div style="flex: 1; height: 6px; border-radius: 1px; background: #1A2539"><div class="growx" style="width: 86.1%; height: 6px; border-radius: 1px; background: #FFB648; animation-delay: 0.64s"></div></div><span style="font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; color: #FFB648; font-weight: 600; min-width: 62px; text-align: right">+%25,83</span></div></td><td style="padding: 9px 8px; text-align: right; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif">32,11</td><td style="padding: 9px 8px; text-align: right; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; color: #8C9AB3">0,60</td><td style="padding: 9px 0 9px 12px"><span style="display: inline-flex; align-items: center; gap: 6px; color: #B7C3D7; font-weight: 500"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5c1.5-1 2.5-1 4 0s2.5 1 4 0M2 8c1.5-1 2.5-1 4 0s2.5 1 4 0" fill="none" stroke="#8C9BB6" stroke-width="1.4" stroke-linecap="round"></path></svg>olasılık taban oranından farksız</span></td></tr>
+            </tbody>
+          </table>
+          <p style="margin: 10px 0 0; font-size: 12px; color: #8C9AB3">Geçmiş testte 5. gün tahmininin tipik hatası 0,22 (ortalama mutlak, 87 arz). 10. gün arz üstü olasılığı taban oranından ayırt edilemediği için ana ekranlarda gösterilmez.</p>
+        </div>
+      </section>
+
+      <aside aria-label="Uyarılar ve kaynaklar" style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+        <section aria-labelledby="rejim" style="padding: 14px 16px; background: #1D140E; border: 1px solid #47301C; border-radius: 8px">
+          <h2 id="rejim" style="margin: 0; font-size: 15px; font-weight: 600; color: #FFC38F">Rejim uyarısı</h2>
+          <p style="margin: 4px 0 0; font-size: 13px; color: #FFC38F">Modeller 22.09.2023 ile 06.08.2026 arasında listelenen 99 arzla eğitildi. İlk gün tavan oranı yıllara göre %67 ile %95 arasında değişti. Bugünkü fon krizi rejimi eğitim dönemine benzemeyebilir.</p>
+        </section>
+        <section aria-labelledby="kaynak">
+          <h2 id="kaynak" style="margin: 0; padding-bottom: 8px; border-bottom: 1px solid #22304A; font-size: 16px; font-weight: 600">Bu tahminin dayanakları</h2>
+          <dl style="margin: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto; font-size: 13px">
+            <dt style="padding: 8px 0; border-bottom: 1px solid #1A2539; color: #B7C3D7">Uyarı</dt><dd style="margin: 0; padding: 8px 0; border-bottom: 1px solid #1A2539; text-align: right">uyarı yok</dd>
+            <dt style="padding: 8px 0; border-bottom: 1px solid #1A2539; color: #B7C3D7">TÜFE (reel büyüklük için)</dt><dd style="margin: 0; padding: 8px 0; border-bottom: 1px solid #1A2539; text-align: right; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif">Temmuz 2026 = 132,31</dd>
+            <dt style="padding: 8px 0; border-bottom: 1px solid #1A2539; color: #B7C3D7">XU100 20 seans</dt><dd style="margin: 0; padding: 8px 0; border-bottom: 1px solid #1A2539; text-align: right; font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif; color: #FF5D6E">−%9,24</dd>
+            <dt style="padding: 8px 0; border-bottom: 1px solid #1A2539; color: #B7C3D7">Girdi kaynağı</dt><dd style="margin: 0; padding: 8px 0; border-bottom: 1px solid #1A2539; text-align: right">sicil belgesi, NETGL</dd>
+          </dl>
+          <a href="#" style="display: inline-block; margin-top: 10px; font-size: 13px; text-decoration: none">Ayrıntılı görünüm: bütün modeller ve basit kurallar</a>
+        </section>
+        <section aria-labelledby="sakla" style="background: #131C2F; border: 1px solid #22304A; border-radius: 10px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04); padding: 14px 16px">
+          <h2 id="sakla" style="margin: 0; font-size: 15px; font-weight: 600">Kişisel kayıt olarak sakla</h2>
+          <label for="f-baslik" style="display: block; margin-top: 8px; font-size: 12px; color: #8C9AB3">Başlık</label>
+          <div style="display: flex; gap: 8px; margin-top: 4px"><input id="f-baslik" type="text" value="NETGL, talep sonrası" style="flex: 1; min-width: 0; height: 38px; box-sizing: border-box; padding: 0 10px; background: #0A0F1A; border: 1px solid #2E3F61; border-radius: 6px; color: #F4F7FC; font: inherit; font-size: 14px"><button type="button" style="height: 38px; padding: 0 14px; border: 0; border-radius: 6px; background: #2F6FEB; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Sakla</button></div>
+          <p style="margin: 6px 0 0; font-size: 12px; color: #8C9AB3">Yalnız bu bilgisayarda, uygulama verisine yazılır. <a href="Kayitlarim.dc.html" style="text-decoration: none">Kayıtlarım</a></p>
+        </section>
+      </aside>
+    </div>
+  </main>
+  <footer style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 14px 24px 22px; border-top: 1px solid #22304A; font-size: 12px; color: #8C9AB3"><span>Bu uygulama yatırım tavsiyesi değildir; çıktılar istatistiksel tahmin ve olasılıklardır.</span><span style="display: inline-flex; gap: 14px"><span>BorsAi 0.1.0</span><a href="Ayarlar.dc.html#hakkinda" style="text-decoration: none">Hakkında</a></span></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1380}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+    const start = performance.now();
+    const tick = (now) => {
+      const t = Math.min(1, (now - start) / 1200);
+      this.setState({ t: t });
+      if (t < 1) this._raf = requestAnimationFrame(tick);
+    };
+    this.setState({ t: 0 });
+    this._raf = requestAnimationFrame(tick);
+  }
+  componentWillUnmount() {
+    if (this._raf) cancelAnimationFrame(this._raf);
+  }
+  calc(j) {
+    const S = [1.0, 0.8176, 0.7053, 0.6084, 0.4062, 0.2712, 0.1811, 0.1209, 0.0807, 0.0539, 0.036];
+    const f = (x, d) => x.toFixed(d).replace('.', ',');
+    const loc = { 1: "'de", 2: "'de", 3: "'te", 4: "'te", 5: "'te", 6: "'da", 7: "'de", 8: "'de", 9: "'da", 10: "'da" };
+    const Sj = S[j];
+    const next = S[j + 1] / Sj;
+    let rem = 0;
+    for (let k = j + 1; k <= 10; k++) rem += S[k] / Sj;
+    let med = 10;
+    for (let l = j; l <= 10; l++) { const nxt = l + 1 <= 10 ? S[l + 1] / Sj : 0; if (nxt <= 0.5) { med = l; break; } }
+    const v = {};
+    v.pNext = f(next, 3); v.pBreak = f(1 - next, 3); v.rem = f(rem, 2); v.med = String(med);
+    v.p5 = j >= 5 ? '1' : f(S[5] / Sj, 3); v.p10 = f(S[10] / Sj, 3);
+    v.sentence = j === 0 ? 'Listeleme günü: D1' + loc[1] + ' tavan olasılığı ' + f(next, 3) + '.' :
+      'Seri ' + j + ' gün sürdüyse D' + (j + 1) + loc[j + 1] + ' de tavan olasılığı ' + f(next, 3) + '; bozulursa seri ' + j + ' günde kalır.';
+    const X = (k) => 34 + k * 36, Y = (p) => (140 - p * 120).toFixed(1);
+    const pts = [];
+    for (let k = j; k <= 10; k++) pts.push(X(k) + ',' + Y(S[k] / Sj));
+    v.curve = pts.join(' '); v.jw = X(j) - 34; v.nx = X(j + 1); v.ny = Y(next);
+    for (let k = 0; k <= 9; k++) {
+      const on = k === j;
+      v['b' + k + 'pr'] = on; v['b' + k + 'bg'] = on ? '#1E3360' : 'transparent';
+      v['b' + k + 'bd'] = on ? '#5B9BFF' : '#2E3F61'; v['b' + k + 'fg'] = on ? '#F4F7FC' : '#B7C3D7';
+      v['s' + k] = () => this.setState({ j: k });
+    }
+    for (let k = 1; k <= 10; k++) {
+      const past = k <= j, tom = k === j + 1;
+      v['c' + k + 'bg'] = past ? 'rgba(30,203,138,0.168)' : tom ? 'rgba(255,182,72,0.1)' : '#0D1423';
+      v['c' + k + 'bd'] = past ? 'transparent' : tom ? '#FFB648' : '#1A2539';
+      v['c' + k + 'fg'] = past ? '#5FE4B0' : tom ? '#FFB648' : '#8C9AB3';
+      v['c' + k + 'tx'] = past ? 'tavan' : tom ? 'yarın?' : '—';
+    }
+    return v;
+  }
+  renderVals() {
+    const st = this.state || {};
+    const t = st.t != null ? st.t : 1;
+    const e = 1 - Math.pow(1 - t, 3);
+    const j = st.j != null ? st.j : 0;
+    return Object.assign({ el: (3.28 * e).toFixed(2).replace('.', ',') }, this.calc(j));
+  }
+}
+</script>
+</body>
+</html>

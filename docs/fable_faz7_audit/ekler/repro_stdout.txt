@@ -1,0 +1,103 @@
+=== 1a. TÜFE (SPEC_HAZARD_V1 §3.2; KARARLAR K3) ===
+[1a] indirilen tablo sha256 6f7ee8e4ce7e8a7a… == PROVENANCE pini 6f7ee8e4ce7e8a7a…: True; repodaki xls aynı: True
+[1a] başlık: 'Tüketici fiyat endeksi (TÜFE) ve değişim oranları'; temel: '[2025=100]'; blok sayısı 5; düzey bloğu 2005-01…2026-08 (260 ay)
+[1a] CSV endeks == xls düzeyi (binary64 eşitliği): 82/82; eşit olmayan: []
+[1a] 2025 ortalaması: CSV 100.000000, xls 100.000000; |−100| ≤ 0.05: True
+[1a] release_date izleyen ayın ≥ 3'ü: True; CSV release_date == bülten listesi: True; aylar 2019-11…2026-08 (82)
+[1a] 10 örnek ay (random.Random(20260926).sample): bülten sayfası (API) yayım tarihi == dosya: 10/10 → 2020-08:2020-09-03, 2020-04:2020-05-04, 2020-01:2020-02-03, 2026-02:2026-03-03, 2022-04:2022-05-05, 2025-03:2025-04-03, 2021-10:2021-11-03, 2020-03:2020-04-03, 2021-01:2021-02-03, 2023-10:2023-11-03
+[veri] eski kohort kayıtları: kasa 64, açık 71 (kasa kodları belleğe alındı, basılmaz)
+
+=== 1b. Eğitim tablosu v2 (§3.4, §11-1, §11-3) ===
+[1b] H99 99 satırı: 31 paylaşılan sütunda hücre-eşit 99/99; satır öneki bayt-eşit 99/99; v2 sıra (ftd, ticker): True
+[1b] açık 71 satır, kayıt (S2 model_inputs) + sonuç dosyası + kendi f1/f2/f3/L hesabım ile uyuşmazlık sayıları: ipo_price_tl: 0, shares_offered: 0, post_ipo_share_capital: 0, capital_increase_shares: 0, first_trading_date: 0, total_demand_multiple: 0, total_demand_filter_status: 0, ipo_size_tl: 0, ceiling_streak_L: 0, ceiling_close_D1..10: 0, closes_file_vs_recomputed: 0, alloc_regime(v2): 0, alloc_regime==kohort etiketi: 0, alloc_regime_date: 0, tufe_month: 0, tufe_index: 0, cohort: 0, ipo_price==sonuç dosyası: 0, f1(v2): 0, f2(v2): 0, H99 alloc_regime: 0, H99 tufe: 0, H99 ipo_size_tl: 0
+[1b] rejim okuması (J2): talep toplama başlangıcı vs ilk işlem günü — etiket farkı 1/71 açık, r farkı 0/71; açık r=1: 56/71 (f3'lü 53/68)
+[1b] 135 üyede (kohort dosyası, kasa dahil, yalnız sayı): etiket ≠ alloc_regime(ilk işlem günü): 4; r farkı: 0
+[1b] açık 71 L dağılımı: {0: 9, 1: 11, 2: 5, 3: 4, 4: 3, 5: 8, 6: 5, 7: 6, 8: 5, 9: 6, 10: 9} == beklenen {0:9,1:11,2:5,3:4,4:3,5:8,6:5,7:6,8:5,9:6,10:9}: True
+[1b] PP: H99 f3'lü 506/83 (beklenen 506/83); açık f3'lü 374/59 (374/59); havuz 880/142 (880/142); grup olay/risk [(25, 165), (31, 258), (86, 457)] (beklenen [(25,165),(31,258),(86,457)])
+[1b] açık üyelerin son seansı: 2023-10-04; ilk H99 ilk işlem: 2023-09-22
+
+=== 1c. Fold planları ve altı ledger (§5.1, §11-7; J10) ===
+[plan] PLAN_CEILING: 97 fold, skorlanabilir 87 (v0 ile aynı ticker ve sıra: True); ilk fold EKOS 2023-11-21 (eğitim 10 arz, 6 olay, 64 sağ kalım)
+[plan] PLAN_POOLED: 97 fold, skorlanabilir 97; v0'ın 87'si dahil: True; dışlamalı fold 44 (dışlanan birim sayıları [3]); mod dağılımı {'UNFILTERED': 44, 'NOT_SPECIFIED': 53}; eğitimdeki açık arz [65, 68]; açık üyesi sansürlenen fold 2
+[plan] yakın dönem: ceiling 78 fold (22 ay), pooled 78; aynı küme: True
+[sızıntı] (ii) eğitim max seans < T: ceiling 87/87, pooled 97/97; (iii) açık küme PP satırı seans < T: 35686/35686; J10 dışlananlar yalnız moda zıt: True; TÜFE yayımı < T: eğitim 11118/11118, test 97/97, 170 satır 170/170
+[önbellek] ledger koşuları önbellekten (REPRO_CACHE=1; yalnız hata ayıklama yinelemesi)
+[altın] ledger sha256 == MANIFEST == SHA256SUMS: {'ceiling_hazard_v1_clip': True, 'ceiling_hazard_v1_real': True, 'ceiling_hazard_v1_pooled': True, 'ceiling_hazard_v1_pooled@INF': True, 'base_km_expanding__pooled': True, 'base_km_last10__pooled': True}
+[1c] ceiling_hazard_v1_clip: 87 fold, sıra aynı True; kimlik/metin sütunları birebir 87/87; λ birebir 87/87; λ skor tablosu maks|Δ| 3.54e-13; sayısal maks|Δ| = 4.32e-11 (en kötü gamma_g1); |Δ| > 1e-9: 0
+      test_clipped (altın) == benim f3-kırpma 87/87, == herhangi-sütun kırpma 72/87; herhangi-sütun kırpılan fold (benim) 35, f3 kırpılan 20
+[1c] ceiling_hazard_v1_real: 87 fold, sıra aynı True; kimlik/metin sütunları birebir 87/87; λ birebir 87/87; λ skor tablosu maks|Δ| 4.91e-13; sayısal maks|Δ| = 3.62e-11 (en kötü gamma_g1); |Δ| > 1e-9: 0
+      test_clipped (altın) == benim f3-kırpma 87/87, == herhangi-sütun kırpma 71/87; herhangi-sütun kırpılan fold (benim) 36, f3 kırpılan 20
+[1c] ceiling_hazard_v1_pooled: 97 fold, sıra aynı True; kimlik/metin sütunları birebir 97/97; λ birebir 97/97; λ skor tablosu maks|Δ| 2.15e-13; sayısal maks|Δ| = 3.11e-15 (en kötü gamma_g1); |Δ| > 1e-9: 0
+      test_clipped (altın) == benim f3-kırpma 97/97, == herhangi-sütun kırpma 81/97; herhangi-sütun kırpılan fold (benim) 23, f3 kırpılan 7
+[1c] ceiling_hazard_v1_pooled@INF: 97 fold, sıra aynı True; kimlik/metin sütunları birebir 97/97; λ birebir 97/97; λ skor tablosu maks|Δ| 0.00e+00; sayısal maks|Δ| = 1.10e-11 (en kötü gamma_g1); |Δ| > 1e-9: 0
+      test_clipped (altın) == benim f3-kırpma 97/97, == herhangi-sütun kırpma 97/97; herhangi-sütun kırpılan fold (benim) 0, f3 kırpılan 0
+[1c] base_km_expanding__pooled: 97 fold, sıra aynı True; kimlik/metin sütunları birebir 97/97; sayısal maks|Δ| = 0.00e+00 (en kötü hazard_1); |Δ| > 1e-9: 0
+[1c] base_km_last10__pooled: 97 fold, sıra aynı True; kimlik/metin sütunları birebir 97/97; sayısal maks|Δ| = 0.00e+00 (en kötü hazard_1); |Δ| > 1e-9: 0
+
+=== 2(i). Test arzı sızıntı sınaması (perturbasyon) ===
+[2i] ceiling_hazard_v1_clip fold BORSK (2024-02-15): test arzının f1/f1r/f2/f3/L/kapanışları değiştirildi → λ, γ, β, kırpma sınırları, μ/σ, reclose, CV skorları bit-eşit: True
+[2i] ceiling_hazard_v1_clip fold CGCAM (2024-12-17): test arzının f1/f1r/f2/f3/L/kapanışları değiştirildi → λ, γ, β, kırpma sınırları, μ/σ, reclose, CV skorları bit-eşit: True
+[2i] ceiling_hazard_v1_pooled fold VSNMD (2025-02-11): test arzının f1/f1r/f2/f3/L/kapanışları değiştirildi → λ, γ, β, kırpma sınırları, μ/σ, reclose, CV skorları bit-eşit: True
+
+=== 1d. Nihai fit önizlemeleri (§11-11; models/'e yazılmadı) ===
+[1d] ceiling_hazard_v1_clip: λ 10.0 (birebir True); arz/satır/olay 97/506/83 (birebir True); γ [-1.8191, -2.1417, -0.9953]; β [0.4634, -0.1795, -0.5611]; δ —; maks|Δ| 3.55e-15; sütunlar/kohort/reclose/dışlama birebir True/True/True/True
+[1d] ceiling_hazard_v1_real: λ 10.0 (birebir True); arz/satır/olay 97/506/83 (birebir True); γ [-1.7659, -2.1292, -1.0813]; β [0.2645, -0.253, -0.5267]; δ —; maks|Δ| 3.55e-15; sütunlar/kohort/reclose/dışlama birebir True/True/True/True
+[1d] ceiling_hazard_v1_pooled: λ 10.0 (birebir True); arz/satır/olay 165/880/142 (birebir True); γ [-2.1155, -2.2445, -1.5441]; β [0.2265, -0.1727, -0.4959]; δ 0.9111; maks|Δ| 1.11e-15; sütunlar/kohort/reclose/dışlama birebir True/True/True/True
+[1d] ceiling_hazard_v1_pooled@INF: λ INF (birebir True); arz/satır/olay 165/880/142 (birebir True); γ [-1.7832, -2.0499, -1.5279]; β []; δ 0.2277; maks|Δ| 4.44e-16; sütunlar/kohort/reclose/dışlama birebir True/True/True/True
+
+=== 1e. Hücreler (§5.1 birincil, ikinciller, merdiven, keşif; C7 aralık) ===
+[1e] v0 karşılaştırıcı ledger sha 976b4dcea981… pinli; 87-fold ortalama RPS 0.1503154629 (MODELS.md 0.1503)
+[1e] Birincil hücreler (aday − v0, RPS, ilk işlem ≥ 2024-01-01), benim ledger'larımdan:
+      ceiling_hazard_v1_clip: -0.0011 [-0.0066, +0.0049] n=78 (22 ay) 46/32/0 → tolerans içinde; §6.2 konumu: aralık içinde
+      ceiling_hazard_v1_real: +0.0104 [+0.0028, +0.0183] n=78 (22 ay) 24/54/0 → bozuyor; §6.2 konumu: üstünde
+      ceiling_hazard_v1_pooled: +0.0289 [+0.0089, +0.0518] n=78 (22 ay) 25/53/0 → bozuyor; §6.2 konumu: üstünde
+      ceiling_hazard_v1_pooled@INF: +0.0547 [+0.0287, +0.0806] n=78 (22 ay) 26/52/0 → bozuyor; §6.2 konumu: —
+[1e] Merdiven: clip: -0.0011 [-0.0066, +0.0049] n=78 (22 ay) 46/32/0; real: +0.0115 [+0.0045, +0.0190] n=78 (22 ay) 23/55/0; pooled: +0.0185 [+0.0005, +0.0389] n=78 (22 ay) 27/51/0
+[1e] pooled − base_km_expanding (§6.2 ikincil): -0.0253 [-0.0386, -0.0099] n=78 (22 ay) 45/33/0 → konum aralık içinde
+[1e] hücreler: benim ledger'ım vs Opus ledger'ından aynı hesap — 51 hücrede maks|Δ| 3.24e-13; sayımlar aynı: 51/51; günlükteki near_era ile: clip 3.1e-14/True, real 8.6e-14/True, pooled 8.7e-18/True, pooled@INF 1.4e-17/True
+[1e] MODELS.md Faz 7 hücreleri (basılı 4 hane, aynı yuvarlama): 52/52 tuttu; tutmayan: []
+[1e] fold özeti: clip: λ aynı True | MODELS.md 'kırpılan' 20 = benim f3-kırpma 20, herhangi-sütun 35; real: λ aynı True | MODELS.md 'kırpılan' 20 = benim f3-kırpma 20, herhangi-sütun 36; pooled: λ aynı True | MODELS.md 'kırpılan' 7 = benim f3-kırpma 7, herhangi-sütun 23; pooled@INF: λ aynı True | MODELS.md 'kırpılan' 0 = benim f3-kırpma 0, herhangi-sütun 0
+
+=== D1/D2 iç tutarlılık (bağımsız) ===
+[koşu] D1_real_with_f1: 87 fold FIT_OK, 34 s; λ dağılımı {0.1: 18, 1.0: 12, 3.0: 21, 10.0: 36}
+[koşu] D2_pooled_plan_h99_only: 87 fold FIT_OK, 26 s; λ dağılımı {0.1: 20, 1.0: 10, 3.0: 21, 10.0: 36}
+[D1] real (f1r := f1) ≡ clip: λ ve S bit-eşit True (maks|ΔS| 0.0e+00); [D2] havuz planı yalnız H99 satırları + rejimsiz ≡ real: plan True, λ ve S bit-eşit True (maks|ΔS| 0.0e+00)
+
+=== 4. Tanı (bilgi; şartname değişmez) ===
+[tanı] yakın dönem (78) ort. S_k / gözlenen ve düzey payı (RPS − düzey çıkarılmış RPS):
+      v0: S_1 0.856/0.808 S_3 0.685/0.641 S_5 0.420/0.385 S_10 0.184/0.115 | RPS 0.1438, düzey çıkarılınca 0.1404, düzey payı +0.0035
+      km: S_1 0.879/0.808 S_3 0.748/0.641 S_5 0.512/0.385 S_10 0.198/0.115 | RPS 0.1981, düzey çıkarılınca 0.1857, düzey payı +0.0124
+      ceiling_hazard_v1_clip: S_1 0.853/0.808 S_3 0.675/0.641 S_5 0.408/0.385 S_10 0.185/0.115 | RPS 0.1427, düzey çıkarılınca 0.1395, düzey payı +0.0032
+      ceiling_hazard_v1_real: S_1 0.875/0.808 S_3 0.719/0.641 S_5 0.467/0.385 S_10 0.229/0.115 | RPS 0.1542, düzey çıkarılınca 0.1434, düzey payı +0.0108
+      ceiling_hazard_v1_pooled: S_1 0.905/0.808 S_3 0.743/0.641 S_5 0.530/0.385 S_10 0.243/0.115 | RPS 0.1728, düzey çıkarılınca 0.1547, düzey payı +0.0180
+      ceiling_hazard_v1_pooled@INF: S_1 0.888/0.808 S_3 0.717/0.641 S_5 0.518/0.385 S_10 0.232/0.115 | RPS 0.1985, düzey çıkarılınca 0.1841, düzey payı +0.0145
+      ceiling_hazard_v1_clip − v0: toplam -0.0011 = düzey -0.0003 + ayırma/şekil -0.0008
+      ceiling_hazard_v1_real − v0: toplam +0.0104 = düzey +0.0074 + ayırma/şekil +0.0031
+      ceiling_hazard_v1_pooled − v0: toplam +0.0289 = düzey +0.0145 + ayırma/şekil +0.0144
+[tanı] Brier k=3 (10 kutu) güvenilirlik/çözünürlük/belirsizlik: v0 0.1538 = 0.0453 − 0.1205 + 0.2301; clip 0.1500 = 0.0359 − 0.1152 + 0.2301; real 0.1609 = 0.0497 − 0.1169 + 0.2301; pooled 0.1998 = 0.0477 − 0.0716 + 0.2301
+[tanı] Brier k=5 (10 kutu) güvenilirlik/çözünürlük/belirsizlik: v0 0.1780 = 0.0209 − 0.0847 + 0.2367; clip 0.1804 = 0.0223 − 0.0765 + 0.2367; real 0.1907 = 0.0380 − 0.0865 + 0.2367; pooled 0.2180 = 0.0429 − 0.0592 + 0.2367
+[tanı] Brier k=10 (10 kutu) güvenilirlik/çözünürlük/belirsizlik: v0 0.0992 = 0.0208 − 0.0229 + 0.1021; clip 0.0932 = 0.0288 − 0.0363 + 0.1021; real 0.1069 = 0.0424 − 0.0423 + 0.1021; pooled 0.1047 = 0.0270 − 0.0230 + 0.1021
+[tanı] ceiling_hazard_v1_clip − v0 yıl kırılımı: 2024: n=33 ort -0.0002 (aday iyi 18); 2025: n=17 ort -0.0011 (aday iyi 13); 2026: n=28 ort -0.0022 (aday iyi 15)
+[tanı] ceiling_hazard_v1_real − v0 yıl kırılımı: 2024: n=33 ort +0.0140 (aday iyi 12); 2025: n=17 ort +0.0012 (aday iyi 4); 2026: n=28 ort +0.0118 (aday iyi 8)
+[tanı] ceiling_hazard_v1_pooled − v0 yıl kırılımı: 2024: n=33 ort +0.0429 (aday iyi 9); 2025: n=17 ort +0.0457 (aday iyi 4); 2026: n=28 ort +0.0023 (aday iyi 12)
+[tanı] ceiling_hazard_v1_pooled@INF − v0 yıl kırılımı: 2024: n=33 ort +0.0561 (aday iyi 11); 2025: n=17 ort +0.0863 (aday iyi 4); 2026: n=28 ort +0.0339 (aday iyi 11)
+[tanı] ceiling_hazard_v1_real en çok katkı veren 10 fold (fark, L): LMKDC 2024-02 L=9 +0.112, DOFRB 2025-09 L=10 -0.096, SEGMN 2024-07 L=0 +0.094, SARAE 2026-07 L=6 -0.089, RGYAS 2024-04 L=1 -0.087, HRKET 2024-05 L=4 +0.087, ODINE 2024-03 L=10 -0.077, MOGAN 2024-03 L=7 -0.071, PATEK 2024-02 L=10 -0.070, VAKFA 2025-11 L=3 +0.060; 10'unun toplam farktaki payı -17%
+[tanı] ceiling_hazard_v1_pooled en çok katkı veren 10 fold (fark, L): DSTKF 2025-02 L=5 -0.228, ARMGD 2025-01 L=0 +0.170, EFORC 2024-07 L=0 +0.162, BESTE 2026-02 L=10 -0.159, DOFRB 2025-09 L=10 -0.153, AKFIS 2025-01 L=0 +0.145, AHSGY 2024-08 L=0 +0.144, LMKDC 2024-02 L=9 -0.143, EGEGY 2025-01 L=1 +0.141, BETAE 2026-07 L=10 -0.134; 10'unun toplam farktaki payı -2%
+[tanı] havuz: açık f3'lü 68 = r=1 53 + r=0 (2023-03-30 sonrası) 15; ham P(L≥k) k=1,3,5,10: r=1 [0.83, 0.57, 0.45, 0.08], r=0 açık [1.0, 0.87, 0.8, 0.33], H99 97 [0.84, 0.68, 0.42, 0.14], yakın dönem 78 [0.81, 0.64, 0.38, 0.12]
+[tanı] pooled nihai fit: γ [-2.116, -2.244, -1.544], δ +0.911 → r=0 (canlı) gün-grubu hazard'ları [0.108, 0.096, 0.176]; v1_real nihai γ [-1.766, -2.129, -1.081] → [0.146, 0.106, 0.253]; pooled λ skorları (3/10/30): 0.42352/0.42337/0.42384
+[tanı] pooled fold'larında λ = 10 ızgarada: {'iç nokta': 97} (ızgara 0.1…1000, INF; 10 üst uç DEĞİL, iç nokta)
+[tanı] real: H99 97'de ln f1 ↔ ln f1r Spearman 0.889; ln f1 ↔ zaman sırası Pearson +0.311, ln f1r ↔ zaman -0.134; sd ln f1 0.709, sd ln f1r 0.683; nihai β_f1 (clip) +0.4634, β_f1r (real) +0.2645; fold ortalaması β: clip +0.691, real +0.613
+[tanı] clip − v0 (78): test kırpılmayan: n=45 ort +0.0023; test kırpılan: n=33 ort -0.0057; 87 fold'da test arzı herhangi-sütun kırpılan 35, yalnız f3 20
+
+=== 4. Duyarlılıklar (pooled; model değil, dondurulmaz) ===
+[koşu] ceiling_hazard_v1_pooled__sens_drop_post_20230330_open: 97 fold FIT_OK, 80 s; λ dağılımı {10.0: 50, 3.0: 47}
+[koşu] ceiling_hazard_v1_pooled__sens_no_regime: 97 fold FIT_OK, 107 s; λ dağılımı {100.0: 39, 300.0: 5, 1000.0: 2, 30.0: 51}
+[koşu] ceiling_hazard_v1_pooled__sens_lambda_grid_dense_and_extended: 97 fold FIT_OK, 114 s; λ dağılımı {7.0: 37, 10.0: 59, 15.0: 1}
+[koşu] ceiling_hazard_v1_pooled__sens_j10_exclusion_off: 97 fold FIT_OK, 67 s; λ dağılımı {10.0: 84, 3.0: 13}
+[duyarlılık] J10 kapalı plan: dışlamalı fold 0; eğitimdeki açık arz [68]; J10 açıkken dışlamalı fold'ların yakın dönemdekileri: 25/44 (ilk/son dışlamalı T: 2023-09-22 / 2025-01-17)
+[duyarlılık] drop_post_20230330_open: yakın dönem − v0 +0.0178 [+0.0018, +0.0354] n=78 (22 ay) 27/51/0 → bozuyor; − KM -0.0365 [-0.0534, -0.0172]; λ {'10': 50, '3': 47}
+[duyarlılık] no_regime: yakın dönem − v0 +0.0283 [+0.0089, +0.0482] n=78 (22 ay) 24/54/0 → bozuyor; − KM -0.0260 [-0.0446, -0.0030]; λ {'100': 39, '300': 5, '1000': 2, '30': 51}
+[duyarlılık] lambda_grid_dense_and_extended: yakın dönem − v0 +0.0287 [+0.0087, +0.0516] n=78 (22 ay) 24/54/0 → bozuyor; − KM -0.0256 [-0.0390, -0.0099]; λ {'7': 37, '10': 59, '15': 1}
+[duyarlılık] j10_exclusion_off: yakın dönem − v0 +0.0279 [+0.0082, +0.0507] n=78 (22 ay) 24/54/0 → bozuyor; − KM -0.0264 [-0.0402, -0.0108]; λ {'10': 84, '3': 13}
+
+[son] toplam 447 s; sys.modules'ta borsai: False

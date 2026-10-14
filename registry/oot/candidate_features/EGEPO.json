@@ -1,0 +1,234 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "EGEPO",
+  "company": "Nasmed Özel Sağlık Hizmetleri Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "97900",
+      "source_id": "KAP_960755_EK2",
+      "source_document": "KAP 960755 ek 2",
+      "source_published_at": "2021-08-27T12:53:27+03:00",
+      "source_sha256": "59cade77022d4bfde338153a7f835bf2ab26706f2a1a621476a67ce3dbe651b4",
+      "source_path": "registry/oot/source_docs/EGEPO/KAP_960755_ek2.pdf",
+      "quote": "toplam 97.900 yatırımcı 25.000.000 TL nominal değerli payın alımını gerçekleştirmiştir",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep: 101.081 adet emir (kişi değil)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "97.900",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "97621",
+        "domestic_institutional": "51",
+        "foreign_retail": "228"
+      },
+      "source_id": "KAP_960755_EK2",
+      "source_document": "KAP 960755 ek 2",
+      "source_published_at": "2021-08-27T12:53:27+03:00",
+      "source_sha256": "59cade77022d4bfde338153a7f835bf2ab26706f2a1a621476a67ce3dbe651b4",
+      "source_path": "registry/oot/source_docs/EGEPO/KAP_960755_ek2.pdf",
+      "quote": "toplam 97.621 adet yerli gerçek ve tüzel kişi yatırımcı, 228 adet yabancı gerçek ve tüzel kişi yatırımcı, 51 yerli kurumsal yatırımcı olmak üzere toplam 97.900 yatırımcı",
+      "semantic": "ALLOCATED",
+      "note": "yabancı grup tabloda 'Yabancı Bireysel Yatırımcılar' (gerçek ve tüzel kişiler)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "97.621",
+        "Yurtiçi Kurumsal": "51",
+        "Yabancı Bireysel": "228"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '97.621', 'Yurtiçi Kurumsal': '51', 'Yabancı Bireysel': '228'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı yok ('herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'), grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "24922210",
+        "domestic_institutional": "15972",
+        "foreign_retail": "61818"
+      },
+      "source_id": "KAP_960755_EK2",
+      "source_document": "KAP 960755 ek 2",
+      "source_published_at": "2021-08-27T12:53:27+03:00",
+      "source_sha256": "59cade77022d4bfde338153a7f835bf2ab26706f2a1a621476a67ce3dbe651b4",
+      "source_path": "registry/oot/source_docs/EGEPO/KAP_960755_ek2.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar (*) 24.922.210 %99,7",
+        "Yurtiçi Kurumsal Yatırımcılar (**) 15.972 %0,1",
+        "Yabancı Bireysel Yatırımcılar (*) 61.818 %0,2"
+      ],
+      "note": "birim lot",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "24.922.210",
+        "Yurtiçi Kurumsal": "15.972",
+        "Yabancı Bireysel": "61.818"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '24.922.210', 'Yurtiçi Kurumsal': '15.972', 'Yabancı Bireysel': '61.818'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "99.7",
+      "source_id": "KAP_960755_EK2",
+      "source_document": "KAP 960755 ek 2",
+      "source_published_at": "2021-08-27T12:53:27+03:00",
+      "source_sha256": "59cade77022d4bfde338153a7f835bf2ab26706f2a1a621476a67ce3dbe651b4",
+      "source_path": "registry/oot/source_docs/EGEPO/KAP_960755_ek2.pdf",
+      "quote": "Yurtiçi Bireysel Yatırımcılar (*) 24.922.210 %99,7",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "99,7",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.1",
+      "source_id": "KAP_960755_EK2",
+      "source_document": "KAP 960755 ek 2",
+      "source_published_at": "2021-08-27T12:53:27+03:00",
+      "source_sha256": "59cade77022d4bfde338153a7f835bf2ab26706f2a1a621476a67ce3dbe651b4",
+      "source_path": "registry/oot/source_docs/EGEPO/KAP_960755_ek2.pdf",
+      "quote": "Yurtiçi Kurumsal Yatırımcılar (**) 15.972 %0,1",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,1",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok; tabloda yalnız 'Yabancı Bireysel Yatırımcılar' %0,2",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "0",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "0",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "belgede yurt dışı kurumsal grup yok; 0 yazılı değil; yabancı bireysel %0,2; alan null"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (\"Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış\") ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Tacirler Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_959791_EK1",
+      "source_document": "KAP 959791 ek 1",
+      "source_published_at": "2021-08-20T19:03:55+03:00",
+      "source_sha256": "eb50e9d83846b45303aac739d7037855d90e51479535e8a6919dc5dc7a9f6ead",
+      "source_path": "registry/oot/source_docs/EGEPO/KAP_959791_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Tacirler Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "sonuç bildirimini de Tacirler Yatırım yayımlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Tacirler Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_960857",
+      "source_document": "KAP 960857",
+      "source_published_at": "2021-08-27T19:07:01+03:00",
+      "source_sha256": "269a4557aa1cf12286d2e18fbb191e9728eda7047edffb0d2d471dec449beb69",
+      "source_path": "registry/oot/source_docs/EGEPO/KAP_960857_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_960857",
+      "source_document": "KAP 960857",
+      "source_published_at": "2021-08-27T19:07:01+03:00",
+      "source_sha256": "269a4557aa1cf12286d2e18fbb191e9728eda7047edffb0d2d471dec449beb69",
+      "source_path": "registry/oot/source_docs/EGEPO/KAP_960857_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_960857": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 960857",
+      "published_at": "2021-08-27T19:07:01+03:00",
+      "sha256": "269a4557aa1cf12286d2e18fbb191e9728eda7047edffb0d2d471dec449beb69",
+      "path": "registry/oot/source_docs/EGEPO/KAP_960857_bildirim.pdf"
+    },
+    "KAP_960755_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 960755 ek 2",
+      "published_at": "2021-08-27T12:53:27+03:00",
+      "sha256": "59cade77022d4bfde338153a7f835bf2ab26706f2a1a621476a67ce3dbe651b4",
+      "path": "registry/oot/source_docs/EGEPO/KAP_960755_ek2.pdf"
+    },
+    "KAP_959791_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 959791 ek 1",
+      "published_at": "2021-08-20T19:03:55+03:00",
+      "sha256": "eb50e9d83846b45303aac739d7037855d90e51479535e8a6919dc5dc7a9f6ead",
+      "path": "registry/oot/source_docs/EGEPO/KAP_959791_ek1.pdf"
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "ESEN",
+  "company": "Esenboğa Elektrik Üretim A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "249452",
+      "source_id": "KAP_878967",
+      "source_document": "KAP 878967",
+      "source_published_at": "2020-10-07T11:13:48+03:00",
+      "source_sha256": "80f7887e33a4a55a8ef2751f4a62295284e9c3492d8f5d07c54afd18fada6003",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_878967_bildirim.pdf",
+      "quote": "olmak üzere toplam 249.452 yatırımcı 24.000.000 TL nominal değerli payın alımını gerçekleştirmiştir",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden sayısı belgede yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "249009",
+        "domestic_institutional": "158",
+        "foreign_retail": "283",
+        "foreign_institutional": "2"
+      },
+      "source_id": "KAP_878967",
+      "source_document": "KAP 878967",
+      "source_published_at": "2020-10-07T11:13:48+03:00",
+      "source_sha256": "80f7887e33a4a55a8ef2751f4a62295284e9c3492d8f5d07c54afd18fada6003",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_878967_bildirim.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar 23.956.550 99,82% 249.009",
+        "Yurtiçi Kurumsal Yatırımcılar 16.007 0,07% 158",
+        "Yabancı Bireysel Yatırımcılar 27.233 0,11% 283",
+        "Yabancı Kurumsal Yatırımcılar 210 0,00% 2"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "KAP_878967 grup talebi ya da kat vermiyor (borsada satış)",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "KAP_878967 grup talebi ya da kat vermiyor",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "KAP_878967 grup talebi ya da kat vermiyor",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "23956550",
+        "domestic_institutional": "16007",
+        "foreign_retail": "27233",
+        "foreign_institutional": "210"
+      },
+      "source_id": "KAP_878967",
+      "source_document": "KAP 878967",
+      "source_published_at": "2020-10-07T11:13:48+03:00",
+      "source_sha256": "80f7887e33a4a55a8ef2751f4a62295284e9c3492d8f5d07c54afd18fada6003",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_878967_bildirim.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar 23.956.550 99,82% 249.009",
+        "Yurtiçi Kurumsal Yatırımcılar 16.007 0,07% 158",
+        "Yabancı Bireysel Yatırımcılar 27.233 0,11% 283",
+        "Yabancı Kurumsal Yatırımcılar 210 0,00% 2"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.82",
+      "source_id": "KAP_878967",
+      "source_document": "KAP 878967",
+      "source_published_at": "2020-10-07T11:13:48+03:00",
+      "source_sha256": "80f7887e33a4a55a8ef2751f4a62295284e9c3492d8f5d07c54afd18fada6003",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_878967_bildirim.pdf",
+      "quote": "Yurtiçi Bireysel Yatırımcılar 23.956.550 99,82% 249.009",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.07",
+      "source_id": "KAP_878967",
+      "source_document": "KAP 878967",
+      "source_published_at": "2020-10-07T11:13:48+03:00",
+      "source_sha256": "80f7887e33a4a55a8ef2751f4a62295284e9c3492d8f5d07c54afd18fada6003",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_878967_bildirim.pdf",
+      "quote": "Yurtiçi Kurumsal Yatırımcılar 16.007 0,07% 158",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.00",
+      "source_id": "KAP_878967",
+      "source_document": "KAP 878967",
+      "source_published_at": "2020-10-07T11:13:48+03:00",
+      "source_sha256": "80f7887e33a4a55a8ef2751f4a62295284e9c3492d8f5d07c54afd18fada6003",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_878967_bildirim.pdf",
+      "quote": "Yabancı Kurumsal Yatırımcılar 210 0,00% 2",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yabancı bireysel ayrıca 0,11%",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç bildirimi, listeleme bildirimi ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa Birincil Piyasada sabit fiyatla talep toplama ve satış yöntemi",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa Birincil Piyasada sabit fiyatla talep toplama ve satış yöntemi",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "Codex alıntısı indirilmemiş KAP satırı başlığı; eldeki belgelerde bu ifade yok; ayrıca satış yöntemi, dağıtım yöntemi değil"
+      }
+    },
+    "lead_broker": {
+      "value": "Metro Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_876786_EK1",
+      "source_document": "KAP 876786 ek 1",
+      "source_published_at": "2020-09-25T17:56:30+03:00",
+      "source_sha256": "640aa44803bee855aa5b2244d0c78b3b06868257a489261904aaae2c6d5a056f",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_876786_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Metro Yatırım Menkul Değerler A.Ş.'nin",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": "METRO YATIRIM MENKUL DEĞERLER A.Ş.",
+      "codex_check": {
+        "codex_value": "METRO YATIRIM MENKUL DEĞERLER A.Ş.",
+        "verdict": "FOUND_SAME",
+        "note": "yazım farkı"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_879366",
+      "source_document": "KAP 879366",
+      "source_published_at": "2020-10-07T18:15:13+03:00",
+      "source_sha256": "f689c98deebae427b7fe43fbfad31eda634c4b4b3382fdd0b334d98a6258e61e",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_879366_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (In the Exchange)",
+      "source_id": "KAP_879366",
+      "source_document": "KAP 879366",
+      "source_published_at": "2020-10-07T18:15:13+03:00",
+      "source_sha256": "f689c98deebae427b7fe43fbfad31eda634c4b4b3382fdd0b334d98a6258e61e",
+      "source_path": "registry/oot/source_docs/ESEN/KAP_879366_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (In the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_879366": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 879366",
+      "published_at": "2020-10-07T18:15:13+03:00",
+      "sha256": "f689c98deebae427b7fe43fbfad31eda634c4b4b3382fdd0b334d98a6258e61e",
+      "path": "registry/oot/source_docs/ESEN/KAP_879366_bildirim.pdf"
+    },
+    "KAP_878967": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 878967",
+      "published_at": "2020-10-07T11:13:48+03:00",
+      "sha256": "80f7887e33a4a55a8ef2751f4a62295284e9c3492d8f5d07c54afd18fada6003",
+      "path": "registry/oot/source_docs/ESEN/KAP_878967_bildirim.pdf"
+    },
+    "KAP_876786_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 876786 ek 1",
+      "published_at": "2020-09-25T17:56:30+03:00",
+      "sha256": "640aa44803bee855aa5b2244d0c78b3b06868257a489261904aaae2c6d5a056f",
+      "path": "registry/oot/source_docs/ESEN/KAP_876786_ek1.pdf"
+    }
+  }
+}

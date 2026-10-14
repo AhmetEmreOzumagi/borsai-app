@@ -1,0 +1,38 @@
+v1_5_h99 (PLAN_V15) {'rows': 351, 'tickers_hash_ok': 351, 'targets_hash_ok': 351, 'bad': {}, 'scorable': {'D1': 89, 'D3': 88, 'D5': 87, 'D10': 87}}
+base_train_median (PLAN_V15) {'rows': 351, 'tickers_hash_ok': 351, 'targets_hash_ok': 351, 'bad': {}, 'scorable': {'D1': 89, 'D3': 88, 'D5': 87, 'D10': 87}}
+base_rate (PLAN_V15) {'rows': 351, 'tickers_hash_ok': 351, 'targets_hash_ok': 351, 'bad': {}, 'scorable': {'D1': 89, 'D3': 88, 'D5': 87, 'D10': 87}}
+base_always_ceiling (PLAN_V15) {'rows': 351, 'tickers_hash_ok': 351, 'targets_hash_ok': 351, 'bad': {}, 'scorable': {'D1': 89, 'D3': 88, 'D5': 87, 'D10': 87}}
+base_last10_rate (PLAN_V15) {'rows': 351, 'tickers_hash_ok': 351, 'targets_hash_ok': 351, 'bad': {}, 'scorable': {'D1': 89, 'D3': 88, 'D5': 87, 'D10': 87}}
+base_train_mean (PLAN_V15) {'rows': 351, 'tickers_hash_ok': 351, 'targets_hash_ok': 351, 'bad': {}, 'scorable': {'D1': 89, 'D3': 88, 'D5': 87, 'D10': 87}}
+base_zero (PLAN_V15) {'rows': 351, 'tickers_hash_ok': 351, 'targets_hash_ok': 351, 'bad': {}, 'scorable': {'D1': 89, 'D3': 88, 'D5': 87, 'D10': 87}}
+v1_6_h99 (PLAN_V15) {'rows': 351, 'tickers_hash_ok': 351, 'targets_hash_ok': 351, 'bad': {}, 'scorable': {'D1': 89, 'D3': 88, 'D5': 87, 'D10': 87}}
+v1_5_market20_v0 (PLAN_V15) {'rows': 351, 'tickers_hash_ok': 351, 'targets_hash_ok': 351, 'bad': {}, 'scorable': {'D1': 89, 'D3': 88, 'D5': 87, 'D10': 87}}
+pb_v0 (PLAN_PB) {'rows': 345, 'tickers_hash_ok': 345, 'targets_hash_ok': 345, 'bad': {}, 'scorable': {'D1': 87, 'D3': 87, 'D5': 87, 'D10': 84}}
+base_train_median__pb (PLAN_PB) {'rows': 345, 'tickers_hash_ok': 345, 'targets_hash_ok': 345, 'bad': {}, 'scorable': {'D1': 87, 'D3': 87, 'D5': 87, 'D10': 84}}
+base_rate__pb (PLAN_PB) {'rows': 345, 'tickers_hash_ok': 345, 'targets_hash_ok': 345, 'bad': {}, 'scorable': {'D1': 87, 'D3': 87, 'D5': 87, 'D10': 84}}
+pb_v0: folds where a training ipo listed on/after B: 0
+f3-present ipos: 97
+ceiling_hazard_v0 (PLAN_CEILING) {'rows': 87, 'pp_hash_ok': 87, 'max_date_ok': 87, 'bad': {}, 'scorable': 87}
+ceiling_hazard_v0@INF (PLAN_CEILING) {'rows': 87, 'pp_hash_ok': 87, 'max_date_ok': 87, 'bad': {}, 'scorable': 87}
+base_km_expanding (PLAN_CEILING) {'rows': 87, 'pp_hash_ok': 87, 'max_date_ok': 87, 'bad': {}, 'scorable': 87}
+base_km_last10 (PLAN_CEILING) {'rows': 87, 'pp_hash_ok': 87, 'max_date_ok': 87, 'bad': {}, 'scorable': 87}
+base_always_ceiling__ceiling (PLAN_CEILING) {'rows': 87, 'pp_hash_ok': 87, 'max_date_ok': 87, 'bad': {}, 'scorable': 87}
+pb_ceiling_v0 (PLAN_PB_CEILING) {'rows': 87, 'pp_hash_ok': 87, 'max_date_ok': 87, 'bad': {}, 'scorable': 87}
+pb_ceiling_v0@INF (PLAN_PB_CEILING) {'rows': 87, 'pp_hash_ok': 87, 'max_date_ok': 87, 'bad': {}, 'scorable': 87}
+base_km_expanding__pb_ceiling (PLAN_PB_CEILING) {'rows': 87, 'pp_hash_ok': 87, 'max_date_ok': 87, 'bad': {}, 'scorable': 87}
+base_km_last10__pb_ceiling (PLAN_PB_CEILING) {'rows': 87, 'pp_hash_ok': 87, 'max_date_ok': 87, 'bad': {}, 'scorable': 87}
+post_d1_hazard_v0 (PLAN_POST_D1, d>=2) {'rows': 87, 'pp_hash_ok': 71, 'max_date_ok': 71, 'bad': {'max_date': 16, 'no_training_cols(status=NOT_APPLICABLE)': 16}, 'scorable': 70}
+ceiling_hazard_v1_clip (PLAN_CEILING) {'rows': 87, 'pp_hash_ok': 87, 'max_date_ok': 87, 'bad': {}, 'scorable': 87}
+ceiling_hazard_v1_real (PLAN_CEILING) {'rows': 87, 'pp_hash_ok': 87, 'max_date_ok': 87, 'bad': {}, 'scorable': 87}
+ceiling_hazard_v1_pooled (POOLED): rows 97, max_session_date >= T violations: 0; n_oot_open range 65..68
+ceiling_hazard_v1_pooled@INF (POOLED): rows 97, max_session_date >= T violations: 0; n_oot_open range 65..68
+base_km_expanding__pooled (POOLED): rows 97, max_session_date >= T violations: 0; n_oot_open range 65..68
+ceiling_path_v0: rows 87, cells_max_session_date >= cutoff: 0, status counts Counter({'OK': 87})
+pb_ceiling_path_v0: rows 87, cells_max_session_date >= cutoff: 0, status counts Counter({'OK': 87})
+fall_d10_v0_h99: rows 164, tickers hash reproduced from H99 f3-set 163, from all-H99 102; statuses Counter({'FIT_OK': 152, 'MODEL_NOT_FIT_SINGLE_CLASS': 12})
+fall_d10_v0_pooled: rows 188, tickers hash reproduced from H99 f3-set 0, from all-H99 0; statuses Counter({'FIT_OK': 188})
+fall_d10_v0_addsale: rows 190, tickers hash reproduced from H99 f3-set 0, from all-H99 0; statuses Counter({'FIT_OK': 190})
+fall_d10_v0_pooled@ZERO: rows 188, tickers hash reproduced from H99 f3-set 0, from all-H99 0; statuses Counter({'FIT_OK': 188})
+break b distribution: {1: 18, 2: 11, 3: 4, 4: 13, 5: 12, 6: 8, 7: 6, 8: 6, 9: 4, 10: 3, 99: 14} L=10: 14
+break_floor_v0: rows 82, F1 training hash reproduced 82, max_label/cells date violations 0, statuses {'INSUFFICIENT_TRAINING_HISTORY': 13, 'FIT_OK': 69}, near-era FIT_OK 69
+exit 0

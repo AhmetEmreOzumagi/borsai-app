@@ -1,0 +1,260 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "PCILT",
+ "company": "PC İletişim ve Medya Hizmetleri Sanayi Ticaret A.Ş.",
+ "first_trading_date": "2021-12-01",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Borsa İstanbul Birincil Piyasa; yatırımcı grubu bazında tahsisat ve dağıtım yapılmadı",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_978836_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7bf4b5e3017d38eb010047e1",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "978836",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/978836",
+   "published_at": "2021-11-19T19:33:17+03:00",
+   "source_sha256": "818070c0f6c80fc958dce1b130e0beab0f2d8036703885abec0f5736dfb820dd",
+   "source_file": "source_docs/PCILT/KAP_978836_ek1.pdf",
+   "page": 37,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "25.2.3. Halka arzda yatırımcılara tahsis ve dağıtım esasları: Paylar, \"Borsada Satış - Sabit Fiyatla Talep Toplama ve Satış Yöntemi' ile satışa sunulacağından herhangi bir yatırımcı grubuna tahsisat bulunmamaktadır.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "Borsa'da satış (Borsa Birincil Piyasa, Sabit Fiyatla Talep Toplama ve Satış, 24-25/11/2021, Global Menkul Değerler; BIST duyurusu KAP_979032). Yatırımcı grubu tahsisat oranları ve bireysel dağıtım yöntemi: 'Yoktur'. Belge eşit/oransal adlandırmıyor.",
+   "codex_value": "Borsa'da Satış - Sabit Fiyatla Talep Toplama ve Satış",
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_planned": {
+   "value": "TRUE",
+   "unit": "boolean",
+   "status": "VERIFIED",
+   "source_id": "KAP_978836_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7bf4b5e3017d38eb010047e1",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "978836",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/978836",
+   "published_at": "2021-11-19T19:33:17+03:00",
+   "source_sha256": "818070c0f6c80fc958dce1b130e0beab0f2d8036703885abec0f5736dfb820dd",
+   "source_file": "source_docs/PCILT/KAP_978836_ek1.pdf",
+   "page": 42,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: Fiyat istikrarı işlemlerinin gerçekleştirilmesi planlanmaktadır.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "Şirket ile Global Menkul Değerler arasında 15.09.2021 tarihli Fiyat İstikrarını Sağlayıcı İşlemler Sözleşmesi; İlbak Holding fiyat istikrarı için 10.000.000 TL fon ayıracak. Garanti yok.",
+   "codex_value": true,
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_days": {
+   "value": "10",
+   "unit": "iş günü",
+   "status": "VERIFIED",
+   "source_id": "KAP_978836_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7bf4b5e3017d38eb010047e1",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "978836",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/978836",
+   "published_at": "2021-11-19T19:33:17+03:00",
+   "source_sha256": "818070c0f6c80fc958dce1b130e0beab0f2d8036703885abec0f5736dfb820dd",
+   "source_file": "source_docs/PCILT/KAP_978836_ek1.pdf",
+   "page": 42,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5.2. Fiyat istikrarı işlemlerinin gerçekleştirilebileceği zaman aralığı: Payların Borsa'da işlem görmeye başlamasından itibaren 10 iş günüdür.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "Belgede '10 iş günü' (takvim günü değil).",
+   "codex_value": "10",
+   "codex_verdict": "VERIFIED"
+  },
+  "issuer_lockup_days": {
+   "value": "180",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_978836_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7bf4b5e3017d38eb010047e1",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "978836",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/978836",
+   "published_at": "2021-11-19T19:33:17+03:00",
+   "source_sha256": "818070c0f6c80fc958dce1b130e0beab0f2d8036703885abec0f5736dfb820dd",
+   "source_file": "source_docs/PCILT/KAP_978836_ek1.pdf",
+   "page": 43,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "a) Ihraççı tarafından verilen taahhüt: Şirket; Yönetim Kurulu'nun 06.05.2021 tarihli ve 2021/17 sayılı kararı ile Şirket paylarının Borsa'da işlem görmeye başlamasından itibaren 180 gün süreyle payların Borsa fiyatından bağımsız olarak, a. bedelli sermaye artırımı gerçekleştirilmeyeceğini,",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Kapsam: bedelli sermaye artırımı yapmama, geri alınan payları satmama/devretmeme/rehnetmeme, dolaşımdaki pay miktarını artırmama; iştirak/bağlı ortaklıklar için de. Başlangıç: Borsa'da işlem görmeye başlama."
+  },
+  "shareholder_lockup_days": {
+   "value": "180",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_978836_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7bf4b5e3017d38eb010047e1",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "978836",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/978836",
+   "published_at": "2021-11-19T19:33:17+03:00",
+   "source_sha256": "818070c0f6c80fc958dce1b130e0beab0f2d8036703885abec0f5736dfb820dd",
+   "source_file": "source_docs/PCILT/KAP_978836_ek1.pdf",
+   "page": 44,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "180 gün süreyle payların Borsa fiyatından bağımsız olarak, Borsa'da dolaşımdaki pay miktarının artmasına yol açacak şekilde; a. hiçbir şekilde Borsa'da satışą veya halka arza konu edilmeyeceğini,",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_978836_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7bf4b5e3017d38eb010047e1",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "978836",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/978836",
+     "published_at": "2021-11-19T19:33:17+03:00",
+     "source_sha256": "818070c0f6c80fc958dce1b130e0beab0f2d8036703885abec0f5736dfb820dd",
+     "source_file": "source_docs/PCILT/KAP_978836_ek1.pdf",
+     "page": 43,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "b) Ortaklar tarafından verilen taahhütler: Şirket'in mevcut ortaklarından Ilbak Holding, holding yönetim kurulunun 18.03.2021 tarihli ve 2021/03 sayılı kararı ile; Banun Erkıran Çıtak, Ibrahim Şahin ve Atakan Kural 16.08.2021 tarihli beyanları jle; PC İletişim paylarının Borsa'da işlem görmeye başlamasından itibaren"
+    },
+    {
+     "source_id": "KAP_978836_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7bf4b5e3017d38eb010047e1",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "978836",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/978836",
+     "published_at": "2021-11-19T19:33:17+03:00",
+     "source_sha256": "818070c0f6c80fc958dce1b130e0beab0f2d8036703885abec0f5736dfb820dd",
+     "source_file": "source_docs/PCILT/KAP_978836_ek1.pdf",
+     "page": 44,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "SPK'nın VII-128.1 sayılı Pay Tebliği'nin 8. maddesi uyarınca; PC İletişim paylarının Borsa'da işlem görmeye başlamasından itibaren bir yıl süreyle (i) elinde bulundurduğu Şirket paylarını halka arz fiyatının altındaki bir fiyattan Borsa'da satmayacağını"
+    }
+   ],
+   "components": [
+    {
+     "who": "Ilbak Holding A.Ş. (%65)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Banun Erkıran Çıtak (%34,996; halka arz eden)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "İbrahim Şahin (%0,002)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Atakan Kural (%0,002)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Ilbak Holding A.Ş.",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Banun Erkıran Çıtak",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "İbrahim Şahin",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "Borsa'da işlem görmeye başlama"
+    },
+    {
+     "who": "Atakan Kural",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "Borsa'da işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "b) Tüm mevcut ortaklar (Ilbak Holding %65, Banun Erkıran Çıtak %34,996, İbrahim Şahin ve Atakan Kural %0,002'şer) 180 gün borsa fiyatından bağımsız, dolaşımı artıracak şekilde hiçbir şekilde Borsa'da satmama (mutlak). c) Pay Tebliği 8: 1 yıl halka arz fiyatının altında satmama. d) Yetkili kuruluşlar tarafından verilen taahhütler: Yoktur. En kısa süre 180.",
+   "codex_value": "180",
+   "codex_verdict": "VERIFIED"
+  },
+  "sector": {
+   "value": "Reklamcılık; medya planlama ve satın alma",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_978834_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c7bf4b5e3017d38e6d1c14745",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "978834",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/978834",
+   "published_at": "2021-11-19T19:32:34+03:00",
+   "source_sha256": "98e21c81ce8ffdb1e67089fe5edd1a365d6881b14b1ad1bec4994fe920c7e5e5",
+   "source_file": "source_docs/PCILT/KAP_978834_ek1.pdf",
+   "page": 56,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "PC Iletişim, reklamcılık sektörü içinde uzmanlaşan şirketleri ile medya planlama ve satın alma alanında faaliyet göstermektedir.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "İzahname §7.1.1 (19.11.2021 19:32 seti). Özet B.3 (s.13) aynı ifade; grup: SM Medya, BL İletişim, UP İletişim (%100) ve Maya Medya (%50) ile PC İletişim Hizmetleri Grubu.",
+   "codex_value": "reklam ve medya hizmetleri",
+   "codex_verdict": "VERIFIED"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: iki izahname seti (19.11.2021 18:30 ve 19:32), TSSD'ler ve Borsa birincil piyasa duyurusunda katılım endeksi / faizsiz finans uygunluk beyanı yok; qfind 'katılım endeks|faizsiz|islami|icazet|katılım finans|katılım bank' eşleşme vermedi.",
+   "looked_at": [
+    "KAP_978805_EK1",
+    "KAP_978806_EK1",
+    "KAP_978807_EK1",
+    "KAP_978808_EK1",
+    "KAP_978808",
+    "KAP_978834_EK1",
+    "KAP_978835_EK1",
+    "KAP_978836_EK1",
+    "KAP_978837_EK1",
+    "KAP_978837",
+    "KAP_979032"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_978834_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "978834",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c7bf4b5e3017d38e6d1c14745",
+   "published_at": "2021-11-19T19:32:34+03:00",
+   "sha256": "98e21c81ce8ffdb1e67089fe5edd1a365d6881b14b1ad1bec4994fe920c7e5e5",
+   "file": "source_docs/PCILT/KAP_978834_ek1.pdf"
+  },
+  "KAP_978836_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "978836",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c7bf4b5e3017d38eb010047e1",
+   "published_at": "2021-11-19T19:33:17+03:00",
+   "sha256": "818070c0f6c80fc958dce1b130e0beab0f2d8036703885abec0f5736dfb820dd",
+   "file": "source_docs/PCILT/KAP_978836_ek1.pdf"
+  }
+ }
+}

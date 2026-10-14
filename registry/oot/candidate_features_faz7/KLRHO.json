@@ -1,0 +1,323 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "KLRHO",
+ "company": "Kiler Holding A.Ş.",
+ "first_trading_date": "2022-07-07",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Yurt içi bireysele eşit; kurumsala takdire bağlı dağıtım",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_1039540_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a596438121f2",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1039540",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1039540",
+   "published_at": "2022-06-27T19:05:49+03:00",
+   "source_sha256": "c6ef536050bdb5d4bf6eadee490d50e526119621d0c60fb5ca70a862042d75ab",
+   "source_file": "source_docs/KLRHO/KAP_1039540_ek1.pdf",
+   "page": 8,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Yurt İçi Bireysel Yatırımcılara Dağıtım: Eşit dağıtım yöntemine göre yapılacaktır.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1039540_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a596438121f2",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1039540",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1039540",
+     "published_at": "2022-06-27T19:05:49+03:00",
+     "source_sha256": "c6ef536050bdb5d4bf6eadee490d50e526119621d0c60fb5ca70a862042d75ab",
+     "source_file": "source_docs/KLRHO/KAP_1039540_ek1.pdf",
+     "page": 8,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Yurt İçi Kurumsal Yatırımcılara Dağıtım: Her bir Yurt İçi Kurumsal Yatırimei ya verilecek pay miktarına Konsorsiyum Liderinin önerileri de dikkate alınarak Halka Ärz'Ęden Pay Sahipleri tatafından karar verilecektir."
+    },
+    {
+     "source_id": "KAP_1039540_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a596438121f2",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1039540",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1039540",
+     "published_at": "2022-06-27T19:05:49+03:00",
+     "source_sha256": "c6ef536050bdb5d4bf6eadee490d50e526119621d0c60fb5ca70a862042d75ab",
+     "source_file": "source_docs/KLRHO/KAP_1039540_ek1.pdf",
+     "page": 27,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "İ. 87.750.000 TL nominal değerdeki %90 oranındaki kısmı Yurt Içi Bireysel Yatırımcılar'a ii. 9.750.000 TL nominal değerdeki %10 oranındaki kısmı Yurt Içi Kurumsal Yatıtımcılar'a 27 Hazinan gerçekleştirilecek satışlar için tahsis edilmiştir."
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Borsa dışı sabit fiyatla talep toplama (Tacirler Yatırım konsorsiyumu), yalnız ortak satışı. Tahsisat: yurt içi bireysel %90, yurt içi kurumsal %10; çalışan ve yurt dışı grubu yok. Yurt içi bireysel: eşit dağıtım. Yurt içi kurumsal: her yatırımcıya verilecek miktara Konsorsiyum Lideri'nin önerileri dikkate alınarak Halka Arz Eden Pay Sahipleri karar verir (takdire bağlı)."
+  },
+  "price_stability_planned": {
+   "value": "TRUE",
+   "unit": "boolean",
+   "status": "FILLED",
+   "source_id": "KAP_1039540_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a596438121f2",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1039540",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1039540",
+   "published_at": "2022-06-27T19:05:49+03:00",
+   "source_sha256": "c6ef536050bdb5d4bf6eadee490d50e526119621d0c60fb5ca70a862042d75ab",
+   "source_file": "source_docs/KLRHO/KAP_1039540_ek1.pdf",
+   "page": 37,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: 2 7 'Haziian Fiyat istikrarı işlemlerinin gerçekleştirilmesi planlanmaktadır.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Fiyat istikrarını Tacirler Yatırım yapar; Ek Satış ve Fiyat İstikrarını Sağlayıcı İşlemler Sözleşmesi uyarınca toplam brüt halka arz gelirinin %70'ine kadarı kullanılabilecek (s.38). Garanti yok (26.5.1)."
+  },
+  "price_stability_days": {
+   "value": "30",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1039540_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a596438121f2",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1039540",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1039540",
+   "published_at": "2022-06-27T19:05:49+03:00",
+   "source_sha256": "c6ef536050bdb5d4bf6eadee490d50e526119621d0c60fb5ca70a862042d75ab",
+   "source_file": "source_docs/KLRHO/KAP_1039540_ek1.pdf",
+   "page": 37,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5.2. Fiyat istikrarı işlemlerinin gerçekleştirilebileceği zaman aralığı: Payların borsadal işlełg görmeye başlamasından itibaren en fapka 30 (otuz) gündür.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": ""
+  },
+  "issuer_lockup_days": {
+   "value": "180",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1039540_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a596438121f2",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1039540",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1039540",
+   "published_at": "2022-06-27T19:05:49+03:00",
+   "source_sha256": "c6ef536050bdb5d4bf6eadee490d50e526119621d0c60fb5ca70a862042d75ab",
+   "source_file": "source_docs/KLRHO/KAP_1039540_ek1.pdf",
+   "page": 39,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "a) İhraççı tarafından verilen taahhüt: Şirket, 14.04.2022 tarihli ve 2022/14 numaralı Yönetim Kurulu kararı ile, Şirket tarafindan halka arz edilen payların Borsa Istanbul'da işlem görmeye başladığı tarihten itibaren 6 (altı) ay boyunca, Şirket paylarının dolaşımdaki pay miktarının artmasına yol açacak şekilde satışa veya halka arza konu edilmeyeceğine",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "6 ay = 180 (belgede '6 (altı) ay'). Kapsam: dolaşımdaki payı artıracak satış/halka arz yapmama, bu yönde karar/başvuru/açıklama yapmama. Başlangıç: Borsa İstanbul'da işlem görmeye başlama."
+  },
+  "shareholder_lockup_days": {
+   "value": "180",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1039540_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a596438121f2",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1039540",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1039540",
+   "published_at": "2022-06-27T19:05:49+03:00",
+   "source_sha256": "c6ef536050bdb5d4bf6eadee490d50e526119621d0c60fb5ca70a862042d75ab",
+   "source_file": "source_docs/KLRHO/KAP_1039540_ek1.pdf",
+   "page": 40,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Nahit Kiler 14.04.2022 tarihli taähhüdü ile; Şirket paylarının Borsa Istanbul'da işlemi görmeye başladığı tarihten itibaren 6 (altı) ay boyunca, sahip olduğu halka arza konu olmayan Şirket paylarının, dolaşımdaki pay miktarının artmasına yol açacak şekilde satışa veya halka arza konu edilmeyeceği",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1039540_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a596438121f2",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1039540",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1039540",
+     "published_at": "2022-06-27T19:05:49+03:00",
+     "source_sha256": "c6ef536050bdb5d4bf6eadee490d50e526119621d0c60fb5ca70a862042d75ab",
+     "source_file": "source_docs/KLRHO/KAP_1039540_ek1.pdf",
+     "page": 40,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Vahit Kiler 14.04.2022 tarihli taahhüdü ile; Şirket paylarının Borsa Istanbul'da işlem görmeye başladığı tarihten itibaren 6 (altı) ay boyunca, sahip olduğu halka arza konu olmayan Şirket paylarının, dolaşımdaki pay miktarının artmasına yol açacak şekilde satışa veya halka arza konu edilmeyeceği"
+    },
+    {
+     "source_id": "KAP_1039540_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a596438121f2",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1039540",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1039540",
+     "published_at": "2022-06-27T19:05:49+03:00",
+     "source_sha256": "c6ef536050bdb5d4bf6eadee490d50e526119621d0c60fb5ca70a862042d75ab",
+     "source_file": "source_docs/KLRHO/KAP_1039540_ek1.pdf",
+     "page": 40,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Ümit Kiler 14:04:2022 tarihli taahhüdü ile; Şirket paylarının Borsa Istanbul da işlem görmeye başladığı tarihten itibaren 6 (altı) ay boyunca, sahip olduğu halka arza konu olmayan Şirket paylarının, dolaşımdaki pay miktarının artmasına yol açacak şekilde satışa veya halka arza konu edilmeyeceği"
+    },
+    {
+     "source_id": "KAP_1039540_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a596438121f2",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1039540",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1039540",
+     "published_at": "2022-06-27T19:05:49+03:00",
+     "source_sha256": "c6ef536050bdb5d4bf6eadee490d50e526119621d0c60fb5ca70a862042d75ab",
+     "source_file": "source_docs/KLRHO/KAP_1039540_ek1.pdf",
+     "page": 39,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "b) Ortaklar tarafindan verilen taahhütler: KLR İnşaat 14.04.2022 tarihli ve 2022/5 numaralı Müdürler Kurulu Karari'na binaen verdi 14.04.2022 tarihli taahhüdü ile; Şirket paylarının Borsa İstanbul'da işlem görmeye başladiğı. tarihten itibaren 6 faltı) ay boyunca"
+    },
+    {
+     "source_id": "KAP_1039540_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a596438121f2",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1039540",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1039540",
+     "published_at": "2022-06-27T19:05:49+03:00",
+     "source_sha256": "c6ef536050bdb5d4bf6eadee490d50e526119621d0c60fb5ca70a862042d75ab",
+     "source_file": "source_docs/KLRHO/KAP_1039540_ek1.pdf",
+     "page": 40,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "c) Sermaye piyasası mevzuatı kapsamında verilen taahhütler: Halka Arz Eden Pay Sahipleri Kurul'un VII-128.1 sayilı Pay Tebliği'nin 8'inci maddesi çerçevesinde aşağıdaki taahhütleri vermişlerdir. KLR Inşaat 14.04.2022 tarihli ve 2022/5 numaralı Müdürler Kurulu Kararı'na binaen verdiği 14.04.2022 tarihli taahhüdü ile; Şirket paylarının Borsa İstanbul'da işlem görmeye başladığı tarihten itibaten 1 (bir) yıl boyunca maliki olduğu Şirket paylarının halka arz fiyatının altındaki bir fiyattan Borsa İstanbul'da satılmaması"
+    },
+    {
+     "source_id": "KAP_1039540_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a596438121f2",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1039540",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1039540",
+     "published_at": "2022-06-27T19:05:49+03:00",
+     "source_sha256": "c6ef536050bdb5d4bf6eadee490d50e526119621d0c60fb5ca70a862042d75ab",
+     "source_file": "source_docs/KLRHO/KAP_1039540_ek1.pdf",
+     "page": 41,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Ümit Kiler 14.04.2022.tarihli taahhüdü ile; Şirket paylarının Borsa İstanbul'da işlem görmeye başladığı tarihten itibaren 1 (bir) yıl boyunca maliki olduğu Şirket paylarının halka arz fiyatının altındaki bir fiyattan Borsa İstanbul'da satılmaması"
+    }
+   ],
+   "components": [
+    {
+     "who": "Nahit Kiler (halka arz eden)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Vahit Kiler (halka arz eden)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Ümit Kiler (halka arz eden)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "KLR İnşaat Ticaret Ltd. Şti. (halka arz eden)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU (b)",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Nahit Kiler",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Vahit Kiler",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Ümit Kiler",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "KLR İnşaat Ticaret Ltd. Şti.",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Halka arz tamamen ortak satışı (Ümit, Nahit, Vahit Kiler ve KLR İnşaat). b) dördü de 6 (altı) ay halka arza konu olmayan paylarını dolaşımdaki pay miktarını artıracak şekilde satışa/halka arza konu etmeme (6 ay = 180; MUTLAK tipi). c) dördü için Pay Tebliği 8. madde 1 (bir) yıl halka arz fiyatının altında Borsa'da satmama. En kısa süre 180. KLR İnşaat'ın 9.590.196 TL payının tamamı halka arz ediliyor (halka arz sonrası tabloda payı yok). KLR İnşaat b) metninde OCR '6 faltı) ay'; Vahit Kiler c) metni s.40-41 arasında bölünmüş. d) Yetkili kuruluşlar: Yoktur."
+  },
+  "sector": {
+   "value": "Holding; inşaat ve gayrimenkul, enerji, sanayi ve hizmet",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_1039535_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a58ea7952088",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1039535",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1039535",
+   "published_at": "2022-06-27T19:03:06+03:00",
+   "source_sha256": "46c34a40c11a63edd1a71b47f533951c7b11cb048ada3741e69b294200fbcbc4",
+   "source_file": "source_docs/KLRHO/KAP_1039535_ek1.pdf",
+   "page": 6,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Şirket'in işbu Izahname tarihi itibarıyla ana faaliyet konuları inşaat ve gayrimenkul, enerji, sanayi ve hizmet sektörlerindedir..- Şirket, bir holding şirketidir.",
+   "provenance": "CODEX_VERIFIED",
+   "note": "Faaliyetler bağlı ortaklık/iştirakler üzerinden: Kiler GYO, Biskon Yapı (inşaat-gayrimenkul), Doğu Aras (enerji, %40), Kütahya Şeker (sanayi, %28), Tureks (hizmet).",
+   "codex_value": "holding ve iştirak yatırımları",
+   "codex_verdict": "VERIFIED"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahnamenin Borsa İstanbul görüşü (KAP_1039529_EK1 s.13, 17.06.2022 yazısı) yalnız Yıldız Pazar ve hukukçu raporu hususlarını içeriyor, katılım endeksi cümlesi yok. İzahname ekler listesi (KAP_1039541_EK1 s.8, EK 1-8) Katılım Finans İlkeleri Bilgi Formu anmıyor. qfind 'Katılım Tüm Endeks|yer alma şartlarını|katılım endeks|katılım finans|bilgi formu|faizsiz' eşleşme vermedi; 'katılım bank' yalnız Albaraka Türk ipotek/sözleşme tablolarında (uygunluk beyanı değil).",
+   "looked_at": [
+    "KAP_1039529_EK1",
+    "KAP_1039533_EK1",
+    "KAP_1039534_EK1",
+    "KAP_1039535_EK1",
+    "KAP_1039536_EK1",
+    "KAP_1039537_EK1",
+    "KAP_1039539_EK1",
+    "KAP_1039540_EK1",
+    "KAP_1039541_EK1",
+    "KAP_1039542_EK1"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_1039535_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1039535",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a58ea7952088",
+   "published_at": "2022-06-27T19:03:06+03:00",
+   "sha256": "46c34a40c11a63edd1a71b47f533951c7b11cb048ada3741e69b294200fbcbc4",
+   "file": "source_docs/KLRHO/KAP_1039535_ek1.pdf"
+  },
+  "KAP_1039540_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1039540",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c819d4b9f0181a596438121f2",
+   "published_at": "2022-06-27T19:05:49+03:00",
+   "sha256": "c6ef536050bdb5d4bf6eadee490d50e526119621d0c60fb5ca70a862042d75ab",
+   "file": "source_docs/KLRHO/KAP_1039540_ek1.pdf"
+  }
+ }
+}

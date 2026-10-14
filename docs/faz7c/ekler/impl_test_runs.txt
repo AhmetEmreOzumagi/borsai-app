@@ -1,0 +1,57 @@
+# BORSAI_FAZ7_C_IMPL_20260927 — test koşuları (ham son satırlar)
+
+## Adım 0 — taban
+HEAD f89e41a (ecd8973'ün torunu: BORSAI_PUSH_PROOFS Faz 7 dondurma 66adbca ve C şartnamesi 4fe4e51); izinli izlenmeyenler
+(docs/prompts/FAZ7_C_IMPL.md, docs/prompts/FAZ7_FABLE_APP_EK3_SPEC.md, docs/specs_faz7_c/KARARLAR_C.md) dışında temiz.
+.venv/bin/python app/parity/gen_golden.py --check
+  {"checked": 25, "different": []}
+2026-09-27T16:54:55Z .venv/bin/pytest -q -p no:cacheprovider
+  741 passed in 445.48s (0:07:25)
+2026-09-27T17:03:51Z bash app/scripts/test.sh  (EXIT 0, 32 s)
+  cargo: 94 passed, 0 failed (test result satırlarının toplamı)
+  npm:   Test Files 16 passed (16); Tests 222 passed (222)
+  parity: 4 passed in 6.52s
+  === golden_unchanged: YEŞİL (U46) ===
+
+## Commit A öncesi (kod + kurallar + testler; izlenmeyen yeni dosyalar borsai/predict_fall.py, borsai/report_faz7c.py, tests/…)
+2026-09-27T17:35:29Z .venv/bin/pytest -q -p no:cacheprovider (deselect yok; data/ değişmediği için temizlik bekçileri yeşil)
+  791 passed in 495.05s (0:08:15)
+  (741 taban + 50 yeni: tests/test_faz7c_model.py 34, tests/test_faz7c_backtest.py 16; J16/J30 kalıbındaki beş test ve test_experiment_log
+  A'da etkisiz istisnalarla yeşil)
+.venv/bin/python app/parity/gen_golden.py --check  (T2: pinli kaynak değişmedi; yeni kod borsai/predict_fall.py, pinli değil)
+  {"checked": 25, "different": []}
+2026-09-27T17:44:09Z bash app/scripts/test.sh  (EXIT 0)
+  cargo: 94 passed, 0 failed; npm: Test Files 16 passed (16), Tests 222 passed (222); parity: 4 passed in 6.53s; === golden_unchanged: YEŞİL (U46) ===
+T5 eşik mutasyonu: docs/faz7c/ekler/t5_mutasyon.txt (δ 0.015 -> 3 kırmızı; dosya sha ile geri yüklendi)
+Beklenen sayılar (commit A anı): docs/faz7c/ekler/olcum_beklenen_sayilar.py (çıktı R'de ekler/olcum_beklenen_sayilar.txt)
+
+## Commit A (3c93f9c) sonrası
+Deselect kullanılmadığı için ayrı "deselect'siz" koşu gerekmedi (A öncesi koşu deselect'sizdi, 791 passed).
+
+## B: resmi koşu (commit A'nın temiz ağacı, borsai_dirty = false)
+2026-09-27T17:45:12Z .venv/bin/python -m borsai.backtest --suite faz7c --write-golden --context faz7c_golden
+  4 koşu + 4 nihai fit önizlemesi; real 121.57 s; EXIT 0
+.venv/bin/python -m borsai.backtest --import-exploration   -> {"exploration_lines": 2054}
+.venv/bin/python -m borsai.report                          -> docs/MODELS.md (Faz 7C bölümü)
+
+## B öncesi 1 (resmi koşu + altın dizin + keşif satırları + MODELS.md + tests/test_faz7c_golden.py)
+Önce etkilenen modüller: tests/test_faz7c_golden.py'de 4 kırmızı (stdlib tahmin sıralı anahtarlı JSON'u reddediyordu; K14)
+  -> düzeltme commit'i A2 1239e45 (yalnız borsai/predict_fall.py, regresyon testi, K14)
+2026-09-27T17:56:50Z .venv/bin/pytest -q -p no:cacheprovider (A2 ile)
+  1 failed, 805 passed in 769.46s (0:12:49)
+  FAILED tests/test_faz7_golden.py::test_models_md_faz7_section (Faz 7 bölümü "## Faz 5"e kadar kesilir; araya giren Faz 7C bölümü
+  "kasa: bekliyor" sayısını 5 -> 9 yaptı; K15) -> düzeltme commit'i A3 77d0ee5 (yalnız borsai/report.py: bölüm Faz 4 ile Faz 7 arası)
+
+## B öncesi 2 (A3 ile)
+2026-09-27T18:12:43Z .venv/bin/pytest -q -p no:cacheprovider
+  806 passed in 752.67s (0:12:32)
+  (791 + tests/test_faz7c_golden.py 15; J16/J30/K10 istisnaları etkin: H99 sürümünde Faz 7C varyantı 1, v2'de 3 + 2 054)
+2026-09-27T18:25:31Z bash app/scripts/test.sh  (EXIT 0)
+  cargo: 94 passed, 0 failed; npm: Test Files 16 passed (16), Tests 222 passed (222); parity: 4 passed in 6.52s; === golden_unchanged: YEŞİL (U46) ===
+.venv/bin/python app/parity/gen_golden.py --check
+  {"checked": 25, "different": []}
+
+## B (acaca2d) sonrası, commit'li durum (R öncesi)
+2026-09-27T18:26:42Z .venv/bin/pytest -q -p no:cacheprovider
+  806 passed in 839.68s (0:13:59)
+.venv/bin/python docs/faz7c/ekler/olcum_beklenen_sayilar.py > docs/faz7c/ekler/olcum_beklenen_sayilar.txt  (HEAD acaca2d)

@@ -1,0 +1,197 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "EYGYO",
+  "company": "EYG Gayrimenkul Yatırım Ortaklığı A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "883639",
+      "source_id": "KAP_1089787_EK1",
+      "source_document": "KAP 1089787 ek 1",
+      "source_published_at": "2022-12-26T13:02:41+03:00",
+      "source_sha256": "8a26d60e964ba5565d76f3632d420bb3bfec442795fb5d711fc41e3abd417e4c",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1089787_ek1.pdf",
+      "quote": "Toplam 883.639 24.750.000 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "dağıtım tablosunun 'Yatırımcı Sayısı' toplamı; metin aynı sayıyı talep eden olarak da veriyor ('toplam 883.639 yatırımcıdan')",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "883.639",
+        "verdict": "FOUND_SAME",
+        "note": "dağıtım tablosu toplamı ile aynı"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "882281",
+        "domestic_institutional": "27",
+        "foreign_retail": "1330",
+        "foreign_institutional": "1"
+      },
+      "source_id": "KAP_1089787_EK1",
+      "source_document": "KAP 1089787 ek 1",
+      "source_published_at": "2022-12-26T13:02:41+03:00",
+      "source_sha256": "8a26d60e964ba5565d76f3632d420bb3bfec442795fb5d711fc41e3abd417e4c",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1089787_ek1.pdf",
+      "quote": [
+        "Bireysel Yatırımcı 99,85% 882.281 24.712.156",
+        "Kurumsal Yatırımcı* 27 686 0,00%",
+        "Bireysel Yatırımcı 1330 37.130 0,15%",
+        "Kurumsal Yatırımcı* 1 28 0,00%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "ilk iki satır 'Yurt İçi Yatırımcı' (882.308), son iki satır 'Yurtdışı Yatırımcı' (1.331) altında; PDF metninde yüzde sütunu yer yer sayılardan önce çıkıyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; belge grup bazında talep/tahsisat vermiyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "24712156",
+        "domestic_institutional": "686",
+        "foreign_retail": "37130",
+        "foreign_institutional": "28"
+      },
+      "source_id": "KAP_1089787_EK1",
+      "source_document": "KAP 1089787 ek 1",
+      "source_published_at": "2022-12-26T13:02:41+03:00",
+      "source_sha256": "8a26d60e964ba5565d76f3632d420bb3bfec442795fb5d711fc41e3abd417e4c",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1089787_ek1.pdf",
+      "quote": [
+        "Bireysel Yatırımcı 99,85% 882.281 24.712.156",
+        "Kurumsal Yatırımcı* 27 686 0,00%",
+        "Bireysel Yatırımcı 1330 37.130 0,15%",
+        "Kurumsal Yatırımcı* 1 28 0,00%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "99.85",
+      "source_id": "KAP_1089787_EK1",
+      "source_document": "KAP 1089787 ek 1",
+      "source_published_at": "2022-12-26T13:02:41+03:00",
+      "source_sha256": "8a26d60e964ba5565d76f3632d420bb3bfec442795fb5d711fc41e3abd417e4c",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1089787_ek1.pdf",
+      "quote": "Bireysel Yatırımcı 99,85% 882.281 24.712.156",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "yurt içi bireysel; yurt dışı bireysel ayrıca %0,15",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.00",
+      "source_id": "KAP_1089787_EK1",
+      "source_document": "KAP 1089787 ek 1",
+      "source_published_at": "2022-12-26T13:02:41+03:00",
+      "source_sha256": "8a26d60e964ba5565d76f3632d420bb3bfec442795fb5d711fc41e3abd417e4c",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1089787_ek1.pdf",
+      "quote": "Kurumsal Yatırımcı* 27 686 0,00%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.00",
+      "source_id": "KAP_1089787_EK1",
+      "source_document": "KAP 1089787 ek 1",
+      "source_published_at": "2022-12-26T13:02:41+03:00",
+      "source_sha256": "8a26d60e964ba5565d76f3632d420bb3bfec442795fb5d711fc41e3abd417e4c",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1089787_ek1.pdf",
+      "quote": "Kurumsal Yatırımcı* 1 28 0,00%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız talep toplama yöntemini yazıyor (Sabit Fiyatla Talep Toplama yöntemiyle); dağıtım yöntemi adlandırılmıyor; TSSD dossier'de yok",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": null,
+      "missing_reason": "TSSD dossier'de yok; sonuç eki aracı kurumu 'aracılık' ifadesiyle adlandırmıyor (bildirimi ve eki Tacirler Yatırım Menkul Değerler A.Ş. imzalamış)",
+      "provenance": "MISSING"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD dossier'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD dossier'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD dossier'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD dossier'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1090293",
+      "source_document": "KAP 1090293",
+      "source_published_at": "2022-12-27T18:10:18+03:00",
+      "source_sha256": "d2e0c8321cdf6c122c7433f023ddc3f9512d002be945bbf46aa082801c013707",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1090293_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_1090293",
+      "source_document": "KAP 1090293",
+      "source_published_at": "2022-12-27T18:10:18+03:00",
+      "source_sha256": "d2e0c8321cdf6c122c7433f023ddc3f9512d002be945bbf46aa082801c013707",
+      "source_path": "registry/oot/source_docs/EYGYO/KAP_1090293_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1090293": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1090293",
+      "published_at": "2022-12-27T18:10:18+03:00",
+      "sha256": "d2e0c8321cdf6c122c7433f023ddc3f9512d002be945bbf46aa082801c013707",
+      "path": "registry/oot/source_docs/EYGYO/KAP_1090293_bildirim.pdf"
+    },
+    "KAP_1089787_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1089787 ek 1",
+      "published_at": "2022-12-26T13:02:41+03:00",
+      "sha256": "8a26d60e964ba5565d76f3632d420bb3bfec442795fb5d711fc41e3abd417e4c",
+      "path": "registry/oot/source_docs/EYGYO/KAP_1089787_ek1.pdf"
+    }
+  }
+}

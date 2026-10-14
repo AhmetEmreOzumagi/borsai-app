@@ -1,0 +1,13 @@
+[ÖLÇTÜM] build_training_table.py klonda: rc 0 | tablo bayt-eşit: True | data_version bayt-eşit: True | data/training_table.csv: 99 rows, sha256 b307cd0e3a015f5d251512541007c5b16f84582
+[ÖLÇTÜM] build_training_table_v2.py --check: rc 0 {"training_table_v2.csv": true, "data_version_v2.json": true}
+[ÖLÇTÜM] build_tufe_csv.py --check: rc 0 {"file": "tufe_genel_2025_100.csv", "identical": true}
+[ÖLÇTÜM] load_dataset: n = 99 through 2026-08-19 dv sha a0c7d082
+[ÖLÇTÜM] load_dataset_v2: n = 170 | kohort: {'H99': 99, 'OOT_OPEN': 71}
+[ÖLÇTÜM] load_pb: n = 99
+[ÖLÇTÜM] Takvim C: calendar_c_bytes() sha == True
+[ÖLÇTÜM] fold BORSK T=2024-02-15 V1_5: n_train=19 test eğitimde=False parametreler bit-eşit (test değeri değiştirilince)=True z bit-eşit=True winsor_f3=['1.76175', '5.818'] max(eğitim D5/D10 seansı)=2023-12-27 < T=True
+[ÖLÇTÜM] fold BORSK T=2024-02-15 CEILING_V1_CLIP: n_train=19 test eğitimde=False parametreler bit-eşit (test değeri değiştirilince)=True z bit-eşit=True winsor_f3=['1.76175', '5.818'] max(eğitim D5/D10 seansı)=2024-01-04 < T=True
+[ÖLÇTÜM] fold AKFIS T=2025-01-23 V1_5: n_train=54 test eğitimde=False parametreler bit-eşit (test değeri değiştirilince)=True z bit-eşit=True winsor_f3=['1.24830', '5.9155'] max(eğitim D5/D10 seansı)=2025-01-20 < T=True
+[ÖLÇTÜM] fold AKFIS T=2025-01-23 CEILING_V1_CLIP: n_train=54 test eğitimde=False parametreler bit-eşit (test değeri değiştirilince)=True z bit-eşit=True winsor_f3=['1.24830', '5.9155'] max(eğitim D5/D10 seansı)=2025-01-27 < T=False
+[ÖLÇTÜM] fold QUICK T=2026-08-06 V1_5: n_train=97 test eğitimde=False parametreler bit-eşit (test değeri değiştirilince)=True z bit-eşit=True winsor_f3=['1.14806', '8.353'] max(eğitim D5/D10 seansı)=2026-08-05 < T=True
+[ÖLÇTÜM] fold QUICK T=2026-08-06 CEILING_V1_CLIP: n_train=95 test eğitimde=False parametreler bit-eşit (test değeri değiştirilince)=True z bit-eşit=True winsor_f3=['1.14806', '8.353'] max(eğitim D5/D10 seansı)=2026-08-12 < T=False

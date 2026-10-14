@@ -1,0 +1,1680 @@
+{
+ "d1_features": {
+  "n_L_ge_1": 81,
+  "n_final": 81,
+  "lock": 70,
+  "ratio_q": [
+   0.0009841,
+   0.004202070588235294,
+   0.5402289349112426
+  ]
+ },
+ "a_ledger_compare": {
+  "status_exact": 87,
+  "lambda_exact": 70,
+  "training_exact": 71,
+  "parent_exact": 71,
+  "n_fit_ok": 70,
+  "max_abs": {
+   "delta_d1_lock": 1.5754064719430971e-12,
+   "delta_d1_turnover": 2.3867574583391615e-12,
+   "d1_clip_p05": 0.0,
+   "d1_clip_p95": 7.993605777301127e-15,
+   "d1_mean_lock": 0.0,
+   "d1_std_lock": 1.1102230246251565e-16,
+   "d1_mean_turnover": 1.7763568394002505e-15,
+   "d1_std_turnover": 1.1102230246251565e-15,
+   "test_d1_turnover_ratio": 0.0,
+   "hazard_1": 1.0654810367327627e-12,
+   "hazard_2": 7.844194044315245e-13,
+   "hazard_3": 7.844194044315245e-13,
+   "hazard_4": 2.3546928296092062e-12,
+   "hazard_5": 2.3546928296092062e-12,
+   "hazard_6": 2.3546928296092062e-12,
+   "hazard_7": 2.3546928296092062e-12,
+   "hazard_8": 2.3546928296092062e-12,
+   "hazard_9": 2.3546928296092062e-12,
+   "hazard_10": 2.3546928296092062e-12,
+   "S_1": 1.0654810367327627e-12,
+   "S_2": 1.8320900352364333e-12,
+   "S_3": 2.5843771567224394e-12,
+   "S_4": 4.7912784850723256e-12,
+   "S_5": 6.857181489294817e-12,
+   "S_6": 8.788747507537664e-12,
+   "S_7": 1.0592415833343694e-11,
+   "S_8": 1.2274292693348343e-11,
+   "S_9": 1.3840262269582126e-11,
+   "S_10": 1.529587567716817e-11,
+   "S_cond_2": 7.843725668976731e-13,
+   "S_cond_3": 1.5540901898702941e-12,
+   "S_cond_4": 3.816058580241588e-12,
+   "S_cond_5": 5.934586155831312e-12,
+   "S_cond_6": 7.916445277089679e-12,
+   "S_cond_7": 9.768075237559515e-12,
+   "S_cond_8": 1.1495915330783646e-11,
+   "S_cond_9": 1.310562769418766e-11,
+   "S_cond_10": 1.460309650980207e-11
+  },
+  "score_table_max_abs": 3.2507330161024584e-13,
+  "parent_max_abs": 4.9541704072453285e-11,
+  "test_lock_exact": 70,
+  "clipped_exact": 70,
+  "columns_exact": 70,
+  "path_status_exact": 70,
+  "path_max_abs": {
+   "h3_median": 0.0,
+   "h3_p_up": 6.636913241209186e-13,
+   "h5_median": 0.0,
+   "h5_p_up": 1.0978995490518173e-12,
+   "h10_median": 0.0,
+   "h10_p_up": 3.745004306665578e-12
+  },
+  "mismatch": []
+ },
+ "d_parity": {
+  "inf_folds": [
+   "AGROT",
+   "MEGMT"
+  ],
+  "inf_scond_max_abs_mine": 3.885780586188048e-16,
+  "inf_scond_max_abs_opus": 0.0,
+  "h1_text_equal": 70,
+  "h1_max_abs_mine": 1.0654810367327627e-12
+ },
+ "b_final_fit": {
+  "lambda": [
+   30.0,
+   30.0
+  ],
+  "lambda_exact": true,
+  "delta_max_abs": 1.1102230246251565e-16,
+  "clip_max_abs": 0.0,
+  "mean_max_abs": 0.0,
+  "std_max_abs": 2.220446049250313e-16,
+  "score_table_max_abs": 2.0372592501871623e-14,
+  "columns": [
+   [
+    "d1_lock",
+    "d1_turnover"
+   ],
+   [
+    "d1_lock",
+    "d1_turnover"
+   ]
+  ],
+  "dropped": [
+   [],
+   []
+  ],
+  "counts": [
+   [
+    81,
+    409,
+    67,
+    342
+   ],
+   [
+    81,
+    409,
+    67,
+    342
+   ]
+  ],
+  "delta_mine": {
+   "d1_lock": -0.3278985872465677,
+   "d1_turnover": 0.25106109793882575
+  },
+  "delta_opus": {
+   "d1_lock": -0.3278985872465678,
+   "d1_turnover": 0.25106109793882575
+  },
+  "grad_max_mine": 2.6645352591003757e-14,
+  "iterations_mine": 4,
+  "score_mine": {
+   "0.1": 0.3951621434326403,
+   "1.0": 0.3939017239475391,
+   "3.0": 0.3918878422819395,
+   "10.0": 0.38870836976179673,
+   "30.0": 0.38788300044658586,
+   "100.0": 0.3932840455421939,
+   "300.0": 0.40058366205586743,
+   "1000.0": 0.40530966208661073,
+   "INF": 0.4079193828377214
+  },
+  "parent_sha256_pinned": "caa4dc867a9fc20d9f57cf6269e157ee1fafc9527c5144e53797bf48af0ffb67",
+  "parent_sha256_file": "caa4dc867a9fc20d9f57cf6269e157ee1fafc9527c5144e53797bf48af0ffb67"
+ },
+ "c_cells": {
+  "printed_match": 28,
+  "checked": 28,
+  "rows": [
+   {
+    "metric": "rps",
+    "comparator": "ceiling_hazard_v0",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.1590592072755851,
+    "rule": 0.16953747911253508,
+    "diff": -0.010478271836950001,
+    "ci": [
+     -0.026399752300526505,
+     0.0058140450163215165
+    ],
+    "wins": 40,
+    "losses": 30,
+    "ties": 0,
+    "counts_tol": [
+     38,
+     30,
+     2
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.1591",
+     "0.1695",
+     "-0.0105",
+     "[-0.0264, +0.0058]",
+     "38 / 30 / 2"
+    ],
+    "match": true,
+    "counts_bit_exact_match": false
+   },
+   {
+    "metric": "rps",
+    "comparator": "base_km_expanding",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.1590592072755851,
+    "rule": 0.20715978464350066,
+    "diff": -0.04810057736791557,
+    "ci": [
+     -0.08915520148769883,
+     -0.004955790950108275
+    ],
+    "wins": 43,
+    "losses": 27,
+    "ties": 0,
+    "counts_tol": [
+     43,
+     27,
+     0
+    ],
+    "verdict": "MODEL",
+    "models_md": [
+     "70 (22)",
+     "0.1591",
+     "0.2072",
+     "-0.0481",
+     "[-0.0892, -0.0050]",
+     "43 / 27 / 0"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "rps",
+    "comparator": "base_km_last10",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.1590592072755851,
+    "rule": 0.21180211809746022,
+    "diff": -0.05274291082187513,
+    "ci": [
+     -0.0933720835121919,
+     -0.011638155282052937
+    ],
+    "wins": 41,
+    "losses": 29,
+    "ties": 0,
+    "counts_tol": [
+     41,
+     29,
+     0
+    ],
+    "verdict": "MODEL",
+    "models_md": [
+     "70 (22)",
+     "0.1591",
+     "0.2118",
+     "-0.0527",
+     "[-0.0934, -0.0116]",
+     "41 / 29 / 0"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "rps",
+    "comparator": "ceiling_hazard_v0@INF",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.1590592072755851,
+    "rule": 0.20070974235045438,
+    "diff": -0.0416505350748693,
+    "ci": [
+     -0.08061334508400794,
+     -0.0009303108436550817
+    ],
+    "wins": 43,
+    "losses": 27,
+    "ties": 0,
+    "counts_tol": [
+     43,
+     27,
+     0
+    ],
+    "verdict": "MODEL",
+    "models_md": [
+     "70 (22)",
+     "0.1591",
+     "0.2007",
+     "-0.0417",
+     "[-0.0806, -0.0009]",
+     "43 / 27 / 0"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "rps",
+    "comparator": "base_always_ceiling__ceiling",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.1590592072755851,
+    "rule": 0.5698412698412698,
+    "diff": -0.4107820625656847,
+    "ci": [
+     -0.5149871677435721,
+     -0.2901626459270072
+    ],
+    "wins": 59,
+    "losses": 11,
+    "ties": 0,
+    "counts_tol": [
+     59,
+     11,
+     0
+    ],
+    "verdict": "MODEL",
+    "models_md": [
+     "70 (22)",
+     "0.1591",
+     "0.5698",
+     "-0.4108",
+     "[-0.5150, -0.2902]",
+     "59 / 11 / 0"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "brier2",
+    "comparator": "ceiling_hazard_v0",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.07841166455938268,
+    "rule": 0.12956631916454395,
+    "diff": -0.05115465460516127,
+    "ci": [
+     -0.10102731830709652,
+     -0.009717350523571394
+    ],
+    "wins": 51,
+    "losses": 18,
+    "ties": 1,
+    "counts_tol": [
+     50,
+     18,
+     2
+    ],
+    "verdict": "MODEL",
+    "models_md": [
+     "70 (22)",
+     "0.0784",
+     "0.1296",
+     "-0.0512",
+     "[-0.1010, -0.0097]",
+     "50 / 18 / 2"
+    ],
+    "match": true,
+    "counts_bit_exact_match": false
+   },
+   {
+    "metric": "brier2",
+    "comparator": "base_km_expanding",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.07841166455938268,
+    "rule": 0.1425835905706641,
+    "diff": -0.06417192601128142,
+    "ci": [
+     -0.11994382423493634,
+     -0.016852010810999064
+    ],
+    "wins": 53,
+    "losses": 17,
+    "ties": 0,
+    "counts_tol": [
+     53,
+     17,
+     0
+    ],
+    "verdict": "MODEL",
+    "models_md": [
+     "70 (22)",
+     "0.0784",
+     "0.1426",
+     "-0.0642",
+     "[-0.1199, -0.0169]",
+     "53 / 17 / 0"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "brier2",
+    "comparator": "base_km_last10",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.07841166455938268,
+    "rule": 0.17,
+    "diff": -0.09158833544061733,
+    "ci": [
+     -0.15300431908069048,
+     -0.03525568010653503
+    ],
+    "wins": 42,
+    "losses": 28,
+    "ties": 0,
+    "counts_tol": [
+     42,
+     28,
+     0
+    ],
+    "verdict": "MODEL",
+    "models_md": [
+     "70 (22)",
+     "0.0784",
+     "0.1700",
+     "-0.0916",
+     "[-0.1530, -0.0353]",
+     "42 / 28 / 0"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "brier2",
+    "comparator": "ceiling_hazard_v0@INF",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.07841166455938268,
+    "rule": 0.14352239598923994,
+    "diff": -0.06511073142985725,
+    "ci": [
+     -0.12997000606970494,
+     -0.011047408097110533
+    ],
+    "wins": 46,
+    "losses": 24,
+    "ties": 0,
+    "counts_tol": [
+     46,
+     24,
+     0
+    ],
+    "verdict": "MODEL",
+    "models_md": [
+     "70 (22)",
+     "0.0784",
+     "0.1435",
+     "-0.0651",
+     "[-0.1300, -0.0110]",
+     "46 / 24 / 0"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "brier2",
+    "comparator": "base_always_ceiling__ceiling",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.07841166455938268,
+    "rule": 0.15714285714285714,
+    "diff": -0.07873119258347445,
+    "ci": [
+     -0.15574342929934717,
+     -0.012932849558934827
+    ],
+    "wins": 11,
+    "losses": 59,
+    "ties": 0,
+    "counts_tol": [
+     11,
+     59,
+     0
+    ],
+    "verdict": "MODEL",
+    "models_md": [
+     "70 (22)",
+     "0.0784",
+     "0.1571",
+     "-0.0787",
+     "[-0.1557, -0.0129]",
+     "11 / 59 / 0"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "brier10",
+    "comparator": "ceiling_hazard_v0",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.14023782353712733,
+    "rule": 0.13071720532568687,
+    "diff": 0.009520618211440448,
+    "ci": [
+     -0.0033658806481028777,
+     0.023329096005552465
+    ],
+    "wins": 34,
+    "losses": 35,
+    "ties": 1,
+    "counts_tol": [
+     33,
+     35,
+     2
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.1402",
+     "0.1307",
+     "+0.0095",
+     "[-0.0034, +0.0233]",
+     "33 / 35 / 2"
+    ],
+    "match": true,
+    "counts_bit_exact_match": false
+   },
+   {
+    "metric": "brier10",
+    "comparator": "base_km_expanding",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.14023782353712733,
+    "rule": 0.1360813737304027,
+    "diff": 0.0041564498067246354,
+    "ci": [
+     -0.04925966223232577,
+     0.06399401425712198
+    ],
+    "wins": 44,
+    "losses": 26,
+    "ties": 0,
+    "counts_tol": [
+     44,
+     26,
+     0
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.1402",
+     "0.1361",
+     "+0.0042",
+     "[-0.0493, +0.0640]",
+     "44 / 26 / 0"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "brier10",
+    "comparator": "base_km_last10",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.14023782353712733,
+    "rule": 0.13496620562623005,
+    "diff": 0.005271617910897267,
+    "ci": [
+     -0.053513333925699014,
+     0.06829757841715034
+    ],
+    "wins": 42,
+    "losses": 28,
+    "ties": 0,
+    "counts_tol": [
+     42,
+     28,
+     0
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.1402",
+     "0.1350",
+     "+0.0053",
+     "[-0.0535, +0.0683]",
+     "42 / 28 / 0"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "brier10",
+    "comparator": "ceiling_hazard_v0@INF",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.14023782353712733,
+    "rule": 0.13643100735186003,
+    "diff": 0.003806816185267274,
+    "ci": [
+     -0.05007829675623507,
+     0.0631202801206399
+    ],
+    "wins": 43,
+    "losses": 27,
+    "ties": 0,
+    "counts_tol": [
+     43,
+     27,
+     0
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.1402",
+     "0.1364",
+     "+0.0038",
+     "[-0.0501, +0.0631]",
+     "43 / 27 / 0"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "brier10",
+    "comparator": "base_always_ceiling__ceiling",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.14023782353712733,
+    "rule": 0.8571428571428571,
+    "diff": -0.7169050336057298,
+    "ci": [
+     -0.8385305220646644,
+     -0.5693486937368435
+    ],
+    "wins": 60,
+    "losses": 10,
+    "ties": 0,
+    "counts_tol": [
+     60,
+     10,
+     0
+    ],
+    "verdict": "MODEL",
+    "models_md": [
+     "70 (22)",
+     "0.1402",
+     "0.8571",
+     "-0.7169",
+     "[-0.8385, -0.5693]",
+     "60 / 10 / 0"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "path_D3_MAE",
+    "comparator": "ceiling_path_v0 (j = 1)",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.04563060255300325,
+    "rule": 0.0690189482943044,
+    "diff": -0.023388345741301154,
+    "ci": [
+     -0.049465923119214036,
+     0.0
+    ],
+    "wins": 8,
+    "losses": 2,
+    "ties": 60,
+    "counts_tol": [
+     8,
+     2,
+     60
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.0456",
+     "0.0690",
+     "-0.0234",
+     "[-0.0495, +0.0000]",
+     "8 / 2 / 60"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "path_D3_Brier",
+    "comparator": "ceiling_path_v0 (j = 1)",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.07165503943261631,
+    "rule": 0.06431847795777516,
+    "diff": 0.007336561474841138,
+    "ci": [
+     -0.028818676502860883,
+     0.05102470383350815
+    ],
+    "wins": 41,
+    "losses": 23,
+    "ties": 6,
+    "counts_tol": [
+     41,
+     23,
+     6
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.0717",
+     "0.0643",
+     "+0.0073",
+     "[-0.0288, +0.0510]",
+     "41 / 23 / 6"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "path_D5_MAE",
+    "comparator": "ceiling_path_v0 (j = 1)",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.17140266851154867,
+    "rule": 0.1799868248195842,
+    "diff": -0.008584156308035558,
+    "ci": [
+     -0.0317092203009504,
+     0.012965995193151694
+    ],
+    "wins": 16,
+    "losses": 18,
+    "ties": 36,
+    "counts_tol": [
+     16,
+     18,
+     36
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.1714",
+     "0.1800",
+     "-0.0086",
+     "[-0.0317, +0.0130]",
+     "16 / 18 / 36"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "path_D5_Brier",
+    "comparator": "ceiling_path_v0 (j = 1)",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.10505180510727816,
+    "rule": 0.100621788424987,
+    "diff": 0.004430016682291161,
+    "ci": [
+     -0.031136100916108307,
+     0.046058231682180865
+    ],
+    "wins": 46,
+    "losses": 23,
+    "ties": 1,
+    "counts_tol": [
+     45,
+     23,
+     2
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.1051",
+     "0.1006",
+     "+0.0044",
+     "[-0.0311, +0.0461]",
+     "45 / 23 / 2"
+    ],
+    "match": true,
+    "counts_bit_exact_match": false
+   },
+   {
+    "metric": "path_D10_MAE",
+    "comparator": "ceiling_path_v0 (j = 1)",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.4992187963838652,
+    "rule": 0.46315918554408486,
+    "diff": 0.0360596108397803,
+    "ci": [
+     0.00019562914967197754,
+     0.07666883632043532
+    ],
+    "wins": 24,
+    "losses": 32,
+    "ties": 14,
+    "counts_tol": [
+     24,
+     32,
+     14
+    ],
+    "verdict": "RULE",
+    "models_md": [
+     "70 (22)",
+     "0.4992",
+     "0.4632",
+     "+0.0361",
+     "[+0.0002, +0.0767]",
+     "24 / 32 / 14"
+    ],
+    "match": true,
+    "counts_bit_exact_match": true
+   },
+   {
+    "metric": "path_D10_Brier",
+    "comparator": "ceiling_path_v0 (j = 1)",
+    "n": 70,
+    "n_months": 22,
+    "model": 0.15876778927752802,
+    "rule": 0.16252023663565598,
+    "diff": -0.003752447358127964,
+    "ci": [
+     -0.020293396569660782,
+     0.015299374275909149
+    ],
+    "wins": 46,
+    "losses": 23,
+    "ties": 1,
+    "counts_tol": [
+     45,
+     23,
+     2
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.1588",
+     "0.1625",
+     "-0.0038",
+     "[-0.0203, +0.0153]",
+     "45 / 23 / 2"
+    ],
+    "match": true,
+    "counts_bit_exact_match": false
+   },
+   {
+    "metric": "brier3 (keşif)",
+    "comparator": "ceiling_hazard_v0",
+    "n": 70,
+    "model": 0.11225806074607156,
+    "rule": 0.14642175868684768,
+    "diff": -0.03416369794077612,
+    "ci": [
+     -0.07454915118508254,
+     0.0041734727748612655
+    ],
+    "wins": 47,
+    "losses": 22,
+    "ties": 1,
+    "counts_tol": [
+     46,
+     22,
+     2
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.1123",
+     "0.1464",
+     "-0.0342",
+     "[-0.0745, +0.0042]",
+     "46 / 22 / 2"
+    ],
+    "match": true,
+    "counts_bit_exact_match": false
+   },
+   {
+    "metric": "brier4 (keşif)",
+    "comparator": "ceiling_hazard_v0",
+    "n": 70,
+    "model": 0.16798890178035294,
+    "rule": 0.191266059548941,
+    "diff": -0.023277157768588037,
+    "ci": [
+     -0.04297499973496642,
+     -0.0012968727899586416
+    ],
+    "wins": 53,
+    "losses": 17,
+    "ties": 0,
+    "counts_tol": [
+     51,
+     17,
+     2
+    ],
+    "verdict": "MODEL",
+    "models_md": [
+     "70 (22)",
+     "0.1680",
+     "0.1913",
+     "-0.0233",
+     "[-0.0430, -0.0013]",
+     "51 / 17 / 2"
+    ],
+    "match": true,
+    "counts_bit_exact_match": false
+   },
+   {
+    "metric": "brier5 (keşif)",
+    "comparator": "ceiling_hazard_v0",
+    "n": 70,
+    "model": 0.21290374415984165,
+    "rule": 0.22508514012098932,
+    "diff": -0.012181395961147683,
+    "ci": [
+     -0.02527605240526061,
+     0.005258734579100954
+    ],
+    "wins": 49,
+    "losses": 21,
+    "ties": 0,
+    "counts_tol": [
+     47,
+     21,
+     2
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.2129",
+     "0.2251",
+     "-0.0122",
+     "[-0.0253, +0.0053]",
+     "47 / 21 / 2"
+    ],
+    "match": true,
+    "counts_bit_exact_match": false
+   },
+   {
+    "metric": "brier6 (keşif)",
+    "comparator": "ceiling_hazard_v0",
+    "n": 70,
+    "model": 0.20128425901603955,
+    "rule": 0.1989030221137632,
+    "diff": 0.002381236902276354,
+    "ci": [
+     -0.011691934721349077,
+     0.021202035363439772
+    ],
+    "wins": 43,
+    "losses": 26,
+    "ties": 1,
+    "counts_tol": [
+     42,
+     26,
+     2
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.2013",
+     "0.1989",
+     "+0.0024",
+     "[-0.0117, +0.0212]",
+     "42 / 26 / 2"
+    ],
+    "match": true,
+    "counts_bit_exact_match": false
+   },
+   {
+    "metric": "brier7 (keşif)",
+    "comparator": "ceiling_hazard_v0",
+    "n": 70,
+    "model": 0.18437957852380382,
+    "rule": 0.18334627508021406,
+    "diff": 0.001033303443589767,
+    "ci": [
+     -0.012863145379855423,
+     0.01706041809620467
+    ],
+    "wins": 42,
+    "losses": 28,
+    "ties": 0,
+    "counts_tol": [
+     40,
+     28,
+     2
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.1844",
+     "0.1833",
+     "+0.0010",
+     "[-0.0129, +0.0171]",
+     "40 / 28 / 2"
+    ],
+    "match": true,
+    "counts_bit_exact_match": false
+   },
+   {
+    "metric": "brier8 (keşif)",
+    "comparator": "ceiling_hazard_v0",
+    "n": 70,
+    "model": 0.17397295486060738,
+    "rule": 0.16975015254836132,
+    "diff": 0.004222802312246056,
+    "ci": [
+     -0.009124241279362481,
+     0.02066376018177875
+    ],
+    "wins": 40,
+    "losses": 30,
+    "ties": 0,
+    "counts_tol": [
+     38,
+     30,
+     2
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.1740",
+     "0.1698",
+     "+0.0042",
+     "[-0.0091, +0.0207]",
+     "38 / 30 / 2"
+    ],
+    "match": true,
+    "counts_bit_exact_match": false
+   },
+   {
+    "metric": "brier9 (keşif)",
+    "comparator": "ceiling_hazard_v0",
+    "n": 70,
+    "model": 0.16009587829703892,
+    "rule": 0.15078137942346848,
+    "diff": 0.009314498873570455,
+    "ci": [
+     -0.0047101718537818325,
+     0.0243307931090115
+    ],
+    "wins": 37,
+    "losses": 33,
+    "ties": 0,
+    "counts_tol": [
+     35,
+     33,
+     2
+    ],
+    "verdict": "AYIRT_EDILEMIYOR",
+    "models_md": [
+     "70 (22)",
+     "0.1601",
+     "0.1508",
+     "+0.0093",
+     "[-0.0047, +0.0243]",
+     "35 / 33 / 2"
+    ],
+    "match": true,
+    "counts_bit_exact_match": false
+   }
+  ],
+  "mismatch": []
+ },
+ "calibration": {
+  "n": 70,
+  "mean_h2": 0.15564852043578795,
+  "observed_break_d2": 0.15714285714285714,
+  "cmp_mean_h2": 0.09163876604802164,
+  "k": {
+   "2": {
+    "model": 0.8443514795642121,
+    "comparator": 0.9083612339519783,
+    "observed": 0.8428571428571429
+   },
+   "3": {
+    "model": 0.7595288892589648,
+    "comparator": 0.8316344180503764,
+    "observed": 0.7857142857142857
+   },
+   "5": {
+    "model": 0.5023894493326388,
+    "comparator": 0.5308957026875486,
+    "observed": 0.45714285714285713
+   },
+   "10": {
+    "model": 0.24946885039609332,
+    "comparator": 0.23580609724250937,
+    "observed": 0.14285714285714285
+   }
+  }
+ },
+ "d_evaluation": {
+  "rows18": [
+   {
+    "row": "RPS_1 vs ceiling_hazard_v0 (BİRİNCİL)",
+    "expected": [
+     -0.02,
+     0.003
+    ],
+    "got": -0.010478271836950001,
+    "ci": [
+     -0.026399752300526505,
+     0.0058140450163215165
+    ],
+    "label": "tuttu"
+   },
+   {
+    "row": "RPS_1 vs @INF",
+    "expected": [
+     -0.055,
+     -0.015
+    ],
+    "got": -0.0416505350748693,
+    "ci": [
+     -0.08061334508400794,
+     -0.0009303108436550817
+    ],
+    "label": "tuttu"
+   },
+   {
+    "row": "RPS_1 vs base_km_expanding",
+    "expected": [
+     -0.06,
+     -0.02
+    ],
+    "got": -0.04810057736791557,
+    "ci": [
+     -0.08915520148769883,
+     -0.004955790950108275
+    ],
+    "label": "tuttu"
+   },
+   {
+    "row": "RPS_1 vs base_km_last10",
+    "expected": [
+     -0.065,
+     -0.025
+    ],
+    "got": -0.05274291082187513,
+    "ci": [
+     -0.0933720835121919,
+     -0.011638155282052937
+    ],
+    "label": "tuttu"
+   },
+   {
+    "row": "RPS_1 vs her-zaman-tavan",
+    "expected": [
+     -0.42,
+     -0.36
+    ],
+    "got": -0.4107820625656847,
+    "ci": [
+     -0.5149871677435721,
+     -0.2901626459270072
+    ],
+    "label": "tuttu"
+   },
+   {
+    "row": "Brier k=2 vs ceiling_hazard_v0",
+    "expected": [
+     -0.025,
+     0.0
+    ],
+    "got": -0.05115465460516127,
+    "ci": [
+     -0.10102731830709652,
+     -0.009717350523571394
+    ],
+    "label": "tutmadı (daha iyi)"
+   },
+   {
+    "row": "Brier k=2 vs @INF",
+    "expected": [
+     -0.04,
+     -0.01
+    ],
+    "got": -0.06511073142985725,
+    "ci": [
+     -0.12997000606970494,
+     -0.011047408097110533
+    ],
+    "label": "tutmadı (daha iyi)"
+   },
+   {
+    "row": "Brier k=2 vs base_km_last10",
+    "expected": [
+     -0.065,
+     -0.03
+    ],
+    "got": -0.09158833544061733,
+    "ci": [
+     -0.15300431908069048,
+     -0.03525568010653503
+    ],
+    "label": "tutmadı (daha iyi)"
+   },
+   {
+    "row": "Brier k=10 vs ceiling_hazard_v0",
+    "expected": [
+     -0.006,
+     0.006
+    ],
+    "got": 0.009520618211440448,
+    "ci": [
+     -0.0033658806481028777,
+     0.023329096005552465
+    ],
+    "label": "tutmadı (daha kötü)"
+   },
+   {
+    "row": "Brier k=3 (keşif) vs ceiling_hazard_v0",
+    "expected": [
+     -0.02,
+     0.003
+    ],
+    "got": -0.03416369794077612,
+    "ci": [
+     -0.07454915118508254,
+     0.0041734727748612655
+    ],
+    "label": "tutmadı (daha iyi)"
+   },
+   {
+    "row": "path h=5 MAE",
+    "expected": [
+     -0.015,
+     0.005
+    ],
+    "got": -0.008584156308035558,
+    "ci": [
+     -0.0317092203009504,
+     0.012965995193151694
+    ],
+    "label": "tuttu"
+   },
+   {
+    "row": "path h=3 p_up Brier",
+    "expected": [
+     -0.015,
+     0.005
+    ],
+    "got": 0.007336561474841138,
+    "ci": [
+     -0.028818676502860883,
+     0.05102470383350815
+    ],
+    "label": "tutmadı (daha kötü)"
+   },
+   {
+    "row": "Kalibrasyon |ort(h_2) − gözlenen| ≤ 0.05",
+    "got": -0.0014943367070691937,
+    "label": "tuttu"
+   },
+   {
+    "row": "λ nihai fit 10–100 en olası; INF olası",
+    "got": 30.0,
+    "label": "tuttu"
+   },
+   {
+    "row": "λ fold'lar: erken fold'larda INF; %20–50'sinde INF",
+    "got": "INF 2/70 (3%); ilk 20'de 2",
+    "label": "tutmadı"
+   },
+   {
+    "row": "δ_lock < 0 (nihai; λ<INF fold'ların ≥ %80'i)",
+    "got": "nihai -0.3279; 63/63",
+    "label": "tuttu"
+   },
+   {
+    "row": "δ_turn > 0 (nihai)",
+    "got": 0.25106109793882575,
+    "label": "tuttu"
+   },
+   {
+    "row": "n (fold) 65–71",
+    "got": 70,
+    "label": "tuttu"
+   }
+  ],
+  "labels": {
+   "tuttu": 11,
+   "tutmadı": 7
+  },
+  "too_good": {
+   "primary_diff_lt_-0.040": false,
+   "primary_ci_hi_lt_-0.020": false,
+   "brier2_diff_lt_-0.040": true
+  },
+  "failures": {
+   "a": false,
+   "b": false,
+   "c": false,
+   "d": false
+  },
+  "live_flow": "kurulur",
+  "lambda_counts": {
+   "INF": 2,
+   "3.0": 22,
+   "30.0": 32,
+   "10.0": 14
+  },
+  "early20_inf": 2,
+  "lock_neg": [
+   63,
+   63
+  ],
+  "turn_pos": [
+   68,
+   68
+  ],
+  "gains": {
+   "rps": -0.010478271836950001,
+   "brier2": -0.05115465460516127,
+   "brier3": -0.03416369794077612,
+   "brier10": 0.009520618211440448
+  },
+  "final_lambda": 30.0
+ },
+ "diagnosis": {
+  "by_lock": {
+   "kilitli": {
+    "n": 59,
+    "mean_diff": 0.00046385312064402696,
+    "sum_diff": 0.02736733411799759,
+    "share": -0.007642743734446951
+   },
+   "kilitsiz": {
+    "n": 11,
+    "mean_diff": -0.3280175596799351,
+    "sum_diff": -3.6081931564792864,
+    "share": 1.007642743734447
+   }
+  },
+  "d2_kilitli": {
+   "n": 59,
+   "observed_break": 0.03389830508474576,
+   "model_mean_h2": 0.08108542883704907,
+   "comparator_mean_h2": 0.07994742222544758
+  },
+  "d2_kilitsiz": {
+   "n": 11,
+   "observed_break": 0.8181818181818182,
+   "model_mean_h2": 0.5555778299199328,
+   "comparator_mean_h2": 0.1543468829145552
+  },
+  "murphy_model": {
+   "brier": 0.07841166455938268,
+   "reliability": 0.0400458480603296,
+   "resolution": 0.09429229756418696,
+   "uncertainty": 0.13244897959183674,
+   "n_groups": 13
+  },
+  "murphy_comparator": {
+   "brier": 0.12956631916454395,
+   "reliability": 0.012175854660281142,
+   "resolution": 0.013442932728647014,
+   "uncertainty": 0.13244897959183674,
+   "n_groups": 7
+  },
+  "murphy_model_lockbins": {
+   "brier": 0.07841166455938268,
+   "reliability": 2.2330421940944014e-06,
+   "resolution": 0.0,
+   "uncertainty": 0.13244897959183674,
+   "n_groups": 1
+  },
+  "murphy_comparator_lockbins": {
+   "brier": 0.12956631916454395,
+   "reliability": 0.004290785950160508,
+   "resolution": 0.0,
+   "uncertainty": 0.13244897959183674,
+   "n_groups": 1
+  },
+  "mean_bias_sq": {
+   "model": 2.2330421940944014e-06,
+   "comparator": 0.004290785950160508
+  },
+  "comparator_recalibrated_brier": 0.12527553321438345,
+  "by_year": {
+   "2023": {
+    "n": 7,
+    "mean_diff": -0.001196618291375921,
+    "sum_diff": -0.008376328039631446
+   },
+   "2024": {
+    "n": 27,
+    "mean_diff": -0.06340102668701462,
+    "sum_diff": -1.711827720549395
+   },
+   "2025": {
+    "n": 12,
+    "mean_diff": -0.09498929491679738,
+    "sum_diff": -1.1398715390015686
+   },
+   "2026": {
+    "n": 24,
+    "mean_diff": -0.03003125978211225,
+    "sum_diff": -0.720750234770694
+   }
+  },
+  "top10": [
+   {
+    "ticker": "SMRVA",
+    "ftd": "2024-12-18",
+    "L": 1,
+    "lock": 0,
+    "turnover_ratio": 0.3799167142857143,
+    "h2_model": 0.6058632344045152,
+    "h2_cmp": 0.07511342149762645,
+    "diff": -0.700071393099757
+   },
+   {
+    "ticker": "EGEGY",
+    "ftd": "2025-01-14",
+    "L": 1,
+    "lock": 0,
+    "turnover_ratio": 0.3987775163398693,
+    "h2_model": 0.7536034246363251,
+    "h2_cmp": 0.1290945806981676,
+    "diff": -0.6977649770183534
+   },
+   {
+    "ticker": "BIGEN",
+    "ftd": "2025-02-05",
+    "L": 1,
+    "lock": 0,
+    "turnover_ratio": 0.6939714718614719,
+    "h2_model": 0.7862463063668658,
+    "h2_cmp": 0.18706363779045865,
+    "diff": -0.6151748874606748
+   },
+   {
+    "ticker": "LILAK",
+    "ftd": "2024-05-09",
+    "L": 1,
+    "lock": 0,
+    "turnover_ratio": 0.7542810333333333,
+    "h2_model": 0.6366524528097994,
+    "h2_cmp": 0.19247336631165668,
+    "diff": -0.5200778240668928
+   },
+   {
+    "ticker": "MOPAS",
+    "ftd": "2025-01-29",
+    "L": 1,
+    "lock": 0,
+    "turnover_ratio": 0.3426866387580673,
+    "h2_model": 0.8672463986909131,
+    "h2_cmp": 0.27423528678362463,
+    "diff": -0.5091109002895156
+   },
+   {
+    "ticker": "KOTON",
+    "ftd": "2024-05-10",
+    "L": 1,
+    "lock": 0,
+    "turnover_ratio": 0.1685647730600293,
+    "h2_model": 0.6657464541082192,
+    "h2_cmp": 0.21289962526320516,
+    "diff": -0.5078015669695741
+   },
+   {
+    "ticker": "ORZAX",
+    "ftd": "2026-07-07",
+    "L": 1,
+    "lock": 0,
+    "turnover_ratio": 0.5310468,
+    "h2_model": 0.3932501963373216,
+    "h2_cmp": 0.14636027896129777,
+    "diff": -0.3605554490903346
+   },
+   {
+    "ticker": "SOHOE",
+    "ftd": "2026-07-06",
+    "L": 1,
+    "lock": 0,
+    "turnover_ratio": 1.96373002,
+    "h2_model": 0.35826527707301564,
+    "h2_cmp": 0.12861056854726305,
+    "diff": -0.34749608663735077
+   },
+   {
+    "ticker": "RGYAS",
+    "ftd": "2024-04-26",
+    "L": 1,
+    "lock": 1,
+    "turnover_ratio": 0.026514826523010602,
+    "h2_model": 0.11263699427810385,
+    "h2_cmp": 0.09039053193534696,
+    "diff": -0.0399762804690631
+   },
+   {
+    "ticker": "GENKM",
+    "ftd": "2026-03-06",
+    "L": 5,
+    "lock": 1,
+    "turnover_ratio": 0.0014699267091193078,
+    "h2_model": 0.12308620430030848,
+    "h2_cmp": 0.16173410651989573,
+    "diff": -0.011007707522731698
+   }
+  ],
+  "k10": {
+   "by_L10": {
+    "L=10": {
+     "n": 10,
+     "sum_diff": -0.26513047104845183,
+     "mean_diff": -0.026513047104845183
+    },
+    "L<10": {
+     "n": 60,
+     "sum_diff": 0.9315737458492833,
+     "mean_diff": 0.015526229097488055
+    }
+   },
+   "by_lock": {
+    "kilitli": {
+     "n": 59,
+     "sum_diff": 0.7365709046076365,
+     "mean_diff": 0.012484252620468416
+    },
+    "kilitsiz": {
+     "n": 11,
+     "sum_diff": -0.07012762980680505,
+     "mean_diff": -0.006375239073345914
+    }
+   }
+  },
+  "path_d10": {
+   "by_L10": {
+    "L=10": {
+     "n": 10,
+     "sum_diff": -0.5442235575022694,
+     "mean_diff": -0.054422355750226935
+    },
+    "L<10": {
+     "n": 60,
+     "sum_diff": 3.0683963162868904,
+     "mean_diff": 0.051139938604781505
+    }
+   },
+   "median_eq_rho10": {
+    "model": 16,
+    "comparator": 10
+   }
+  }
+ },
+ "sensitivity": {
+  "lock_only": {
+   "columns": [
+    "d1_lock"
+   ],
+   "primary": {
+    "n": 70,
+    "n_months": 22,
+    "model": 0.16211302372420944,
+    "rule": 0.16953747911253508,
+    "diff": -0.007424455388325655,
+    "ci": [
+     -0.022746651881750072,
+     0.008213742780141312
+    ],
+    "wins": 30,
+    "losses": 38,
+    "ties": 2,
+    "wins_tol": 28,
+    "losses_tol": 35,
+    "ties_tol": 7,
+    "verdict": "AYIRT_EDILEMIYOR"
+   },
+   "brier2": {
+    "n": 70,
+    "n_months": 22,
+    "model": 0.0734210571324768,
+    "rule": 0.12956631916454395,
+    "diff": -0.05614526203206714,
+    "ci": [
+     -0.10883202212015977,
+     -0.012462413809720843
+    ],
+    "wins": 62,
+    "losses": 3,
+    "ties": 5,
+    "wins_tol": 60,
+    "losses_tol": 3,
+    "ties_tol": 7,
+    "verdict": "MODEL"
+   },
+   "brier10": {
+    "n": 70,
+    "n_months": 22,
+    "model": 0.1477747740843811,
+    "rule": 0.13071720532568687,
+    "diff": 0.017057568758694235,
+    "ci": [
+     0.005699883792332304,
+     0.030150204849408082
+    ],
+    "wins": 20,
+    "losses": 47,
+    "ties": 3,
+    "wins_tol": 19,
+    "losses_tol": 44,
+    "ties_tol": 7,
+    "verdict": "RULE"
+   },
+   "lambda_counts": {
+    "INF": 7,
+    "3.0": 15,
+    "10.0": 28,
+    "0.1": 19,
+    "1.0": 1
+   },
+   "n_fit_ok": 70,
+   "seconds": 9.494885206222534
+  },
+  "turnover_only": {
+   "columns": [
+    "d1_turnover"
+   ],
+   "primary": {
+    "n": 70,
+    "n_months": 22,
+    "model": 0.16313514415091157,
+    "rule": 0.16953747911253508,
+    "diff": -0.006402334961623517,
+    "ci": [
+     -0.020549138268792747,
+     0.00934320959024679
+    ],
+    "wins": 40,
+    "losses": 30,
+    "ties": 0,
+    "wins_tol": 38,
+    "losses_tol": 30,
+    "ties_tol": 2,
+    "verdict": "AYIRT_EDILEMIYOR"
+   },
+   "brier2": {
+    "n": 70,
+    "n_months": 22,
+    "model": 0.10436856800441945,
+    "rule": 0.12956631916454395,
+    "diff": -0.025197751160124498,
+    "ci": [
+     -0.05912898968994451,
+     -0.0009900468948875194
+    ],
+    "wins": 43,
+    "losses": 26,
+    "ties": 1,
+    "wins_tol": 42,
+    "losses_tol": 26,
+    "ties_tol": 2,
+    "verdict": "MODEL"
+   },
+   "brier10": {
+    "n": 70,
+    "n_months": 22,
+    "model": 0.1330015796587573,
+    "rule": 0.13071720532568687,
+    "diff": 0.0022843743330704476,
+    "ci": [
+     -0.012452696523327407,
+     0.017990534205330963
+    ],
+    "wins": 42,
+    "losses": 27,
+    "ties": 1,
+    "wins_tol": 41,
+    "losses_tol": 27,
+    "ties_tol": 2,
+    "verdict": "AYIRT_EDILEMIYOR"
+   },
+   "lambda_counts": {
+    "INF": 2,
+    "3.0": 19,
+    "30.0": 32,
+    "10.0": 10,
+    "1.0": 7
+   },
+   "n_fit_ok": 70,
+   "seconds": 7.843261957168579
+  }
+ },
+ "inputs_sha256": {
+  "data/training_table.csv": "b307cd0e3a015f5d251512541007c5b16f8458224ab047e493c01551ccda7fb5",
+  "data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_session_outcomes.csv": "eca620d3a5e8fed0b118bab556da5ce519257a4b2e14efcd22065f5bcdc93da9",
+  "data/raw/HISTORICAL99_FROZEN_COHORT_V1_canonical_pretrade_master.csv": "6011917a549a4ac638ef4a70948ea8904be1244f9b894b10b370ae8a691b6d0a",
+  "models/ceiling_hazard_v0.json": "caa4dc867a9fc20d9f57cf6269e157ee1fafc9527c5144e53797bf48af0ffb67",
+  "tests/reference/macos_golden_faz5/post_d1_hazard_v0_fold_ledger.csv": "579cf2ae4a359ea7e40a9d7f764a5e781a8b00af7c2c1bb17b7fee2a981397e4",
+  "tests/reference/macos_golden_faz5/post_d1_hazard_v0_final_fit_preview.json": "3054f97da8d3fead3c9358bf268811693b382e01057ca7a4a230500d42a6e959",
+  "faz1b:ceiling_hazard_v0": "976b4dcea9819160bf863873a0a3e3a639942bdfeec6f9229e015047c904665b",
+  "faz1b:ceiling_hazard_v0@INF": "90b610463de417c702cfae8032957aa4745aefcb4814a2745459da90bddb2f93",
+  "faz1b:base_km_expanding": "ed1b8821a0c5faac6a068402d545aa67810d53d2e523f8062100cec81c45017f",
+  "faz1b:base_km_last10": "6d605dd02b7c1a4232a1299bac91a266cc4ee1df2e9446ce995fcea15fa7c26d",
+  "faz1b:base_always_ceiling__ceiling": "f03bf949afa2074044431a12d3821efc9f801caa1744255c076dbb3439d3b08b"
+ },
+ "seconds": 63.390055894851685
+}

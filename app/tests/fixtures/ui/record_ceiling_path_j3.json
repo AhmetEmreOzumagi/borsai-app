@@ -1,0 +1,3441 @@
+{
+  "ticker": "SNTA1",
+  "file": "20300105T100000Z_aaaaaaaaaaaa.json",
+  "rel_path": "registry/records/SNTA1/20300105T100000Z_aaaaaaaaaaaa.json",
+  "recorded_at_istanbul": "2030-01-05T13:00:00+03:00",
+  "first_trading_date": "2030-01-10",
+  "ipo_price_tl": "25.52",
+  "models": [
+    {
+      "model_id": "ceiling_hazard_v0",
+      "params_sha256": "caa4dc867a9fc20d9f57cf6269e157ee1fafc9527c5144e53797bf48af0ffb67",
+      "status": "PREDICTED",
+      "has_s": true
+    },
+    {
+      "model_id": "ceiling_hazard_v0@INF",
+      "params_sha256": "c5ac8085fd76b5bcdee328e51a4114ef85d5cae1cab23b51ea9b1232bc660c7e",
+      "status": "PREDICTED",
+      "has_s": true
+    },
+    {
+      "model_id": "pb_ceiling_v0",
+      "params_sha256": "7fb7a41e48ea2259acbbfc754063be3dbdd23525aff34b574278b3f00dcbc5aa",
+      "status": "PREDICTED",
+      "has_s": true
+    },
+    {
+      "model_id": "pb_ceiling_v0@INF",
+      "params_sha256": "6a5be1b952f5c7e01b0c55d366f6e3b50345ce7fe6021f9f70df60bf43b94aa0",
+      "status": "PREDICTED",
+      "has_s": true
+    },
+    {
+      "model_id": "base_km_expanding",
+      "params_sha256": "8120c274de6fcf49dd880c9ce8e2639976d6a8a7daaae79e32d2ac6218f39722",
+      "status": "PREDICTED",
+      "has_s": true
+    },
+    {
+      "model_id": "base_km_last10",
+      "params_sha256": "4bd27e6a5484d5e9161e2c65f5b104f5cad864e9f1cc7307ff2051917ea77537",
+      "status": "PREDICTED",
+      "has_s": true
+    },
+    {
+      "model_id": "ceiling_path_v0",
+      "params_sha256": "3e97e8788266f807a06604316d562de939a3e84ab6fcc9c0be1ce87790c6952d",
+      "status": "PREDICTED",
+      "has_s": true
+    },
+    {
+      "model_id": "ceiling_path_v0@INF",
+      "params_sha256": "5e3692a82e254b6c78ec1b82d626f3560ae5568098b111d39979609e41f06abd",
+      "status": "PREDICTED",
+      "has_s": true
+    },
+    {
+      "model_id": "pb_ceiling_path_v0",
+      "params_sha256": "3d1e2f41f5d098ab228ff9c51ce61a5d31741766b3cdeebd8cc651e7ce34e03d",
+      "status": "PREDICTED",
+      "has_s": true
+    },
+    {
+      "model_id": "ceiling_hazard_v1_clip",
+      "params_sha256": "f3a147535242f8bde381ea68113f295f0a7dcdb5dd8a1046a3c1a55b0308241d",
+      "status": "PREDICTED",
+      "has_s": true
+    },
+    {
+      "model_id": "ceiling_hazard_v1_pooled@INF",
+      "params_sha256": "7d7c9d1ee5a6a0c255fcf98103f872239439436a9e2da478601837d5eaf3f361",
+      "status": "PREDICTED",
+      "has_s": true
+    }
+  ],
+  "unsupported_models": [],
+  "path_models": [
+    {
+      "model_id": "ceiling_path_v0",
+      "params_sha256": "3e97e8788266f807a06604316d562de939a3e84ab6fcc9c0be1ce87790c6952d",
+      "status": "PREDICTED",
+      "sha_matches_embedded": true,
+      "refusal": null,
+      "output": {
+        "D1": {
+          "S_h": 0.8175634299692183,
+          "limit_path_return": 0.09952978056426333,
+          "mean": 0.07709567583096949,
+          "n_atoms": 19,
+          "p_limit_path": 0.8175634299692183,
+          "p_up": 0.898646349982899,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 1,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.00043782837127845885,
+          "q50": 0.09952978056426333,
+          "q90": 0.09952978056426333,
+          "return": 0.09952978056426333
+        },
+        "D10": {
+          "S_h": 0.035975871092011766,
+          "limit_path_return": 1.588166144200627,
+          "mean": 0.3005337581469393,
+          "n_atoms": 406,
+          "p_limit_path": 0.035975871092011766,
+          "p_up": 0.6785214685463904,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 10,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    10
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 9,
+                "n": 11,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    9
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 8,
+                "n": 15,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.198,
+          "q50": 0.13237578716675458,
+          "q90": 1.1183619671864191,
+          "return": 0.13237578716675458
+        },
+        "D2": {
+          "S_h": 0.7052713966098082,
+          "limit_path_return": 0.20924764890282133,
+          "mean": 0.14080351613763264,
+          "n_atoms": 86,
+          "p_limit_path": 0.7052713966098082,
+          "p_up": 0.8079042370533096,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 2,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.02105862265224815,
+          "q50": 0.20924764890282133,
+          "q90": 0.20924764890282133,
+          "return": 0.20924764890282133
+        },
+        "D3": {
+          "S_h": 0.6084026323127945,
+          "limit_path_return": 0.3299373040752351,
+          "mean": 0.19832599397690945,
+          "n_atoms": 150,
+          "p_limit_path": 0.6084026323127945,
+          "p_up": 0.7896769321476681,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 3,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.10829733466355373,
+          "q50": 0.3299373040752351,
+          "q90": 0.3299373040752351,
+          "return": 0.3299373040752351
+        },
+        "D4": {
+          "S_h": 0.40619711275335146,
+          "limit_path_return": 0.46238244514106586,
+          "mean": 0.22715968620897645,
+          "n_atoms": 210,
+          "p_limit_path": 0.40619711275335146,
+          "p_up": 0.7484313222338793,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 4,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.16066666666666668,
+          "q50": 0.23339013136559905,
+          "q90": 0.46238244514106586,
+          "return": 0.23339013136559905
+        },
+        "D5": {
+          "S_h": 0.27119556301382086,
+          "limit_path_return": 0.6081504702194357,
+          "mean": 0.2445098577558746,
+          "n_atoms": 264,
+          "p_limit_path": 0.27119556301382086,
+          "p_up": 0.7435660232957169,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 5,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.1618195426085023,
+          "q50": 0.23606438376760774,
+          "q90": 0.6081504702194357,
+          "return": 0.23606438376760774
+        },
+        "D6": {
+          "S_h": 0.18106242287113955,
+          "limit_path_return": 0.7688087774294671,
+          "mean": 0.2566643432322472,
+          "n_atoms": 312,
+          "p_limit_path": 0.18106242287113955,
+          "p_up": 0.7025741869957272,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 6,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.17103231180444778,
+          "q50": 0.18860308326534136,
+          "q90": 0.7688087774294671,
+          "return": 0.18860308326534136
+        },
+        "D7": {
+          "S_h": 0.1208854621795439,
+          "limit_path_return": 0.945141065830721,
+          "mean": 0.2725464015535538,
+          "n_atoms": 352,
+          "p_limit_path": 0.1208854621795439,
+          "p_up": 0.723057583253285,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 7,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.1757142857142857,
+          "q50": 0.17607960231925301,
+          "q90": 0.945141065830721,
+          "return": 0.17607960231925301
+        },
+        "D8": {
+          "S_h": 0.08070860167800852,
+          "limit_path_return": 1.1394984326018809,
+          "mean": 0.2881395055029178,
+          "n_atoms": 380,
+          "p_limit_path": 0.08070860167800852,
+          "p_up": 0.6768529678196661,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 8,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.18973471741637832,
+          "q50": 0.16841591010869994,
+          "q90": 0.9583511630113406,
+          "return": 0.16841591010869994
+        },
+        "D9": {
+          "S_h": 0.053884712581441487,
+          "limit_path_return": 1.3530564263322884,
+          "mean": 0.29151769407317707,
+          "n_atoms": 395,
+          "p_limit_path": 0.053884712581441487,
+          "p_up": 0.6614698818063575,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 9,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    9
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 8,
+                "n": 15,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.18181541798920997,
+          "q50": 0.12786799976882635,
+          "q90": 0.9766597815770077,
+          "return": 0.12786799976882635
+        },
+        "P_L": [
+          0.18243657003078173,
+          0.11229203335941007,
+          0.09686876429701374,
+          0.202205519559443,
+          0.1350015497395306,
+          0.09013314014268131,
+          0.06017696069159564,
+          0.04017686050153539,
+          0.02682388909656703,
+          0.01790884148942972,
+          0.035975871092011766
+        ],
+        "P_close_ceiling": [
+          0.8175634299692183,
+          0.7095635607368498,
+          0.6141055065995014,
+          0.41484472761616675,
+          0.3754315464432395,
+          0.2981895414604998,
+          0.24661928561200447,
+          0.21218865050778168,
+          0.1892012013633981,
+          0.1738537406916426
+        ],
+        "S": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625
+        ],
+        "clipped": false,
+        "hazard": [
+          0.18243657003078176,
+          0.13734962847303217,
+          0.13734962847303217,
+          0.33235477432235083,
+          0.33235477432235083,
+          0.33235477432235083,
+          0.33235477432235083,
+          0.33235477432235083,
+          0.33235477432235083,
+          0.33235477432235083
+        ],
+        "limit_path": {
+          "C": [
+            "28.06",
+            "30.86",
+            "33.94",
+            "37.32",
+            "41.04",
+            "45.14",
+            "49.64",
+            "54.60",
+            "60.05",
+            "66.05"
+          ],
+          "ipo_price": "25.52",
+          "rho": [
+            0.09952978056426333,
+            0.20924764890282133,
+            0.3299373040752351,
+            0.46238244514106586,
+            0.6081504702194357,
+            0.7688087774294671,
+            0.945141065830721,
+            1.1394984326018809,
+            1.3530564263322884,
+            1.588166144200627
+          ],
+          "snapped_ipo_price": "25.52",
+          "tick": "0.02"
+        },
+        "model_id": "ceiling_path_v0",
+        "refused": null,
+        "warnings": []
+      }
+    },
+    {
+      "model_id": "ceiling_path_v0@INF",
+      "params_sha256": "5e3692a82e254b6c78ec1b82d626f3560ae5568098b111d39979609e41f06abd",
+      "status": "PREDICTED",
+      "sha_matches_embedded": true,
+      "refusal": null,
+      "output": {
+        "D1": {
+          "S_h": 0.8316326530612245,
+          "limit_path_return": 0.09952978056426333,
+          "mean": 0.07882575891852638,
+          "n_atoms": 19,
+          "p_limit_path": 0.8316326530612245,
+          "p_up": 0.9064625850340136,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 1,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": 0.0005,
+          "q50": 0.09952978056426333,
+          "q90": 0.09952978056426333,
+          "return": 0.09952978056426333
+        },
+        "D10": {
+          "S_h": 0.13735728667745215,
+          "limit_path_return": 1.588166144200627,
+          "mean": 0.4848120167509911,
+          "n_atoms": 406,
+          "p_limit_path": 0.13735728667745215,
+          "p_up": 0.7369266602370846,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 10,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    10
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 9,
+                "n": 11,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    9
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 8,
+                "n": 15,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.14435625871336355,
+          "q50": 0.27009133404364083,
+          "q90": 1.588166144200627,
+          "return": 0.27009133404364083
+        },
+        "D2": {
+          "S_h": 0.746828007518797,
+          "limit_path_return": 0.20924764890282133,
+          "mean": 0.1495090489076921,
+          "n_atoms": 86,
+          "p_limit_path": 0.746828007518797,
+          "p_up": 0.8328346853273909,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 2,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.01036111224198999,
+          "q50": 0.20924764890282133,
+          "q90": 0.20924764890282133,
+          "return": 0.20924764890282133
+        },
+        "D3": {
+          "S_h": 0.6706712041204986,
+          "limit_path_return": 0.3299373040752351,
+          "mean": 0.21749576196912573,
+          "n_atoms": 150,
+          "p_limit_path": 0.6706712041204986,
+          "p_up": 0.8173697881702022,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 3,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.07272727272727272,
+          "q50": 0.3299373040752351,
+          "q90": 0.3299373040752351,
+          "return": 0.3299373040752351
+        },
+        "D4": {
+          "S_h": 0.5347243384203976,
+          "limit_path_return": 0.46238244514106586,
+          "mean": 0.27031235922304525,
+          "n_atoms": 210,
+          "p_limit_path": 0.5347243384203976,
+          "p_up": 0.7851423374647373,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 4,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.1157343611715369,
+          "q50": 0.46238244514106586,
+          "q90": 0.46238244514106586,
+          "return": 0.46238244514106586
+        },
+        "D5": {
+          "S_h": 0.4263342698216684,
+          "limit_path_return": 0.6081504702194357,
+          "mean": 0.3158365057984654,
+          "n_atoms": 264,
+          "p_limit_path": 0.4263342698216684,
+          "p_up": 0.7814461146420902,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 5,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.1298181818181818,
+          "q50": 0.3518861769852728,
+          "q90": 0.6081504702194357,
+          "return": 0.3518861769852728
+        },
+        "D6": {
+          "S_h": 0.3399151610740329,
+          "limit_path_return": 0.7688087774294671,
+          "mean": 0.35509794879552115,
+          "n_atoms": 312,
+          "p_limit_path": 0.3399151610740329,
+          "p_up": 0.7533836761892027,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 6,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.1581240076537881,
+          "q50": 0.40083864661882584,
+          "q90": 0.7688087774294671,
+          "return": 0.40083864661882584
+        },
+        "D7": {
+          "S_h": 0.27101343923470195,
+          "limit_path_return": 0.945141065830721,
+          "mean": 0.39546366358948776,
+          "n_atoms": 352,
+          "p_limit_path": 0.27101343923470195,
+          "p_up": 0.7706112263027848,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 7,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.14904795077208877,
+          "q50": 0.3332799576279015,
+          "q90": 0.945141065830721,
+          "return": 0.3332799576279015
+        },
+        "D8": {
+          "S_h": 0.2160782826330732,
+          "limit_path_return": 1.1394984326018809,
+          "mean": 0.4319398521756315,
+          "n_atoms": 380,
+          "p_limit_path": 0.2160782826330732,
+          "p_up": 0.7343330314111391,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 8,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.1727662701924374,
+          "q50": 0.33530231845984004,
+          "q90": 1.1394984326018809,
+          "return": 0.33530231845984004
+        },
+        "D9": {
+          "S_h": 0.1722786307479908,
+          "limit_path_return": 1.3530564263322884,
+          "mean": 0.45691399884913153,
+          "n_atoms": 395,
+          "p_limit_path": 0.1722786307479908,
+          "p_up": 0.7202697663970018,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 9,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    9
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 8,
+                "n": 15,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.1619573152402627,
+          "q50": 0.29318117049664494,
+          "q90": 1.3530564263322884,
+          "return": 0.29318117049664494
+        },
+        "P_L": [
+          0.16836734693877553,
+          0.0848046455424275,
+          0.07615680339829833,
+          0.13594686570010106,
+          0.10839006859872918,
+          0.08641910874763548,
+          0.06890172183933096,
+          0.05493515660162876,
+          0.04379965188508239,
+          0.03492134407053865,
+          0.13735728667745215
+        ],
+        "P_close_ceiling": [
+          0.8316326530612245,
+          0.7505149782830863,
+          0.6754672545459283,
+          0.5415001975696151,
+          0.5083818103006623,
+          0.4343226438506538,
+          0.37527547059997135,
+          0.3281973189541569,
+          0.2906620358851968,
+          0.26073525614102583
+        ],
+        "S": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625
+        ],
+        "clipped": null,
+        "hazard": [
+          0.1683673469387755,
+          0.10197368421052631,
+          0.10197368421052631,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027,
+          0.2027027027027027
+        ],
+        "limit_path": {
+          "C": [
+            "28.06",
+            "30.86",
+            "33.94",
+            "37.32",
+            "41.04",
+            "45.14",
+            "49.64",
+            "54.60",
+            "60.05",
+            "66.05"
+          ],
+          "ipo_price": "25.52",
+          "rho": [
+            0.09952978056426333,
+            0.20924764890282133,
+            0.3299373040752351,
+            0.46238244514106586,
+            0.6081504702194357,
+            0.7688087774294671,
+            0.945141065830721,
+            1.1394984326018809,
+            1.3530564263322884,
+            1.588166144200627
+          ],
+          "snapped_ipo_price": "25.52",
+          "tick": "0.02"
+        },
+        "model_id": "ceiling_path_v0@INF",
+        "refused": null,
+        "warnings": []
+      }
+    },
+    {
+      "model_id": "pb_ceiling_path_v0",
+      "params_sha256": "3d1e2f41f5d098ab228ff9c51ce61a5d31741766b3cdeebd8cc651e7ce34e03d",
+      "status": "PREDICTED",
+      "sha_matches_embedded": true,
+      "refusal": null,
+      "output": {
+        "D1": {
+          "S_h": 0.8079177897840587,
+          "limit_path_return": 0.09952978056426333,
+          "mean": 0.07590955781692753,
+          "n_atoms": 19,
+          "p_limit_path": 0.8079177897840587,
+          "p_up": 0.8932876609911438,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 1,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.00043782837127845885,
+          "q50": 0.09952978056426333,
+          "q90": 0.09952978056426333,
+          "return": 0.09952978056426333
+        },
+        "D10": {
+          "S_h": 0.0793158606016619,
+          "limit_path_return": 1.588166144200627,
+          "mean": 0.3824517186829653,
+          "n_atoms": 406,
+          "p_limit_path": 0.0793158606016619,
+          "p_up": 0.7025074745330646,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 10,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    10
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 9,
+                "n": 11,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    9
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 8,
+                "n": 15,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.1813457125286857,
+          "q50": 0.18298290583487775,
+          "q90": 1.2847078526852278,
+          "return": 0.18298290583487775
+        },
+        "D2": {
+          "S_h": 0.7141088351196573,
+          "limit_path_return": 0.20924764890282133,
+          "mean": 0.14163003408230826,
+          "n_atoms": 86,
+          "p_limit_path": 0.7141088351196573,
+          "p_up": 0.8108691478270175,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 2,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.02105862265224815,
+          "q50": 0.20924764890282133,
+          "q90": 0.20924764890282133,
+          "return": 0.20924764890282133
+        },
+        "D3": {
+          "S_h": 0.631192226293537,
+          "limit_path_return": 0.3299373040752351,
+          "mean": 0.20344715585132261,
+          "n_atoms": 150,
+          "p_limit_path": 0.631192226293537,
+          "p_up": 0.7934378936389817,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 3,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.10631826054594107,
+          "q50": 0.3299373040752351,
+          "q90": 0.3299373040752351,
+          "return": 0.3299373040752351
+        },
+        "D4": {
+          "S_h": 0.46932717183616113,
+          "limit_path_return": 0.46238244514106586,
+          "mean": 0.2446424997267519,
+          "n_atoms": 210,
+          "p_limit_path": 0.46932717183616113,
+          "p_up": 0.7582652659811133,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 4,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.16066666666666668,
+          "q50": 0.3222193563747471,
+          "q90": 0.46238244514106586,
+          "return": 0.3222193563747471
+        },
+        "D5": {
+          "S_h": 0.34897133559007665,
+          "limit_path_return": 0.6081504702194357,
+          "mean": 0.27660181683470053,
+          "n_atoms": 264,
+          "p_limit_path": 0.34897133559007665,
+          "p_up": 0.7541862599801117,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 5,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.15717861861706262,
+          "q50": 0.3166365852886228,
+          "q90": 0.6081504702194357,
+          "return": 0.3166365852886228
+        },
+        "D6": {
+          "S_h": 0.25947995422271186,
+          "limit_path_return": 0.7688087774294671,
+          "mean": 0.3017993179152449,
+          "n_atoms": 312,
+          "p_limit_path": 0.25947995422271186,
+          "p_up": 0.7211174756830699,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 6,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.16666666666666666,
+          "q50": 0.25853519521231116,
+          "q90": 0.7688087774294671,
+          "return": 0.25853519521231116
+        },
+        "D7": {
+          "S_h": 0.1929380432624141,
+          "limit_path_return": 0.945141065830721,
+          "mean": 0.3290324210906658,
+          "n_atoms": 352,
+          "p_limit_path": 0.1929380432624141,
+          "p_up": 0.7404649893942633,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 7,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.1757142857142857,
+          "q50": 0.24642162725968908,
+          "q90": 0.945141065830721,
+          "return": 0.24642162725968908
+        },
+        "D8": {
+          "S_h": 0.14346036343901483,
+          "limit_path_return": 1.1394984326018809,
+          "mean": 0.35305675701945555,
+          "n_atoms": 380,
+          "p_limit_path": 0.14346036343901483,
+          "p_up": 0.6993012570992033,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 8,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.18973471741637832,
+          "q50": 0.2131175678126378,
+          "q90": 1.1394984326018809,
+          "return": 0.2131175678126378
+        },
+        "D9": {
+          "S_h": 0.10667090600718011,
+          "limit_path_return": 1.3530564263322884,
+          "mean": 0.3655653886840727,
+          "n_atoms": 395,
+          "p_limit_path": 0.10667090600718011,
+          "p_up": 0.6839846668882278,
+          "post_break": {
+            "cells": [
+              {
+                "group": "Z",
+                "m": 9,
+                "n": 18,
+                "pooled": false,
+                "sources": [
+                  [
+                    "Z",
+                    9
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 8,
+                "n": 15,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    8
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 7,
+                "n": 28,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    7
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 6,
+                "n": 40,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    6
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 5,
+                "n": 48,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    5
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 4,
+                "n": 54,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    4
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 3,
+                "n": 60,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    3
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 2,
+                "n": 64,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    2
+                  ]
+                ]
+              },
+              {
+                "group": "B",
+                "m": 1,
+                "n": 67,
+                "pooled": false,
+                "sources": [
+                  [
+                    "B",
+                    1
+                  ]
+                ]
+              }
+            ],
+            "status": "OK"
+          },
+          "q10": -0.18181541798920997,
+          "q50": 0.2102475408063993,
+          "q90": 1.3530564263322884,
+          "return": 0.2102475408063993
+        },
+        "P_L": [
+          0.1920822102159413,
+          0.09380895466440142,
+          0.08291660882612029,
+          0.16186505445737587,
+          0.12035583624608448,
+          0.08949138136736479,
+          0.06654191096029777,
+          0.04947767982339926,
+          0.03678945743183472,
+          0.02735504540551821,
+          0.0793158606016619
+        ],
+        "P_close_ceiling": [
+          0.8079177897840587,
+          0.7206659719288394,
+          0.6396511201858871,
+          0.48149856697753357,
+          0.439555640705937,
+          0.36251611443833,
+          0.30523286303472524,
+          0.26263952101480803,
+          0.23096895867812678,
+          0.20742010171704153
+        ],
+        "S": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625
+        ],
+        "clipped": null,
+        "hazard": [
+          0.1920822102159413,
+          0.116112005269094,
+          0.116112005269094,
+          0.2564433586387362,
+          0.2564433586387362,
+          0.2564433586387362,
+          0.2564433586387362,
+          0.2564433586387362,
+          0.2564433586387362,
+          0.2564433586387362
+        ],
+        "limit_path": {
+          "C": [
+            "28.06",
+            "30.86",
+            "33.94",
+            "37.32",
+            "41.04",
+            "45.14",
+            "49.64",
+            "54.60",
+            "60.05",
+            "66.05"
+          ],
+          "ipo_price": "25.52",
+          "rho": [
+            0.09952978056426333,
+            0.20924764890282133,
+            0.3299373040752351,
+            0.46238244514106586,
+            0.6081504702194357,
+            0.7688087774294671,
+            0.945141065830721,
+            1.1394984326018809,
+            1.3530564263322884,
+            1.588166144200627
+          ],
+          "snapped_ipo_price": "25.52",
+          "tick": "0.02"
+        },
+        "model_id": "pb_ceiling_path_v0",
+        "refused": null,
+        "warnings": []
+      }
+    }
+  ],
+  "display": {
+    "j": 3,
+    "rows": [
+      {
+        "model_id": "ceiling_hazard_v0",
+        "constant": false,
+        "S": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625
+        ],
+        "P_L": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625,
+          0.0009765625
+        ],
+        "expected_l": 0.9990234375,
+        "median_l": 0,
+        "mode_l": 0,
+        "cond": {
+          "S_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125
+          ],
+          "P_L_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125,
+            0.0078125
+          ],
+          "p_break_next": 0.5,
+          "expected_l": 3.9921875,
+          "expected_remaining": 0.9921875,
+          "median_l": 3,
+          "mode_l": 3
+        }
+      },
+      {
+        "model_id": "ceiling_hazard_v0@INF",
+        "constant": false,
+        "S": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625
+        ],
+        "P_L": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625,
+          0.0009765625
+        ],
+        "expected_l": 0.9990234375,
+        "median_l": 0,
+        "mode_l": 0,
+        "cond": {
+          "S_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125
+          ],
+          "P_L_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125,
+            0.0078125
+          ],
+          "p_break_next": 0.5,
+          "expected_l": 3.9921875,
+          "expected_remaining": 0.9921875,
+          "median_l": 3,
+          "mode_l": 3
+        }
+      },
+      {
+        "model_id": "pb_ceiling_v0",
+        "constant": false,
+        "S": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625
+        ],
+        "P_L": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625,
+          0.0009765625
+        ],
+        "expected_l": 0.9990234375,
+        "median_l": 0,
+        "mode_l": 0,
+        "cond": {
+          "S_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125
+          ],
+          "P_L_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125,
+            0.0078125
+          ],
+          "p_break_next": 0.5,
+          "expected_l": 3.9921875,
+          "expected_remaining": 0.9921875,
+          "median_l": 3,
+          "mode_l": 3
+        }
+      },
+      {
+        "model_id": "pb_ceiling_v0@INF",
+        "constant": false,
+        "S": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625
+        ],
+        "P_L": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625,
+          0.0009765625
+        ],
+        "expected_l": 0.9990234375,
+        "median_l": 0,
+        "mode_l": 0,
+        "cond": {
+          "S_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125
+          ],
+          "P_L_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125,
+            0.0078125
+          ],
+          "p_break_next": 0.5,
+          "expected_l": 3.9921875,
+          "expected_remaining": 0.9921875,
+          "median_l": 3,
+          "mode_l": 3
+        }
+      },
+      {
+        "model_id": "base_km_expanding",
+        "constant": false,
+        "S": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625
+        ],
+        "P_L": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625,
+          0.0009765625
+        ],
+        "expected_l": 0.9990234375,
+        "median_l": 0,
+        "mode_l": 0,
+        "cond": {
+          "S_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125
+          ],
+          "P_L_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125,
+            0.0078125
+          ],
+          "p_break_next": 0.5,
+          "expected_l": 3.9921875,
+          "expected_remaining": 0.9921875,
+          "median_l": 3,
+          "mode_l": 3
+        }
+      },
+      {
+        "model_id": "base_km_last10",
+        "constant": false,
+        "S": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625
+        ],
+        "P_L": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625,
+          0.0009765625
+        ],
+        "expected_l": 0.9990234375,
+        "median_l": 0,
+        "mode_l": 0,
+        "cond": {
+          "S_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125
+          ],
+          "P_L_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125,
+            0.0078125
+          ],
+          "p_break_next": 0.5,
+          "expected_l": 3.9921875,
+          "expected_remaining": 0.9921875,
+          "median_l": 3,
+          "mode_l": 3
+        }
+      },
+      {
+        "model_id": "ceiling_hazard_v1_clip",
+        "constant": false,
+        "S": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625
+        ],
+        "P_L": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625,
+          0.0009765625
+        ],
+        "expected_l": 0.9990234375,
+        "median_l": 0,
+        "mode_l": 0,
+        "cond": {
+          "S_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125
+          ],
+          "P_L_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125,
+            0.0078125
+          ],
+          "p_break_next": 0.5,
+          "expected_l": 3.9921875,
+          "expected_remaining": 0.9921875,
+          "median_l": 3,
+          "mode_l": 3
+        }
+      },
+      {
+        "model_id": "ceiling_hazard_v1_pooled@INF",
+        "constant": false,
+        "S": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625
+        ],
+        "P_L": [
+          0.5,
+          0.25,
+          0.125,
+          0.0625,
+          0.03125,
+          0.015625,
+          0.0078125,
+          0.00390625,
+          0.001953125,
+          0.0009765625,
+          0.0009765625
+        ],
+        "expected_l": 0.9990234375,
+        "median_l": 0,
+        "mode_l": 0,
+        "cond": {
+          "S_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125
+          ],
+          "P_L_cond": [
+            null,
+            null,
+            null,
+            0.5,
+            0.25,
+            0.125,
+            0.0625,
+            0.03125,
+            0.015625,
+            0.0078125,
+            0.0078125
+          ],
+          "p_break_next": 0.5,
+          "expected_l": 3.9921875,
+          "expected_remaining": 0.9921875,
+          "median_l": 3,
+          "mode_l": 3
+        }
+      },
+      {
+        "model_id": "ALWAYS_CEILING",
+        "constant": true,
+        "S": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "P_L": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "expected_l": 10.0,
+        "median_l": 10,
+        "mode_l": 10,
+        "cond": {
+          "S_cond": [
+            null,
+            null,
+            null,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "P_L_cond": [
+            null,
+            null,
+            null,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "p_break_next": 0.0,
+          "expected_l": 10.0,
+          "expected_remaining": 7.0,
+          "median_l": 10,
+          "mode_l": 10
+        }
+      }
+    ],
+    "price_hint": [
+      {
+        "k": 1,
+        "price": 28.072000000000003
+      },
+      {
+        "k": 3,
+        "price": 33.96712000000001
+      },
+      {
+        "k": 5,
+        "price": 41.100215200000015
+      },
+      {
+        "k": 10,
+        "price": 66.19230758175205
+      }
+    ]
+  }
+}

@@ -1,0 +1,182 @@
+{
+ "ticker": "MERCN",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_937532",
+  "KAP_937532_EK1",
+  "KAP_937532_EK2"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "1.2709639095",
+   "origin": "CALCULATED_FROM_SOURCE_TOTALS",
+   "source_id": "KAP_937532_EK1",
+   "numerator": "23458158",
+   "numerator_quote": "talep toplama sonucunda 23.458.158 TL nominal değerli talep gelmiş olup",
+   "denominator": "18456982",
+   "denominator_quote": "Borsa İstanbul tarafindan 18.456.982 TL nominal değerli paylar dağıtıma konu edilmiştir",
+   "definition": "TOPLAM_TALEP_NOMINALI_23458158 / DAGITIMA_KONU_EDILEN_NOMINAL_18456982 (H99 payda kuralı: nihai gerçekleşen arz)",
+   "denominator_includes_additional_sale": false,
+   "note": "Doğrulayıcı düzeltmesi (payda kuralı): arza konu 20.000.000 paydasıyla 1,1729079 olurdu; 1.543.018 iptal. Borsada değişken fiyatla satış."
+  },
+  "total_demand_filter_status": {
+   "value": "NOT_SPECIFIED",
+   "source_id": "KAP_937532_EK1",
+   "note": "belgede 'filtre' ifadesi yok"
+  },
+  "ipo_size_tl": {
+   "value": "162606011.42",
+   "source_id": "KAP_937532_EK1",
+   "quote": "belirlenen halka arz fiyatı ile halka arz büyüklüğü 162.606.011,42 TL olarak gerçekleşmiştir"
+  },
+  "capital_increase_shares": {
+   "value": "18456982",
+   "source_id": "KAP_937532_EK1",
+   "quote": "Borsa İstanbul tarafindan 18.456.982 TL nominal değerli paylar dağıtıma konu edilmiştir. Bu kapsamda, Şirket'in sermayesi 45.000.000 TL'den 63.456.982 TL'ye artırılacak olup",
+   "note": "planlanan sermaye artırımı 20.000.000; gerçekleşen 18.456.982, kalan 1.543.018 iptal"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgesi ortak satışından söz etmiyor (arzın tamamı sermaye artırımı olarak yazılı); açık '0' ya da ayrı nominal yok"
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_937532_EK1",
+   "derived": true,
+   "formula": "SPK satırında ek pay satışı '-' (planlanmamış); dağıtılan 18.456.982 planlanan tabanın (20.000.000) altında → ek satış yok",
+   "quote": "Borsa İstanbul tarafindan 18.456.982 TL nominal değerli paylar dağıtıma konu edilmiştir",
+   "note": "belge ek satıştan söz etmiyor; toplam tabana eşit değil (altında), bu yüzden zero_from_statement yerine derived"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_937532_EK1",
+   "quote": "Borsa İstanbul tarafindan 18.456.982 TL nominal değerli paylar dağıtıma konu edilmiştir",
+   "note": "arzın tamamı satılmadı; 1.543.018 TL nominal pay iptal edilecek"
+  },
+  "additional_sale_usage_statement": null,
+  "investor_count": {
+   "value": "69369",
+   "source_id": "KAP_937532_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "TOPLAM 69.369 100,00",
+   "note": "dağıtım tablosu kişi sayısı (OCR); gruplar toplamı 69.245 + 15 + 109 = 69.369"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "69245",
+    "domestic_institutional": "15",
+    "foreign_retail": "109"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_937532_EK1",
+   "quote": [
+    "Yurt İçi Bireysel 69.245 14.302.388 77,49",
+    "Yurt Içi Kurumsal 15 4.142.683 22,45",
+    "Yurt DıŞ1 Bireysel 109 11.911 0,06"
+   ],
+   "note": "yurt dışı kurumsal satırı '-' (OCR sırası bozuk; grup toplamları TOPLAM'a eşit, dağıtım yok)"
+  },
+  "retail_demand_multiple": {
+   "value": null,
+   "missing_reason": "borsada satış; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır', grup talebi yazılmıyor"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "14302388",
+    "domestic_institutional": "4142683",
+    "foreign_retail": "11911"
+   },
+   "source_id": "KAP_937532_EK1",
+   "quote": [
+    "Yurt İçi Bireysel 69.245 14.302.388 77,49",
+    "Yurt Içi Kurumsal 15 4.142.683 22,45",
+    "Yurt DıŞ1 Bireysel 109 11.911 0,06"
+   ],
+   "note": "toplam 18.456.982; yurt dışı kurumsal '-'"
+  },
+  "retail_allocation_pct": {
+   "value": "77.49",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_937532_EK1",
+   "quote": "Yurt İçi Bireysel 69.245 14.302.388 77,49"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "22.45",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_937532_EK1",
+   "quote": "Yurt Içi Kurumsal 15 4.142.683 22,45"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": null,
+   "missing_reason": "tabloda yurt dışı kurumsal satırı '-' ve OCR sırası bozuk; sayısal oran yazılı değil (diğer grupların toplamı %100)"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "belge yalnız satış yöntemini yazıyor (\"Değişken Fiyatla Talep Toplama ve Satış Yöntemi\") ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor"
+  },
+  "lead_broker": {
+   "value": null,
+   "missing_reason": "sonuç eki imza/aracı kurum adı içermiyor; yalnız KAP bildirim başlığında gönderen A1 CAPITAL YATIRIM MENKUL DEĞERLER A.Ş. (aracılık rolü yazılı değil); TSSD pencereleri boş"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD pencereleri boş; sonuç belgesinde yok"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD pencereleri boş"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD pencereleri boş"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD pencereleri boş"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "eldeki belgelerde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "eldeki belgelerde yok"
+  }
+ },
+ "codex_check": {
+  "capital_increase_shares": {
+   "codex_value": "18.456.982",
+   "verdict": "FOUND_SAME",
+   "note": "sonuç ekinde dağıtıma konu edilen / sermayeye eklenen nominal olarak yazılı"
+  },
+  "existing_share_sale_shares": {
+   "codex_value": "0",
+   "verdict": "NOT_APPLICABLE",
+   "note": "SPK bülteni planından; sonuç belgesi ortak satışından söz etmiyor"
+  },
+  "additional_sale_shares": {
+   "codex_value": "0",
+   "verdict": "FOUND_SAME",
+   "note": "SPK'da ek satış '-'; dağıtılan tabanın altında"
+  },
+  "distribution_method": {
+   "codex_value": "Borsa Birincil Piyasada sabit fiyatla talep toplama ve satış yöntemi",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "belge satış yöntemini \"Değişken Fiyatla Talep Toplama ve Satış Yöntemi\" olarak yazıyor (sabit değil); bu da dağıtım yöntemi değil; alan null"
+  },
+  "lead_broker": {
+   "codex_value": "A1 CAPITAL YATIRIM MENKUL DEĞERLER A.Ş.",
+   "verdict": "NOT_FOUND_IN_DOCS",
+   "note": "yalnız KAP bildiriminin gönderen kurumu (başlık); belge metninde aracılık rolü yok, alan null"
+  }
+ },
+ "notes": "Borsada değişken fiyatla satış; fiyat aralığın alt ucunda (8,81) belirlendi. Arza konu 20.000.000'ün 18.456.982'si dağıtıldı, 1.543.018 iptal. f3 = talep / arza konu nominal (1,1729); satılan paydasıyla 1,2710 (not). Codex f3 ve arz büyüklüğünü bulamamıştı. Sonuç eki OCR.",
+ "needs_search": false
+}

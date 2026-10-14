@@ -1,0 +1,49 @@
+{
+  "company": "Net Global Endüstriyel Yatırımlar A.Ş.",
+  "contamination_check": {
+    "official_final_demand_result_inspected": true,
+    "official_total_demand_multiple": "2.84",
+    "outcome_observed": false,
+    "post_cutoff_information_used": false,
+    "secondary_trading_start_status": "NOT_STARTED"
+  },
+  "first_trading_date": "2026-09-17",
+  "frozen_input_sha256": {
+    "artifacts/ipo_master/historical99/HISTORICAL99_FROZEN_COHORT_V1/canonical/HISTORICAL99_FROZEN_COHORT_V1_canonical_pretrade_master.csv": "573f4c77c5ac9f9d3aaf7715a5b054ff412991120c73f2c03065521c7fc9173b",
+    "artifacts/modeling/V1_5_PREREGISTRATION.md": "156435859e4ea81d078a56435a6bf6a7f04bd1fea289fc15b1baccebb4c2ce2d",
+    "artifacts/outcomes/historical99/HISTORICAL99_FROZEN_COHORT_V1/OFFICIAL_BIST_OUTCOME_V1/canonical/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_d1_d3_d5_d10_targets.csv": "64dce0bb3b2aff28f5dfd5f335da8f423a5cf0839430cac1df200bfed4417f9c",
+    "config/model_v1_5_spec.json": "1245bf0f96c63cabdbd740cf043e9f3c58f8fc50af48472933c29e05dce211b1"
+  },
+  "generated_by": "scripts/modeling/run_true_live_freeze.py (general driver, SCIENTIFIC_WEIGHT=MECHANICAL)",
+  "governing_spec": "BORSAI_V1_5_PREREG_20260814",
+  "horizons_frozen": [
+    "D1",
+    "D10",
+    "D3",
+    "D5"
+  ],
+  "prediction_classification": "POST_BOOKBUILD_PRE_LISTING_PROSPECTIVE",
+  "prediction_local_date": "2026-09-16",
+  "prediction_row_count": 4,
+  "prediction_timestamp_istanbul": "2026-09-16T13:45:51.571400+03:00",
+  "pretrade_source": {
+    "official_result_source": "OFFICIAL_KESIN_TALEP_SONUCU_VIA_KAP",
+    "source_document_sha256": "",
+    "source_identifier": "KAP_1662138",
+    "source_publication_timestamp": "2026-09-13T17:30:28+03:00"
+  },
+  "scientific_artifact_sha256": {
+    "frozen_prediction_ledger": "920284024211cbdefee4b3337d16f64cad1e56a72191eb7fb8d92145bdf57007",
+    "pretrade_evidence_packet": "fd1d21d7c5bd90e0838d70e231adb6bbdb35a9762a0b8d995bec689dcd0dafe6",
+    "training_eligibility_summary": "b27e5cf841278629aa43ae77b06913dd11736e08a173390ff9b62270bd78465f"
+  },
+  "status": "ALL_HORIZONS_FROZEN",
+  "task_id": "BORSAI_PREDICTION_COMPUTATION_STEP_20260912_V1",
+  "ticker": "NETGL",
+  "verdicts": {
+    "D1": "NETGL_D1_TRUE_LIVE_V1_5_FROZEN",
+    "D10": "NETGL_D10_TRUE_LIVE_V1_5_FROZEN",
+    "D3": "NETGL_D3_TRUE_LIVE_V1_5_FROZEN",
+    "D5": "NETGL_D5_TRUE_LIVE_V1_5_FROZEN"
+  }
+}

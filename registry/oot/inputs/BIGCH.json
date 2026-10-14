@@ -1,0 +1,327 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "BIGCH",
+  "company": "Büyük Şefler Gıda Turizm Tekstil Danışmanlık Organizasyon Eğitim Sanayi ve Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1148193",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "22.5",
+      "source_id": "KAP_1148193",
+      "source_document": "KAP 1148193",
+      "source_published_at": "2023-05-08T18:10:48+03:00",
+      "source_sha256": "a328de1fe1ff028250be013e65bc9cc3d2ec611776f93689990ba66d2ece9c76",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1148193_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 22,5",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2023_25",
+          "quote": "Büyük Şefler Gıda Turizm Tekstil 27.000.000 3.000.000 22,50 Danışmanlık Organizasyon Eğitim 100.000.000 107.000.000 7.000.000 - (1) (2) (3) Sanayi ve Ticaret AŞ",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "37000000",
+      "source_id": "KAP_1148193",
+      "source_document": "KAP 1148193",
+      "source_published_at": "2023-05-08T18:10:48+03:00",
+      "source_sha256": "a328de1fe1ff028250be013e65bc9cc3d2ec611776f93689990ba66d2ece9c76",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1148193_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 37.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "107000000",
+      "source_id": "KAP_1148193",
+      "source_document": "KAP 1148193",
+      "source_published_at": "2023-05-08T18:10:48+03:00",
+      "source_sha256": "a328de1fe1ff028250be013e65bc9cc3d2ec611776f93689990ba66d2ece9c76",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1148193_bildirim.pdf",
+      "quote": "sermayesini temsil eden 107.000.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "7000000",
+      "source_id": "KAP_1147783_EK1",
+      "source_document": "KAP 1147783 ek 1",
+      "source_published_at": "2023-05-08T06:38:57+03:00",
+      "source_sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf",
+      "quote": "sermaye artışı yoluyla halka arz edilen 7.000.000 TL",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "27000000",
+      "source_id": "KAP_1147783_EK1",
+      "source_document": "KAP 1147783 ek 1",
+      "source_published_at": "2023-05-08T06:38:57+03:00",
+      "source_sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf",
+      "quote": "ortak satışı yoluyla halka arz edilen 27.000.000 TL",
+      "note": "ek satış (3.000.000) ayrı yazılmış; bu değer ek satışı içermiyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "5.15",
+      "source_id": "KAP_1147783_EK1",
+      "source_document": "KAP 1147783 ek 1",
+      "source_published_at": "2023-05-08T06:38:57+03:00",
+      "source_sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf",
+      "quote": "Halka arzda, halka arz edilen 37.000.000 TL nominal değerli payların 5,15 katına denk gelen 190.709.355 TL nominal değerli filtrelenmemiş pay talebi gelmiştir.",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (filtrelenmemiş talep / ek satış dahil halka arz edilen 37.000.000 TL nominal)",
+      "denominator_includes_additional_sale": true,
+      "note": "190.709.355 / 37.000.000 = 5,154; ek satış hariç taban 34.000.000'e göre 5,61 olurdu",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_1147783_EK1",
+      "source_document": "KAP 1147783 ek 1",
+      "source_published_at": "2023-05-08T06:38:57+03:00",
+      "source_sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf",
+      "quote": "payların 5,15 katına denk gelen 190.709.355 TL nominal değerli filtrelenmemiş pay talebi gelmiştir",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "additional_sale_shares": {
+      "value": "3000000",
+      "source_id": "KAP_1147783_EK1",
+      "source_document": "KAP 1147783 ek 1",
+      "source_published_at": "2023-05-08T06:38:57+03:00",
+      "source_sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf",
+      "quote": "Halka arzda toplanan talep değerlendirilerek 3.000.000 TL nominal değerli payların ek satış hakkı kullanılmıştır.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_size_tl": {
+      "value": "832500000",
+      "source_id": "KAP_1147783_EK1",
+      "source_document": "KAP 1147783 ek 1",
+      "source_published_at": "2023-05-08T06:38:57+03:00",
+      "source_sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf",
+      "quote": "Toplam halka arz büyüklüğü 832.500.000 TL olarak gerçekleşmiştir.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_price_try": {
+      "value": "22.50",
+      "source_id": "SPK_BULTEN_2023_25",
+      "source_document": "SPK Bülteni 2023/25",
+      "source_published_at": "2023-04-27T23:59:59+03:00",
+      "source_sha256": "a8d2594eb5608eea323fff515a233d73b3a2a1a195b83575167b314c53e07866",
+      "source_path": "registry/oot/source_docs/BIGCH/SPK_BULTEN_2023-25.pdf",
+      "quote": "Büyük Şefler Gıda Turizm Tekstil 27.000.000 3.000.000 22,50 Danışmanlık Organizasyon Eğitim 100.000.000 107.000.000 7.000.000 - (1) (2) (3) Sanayi ve Ticaret AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2023-04-27",
+        "bookbuilding_start": "2023-05-03",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "100000000",
+      "source_id": "SPK_BULTEN_2023_25",
+      "source_document": "SPK Bülteni 2023/25",
+      "source_published_at": "2023-04-27T23:59:59+03:00",
+      "source_sha256": "a8d2594eb5608eea323fff515a233d73b3a2a1a195b83575167b314c53e07866",
+      "source_path": "registry/oot/source_docs/BIGCH/SPK_BULTEN_2023-25.pdf",
+      "quote": "Büyük Şefler Gıda Turizm Tekstil 27.000.000 3.000.000 22,50 Danışmanlık Organizasyon Eğitim 100.000.000 107.000.000 7.000.000 - (1) (2) (3) Sanayi ve Ticaret AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-04-27",
+        "bookbuilding_start": "2023-05-03",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "107000000",
+      "source_id": "SPK_BULTEN_2023_25",
+      "source_document": "SPK Bülteni 2023/25",
+      "source_published_at": "2023-04-27T23:59:59+03:00",
+      "source_sha256": "a8d2594eb5608eea323fff515a233d73b3a2a1a195b83575167b314c53e07866",
+      "source_path": "registry/oot/source_docs/BIGCH/SPK_BULTEN_2023-25.pdf",
+      "quote": "Büyük Şefler Gıda Turizm Tekstil 27.000.000 3.000.000 22,50 Danışmanlık Organizasyon Eğitim 100.000.000 107.000.000 7.000.000 - (1) (2) (3) Sanayi ve Ticaret AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-04-27",
+        "bookbuilding_start": "2023-05-03",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "7000000",
+      "source_id": "SPK_BULTEN_2023_25",
+      "source_document": "SPK Bülteni 2023/25",
+      "source_published_at": "2023-04-27T23:59:59+03:00",
+      "source_sha256": "a8d2594eb5608eea323fff515a233d73b3a2a1a195b83575167b314c53e07866",
+      "source_path": "registry/oot/source_docs/BIGCH/SPK_BULTEN_2023-25.pdf",
+      "quote": "Büyük Şefler Gıda Turizm Tekstil 27.000.000 3.000.000 22,50 Danışmanlık Organizasyon Eğitim 100.000.000 107.000.000 7.000.000 - (1) (2) (3) Sanayi ve Ticaret AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2023-04-27",
+        "bookbuilding_start": "2023-05-03",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "27000000",
+      "source_id": "SPK_BULTEN_2023_25",
+      "source_document": "SPK Bülteni 2023/25",
+      "source_published_at": "2023-04-27T23:59:59+03:00",
+      "source_sha256": "a8d2594eb5608eea323fff515a233d73b3a2a1a195b83575167b314c53e07866",
+      "source_path": "registry/oot/source_docs/BIGCH/SPK_BULTEN_2023-25.pdf",
+      "quote": "Büyük Şefler Gıda Turizm Tekstil 27.000.000 3.000.000 22,50 Danışmanlık Organizasyon Eğitim 100.000.000 107.000.000 7.000.000 - (1) (2) (3) Sanayi ve Ticaret AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-04-27",
+        "bookbuilding_start": "2023-05-03",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "34000000",
+      "source_id": "SPK_BULTEN_2023_25",
+      "source_document": "SPK Bülteni 2023/25",
+      "source_published_at": "2023-04-27T23:59:59+03:00",
+      "source_sha256": "a8d2594eb5608eea323fff515a233d73b3a2a1a195b83575167b314c53e07866",
+      "source_path": "registry/oot/source_docs/BIGCH/SPK_BULTEN_2023-25.pdf",
+      "quote": "Büyük Şefler Gıda Turizm Tekstil 27.000.000 3.000.000 22,50 Danışmanlık Organizasyon Eğitim 100.000.000 107.000.000 7.000.000 - (1) (2) (3) Sanayi ve Ticaret AŞ",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-04-27",
+        "bookbuilding_start": "2023-05-03",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "3000000",
+      "source_id": "SPK_BULTEN_2023_25",
+      "source_document": "SPK Bülteni 2023/25",
+      "source_published_at": "2023-04-27T23:59:59+03:00",
+      "source_sha256": "a8d2594eb5608eea323fff515a233d73b3a2a1a195b83575167b314c53e07866",
+      "source_path": "registry/oot/source_docs/BIGCH/SPK_BULTEN_2023-25.pdf",
+      "quote": "Büyük Şefler Gıda Turizm Tekstil 27.000.000 3.000.000 22,50 Danışmanlık Organizasyon Eğitim 100.000.000 107.000.000 7.000.000 - (1) (2) (3) Sanayi ve Ticaret AŞ",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı)",
+      "pit_pb": {
+        "bulletin_date": "2023-04-27",
+        "bookbuilding_start": "2023-05-03",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "37000000",
+      "source_id": "SPK_BULTEN_2023_25",
+      "source_document": "SPK Bülteni 2023/25",
+      "source_published_at": "2023-04-27T23:59:59+03:00",
+      "source_sha256": "a8d2594eb5608eea323fff515a233d73b3a2a1a195b83575167b314c53e07866",
+      "source_path": "registry/oot/source_docs/BIGCH/SPK_BULTEN_2023-25.pdf",
+      "quote": "Büyük Şefler Gıda Turizm Tekstil 27.000.000 3.000.000 22,50 Danışmanlık Organizasyon Eğitim 100.000.000 107.000.000 7.000.000 - (1) (2) (3) Sanayi ve Ticaret AŞ",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-04-27",
+        "bookbuilding_start": "2023-05-03",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2023-05-10",
+      "source_id": "KAP_1148193",
+      "source_document": "KAP 1148193",
+      "source_published_at": "2023-05-08T18:10:48+03:00",
+      "source_sha256": "a328de1fe1ff028250be013e65bc9cc3d2ec611776f93689990ba66d2ece9c76",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1148193_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 10/05/2023",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2023-05-03",
+      "source_id": "KAP_1148193",
+      "source_document": "KAP 1148193",
+      "source_published_at": "2023-05-08T18:10:48+03:00",
+      "source_sha256": "a328de1fe1ff028250be013e65bc9cc3d2ec611776f93689990ba66d2ece9c76",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1148193_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 03-05/05/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2023-05-05",
+      "source_id": "KAP_1148193",
+      "source_document": "KAP 1148193",
+      "source_published_at": "2023-05-08T18:10:48+03:00",
+      "source_sha256": "a328de1fe1ff028250be013e65bc9cc3d2ec611776f93689990ba66d2ece9c76",
+      "source_path": "registry/oot/source_docs/BIGCH/KAP_1148193_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 03-05/05/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1148193": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1148193",
+      "published_at": "2023-05-08T18:10:48+03:00",
+      "sha256": "a328de1fe1ff028250be013e65bc9cc3d2ec611776f93689990ba66d2ece9c76",
+      "path": "registry/oot/source_docs/BIGCH/KAP_1148193_bildirim.pdf"
+    },
+    "SPK_BULTEN_2023_25": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2023/25",
+      "published_at": "2023-04-27T23:59:59+03:00",
+      "sha256": "a8d2594eb5608eea323fff515a233d73b3a2a1a195b83575167b314c53e07866",
+      "path": "registry/oot/source_docs/BIGCH/SPK_BULTEN_2023-25.pdf"
+    },
+    "KAP_1147783_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1147783 ek 1",
+      "published_at": "2023-05-08T06:38:57+03:00",
+      "sha256": "a07e026bf1aefd012c845c5f1c97bf8f0ed8b8b9a6fb85129362fb15379f290a",
+      "path": "registry/oot/source_docs/BIGCH/KAP_1147783_ek1.pdf"
+    }
+  }
+}

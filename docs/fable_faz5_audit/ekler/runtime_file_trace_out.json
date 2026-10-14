@@ -1,0 +1,146 @@
+{
+ "ledger_byte_equal_golden": true,
+ "final_lambda": 30.0,
+ "final_delta": {
+  "d1_lock": -0.3278985872465678,
+  "d1_turnover": 0.25106109793882575
+ },
+ "reads": {
+  "import+load_dataset": [
+   ".venv/lib/python3.12/site-packages/numpy-2.5.2.dist-info/direct_url.json",
+   ".venv/lib/python3.12/site-packages/sklearn/utils/_repr_html/estimator.css",
+   ".venv/lib/python3.12/site-packages/sklearn/utils/_repr_html/features.css",
+   ".venv/lib/python3.12/site-packages/sklearn/utils/_repr_html/params.css",
+   "data/data_version.json",
+   "data/raw/HISTORICAL99_FROZEN_COHORT_V1_canonical_feature_readiness.csv",
+   "data/raw/HISTORICAL99_FROZEN_COHORT_V1_canonical_pretrade_master.csv",
+   "data/raw/HISTORICAL99_FROZEN_COHORT_V1_canonical_provenance.csv",
+   "data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_session_outcomes.csv",
+   "data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_d1_d3_d5_d10_targets.csv",
+   "data/training_table.csv"
+  ],
+  "backtest_ledger": [
+   "data/data_version.json",
+   "data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_session_outcomes.csv",
+   "models/INDEX.json",
+   "models/ceiling_path_v0.json",
+   "tests/reference/macos_golden_faz1b/ceiling_hazard_v0_fold_ledger.csv",
+   "tests/reference/macos_golden_faz4/ceiling_path_v0_fold_ledger.csv"
+  ],
+  "fit_params": [
+   "borsai/__init__.py",
+   "borsai/backtest.py",
+   "borsai/ceiling_path.py",
+   "borsai/data.py",
+   "borsai/features.py",
+   "borsai/fit.py",
+   "borsai/freeze.py",
+   "borsai/hazard.py",
+   "borsai/horizons.py",
+   "borsai/market20.py",
+   "borsai/metrics.py",
+   "borsai/outcomes.py",
+   "borsai/post_d1.py",
+   "borsai/predict.py",
+   "borsai/predict_hazard.py",
+   "borsai/predict_market20.py",
+   "borsai/predict_path.py",
+   "borsai/predict_pb.py",
+   "borsai/predict_post_d1.py",
+   "borsai/preprocess.py",
+   "borsai/provenance.py",
+   "borsai/push_proof.py",
+   "borsai/registry.py",
+   "borsai/report.py",
+   "borsai/report_faz1b.py",
+   "borsai/report_faz4.py",
+   "borsai/report_faz5.py",
+   "borsai/rules.py",
+   "borsai/scoring.py",
+   "borsai/specs.py",
+   "borsai/survival.py",
+   "data/data_version.json",
+   "data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_session_outcomes.csv",
+   "docs/specs_faz5/SPEC_POST_D1_V0.md",
+   "models/INDEX.json",
+   "models/ceiling_hazard_v0.json",
+   "models/ceiling_path_v0.json"
+  ]
+ },
+ "writes": {
+  "import+load_dataset": [],
+  "backtest_ledger": [],
+  "fit_params": []
+ },
+ "forbidden": [],
+ "sessions_columns": {
+  "D1": {
+   "data:_session_dates": [
+    "conflict_status",
+    "row_status",
+    "session_number",
+    "target_session_date",
+    "ticker"
+   ],
+   "post_d1:load_d1_sessions": [
+    "security_trading_status",
+    "session_number",
+    "session_type",
+    "target_session_date",
+    "thb_raw_close",
+    "thb_raw_high",
+    "thb_raw_low",
+    "thb_raw_open",
+    "thb_raw_trade_count",
+    "thb_raw_volume",
+    "thm_raw_upper_limit",
+    "ticker"
+   ],
+   "ceiling_path:load_sessions": [
+    "close",
+    "conflict_status",
+    "lower_limit",
+    "reference_price",
+    "row_status",
+    "session_number",
+    "target_session_date",
+    "ticker",
+    "upper_limit"
+   ]
+  },
+  "D2..10": {
+   "data:_session_dates": [
+    "conflict_status",
+    "row_status",
+    "session_number",
+    "target_session_date",
+    "ticker"
+   ],
+   "post_d1:load_d1_sessions": [
+    "session_number",
+    "target_session_date",
+    "ticker"
+   ],
+   "ceiling_path:load_sessions": [
+    "close",
+    "conflict_status",
+    "lower_limit",
+    "reference_price",
+    "row_status",
+    "session_number",
+    "target_session_date",
+    "ticker",
+    "upper_limit"
+   ]
+  }
+ },
+ "d1_loader_reads_price_cols_in_sessions_2_10": false,
+ "other_readers_price_cols_2_10": {
+  "ceiling_path:load_sessions": [
+   "close",
+   "lower_limit",
+   "reference_price",
+   "upper_limit"
+  ]
+ }
+}

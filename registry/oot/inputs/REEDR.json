@@ -1,0 +1,345 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "REEDR",
+  "company": "Reeder Teknoloji Sanayi ve Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1195976",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "9.3",
+      "source_id": "KAP_1195976",
+      "source_document": "KAP 1195976",
+      "source_published_at": "2023-09-18T18:12:10+03:00",
+      "source_sha256": "60ba08142d08d405c022b2e80e4f966a47800ca47fa01b6fac168b8ad9cc681a",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195976_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 9,3",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2023_53",
+          "quote": "Reeder Teknoloji Sanayi ve 45.000.000 9,30 780.000.000 950.000.000 170.000.000 - - Ticaret AŞ (3) (4)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "215000000",
+      "source_id": "KAP_1195976",
+      "source_document": "KAP 1195976",
+      "source_published_at": "2023-09-18T18:12:10+03:00",
+      "source_sha256": "60ba08142d08d405c022b2e80e4f966a47800ca47fa01b6fac168b8ad9cc681a",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195976_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 215.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "950000000",
+      "source_id": "KAP_1195976",
+      "source_document": "KAP 1195976",
+      "source_published_at": "2023-09-18T18:12:10+03:00",
+      "source_sha256": "60ba08142d08d405c022b2e80e4f966a47800ca47fa01b6fac168b8ad9cc681a",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195976_bildirim.pdf",
+      "quote": "sermayesini temsil eden 950.000.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "170000000",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/REEDR/SPK_BULTEN_2023-53.pdf",
+      "quote": "Reeder Teknoloji Sanayi ve 45.000.000 9,30 780.000.000 950.000.000 170.000.000 - - Ticaret AŞ (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1195620_EK1",
+          "quote": "Halka arz edilen 215.000.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_planned_base": "215000000 = 170000000 + 45000000",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "45000000",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/REEDR/SPK_BULTEN_2023-53.pdf",
+      "quote": "Reeder Teknoloji Sanayi ve 45.000.000 9,30 780.000.000 950.000.000 170.000.000 - - Ticaret AŞ (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1195620_EK1",
+          "quote": "Halka arz edilen 215.000.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_planned_base": "215000000 = 170000000 + 45000000",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "3.95",
+      "source_id": "KAP_1195620_EK1",
+      "source_document": "KAP 1195620 ek 1",
+      "source_published_at": "2023-09-18T11:44:21+03:00",
+      "source_sha256": "2065bb43ee992d5334be9a7bc0d66beb594775661a651652323e4d46bbcdf9d8",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195620_ek1.pdf",
+      "quote": "halka arz edilen 215.000.000 TL nominal değerli payların 3,95 katına denk gelen 848.216.796 TL nominal değerli pay talebi gelmiştir.",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (848.216.796 talep / 215.000.000 arz)",
+      "denominator_includes_additional_sale": false,
+      "note": "ek satış planlanmamış (SPK satırı '-'); aynı belgedeki toplamlardan 3,9451944",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_1195620_EK1",
+      "source_document": "KAP 1195620 ek 1",
+      "source_published_at": "2023-09-18T11:44:21+03:00",
+      "source_sha256": "2065bb43ee992d5334be9a7bc0d66beb594775661a651652323e4d46bbcdf9d8",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195620_ek1.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1195620_EK1",
+      "source_document": "KAP 1195620 ek 1",
+      "source_published_at": "2023-09-18T11:44:21+03:00",
+      "source_sha256": "2065bb43ee992d5334be9a7bc0d66beb594775661a651652323e4d46bbcdf9d8",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195620_ek1.pdf",
+      "quote": "Halka arz edilen 215.000.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir.",
+      "zero_from_statement": true,
+      "note": "SPK satırında ek satış '-'; satılan toplam 215.000.000 = planlanan taban (170.000.000 + 45.000.000)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_size_tl": {
+      "value": "1999500000",
+      "source_id": "KAP_1195620_EK1",
+      "source_document": "KAP 1195620 ek 1",
+      "source_published_at": "2023-09-18T11:44:21+03:00",
+      "source_sha256": "2065bb43ee992d5334be9a7bc0d66beb594775661a651652323e4d46bbcdf9d8",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195620_ek1.pdf",
+      "quote": "Toplam halka arz büyüklüğü 1.999.500.000 TL olarak gerçekleşmiştir.",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "9.30",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/REEDR/SPK_BULTEN_2023-53.pdf",
+      "quote": "Reeder Teknoloji Sanayi ve 45.000.000 9,30 780.000.000 950.000.000 170.000.000 - - Ticaret AŞ (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-13",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "780000000",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/REEDR/SPK_BULTEN_2023-53.pdf",
+      "quote": "Reeder Teknoloji Sanayi ve 45.000.000 9,30 780.000.000 950.000.000 170.000.000 - - Ticaret AŞ (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-13",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "950000000",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/REEDR/SPK_BULTEN_2023-53.pdf",
+      "quote": "Reeder Teknoloji Sanayi ve 45.000.000 9,30 780.000.000 950.000.000 170.000.000 - - Ticaret AŞ (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-13",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "170000000",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/REEDR/SPK_BULTEN_2023-53.pdf",
+      "quote": "Reeder Teknoloji Sanayi ve 45.000.000 9,30 780.000.000 950.000.000 170.000.000 - - Ticaret AŞ (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-13",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "45000000",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/REEDR/SPK_BULTEN_2023-53.pdf",
+      "quote": "Reeder Teknoloji Sanayi ve 45.000.000 9,30 780.000.000 950.000.000 170.000.000 - - Ticaret AŞ (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-13",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "215000000",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/REEDR/SPK_BULTEN_2023-53.pdf",
+      "quote": "Reeder Teknoloji Sanayi ve 45.000.000 9,30 780.000.000 950.000.000 170.000.000 - - Ticaret AŞ (3) (4)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-13",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/REEDR/SPK_BULTEN_2023-53.pdf",
+      "quote": "Reeder Teknoloji Sanayi ve 45.000.000 9,30 780.000.000 950.000.000 170.000.000 - - Ticaret AŞ (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-13",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "215000000",
+      "source_id": "SPK_BULTEN_2023_53",
+      "source_document": "SPK Bülteni 2023/53",
+      "source_published_at": "2023-09-07T23:59:59+03:00",
+      "source_sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "source_path": "registry/oot/source_docs/REEDR/SPK_BULTEN_2023-53.pdf",
+      "quote": "Reeder Teknoloji Sanayi ve 45.000.000 9,30 780.000.000 950.000.000 170.000.000 - - Ticaret AŞ (3) (4)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2023-09-07",
+        "bookbuilding_start": "2023-09-13",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2023-09-21",
+      "source_id": "KAP_1195976",
+      "source_document": "KAP 1195976",
+      "source_published_at": "2023-09-18T18:12:10+03:00",
+      "source_sha256": "60ba08142d08d405c022b2e80e4f966a47800ca47fa01b6fac168b8ad9cc681a",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195976_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 21/09/2023",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2023-09-13",
+      "source_id": "KAP_1195976",
+      "source_document": "KAP 1195976",
+      "source_published_at": "2023-09-18T18:12:10+03:00",
+      "source_sha256": "60ba08142d08d405c022b2e80e4f966a47800ca47fa01b6fac168b8ad9cc681a",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195976_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 13-15/09/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2023-09-15",
+      "source_id": "KAP_1195976",
+      "source_document": "KAP 1195976",
+      "source_published_at": "2023-09-18T18:12:10+03:00",
+      "source_sha256": "60ba08142d08d405c022b2e80e4f966a47800ca47fa01b6fac168b8ad9cc681a",
+      "source_path": "registry/oot/source_docs/REEDR/KAP_1195976_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 13-15/09/2023 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1195976": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1195976",
+      "published_at": "2023-09-18T18:12:10+03:00",
+      "sha256": "60ba08142d08d405c022b2e80e4f966a47800ca47fa01b6fac168b8ad9cc681a",
+      "path": "registry/oot/source_docs/REEDR/KAP_1195976_bildirim.pdf"
+    },
+    "SPK_BULTEN_2023_53": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2023/53",
+      "published_at": "2023-09-07T23:59:59+03:00",
+      "sha256": "802b011c0e5ef4a176e7aa0bec8c7a32b2d2150495cd78271b066dcf1245720c",
+      "path": "registry/oot/source_docs/REEDR/SPK_BULTEN_2023-53.pdf"
+    },
+    "KAP_1195620_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1195620 ek 1",
+      "published_at": "2023-09-18T11:44:21+03:00",
+      "sha256": "2065bb43ee992d5334be9a7bc0d66beb594775661a651652323e4d46bbcdf9d8",
+      "path": "registry/oot/source_docs/REEDR/KAP_1195620_ek1.pdf"
+    }
+  }
+}

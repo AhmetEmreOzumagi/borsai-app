@@ -1,0 +1,598 @@
+{
+  "algorithm": "V1_5_RIDGE_LOGIT",
+  "code_version": {
+    "borsai_dirty": true,
+    "borsai_source_sha256": "c873f64bf27bb6c0c1f6c0da343672b7f615d051beca8b59707ea4a1a6bf5ea8",
+    "git_commit": "d3fabada3a4b3b7ada1b03681c57c29a7e303be5"
+  },
+  "created_at": "2026-09-22T13:05:38+03:00",
+  "description": "Talep toplama öncesi model (SPEC_PB_V0): ufuk başına Ridge (getiri) ve L2-lojistik (P(kapanış > arz)), SPK onaylı planlanan yapıdan pb1–pb3, V1.6 ızgarası; bilgi kesimi ilk talep toplama günü B(k).",
+  "feature_definitions": {
+    "pb1": "ln(ipo_price_try × planned_base_offer_shares); Decimal 60 hane, sonra binary64",
+    "pb2": "planned_base_offer_shares / planned_post_ipo_capital × 100; kesin rasyonel -> binary64",
+    "pb3": "planned_capital_increase_shares / planned_base_offer_shares × 100; kesin rasyonel -> binary64",
+    "pb4": "planned_additional_sale_ceiling / planned_base_offer_shares × 100; özellik değil, yalnız doğrulama ve uyarı"
+  },
+  "feature_ranges": {
+    "pb1": {
+      "max": 22.643858178017435,
+      "min": 19.488386989924592,
+      "n": 99,
+      "n_missing": 0
+    },
+    "pb2": {
+      "max": 40.474905558553694,
+      "min": 10.012399256044638,
+      "n": 99,
+      "n_missing": 0
+    },
+    "pb3": {
+      "max": 100.0,
+      "min": 22.22222222222222,
+      "n": 99,
+      "n_missing": 0
+    }
+  },
+  "features": [
+    "pb1",
+    "pb2",
+    "pb3"
+  ],
+  "horizons": {
+    "D1": {
+      "p_up": {
+        "C": 0.1,
+        "coef": [
+          -0.4592194210398223,
+          0.09187181791829444,
+          0.0780726258648358
+        ],
+        "columns": [
+          "pb1",
+          "pb2",
+          "pb3"
+        ],
+        "final_fit_attempts": [
+          [
+            0.1,
+            "FIT_OK"
+          ]
+        ],
+        "inner_loocv_brier": {
+          "0.0001": 0.09265601277876648,
+          "0.001": 0.09253534293983358,
+          "0.01": 0.09155595735169517,
+          "0.1": 0.08924634373884455,
+          "1.0": 0.09065410364664872,
+          "10.0": 0.09223173202857111,
+          "100.0": 0.09250704755916238,
+          "ZERO": 0.09266972094960432
+        },
+        "inner_loocv_status": {
+          "0.0001": "SCORED",
+          "0.001": "SCORED",
+          "0.01": "SCORED",
+          "0.1": "SCORED",
+          "1.0": "SCORED",
+          "10.0": "SCORED",
+          "100.0": "SCORED",
+          "ZERO": "SCORED"
+        },
+        "intercept": 2.300717897804335,
+        "kind": "logit",
+        "n_class_0": 10,
+        "n_class_1": 89,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      },
+      "return": {
+        "alpha": 10.0,
+        "coef": [
+          -0.015179477464053277,
+          0.004183057711365661,
+          -0.0029002476067329173
+        ],
+        "columns": [
+          "pb1",
+          "pb2",
+          "pb3"
+        ],
+        "inner_loocv_mae": {
+          "0.001": 0.03495633479379339,
+          "0.01": 0.03495592477816819,
+          "0.1": 0.03495183250586831,
+          "1.0": 0.034911680342618635,
+          "10.0": 0.03461058514283087,
+          "100.0": 0.03462327274487517,
+          "1000.0": 0.03647767415451978,
+          "10000.0": 0.03698709237115275,
+          "INF": 0.0370522015756281
+        },
+        "intercept": 0.07742476639192436,
+        "kind": "ridge"
+      }
+    },
+    "D10": {
+      "p_up": {
+        "C": 0.1,
+        "coef": [
+          -0.5384075917817428,
+          0.07359651407690805,
+          0.02691321105003738
+        ],
+        "columns": [
+          "pb1",
+          "pb2",
+          "pb3"
+        ],
+        "final_fit_attempts": [
+          [
+            0.1,
+            "FIT_OK"
+          ]
+        ],
+        "inner_loocv_brier": {
+          "0.0001": 0.21124627834681858,
+          "0.001": 0.21018249936840855,
+          "0.01": 0.20315079522853302,
+          "0.1": 0.19396678521282107,
+          "1.0": 0.19605372940430232,
+          "10.0": 0.19743405608039777,
+          "100.0": 0.19761370066135991,
+          "ZERO": 0.21137026239067055
+        },
+        "inner_loocv_status": {
+          "0.0001": "SCORED",
+          "0.001": "SCORED",
+          "0.01": "SCORED",
+          "0.1": "SCORED",
+          "1.0": "SCORED",
+          "10.0": "SCORED",
+          "100.0": "SCORED",
+          "ZERO": "SCORED"
+        },
+        "intercept": 0.949160289087373,
+        "kind": "logit",
+        "n_class_0": 29,
+        "n_class_1": 70,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      },
+      "return": {
+        "alpha": 0.001,
+        "coef": [
+          -0.2825095246254567,
+          -0.017116622794395873,
+          -0.049482175634771135
+        ],
+        "columns": [
+          "pb1",
+          "pb2",
+          "pb3"
+        ],
+        "inner_loocv_mae": {
+          "0.001": 0.5005067097009551,
+          "0.01": 0.5005069322976416,
+          "0.1": 0.50050915862325,
+          "1.0": 0.5005314597476472,
+          "10.0": 0.5007587855611683,
+          "100.0": 0.5149760362897049,
+          "1000.0": 0.5438932382601601,
+          "10000.0": 0.5523212645586173,
+          "INF": 0.5534434559961843
+        },
+        "intercept": 0.47251414813533843,
+        "kind": "ridge"
+      }
+    },
+    "D3": {
+      "p_up": {
+        "C": 0.1,
+        "coef": [
+          -0.5829922508391627,
+          0.24267827215618507,
+          0.018721490987690548
+        ],
+        "columns": [
+          "pb1",
+          "pb2",
+          "pb3"
+        ],
+        "final_fit_attempts": [
+          [
+            0.1,
+            "FIT_OK"
+          ]
+        ],
+        "inner_loocv_brier": {
+          "0.0001": 0.15816667305022414,
+          "0.001": 0.1572911820504454,
+          "0.01": 0.150904596361148,
+          "0.1": 0.1402079176796838,
+          "1.0": 0.14294756896147504,
+          "10.0": 0.1451336578291372,
+          "100.0": 0.14544130938104533,
+          "ZERO": 0.1582673885880883
+        },
+        "inner_loocv_status": {
+          "0.0001": "SCORED",
+          "0.001": "SCORED",
+          "0.01": "SCORED",
+          "0.1": "SCORED",
+          "1.0": "SCORED",
+          "10.0": "SCORED",
+          "100.0": "SCORED",
+          "ZERO": "SCORED"
+        },
+        "intercept": 1.5988513085690494,
+        "kind": "logit",
+        "n_class_0": 19,
+        "n_class_1": 80,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      },
+      "return": {
+        "alpha": 1.0,
+        "coef": [
+          -0.0677904134855694,
+          0.0233206003902535,
+          0.002251359483193515
+        ],
+        "columns": [
+          "pb1",
+          "pb2",
+          "pb3"
+        ],
+        "inner_loocv_mae": {
+          "0.001": 0.1363839353663909,
+          "0.01": 0.13638381546443373,
+          "0.1": 0.13638262672058957,
+          "1.0": 0.1363717366984985,
+          "10.0": 0.13648108219142205,
+          "100.0": 0.14321042617685822,
+          "1000.0": 0.15753610784399075,
+          "10000.0": 0.1616369098078203,
+          "INF": 0.16216346137869714
+        },
+        "intercept": 0.20969361395763192,
+        "kind": "ridge"
+      }
+    },
+    "D5": {
+      "p_up": {
+        "C": 0.1,
+        "coef": [
+          -0.532434087736217,
+          0.2257222119924967,
+          0.04474759176484266
+        ],
+        "columns": [
+          "pb1",
+          "pb2",
+          "pb3"
+        ],
+        "final_fit_attempts": [
+          [
+            0.1,
+            "FIT_OK"
+          ]
+        ],
+        "inner_loocv_brier": {
+          "0.0001": 0.17627063456005515,
+          "0.001": 0.17528328561117495,
+          "0.01": 0.1683952377199019,
+          "0.1": 0.1587196500080041,
+          "1.0": 0.1614962528967825,
+          "10.0": 0.16308935267225722,
+          "100.0": 0.16329861426467576,
+          "ZERO": 0.17638483965014579
+        },
+        "inner_loocv_status": {
+          "0.0001": "SCORED",
+          "0.001": "SCORED",
+          "0.01": "SCORED",
+          "0.1": "SCORED",
+          "1.0": "SCORED",
+          "10.0": "SCORED",
+          "100.0": "SCORED",
+          "ZERO": "SCORED"
+        },
+        "intercept": 1.3778503642309148,
+        "kind": "logit",
+        "n_class_0": 22,
+        "n_class_1": 77,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      },
+      "return": {
+        "alpha": 0.001,
+        "coef": [
+          -0.12536816789092256,
+          0.024972343511158353,
+          -0.014815879293722368
+        ],
+        "columns": [
+          "pb1",
+          "pb2",
+          "pb3"
+        ],
+        "inner_loocv_mae": {
+          "0.001": 0.24434035776517807,
+          "0.01": 0.24434102416193187,
+          "0.1": 0.24434768264519846,
+          "1.0": 0.24441372430655783,
+          "10.0": 0.2456610492833155,
+          "100.0": 0.2557902336605168,
+          "1000.0": 0.270341666442569,
+          "10000.0": 0.27432369262860085,
+          "INF": 0.27495276668623714
+        },
+        "intercept": 0.31207871117449043,
+        "kind": "ridge"
+      }
+    }
+  },
+  "input_policy": {
+    "field_missing": "REFUSE PB_FIELD_MISSING:<alan>",
+    "identity_or_range_violation": "REFUSE PB_IDENTITY:<ad>",
+    "out_of_training_range": "WARN",
+    "pb4_positive": "WARN",
+    "price_range": "REFUSE PB_PRICE_RANGE",
+    "return_output": "CLIP_TO_PHYSICAL_BOUNDS_AND_FLAG"
+  },
+  "model_id": "pb_v0",
+  "preprocessing": {
+    "columns": [
+      "pb1",
+      "pb2",
+      "pb3"
+    ],
+    "dropped": {},
+    "f3_filter_mode": null,
+    "f3_filter_mode_tie": false,
+    "f3_filter_nulled_tickers": [],
+    "f5_created": false,
+    "log_transform": [],
+    "mean": {
+      "pb1": 21.180032525232367,
+      "pb2": 24.11840173400078,
+      "pb3": 74.81823791004388
+    },
+    "medians": {},
+    "n_train": 99,
+    "preprocessing_id": "PB_PLAIN_Z_POPULATION_STD_NO_IMPUTATION",
+    "std": {
+      "pb1": 0.7057937966731294,
+      "pb2": 6.63866110642977,
+      "pb3": 17.248713885578802
+    },
+    "winsor": {}
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "schema_version": "borsai.model/1",
+  "spec": {
+    "algorithm": "V1_5_RIDGE_LOGIT",
+    "description": "Talep toplama öncesi model (SPEC_PB_V0): ufuk başına Ridge (getiri) ve L2-lojistik (P(kapanış > arz)), SPK onaylı planlanan yapıdan pb1–pb3, V1.6 ızgarası; bilgi kesimi ilk talep toplama günü B(k).",
+    "feature_version": "BORSAI_PB_FEATURES_PB_CORE4_PORT_1",
+    "features": [
+      "pb1",
+      "pb2",
+      "pb3"
+    ],
+    "grid_version": "v1_6",
+    "horizons": [
+      "D1",
+      "D3",
+      "D5",
+      "D10"
+    ],
+    "information_cutoff": "first_bookbuilding_date (B(k)): eğitim satırı (j, h) ancak target_session_date(j, D_h) < B(k)",
+    "input_policy": {
+      "field_missing": "REFUSE PB_FIELD_MISSING:<alan>",
+      "identity_or_range_violation": "REFUSE PB_IDENTITY:<ad>",
+      "out_of_training_range": "WARN",
+      "pb4_positive": "WARN",
+      "price_range": "REFUSE PB_PRICE_RANGE",
+      "return_output": "CLIP_TO_PHYSICAL_BOUNDS_AND_FLAG"
+    },
+    "logit": {
+      "C_grid": [
+        "ZERO",
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "class_weight": null,
+      "direction_rule": "UP iff p > 0.5",
+      "endpoint_ZERO": "yalnız sabit terim: p = n_1/n, intercept = ln(p/(1 − p)), coef = 0; kapalı biçim",
+      "estimator": "sklearn.linear_model.LogisticRegression",
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "max_iter": 10000,
+      "minority_lt_2_policy": "NO_TUNING_FIXED_C_ZERO",
+      "non_convergence_policy": "CANDIDATE_NOT_CONVERGED_DROPPED_FINAL_FIT_FALLS_BACK_TO_NEXT_RANKED",
+      "single_class_policy": "MODEL_NOT_FIT_SINGLE_CLASS",
+      "solver": "lbfgs",
+      "tie_break": "BIT_EXACT_TIE_TO_SMALLEST_C_ZERO_SMALLEST",
+      "tol": 1e-10,
+      "tuning": "INNER_LOOCV_RAW_UNCLIPPED_BRIER"
+    },
+    "min_train_n": 10,
+    "model_id": "pb_v0",
+    "non_features": {
+      "pb4": "planned_additional_sale_ceiling / planned_base_offer_shares × 100; yalnız doğrulama ve uyarı"
+    },
+    "plan_id": "H99_PB_WALK_FORWARD_BOOKBUILD_CUTOFF_MIN_TRAIN_10",
+    "preprocessing_id": "PB_PLAIN_Z_POPULATION_STD_NO_IMPUTATION",
+    "ridge": {
+      "alpha_grid": [
+        0.001,
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0,
+        1000.0,
+        10000.0,
+        "INF"
+      ],
+      "endpoint_INF": "yalnız sabit terim: tahmin = eğitim hedeflerinin aritmetik ortalaması (statistics.mean), coef = 0; kapalı biçim",
+      "estimator": "sklearn.linear_model.Ridge",
+      "fit_intercept": true,
+      "solver": "svd",
+      "tie_break": "BIT_EXACT_TIE_TO_LARGEST_ALPHA_INF_LARGEST",
+      "tuning": "INNER_LOOCV_MAE_RETURN_SPACE"
+    },
+    "runtime_pins": {
+      "joblib": "1.5.3",
+      "numpy": "2.5.2",
+      "python": "3.12",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "sources": {
+      "prebookbuild": {
+        "note": "data_version.json dışında; sha256 borsai/data.py PB_SHA256 ile denetlenir (SPEC_PB_V0 §1)",
+        "path": "data/raw/PREBOOKBUILD_POINT_IN_TIME_EVIDENCE_V1_1_CANONICAL_R2_99.csv",
+        "sha256": "5e52d4d23b4f196ef0fd44fb6d4f4edab0ea326241288b036952c30c5e24a613"
+      }
+    },
+    "spec_document": {
+      "path": "docs/specs/SPEC_PB_V0.md",
+      "sha256": "098805765ef1d7cff32bfa81cf42226c2c3c61d53c365bc4bafcc05558f3d81c"
+    },
+    "training": {
+      "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+      "description": "data/training_table.csv'nin 99 satırının hepsi, tablo sırasıyla (first_trading_date, ticker)",
+      "n": 99,
+      "set": "H99_ALL_ROWS"
+    }
+  },
+  "spec_sha256": "4eb55d4e6ce8c43e8919eedd3e136850215f700de9312731bce767693d165e4f",
+  "training": {
+    "cutoff_date": "2026-08-19",
+    "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+    "first_trading_date_range": [
+      "2023-09-22",
+      "2026-08-06"
+    ],
+    "n": 99,
+    "set": "H99_ALL_ROWS",
+    "targets_sha256": {
+      "D1": "62a670993946893f771bdc39841bcd3af5bc39c2e639995db60adca214d718a4",
+      "D10": "48432418e0f2e48bbdac91b95c3b0ebbf4992ee8c7e9a1dccd22e2299067fb2d",
+      "D3": "0465300b74653802492ef186e82231a75d872ee3d0a888263f75dc914d21b8bf",
+      "D5": "a77b63e284b0c86167d8f8b1eaf820da8e8290b823a90711e1d3f758b55c56e9"
+    },
+    "tickers": [
+      "HATSN",
+      "DMRGD",
+      "MEKAG",
+      "DOFER",
+      "MHRGY",
+      "BORLS",
+      "TABGD",
+      "VRGYO",
+      "MARBL",
+      "BINHO",
+      "EKOS",
+      "AGROT",
+      "SKYMD",
+      "CATES",
+      "BEGYO",
+      "KBORU",
+      "SURGY",
+      "MEGMT",
+      "AVPGY",
+      "PATEK",
+      "BORSK",
+      "LMKDC",
+      "ALVES",
+      "OBAMS",
+      "ARTMS",
+      "MOGAN",
+      "ODINE",
+      "ENTRA",
+      "RGYAS",
+      "LILAK",
+      "KOTON",
+      "ALTNY",
+      "KOCMT",
+      "HRKET",
+      "ONRYT",
+      "OZYSR",
+      "ALKLC",
+      "YIGIT",
+      "HOROZ",
+      "SEGMN",
+      "EFORC",
+      "DCTTR",
+      "BAHKM",
+      "TCKRC",
+      "GUNDG",
+      "AHSGY",
+      "OZATD",
+      "CEMZY",
+      "DURKN",
+      "BINBN",
+      "CGCAM",
+      "SMRVA",
+      "ARMGD",
+      "EGEGY",
+      "GLRMK",
+      "AKFIS",
+      "MOPAS",
+      "SERNT",
+      "BIGEN",
+      "DSTKF",
+      "VSNMD",
+      "ENDAE",
+      "KLYPV",
+      "BALSU",
+      "BULGS",
+      "DOFRB",
+      "ECOGR",
+      "VAKFA",
+      "PAHOL",
+      "ZERGY",
+      "ARFYE",
+      "MEYSU",
+      "FRMPL",
+      "ZGYO",
+      "UCAYM",
+      "NETCD",
+      "AKHAN",
+      "BESTE",
+      "ATATR",
+      "EMPAE",
+      "GENKM",
+      "SVGYO",
+      "LXGYO",
+      "MCARD",
+      "AAGYO",
+      "EKDMR",
+      "BETAE",
+      "SOHOE",
+      "ORZAX",
+      "GOLDA",
+      "EKIM",
+      "ISVEA",
+      "SSAAT",
+      "SARAE",
+      "METEN",
+      "ALBTN",
+      "MASFN",
+      "KARCL",
+      "QUICK"
+    ],
+    "tickers_sha256": "dca11401234cc3a66a155fd1b546ff1f26ac09b519278011b1ee84a47896174f"
+  }
+}

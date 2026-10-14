@@ -1,0 +1,27 @@
+# Bülten biçim probu: yalnız kohort ÖNCESİ tarih (2019-12-31) ve başlık satırları
+
+Erişim: 2026-09-24T13:28:03Z (UTC). URL kalıbı: https://www.borsaistanbul.com/data/{thb|thm}/YYYY/MM/{thb|thm}YYYYMMDD1.zip (SPEC_SCORING §1 ile aynı). Bu proba göre yalnız 2019-12-31 tarihli iki dosya indirildi ve açıldı; kohort penceresi (2020-01-01…2023-09-21) için yalnız HTTP HEAD (içeriksiz) istek atıldı.
+
+## İndirilen kohort-öncesi dosyalar
+- THB 2019-12-31: zip sha256 c84cd84fa161e75de22bace857b1e9c2c191f1a8a3e70b3d5fa91ebd30d7b851, 86873 bayt, iç dosya adı kalıbı thbYYYYMMDD1.csv, kodlama cp1254 (utf-8 başarısız), ayraç ";", 2 başlık satırı (TR + EN), 2426 veri satırı, 56 sütun
+- THM 2019-12-31: zip sha256 7d2d3651ffd7ef72ec1caa8b6208187e0e980c3fd95e883fe631db56365d366f, 28740 bayt, iç dosya adı kalıbı thmYYYYMMDD1.csv, kodlama cp1254 (utf-8 başarısız), ayraç ";", 2 başlık satırı (TR + EN), 2846 veri satırı, 19 sütun
+
+## THB başlık (2019-12-31, TR satırı)
+TARIH;ISLEM  KODU;BULTEN ADI;PAZAR GRUBU;PAZAR;YAPISAL BAZDA PIYASA ALT BOLUMU;ENSTRUMAN GRUBU;ENSTRUMAN TIPI;ENSTRUMAN SINIFI;ISLEM YONTEMI;PIYASA YAPICI;BIST 100 ENDEKS;BIST 30 ENDEKS;BRUT TAKAS;OZSERMAYE HALI;GECICI DURDURMA;ONCEKI KAPANIS FIYATI;ACILIS FIYATI;ACILIS SEANSI FIYATI;EN DUSUK FIYAT;EN YUKSEK FIYAT;KAPANIS FIYATI;KAPANIS SEANSI FIYATI;DEGISIM (%);BEKLEYEN EN IYI ALIS;BEKLEYEN EN IYI SATIS;A.O.F;TOPLAM ISLEM HACMI;TOPLAM ISLEM ADEDI;TOPLAM SOZLESME SAYISI;REFERANS FIYAT;ACILIS SEANSI ISLEM HACMI;ACILIS SEANSI ISLEM MIKTARI;ACILIS SEANSI SOZLESME SAYISI;KAPANIS SEANSI ISLEM HACMI;KAPANIS SEANSI ISLEM MIKTARI;KAPANIS SEANSI SOZLESME SAYISI;KAPANIS FIYATINDAN ISLEMLER ISLEM HACMI;KAPANIS FIYATINDAN ISLEMLER ISLEM MIKTARI;KAPANIS FIYATINDAN ISLEMLER SOZLESME SAYISI;EN DUSUK ACIGA SATIS FIYATI;EN YUKSEK ACIGA SATIS FIYATI;ACIGA SATIS A.O.F;ACIGA SATIS ISLEM HACMI;ACIGA SATIS ISLEM ADEDI;ACIGA SATIS SOZLESME SAYISI;OZEL ISLEM BILDIRIMI EN DUSUK FIYAT;OZEL ISLEM BILDIRIMI EN YUKSEK FIYAT;OZEL ISLEM BILDIRIMI A.O.F.;OZEL ISLEM BILDIRIMI ISLEM HACMI;OZEL ISLEM BILDIRIMI ISLEM ADEDI;OZEL ISLEM BILDIRIMI SOZLESME SAYISI;ORTA NOKTA ISLEMLERI ISLEM HACMI;ORTA NOKTA ISLEMLERI ISLEM ADEDI;ORTA NOKTA ISLEMLERI SOZLESME SAYISI;ACIGA SATIS
+
+## THM başlık (2019-12-31, TR satırı)
+TARIH;ISLEM  KODU;PAZAR (MARKET SEGMENT);PAZAR GRUBU;ALT LIMIT FIYATI;UST LIMIT FIYATI;REFERANS FIYATI;BLOK;BLOK MINIMUM;BLOK MAKSIMUM;ISLEM YONTEMI;BRUT TAKAS;FIYAT ADIMI;PIYASA YAPICILIK;PIYASA YAPICI ZORUNLULUKLARI;KAPANIS FIYATI;AGIRLIKLI ORTALAMA FIYAT;MAKSIMUM EMIR DEGERI(TL);ACIGA SATIS
+
+## 2026 başlığıyla fark (repo: data/raw/bist/ altındaki pinli 2026 bültenleri, yalnız başlık satırı okundu)
+- THB: 2019'da 56 sütun, 2026'da 57 sütun; tek fark 2026'da sona eklenen 'BIST KATILIM TUM ENDEKS'. Ortak sütunların sırası aynı. borsai/outcomes.py REQUIRED thb sütunlarının (ISLEM  KODU, TARIH, KAPANIS FIYATI, TOPLAM SOZLESME SAYISI, GECICI DURDURMA) ve SPEC_POST_D1 ek sütunlarının (ACILIS FIYATI, EN YUKSEK FIYAT, EN DUSUK FIYAT, TOPLAM ISLEM ADEDI, TOPLAM ISLEM HACMI, A.O.F, OZEL ISLEM BILDIRIMI ISLEM ADEDI/HACMI) hepsi 2019 başlığında var.
+- THM: 19 sütun, başlık satırı 2019 ve 2026'da bayt-eşit. 'FIYAT ADIMI' sütunu o gün geçerli adım tablosunu taşır; 2019-12-31'de .E serilerinin tamamında (409/409) değer: &0.01:0.01-19.999&0.02:20.0-49.999&0.05:50.0-99.999&0.1:100.0-999999.999
+
+## 2019-12-31 THB'de enstrüman kodu son ekleri (adet)
+[('V', 1976), ('E', 409), ('AOF', 30), ('F1', 6), ('F', 4), ('G', 1)]
+EQT satırlarında PAZAR kodları: [('N', 256), ('Z', 95), ('W', 28), ('G', 16), ('S', 14)]
+
+## Kohort penceresi HEAD probları (yalnız HTTP durum kodu ve içerik uzunluğu; gövde indirilmedi)
+Tarihler: 2020-01-02, 2020-03-23, 2021-01-04, 2021-06-01, 2022-01-03, 2022-12-30, 2023-01-02, 2023-09-21 — her tarihte THB ve THM için HTTP 200; içerik uzunlukları 20–123 KB; Last-Modified başlıkları bülten gününün akşamı (THB, ~15:16–16:10 UTC) ve sabahı (THM, ~05:00 UTC); tek istisna 2021-01-04 THB Last-Modified 2021-02-16 (sonradan yeniden yayımlanmış olabilir; sha pinlerken not edilmeli).
+
+## Not
+Ham zip baytları repoya konmadı (iç dosya adı bekçi kalıbıyla çakışır); yalnız sha256 ve başlık satırları yukarıdadır. Ham dosyalar /tmp/borsai_faz6/probe/ altında geçici olarak duruyordu.

@@ -1,0 +1,232 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "ONCSM",
+  "company": "Oncosem Onkolojik Sistemler Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "36044",
+      "source_id": "KAP_1092046_EK1",
+      "source_document": "KAP 1092046 ek 1",
+      "source_published_at": "2023-01-02T12:44:42+03:00",
+      "source_sha256": "133061df0cd169743a1112f74f9b286d31624c6de9bf6d67283d11bd090841c7",
+      "source_path": "registry/oot/source_docs/ONCSM/KAP_1092046_ek1.pdf",
+      "quote": "Toplam 5.950.000 100,0 36.103 105.567.156 100,0 36.044 5.950.000 100,0",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "başvuru sayısı 36.103; talebi karşılanan başvuru 36.044",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "35982",
+        "domestic_institutional": "52",
+        "foreign_institutional": "10"
+      },
+      "source_id": "KAP_1092046_EK1",
+      "source_document": "KAP 1092046 ek 1",
+      "source_published_at": "2023-01-02T12:44:42+03:00",
+      "source_sha256": "133061df0cd169743a1112f74f9b286d31624c6de9bf6d67283d11bd090841c7",
+      "source_path": "registry/oot/source_docs/ONCSM/KAP_1092046_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 2.380.000 40,0 36.023 8.709.650 8,3 35.982 2.380.000 40,0 Yatırımcılar",
+        "Yurt İçi Kurumsal 2.380.000 40,0 70 88.995.506 84,3 52 2.150.000 36,1 Yatırımcılar",
+        "Yurt Dışı Kurumsal 1.190.000 20,0 10 7.862.000 7,4 10 1.420.000 23,9 Yatırımcılar"
+      ],
+      "semantic": "ALLOCATED",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "3.7",
+      "source_id": "KAP_1092046_EK1",
+      "source_document": "KAP 1092046 ek 1",
+      "source_published_at": "2023-01-02T12:44:42+03:00",
+      "source_sha256": "133061df0cd169743a1112f74f9b286d31624c6de9bf6d67283d11bd090841c7",
+      "source_path": "registry/oot/source_docs/ONCSM/KAP_1092046_ek1.pdf",
+      "quote": "Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 3,7 katı",
+      "note": "belge 'yaklaşık' ve 'nihai tahsisat' diyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "3,7",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "41.4",
+      "source_id": "KAP_1092046_EK1",
+      "source_document": "KAP 1092046 ek 1",
+      "source_published_at": "2023-01-02T12:44:42+03:00",
+      "source_sha256": "133061df0cd169743a1112f74f9b286d31624c6de9bf6d67283d11bd090841c7",
+      "source_path": "registry/oot/source_docs/ONCSM/KAP_1092046_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara nihai tahsisat tutarının yaklaşık 41,4 katı",
+      "note": "belge 'yaklaşık' ve 'nihai tahsisat' diyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "41,4",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "5.5",
+      "source_id": "KAP_1092046_EK1",
+      "source_document": "KAP 1092046 ek 1",
+      "source_published_at": "2023-01-02T12:44:42+03:00",
+      "source_sha256": "133061df0cd169743a1112f74f9b286d31624c6de9bf6d67283d11bd090841c7",
+      "source_path": "registry/oot/source_docs/ONCSM/KAP_1092046_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara tahsisat tutarının 5,5 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "5,5",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "2380000",
+        "domestic_institutional": "2150000",
+        "foreign_institutional": "1420000"
+      },
+      "source_id": "KAP_1092046_EK1",
+      "source_document": "KAP 1092046 ek 1",
+      "source_published_at": "2023-01-02T12:44:42+03:00",
+      "source_sha256": "133061df0cd169743a1112f74f9b286d31624c6de9bf6d67283d11bd090841c7",
+      "source_path": "registry/oot/source_docs/ONCSM/KAP_1092046_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 2.380.000 40,0 36.023 8.709.650 8,3 35.982 2.380.000 40,0 Yatırımcılar",
+        "Yurt İçi Kurumsal 2.380.000 40,0 70 88.995.506 84,3 52 2.150.000 36,1 Yatırımcılar",
+        "Yurt Dışı Kurumsal 1.190.000 20,0 10 7.862.000 7,4 10 1.420.000 23,9 Yatırımcılar"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "40.0",
+      "source_id": "KAP_1092046_EK1",
+      "source_document": "KAP 1092046 ek 1",
+      "source_published_at": "2023-01-02T12:44:42+03:00",
+      "source_sha256": "133061df0cd169743a1112f74f9b286d31624c6de9bf6d67283d11bd090841c7",
+      "source_path": "registry/oot/source_docs/ONCSM/KAP_1092046_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 2.380.000 40,0 36.023 8.709.650 8,3 35.982 2.380.000 40,0 Yatırımcılar",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "36.1",
+      "source_id": "KAP_1092046_EK1",
+      "source_document": "KAP 1092046 ek 1",
+      "source_published_at": "2023-01-02T12:44:42+03:00",
+      "source_sha256": "133061df0cd169743a1112f74f9b286d31624c6de9bf6d67283d11bd090841c7",
+      "source_path": "registry/oot/source_docs/ONCSM/KAP_1092046_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 2.380.000 40,0 70 88.995.506 84,3 52 2.150.000 36,1 Yatırımcılar",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "23.9",
+      "source_id": "KAP_1092046_EK1",
+      "source_document": "KAP 1092046 ek 1",
+      "source_published_at": "2023-01-02T12:44:42+03:00",
+      "source_sha256": "133061df0cd169743a1112f74f9b286d31624c6de9bf6d67283d11bd090841c7",
+      "source_path": "registry/oot/source_docs/ONCSM/KAP_1092046_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal 1.190.000 20,0 10 7.862.000 7,4 10 1.420.000 23,9 Yatırımcılar",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "İnfo Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1089312_EK1",
+      "source_document": "KAP 1089312 ek 1",
+      "source_published_at": "2022-12-22T20:37:59+03:00",
+      "source_sha256": "36c1aae9aed445074cbe8c5b7c1c3984d1c94154fc3d8ac364c6455ee06873dd",
+      "source_path": "registry/oot/source_docs/ONCSM/KAP_1089312_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek İnfo Yatırım Menkul Değerler A.Ş.'nin",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "İnfo Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim, OCR) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_1092294",
+      "source_document": "KAP 1092294",
+      "source_published_at": "2023-01-02T18:10:09+03:00",
+      "source_sha256": "971f724a85ab4e421309955e6499345d383b0f90fac358e40671a3bb83a11de9",
+      "source_path": "registry/oot/source_docs/ONCSM/KAP_1092294_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1092294",
+      "source_document": "KAP 1092294",
+      "source_published_at": "2023-01-02T18:10:09+03:00",
+      "source_sha256": "971f724a85ab4e421309955e6499345d383b0f90fac358e40671a3bb83a11de9",
+      "source_path": "registry/oot/source_docs/ONCSM/KAP_1092294_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1092294": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1092294",
+      "published_at": "2023-01-02T18:10:09+03:00",
+      "sha256": "971f724a85ab4e421309955e6499345d383b0f90fac358e40671a3bb83a11de9",
+      "path": "registry/oot/source_docs/ONCSM/KAP_1092294_bildirim.pdf"
+    },
+    "KAP_1092046_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1092046 ek 1",
+      "published_at": "2023-01-02T12:44:42+03:00",
+      "sha256": "133061df0cd169743a1112f74f9b286d31624c6de9bf6d67283d11bd090841c7",
+      "path": "registry/oot/source_docs/ONCSM/KAP_1092046_ek1.pdf"
+    },
+    "KAP_1089312_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1089312 ek 1",
+      "published_at": "2022-12-22T20:37:59+03:00",
+      "sha256": "36c1aae9aed445074cbe8c5b7c1c3984d1c94154fc3d8ac364c6455ee06873dd",
+      "path": "registry/oot/source_docs/ONCSM/KAP_1089312_ek1.pdf"
+    }
+  }
+}

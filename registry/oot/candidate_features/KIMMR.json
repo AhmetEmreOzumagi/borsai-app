@@ -1,0 +1,234 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "KIMMR",
+  "company": "Ersan Alışveriş Hizmetleri ve Gıda Sanayi Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "187719",
+      "source_id": "KAP_964477_EK1",
+      "source_document": "KAP 964477 ek 1",
+      "source_published_at": "2021-09-20T10:59:25+03:00",
+      "source_sha256": "8066c327e83974df6896d4506971be5064d5c3209d797d793b237ce1e03ad3ac",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964477_ek1.pdf",
+      "quote": "toplam 187.719 yatırımcı 65.000.000 TL nominal değerli payın alımını gerçekleştirmiştir",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep: 193.209 adet emir (kişi değil)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "187.719",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "187366",
+        "domestic_institutional": "22",
+        "foreign_retail": "331"
+      },
+      "source_id": "KAP_964477_EK1",
+      "source_document": "KAP 964477 ek 1",
+      "source_published_at": "2021-09-20T10:59:25+03:00",
+      "source_sha256": "8066c327e83974df6896d4506971be5064d5c3209d797d793b237ce1e03ad3ac",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964477_ek1.pdf",
+      "quote": "toplam 187.366 adet yerli gerçek ve tüzel kişi yatırımcı, 331 adet yabancı gerçek ve tüzel kişi yatırımcı, 22 yerli kurumsal yatırımcı olmak üzere toplam 187.719 yatırımcı",
+      "semantic": "ALLOCATED",
+      "note": "yabancı grup tabloda 'Yabancı Bireysel Yatırımcılar' (gerçek ve tüzel kişiler)",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "187.366",
+        "Yurtiçi Kurumsal": "22",
+        "Yabancı Bireysel": "331"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '187.366', 'Yurtiçi Kurumsal': '22', 'Yabancı Bireysel': '331'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı yok ('herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'), grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "64874742",
+        "domestic_institutional": "8519",
+        "foreign_retail": "116739"
+      },
+      "source_id": "KAP_964477_EK1",
+      "source_document": "KAP 964477 ek 1",
+      "source_published_at": "2021-09-20T10:59:25+03:00",
+      "source_sha256": "8066c327e83974df6896d4506971be5064d5c3209d797d793b237ce1e03ad3ac",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964477_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar (*) 187.366 64.874.742 99,81%",
+        "22 8.519 0,01%",
+        "Yabancı Bireysel Yatırımcılar (*) 331 116.739 0,18%"
+      ],
+      "note": "birim lot; ikinci satır Yurtiçi Kurumsal Yatırımcılar",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "64.874.742",
+        "Yurtiçi Kurumsal": "8.519",
+        "Yabancı Bireysel": "116.739"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '64.874.742', 'Yurtiçi Kurumsal': '8.519', 'Yabancı Bireysel': '116.739'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "99.81",
+      "source_id": "KAP_964477_EK1",
+      "source_document": "KAP 964477 ek 1",
+      "source_published_at": "2021-09-20T10:59:25+03:00",
+      "source_sha256": "8066c327e83974df6896d4506971be5064d5c3209d797d793b237ce1e03ad3ac",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964477_ek1.pdf",
+      "quote": "Yurtiçi Bireysel Yatırımcılar (*) 187.366 64.874.742 99,81%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "99,81",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.01",
+      "source_id": "KAP_964477_EK1",
+      "source_document": "KAP 964477 ek 1",
+      "source_published_at": "2021-09-20T10:59:25+03:00",
+      "source_sha256": "8066c327e83974df6896d4506971be5064d5c3209d797d793b237ce1e03ad3ac",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964477_ek1.pdf",
+      "quote": "Yurtiçi Kurumsal Yatırımcılar 22 8.519 0,01%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,01",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal grup yok; tabloda yalnız 'Yabancı Bireysel Yatırımcılar' %0,18",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "0",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "0",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "belgede yurt dışı kurumsal grup yok; 0 yazılı değil; yabancı bireysel %0,18; alan null"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (\"Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış\") ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Tacirler Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_963290_EK1",
+      "source_document": "KAP 963290 ek 1",
+      "source_published_at": "2021-09-10T19:57:10+03:00",
+      "source_sha256": "461d58644798c7fe98252da639cb84c62d5a970aba0aa2b1cf56072c55dd741b",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_963290_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Tacirler Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "sonuç bildirimini de Tacirler Yatırım yayımlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Tacirler Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_964579",
+      "source_document": "KAP 964579",
+      "source_published_at": "2021-09-20T18:10:05+03:00",
+      "source_sha256": "7bb8c036f23da18fabbfc45e2082a39fa0ad6f355839ab3607a12608c9a448e0",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964579_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_964579",
+      "source_document": "KAP 964579",
+      "source_published_at": "2021-09-20T18:10:05+03:00",
+      "source_sha256": "7bb8c036f23da18fabbfc45e2082a39fa0ad6f355839ab3607a12608c9a448e0",
+      "source_path": "registry/oot/source_docs/KIMMR/KAP_964579_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_964579": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 964579",
+      "published_at": "2021-09-20T18:10:05+03:00",
+      "sha256": "7bb8c036f23da18fabbfc45e2082a39fa0ad6f355839ab3607a12608c9a448e0",
+      "path": "registry/oot/source_docs/KIMMR/KAP_964579_bildirim.pdf"
+    },
+    "KAP_964477_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 964477 ek 1",
+      "published_at": "2021-09-20T10:59:25+03:00",
+      "sha256": "8066c327e83974df6896d4506971be5064d5c3209d797d793b237ce1e03ad3ac",
+      "path": "registry/oot/source_docs/KIMMR/KAP_964477_ek1.pdf"
+    },
+    "KAP_963290_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 963290 ek 1",
+      "published_at": "2021-09-10T19:57:10+03:00",
+      "sha256": "461d58644798c7fe98252da639cb84c62d5a970aba0aa2b1cf56072c55dd741b",
+      "path": "registry/oot/source_docs/KIMMR/KAP_963290_ek1.pdf"
+    }
+  }
+}

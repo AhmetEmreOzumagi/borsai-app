@@ -1,0 +1,76 @@
+# BORSAI_FAZ9_APP_UI_20261003 — test koşuları (özet; ham çıktıların son satırları)
+
+## Adım 0 taban (5de4c27), paralel pytest
+952 passed in 524.13s (0:08:44)
+EXIT 0
+
+## Adım 0b prova klonu, paralel pytest
+FAILED tests/test_faz8_break.py::test_14b_old_specs_models_and_cutoff_unchanged@tests/test_faz8_break.py
+FAILED tests/test_faz8_model.py::test_5c_old_goldens_and_app_pins_unchanged@tests/test_faz8_model.py
+2 failed, 950 passed in 612.22s (0:10:12)
+EXIT 1
+
+## A öncesi, paralel pytest (test_14b ayrıldı)
+951 passed in 637.38s (0:10:37)
+EXIT 0
+
+## B öncesi, paralel pytest (test_14b ayrıldı)
+951 passed in 642.16s (0:10:42)
+EXIT 0
+
+## Son kabul (89477d6 = C, temiz ağaç), SIRALI pytest, ayrılan yok
+952 passed in 1012.55s (0:16:52)
+EXIT 0
+
+## Adım 0 test.sh
+cargo: 151 passed, 0 failed
+ Test Files  20 passed (20)
+      Tests  305 passed (305)
+8 passed in 9.90s
+=== golden_unchanged: YEŞİL (U46, U55, U80; EK 3 P2, P4) ===
+EXIT 0
+
+## Adım 0b test.sh (klon)
+cargo: 151 passed, 0 failed
+ Test Files  20 passed (20)
+      Tests  305 passed (305)
+8 passed in 9.88s
+=== golden_unchanged: YEŞİL (U46, U55, U80; EK 3 P2, P4) ===
+EXIT 0
+
+## A öncesi test.sh
+cargo: 161 passed, 0 failed
+ Test Files  20 passed (20)
+      Tests  305 passed (305)
+8 passed in 9.85s
+=== golden_unchanged: YEŞİL (U46, U55, U80; EK 3 P2, P4) ===
+EXIT 0
+
+## B öncesi test.sh
+cargo: 161 passed, 0 failed
+ Test Files  24 passed (24)
+      Tests  365 passed (365)
+8 passed in 10.23s
+=== golden_unchanged: YEŞİL (U46, U55, U80; EK 3 P2, P4) ===
+EXIT 0
+
+## Son kabul test.sh
+cargo: 161 passed, 0 failed
+ Test Files  24 passed (24)
+      Tests  365 passed (365)
+8 passed in 9.99s
+=== golden_unchanged: YEŞİL (U46, U55, U80; EK 3 P2, P4) ===
+EXIT 0
+
+## gen_golden --check
+adım 0: {"checked": 35, "different": []}
+son kabul: {"checked": 35, "different": []}
+
+## A sonrası (temiz ağaç, B işi stash'te): test_5c + test_14b tek başına
+2 passed in 4.54s
+
+## C sonrası: test_5c + test_14b tek başına
+2 passed in 8.92s
+
+## Not
+İlk son kabul denemesi sıralı pytest %96'da (kırmızısız) aracın arka plan süre sınırında durduruldu; nohup ile baştan koşuldu (yukarıdaki son kabul).

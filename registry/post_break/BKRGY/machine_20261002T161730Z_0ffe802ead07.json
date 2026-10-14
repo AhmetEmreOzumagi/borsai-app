@@ -1,0 +1,165 @@
+{
+  "break_day": {
+    "b_floor": 1,
+    "band_ratio": {
+      "lower_over_reference": "0.900232018561484918793503480278422273781902552204176334106729",
+      "rule_ok": true,
+      "upper_over_reference": "1.09976798143851508120649651972157772621809744779582366589327"
+    },
+    "fields_raw": {
+      "aof": "12.316",
+      "close": "11.64",
+      "halt": "0",
+      "high": "13.38",
+      "low": "11.64",
+      "lower_limit": "11.64",
+      "open": "11.64",
+      "reference_price": "12.93",
+      "special_trade_turnover": "0",
+      "special_trade_volume": "0",
+      "trade_count": "294912",
+      "turnover": "3413062739.79",
+      "upper_limit": "14.22",
+      "volume": "277125310"
+    },
+    "h": 1,
+    "half_day": 0,
+    "halt_flag": 0,
+    "session_date": "2026-09-02",
+    "warnings": []
+  },
+  "code": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "3dcef9955cf82cd02be96f1fc1209ed6413ffa79d92e18f96ed765c4cab1fb30",
+    "git_head": "71cf0791d53d3b48e5914f760fa075a7626c6a15",
+    "predict_break_sha256": "848818a56094ceb5123327a65da04ff44c8fa54c97515ea2ff3e821a0b3e265a"
+  },
+  "comparators": {
+    "PRODUCT_BREAK_FLOOR": {
+      "F1": null,
+      "F2": null,
+      "source_model_id": null,
+      "source_record": null,
+      "status": "NOT_AVAILABLE"
+    },
+    "base_floor_by_type": null
+  },
+  "exposure_class": "MACHINE_SEQUENCED",
+  "features": {
+    "b_floor": 1,
+    "b_turnover_ln": 0.5064759741478724,
+    "b_turnover_ratio": "1.65943299401197604790419161676646706586826347305389221556886",
+    "clipped": {
+      "F1": false,
+      "F2": false
+    },
+    "z": {
+      "F1": {
+        "b_floor": 1.1588171308956141,
+        "b_turnover": 0.49053231391017943
+      },
+      "F2": {
+        "b_floor": 1.1677484162422844,
+        "b_turnover": 0.5101914498479773
+      }
+    }
+  },
+  "inputs_ref": {
+    "file": "registry/inputs/BKRGY.json",
+    "inputs_pit_ok": true,
+    "ipo_price_tl": "12.93",
+    "sha256": "aba6a2ca73a06626c9e4802e5933d0e4cfb77aa388ec3c3bc3105ecc44221fd8",
+    "shares_offered": {
+      "source_published_at": "2026-08-27T11:34:59+03:00",
+      "value": "167000000"
+    }
+  },
+  "models": [
+    {
+      "file": "models/break_floor_v0.json",
+      "model_id": "break_floor_v0",
+      "not_applicable": null,
+      "output": {
+        "F1": {
+          "p_floor": 0.5432679533511754
+        },
+        "F2": {
+          "p_floor": 0.15231130173471372
+        },
+        "warnings": []
+      },
+      "params_sha256": "81f07e7810ca5b9513ebc577e14182798ea0b227f105df1551950d6ce40a3eab",
+      "refused": null,
+      "spec_sha256": "8ada9ccf77dc12caa5e9ea00b5bd028456dc8ce7d6857665358737c4b7a84e50",
+      "status": "PREDICTED"
+    },
+    {
+      "file": "models/break_floor_v0@ZERO.json",
+      "model_id": "break_floor_v0@ZERO",
+      "not_applicable": null,
+      "output": {
+        "F1": {
+          "p_floor": 0.3048780487804878
+        },
+        "F2": {
+          "p_floor": 0.14102564102564102
+        },
+        "warnings": []
+      },
+      "params_sha256": "f460acc84717fb489eb81d96fce01ff44f4eb850b9fc66f0c50fb8858000bd3b",
+      "refused": null,
+      "spec_sha256": "73d719f0124063e19079dcb0a4158b98b4095196dbebe53be55339c309f54e3c",
+      "status": "PREDICTED"
+    }
+  ],
+  "models_index": {
+    "model_ids": [
+      "break_floor_v0",
+      "break_floor_v0@ZERO"
+    ],
+    "path": "models/INDEX_POST_BREAK.json",
+    "sha256": "899cf90c805d45313e187e2297f9207229d119f57c1ca56b009ace24ff8e8c5e"
+  },
+  "produced_at_utc": "2026-10-02T16:17:30Z",
+  "record_stage": "POST_BREAK",
+  "record_type": "MACHINE",
+  "schema_version": "borsai.post_break_machine_record/1",
+  "streak": {
+    "L": 0,
+    "b": 1,
+    "break_date": "2026-09-02",
+    "sessions": [
+      {
+        "ceiling_close": 0,
+        "close_raw": "11.64",
+        "date": "2026-09-02",
+        "h": 1,
+        "thb": {
+          "file": "data/raw/bist/thb/2026/thb202609021.zip",
+          "sha256": "64c32b7da9287ca35fcbc54f596844cc47123cc7c2b91df661aa9f11c81bf644"
+        },
+        "thm": {
+          "file": "data/raw/bist/thm/2026/thm202609021.zip",
+          "sha256": "7edc1f5b17764e9fd6566ef73b24dec10338bf9802223bcb29826e17da7ff281"
+        },
+        "upper_limit_raw": "14.22"
+      }
+    ]
+  },
+  "structural_zero_D10": {
+    "P": "12.93",
+    "band_rule_ok": true,
+    "impossible": false,
+    "k_b": -0.9975534935858791,
+    "min10": "4.54",
+    "r_b": 9
+  },
+  "summary": {
+    "n_models": 2,
+    "n_not_applicable": 0,
+    "n_predicted": 2,
+    "n_refused": 0
+  },
+  "t_open": "2026-09-03T09:40:00+03:00",
+  "ticker": "BKRGY"
+}

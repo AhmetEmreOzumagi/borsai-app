@@ -1,0 +1,242 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "EDATA",
+ "company": "E-Data Teknoloji Pazarlama A.Ş.",
+ "first_trading_date": "2021-07-05",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Borsa İstanbul Birincil Piyasa; yatırımcı grubu bazında tahsisat ve dağıtım yapılmadı",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_944162_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f88017a4342aa813a5d",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "944162",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/944162",
+   "published_at": "2021-06-25T16:30:20+03:00",
+   "source_sha256": "3d5eab4ff50d22269599a901126d23c90226ae3df85ae0d3445436420266ec6a",
+   "source_file": "source_docs/EDATA/KAP_944162_ek1.pdf",
+   "page": 74,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "25.2.3. Halka arzda yatırımcılara tahsis ve dağıtım esasları: Halka arzda yatırımcılara tahsis ve dağıtım esaslarında Borsa Istanbul düzenlemeleri uygulanacaktır. a) Yatırımcı grubu bazında tabsisat oranları: Yoktur.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_944162_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f88017a4342aa813a5d",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "944162",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/944162",
+     "published_at": "2021-06-25T16:30:20+03:00",
+     "source_sha256": "3d5eab4ff50d22269599a901126d23c90226ae3df85ae0d3445436420266ec6a",
+     "source_file": "source_docs/EDATA/KAP_944162_ek1.pdf",
+     "page": 75,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Yatırımcılara paylarının tahsisat ve dağıtımı, halka arzın ikinci günü olan satışın gerçekleşeceği günde, birincil piyasa işlem süresinin bitişini takiben, Borsa yönetimi tarafından otomatik olarak yapılacaktır."
+    },
+    {
+     "source_id": "KAP_944162_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f88017a4342aa813a5d",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "944162",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/944162",
+     "published_at": "2021-06-25T16:30:20+03:00",
+     "source_sha256": "3d5eab4ff50d22269599a901126d23c90226ae3df85ae0d3445436420266ec6a",
+     "source_file": "source_docs/EDATA/KAP_944162_ek1.pdf",
+     "page": 70,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Dağıtım, zaman önceliğine göre sıralanmış her emre sırayla birer lot dağıtılarak satılacak miktar tamamlanana kadar devam edecektir."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Borsa'da satış (Borsa'da Satış - Sabit Fiyatla Talep Toplama ve Satış Yöntemi, en iyi gayret; A1 Capital). Yatırımcı grubu tahsisatı yok; dağıtımı Borsa otomatik yapar, zaman önceliğiyle her emre birer lot (s.70). Belge eşit/oransal adlandırmıyor. s.74'te 25.2.3.c cevabı OCR metninde görünmüyor (sayfa sonu damga gürültüsü).",
+   "codex_value": "Borsa'da Satış - Sabit Fiyatla Talep Toplama ve Satış Yöntemi",
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_planned": {
+   "value": "FALSE",
+   "unit": "boolean",
+   "status": "FILLED",
+   "source_id": "KAP_944162_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f88017a4342aa813a5d",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "944162",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/944162",
+   "published_at": "2021-06-25T16:30:20+03:00",
+   "source_sha256": "3d5eab4ff50d22269599a901126d23c90226ae3df85ae0d3445436420266ec6a",
+   "source_file": "source_docs/EDATA/KAP_944162_ek1.pdf",
+   "page": 80,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlamıp planlanmadığı: Fiyat istikrarı işlemlerinin gerçekleştirilmesi planlanmamaktadır.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": ""
+  },
+  "price_stability_days": {
+   "value": "0",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_944162_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f88017a4342aa813a5d",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "944162",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/944162",
+   "published_at": "2021-06-25T16:30:20+03:00",
+   "source_sha256": "3d5eab4ff50d22269599a901126d23c90226ae3df85ae0d3445436420266ec6a",
+   "source_file": "source_docs/EDATA/KAP_944162_ek1.pdf",
+   "page": 80,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlamıp planlanmadığı: Fiyat istikrarı işlemlerinin gerçekleştirilmesi planlanmamaktadır.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Planlanmamış; H99 biçimi 0."
+  },
+  "issuer_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_944162_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f88017a4342aa813a5d",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "944162",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/944162",
+   "published_at": "2021-06-25T16:30:20+03:00",
+   "source_sha256": "3d5eab4ff50d22269599a901126d23c90226ae3df85ae0d3445436420266ec6a",
+   "source_file": "source_docs/EDATA/KAP_944162_ek1.pdf",
+   "page": 80,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Şirket paylarının Borsa İstanbul A.Ş.'de işlem görmeye başladığı tarihten itibaren 1 (bir) yıl boyunca; (1) Herhangi bir bedelli sermaye artırımı yapılmamasına ve dolaşımdaki pay miktarının bu suretle artırılmamasına,",
+   "provenance": "CODEX_VERIFIED",
+   "note": "06.04.2021 tarih ve 2021/15 sayılı YK kararı. Kapsam: bedelli sermaye artırımı yapmama; yeni satış/halka arz ya da dolaşımdaki payı artıracak karar ve açıklama yapmama. Başlangıç: borsada işlem görmeye başlama.",
+   "codex_value": "365",
+   "codex_verdict": "VERIFIED"
+  },
+  "shareholder_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "VERIFIED",
+   "source_id": "KAP_944162_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f88017a4342aa813a5d",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "944162",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/944162",
+   "published_at": "2021-06-25T16:30:20+03:00",
+   "source_sha256": "3d5eab4ff50d22269599a901126d23c90226ae3df85ae0d3445436420266ec6a",
+   "source_file": "source_docs/EDATA/KAP_944162_ek1.pdf",
+   "page": 81,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Şirket sermayesinde mevcut ortaklar Osman SUNGUR ve Tahir Fatih MUTLU aynı ayrı verdikleri 08.06.2021 tarihli taahhütleri ile Şirket sermayesinde sahip oldukları payları, Şirket paylarının Borsa Istanbul'da işlem görmeye başlamasından itibaren, payların borsa fiyatından bağımsız olarak, bir yıl süreyle hiçbir şekilde Borsa'da satmayacaklarını",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_944162_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f88017a4342aa813a5d",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "944162",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/944162",
+     "published_at": "2021-06-25T16:30:20+03:00",
+     "source_sha256": "3d5eab4ff50d22269599a901126d23c90226ae3df85ae0d3445436420266ec6a",
+     "source_file": "source_docs/EDATA/KAP_944162_ek1.pdf",
+     "page": 81,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "c) Sermaye piyasası mevzuatı kapsamında verilen tabhütler: Şirket sermayesinde mevcut ortaklar Osman SUNGUR ve Tahir Fatih MUTLU 08.06.2021 tarihli taahhütleri ile Şirket sermayesinde sahip oldukları payları, Şirket paylarının Borsa İstanbul'da işlem görmeye başlamasından itibaren, payların borsa fiyatından bağımsız olarak, bir yıl süreyle hiçbir şekilde Borsa'da satmayacaklarını"
+    }
+   ],
+   "components": [
+    {
+     "who": "Osman Sungur",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU + MEVZUAT (b ve c başlıklarında aynı taahhüt)",
+     "start": "borsada işlem görmeye başlama"
+    },
+    {
+     "who": "Tahir Fatih Mutlu",
+     "days": "365",
+     "type": "MUTLAK",
+     "basis": "GONULLU + MEVZUAT (b ve c başlıklarında aynı taahhüt)",
+     "start": "borsada işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "b) başlığı OCR'da 'p) Oftaklar tarafından verilen taahhütler' (s.80 sonu); metin s.81'de. Her iki ortak 1 yıl, fiyattan bağımsız, borsada hiçbir şekilde satmama. Ortak satışı yok (27.1 'Yoktur'). En kısa 365. d) Yetkili kuruluşlar tarafından verilen taahhütler: Yoktur.",
+   "codex_value": "365",
+   "codex_verdict": "VERIFIED"
+  },
+  "sector": {
+   "value": "Bilişim ürünleri distribütörlüğü (ağ, siber güvenlik, sunucu-depolama)",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_944161_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f88017a4340202c3a16",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "944161",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/944161",
+   "published_at": "2021-06-25T16:29:37+03:00",
+   "source_sha256": "909b61724b9ca34138a6ed3620d7dd4f968967a759e1450593f063d4a85540ec",
+   "source_file": "source_docs/EDATA/KAP_944161_ek1.pdf",
+   "page": 49,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "2008 yılında Ankara'da kurulmuş olan Şirket'in fiili faaliyet konusu, distribütörlüğünü yaptığı ağ ürünleri, baskı çözümleri, siber güvenlik ürünleri, sunucu-depolama ürünleri, veri merkezi altyapı ürünleri ile diğer donanım ve yazılımların yer aldığı tüm ürünlerde lojistik ve finansal çözlimlerin yanı sıra satış öncesi ve sonrası teknik eğitim, pazarlama ve iletişim gibi çeşitli alanlarda müşterilerine (İş ortağı) sürdürülebilir çözümler üretmektir.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_944161_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f88017a4340202c3a16",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "944161",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/944161",
+     "published_at": "2021-06-25T16:29:37+03:00",
+     "source_sha256": "909b61724b9ca34138a6ed3620d7dd4f968967a759e1450593f063d4a85540ec",
+     "source_file": "source_docs/EDATA/KAP_944161_ek1.pdf",
+     "page": 49,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Şirket, yurt içi ve yurt dışında faaliyet gösteren 15 in üzerinde üretici firmanın Türkiye genelinde distribütörlüğünü yapmaktadır."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "İzahname §7.1.1.",
+   "codex_value": "bilgi teknolojileri ürünleri distribütörlüğü",
+   "codex_verdict": "VERIFIED"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahname 1. ve 2. bölüm, TSSD ve Borsa birincil piyasa duyurusunda katılım endeksi / faizsiz finans uygunluk beyanı yok. qfind 'katılım endeks|faizsiz|islami|icazet|katılım finans|danışma kurulu|katılım bank|faiz içermeyen' eşleşme vermedi.",
+   "looked_at": [
+    "KAP_944161_EK1",
+    "KAP_944162_EK1",
+    "KAP_944163_EK1",
+    "KAP_944163",
+    "KAP_944233"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_944161_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "944161",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f88017a4340202c3a16",
+   "published_at": "2021-06-25T16:29:37+03:00",
+   "sha256": "909b61724b9ca34138a6ed3620d7dd4f968967a759e1450593f063d4a85540ec",
+   "file": "source_docs/EDATA/KAP_944161_ek1.pdf"
+  },
+  "KAP_944162_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "944162",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c794d2f88017a4342aa813a5d",
+   "published_at": "2021-06-25T16:30:20+03:00",
+   "sha256": "3d5eab4ff50d22269599a901126d23c90226ae3df85ae0d3445436420266ec6a",
+   "file": "source_docs/EDATA/KAP_944162_ek1.pdf"
+  }
+ }
+}

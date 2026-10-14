@@ -1,0 +1,222 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "FZLGY",
+  "company": "Fuzul Gayrimenkul Yatırım Ortaklığı A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "1326874",
+      "source_id": "KAP_1174410_EK1",
+      "source_document": "KAP 1174410 ek 1",
+      "source_published_at": "2023-07-24T07:37:28+03:00",
+      "source_sha256": "48fb67ee2ebd81462d20a025346085cf2a8bb4936513705fb204bc732dd1a119",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1174410_ek1.pdf",
+      "quote": "Toplam 91.860.000 %100,00 1.369.622 267.858.995,00 %100,0 1.326.874 91.860.000 %100,0",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 1.369.622; dağıtım yapılan 1.326.874",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "1326756",
+        "domestic_institutional": "113",
+        "foreign_institutional": "5"
+      },
+      "source_id": "KAP_1174410_EK1",
+      "source_document": "KAP 1174410 ek 1",
+      "source_published_at": "2023-07-24T07:37:28+03:00",
+      "source_sha256": "48fb67ee2ebd81462d20a025346085cf2a8bb4936513705fb204bc732dd1a119",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1174410_ek1.pdf",
+      "quote": [
+        "64.302.000 %70,00 1.369.504 196.119.165 %73,2 1.326.756 65.396.750 %71,2",
+        "13.779.000 %15,00 113 59.055.580 %22,0 113 13.779.000 %15,0",
+        "13.779.000 %15,00 5 12.684.250 %4,7 5 12.684.250 %13,8"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 1.369.504, yurt içi kurumsal 113, yurt dışı kurumsal 5",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "3.0",
+      "source_id": "KAP_1174410_EK1",
+      "source_document": "KAP 1174410 ek 1",
+      "source_published_at": "2023-07-24T07:37:28+03:00",
+      "source_sha256": "48fb67ee2ebd81462d20a025346085cf2a8bb4936513705fb204bc732dd1a119",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1174410_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 3,0 katı",
+      "note": "belgede 'yaklaşık', nihai tahsisata göre",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "4.3",
+      "source_id": "KAP_1174410_EK1",
+      "source_document": "KAP 1174410 ek 1",
+      "source_published_at": "2023-07-24T07:37:28+03:00",
+      "source_sha256": "48fb67ee2ebd81462d20a025346085cf2a8bb4936513705fb204bc732dd1a119",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1174410_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara ise yaklaşık 4,3 katı oranında talep gelmiştir.",
+      "note": "belgede 'yaklaşık'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "belge yurt dışı kurumsal katını yazmıyor; tabloda talep 12.684.250, planlanan tahsisat 13.779.000, dağıtılan (nihai) 12.684.250 — belgenin kat tanımı (nihai tahsisat) ile planlanan tahsisat farklı sonuç verdiğinden türetilmedi",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "65396750",
+        "domestic_institutional": "13779000",
+        "foreign_institutional": "12684250"
+      },
+      "source_id": "KAP_1174410_EK1",
+      "source_document": "KAP 1174410 ek 1",
+      "source_published_at": "2023-07-24T07:37:28+03:00",
+      "source_sha256": "48fb67ee2ebd81462d20a025346085cf2a8bb4936513705fb204bc732dd1a119",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1174410_ek1.pdf",
+      "quote": [
+        "64.302.000 %70,00 1.369.504 196.119.165 %73,2 1.326.756 65.396.750 %71,2",
+        "13.779.000 %15,00 113 59.055.580 %22,0 113 13.779.000 %15,0",
+        "13.779.000 %15,00 5 12.684.250 %4,7 5 12.684.250 %13,8"
+      ],
+      "note": "yurt dışı kurumsal talebi planlanan tahsisatın altında kalmış; artan pay bireysele kaydırılmış (planlanan 64.302.000 → dağıtılan 65.396.750)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "71.2",
+      "source_id": "KAP_1174410_EK1",
+      "source_document": "KAP 1174410 ek 1",
+      "source_published_at": "2023-07-24T07:37:28+03:00",
+      "source_sha256": "48fb67ee2ebd81462d20a025346085cf2a8bb4936513705fb204bc732dd1a119",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1174410_ek1.pdf",
+      "quote": "64.302.000 %70,00 1.369.504 196.119.165 %73,2 1.326.756 65.396.750 %71,2",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %70,00",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "15.0",
+      "source_id": "KAP_1174410_EK1",
+      "source_document": "KAP 1174410 ek 1",
+      "source_published_at": "2023-07-24T07:37:28+03:00",
+      "source_sha256": "48fb67ee2ebd81462d20a025346085cf2a8bb4936513705fb204bc732dd1a119",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1174410_ek1.pdf",
+      "quote": "13.779.000 %15,00 113 59.055.580 %22,0 113 13.779.000 %15,0",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "13.8",
+      "source_id": "KAP_1174410_EK1",
+      "source_document": "KAP 1174410 ek 1",
+      "source_published_at": "2023-07-24T07:37:28+03:00",
+      "source_sha256": "48fb67ee2ebd81462d20a025346085cf2a8bb4936513705fb204bc732dd1a119",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1174410_ek1.pdf",
+      "quote": "13.779.000 %15,00 5 12.684.250 %4,7 5 12.684.250 %13,8",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %15,00",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız talep toplama (satış) yöntemini ('Sabit Fiyatla Talep Toplama') adlandırıyor, dağıtım yöntemini adlandırmıyor; TSSD izahnameye atıf yapıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Halk Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1172833_EK1",
+      "source_document": "KAP 1172833 ek 1",
+      "source_published_at": "2023-07-17T20:51:42+03:00",
+      "source_sha256": "a60c21fa708c2effe5f08f9157cfdf860556c2e2a58e9aa65de44517a6f03599",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1172833_ek1.pdf",
+      "quote": [
+        "Halka Arza Aracılık Eden Yetkili Kuruluy Halk Yatırım Menkul Değerler Anj. Sorumlu Olduğu Kram: (Lider)",
+        "Halka Arza Aracılık Eden Yetkil Kuruluş İntegral Yatırım Menkul Değerler A.Ş. Sorumlu Olduğu Kıım: (Eg Lider)"
+      ],
+      "note": "TSSD imza sayfası Halk Yatırım'ı '(Lider)', İntegral Yatırım'ı eş lider olarak gösteriyor (OCR bozuk); sonuç bildirimini Halk Yatırım yayımlamış",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1175085",
+      "source_document": "KAP 1175085",
+      "source_published_at": "2023-07-25T18:00:26+03:00",
+      "source_sha256": "8c56abbadadfdcda1c53bb828e01c5c66583a863a1b8509cb5209806bbb8a0c5",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1175085_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1175085",
+      "source_document": "KAP 1175085",
+      "source_published_at": "2023-07-25T18:00:26+03:00",
+      "source_sha256": "8c56abbadadfdcda1c53bb828e01c5c66583a863a1b8509cb5209806bbb8a0c5",
+      "source_path": "registry/oot/source_docs/FZLGY/KAP_1175085_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1175085": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1175085",
+      "published_at": "2023-07-25T18:00:26+03:00",
+      "sha256": "8c56abbadadfdcda1c53bb828e01c5c66583a863a1b8509cb5209806bbb8a0c5",
+      "path": "registry/oot/source_docs/FZLGY/KAP_1175085_bildirim.pdf"
+    },
+    "KAP_1174410_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1174410 ek 1",
+      "published_at": "2023-07-24T07:37:28+03:00",
+      "sha256": "48fb67ee2ebd81462d20a025346085cf2a8bb4936513705fb204bc732dd1a119",
+      "path": "registry/oot/source_docs/FZLGY/KAP_1174410_ek1.pdf"
+    },
+    "KAP_1172833_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1172833 ek 1",
+      "published_at": "2023-07-17T20:51:42+03:00",
+      "sha256": "a60c21fa708c2effe5f08f9157cfdf860556c2e2a58e9aa65de44517a6f03599",
+      "path": "registry/oot/source_docs/FZLGY/KAP_1172833_ek1.pdf"
+    }
+  }
+}

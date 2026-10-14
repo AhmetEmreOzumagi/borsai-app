@@ -1,0 +1,345 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "KONKA",
+  "company": "Konya Kağıt Sanayi ve Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_979024",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "6.95",
+      "source_id": "KAP_979024",
+      "source_document": "KAP 979024",
+      "source_published_at": "2021-11-22T18:31:22+03:00",
+      "source_sha256": "f7d48204e495868733bd607742e707ee90aec86a0d7a961a2f544a3fc35a963a",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_979024_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 6,95",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_57",
+          "quote": "Konya Kağıt Sanayi 26.000.000 6,95 130.000.000 130.000.000 - - - ve Ticaret A.Ş. (3) (4)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "26000000",
+      "source_id": "KAP_979024",
+      "source_document": "KAP 979024",
+      "source_published_at": "2021-11-22T18:31:22+03:00",
+      "source_sha256": "f7d48204e495868733bd607742e707ee90aec86a0d7a961a2f544a3fc35a963a",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_979024_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 26.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "130000000",
+      "source_id": "KAP_979024",
+      "source_document": "KAP 979024",
+      "source_published_at": "2021-11-22T18:31:22+03:00",
+      "source_sha256": "f7d48204e495868733bd607742e707ee90aec86a0d7a961a2f544a3fc35a963a",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_979024_bildirim.pdf",
+      "quote": "sermayesini temsil eden 130.000.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_57",
+      "source_document": "SPK Bülteni 2021/57",
+      "source_published_at": "2021-11-11T23:59:59+03:00",
+      "source_sha256": "801af41aad216f4a3957c400d74cb1ceb1a0726746ea29b3edff0d60d304720d",
+      "source_path": "registry/oot/source_docs/KONKA/SPK_BULTEN_2021-57.pdf",
+      "quote": "Konya Kağıt Sanayi 26.000.000 6,95 130.000.000 130.000.000 - - - ve Ticaret A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_978872_EK1",
+          "quote": "halka arz edilen 26.000.000 TL nominal değerli payların satışı gerçekleştirilmiştir"
+        },
+        "b_shares_offered_equals_planned_base": "26000000 = 0 + 26000000",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "26000000",
+      "source_id": "SPK_BULTEN_2021_57",
+      "source_document": "SPK Bülteni 2021/57",
+      "source_published_at": "2021-11-11T23:59:59+03:00",
+      "source_sha256": "801af41aad216f4a3957c400d74cb1ceb1a0726746ea29b3edff0d60d304720d",
+      "source_path": "registry/oot/source_docs/KONKA/SPK_BULTEN_2021-57.pdf",
+      "quote": "Konya Kağıt Sanayi 26.000.000 6,95 130.000.000 130.000.000 - - - ve Ticaret A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_978872_EK1",
+          "quote": "halka arz edilen 26.000.000 TL nominal değerli payların satışı gerçekleştirilmiştir"
+        },
+        "b_shares_offered_equals_planned_base": "26000000 = 0 + 26000000",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "4.4243805769",
+      "source_id": "KAP_978872_EK1",
+      "source_document": "KAP 978872 ek 1",
+      "source_published_at": "2021-11-22T09:09:38+03:00",
+      "source_sha256": "c6ca729e4f7025ad83377932edff989941424ddd3d879b5a9c9abd5d7d2175d4",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_978872_ek1.pdf",
+      "origin": "CALCULATED_FROM_SOURCE_TOTALS",
+      "numerator": "115033895",
+      "numerator_quote": "Toplam 26.000.000 %100 56.758 115.033.895 %100 55.237 26.000.000 %100",
+      "denominator": "26000000",
+      "denominator_quote": "halka arz edilen 26.000.000 TL nominal değerli payların satışı gerçekleştirilmiştir",
+      "definition": "TOPLAM_TALEP_NOMINALI_115033895 / SATILAN_TOPLAM_NOMINAL_26000000 (tablo Toplam satırı talep sütunu; aynı birim TL nominal; belge toplam katı yazmıyor)",
+      "denominator_includes_additional_sale": false,
+      "note": "ek satış planlanmamış (SPK '-'); belge yalnız yaklaşık grup katlarını yazıyor",
+      "derived": true,
+      "formula": "115033895 / 26000000 (10 ondalık ROUND_HALF_UP)",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "4,42",
+      "correction_kind": "PRECISION_ONLY"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_978872_EK1",
+      "source_document": "KAP 978872 ek 1",
+      "source_published_at": "2021-11-22T09:09:38+03:00",
+      "source_sha256": "c6ca729e4f7025ad83377932edff989941424ddd3d879b5a9c9abd5d7d2175d4",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_978872_ek1.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_978872_EK1",
+      "source_document": "KAP 978872 ek 1",
+      "source_published_at": "2021-11-22T09:09:38+03:00",
+      "source_sha256": "c6ca729e4f7025ad83377932edff989941424ddd3d879b5a9c9abd5d7d2175d4",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_978872_ek1.pdf",
+      "quote": "halka arz edilen 26.000.000 TL nominal değerli payların satışı gerçekleştirilmiştir",
+      "zero_from_statement": true,
+      "note": "SPK satırında ek satış '-'; satılan toplam 26.000.000 = planlanan taban (bedelli '-' + mevcut pay satışı 26.000.000)",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": "180700000",
+      "source_id": "KAP_978872_EK1",
+      "source_document": "KAP 978872 ek 1",
+      "source_published_at": "2021-11-22T09:09:38+03:00",
+      "source_sha256": "c6ca729e4f7025ad83377932edff989941424ddd3d879b5a9c9abd5d7d2175d4",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_978872_ek1.pdf",
+      "quote": "Buna göre halka arz büyüklüğü 180.700.000 TL olarak gerçekleşmiştir.",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "6.95",
+      "source_id": "SPK_BULTEN_2021_57",
+      "source_document": "SPK Bülteni 2021/57",
+      "source_published_at": "2021-11-11T23:59:59+03:00",
+      "source_sha256": "801af41aad216f4a3957c400d74cb1ceb1a0726746ea29b3edff0d60d304720d",
+      "source_path": "registry/oot/source_docs/KONKA/SPK_BULTEN_2021-57.pdf",
+      "quote": "Konya Kağıt Sanayi 26.000.000 6,95 130.000.000 130.000.000 - - - ve Ticaret A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-11-11",
+        "bookbuilding_start": "2021-11-18",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "130000000",
+      "source_id": "SPK_BULTEN_2021_57",
+      "source_document": "SPK Bülteni 2021/57",
+      "source_published_at": "2021-11-11T23:59:59+03:00",
+      "source_sha256": "801af41aad216f4a3957c400d74cb1ceb1a0726746ea29b3edff0d60d304720d",
+      "source_path": "registry/oot/source_docs/KONKA/SPK_BULTEN_2021-57.pdf",
+      "quote": "Konya Kağıt Sanayi 26.000.000 6,95 130.000.000 130.000.000 - - - ve Ticaret A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-11-11",
+        "bookbuilding_start": "2021-11-18",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "130000000",
+      "source_id": "SPK_BULTEN_2021_57",
+      "source_document": "SPK Bülteni 2021/57",
+      "source_published_at": "2021-11-11T23:59:59+03:00",
+      "source_sha256": "801af41aad216f4a3957c400d74cb1ceb1a0726746ea29b3edff0d60d304720d",
+      "source_path": "registry/oot/source_docs/KONKA/SPK_BULTEN_2021-57.pdf",
+      "quote": "Konya Kağıt Sanayi 26.000.000 6,95 130.000.000 130.000.000 - - - ve Ticaret A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-11-11",
+        "bookbuilding_start": "2021-11-18",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_57",
+      "source_document": "SPK Bülteni 2021/57",
+      "source_published_at": "2021-11-11T23:59:59+03:00",
+      "source_sha256": "801af41aad216f4a3957c400d74cb1ceb1a0726746ea29b3edff0d60d304720d",
+      "source_path": "registry/oot/source_docs/KONKA/SPK_BULTEN_2021-57.pdf",
+      "quote": "Konya Kağıt Sanayi 26.000.000 6,95 130.000.000 130.000.000 - - - ve Ticaret A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-11-11",
+        "bookbuilding_start": "2021-11-18",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "26000000",
+      "source_id": "SPK_BULTEN_2021_57",
+      "source_document": "SPK Bülteni 2021/57",
+      "source_published_at": "2021-11-11T23:59:59+03:00",
+      "source_sha256": "801af41aad216f4a3957c400d74cb1ceb1a0726746ea29b3edff0d60d304720d",
+      "source_path": "registry/oot/source_docs/KONKA/SPK_BULTEN_2021-57.pdf",
+      "quote": "Konya Kağıt Sanayi 26.000.000 6,95 130.000.000 130.000.000 - - - ve Ticaret A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-11-11",
+        "bookbuilding_start": "2021-11-18",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "26000000",
+      "source_id": "SPK_BULTEN_2021_57",
+      "source_document": "SPK Bülteni 2021/57",
+      "source_published_at": "2021-11-11T23:59:59+03:00",
+      "source_sha256": "801af41aad216f4a3957c400d74cb1ceb1a0726746ea29b3edff0d60d304720d",
+      "source_path": "registry/oot/source_docs/KONKA/SPK_BULTEN_2021-57.pdf",
+      "quote": "Konya Kağıt Sanayi 26.000.000 6,95 130.000.000 130.000.000 - - - ve Ticaret A.Ş. (3) (4)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-11-11",
+        "bookbuilding_start": "2021-11-18",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2021_57",
+      "source_document": "SPK Bülteni 2021/57",
+      "source_published_at": "2021-11-11T23:59:59+03:00",
+      "source_sha256": "801af41aad216f4a3957c400d74cb1ceb1a0726746ea29b3edff0d60d304720d",
+      "source_path": "registry/oot/source_docs/KONKA/SPK_BULTEN_2021-57.pdf",
+      "quote": "Konya Kağıt Sanayi 26.000.000 6,95 130.000.000 130.000.000 - - - ve Ticaret A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2021-11-11",
+        "bookbuilding_start": "2021-11-18",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "26000000",
+      "source_id": "SPK_BULTEN_2021_57",
+      "source_document": "SPK Bülteni 2021/57",
+      "source_published_at": "2021-11-11T23:59:59+03:00",
+      "source_sha256": "801af41aad216f4a3957c400d74cb1ceb1a0726746ea29b3edff0d60d304720d",
+      "source_path": "registry/oot/source_docs/KONKA/SPK_BULTEN_2021-57.pdf",
+      "quote": "Konya Kağıt Sanayi 26.000.000 6,95 130.000.000 130.000.000 - - - ve Ticaret A.Ş. (3) (4)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-11-11",
+        "bookbuilding_start": "2021-11-18",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2021-11-26",
+      "source_id": "KAP_979024",
+      "source_document": "KAP 979024",
+      "source_published_at": "2021-11-22T18:31:22+03:00",
+      "source_sha256": "f7d48204e495868733bd607742e707ee90aec86a0d7a961a2f544a3fc35a963a",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_979024_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 26/11/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-11-18",
+      "source_id": "KAP_979024",
+      "source_document": "KAP 979024",
+      "source_published_at": "2021-11-22T18:31:22+03:00",
+      "source_sha256": "f7d48204e495868733bd607742e707ee90aec86a0d7a961a2f544a3fc35a963a",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_979024_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 18-19/11/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-11-19",
+      "source_id": "KAP_979024",
+      "source_document": "KAP 979024",
+      "source_published_at": "2021-11-22T18:31:22+03:00",
+      "source_sha256": "f7d48204e495868733bd607742e707ee90aec86a0d7a961a2f544a3fc35a963a",
+      "source_path": "registry/oot/source_docs/KONKA/KAP_979024_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 18-19/11/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_979024": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 979024",
+      "published_at": "2021-11-22T18:31:22+03:00",
+      "sha256": "f7d48204e495868733bd607742e707ee90aec86a0d7a961a2f544a3fc35a963a",
+      "path": "registry/oot/source_docs/KONKA/KAP_979024_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_57": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/57",
+      "published_at": "2021-11-11T23:59:59+03:00",
+      "sha256": "801af41aad216f4a3957c400d74cb1ceb1a0726746ea29b3edff0d60d304720d",
+      "path": "registry/oot/source_docs/KONKA/SPK_BULTEN_2021-57.pdf"
+    },
+    "KAP_978872_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 978872 ek 1",
+      "published_at": "2021-11-22T09:09:38+03:00",
+      "sha256": "c6ca729e4f7025ad83377932edff989941424ddd3d879b5a9c9abd5d7d2175d4",
+      "path": "registry/oot/source_docs/KONKA/KAP_978872_ek1.pdf"
+    }
+  }
+}

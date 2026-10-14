@@ -1,0 +1,209 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "A1CAP",
+  "company": "A1 Capital Yatırım Menkul Değerler A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "753645",
+      "source_id": "KAP_1157884_EK1",
+      "source_document": "KAP 1157884 ek 1",
+      "source_published_at": "2023-06-09T23:38:42+03:00",
+      "source_sha256": "3264f207566b1f14dd4fb17bdd8490404f953002fe0668af806740de11d4fa2c",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1157884_ek1.pdf",
+      "quote": "Toplam 35.000.000 %100,00 786.954 85.029.012 %100,00 753.645 35.000.000 %100,00",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 786.954; dağıtım yapılan 753.645",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "753367",
+        "domestic_institutional": "61",
+        "employees": "217"
+      },
+      "source_id": "KAP_1157884_EK1",
+      "source_document": "KAP 1157884 ek 1",
+      "source_published_at": "2023-06-09T23:38:42+03:00",
+      "source_sha256": "3264f207566b1f14dd4fb17bdd8490404f953002fe0668af806740de11d4fa2c",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1157884_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 27.650.000 %79,00 786.676 52.201.588 %61,39 753.367 27.650.000 %79,00",
+        "Yurt İçi Kurumsal 7.000.000 %20,00 61 32.477.424 %38,20 61 7.000.000 %20,00",
+        "350.000 %1,00 217 350.000 %0,41 217 350.000 %1,00"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "employees = Çalışanlardan Oluşan Yatırımcılar; talep eden: bireysel 786.676, kurumsal 61, çalışan 217; yurt dışı grup yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "1.89",
+      "source_id": "KAP_1157884_EK1",
+      "source_document": "KAP 1157884 ek 1",
+      "source_published_at": "2023-06-09T23:38:42+03:00",
+      "source_sha256": "3264f207566b1f14dd4fb17bdd8490404f953002fe0668af806740de11d4fa2c",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1157884_ek1.pdf",
+      "quote": "“Yurt İçi Bireysel Yatırımcılar”dan planlanan tahsisat tutarının yaklaşık 1,89 katı",
+      "note": "belgede 'yaklaşık'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "4.64",
+      "source_id": "KAP_1157884_EK1",
+      "source_document": "KAP 1157884 ek 1",
+      "source_published_at": "2023-06-09T23:38:42+03:00",
+      "source_sha256": "3264f207566b1f14dd4fb17bdd8490404f953002fe0668af806740de11d4fa2c",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1157884_ek1.pdf",
+      "quote": "“Yurt İçi Kurumsal Yatırımcılar”dan ise planlanan tahsisat tutarının yaklaşık 4,64 katı talep gelmiştir.",
+      "note": "belgede 'yaklaşık'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "arzda yurt dışı kurumsal grup yok (sonuç tablosunda satır yok)",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "27650000",
+        "domestic_institutional": "7000000",
+        "employees": "350000"
+      },
+      "source_id": "KAP_1157884_EK1",
+      "source_document": "KAP 1157884 ek 1",
+      "source_published_at": "2023-06-09T23:38:42+03:00",
+      "source_sha256": "3264f207566b1f14dd4fb17bdd8490404f953002fe0668af806740de11d4fa2c",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1157884_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 27.650.000 %79,00 786.676 52.201.588 %61,39 753.367 27.650.000 %79,00",
+        "Yurt İçi Kurumsal 7.000.000 %20,00 61 32.477.424 %38,20 61 7.000.000 %20,00",
+        "350.000 %1,00 217 350.000 %0,41 217 350.000 %1,00"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "79.00",
+      "source_id": "KAP_1157884_EK1",
+      "source_document": "KAP 1157884 ek 1",
+      "source_published_at": "2023-06-09T23:38:42+03:00",
+      "source_sha256": "3264f207566b1f14dd4fb17bdd8490404f953002fe0668af806740de11d4fa2c",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1157884_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 27.650.000 %79,00 786.676 52.201.588 %61,39 753.367 27.650.000 %79,00",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "20.00",
+      "source_id": "KAP_1157884_EK1",
+      "source_document": "KAP 1157884 ek 1",
+      "source_published_at": "2023-06-09T23:38:42+03:00",
+      "source_sha256": "3264f207566b1f14dd4fb17bdd8490404f953002fe0668af806740de11d4fa2c",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1157884_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 7.000.000 %20,00 61 32.477.424 %38,20 61 7.000.000 %20,00",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "arzda yurt dışı kurumsal grup yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki satış yöntemini ('Sabit Fiyatla Talep Toplama') adlandırıyor, dağıtım yöntemini adlandırmıyor; TSSD izahnameye atıf yapıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "A1 Capital Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1155756_EK1",
+      "source_document": "KAP 1155756 ek 1",
+      "source_published_at": "2023-06-02T18:05:52+03:00",
+      "source_sha256": "066cc6747f6c74b48bb0f7b2e9e5f0bd579d727d789d785f2c47659833771898",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1155756_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek ortaklığımızın www.alcapital.com.tr adresli internet sitesi",
+      "note": "ihraççı aracı kurumun kendisi ('ortaklığımız' = A1 Capital Yatırım Menkul Değerler A.Ş.; TSSD başlığı)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1158082",
+      "source_document": "KAP 1158082",
+      "source_published_at": "2023-06-12T18:10:37+03:00",
+      "source_sha256": "3ced8124f340b3084f4efb39cfb7e5faa96c7634e8ff7bd727fea83e02037b0e",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1158082_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1158082",
+      "source_document": "KAP 1158082",
+      "source_published_at": "2023-06-12T18:10:37+03:00",
+      "source_sha256": "3ced8124f340b3084f4efb39cfb7e5faa96c7634e8ff7bd727fea83e02037b0e",
+      "source_path": "registry/oot/source_docs/A1CAP/KAP_1158082_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1158082": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1158082",
+      "published_at": "2023-06-12T18:10:37+03:00",
+      "sha256": "3ced8124f340b3084f4efb39cfb7e5faa96c7634e8ff7bd727fea83e02037b0e",
+      "path": "registry/oot/source_docs/A1CAP/KAP_1158082_bildirim.pdf"
+    },
+    "KAP_1157884_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1157884 ek 1",
+      "published_at": "2023-06-09T23:38:42+03:00",
+      "sha256": "3264f207566b1f14dd4fb17bdd8490404f953002fe0668af806740de11d4fa2c",
+      "path": "registry/oot/source_docs/A1CAP/KAP_1157884_ek1.pdf"
+    },
+    "KAP_1155756_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1155756 ek 1",
+      "published_at": "2023-06-02T18:05:52+03:00",
+      "sha256": "066cc6747f6c74b48bb0f7b2e9e5f0bd579d727d789d785f2c47659833771898",
+      "path": "registry/oot/source_docs/A1CAP/KAP_1155756_ek1.pdf"
+    }
+  }
+}

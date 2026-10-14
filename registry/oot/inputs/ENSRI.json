@@ -1,0 +1,328 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "ENSRI",
+  "company": "Ensari Deri Gıda Sanayi ve Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1011427",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "14",
+      "source_id": "KAP_1011427",
+      "source_document": "KAP 1011427",
+      "source_published_at": "2022-03-18T18:04:56+03:00",
+      "source_sha256": "2c7cd38af44e9308af293b463284b2fe5878a3570fb31f67e6bd9090319bb645",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011427_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 14",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2022_12",
+          "quote": "Ensari Deri Gıda Sanayi ve 2.000.000 14,00 30.000.000 36.500.000 6.500.000 - - Ticaret A.Ş. (1) (2)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "8500000",
+      "source_id": "KAP_1011427",
+      "source_document": "KAP 1011427",
+      "source_published_at": "2022-03-18T18:04:56+03:00",
+      "source_sha256": "2c7cd38af44e9308af293b463284b2fe5878a3570fb31f67e6bd9090319bb645",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011427_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 8.500.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "36500000",
+      "source_id": "KAP_1011427",
+      "source_document": "KAP 1011427",
+      "source_published_at": "2022-03-18T18:04:56+03:00",
+      "source_sha256": "2c7cd38af44e9308af293b463284b2fe5878a3570fb31f67e6bd9090319bb645",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011427_bildirim.pdf",
+      "quote": "sermayesini temsil eden 36.500.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "6500000",
+      "source_id": "KAP_1011341_EK1",
+      "source_document": "KAP 1011341 ek 1",
+      "source_published_at": "2022-03-18T12:37:01+03:00",
+      "source_sha256": "bf6a6974ab03490391dc6005e3382031e718990185d1d4f02b1e11cfbbe09e92",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011341_ek1.pdf",
+      "quote": "ihraç edilen 6.500.000 TL nominal değerli paylar ve ortak Muhammet Nuri Ensari’ ye ait 2.000.000 TL nominal değerli paylar olmak üzere toplam 8.500.000 TL nominal değerli paylar halka arz edilmiştir",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "2000000",
+      "source_id": "KAP_1011341_EK1",
+      "source_document": "KAP 1011341 ek 1",
+      "source_published_at": "2022-03-18T12:37:01+03:00",
+      "source_sha256": "bf6a6974ab03490391dc6005e3382031e718990185d1d4f02b1e11cfbbe09e92",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011341_ek1.pdf",
+      "quote": "ortak Muhammet Nuri Ensari’ ye ait 2.000.000 TL nominal değerli paylar",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "2.55",
+      "source_id": "KAP_1011341_EK1",
+      "source_document": "KAP 1011341 ek 1",
+      "source_published_at": "2022-03-18T12:37:01+03:00",
+      "source_sha256": "bf6a6974ab03490391dc6005e3382031e718990185d1d4f02b1e11cfbbe09e92",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011341_ek1.pdf",
+      "quote": "mükerrer başvuruların ayıklanması sonucunda, halka arz büyüklüğünün toplamda 2,55 katına denk gelen 304.677.968 TL karşılığı, 21.762.712 TL nominal değerli talep girildiği görülmüştür",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (halka arz büyüklüğü 8.500.000 TL nominal / 119.000.000 TL'ye göre; mükerrer başvurular ayıklanmış; Borsa İstanbul verisi)",
+      "note": "planlanan ek satış yok (SPK '-'); 21.762.712 / 8.500.000 = 2,5603 (bilgi amaçlı, belge katı alındı)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_filter_status": {
+      "value": "FILTERED",
+      "source_id": "KAP_1011341_EK1",
+      "source_document": "KAP 1011341 ek 1",
+      "source_published_at": "2022-03-18T12:37:01+03:00",
+      "source_sha256": "bf6a6974ab03490391dc6005e3382031e718990185d1d4f02b1e11cfbbe09e92",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011341_ek1.pdf",
+      "quote": "Borsa İstanbul A.Ş. tarafından paylaşılan verilere göre mükerrer başvuruların ayıklanması sonucunda, halka arz büyüklüğünün toplamda 2,55 katına",
+      "locator": "belge 'filtre' sözcüğünü kullanmıyor; katın mükerrer başvurular ayıklandıktan sonraki talep olduğunu açıkça yazıyor. Filtrelenmemiş toplam verilmiyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_1011341_EK1",
+      "source_document": "KAP 1011341 ek 1",
+      "source_published_at": "2022-03-18T12:37:01+03:00",
+      "source_sha256": "bf6a6974ab03490391dc6005e3382031e718990185d1d4f02b1e11cfbbe09e92",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011341_ek1.pdf",
+      "quote": "olmak üzere toplam 8.500.000 TL nominal değerli paylar halka arz edilmiştir",
+      "zero_from_statement": true,
+      "note": "SPK satırında ek satış '-'; halka arz edilen toplam 8.500.000 = planlanan taban (6.500.000 bedelli + 2.000.000 mevcut pay satışı)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_size_tl": {
+      "value": "119000000",
+      "source_id": "KAP_1011341_EK1",
+      "source_document": "KAP 1011341 ek 1",
+      "source_published_at": "2022-03-18T12:37:01+03:00",
+      "source_sha256": "bf6a6974ab03490391dc6005e3382031e718990185d1d4f02b1e11cfbbe09e92",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011341_ek1.pdf",
+      "quote": "belirlenen halka arz fiyatı ile halka arz büyüklüğü 119.000.000 TL olarak gerçekleşmiştir",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_price_try": {
+      "value": "14.00",
+      "source_id": "SPK_BULTEN_2022_12",
+      "source_document": "SPK Bülteni 2022/12",
+      "source_published_at": "2022-03-10T23:59:59+03:00",
+      "source_sha256": "0108eb89217430f826b7495766ee70b3eca98f02f0e478b1443517a818531c40",
+      "source_path": "registry/oot/source_docs/ENSRI/SPK_BULTEN_2022-12.pdf",
+      "quote": "Ensari Deri Gıda Sanayi ve 2.000.000 14,00 30.000.000 36.500.000 6.500.000 - - Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2022-03-10",
+        "bookbuilding_start": "2022-03-16",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "30000000",
+      "source_id": "SPK_BULTEN_2022_12",
+      "source_document": "SPK Bülteni 2022/12",
+      "source_published_at": "2022-03-10T23:59:59+03:00",
+      "source_sha256": "0108eb89217430f826b7495766ee70b3eca98f02f0e478b1443517a818531c40",
+      "source_path": "registry/oot/source_docs/ENSRI/SPK_BULTEN_2022-12.pdf",
+      "quote": "Ensari Deri Gıda Sanayi ve 2.000.000 14,00 30.000.000 36.500.000 6.500.000 - - Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-03-10",
+        "bookbuilding_start": "2022-03-16",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "36500000",
+      "source_id": "SPK_BULTEN_2022_12",
+      "source_document": "SPK Bülteni 2022/12",
+      "source_published_at": "2022-03-10T23:59:59+03:00",
+      "source_sha256": "0108eb89217430f826b7495766ee70b3eca98f02f0e478b1443517a818531c40",
+      "source_path": "registry/oot/source_docs/ENSRI/SPK_BULTEN_2022-12.pdf",
+      "quote": "Ensari Deri Gıda Sanayi ve 2.000.000 14,00 30.000.000 36.500.000 6.500.000 - - Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-03-10",
+        "bookbuilding_start": "2022-03-16",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "6500000",
+      "source_id": "SPK_BULTEN_2022_12",
+      "source_document": "SPK Bülteni 2022/12",
+      "source_published_at": "2022-03-10T23:59:59+03:00",
+      "source_sha256": "0108eb89217430f826b7495766ee70b3eca98f02f0e478b1443517a818531c40",
+      "source_path": "registry/oot/source_docs/ENSRI/SPK_BULTEN_2022-12.pdf",
+      "quote": "Ensari Deri Gıda Sanayi ve 2.000.000 14,00 30.000.000 36.500.000 6.500.000 - - Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2022-03-10",
+        "bookbuilding_start": "2022-03-16",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "2000000",
+      "source_id": "SPK_BULTEN_2022_12",
+      "source_document": "SPK Bülteni 2022/12",
+      "source_published_at": "2022-03-10T23:59:59+03:00",
+      "source_sha256": "0108eb89217430f826b7495766ee70b3eca98f02f0e478b1443517a818531c40",
+      "source_path": "registry/oot/source_docs/ENSRI/SPK_BULTEN_2022-12.pdf",
+      "quote": "Ensari Deri Gıda Sanayi ve 2.000.000 14,00 30.000.000 36.500.000 6.500.000 - - Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-03-10",
+        "bookbuilding_start": "2022-03-16",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "8500000",
+      "source_id": "SPK_BULTEN_2022_12",
+      "source_document": "SPK Bülteni 2022/12",
+      "source_published_at": "2022-03-10T23:59:59+03:00",
+      "source_sha256": "0108eb89217430f826b7495766ee70b3eca98f02f0e478b1443517a818531c40",
+      "source_path": "registry/oot/source_docs/ENSRI/SPK_BULTEN_2022-12.pdf",
+      "quote": "Ensari Deri Gıda Sanayi ve 2.000.000 14,00 30.000.000 36.500.000 6.500.000 - - Ticaret A.Ş. (1) (2)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-03-10",
+        "bookbuilding_start": "2022-03-16",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2022_12",
+      "source_document": "SPK Bülteni 2022/12",
+      "source_published_at": "2022-03-10T23:59:59+03:00",
+      "source_sha256": "0108eb89217430f826b7495766ee70b3eca98f02f0e478b1443517a818531c40",
+      "source_path": "registry/oot/source_docs/ENSRI/SPK_BULTEN_2022-12.pdf",
+      "quote": "Ensari Deri Gıda Sanayi ve 2.000.000 14,00 30.000.000 36.500.000 6.500.000 - - Ticaret A.Ş. (1) (2)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2022-03-10",
+        "bookbuilding_start": "2022-03-16",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "8500000",
+      "source_id": "SPK_BULTEN_2022_12",
+      "source_document": "SPK Bülteni 2022/12",
+      "source_published_at": "2022-03-10T23:59:59+03:00",
+      "source_sha256": "0108eb89217430f826b7495766ee70b3eca98f02f0e478b1443517a818531c40",
+      "source_path": "registry/oot/source_docs/ENSRI/SPK_BULTEN_2022-12.pdf",
+      "quote": "Ensari Deri Gıda Sanayi ve 2.000.000 14,00 30.000.000 36.500.000 6.500.000 - - Ticaret A.Ş. (1) (2)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-03-10",
+        "bookbuilding_start": "2022-03-16",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2022-03-22",
+      "source_id": "KAP_1011427",
+      "source_document": "KAP 1011427",
+      "source_published_at": "2022-03-18T18:04:56+03:00",
+      "source_sha256": "2c7cd38af44e9308af293b463284b2fe5878a3570fb31f67e6bd9090319bb645",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011427_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 22/03/2022",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2022-03-16",
+      "source_id": "KAP_1011427",
+      "source_document": "KAP 1011427",
+      "source_published_at": "2022-03-18T18:04:56+03:00",
+      "source_sha256": "2c7cd38af44e9308af293b463284b2fe5878a3570fb31f67e6bd9090319bb645",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011427_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 16-17/03/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2022-03-17",
+      "source_id": "KAP_1011427",
+      "source_document": "KAP 1011427",
+      "source_published_at": "2022-03-18T18:04:56+03:00",
+      "source_sha256": "2c7cd38af44e9308af293b463284b2fe5878a3570fb31f67e6bd9090319bb645",
+      "source_path": "registry/oot/source_docs/ENSRI/KAP_1011427_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 16-17/03/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1011427": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1011427",
+      "published_at": "2022-03-18T18:04:56+03:00",
+      "sha256": "2c7cd38af44e9308af293b463284b2fe5878a3570fb31f67e6bd9090319bb645",
+      "path": "registry/oot/source_docs/ENSRI/KAP_1011427_bildirim.pdf"
+    },
+    "SPK_BULTEN_2022_12": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2022/12",
+      "published_at": "2022-03-10T23:59:59+03:00",
+      "sha256": "0108eb89217430f826b7495766ee70b3eca98f02f0e478b1443517a818531c40",
+      "path": "registry/oot/source_docs/ENSRI/SPK_BULTEN_2022-12.pdf"
+    },
+    "KAP_1011341_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1011341 ek 1",
+      "published_at": "2022-03-18T12:37:01+03:00",
+      "sha256": "bf6a6974ab03490391dc6005e3382031e718990185d1d4f02b1e11cfbbe09e92",
+      "path": "registry/oot/source_docs/ENSRI/KAP_1011341_ek1.pdf"
+    }
+  }
+}

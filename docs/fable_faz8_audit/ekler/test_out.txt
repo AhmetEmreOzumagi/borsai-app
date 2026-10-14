@@ -1,0 +1,48 @@
+# tam test (sıralı) — 2026-10-02T09:47:05Z HEAD c84ba64
+$ .venv/bin/pytest -q -p no:cacheprovider
+........................................................................ [  7%]
+........................................................................ [ 15%]
+........................................................................ [ 23%]
+........................................................................ [ 31%]
+........................................................................ [ 39%]
+........................................................................ [ 47%]
+........................................................................ [ 55%]
+........................................................................ [ 63%]
+........................................................................ [ 71%]
+........................................................................ [ 79%]
+........................................................................ [ 87%]
+........................................................................ [ 95%]
+..........................................                               [100%]
+906 passed in 1221.35s (0:20:21)
+pytest exit=
+
+$ bash app/scripts/test.sh — 2026-10-02T10:07:27Z
+test.sh exit=0
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+test golden_coverage ... ok
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.79s
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+     Running tests/golden.rs (target/debug/deps/golden-fd4c6061a9c6c4b9)
+test golden_files_present ... ok
+test conditional_path_parity ... ok
+test conditional_parity ... ok
+test golden_parity ... ok
+test fall_parity ... ok
+test post_d1_parity ... ok
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 11.34s
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+     Running tests/records_parity.rs (target/debug/deps/records_parity-7bf7072bc8040642)
+test records_parity ... ok
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.51s
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+ Test Files  20 passed (20)
+      Tests  305 passed (305)
+8 passed in 10.86s
+=== golden_unchanged: YEŞİL (U46, U55, U80; EK 3 P2, P4) ===
+# bitiş 2026-10-02T10:08:29Z
+
+# not: 'pytest exit=' satırı boş — zsh'de ${PIPESTATUS} tanımsız (bash değişkeni); sonuç satırı '906 passed in 1221.35s', başarısız/hata yok. Korunan dizinler koşu sırasında temiz (git status --porcelain -- registry data scores models app: boş).

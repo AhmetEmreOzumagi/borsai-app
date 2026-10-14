@@ -1,0 +1,352 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "KCAER",
+  "company": "Kocaer Çelik Sanayi ve Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1039804",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "OFF_EXCHANGE_BOOKBUILD",
+  "market": "YILDIZ",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "27.5",
+      "source_id": "KAP_1039804",
+      "source_document": "KAP 1039804",
+      "source_published_at": "2022-06-28T18:15:27+03:00",
+      "source_sha256": "f3bc9d1ce0bd97934cf5591ff557332c3526d5ef5ebc116eff7dd1f53a7f8010",
+      "source_path": "registry/oot/source_docs/KCAER/KAP_1039804_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 27,5",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2022_30",
+          "quote": "Kocaer Çelik Sanayi 25.250.000 9.350.000 27,5 212.000.000 233.500.000 21.500.000 - ve Ticaret A.Ş. (1) (2) (3)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "56100000",
+      "source_id": "KAP_1039804",
+      "source_document": "KAP 1039804",
+      "source_published_at": "2022-06-28T18:15:27+03:00",
+      "source_sha256": "f3bc9d1ce0bd97934cf5591ff557332c3526d5ef5ebc116eff7dd1f53a7f8010",
+      "source_path": "registry/oot/source_docs/KCAER/KAP_1039804_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 56.100.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "233500000",
+      "source_id": "KAP_1039804",
+      "source_document": "KAP 1039804",
+      "source_published_at": "2022-06-28T18:15:27+03:00",
+      "source_sha256": "f3bc9d1ce0bd97934cf5591ff557332c3526d5ef5ebc116eff7dd1f53a7f8010",
+      "source_path": "registry/oot/source_docs/KCAER/KAP_1039804_bildirim.pdf",
+      "quote": "sermayesini temsil eden 233.500.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "21500000",
+      "source_id": "SPK_BULTEN_2022_30",
+      "source_document": "SPK Bülteni 2022/30",
+      "source_published_at": "2022-06-16T23:59:59+03:00",
+      "source_sha256": "12dab8f0bef3fd7b2421da45b1914601c8c4dcac3f02aaf1e2ecb31d34a88073",
+      "source_path": "registry/oot/source_docs/KCAER/SPK_BULTEN_2022-30.pdf",
+      "quote": "Kocaer Çelik Sanayi 25.250.000 9.350.000 27,5 212.000.000 233.500.000 21.500.000 - ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_BASE_PLUS_STATED_ADDITIONAL_SALE",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1039329_EK1",
+          "quote": "Halka arz edilen 46.750.000 TL nominal değerli paylar ile ek satışa sunulan 9.350.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_base_plus_stated_additional": "56100000 = 21500000 + 25250000 + 9350000",
+        "c_additional_sale_stated": {
+          "source_id": "KAP_1039329_EK1",
+          "quote": "Halka arz edilen 46.750.000 TL nominal değerli paylar ile ek satışa sunulan 9.350.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir."
+        }
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "25250000",
+      "source_id": "SPK_BULTEN_2022_30",
+      "source_document": "SPK Bülteni 2022/30",
+      "source_published_at": "2022-06-16T23:59:59+03:00",
+      "source_sha256": "12dab8f0bef3fd7b2421da45b1914601c8c4dcac3f02aaf1e2ecb31d34a88073",
+      "source_path": "registry/oot/source_docs/KCAER/SPK_BULTEN_2022-30.pdf",
+      "quote": "Kocaer Çelik Sanayi 25.250.000 9.350.000 27,5 212.000.000 233.500.000 21.500.000 - ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_BASE_PLUS_STATED_ADDITIONAL_SALE",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1039329_EK1",
+          "quote": "Halka arz edilen 46.750.000 TL nominal değerli paylar ile ek satışa sunulan 9.350.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir."
+        },
+        "b_shares_offered_equals_base_plus_stated_additional": "56100000 = 21500000 + 25250000 + 9350000",
+        "c_additional_sale_stated": {
+          "source_id": "KAP_1039329_EK1",
+          "quote": "Halka arz edilen 46.750.000 TL nominal değerli paylar ile ek satışa sunulan 9.350.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir."
+        }
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_multiple": {
+      "value": "1.21",
+      "source_id": "KAP_1039329_EK1",
+      "source_document": "KAP 1039329 ek 1",
+      "source_published_at": "2022-06-27T09:53:00+03:00",
+      "source_sha256": "0c8e945877c2e7edd6d6e2ef9579e642b283ca5bbafc6c33bbd8c5ea8742fcb7",
+      "source_path": "registry/oot/source_docs/KCAER/KAP_1039329_ek1.pdf",
+      "quote": "ek satış hariç halka arz edilen 46.750.000 TL nominal değerli payların 1,21 katına denk gelen 56.603.062 TL nominal değerli pay talebi gelmiştir",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (ek satış hariç 46.750.000 TL nominal paya göre)",
+      "denominator_includes_additional_sale": false,
+      "note": "belge katı ek satış hariç tabana göre yazıyor; ek satış dahil satılan toplam 56.100.000 paydası ile 56.603.062 / 56.100.000 = 1,0089670232 olurdu",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "total_demand_filter_status": {
+      "value": "NOT_SPECIFIED",
+      "source_id": "KAP_1039329_EK1",
+      "source_document": "KAP 1039329 ek 1",
+      "source_published_at": "2022-06-27T09:53:00+03:00",
+      "source_sha256": "0c8e945877c2e7edd6d6e2ef9579e642b283ca5bbafc6c33bbd8c5ea8742fcb7",
+      "source_path": "registry/oot/source_docs/KCAER/KAP_1039329_ek1.pdf",
+      "locator": "belgede 'filtre' ifadesi yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "additional_sale_shares": {
+      "value": "9350000",
+      "source_id": "KAP_1039329_EK1",
+      "source_document": "KAP 1039329 ek 1",
+      "source_published_at": "2022-06-27T09:53:00+03:00",
+      "source_sha256": "0c8e945877c2e7edd6d6e2ef9579e642b283ca5bbafc6c33bbd8c5ea8742fcb7",
+      "source_path": "registry/oot/source_docs/KCAER/KAP_1039329_ek1.pdf",
+      "quote": "Halka arz edilen 46.750.000 TL nominal değerli paylar ile ek satışa sunulan 9.350.000 TL nominal değerli payların tamamının satışı gerçekleşmiştir.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_size_tl": {
+      "value": "1542750000",
+      "source_id": "KAP_1039329_EK1",
+      "source_document": "KAP 1039329 ek 1",
+      "source_published_at": "2022-06-27T09:53:00+03:00",
+      "source_sha256": "0c8e945877c2e7edd6d6e2ef9579e642b283ca5bbafc6c33bbd8c5ea8742fcb7",
+      "source_path": "registry/oot/source_docs/KCAER/KAP_1039329_ek1.pdf",
+      "quote": "Toplam halka arz büyüklüğü 1.542.750.000 TL olarak gerçekleşmiştir.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "ipo_price_try": {
+      "value": "27.5",
+      "source_id": "SPK_BULTEN_2022_30",
+      "source_document": "SPK Bülteni 2022/30",
+      "source_published_at": "2022-06-16T23:59:59+03:00",
+      "source_sha256": "12dab8f0bef3fd7b2421da45b1914601c8c4dcac3f02aaf1e2ecb31d34a88073",
+      "source_path": "registry/oot/source_docs/KCAER/SPK_BULTEN_2022-30.pdf",
+      "quote": "Kocaer Çelik Sanayi 25.250.000 9.350.000 27,5 212.000.000 233.500.000 21.500.000 - ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2022-06-16",
+        "bookbuilding_start": "2022-06-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "212000000",
+      "source_id": "SPK_BULTEN_2022_30",
+      "source_document": "SPK Bülteni 2022/30",
+      "source_published_at": "2022-06-16T23:59:59+03:00",
+      "source_sha256": "12dab8f0bef3fd7b2421da45b1914601c8c4dcac3f02aaf1e2ecb31d34a88073",
+      "source_path": "registry/oot/source_docs/KCAER/SPK_BULTEN_2022-30.pdf",
+      "quote": "Kocaer Çelik Sanayi 25.250.000 9.350.000 27,5 212.000.000 233.500.000 21.500.000 - ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-06-16",
+        "bookbuilding_start": "2022-06-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": "233500000",
+      "source_id": "SPK_BULTEN_2022_30",
+      "source_document": "SPK Bülteni 2022/30",
+      "source_published_at": "2022-06-16T23:59:59+03:00",
+      "source_sha256": "12dab8f0bef3fd7b2421da45b1914601c8c4dcac3f02aaf1e2ecb31d34a88073",
+      "source_path": "registry/oot/source_docs/KCAER/SPK_BULTEN_2022-30.pdf",
+      "quote": "Kocaer Çelik Sanayi 25.250.000 9.350.000 27,5 212.000.000 233.500.000 21.500.000 - ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-06-16",
+        "bookbuilding_start": "2022-06-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_capital_increase_shares": {
+      "value": "21500000",
+      "source_id": "SPK_BULTEN_2022_30",
+      "source_document": "SPK Bülteni 2022/30",
+      "source_published_at": "2022-06-16T23:59:59+03:00",
+      "source_sha256": "12dab8f0bef3fd7b2421da45b1914601c8c4dcac3f02aaf1e2ecb31d34a88073",
+      "source_path": "registry/oot/source_docs/KCAER/SPK_BULTEN_2022-30.pdf",
+      "quote": "Kocaer Çelik Sanayi 25.250.000 9.350.000 27,5 212.000.000 233.500.000 21.500.000 - ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2022-06-16",
+        "bookbuilding_start": "2022-06-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "25250000",
+      "source_id": "SPK_BULTEN_2022_30",
+      "source_document": "SPK Bülteni 2022/30",
+      "source_published_at": "2022-06-16T23:59:59+03:00",
+      "source_sha256": "12dab8f0bef3fd7b2421da45b1914601c8c4dcac3f02aaf1e2ecb31d34a88073",
+      "source_path": "registry/oot/source_docs/KCAER/SPK_BULTEN_2022-30.pdf",
+      "quote": "Kocaer Çelik Sanayi 25.250.000 9.350.000 27,5 212.000.000 233.500.000 21.500.000 - ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-06-16",
+        "bookbuilding_start": "2022-06-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "46750000",
+      "source_id": "SPK_BULTEN_2022_30",
+      "source_document": "SPK Bülteni 2022/30",
+      "source_published_at": "2022-06-16T23:59:59+03:00",
+      "source_sha256": "12dab8f0bef3fd7b2421da45b1914601c8c4dcac3f02aaf1e2ecb31d34a88073",
+      "source_path": "registry/oot/source_docs/KCAER/SPK_BULTEN_2022-30.pdf",
+      "quote": "Kocaer Çelik Sanayi 25.250.000 9.350.000 27,5 212.000.000 233.500.000 21.500.000 - ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-06-16",
+        "bookbuilding_start": "2022-06-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "9350000",
+      "source_id": "SPK_BULTEN_2022_30",
+      "source_document": "SPK Bülteni 2022/30",
+      "source_published_at": "2022-06-16T23:59:59+03:00",
+      "source_sha256": "12dab8f0bef3fd7b2421da45b1914601c8c4dcac3f02aaf1e2ecb31d34a88073",
+      "source_path": "registry/oot/source_docs/KCAER/SPK_BULTEN_2022-30.pdf",
+      "quote": "Kocaer Çelik Sanayi 25.250.000 9.350.000 27,5 212.000.000 233.500.000 21.500.000 - ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı)",
+      "pit_pb": {
+        "bulletin_date": "2022-06-16",
+        "bookbuilding_start": "2022-06-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "56100000",
+      "source_id": "SPK_BULTEN_2022_30",
+      "source_document": "SPK Bülteni 2022/30",
+      "source_published_at": "2022-06-16T23:59:59+03:00",
+      "source_sha256": "12dab8f0bef3fd7b2421da45b1914601c8c4dcac3f02aaf1e2ecb31d34a88073",
+      "source_path": "registry/oot/source_docs/KCAER/SPK_BULTEN_2022-30.pdf",
+      "quote": "Kocaer Çelik Sanayi 25.250.000 9.350.000 27,5 212.000.000 233.500.000 21.500.000 - ve Ticaret A.Ş. (1) (2) (3)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-06-16",
+        "bookbuilding_start": "2022-06-22",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2022-06-30",
+      "source_id": "KAP_1039804",
+      "source_document": "KAP 1039804",
+      "source_published_at": "2022-06-28T18:15:27+03:00",
+      "source_sha256": "f3bc9d1ce0bd97934cf5591ff557332c3526d5ef5ebc116eff7dd1f53a7f8010",
+      "source_path": "registry/oot/source_docs/KCAER/KAP_1039804_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 30/06/2022",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2022-06-22",
+      "source_id": "KAP_1039804",
+      "source_document": "KAP 1039804",
+      "source_published_at": "2022-06-28T18:15:27+03:00",
+      "source_sha256": "f3bc9d1ce0bd97934cf5591ff557332c3526d5ef5ebc116eff7dd1f53a7f8010",
+      "source_path": "registry/oot/source_docs/KCAER/KAP_1039804_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 22-24/06/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2022-06-24",
+      "source_id": "KAP_1039804",
+      "source_document": "KAP 1039804",
+      "source_published_at": "2022-06-28T18:15:27+03:00",
+      "source_sha256": "f3bc9d1ce0bd97934cf5591ff557332c3526d5ef5ebc116eff7dd1f53a7f8010",
+      "source_path": "registry/oot/source_docs/KCAER/KAP_1039804_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 22-24/06/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1039804": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1039804",
+      "published_at": "2022-06-28T18:15:27+03:00",
+      "sha256": "f3bc9d1ce0bd97934cf5591ff557332c3526d5ef5ebc116eff7dd1f53a7f8010",
+      "path": "registry/oot/source_docs/KCAER/KAP_1039804_bildirim.pdf"
+    },
+    "SPK_BULTEN_2022_30": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2022/30",
+      "published_at": "2022-06-16T23:59:59+03:00",
+      "sha256": "12dab8f0bef3fd7b2421da45b1914601c8c4dcac3f02aaf1e2ecb31d34a88073",
+      "path": "registry/oot/source_docs/KCAER/SPK_BULTEN_2022-30.pdf"
+    },
+    "KAP_1039329_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1039329 ek 1",
+      "published_at": "2022-06-27T09:53:00+03:00",
+      "sha256": "0c8e945877c2e7edd6d6e2ef9579e642b283ca5bbafc6c33bbd8c5ea8742fcb7",
+      "path": "registry/oot/source_docs/KCAER/KAP_1039329_ek1.pdf"
+    }
+  }
+}

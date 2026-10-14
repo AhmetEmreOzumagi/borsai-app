@@ -1,0 +1,443 @@
+{
+  "algorithm": "l2_logit_v1_6_grid",
+  "code_version": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "cdcb3e0b2ee38521f80de8eb799ea4159768a63ada878dbec32a76e085d4e973",
+    "git_commit": "5494f70809b74470e59fdd7e5e2da8b30555b96b"
+  },
+  "created_at": "2026-09-28T21:27:24+03:00",
+  "description": "Düşen arz v0 (SPEC_C_V0): yalnız ek satış bayrağı (1[additional_sale_shares > 0]) ile L2-lojistik (V1.6 C ızgarası); eğitim H99 + açık küme, ek satış alanı dolu 165 arz; f3 istemez.",
+  "family": "fall_d10_v0",
+  "feature_definitions": {
+    "add_sale": "1[additional_sale_shares > 0] (borsai.predict_fall.additional_sale_flag); z-skor; alan boşsa RET (0 varsayılmaz)"
+  },
+  "feature_ranges": {
+    "add_sale": {
+      "max": 1.0,
+      "min": 0.0,
+      "n": 165,
+      "n_missing": 0
+    }
+  },
+  "features": [
+    "add_sale"
+  ],
+  "horizons": {
+    "D10": {
+      "p_up": {
+        "C": 1.0,
+        "coef": [
+          -0.61438124433412
+        ],
+        "columns": [
+          "add_sale"
+        ],
+        "final_fit_attempts": [
+          [
+            1.0,
+            "FIT_OK"
+          ]
+        ],
+        "inner_loocv_brier": {
+          "0.0001": 0.18579112581955545,
+          "0.001": 0.18483229521587732,
+          "0.01": 0.17802034229721314,
+          "0.1": 0.16922721677710906,
+          "1.0": 0.16883933410924015,
+          "10.0": 0.16889662407272316,
+          "100.0": 0.16890389546255796,
+          "ZERO": 0.18590124925639498
+        },
+        "inner_loocv_folds": 165,
+        "inner_loocv_status": {
+          "0.0001": "SCORED",
+          "0.001": "SCORED",
+          "0.01": "SCORED",
+          "0.1": "SCORED",
+          "1.0": "SCORED",
+          "10.0": "SCORED",
+          "100.0": "SCORED",
+          "ZERO": "SCORED"
+        },
+        "intercept": 1.208202132837464,
+        "kind": "logit",
+        "n_class_0": 40,
+        "n_class_1": 125,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      },
+      "return": null
+    },
+    "D5": {
+      "p_up": {
+        "C": 1.0,
+        "coef": [
+          -0.6045959865505527
+        ],
+        "columns": [
+          "add_sale"
+        ],
+        "final_fit_attempts": [
+          [
+            1.0,
+            "FIT_OK"
+          ]
+        ],
+        "inner_loocv_brier": {
+          "0.0001": 0.1505124226129774,
+          "0.001": 0.149918439996804,
+          "0.01": 0.14535624169954703,
+          "0.1": 0.13829397981762664,
+          "1.0": 0.13797606419536473,
+          "10.0": 0.13803404045131915,
+          "100.0": 0.138041272947079,
+          "ZERO": 0.15058001189767997
+        },
+        "inner_loocv_folds": 165,
+        "inner_loocv_status": {
+          "0.0001": "SCORED",
+          "0.001": "SCORED",
+          "0.01": "SCORED",
+          "0.1": "SCORED",
+          "1.0": "SCORED",
+          "10.0": "SCORED",
+          "100.0": "SCORED",
+          "ZERO": "SCORED"
+        },
+        "intercept": 1.6113085529086686,
+        "kind": "logit",
+        "n_class_0": 30,
+        "n_class_1": 135,
+        "tuning_status": "TUNED_INNER_LOOCV"
+      },
+      "return": null
+    }
+  },
+  "input_policy": {
+    "additional_sale_missing": "REFUSE",
+    "codes": "ADDITIONAL_SALE_MISSING (0 varsayılmaz, KARARLAR_C C4); INPUT_NEGATIVE (ek satış < 0)",
+    "f3_filter_status_conflict": "NOT_USED",
+    "f3_missing": "NOT_USED",
+    "out_of_training_range": "WARN OUT_OF_TRAINING_RANGE (ham değer)"
+  },
+  "model_id": "fall_d10_v0_addsale",
+  "preprocessing": {
+    "columns": [
+      "add_sale"
+    ],
+    "dropped": {},
+    "f3_filter_mode": null,
+    "f3_filter_mode_tie": false,
+    "f3_filter_nulled_tickers": [],
+    "f5_created": false,
+    "log_transform": [],
+    "mean": {
+      "add_sale": 0.11515151515151516
+    },
+    "medians": {},
+    "n_train": 165,
+    "preprocessing_id": "FALL_V0_ADD_SALE_PLAIN_Z_NO_IMPUTATION",
+    "std": {
+      "add_sale": 0.3192047050245744
+    },
+    "winsor": {}
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "schema_version": "borsai.model/1",
+  "spec": {
+    "algorithm": "l2_logit_v1_6_grid",
+    "decisions_document": {
+      "path": "docs/specs_faz7_c/KARARLAR_C.md",
+      "sha256": "2b60bec41924ac357b359a151737b9bc4a5a3b8fba30a1f75dab1e2eca2744a9"
+    },
+    "description": "Düşen arz v0 (SPEC_C_V0): yalnız ek satış bayrağı (1[additional_sale_shares > 0]) ile L2-lojistik (V1.6 C ızgarası); eğitim H99 + açık küme, ek satış alanı dolu 165 arz; f3 istemez.",
+    "family": "fall_d10_v0",
+    "feature_version": "BORSAI_FEATURES_V1_5_PORT_1",
+    "features": [
+      "add_sale"
+    ],
+    "free_parameters_per_head": 2,
+    "grid_version": "v1_6",
+    "horizons": [
+      "D5",
+      "D10"
+    ],
+    "input_policy": {
+      "additional_sale_missing": "REFUSE",
+      "codes": "ADDITIONAL_SALE_MISSING (0 varsayılmaz, KARARLAR_C C4); INPUT_NEGATIVE (ek satış < 0)",
+      "f3_filter_status_conflict": "NOT_USED",
+      "f3_missing": "NOT_USED",
+      "out_of_training_range": "WARN OUT_OF_TRAINING_RANGE (ham değer)"
+    },
+    "logit": {
+      "C_grid": [
+        "ZERO",
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "class_weight": null,
+      "direction_rule": "UP iff p > 0.5",
+      "endpoint_ZERO": "yalnız sabit terim: p = n_1/n, intercept = ln(p/(1 − p)), coef = 0; kapalı biçim",
+      "estimator": "sklearn.linear_model.LogisticRegression",
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "label": "Y_h = 1[kapanış(D_h) > arz fiyatı] (p_up başlığı; olay y_h = 1 − Y_h, düşme olasılığı = 1 − p_up)",
+      "max_iter": 10000,
+      "minority_lt_2_policy": "NO_TUNING_FIXED_C_0.01",
+      "non_convergence_policy": "CANDIDATE_NOT_CONVERGED_DROPPED_FINAL_FIT_FALLS_BACK_TO_NEXT_RANKED",
+      "single_class_policy": "MODEL_NOT_FIT_SINGLE_CLASS",
+      "solver": "lbfgs",
+      "tie_break": "BIT_EXACT_TIE_TO_SMALLEST_C_ZERO_SMALLEST",
+      "tol": 1e-10,
+      "tuning": "INNER_LOOCV_RAW_UNCLIPPED_BRIER"
+    },
+    "min_train_n": 10,
+    "model_id": "fall_d10_v0_addsale",
+    "output_note": "p_up(D_h) = P(kapanış > arz) = 1 − P(y_h = 1); düşme olasılığı = 1 − p_up; getiri başlığı yok",
+    "outputs": [
+      "p_up"
+    ],
+    "plan_id": "H99_PLUS_OOT_OPEN_AS_PRESENT_FALL_WALK_FORWARD_STRICT_PRIOR_DATE_MIN_TRAIN_10",
+    "preprocessing_id": "FALL_V0_ADD_SALE_PLAIN_Z_NO_IMPUTATION",
+    "preprocessing_log": [],
+    "preprocessing_winsor": [],
+    "primary_horizon": "D10",
+    "ridge": null,
+    "runtime_pins": {
+      "joblib": "1.5.3",
+      "numpy": "2.5.2",
+      "python": "3.12",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "secondary_horizon": "D5",
+    "spec_document": {
+      "path": "docs/specs_faz7_c/SPEC_C_V0.md",
+      "sha256": "d75c17cfec09712174c86ac8619b5d51fb5681fc161f48455423b84d9e8db5ac"
+    },
+    "target_definition": "1 - Y_h (close(D_h) <= ipo_price)",
+    "training": {
+      "cohort_counts": {
+        "H99": 95,
+        "OOT_OPEN": 70
+      },
+      "data_version_sha256": "2ee8d51be3f026ad05ff7b4894f9512809556b3da2fd2d0b06256b7de5ee525a",
+      "description": "data/training_table_v2.csv'nin additional_sale_shares dolu 165 satırı (f3 istenmez): H99'un 95'i ve açık kümenin 70'i, tablo sırasıyla",
+      "event_definition": "1 - Y_h (close(D_h) <= ipo_price)",
+      "events_D10": 40,
+      "events_D5": 30,
+      "n": 165,
+      "set": "H99_PLUS_OOT_OPEN_AS_PRESENT",
+      "table": "data/training_table_v2.csv"
+    },
+    "variant": "addsale"
+  },
+  "spec_sha256": "b0b04566f98742978a62c44327fc5e5c1389fb7e333a86f4dfd4e0c4ac2172a1",
+  "target_definition": "1 - Y_h (close(D_h) <= ipo_price)",
+  "training": {
+    "cohort_counts": {
+      "H99": 95,
+      "OOT_OPEN": 70
+    },
+    "cutoff_date": "2026-08-19",
+    "data_version_sha256": "2ee8d51be3f026ad05ff7b4894f9512809556b3da2fd2d0b06256b7de5ee525a",
+    "event_definition": "1 - Y_h (close(D_h) <= ipo_price)",
+    "events_D10": 40,
+    "events_D5": 30,
+    "filter_excluded": [],
+    "first_trading_date_range": [
+      "2020-08-06",
+      "2026-08-06"
+    ],
+    "n": 165,
+    "set": "H99_PLUS_OOT_OPEN_AS_PRESENT",
+    "table": "data/training_table_v2.csv",
+    "targets_sha256": {
+      "D1": "c866b8f02f7ae696941a286062f9a4f04b069e558aac4fe1a04ed6c94912b98b",
+      "D10": "1d6da572472fa4b20704b37db224b9d84fb7090b6c8a8907732ed1119ea7bc46",
+      "D3": "5295ecc125fee041b7a99a4f1dcc6f5204b278f494c5206deec020a1e96bb60c",
+      "D5": "0d8ddb24da5f1e87128b6d3463c86b79e8e967a7ba4338433124267b1a8998e2"
+    },
+    "tickers": [
+      "FADE",
+      "DNISI",
+      "ESEN",
+      "KONTR",
+      "ISKPL",
+      "NTGAZ",
+      "MTRKS",
+      "TUREX",
+      "QUAGR",
+      "GWIND",
+      "CANTE",
+      "PENTA",
+      "KLKIM",
+      "ATATP",
+      "OYYAT",
+      "MEDTR",
+      "VBTYZ",
+      "MANAS",
+      "KZBGY",
+      "GESAN",
+      "YEOTK",
+      "MAREN",
+      "ANGEN",
+      "IHAAS",
+      "ULUFA",
+      "MIATK",
+      "KONKA",
+      "PCILT",
+      "RNPOL",
+      "PSGYO",
+      "PNLSN",
+      "DAPGM",
+      "HTTBT",
+      "KLSYN",
+      "GRSEL",
+      "LIDER",
+      "BMSTL",
+      "IMASM",
+      "SUNTK",
+      "YYLGD",
+      "SEGYO",
+      "EUREN",
+      "RUBNS",
+      "KRPLS",
+      "OBASE",
+      "BARMA",
+      "HKTM",
+      "SNICA",
+      "BRKVY",
+      "ONCSM",
+      "SDTTR",
+      "ASTOR",
+      "MACKO",
+      "GOKNR",
+      "AKFYE",
+      "KOPOL",
+      "EUPWR",
+      "BIGCH",
+      "KTLEV",
+      "FORTE",
+      "PASEU",
+      "KLSER",
+      "FZLGY",
+      "ASGYO",
+      "TATEN",
+      "ENERY",
+      "TARKM",
+      "GIPTA",
+      "ADGYO",
+      "REEDR",
+      "HATSN",
+      "DMRGD",
+      "MEKAG",
+      "DOFER",
+      "MHRGY",
+      "BORLS",
+      "TABGD",
+      "VRGYO",
+      "MARBL",
+      "BINHO",
+      "EKOS",
+      "AGROT",
+      "SKYMD",
+      "CATES",
+      "BEGYO",
+      "KBORU",
+      "SURGY",
+      "MEGMT",
+      "AVPGY",
+      "PATEK",
+      "BORSK",
+      "LMKDC",
+      "ALVES",
+      "OBAMS",
+      "ARTMS",
+      "MOGAN",
+      "ODINE",
+      "ENTRA",
+      "RGYAS",
+      "LILAK",
+      "KOTON",
+      "ALTNY",
+      "KOCMT",
+      "HRKET",
+      "ONRYT",
+      "OZYSR",
+      "ALKLC",
+      "YIGIT",
+      "HOROZ",
+      "SEGMN",
+      "EFORC",
+      "DCTTR",
+      "BAHKM",
+      "TCKRC",
+      "GUNDG",
+      "AHSGY",
+      "OZATD",
+      "CEMZY",
+      "DURKN",
+      "BINBN",
+      "CGCAM",
+      "SMRVA",
+      "ARMGD",
+      "EGEGY",
+      "GLRMK",
+      "AKFIS",
+      "MOPAS",
+      "SERNT",
+      "BIGEN",
+      "DSTKF",
+      "VSNMD",
+      "ENDAE",
+      "KLYPV",
+      "BALSU",
+      "BULGS",
+      "DOFRB",
+      "ECOGR",
+      "VAKFA",
+      "PAHOL",
+      "ZERGY",
+      "ARFYE",
+      "MEYSU",
+      "FRMPL",
+      "ZGYO",
+      "UCAYM",
+      "NETCD",
+      "AKHAN",
+      "BESTE",
+      "ATATR",
+      "EMPAE",
+      "GENKM",
+      "SVGYO",
+      "LXGYO",
+      "MCARD",
+      "AAGYO",
+      "EKDMR",
+      "BETAE",
+      "SOHOE",
+      "ORZAX",
+      "GOLDA",
+      "EKIM",
+      "ISVEA",
+      "SSAAT",
+      "SARAE",
+      "QUICK"
+    ],
+    "tickers_sha256": "13beb5da28ab87c29e6be0f98bde85de100b15ca93e15da889b3267d4d4ee604"
+  },
+  "variant": "addsale"
+}

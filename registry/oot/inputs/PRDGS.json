@@ -1,0 +1,324 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "PRDGS",
+  "company": "Pardus Girişim Sermayesi Yatırım Ortaklığı A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_1036999",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "2.29",
+      "source_id": "KAP_1036999",
+      "source_document": "KAP 1036999",
+      "source_published_at": "2022-06-13T18:15:40+03:00",
+      "source_sha256": "4b28d38de0a97591e09c016df6f682d7f9c9019eea62472d473d0a7afe3f6446",
+      "source_path": "registry/oot/source_docs/PRDGS/KAP_1036999_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 2,29",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2022_28",
+          "quote": "Pardus Girişim Sermayesi 11.000.000 2,29 141.000.000 196.00.000 55.000.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "66000000",
+      "source_id": "KAP_1036999",
+      "source_document": "KAP 1036999",
+      "source_published_at": "2022-06-13T18:15:40+03:00",
+      "source_sha256": "4b28d38de0a97591e09c016df6f682d7f9c9019eea62472d473d0a7afe3f6446",
+      "source_path": "registry/oot/source_docs/PRDGS/KAP_1036999_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 66.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "196000000",
+      "source_id": "KAP_1036999",
+      "source_document": "KAP 1036999",
+      "source_published_at": "2022-06-13T18:15:40+03:00",
+      "source_sha256": "4b28d38de0a97591e09c016df6f682d7f9c9019eea62472d473d0a7afe3f6446",
+      "source_path": "registry/oot/source_docs/PRDGS/KAP_1036999_bildirim.pdf",
+      "quote": "sermayesini temsil eden 196.000.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "55000000",
+      "source_id": "KAP_1036925_EK1",
+      "source_document": "KAP 1036925 ek 1",
+      "source_published_at": "2022-06-13T14:46:09+03:00",
+      "source_sha256": "6c322eec57c54950450c9a97d367cc476d60a9bf3b8d712b490e4114d6412f1c",
+      "source_path": "registry/oot/source_docs/PRDGS/KAP_1036925_ek1.pdf",
+      "quote": "ihraç edilen 55.000.000 TL nominal değerli paylar ile ek satışa konu edilen",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "existing_share_sale_shares": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2022_28",
+      "source_document": "SPK Bülteni 2022/28",
+      "source_published_at": "2022-06-02T23:59:59+03:00",
+      "source_sha256": "fbd9a8709a199719ed725722438764e066aeaeb20eb16687d86b170b3a1a78a8",
+      "source_path": "registry/oot/source_docs/PRDGS/SPK_BULTEN_2022-28.pdf",
+      "quote": "Pardus Girişim Sermayesi 11.000.000 2,29 141.000.000 196.00.000 55.000.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION_PLUS_FULL_ADDITIONAL_SALE",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_1036925_EK1",
+          "quote": "olmak üzere toplam 66.000.000 TL nominal değerli paylar halka arz edilmiştir"
+        },
+        "b_shares_offered_equals_base_plus_additional": "66000000 = 55000000 + 0 + 11000000",
+        "c_additional_sale_used_in_full": {
+          "source_id": "KAP_1036925_EK1",
+          "used": "FULL",
+          "quote": "belirlenen halka arz fiyatı ile ek satış dahil halka arz büyüklüğü 151.140.000 TL olarak gerçekleşmiştir",
+          "note": "ek satışa konu 5.500.000 + 5.500.000 pay halka arz edilen 66.000.000'e dahil; SPK planlanan ek satış 11.000.000 tamamen kullanılmış"
+        }
+      },
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "5.500.000",
+      "correction_kind": "VALUE"
+    },
+    "total_demand_multiple": {
+      "value": "3.07",
+      "source_id": "KAP_1036925_EK1",
+      "source_document": "KAP 1036925 ek 1",
+      "source_published_at": "2022-06-13T14:46:09+03:00",
+      "source_sha256": "6c322eec57c54950450c9a97d367cc476d60a9bf3b8d712b490e4114d6412f1c",
+      "source_path": "registry/oot/source_docs/PRDGS/KAP_1036925_ek1.pdf",
+      "quote": "halka arz büyüklüğünün toplamda 3,07 katına denk gelen 463.658.120,55 TL karşılığı filtre edilmemiş 202.470.795 TL nominal değerli talep gelmiştir",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (ek satış dahil halka arz büyüklüğü 66.000.000 TL nominal / 151.140.000 TL'ye göre; filtre edilmemiş; Borsa İstanbul verisi)",
+      "denominator_includes_additional_sale": true,
+      "note": "202.470.795 / 66.000.000 = 3,0677; belge büyüklüğü 'ek satış dahil' olarak tanımlıyor",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_1036925_EK1",
+      "source_document": "KAP 1036925 ek 1",
+      "source_published_at": "2022-06-13T14:46:09+03:00",
+      "source_sha256": "6c322eec57c54950450c9a97d367cc476d60a9bf3b8d712b490e4114d6412f1c",
+      "source_path": "registry/oot/source_docs/PRDGS/KAP_1036925_ek1.pdf",
+      "quote": "463.658.120,55 TL karşılığı filtre edilmemiş 202.470.795 TL nominal değerli talep gelmiştir",
+      "locator": "belgede filtrelenmiş toplam verilmiyor",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": null,
+      "missing_reason": "belgede tek sayı olarak yazılı değil; türetme (satılan toplam − planlanan taban = 66.000.000 − 55.000.000 bedelli = 11.000.000 (belgede 5.500.000 + 5.500.000 olarak iki ortağa ait yazılı)) görev kuralı gereği kullanılmadı",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "11.000.000",
+      "codex_status": "OK"
+    },
+    "ipo_size_tl": {
+      "value": "151140000",
+      "source_id": "KAP_1036925_EK1",
+      "source_document": "KAP 1036925 ek 1",
+      "source_published_at": "2022-06-13T14:46:09+03:00",
+      "source_sha256": "6c322eec57c54950450c9a97d367cc476d60a9bf3b8d712b490e4114d6412f1c",
+      "source_path": "registry/oot/source_docs/PRDGS/KAP_1036925_ek1.pdf",
+      "quote": "belirlenen halka arz fiyatı ile ek satış dahil halka arz büyüklüğü 151.140.000 TL olarak gerçekleşmiştir",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "2.29",
+      "source_id": "SPK_BULTEN_2022_28",
+      "source_document": "SPK Bülteni 2022/28",
+      "source_published_at": "2022-06-02T23:59:59+03:00",
+      "source_sha256": "fbd9a8709a199719ed725722438764e066aeaeb20eb16687d86b170b3a1a78a8",
+      "source_path": "registry/oot/source_docs/PRDGS/SPK_BULTEN_2022-28.pdf",
+      "quote": "Pardus Girişim Sermayesi 11.000.000 2,29 141.000.000 196.00.000 55.000.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2022-06-02",
+        "bookbuilding_start": "2022-06-09",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "141000000",
+      "source_id": "SPK_BULTEN_2022_28",
+      "source_document": "SPK Bülteni 2022/28",
+      "source_published_at": "2022-06-02T23:59:59+03:00",
+      "source_sha256": "fbd9a8709a199719ed725722438764e066aeaeb20eb16687d86b170b3a1a78a8",
+      "source_path": "registry/oot/source_docs/PRDGS/SPK_BULTEN_2022-28.pdf",
+      "quote": "Pardus Girişim Sermayesi 11.000.000 2,29 141.000.000 196.00.000 55.000.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2022-06-02",
+        "bookbuilding_start": "2022-06-09",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_post_ipo_capital": {
+      "value": null,
+      "missing_reason": "SPK Bülteni 2022/28 A.1 satırında Yeni Sermaye '196.00.000' olarak hatalı basılmış (sayı değil). Talep toplamadan önce yayımlanmış başka resmi belgede (KAP penceresinde TSSD/izahname satırı yok; BIST birincil piyasa duyurusu KAP_1035465 sermaye yazmıyor) planlanan sermaye bulunamadı. 141.000.000 + 55.000.000 türetilmedi. Sonuç belgesi (KAP_1036925 ek 1) ve BIST bildirimi 196.000.000 yazıyor ama ikisi de talep toplama sonrası (PB bilgi kesimi dışında).",
+      "provenance": "MISSING"
+    },
+    "planned_capital_increase_shares": {
+      "value": "55000000",
+      "source_id": "SPK_BULTEN_2022_28",
+      "source_document": "SPK Bülteni 2022/28",
+      "source_published_at": "2022-06-02T23:59:59+03:00",
+      "source_sha256": "fbd9a8709a199719ed725722438764e066aeaeb20eb16687d86b170b3a1a78a8",
+      "source_path": "registry/oot/source_docs/PRDGS/SPK_BULTEN_2022-28.pdf",
+      "quote": "Pardus Girişim Sermayesi 11.000.000 2,29 141.000.000 196.00.000 55.000.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2022-06-02",
+        "bookbuilding_start": "2022-06-09",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_existing_share_sale": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2022_28",
+      "source_document": "SPK Bülteni 2022/28",
+      "source_published_at": "2022-06-02T23:59:59+03:00",
+      "source_sha256": "fbd9a8709a199719ed725722438764e066aeaeb20eb16687d86b170b3a1a78a8",
+      "source_path": "registry/oot/source_docs/PRDGS/SPK_BULTEN_2022-28.pdf",
+      "quote": "Pardus Girişim Sermayesi 11.000.000 2,29 141.000.000 196.00.000 55.000.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-06-02",
+        "bookbuilding_start": "2022-06-09",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_base_offer_shares": {
+      "value": "55000000",
+      "source_id": "SPK_BULTEN_2022_28",
+      "source_document": "SPK Bülteni 2022/28",
+      "source_published_at": "2022-06-02T23:59:59+03:00",
+      "source_sha256": "fbd9a8709a199719ed725722438764e066aeaeb20eb16687d86b170b3a1a78a8",
+      "source_path": "registry/oot/source_docs/PRDGS/SPK_BULTEN_2022-28.pdf",
+      "quote": "Pardus Girişim Sermayesi 11.000.000 2,29 141.000.000 196.00.000 55.000.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-06-02",
+        "bookbuilding_start": "2022-06-09",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "11000000",
+      "source_id": "SPK_BULTEN_2022_28",
+      "source_document": "SPK Bülteni 2022/28",
+      "source_published_at": "2022-06-02T23:59:59+03:00",
+      "source_sha256": "fbd9a8709a199719ed725722438764e066aeaeb20eb16687d86b170b3a1a78a8",
+      "source_path": "registry/oot/source_docs/PRDGS/SPK_BULTEN_2022-28.pdf",
+      "quote": "Pardus Girişim Sermayesi 11.000.000 2,29 141.000.000 196.00.000 55.000.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı)",
+      "pit_pb": {
+        "bulletin_date": "2022-06-02",
+        "bookbuilding_start": "2022-06-09",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "planned_max_offer_shares": {
+      "value": "66000000",
+      "source_id": "SPK_BULTEN_2022_28",
+      "source_document": "SPK Bülteni 2022/28",
+      "source_published_at": "2022-06-02T23:59:59+03:00",
+      "source_sha256": "fbd9a8709a199719ed725722438764e066aeaeb20eb16687d86b170b3a1a78a8",
+      "source_path": "registry/oot/source_docs/PRDGS/SPK_BULTEN_2022-28.pdf",
+      "quote": "Pardus Girişim Sermayesi 11.000.000 2,29 141.000.000 196.00.000 55.000.000 - - Yatırım Ortaklığı A.Ş. (3) (4)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2022-06-02",
+        "bookbuilding_start": "2022-06-09",
+        "ok": true
+      },
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "first_trading_date": {
+      "value": "2022-06-15",
+      "source_id": "KAP_1036999",
+      "source_document": "KAP 1036999",
+      "source_published_at": "2022-06-13T18:15:40+03:00",
+      "source_sha256": "4b28d38de0a97591e09c016df6f682d7f9c9019eea62472d473d0a7afe3f6446",
+      "source_path": "registry/oot/source_docs/PRDGS/KAP_1036999_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 15/06/2022",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2022-06-09",
+      "source_id": "KAP_1036999",
+      "source_document": "KAP 1036999",
+      "source_published_at": "2022-06-13T18:15:40+03:00",
+      "source_sha256": "4b28d38de0a97591e09c016df6f682d7f9c9019eea62472d473d0a7afe3f6446",
+      "source_path": "registry/oot/source_docs/PRDGS/KAP_1036999_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 09-10/06/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2022-06-10",
+      "source_id": "KAP_1036999",
+      "source_document": "KAP 1036999",
+      "source_published_at": "2022-06-13T18:15:40+03:00",
+      "source_sha256": "4b28d38de0a97591e09c016df6f682d7f9c9019eea62472d473d0a7afe3f6446",
+      "source_path": "registry/oot/source_docs/PRDGS/KAP_1036999_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 09-10/06/2022 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1036999": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1036999",
+      "published_at": "2022-06-13T18:15:40+03:00",
+      "sha256": "4b28d38de0a97591e09c016df6f682d7f9c9019eea62472d473d0a7afe3f6446",
+      "path": "registry/oot/source_docs/PRDGS/KAP_1036999_bildirim.pdf"
+    },
+    "SPK_BULTEN_2022_28": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2022/28",
+      "published_at": "2022-06-02T23:59:59+03:00",
+      "sha256": "fbd9a8709a199719ed725722438764e066aeaeb20eb16687d86b170b3a1a78a8",
+      "path": "registry/oot/source_docs/PRDGS/SPK_BULTEN_2022-28.pdf"
+    },
+    "KAP_1036925_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1036925 ek 1",
+      "published_at": "2022-06-13T14:46:09+03:00",
+      "sha256": "6c322eec57c54950450c9a97d367cc476d60a9bf3b8d712b490e4114d6412f1c",
+      "path": "registry/oot/source_docs/PRDGS/KAP_1036925_ek1.pdf"
+    }
+  }
+}

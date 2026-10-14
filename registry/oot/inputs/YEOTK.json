@@ -1,0 +1,330 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "YEOTK",
+  "company": "YEO Teknoloji Enerji ve Endüstri A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_961251",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "20",
+      "source_id": "KAP_961251",
+      "source_document": "KAP 961251",
+      "source_published_at": "2021-09-01T18:15:50+03:00",
+      "source_sha256": "fadc0e98c4a12a3d142cdb9b0618775b86ba9976dba16a4b99fbd8aee18c1fff",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961251_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 20",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2021_41",
+          "quote": "YEO Teknoloji Enerji ve 1.000.000 1.000.000 20,00 20.000.000 24.000.000 4.000.000 - Endüstri A.Ş. (2) (3) (4)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "5000000",
+      "source_id": "KAP_961251",
+      "source_document": "KAP 961251",
+      "source_published_at": "2021-09-01T18:15:50+03:00",
+      "source_sha256": "fadc0e98c4a12a3d142cdb9b0618775b86ba9976dba16a4b99fbd8aee18c1fff",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961251_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 5.000.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "24000000",
+      "source_id": "KAP_961251",
+      "source_document": "KAP 961251",
+      "source_published_at": "2021-09-01T18:15:50+03:00",
+      "source_sha256": "fadc0e98c4a12a3d142cdb9b0618775b86ba9976dba16a4b99fbd8aee18c1fff",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961251_bildirim.pdf",
+      "quote": "sermayesini temsil eden 24.000.000 TL",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "capital_increase_shares": {
+      "value": "4000000",
+      "source_id": "KAP_961151_EK1",
+      "source_document": "KAP 961151 ek 1",
+      "source_published_at": "2021-09-01T13:14:50+03:00",
+      "source_sha256": "0a1e7009edf4fc533d482669be8ec8c83bf0742c7ff3ec8bc979191a8246b0e5",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961151_ek1.pdf",
+      "quote": "YEO’nun çıkarılmış sermayesinin 20.000.000 TL’den 24.000.000 TL’ye çıkarılması nedeniyle 4.000.000 TL nominal değerli 4.000.000 adet payın",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "existing_share_sale_shares": {
+      "value": "1000000",
+      "source_id": "SPK_BULTEN_2021_41",
+      "source_document": "SPK Bülteni 2021/41",
+      "source_published_at": "2021-08-19T23:59:59+03:00",
+      "source_sha256": "77d76ffd777c9ee765e88189198c5a4a6cb207aeb63a25d0ed6557fa136f0af2",
+      "source_path": "registry/oot/source_docs/YEOTK/SPK_BULTEN_2021-41.pdf",
+      "quote": "YEO Teknoloji Enerji ve 1.000.000 1.000.000 20,00 20.000.000 24.000.000 4.000.000 - Endüstri A.Ş. (2) (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_961151_EK1",
+          "quote": "toplam 639.863.260 TL talep kabul edilmiş ve 5.000.000 TL nominal değerli payların satışı gerçekleşmiştir"
+        },
+        "b_shares_offered_equals_planned_base": "5000000 = 4000000 + 1000000",
+        "c_no_additional_sale": {
+          "source_id": "KAP_961151_EK1",
+          "used": "NONE",
+          "quote": "olmak üzere toplam 121.489 yatırımcıya 5.000.000 TL nominal değerli paylar dağıtılmıştır",
+          "note": "yalnız taban dağıtıldı; ek satış ifadesi yok"
+        }
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_multiple": {
+      "value": "6.6",
+      "source_id": "KAP_961151_EK1",
+      "source_document": "KAP 961151 ek 1",
+      "source_published_at": "2021-09-01T13:14:50+03:00",
+      "source_sha256": "0a1e7009edf4fc533d482669be8ec8c83bf0742c7ff3ec8bc979191a8246b0e5",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961151_ek1.pdf",
+      "quote": "Borsa İstanbul tarafından paylaşılan verilere göre toplam filtre edilmemiş 6,6 katına denk gelen 33.125.924 pay karşılığı 126.177 adet emir ile toplam 662.518.480 TL talep toplanmıştır.",
+      "origin": "SOURCE_REPORTED",
+      "definition": "belgedeki toplam kat (filtre edilmemiş; 5.000.000 TL nominal satılan paya göre)",
+      "denominator_includes_additional_sale": false,
+      "note": "ek satış (planlanan 1.000.000) kullanılmadı; 33.125.924 / 5.000.000 = 6,6252. Mükerrer tarama sonrası kabul edilen 31.993.163 pay (filtrelenmiş) / 5.000.000 = 6,3986; belge bunu kat olarak yazmıyor",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "total_demand_filter_status": {
+      "value": "UNFILTERED",
+      "source_id": "KAP_961151_EK1",
+      "source_document": "KAP 961151 ek 1",
+      "source_published_at": "2021-09-01T13:14:50+03:00",
+      "source_sha256": "0a1e7009edf4fc533d482669be8ec8c83bf0742c7ff3ec8bc979191a8246b0e5",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961151_ek1.pdf",
+      "quote": "toplam filtre edilmemiş 6,6 katına denk gelen 33.125.924 pay",
+      "locator": "filtrelenmiş: 'Mükerrer taramanın ardından 31.993.163 pay karşılığı 121.489 adet emir ile toplam 639.863.260 TL talep kabul edilmiş'",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_961151_EK1",
+      "source_document": "KAP 961151 ek 1",
+      "source_published_at": "2021-09-01T13:14:50+03:00",
+      "source_sha256": "0a1e7009edf4fc533d482669be8ec8c83bf0742c7ff3ec8bc979191a8246b0e5",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961151_ek1.pdf",
+      "quote": "toplam 639.863.260 TL talep kabul edilmiş ve 5.000.000 TL nominal değerli payların satışı gerçekleşmiştir",
+      "zero_from_statement": true,
+      "note": "satılan toplam 5.000.000 = SPK planlanan taban (bedelli 4.000.000 + mevcut pay satışı 1.000.000); planlanan 1.000.000 ek satış kullanılmamış",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": "100000000",
+      "source_id": "KAP_961151_EK1",
+      "source_document": "KAP 961151 ek 1",
+      "source_published_at": "2021-09-01T13:14:50+03:00",
+      "source_sha256": "0a1e7009edf4fc533d482669be8ec8c83bf0742c7ff3ec8bc979191a8246b0e5",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961151_ek1.pdf",
+      "quote": "belirlenen halka arz fiyatı ile halka arz büyüklüğü 100.000.000 TL olarak gerçekleşmiştir",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_price_try": {
+      "value": "20.00",
+      "source_id": "SPK_BULTEN_2021_41",
+      "source_document": "SPK Bülteni 2021/41",
+      "source_published_at": "2021-08-19T23:59:59+03:00",
+      "source_sha256": "77d76ffd777c9ee765e88189198c5a4a6cb207aeb63a25d0ed6557fa136f0af2",
+      "source_path": "registry/oot/source_docs/YEOTK/SPK_BULTEN_2021-41.pdf",
+      "quote": "YEO Teknoloji Enerji ve 1.000.000 1.000.000 20,00 20.000.000 24.000.000 4.000.000 - Endüstri A.Ş. (2) (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2021-08-19",
+        "bookbuilding_start": "2021-08-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "20000000",
+      "source_id": "SPK_BULTEN_2021_41",
+      "source_document": "SPK Bülteni 2021/41",
+      "source_published_at": "2021-08-19T23:59:59+03:00",
+      "source_sha256": "77d76ffd777c9ee765e88189198c5a4a6cb207aeb63a25d0ed6557fa136f0af2",
+      "source_path": "registry/oot/source_docs/YEOTK/SPK_BULTEN_2021-41.pdf",
+      "quote": "YEO Teknoloji Enerji ve 1.000.000 1.000.000 20,00 20.000.000 24.000.000 4.000.000 - Endüstri A.Ş. (2) (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-08-19",
+        "bookbuilding_start": "2021-08-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "24000000",
+      "source_id": "SPK_BULTEN_2021_41",
+      "source_document": "SPK Bülteni 2021/41",
+      "source_published_at": "2021-08-19T23:59:59+03:00",
+      "source_sha256": "77d76ffd777c9ee765e88189198c5a4a6cb207aeb63a25d0ed6557fa136f0af2",
+      "source_path": "registry/oot/source_docs/YEOTK/SPK_BULTEN_2021-41.pdf",
+      "quote": "YEO Teknoloji Enerji ve 1.000.000 1.000.000 20,00 20.000.000 24.000.000 4.000.000 - Endüstri A.Ş. (2) (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2021-08-19",
+        "bookbuilding_start": "2021-08-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "4000000",
+      "source_id": "SPK_BULTEN_2021_41",
+      "source_document": "SPK Bülteni 2021/41",
+      "source_published_at": "2021-08-19T23:59:59+03:00",
+      "source_sha256": "77d76ffd777c9ee765e88189198c5a4a6cb207aeb63a25d0ed6557fa136f0af2",
+      "source_path": "registry/oot/source_docs/YEOTK/SPK_BULTEN_2021-41.pdf",
+      "quote": "YEO Teknoloji Enerji ve 1.000.000 1.000.000 20,00 20.000.000 24.000.000 4.000.000 - Endüstri A.Ş. (2) (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2021-08-19",
+        "bookbuilding_start": "2021-08-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "1000000",
+      "source_id": "SPK_BULTEN_2021_41",
+      "source_document": "SPK Bülteni 2021/41",
+      "source_published_at": "2021-08-19T23:59:59+03:00",
+      "source_sha256": "77d76ffd777c9ee765e88189198c5a4a6cb207aeb63a25d0ed6557fa136f0af2",
+      "source_path": "registry/oot/source_docs/YEOTK/SPK_BULTEN_2021-41.pdf",
+      "quote": "YEO Teknoloji Enerji ve 1.000.000 1.000.000 20,00 20.000.000 24.000.000 4.000.000 - Endüstri A.Ş. (2) (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-08-19",
+        "bookbuilding_start": "2021-08-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "5000000",
+      "source_id": "SPK_BULTEN_2021_41",
+      "source_document": "SPK Bülteni 2021/41",
+      "source_published_at": "2021-08-19T23:59:59+03:00",
+      "source_sha256": "77d76ffd777c9ee765e88189198c5a4a6cb207aeb63a25d0ed6557fa136f0af2",
+      "source_path": "registry/oot/source_docs/YEOTK/SPK_BULTEN_2021-41.pdf",
+      "quote": "YEO Teknoloji Enerji ve 1.000.000 1.000.000 20,00 20.000.000 24.000.000 4.000.000 - Endüstri A.Ş. (2) (3) (4)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-08-19",
+        "bookbuilding_start": "2021-08-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "1000000",
+      "source_id": "SPK_BULTEN_2021_41",
+      "source_document": "SPK Bülteni 2021/41",
+      "source_published_at": "2021-08-19T23:59:59+03:00",
+      "source_sha256": "77d76ffd777c9ee765e88189198c5a4a6cb207aeb63a25d0ed6557fa136f0af2",
+      "source_path": "registry/oot/source_docs/YEOTK/SPK_BULTEN_2021-41.pdf",
+      "quote": "YEO Teknoloji Enerji ve 1.000.000 1.000.000 20,00 20.000.000 24.000.000 4.000.000 - Endüstri A.Ş. (2) (3) (4)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı)",
+      "pit_pb": {
+        "bulletin_date": "2021-08-19",
+        "bookbuilding_start": "2021-08-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "6000000",
+      "source_id": "SPK_BULTEN_2021_41",
+      "source_document": "SPK Bülteni 2021/41",
+      "source_published_at": "2021-08-19T23:59:59+03:00",
+      "source_sha256": "77d76ffd777c9ee765e88189198c5a4a6cb207aeb63a25d0ed6557fa136f0af2",
+      "source_path": "registry/oot/source_docs/YEOTK/SPK_BULTEN_2021-41.pdf",
+      "quote": "YEO Teknoloji Enerji ve 1.000.000 1.000.000 20,00 20.000.000 24.000.000 4.000.000 - Endüstri A.Ş. (2) (3) (4)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2021-08-19",
+        "bookbuilding_start": "2021-08-27",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2021-09-03",
+      "source_id": "KAP_961251",
+      "source_document": "KAP 961251",
+      "source_published_at": "2021-09-01T18:15:50+03:00",
+      "source_sha256": "fadc0e98c4a12a3d142cdb9b0618775b86ba9976dba16a4b99fbd8aee18c1fff",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961251_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 03/09/2021",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2021-08-27",
+      "source_id": "KAP_961251",
+      "source_document": "KAP 961251",
+      "source_published_at": "2021-09-01T18:15:50+03:00",
+      "source_sha256": "fadc0e98c4a12a3d142cdb9b0618775b86ba9976dba16a4b99fbd8aee18c1fff",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961251_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 27-31/08/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2021-08-31",
+      "source_id": "KAP_961251",
+      "source_document": "KAP 961251",
+      "source_published_at": "2021-09-01T18:15:50+03:00",
+      "source_sha256": "fadc0e98c4a12a3d142cdb9b0618775b86ba9976dba16a4b99fbd8aee18c1fff",
+      "source_path": "registry/oot/source_docs/YEOTK/KAP_961251_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 27-31/08/2021 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_961251": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 961251",
+      "published_at": "2021-09-01T18:15:50+03:00",
+      "sha256": "fadc0e98c4a12a3d142cdb9b0618775b86ba9976dba16a4b99fbd8aee18c1fff",
+      "path": "registry/oot/source_docs/YEOTK/KAP_961251_bildirim.pdf"
+    },
+    "SPK_BULTEN_2021_41": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2021/41",
+      "published_at": "2021-08-19T23:59:59+03:00",
+      "sha256": "77d76ffd777c9ee765e88189198c5a4a6cb207aeb63a25d0ed6557fa136f0af2",
+      "path": "registry/oot/source_docs/YEOTK/SPK_BULTEN_2021-41.pdf"
+    },
+    "KAP_961151_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 961151 ek 1",
+      "published_at": "2021-09-01T13:14:50+03:00",
+      "sha256": "0a1e7009edf4fc533d482669be8ec8c83bf0742c7ff3ec8bc979191a8246b0e5",
+      "path": "registry/oot/source_docs/YEOTK/KAP_961151_ek1.pdf"
+    }
+  }
+}

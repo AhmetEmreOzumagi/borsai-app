@@ -1,0 +1,215 @@
+BORSAI_FAZ6_S3_S5_EXTRACT EK1 adım E1 — bülten kanıtı, sonuç takvimi ve prob kuralları: mutasyon gösterimi
+Tarih: 2026-09-25 (İstanbul). Klon: git clone --local (HEAD 1c0803e) + commit'lenmemiş fark (borsai/, tests/); mutasyon
+uygulanır, 6 test koşar, yedekten geri alınır. Bülten dosya adı kalıbı maskeli. Ağ kullanılmadı (sentetik zip'ler, sentetik HEAD).
+
+Koşan testler (tests/test_faz6_oot.py):
+  K3/K4  test_evidence_decision_rule_k4_and_aggregate_counts
+  K3/E1  test_calendar_evidence_command_writes_once_unchanged_or_stop
+  K2     test_outcome_calendar_counts_trading_session_evidence_days_only
+  K5     test_calendar_probe_checks_every_weekday_closure_against_evidence
+  K2     test_oot_calendar_is_contiguous_with_h99_calendar
+  T2     test_cli_commands_print_numbers_only_pace_downloads_and_rerun (probe çıktısı yeni biçim)
+
+---------------------------------------------------------------- mutasyon özeti (pytest çıktısı)
+klon HEAD: 1c0803e791c298c08630684323e7e0ec0c159c03 + commit'lenmemiş fark:  M borsai/outcomes_oot.py  M tests/test_faz6_oot.py 
+borsai kaynağı: /private/tmp/claude-501/-Users-ahmet-Desktop-BorsAi/98cc0488-2e79-4185-a8bb-2a061f4500b3/scratchpad/mut_ek1/w/clone/borsai
+
+== e01_threshold_1  rc=1  :: (e01) K4 eşiği 50 -> 1
+  FAILED test_evidence_decision_rule_k4_and_aggregate_counts
+  FAILED test_calendar_evidence_command_writes_once_unchanged_or_stop
+  2 failed, 4 passed in 3.58s
+== e02_no_stop_1_49  rc=1  :: (e02) K4: 1–49 işlemli satır DUR yerine PUBLISHED_NO_TRADING
+  FAILED test_evidence_decision_rule_k4_and_aggregate_counts
+  FAILED test_calendar_evidence_command_writes_once_unchanged_or_stop
+  2 failed, 4 passed in 3.61s
+== e03_non_equity_counted  rc=1  :: (e03) K3: pay dışı satırlar da işlemli sayılır
+  FAILED test_evidence_decision_rule_k4_and_aggregate_counts
+  FAILED test_calendar_evidence_command_writes_once_unchanged_or_stop
+  FAILED test_outcome_calendar_counts_trading_session_evidence_days_only
+  FAILED test_calendar_probe_checks_every_weekday_closure_against_evidence
+  4 failed, 2 passed in 2.37s
+== e04_no_row_date_check  rc=1  :: (e04) bülten satırı TARIH denetimi yok
+  FAILED test_evidence_decision_rule_k4_and_aggregate_counts
+  1 failed, 5 passed in 3.73s
+== e05_trading_not_in_calendar  rc=1  :: (e05) K2: TRADING_SESSION günü sonuç takvimine eklenmez
+  FAILED test_outcome_calendar_counts_trading_session_evidence_days_only
+  1 failed, 5 passed in 3.72s
+== e06_probe_skips_evidence  rc=1  :: (e06) K5: prob kanıt varken hiçbir şey denetlemez
+  FAILED test_calendar_probe_checks_every_weekday_closure_against_evidence
+  1 failed, 5 passed in 3.14s
+== e07_probe_no_not_published_check  rc=1  :: (e07) K5: NOT_PUBLISHED ama HEAD 200 görülmez
+  FAILED test_calendar_probe_checks_every_weekday_closure_against_evidence
+  1 failed, 5 passed in 3.18s
+== e08_probe_no_published_404_check  rc=1  :: (e08) K5: PUBLISHED_*/TRADING_SESSION ama HEAD 404 görülmez
+  FAILED test_calendar_probe_checks_every_weekday_closure_against_evidence
+  1 failed, 5 passed in 3.29s
+== e09_probe_no_sha_check  rc=1  :: (e09) K5: karantina zip sha'sı kanıt pinine karşı denetlenmez
+  FAILED test_calendar_probe_checks_every_weekday_closure_against_evidence
+  1 failed, 5 passed in 3.34s
+== e10_probe_missing_row_ignored  rc=1  :: (e10) K5: kanıtta satırı olmayan kapanış görülmez
+  FAILED test_calendar_probe_checks_every_weekday_closure_against_evidence
+  1 failed, 5 passed in 3.15s
+== e11_evidence_overwritten  rc=1  :: (e11) E1: var olan farklı kanıt dosyasının üzerine yazılır
+  FAILED test_calendar_evidence_command_writes_once_unchanged_or_stop
+  1 failed, 5 passed in 3.05s
+== e12_checked_at_compared  rc=1  :: (e12) E1: checked_at karşılaştırmaya girer
+  FAILED test_calendar_evidence_command_writes_once_unchanged_or_stop
+  1 failed, 5 passed in 2.94s
+== e13_extract_old_probe  rc=1  :: (e13) ayıklayıcı (s3) kanıt varken eski 5 günlük probu çağırır
+  FAILED test_calendar_probe_checks_every_weekday_closure_against_evidence
+  1 failed, 5 passed in 3.70s
+== zz_no_mutation  rc=0  :: mutasyonsuz (geri alındıktan sonra)
+  6 passed in 3.64s
+son durum: 2 değişiklik (= yalnız görevin commit'lenmemiş farkı)
+
+---------------------------------------------------------------- kırmızının yeri (ilk hata satırları)
+== e01_threshold_1
+  >           with pytest.raises(oo.OotOutcomeError, match="1–49"):
+  E           Failed: DID NOT RAISE OotOutcomeError
+  >       assert (rc, out["hata"]) == (2, "OotOutcomeError") and "işlemli pay satırı 3 (1–49)" in out["mesaj"]
+== e02_no_stop_1_49
+  >           with pytest.raises(oo.OotOutcomeError, match="1–49"):
+  E           Failed: DID NOT RAISE OotOutcomeError
+  >       assert (rc, out["hata"]) == (2, "OotOutcomeError") and "işlemli pay satırı 3 (1–49)" in out["mesaj"]
+== e03_non_equity_counted
+  >       assert count("2023-04-24") == {"n_rows": 61, "n_equity_rows": 60, "n_equity_rows_traded": 60}
+  E       AssertionError: assert {'n_rows': 61...s_traded': 61} == {'n_rows': 61...s_traded': 60}
+  E         
+== e04_no_row_date_check
+  >       with pytest.raises(oo.OotOutcomeError, match="TARIH"):
+  E       Failed: DID NOT RAISE OotOutcomeError
+== e05_trading_not_in_calendar
+  >       assert sorted(set(cal2.sessions) - set(base.sessions)) == ["2023-04-24"] and set(base.sessions) <= set(cal2.sessions)
+  E       AssertionError: assert ([] == ['2023-04-24']
+  E         
+== e06_probe_skips_evidence
+  >           with pytest.raises(oo.CalendarConflict, match=message):
+  E           Failed: DID NOT RAISE CalendarConflict
+== e07_probe_no_not_published_check
+  >           with pytest.raises(oo.CalendarConflict, match=message):
+  E           Failed: DID NOT RAISE CalendarConflict
+== e08_probe_no_published_404_check
+  >           with pytest.raises(oo.CalendarConflict, match=message):
+  E           Failed: DID NOT RAISE CalendarConflict
+== e09_probe_no_sha_check
+  >       with pytest.raises(oo.CalendarConflict, match="2023-02-10: karantinadaki zip'in sha256'sı kanıttaki pinle eşit değil"):
+  E       Failed: DID NOT RAISE CalendarConflict
+== e10_probe_missing_row_ignored
+  >       with pytest.raises(oo.CalendarConflict, match="2020-01-01: kanıtta satırı yok"):
+  E       Failed: DID NOT RAISE CalendarConflict
+== e11_evidence_overwritten
+  >       assert (rc, out["hata"]) == (2, "OotOutcomeError") and "aynı değil" in out["mesaj"] and path.read_bytes() == before
+  E       KeyError: 'hata'
+== e12_checked_at_compared
+  >       assert (rc, out["action"], out["network_downloads"]) == (0, "UNCHANGED", 0) and path.read_bytes() == before
+  E       KeyError: 'action'
+== e13_extract_old_probe
+  >       assert oo.main(["s3", *args], root=root, head=head, downloader=f6.FakeDownloader(market), calendar=cal) == 0
+  E       AssertionError: assert 2 == 0
+  E        +  where 2 = <function main at 0x10ddb7560>(['s3', '--quarantine', '<tmp>/test_calendar_probe_checks_eve0/q_cli',
+
+Okuma: görevin istediği üç mutasyon (eşik 50 -> 1: e01; TRADING_SESSION takvime eklenmez: e05; prob kanıtı atlar: e06)
+ve her yeni kural için ek mutasyonlar (1–49 DUR: e02; pay dışı satır: e03; satır TARIH'i: e04; prob uyuşmazlıkları e07–e10;
+dosya bir kez yazılır / checked_at karşılaştırılmaz: e11, e12; ayıklayıcı kanıtlı probu kullanır: e13) doğrudan assert'le
+kırmızı. Toplam 13 mutasyon, 13 kırmızı; mutasyonsuz 6/6 yeşil.
+
+---------------------------------------------------------------- sürücü (scratchpad/mut_ek1/mutate_ek1.sh; W=<çalışma dizini>)
+#!/usr/bin/env bash
+# BORSAI_FAZ6_S3_S5_EXTRACT EK1 adım E1: bülten kanıtı, sonuç takvimi ve prob kuralları için mutasyon gösterimi.
+# Klon: git clone --local (HEAD) + çalışma ağacındaki commit'lenmemiş fark (borsai/, tests/); .venv sembolik bağ.
+# Her mutasyon klonda uygulanır, EK1 testleri (+ takvim ve CLI testleri) koşar, yedekten geri alınır. Sonda mutasyonsuz koşu.
+# Bülten dosya adı kalıbı çıktılarda maskelenir. Ağ yok (sentetik zip'ler, sentetik HEAD).
+set -u
+REPO=/Users/ahmet/Desktop/BorsAi
+W=${W:?}
+C=$W/clone
+rm -rf "$C"; git clone -q --local "$REPO" "$C"
+git -C "$REPO" diff HEAD --binary -- borsai tests | git -C "$C" apply
+ln -s "$REPO/.venv" "$C/.venv"
+PY="$C/.venv/bin/python"
+OUT=$W/out.txt; : > "$OUT"
+cd "$C"
+export GIT_OPTIONAL_LOCKS=0
+MASK='s/th([bm])(20[0-9]{6})/th\1_[tarih-maskeli]/g'
+T6=tests/test_faz6_oot.py
+NEW=("$T6::test_evidence_decision_rule_k4_and_aggregate_counts"
+     "$T6::test_calendar_evidence_command_writes_once_unchanged_or_stop"
+     "$T6::test_outcome_calendar_counts_trading_session_evidence_days_only"
+     "$T6::test_calendar_probe_checks_every_weekday_closure_against_evidence"
+     "$T6::test_oot_calendar_is_contiguous_with_h99_calendar"
+     "$T6::test_cli_commands_print_numbers_only_pace_downloads_and_rerun")
+echo "klon HEAD: $(git rev-parse HEAD) + commit'lenmemiş fark: $(git status --porcelain | grep -v '^?? .venv$' | tr '\n' ' ')" >> "$OUT"
+echo "borsai kaynağı: $($PY -c 'import borsai,os; print(os.path.dirname(borsai.__file__))')" >> "$OUT"
+echo >> "$OUT"
+run() {
+  local name=$1 desc=$2; shift 2
+  local log=$W/$name.log
+  "$PY" -m pytest -q -p no:cacheprovider --no-header -rfE "$@" 2>&1 | sed -E "$MASK" > "$log"; local rc=${PIPESTATUS[0]}
+  echo "== $name  rc=$rc  :: $desc" >> "$OUT"
+  grep -E '^(FAILED|ERROR) ' "$log" | sed -E 's/^(FAILED|ERROR) tests\/test_faz6_oot.py::/  \1 /' | cut -c1-200 >> "$OUT"
+  grep -E 'passed|failed' "$log" | tail -1 | sed 's/^/  /' >> "$OUT"
+}
+mutate() { cp "$C/$1" "$W/backup"; "$PY" - "$C/$1" "$2" || { echo "MUTASYON UYGULANAMADI: $2" >> "$OUT"; exit 1; }; }
+restore() { cp "$W/backup" "$C/$1"; }
+OO=borsai/outcomes_oot.py
+m() { # m <ad> <açıklama> <eski> <yeni>
+  local name=$1 desc=$2
+  OLD=$3 NEW_TXT=$4 mutate $OO "$name" <<'PYEOF'
+import os, sys; p=sys.argv[1]; s=open(p,encoding="utf-8").read()
+old, new = os.environ["OLD"], os.environ["NEW_TXT"]
+assert s.count(old)==1, (sys.argv[2], s.count(old)); open(p,"w",encoding="utf-8").write(s.replace(old,new))
+PYEOF
+  run "$name" "$desc" "${NEW[@]}"
+  restore $OO
+}
+m e01_threshold_1 "(e01) K4 eşiği 50 -> 1" \
+  'TRADING_SESSION_MIN_TRADED = 50 ' 'TRADING_SESSION_MIN_TRADED = 1 '
+m e02_no_stop_1_49 "(e02) K4: 1–49 işlemli satır DUR yerine PUBLISHED_NO_TRADING" \
+  '    if n_equity_rows_traded == 0:
+        return EV_PUBLISHED_NO_TRADING' '    if n_equity_rows_traded is not None and n_equity_rows_traded < TRADING_SESSION_MIN_TRADED:
+        return EV_PUBLISHED_NO_TRADING'
+m e03_non_equity_counted "(e03) K3: pay dışı satırlar da işlemli sayılır" \
+  '        if r[i_code].endswith(".E"):' '        if True:'
+m e04_no_row_date_check "(e04) bülten satırı TARIH denetimi yok" \
+  'if len(r) != len(headers) or r[i_date] != market_date:' 'if len(r) != len(headers):'
+m e05_trading_not_in_calendar "(e05) K2: TRADING_SESSION günü sonuç takvimine eklenmez" \
+  '    sessions = tuple(sorted(set(c.sessions) | set(trading)))' '    sessions = tuple(c.sessions)'
+m e06_probe_skips_evidence "(e06) K5: prob kanıt varken hiçbir şey denetlemez" \
+  '    evidence = {r["date"]: r for r in read_calendar_evidence(path)}
+    closures = calendar_c_weekday_closures()' '    evidence = {r["date"]: r for r in read_calendar_evidence(path)}
+    closures = calendar_c_weekday_closures()
+    return [d for d, _ in closures]'
+m e07_probe_no_not_published_check "(e07) K5: NOT_PUBLISHED ama HEAD 200 görülmez" \
+  '            if published:
+                problems.append(f"{d}: kanıt NOT_PUBLISHED ama HEAD 200")' '            if False:
+                problems.append(f"{d}: kanıt NOT_PUBLISHED ama HEAD 200")'
+m e08_probe_no_published_404_check "(e08) K5: PUBLISHED_*/TRADING_SESSION ama HEAD 404 görülmez" \
+  '        if not published:
+            problems.append' '        if False:
+            problems.append'
+m e09_probe_no_sha_check "(e09) K5: karantina zip sha'sı kanıt pinine karşı denetlenmez" \
+  '        elif sha256_file(q) != r["thb_sha256"]:' '        elif False:'
+m e10_probe_missing_row_ignored "(e10) K5: kanıtta satırı olmayan kapanış görülmez" \
+  '            problems.append(f"{d}: kanıtta satırı yok (ya da kaynağı farklı)")
+            continue' '            continue'
+m e11_evidence_overwritten "(e11) E1: var olan farklı kanıt dosyasının üzerine yazılır" \
+  '        raise OotOutcomeError(f"{path.name}: var olan kanıt dosyası (checked_at hariç) yeni ölçümle aynı değil (DUR)")' '        path.write_bytes(evidence_bytes(rows))
+        return "UPDATED"'
+m e12_checked_at_compared "(e12) E1: checked_at karşılaştırmaya girer" \
+  'for k in CAL_EVIDENCE_COLUMNS if k != "checked_at_istanbul"}' 'for k in CAL_EVIDENCE_COLUMNS}'
+m e13_extract_old_probe "(e13) ayıklayıcı (s3) kanıt varken eski 5 günlük probu çağırır" \
+  '    qdir = quarantine_dir(qdir, repo_root=root)
+    check_calendar_closures(prober, qdir=qdir, evidence_path=root / CAL_EVIDENCE_REL)
+    calendar = calendar or load_calendar_oot(bist_dir=root / "data" / "raw" / "bist")
+    d1_rows_dir' '    qdir = quarantine_dir(qdir, repo_root=root)
+    check_xu100_gap_closures(prober)
+    calendar = calendar or load_calendar_oot(bist_dir=root / "data" / "raw" / "bist")
+    d1_rows_dir'
+run zz_no_mutation "mutasyonsuz (geri alındıktan sonra)" "${NEW[@]}"
+echo "son durum: $(git status --porcelain | grep -v '^?? .venv$' | wc -l | tr -d ' ') değişiklik (= yalnız görevin commit'lenmemiş farkı)" >> "$OUT"
+echo >> "$OUT"
+echo "---------------------------------------------------------------- kırmızının yeri (ilk hata satırları)" >> "$OUT"
+for f in "$W"/e*.log; do
+  echo "== $(basename "$f" .log)" >> "$OUT"
+  grep -E '^>|^E ' "$f" | head -3 | cut -c1-200 | sed 's/^/  /' >> "$OUT"
+done

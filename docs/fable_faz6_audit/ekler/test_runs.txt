@@ -1,0 +1,125 @@
+# Adım 5: tam test paketi (gerçek repo, çalışma ağacında yalnız görev dosyası izlenmeyen; denetim dizini henüz yazılmamıştı)
+# pytest -q (gerçek repo, HEAD cec77dcdb8ce9e28ab936de3d0b8d76ec2756eb7, başlangıç 2026-09-24T21:27:20Z)
+........................................................................ [ 12%]
+........................................................................ [ 24%]
+........................................................................ [ 36%]
+........................................................................ [ 48%]
+........................................................................ [ 60%]
+........................................................................ [ 72%]
+........................................................................ [ 84%]
+........................................................................ [ 96%]
+..................                                                       [100%]
+594 passed in 325.25s (0:05:25)
+
+real	5m26.019s
+user	25m42.778s
+sys	0m38.916s
+
+# bash app/scripts/test.sh (başlangıç 2026-09-24T21:32:46Z)
+ RUN  v5.0.1 /Users/ahmet/Desktop/BorsAi/app
+
+
+ Test Files  16 passed (16)
+      Tests  222 passed (222)
+   Start at  00:33:08
+   Duration  2.62s (environment 42%, tests 39%, import 11%, transform 7%)
+
+    Isolate  16 workers spawned · ~440ms startup each (spawn + environment, per file)
+             at least ~342ms faster with isolate: false — reuses workers across files instead of one per file
+
+....                                                                     [100%]
+4 passed in 6.54s
+=== 1. 16 eski altın dosya bayt-eşit (taban 0b67f5d) ===
+OK   v1_5_h99                   392 satır
+OK   base_always_ceiling        392 satır
+OK   base_train_median          392 satır
+OK   base_train_mean            392 satır
+OK   base_zero                  392 satır
+OK   base_rate                  392 satır
+OK   base_last10_rate           392 satır
+OK   v1_6_h99                   392 satır
+OK   v1_5_market20_v0           395 satır
+OK   pb_v0                      392 satır
+OK   ceiling_hazard_v0          392 satır
+OK   ceiling_hazard_v0@INF      392 satır
+OK   pb_ceiling_v0              392 satır
+OK   pb_ceiling_v0@INF          392 satır
+OK   base_km_expanding          392 satır
+OK   base_km_last10             392 satır
+=== 2. _patched_params.jsonl ilk 19 satır bayt-eşit ===
+OK   ilk 19 satır aynı; bugün 31 satır
+=== 3. dec_cases.json eski bölümleri bayt-eşit ===
+OK   9 eski bölüm aynı; yeni bölüm: ['limit_path']
+=== 4. beklenen değişiklikler (bilgi) ===
+MANIFEST.json:  1 file changed, 27 insertions(+), 5 deletions(-)
+  yeni ceiling_path_v0          468 satır · koşullu 40 taban satır
+  yeni ceiling_path_v0@INF      468 satır · koşullu 40 taban satır
+  yeni pb_ceiling_path_v0       468 satır · koşullu 40 taban satır
+=== golden_unchanged: YEŞİL (U46) ===
+
+real	0m31.973s
+user	0m44.384s
+sys	0m7.678s
+# bitiş 2026-09-24T21:33:18Z
+
+# bash app/scripts/test.sh — tam çıktı (ikinci koşu, cargo bölümü dahil; başlangıç 2026-09-24T21:48:08Z)
+running 16 tests
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+running 0 tests
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+running 5 tests
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 3 filtered out; finished in 0.00s
+running 4 tests
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+running 14 tests
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+running 15 tests
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.67s
+running 5 tests
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+running 12 tests
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+running 2 tests
+test golden_coverage ... ok
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.26s
+running 11 tests
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+     Running tests/golden.rs (target/debug/deps/golden-e3d2186d62708274)
+running 7 tests
+test golden_files_present ... ok
+test golden_parity ... ok
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.73s
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+running 0 tests
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+running 0 tests
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+ Test Files  16 passed (16)
+      Tests  222 passed (222)
+4 passed in 6.55s
+=== 1. 16 eski altın dosya bayt-eşit (taban 0b67f5d) ===
+OK   v1_5_h99                   392 satır
+OK   base_always_ceiling        392 satır
+OK   base_train_median          392 satır
+OK   base_train_mean            392 satır
+OK   base_zero                  392 satır
+OK   base_rate                  392 satır
+OK   base_last10_rate           392 satır
+OK   v1_6_h99                   392 satır
+OK   v1_5_market20_v0           395 satır
+OK   pb_v0                      392 satır
+OK   ceiling_hazard_v0          392 satır
+OK   ceiling_hazard_v0@INF      392 satır
+OK   pb_ceiling_v0              392 satır
+OK   pb_ceiling_v0@INF          392 satır
+OK   base_km_expanding          392 satır
+OK   base_km_last10             392 satır
+=== 2. _patched_params.jsonl ilk 19 satır bayt-eşit ===
+OK   ilk 19 satır aynı; bugün 31 satır
+=== 3. dec_cases.json eski bölümleri bayt-eşit ===
+OK   9 eski bölüm aynı; yeni bölüm: ['limit_path']
+=== 4. beklenen değişiklikler (bilgi) ===
+=== golden_unchanged: YEŞİL (U46) ===
+# rc= bitiş 2026-09-24T21:48:30Z

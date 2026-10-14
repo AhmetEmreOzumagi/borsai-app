@@ -1,0 +1,187 @@
+{
+ "ticker": "PENTA",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_935550",
+  "KAP_935550_EK1",
+  "KAP_935550_EK2",
+  "KAP_935552",
+  "KAP_935552_EK1",
+  "KAP_932906"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "1.0530721564",
+   "origin": "CALCULATED_FROM_SOURCE_TOTALS",
+   "source_id": "KAP_935550_EK1",
+   "numerator": "19354152",
+   "numerator_quote": "TOPLAM 18.378.752 100,00 94.564 19.354.152 100,00 94.564 18.378.752 100,00",
+   "denominator": "18378752",
+   "denominator_quote": "sermaye artırımı ve ortak satışı yoluyla satışa sunulan 18.378.752 TL nominal değerli payların satışı gerçekleşmiştir",
+   "definition": "TOPLAM_TALEP_NOMINALI_19354152 / SATILAN_TOPLAM_NOMINAL_18378752 (tablo TOPLAM satırı talep sütunu; aynı birim TL nominal; ek satış yok; belge toplam katı yazmıyor)",
+   "denominator_includes_additional_sale": false
+  },
+  "total_demand_filter_status": {
+   "value": "NOT_SPECIFIED",
+   "source_id": "KAP_935550_EK1",
+   "note": "belgede 'filtre' ifadesi yok"
+  },
+  "ipo_size_tl": {
+   "value": null,
+   "missing_reason": "sonuç ekleri gerçekleşen arzın TL tutarını yazmıyor (yalnız pay fiyatı 32,00 TL ve nominaller)"
+  },
+  "capital_increase_shares": {
+   "value": "12000000",
+   "source_id": "KAP_935552",
+   "quote": "Halka arz sonucunda sermaye artırımı ( 12.000.000 TL nominal değerli pay) ve ortak satışı",
+   "note": "KAP_935552 satıcı ortak Gözde Girişim'in sonuç açıklaması; aracı kurum eki (KAP_935550_EK1) ayrımı yazmıyor"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç belgelerinde ortak satışı tek sayı olarak yazılı değil: KAP_935552 Gözde Girişim'e ait 5.401.901 ve diğer ortaklara ait 976.851 TL nominali ayrı ayrı yazıyor; ortak tutarlarını toplayarak türetme kuralla yasak (toplamları SPK planındaki 6.378.752 ile tutarlı)",
+   "evidence": {
+    "source_id": "KAP_935552",
+    "quote": "ortak satışı (Şirketimize ait 5.401.901 TL nominal değerli pay ve diğer ortaklara ait 976.851 TL nominal değerli pay) yoluyla satışa sunulan toplam 18.378.752 TL nominal değerli payların satışı gerçekleşmiştir"
+   }
+  },
+  "additional_sale_shares": {
+   "value": "0",
+   "source_id": "KAP_935550_EK1",
+   "zero_from_statement": true,
+   "quote": "sermaye artırımı ve ortak satışı yoluyla satışa sunulan 18.378.752 TL nominal değerli payların satışı gerçekleşmiştir",
+   "note": "satılan toplam 18.378.752 = SPK planlanan taban (bedelli 12.000.000 + mevcut pay satışı 6.378.752); planlanan 2.756.809 ek satış kullanılmamış"
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_935550_EK1",
+   "quote": "Halka arz sonucunda sermaye artırımı ve ortak satışı yoluyla satışa sunulan 18.378.752 TL nominal değerli payların satışı gerçekleşmiştir."
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_935550_EK1",
+   "used": "NONE",
+   "quote": "sermaye artırımı ve ortak satışı yoluyla satışa sunulan 18.378.752 TL nominal değerli payların satışı gerçekleşmiştir",
+   "note": "satılan toplam = taban; ek satış açıkça anılmıyor"
+  },
+  "investor_count": {
+   "value": "94564",
+   "source_id": "KAP_935550_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "TOPLAM 18.378.752 100,00 94.564 19.354.152 100,00 94.564 18.378.752 100,00",
+   "note": "talep eden ve dağıtım yapılan sayısı aynı (94.564)"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "94536",
+    "domestic_institutional": "28"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_935550_EK1",
+   "quote": [
+    "11.027.251 60,00 94.536 3.489.275 18,03 94.536 3.489.275 18,99",
+    "5.513.626 30,00 28 15.864.877 81,97 28 14.889.477 81,01"
+   ],
+   "note": "yurt dışı kurumsal satırı tamamen '-' (talep ve dağıtım yok)"
+  },
+  "retail_demand_multiple": {
+   "value": "0.3164229235",
+   "source_id": "KAP_935550_EK1",
+   "derived": true,
+   "formula": "grup talebi 3.489.275 / planlanan tahsisat 11.027.251",
+   "quote": "11.027.251 60,00 94.536 3.489.275 18,03 94.536 3.489.275 18,99"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": "2.8773944769",
+   "source_id": "KAP_935550_EK1",
+   "derived": true,
+   "formula": "grup talebi 15.864.877 / planlanan tahsisat 5.513.626",
+   "quote": "5.513.626 30,00 28 15.864.877 81,97 28 14.889.477 81,01"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "yurt dışı kurumsal talep sütunu '-' (planlanan tahsisat 1.837.875; talep gelmemiş), sayısal kat yazılı değil"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "3489275",
+    "domestic_institutional": "14889477"
+   },
+   "source_id": "KAP_935550_EK1",
+   "quote": [
+    "11.027.251 60,00 94.536 3.489.275 18,03 94.536 3.489.275 18,99",
+    "5.513.626 30,00 28 15.864.877 81,97 28 14.889.477 81,01"
+   ],
+   "note": "yurt dışı kurumsal '-'"
+  },
+  "retail_allocation_pct": {
+   "value": "18.99",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_935550_EK1",
+   "quote": "11.027.251 60,00 94.536 3.489.275 18,03 94.536 3.489.275 18,99"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "81.01",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_935550_EK1",
+   "quote": "5.513.626 30,00 28 15.864.877 81,97 28 14.889.477 81,01"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": null,
+   "missing_reason": "yurt dışı kurumsal dağıtım sütunu '-' (dağıtım yok); sayısal oran yazılı değil"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "sonuç ekleri dağıtım yöntemini adlandırmıyor; TSSD pencereleri boş"
+  },
+  "lead_broker": {
+   "value": null,
+   "missing_reason": "sonuç eki imza/aracı kurum adı içermiyor; yalnız KAP bildirim başlığında gönderen İŞ YATIRIM MENKUL DEĞERLER A.Ş. (aracılık rolü yazılı değil); TSSD pencereleri boş"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "TSSD pencereleri boş; sonuç belgesinde yok"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "TSSD pencereleri boş"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD pencereleri boş"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "TSSD pencereleri boş"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "eldeki belgelerde yok (Gözde açıklamasında faaliyet tanımı var: 'bilgi ve iletişim teknolojisi ekipmanlarının distribütörlüğünü yapan', ancak sektör sınıfı değil)"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "eldeki belgelerde yok"
+  }
+ },
+ "codex_check": {
+  "capital_increase_shares": {
+   "codex_value": "12.000.000",
+   "verdict": "FOUND_SAME",
+   "note": "KAP_935552 (satıcı ortak açıklaması) sonuç cümlesinde açık"
+  },
+  "existing_share_sale_shares": {
+   "codex_value": "6.378.752",
+   "verdict": "NOT_APPLICABLE",
+   "note": "Codex değeri SPK bülteni planından; sonuç belgesi (KAP_935552) ortak satışını iki ayrı tutar olarak yazıyor, 6.378.752 tek sayı olarak geçmiyor"
+  },
+  "additional_sale_shares": {
+   "codex_value": "0",
+   "verdict": "FOUND_SAME",
+   "note": "satılan toplam = planlanan taban"
+  },
+  "lead_broker": {
+   "codex_value": "İŞ YATIRIM MENKUL DEĞERLER A.Ş.",
+   "verdict": "NOT_FOUND_IN_DOCS",
+   "note": "yalnız KAP bildiriminin gönderen kurumu; belge metninde aracılık rolü yok, alan null"
+  }
+ },
+ "notes": "Talep arzın hemen üzerinde (1,053); bireysel tahsisatın yalnız %31,6'sı kadar talep, yurt dışı kurumsal talep yok, açık yurt içi kurumsala. Fiyat aralığın (32-38) alt ucunda. Codex f3 ve katılımcı verilerini bulamamıştı. gözden geçirme: KAP_932906 (Gözde Girişim, SPK onayı; ilgili şirket alanı boş) okundu; yalnız planlanan ayrım ve ek satış planını veriyor, sonuç alanı doldurmuyor, lead_broker yazmıyor. existing_share_sale_shares önceki kararda iki ortak tutarı toplanarak (5.401.901 + 976.851) türetilmişti; toplama yasağı gereği null'a çekildi (alıntı evidence'ta).",
+ "needs_search": false
+}

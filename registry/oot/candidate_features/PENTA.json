@@ -1,0 +1,201 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "PENTA",
+  "company": "Penta Teknoloji Ürünleri Dağıtım Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "94564",
+      "source_id": "KAP_935550_EK1",
+      "source_document": "KAP 935550 ek 1",
+      "source_published_at": "2021-05-10T08:30:08+03:00",
+      "source_sha256": "5d6ea2eb9927438449a2597f4cfd1f7cdf1269748b8158825e8f81bcb5d1c965",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935550_ek1.pdf",
+      "quote": "TOPLAM 18.378.752 100,00 94.564 19.354.152 100,00 94.564 18.378.752 100,00",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden ve dağıtım yapılan sayısı aynı (94.564)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "94536",
+        "domestic_institutional": "28"
+      },
+      "source_id": "KAP_935550_EK1",
+      "source_document": "KAP 935550 ek 1",
+      "source_published_at": "2021-05-10T08:30:08+03:00",
+      "source_sha256": "5d6ea2eb9927438449a2597f4cfd1f7cdf1269748b8158825e8f81bcb5d1c965",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935550_ek1.pdf",
+      "quote": [
+        "11.027.251 60,00 94.536 3.489.275 18,03 94.536 3.489.275 18,99",
+        "5.513.626 30,00 28 15.864.877 81,97 28 14.889.477 81,01"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "yurt dışı kurumsal satırı tamamen '-' (talep ve dağıtım yok)",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "0.3164229235",
+      "source_id": "KAP_935550_EK1",
+      "source_document": "KAP 935550 ek 1",
+      "source_published_at": "2021-05-10T08:30:08+03:00",
+      "source_sha256": "5d6ea2eb9927438449a2597f4cfd1f7cdf1269748b8158825e8f81bcb5d1c965",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935550_ek1.pdf",
+      "quote": "11.027.251 60,00 94.536 3.489.275 18,03 94.536 3.489.275 18,99",
+      "derived": true,
+      "formula": "grup talebi 3.489.275 / planlanan tahsisat 11.027.251",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "2.8773944769",
+      "source_id": "KAP_935550_EK1",
+      "source_document": "KAP 935550 ek 1",
+      "source_published_at": "2021-05-10T08:30:08+03:00",
+      "source_sha256": "5d6ea2eb9927438449a2597f4cfd1f7cdf1269748b8158825e8f81bcb5d1c965",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935550_ek1.pdf",
+      "quote": "5.513.626 30,00 28 15.864.877 81,97 28 14.889.477 81,01",
+      "derived": true,
+      "formula": "grup talebi 15.864.877 / planlanan tahsisat 5.513.626",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal talep sütunu '-' (planlanan tahsisat 1.837.875; talep gelmemiş), sayısal kat yazılı değil",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "3489275",
+        "domestic_institutional": "14889477"
+      },
+      "source_id": "KAP_935550_EK1",
+      "source_document": "KAP 935550 ek 1",
+      "source_published_at": "2021-05-10T08:30:08+03:00",
+      "source_sha256": "5d6ea2eb9927438449a2597f4cfd1f7cdf1269748b8158825e8f81bcb5d1c965",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935550_ek1.pdf",
+      "quote": [
+        "11.027.251 60,00 94.536 3.489.275 18,03 94.536 3.489.275 18,99",
+        "5.513.626 30,00 28 15.864.877 81,97 28 14.889.477 81,01"
+      ],
+      "note": "yurt dışı kurumsal '-'",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "18.99",
+      "source_id": "KAP_935550_EK1",
+      "source_document": "KAP 935550 ek 1",
+      "source_published_at": "2021-05-10T08:30:08+03:00",
+      "source_sha256": "5d6ea2eb9927438449a2597f4cfd1f7cdf1269748b8158825e8f81bcb5d1c965",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935550_ek1.pdf",
+      "quote": "11.027.251 60,00 94.536 3.489.275 18,03 94.536 3.489.275 18,99",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "81.01",
+      "source_id": "KAP_935550_EK1",
+      "source_document": "KAP 935550 ek 1",
+      "source_published_at": "2021-05-10T08:30:08+03:00",
+      "source_sha256": "5d6ea2eb9927438449a2597f4cfd1f7cdf1269748b8158825e8f81bcb5d1c965",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935550_ek1.pdf",
+      "quote": "5.513.626 30,00 28 15.864.877 81,97 28 14.889.477 81,01",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "yurt dışı kurumsal dağıtım sütunu '-' (dağıtım yok); sayısal oran yazılı değil",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç ekleri dağıtım yöntemini adlandırmıyor; TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": null,
+      "missing_reason": "sonuç eki imza/aracı kurum adı içermiyor; yalnız KAP bildirim başlığında gönderen İŞ YATIRIM MENKUL DEĞERLER A.Ş. (aracılık rolü yazılı değil); TSSD pencereleri boş",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "İŞ YATIRIM MENKUL DEĞERLER A.Ş.",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "İŞ YATIRIM MENKUL DEĞERLER A.Ş.",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "yalnız KAP bildiriminin gönderen kurumu; belge metninde aracılık rolü yok, alan null"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş; sonuç belgesinde yok",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD pencereleri boş",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok (Gözde açıklamasında faaliyet tanımı var: 'bilgi ve iletişim teknolojisi ekipmanlarının distribütörlüğünü yapan', ancak sektör sınıfı değil)",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "eldeki belgelerde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_935940",
+      "source_document": "KAP 935940",
+      "source_published_at": "2021-05-10T18:22:56+03:00",
+      "source_sha256": "80b1e79e598e3aab2326413785ae89884d77d5a7748b3633e60c692cb1bc456b",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935940_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_935940",
+      "source_document": "KAP 935940",
+      "source_published_at": "2021-05-10T18:22:56+03:00",
+      "source_sha256": "80b1e79e598e3aab2326413785ae89884d77d5a7748b3633e60c692cb1bc456b",
+      "source_path": "registry/oot/source_docs/PENTA/KAP_935940_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_935940": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 935940",
+      "published_at": "2021-05-10T18:22:56+03:00",
+      "sha256": "80b1e79e598e3aab2326413785ae89884d77d5a7748b3633e60c692cb1bc456b",
+      "path": "registry/oot/source_docs/PENTA/KAP_935940_bildirim.pdf"
+    },
+    "KAP_935550_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 935550 ek 1",
+      "published_at": "2021-05-10T08:30:08+03:00",
+      "sha256": "5d6ea2eb9927438449a2597f4cfd1f7cdf1269748b8158825e8f81bcb5d1c965",
+      "path": "registry/oot/source_docs/PENTA/KAP_935550_ek1.pdf"
+    }
+  }
+}

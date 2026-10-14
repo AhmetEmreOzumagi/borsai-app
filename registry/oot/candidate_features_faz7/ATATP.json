@@ -1,0 +1,243 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "ATATP",
+ "company": "ATP Ticari Bilgisayar Ağı ve Elektrik Güç Kaynakları Üretim Pazarlama ve Ticaret A.Ş.",
+ "first_trading_date": "2021-06-04",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Yurt içi bireysele eşit; kurumsala takdire bağlı dağıtım",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_937344_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd801798fcc05397ad2",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "937344",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/937344",
+   "published_at": "2021-05-21T21:01:57+03:00",
+   "source_sha256": "d2904055c2e7d139bfe8fbc5822916eafd508bb4a27e5e52e14fd39d091502cb",
+   "source_file": "source_docs/ATATP/KAP_937344_ek1.pdf",
+   "page": 59,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "her bir tahsisat grubuna dağıtım, aşağıda belirtilen şekilde kendi ıçınde ayrı ayrı yapılacaktır: • Yurt İçi Bireysel Yatırımcılar'a Dağıtım: Eşit Dağıtım Yöntemi kullanılacaktır.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_937344_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd801798fcc05397ad2",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "937344",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/937344",
+     "published_at": "2021-05-21T21:01:57+03:00",
+     "source_sha256": "d2904055c2e7d139bfe8fbc5822916eafd508bb4a27e5e52e14fd39d091502cb",
+     "source_file": "source_docs/ATATP/KAP_937344_ek1.pdf",
+     "page": 59,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "• Yurt İçi Kurumsal Yatırımcılar'a Dağıtım: Her bir Yurt İçi Kurumsal Yatırımcı'ya verilecek pay miktarına, Konsorsiyum Liderleri'nin önerileri de dikkate alınarak İhraççı tarafından karar verilecektir."
+    },
+    {
+     "source_id": "KAP_937345_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd801798fce5a867b09",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "937345",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/937345",
+     "published_at": "2021-05-21T21:02:23+03:00",
+     "source_sha256": "d9a0726d3d9f7b3ae3cc27627c10a08d87b651f7a01c2e0f069d73c0ea1a9aa1",
+     "source_file": "source_docs/ATATP/KAP_937345_ek1.pdf",
+     "page": 7,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Halka arz edilecek toplam 7.500.000 TL nominal değerli paylanın; 5.250.000 TL nominal değerdeki (%70) kısmı Yurt İçi Bireysel Yatırımcılar'a, 1.500.000 TL nominal değerdeki (%20) kısmı Yurt İçi Kurumsal Yatırımcılar'a, 750.000 TL nominal değerdeki (%10) kısmı Yurt Dışı Kurumsal Yatırımcılar'a, gerçekleştirilecek satışlar için tahsis edilmiştir."
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Talep toplama (borsa dışı, sabit fiyat 24,00 TL; Ata Yatırım ve İş Yatırım konsorsiyum liderleri). Tahsisat: yurt içi bireysel %70, yurt içi kurumsal %20, yurt dışı kurumsal %10; çalışan grubu yok. Yurt içi bireysel: 'Eşit Dağıtım Yöntemi'; yurt içi kurumsal: her kurumsal yatırımcıya verilecek pay miktarına Konsorsiyum Liderleri'nin önerileri dikkate alınarak İhraççı karar verir. Yurt dışı kurumsal cümlesi s.59'da damga nedeniyle OCR'da bozuk ('Konsorsiyum Liderleri'nin önerileri de dikkatena yarak Ihusn PYRULO ... tarafindan karar verilecektir'); aynı yapı (karar veren büyük olasılıkla İhraççı), reocr daha iyi metin vermedi. Belge kurumsal için 'oransal' demiyor, kanonik kalıba uymadığından kısa metin. [yazım normalize edildi; ajan değeri: 'Yurt içi bireysele eşit; kurumsala ihraççının takdiriyle dağıtım']"
+  },
+  "price_stability_planned": {
+   "value": "TRUE",
+   "unit": "boolean",
+   "status": "FILLED",
+   "source_id": "KAP_937345_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd801798fce5a867b09",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "937345",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/937345",
+   "published_at": "2021-05-21T21:02:23+03:00",
+   "source_sha256": "d9a0726d3d9f7b3ae3cc27627c10a08d87b651f7a01c2e0f069d73c0ea1a9aa1",
+   "source_file": "source_docs/ATATP/KAP_937345_ek1.pdf",
+   "page": 15,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: Fiyat istikrarı işlemlerinin gerçekleştirilmesi planlanmaktadır.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "İş Yatırım yapabilir; kaynak: İhraççı'nın brüt halka arz gelirinin %20'si (36.000.000 TL) (s.16)."
+  },
+  "price_stability_days": {
+   "value": "30",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_937345_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd801798fce5a867b09",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "937345",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/937345",
+   "published_at": "2021-05-21T21:02:23+03:00",
+   "source_sha256": "d9a0726d3d9f7b3ae3cc27627c10a08d87b651f7a01c2e0f069d73c0ea1a9aa1",
+   "source_file": "source_docs/ATATP/KAP_937345_ek1.pdf",
+   "page": 15,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "Payların borsada işlem görmeye başlamasından itibaren 30 gündür.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "§26.5.2 başlığı ile değer arasında OCR artığı '+X-C.x' var; değer cümlesi birebir."
+  },
+  "issuer_lockup_days": {
+   "value": "180",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_937345_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd801798fce5a867b09",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "937345",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/937345",
+   "published_at": "2021-05-21T21:02:23+03:00",
+   "source_sha256": "d9a0726d3d9f7b3ae3cc27627c10a08d87b651f7a01c2e0f069d73c0ea1a9aa1",
+   "source_file": "source_docs/ATATP/KAP_937345_ek1.pdf",
+   "page": 17,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "a) İhraççı tarafından verilen taahhüt: Şirket, 12 Mayıs 2021 tarihli ve 2021/27 sayılı Yönetim Kurulu kararı uyarınca verdiği taahhüdü ile Şirket paylarının Borsa Istanbul'da işlem görmeye başladığı tarihten itibaren 180 gün boyunca, herhangi bir bedelli sermaye artırımı yapmayacağınıtaahhüt etmiştir.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "180 gün. Kapsam: bedelli sermaye artırımı yapmama. Başlangıç: Borsa İstanbul'da işlem görmeye başlama."
+  },
+  "shareholder_lockup_days": {
+   "value": "180",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_937345_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd801798fce5a867b09",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "937345",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/937345",
+   "published_at": "2021-05-21T21:02:23+03:00",
+   "source_sha256": "d9a0726d3d9f7b3ae3cc27627c10a08d87b651f7a01c2e0f069d73c0ea1a9aa1",
+   "source_file": "source_docs/ATATP/KAP_937345_ek1.pdf",
+   "page": 17,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "b) Ortaklar tarafından verilen taahhütler: Ortaklardan Ata Holding, 12 Mayıs 2021 tarihli ve 2021/6 sayılı Yönetim Kurulu kararı uyarınca verdiği taahhüdü ile sahibi olduğu Şirket paylarını, payların Borsa İstanbul'da işlem görmeye başlamasından itibaren, 180 gün boyunca satmayacağını ve dolaşımdaki pay miktarını artırmayacağını taahhüt etmiştir.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_937345_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd801798fce5a867b09",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "937345",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/937345",
+     "published_at": "2021-05-21T21:02:23+03:00",
+     "source_sha256": "d9a0726d3d9f7b3ae3cc27627c10a08d87b651f7a01c2e0f069d73c0ea1a9aa1",
+     "source_file": "source_docs/ATATP/KAP_937345_ek1.pdf",
+     "page": 17,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "c) Sermaye piyasası mevzuatı kapsamında verilen taahhütler: Ortaklardan Ata Holding, 12 Mayıs 2021 tarihli 2021/6 sayılı Yönetim Kurulu kararı uyarında verdiği taahhüdü ile sahibi olduğu Şirket paylarını, payların Borsa Istanbul'da işlem görmeye başladıkları tarihten itibaren 1 yıl boyunca halka arz fiyatının altında bir fiyattan borsada satmayacağını"
+    }
+   ],
+   "components": [
+    {
+     "who": "Ata Holding A.Ş. (%97,94)",
+     "days": "180",
+     "type": "MUTLAK",
+     "basis": "GONULLU",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    },
+    {
+     "who": "Ata Holding A.Ş.",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "En kısa süre 180 (Ata Holding gönüllü satmama). Diğer ortaklar (Kurdoğlu ailesi bireyleri, Ümit Cinali %1,0, Ömer Faruk Işık %0,08; toplam %2,06) için taahhüt yazılı değil. Halka arz yalnız sermaye artırımı (§27.1-27.2 Yoktur). d) Yetkili kuruluşlar tarafından verilen taahhütler: Yoktur."
+  },
+  "sector": {
+   "value": "Yazılım çözümleri ve bilgi teknolojileri hizmetleri (finans/sermaye piyasaları ve konuk ağırlama sektörleri)",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_937342_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd801798fb8effa7a65",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "937342",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/937342",
+   "published_at": "2021-05-21T21:01:04+03:00",
+   "source_sha256": "a6e0b07078a455c00e1006adcb01c51a162bbb912a67c034a1b446b7fcb5a3d3",
+   "source_file": "source_docs/ATATP/KAP_937342_ek1.pdf",
+   "page": 47,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "ATP, çeşitli sektörlerde faaliyet gösteren firmaların teknolojik alt yapılarını oluşturmakta, fırmaların faaliyetlerini gerçekleştirebilmeleri, operasyonel verimliliklerini artırabilmeleri için yazılım çözümleri üretmekte ve geliştirmektedir.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_937342_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd801798fb8effa7a65",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "937342",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/937342",
+     "published_at": "2021-05-21T21:01:04+03:00",
+     "source_sha256": "a6e0b07078a455c00e1006adcb01c51a162bbb912a67c034a1b446b7fcb5a3d3",
+     "source_file": "source_docs/ATATP/KAP_937342_ek1.pdf",
+     "page": 48,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "No Ana Hizmet/Faaliyet Alanı Marka 1 Finans Sektörü ve Sermaye Piyasalarına Yönelik Çözümler Tradesoft 2 Konuk Ağırlama Sektörüne Yönelik Çözümler Zenia Diğer Sektörlere Yönelik Bilgi Teknolojileri Çözümleri ATP Digital"
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "§7.1.1: yazılım üretimi, üçüncü taraf yazılım entegrasyonu, donanım ticareti ve kurumsal BT hizmetleri; markalar Tradesoft, Zenia, ATP Digital."
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: İzahname 1-4 ve TSSD'de katılım endeksi / faizsiz finans uygunluk beyanı yok. qfind 'katılım|faizsiz|islam|icazet|helal' yalnız iştirak/katılımlar, sermaye piyasalarına katılım istatistikleri, genel kurula katılım, başvuru yeri (Türkiye Finans Katılım Bankası) ve teminat tablosu (Kira Sertifikaları Katılım Fonu) eşleşmelerini verdi.",
+   "looked_at": [
+    "KAP_937342_EK1",
+    "KAP_937343_EK1",
+    "KAP_937344_EK1",
+    "KAP_937345_EK1",
+    "KAP_937350_EK1",
+    "KAP_937350"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_937342_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "937342",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd801798fb8effa7a65",
+   "published_at": "2021-05-21T21:01:04+03:00",
+   "sha256": "a6e0b07078a455c00e1006adcb01c51a162bbb912a67c034a1b446b7fcb5a3d3",
+   "file": "source_docs/ATATP/KAP_937342_ek1.pdf"
+  },
+  "KAP_937344_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "937344",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd801798fcc05397ad2",
+   "published_at": "2021-05-21T21:01:57+03:00",
+   "sha256": "d2904055c2e7d139bfe8fbc5822916eafd508bb4a27e5e52e14fd39d091502cb",
+   "file": "source_docs/ATATP/KAP_937344_ek1.pdf"
+  },
+  "KAP_937345_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "937345",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328d794d3bd801798fce5a867b09",
+   "published_at": "2021-05-21T21:02:23+03:00",
+   "sha256": "d9a0726d3d9f7b3ae3cc27627c10a08d87b651f7a01c2e0f069d73c0ea1a9aa1",
+   "file": "source_docs/ATATP/KAP_937345_ek1.pdf"
+  }
+ }
+}

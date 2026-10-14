@@ -1,0 +1,23 @@
+# Arşiv ticker taraması — 2026-09-24T13:46:08Z
+Taranan kod sayısı (KAP "Payların İşlem Görmeye Başlaması" 2019-12…2023-09-21, tekil relatedStocks): 138
+Kural: ham günlük bülten dosyaları (adı th[bm]YYYYMMDD ile başlayan; tüm payları içerir) taramadan ayrı sayıldı; diğer .csv/.json/.md/.txt/.toml/.py/.mjs/.jsonl/.xlsx dosyalarında \bKOD(\.E)?\b arandı; node_modules, .git, venv dışarıda.
+Taranan dosya: 2332 ; ayrı sayılan ham bülten dosyası: 890
+
+## İsabetler (kod, toplam geçiş, dosya sayısı, örnek dosyalar)
+- HATSN: 2854 geçiş, 152 dosya; örn. ./artifacts/derived/check11_revalidation/mutation_harness/mutants/mutation_4_mhrgy_leaf_distributed_nominal.csv (4); ./artifacts/derived/check11_revalidation/mutation_harness/mutants/mutation_7_dmrgd_duration_row_duplicated.csv (26); ./artifacts/derived/check11_revalidation/B01/B01_check11_r4_recheck.csv (12)
+- ADGYO: 75 geçiş, 36 dosya; örn. ./artifacts/universe/exp100/EXP100_CANDIDATE_WORKING_LIST.csv (1); ./artifacts/universe/exp100/verification/EXP100_VERIFICATION_CHECKPOINT.json (3); ./artifacts/universe/exp100/verification/EXP100_OFFICIAL_VERIFICATION.csv (2)
+- UNLU: 35 geçiş, 25 dosya; örn. ./artifacts/derived/check11_revalidation/mutation_harness/mutants/mutation_7_dmrgd_duration_row_duplicated.csv (6); ./artifacts/modeling/prebookbuild_point_in_time/evidence_v1_1/PREBOOKBUILD_POINT_IN_TIME_EVIDENCE_V1_1_NORMALIZED_99.csv (1); ./artifacts/universe/exp100/verification/EXP100_VERIFICATION_CHECKPOINT.json (1)
+- REEDR: 3 geçiş, 2 dosya; örn. ./tests/test_historical99_frozen_cohort_v1.mjs (2); ./scripts/build_historical99_frozen_cohort_v1.mjs (1)
+- HEDEF: 2 geçiş, 2 dosya; örn. ./PROJECT_CHECKPOINT_20260812.md (1); ./artifacts/governance/reviews/BORSAI_V3_TARGET_REVIEW_20260907_F1.md (1)
+- EYGYO: 1 geçiş, 1 dosya; örn. ./artifacts/modeling/dstkf_bounded_stage_b_event_review/DSTKF_BOUNDED_STAGE_B_EVENT_REVIEW_V1/raw/kap_dstkf_d1_d10_query_pinned.json (1)
+- GOKNR: 1 geçiş, 1 dosya; örn. ./artifacts/modeling/dstkf_bounded_stage_b_event_review/DSTKF_BOUNDED_STAGE_B_EVENT_REVIEW_V1/raw/kap_dstkf_d1_d10_query_pinned.json (1)
+- TRILC: 1 geçiş, 1 dosya; örn. ./artifacts/modeling/dstkf_bounded_stage_b_event_review/DSTKF_BOUNDED_STAGE_B_EVENT_REVIEW_V1/raw/kap_dstkf_d1_d10_query_pinned.json (1)
+
+İsabet olmayan kod sayısı: 130
+
+## Bağlam notları
+- HATSN: H99 üyesidir (ilk işlem 2023-09-22); kohort dışıdır, isabetler beklenir.
+- UNLU: "ÜNLÜ Menkul" aracı kurum adı H99 kaynaklarında geçer; Ünlü Yatırım Holding (2021 arzı) ile karışır — kod eşleşmesi yanlış pozitif.
+- HEDEF: Türkçe "hedef" sözcüğü büyük harfli başlıklarda geçer — yanlış pozitif.
+- ADGYO / REEDR: EXP100 evren keşfinde (2026-08-15) KAP şirket sayfasından kimlik ve ilk işlem tarihi doğrulandı; H99 kurucu script bu iki kodu "excluded/unresolved" olarak dışarıda tutar. Sonuç verisi (fiyat, getiri) toplanmadı; yalnız kimlik/tarih.
+- EYGYO / GOKNR / TRILC: 2025-02-14 tarihli bir KAP duyurusunun relatedStocks alanında DSTKF ile birlikte geçer (DSTKF olay incelemesi için pinlenen sorgu); içerik bu şirketlere ait değil.

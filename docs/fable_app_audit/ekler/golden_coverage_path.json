@@ -1,0 +1,140 @@
+{
+  "models": [
+    {
+      "model_id": "ceiling_path_v0",
+      "tick_grid_warnings": 90,
+      "exceptions": 6,
+      "price_refusals": 13,
+      "snap_equal": 276,
+      "snap_different": 129,
+      "S_h": [
+        {
+          "h": 1,
+          "side": "ge",
+          "rows": 362
+        },
+        {
+          "h": 1,
+          "side": "lt",
+          "rows": 43
+        },
+        {
+          "h": 3,
+          "side": "ge",
+          "rows": 303
+        },
+        {
+          "h": 3,
+          "side": "lt",
+          "rows": 102
+        },
+        {
+          "h": 5,
+          "side": "ge",
+          "rows": 56
+        },
+        {
+          "h": 5,
+          "side": "lt",
+          "rows": 349
+        },
+        {
+          "h": 10,
+          "side": "ge",
+          "rows": 9
+        },
+        {
+          "h": 10,
+          "side": "lt",
+          "rows": 396
+        }
+      ]
+    },
+    {
+      "model_id": "ceiling_path_v0@INF",
+      "tick_grid_warnings": 91,
+      "exceptions": 3,
+      "price_refusals": 13,
+      "snap_equal": 320,
+      "snap_different": 132,
+      "S_h": [
+        {
+          "h": 1,
+          "side": "ge",
+          "rows": 452
+        },
+        {
+          "h": 3,
+          "side": "ge",
+          "rows": 452
+        },
+        {
+          "h": 5,
+          "side": "lt",
+          "rows": 452
+        },
+        {
+          "h": 10,
+          "side": "lt",
+          "rows": 452
+        }
+      ]
+    },
+    {
+      "model_id": "pb_ceiling_path_v0",
+      "tick_grid_warnings": 79,
+      "exceptions": 3,
+      "price_refusals": 0,
+      "snap_equal": 304,
+      "snap_different": 89,
+      "S_h": [
+        {
+          "h": 1,
+          "side": "ge",
+          "rows": 327
+        },
+        {
+          "h": 1,
+          "side": "lt",
+          "rows": 66
+        },
+        {
+          "h": 3,
+          "side": "ge",
+          "rows": 281
+        },
+        {
+          "h": 3,
+          "side": "lt",
+          "rows": 112
+        },
+        {
+          "h": 5,
+          "side": "ge",
+          "rows": 45
+        },
+        {
+          "h": 5,
+          "side": "lt",
+          "rows": 348
+        },
+        {
+          "h": 10,
+          "side": "ge",
+          "rows": 10
+        },
+        {
+          "h": 10,
+          "side": "lt",
+          "rows": 383
+        }
+      ]
+    }
+  ],
+  "patched": {
+    "post_break_insufficient_cells": 20,
+    "pooled_cells": 34,
+    "clipped_values": 8
+  },
+  "missing": []
+}

@@ -1,0 +1,209 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "EUPWR",
+  "company": "Europower Enerji ve Otomasyon Teknolojileri Sanayi Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "2118379",
+      "source_id": "KAP_1139114_EK2",
+      "source_document": "KAP 1139114 ek 2",
+      "source_published_at": "2023-04-17T09:15:16+03:00",
+      "source_sha256": "6b77d8534acf3d528606b9a96fe90c5e470e9582fdf7c167a0722e778d2c674e",
+      "source_path": "registry/oot/source_docs/EUPWR/KAP_1139114_ek2.pdf",
+      "quote": "Halka arz sonucunda, 2.116.948 adedi Yurtiçi Bireysel Yatırımcı olmak üzere, toplam 2.118.379 yatırımcıya dağıtım gerçekleştirilmiştir.",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "filtrelenmemiş başvuru sayısı 2.240.284; dağıtım yapılan 2.118.379",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "2116948",
+        "employees": "1184",
+        "domestic_institutional": "247"
+      },
+      "source_id": "KAP_1139114_EK2",
+      "source_document": "KAP 1139114 ek 2",
+      "source_published_at": "2023-04-17T09:15:16+03:00",
+      "source_sha256": "6b77d8534acf3d528606b9a96fe90c5e470e9582fdf7c167a0722e778d2c674e",
+      "source_path": "registry/oot/source_docs/EUPWR/KAP_1139114_ek2.pdf",
+      "quote": [
+        "Yurtiçi Bireysel 40.000.000 %80,00 2.238.741 135.248.647 %55,95 2.116.948 50.000.000 %83,33",
+        "Grup Çalışanları 1.500.000 %3,00 1.286 3.044.381 %1,26 1.184 1.500.000 %2,50",
+        "Yurtiçi Kurumsal 8.500.000 %17,00 257 103.423.386 %42,79 247 8.500.000 %14,17"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "employees = Grup Çalışanları; başvuru: bireysel 2.238.741, çalışanlar 1.286, yurt içi kurumsal 257; yurt dışı kurumsal grup yok",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "3.38",
+      "source_id": "KAP_1139114_EK2",
+      "source_document": "KAP 1139114 ek 2",
+      "source_published_at": "2023-04-17T09:15:16+03:00",
+      "source_sha256": "6b77d8534acf3d528606b9a96fe90c5e470e9582fdf7c167a0722e778d2c674e",
+      "source_path": "registry/oot/source_docs/EUPWR/KAP_1139114_ek2.pdf",
+      "quote": "Yurtiçi Bireysel Yatırımcılar’a tahsis edilen payların 3,38 katı",
+      "note": "grup çalışanları 2,03 kat",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "12.17",
+      "source_id": "KAP_1139114_EK2",
+      "source_document": "KAP 1139114 ek 2",
+      "source_published_at": "2023-04-17T09:15:16+03:00",
+      "source_sha256": "6b77d8534acf3d528606b9a96fe90c5e470e9582fdf7c167a0722e778d2c674e",
+      "source_path": "registry/oot/source_docs/EUPWR/KAP_1139114_ek2.pdf",
+      "quote": "Yurtiçi Kurumsal Yatırımcılar’a tahsis edilen payların 12,17 katı talep toplanmıştır",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "sonuç ekinde yurt dışı kurumsal yatırımcı grubu yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "50000000",
+        "employees": "1500000",
+        "domestic_institutional": "8500000"
+      },
+      "source_id": "KAP_1139114_EK2",
+      "source_document": "KAP 1139114 ek 2",
+      "source_published_at": "2023-04-17T09:15:16+03:00",
+      "source_sha256": "6b77d8534acf3d528606b9a96fe90c5e470e9582fdf7c167a0722e778d2c674e",
+      "source_path": "registry/oot/source_docs/EUPWR/KAP_1139114_ek2.pdf",
+      "quote": [
+        "Yurtiçi Bireysel 40.000.000 %80,00 2.238.741 135.248.647 %55,95 2.116.948 50.000.000 %83,33",
+        "Grup Çalışanları 1.500.000 %3,00 1.286 3.044.381 %1,26 1.184 1.500.000 %2,50",
+        "Yurtiçi Kurumsal 8.500.000 %17,00 257 103.423.386 %42,79 247 8.500.000 %14,17"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "83.33",
+      "source_id": "KAP_1139114_EK2",
+      "source_document": "KAP 1139114 ek 2",
+      "source_published_at": "2023-04-17T09:15:16+03:00",
+      "source_sha256": "6b77d8534acf3d528606b9a96fe90c5e470e9582fdf7c167a0722e778d2c674e",
+      "source_path": "registry/oot/source_docs/EUPWR/KAP_1139114_ek2.pdf",
+      "quote": "%83,33’üne denk gelen 50.000.000 adet pay Yurtiçi Bireysel Yatırımcılar’a",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %80,00; grup çalışanları %2,50",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "14.17",
+      "source_id": "KAP_1139114_EK2",
+      "source_document": "KAP 1139114 ek 2",
+      "source_published_at": "2023-04-17T09:15:16+03:00",
+      "source_sha256": "6b77d8534acf3d528606b9a96fe90c5e470e9582fdf7c167a0722e778d2c674e",
+      "source_path": "registry/oot/source_docs/EUPWR/KAP_1139114_ek2.pdf",
+      "quote": "%14,17’sine denk gelen 8.500.000 adet pay Yurtiçi Kurumsal Yatırımcılar’a dağıtılmıştır",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %17,00",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": null,
+      "missing_reason": "sonuç ekinde yurt dışı kurumsal grup yok",
+      "provenance": "MISSING"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "MISSING"
+    },
+    "lead_broker": {
+      "value": "Ak Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1134139_EK1",
+      "source_document": "KAP 1134139 ek 1",
+      "source_published_at": "2023-04-07T20:42:46+03:00",
+      "source_sha256": "df6a65e853548e95fdbcb82275d94f693e5c4babd4a4691e09f297afc39294cc",
+      "source_path": "registry/oot/source_docs/EUPWR/KAP_1134139_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Ak Yatırım Menkul Değerler A.Ş.",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1139805",
+      "source_document": "KAP 1139805",
+      "source_published_at": "2023-04-18T18:10:08+03:00",
+      "source_sha256": "edabd582c3c8af57a644b41b4e4cbb14d5968066b6944476c67c00b307a76496",
+      "source_path": "registry/oot/source_docs/EUPWR/KAP_1139805_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1139805",
+      "source_document": "KAP 1139805",
+      "source_published_at": "2023-04-18T18:10:08+03:00",
+      "source_sha256": "edabd582c3c8af57a644b41b4e4cbb14d5968066b6944476c67c00b307a76496",
+      "source_path": "registry/oot/source_docs/EUPWR/KAP_1139805_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1139805": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1139805",
+      "published_at": "2023-04-18T18:10:08+03:00",
+      "sha256": "edabd582c3c8af57a644b41b4e4cbb14d5968066b6944476c67c00b307a76496",
+      "path": "registry/oot/source_docs/EUPWR/KAP_1139805_bildirim.pdf"
+    },
+    "KAP_1139114_EK2": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1139114 ek 2",
+      "published_at": "2023-04-17T09:15:16+03:00",
+      "sha256": "6b77d8534acf3d528606b9a96fe90c5e470e9582fdf7c167a0722e778d2c674e",
+      "path": "registry/oot/source_docs/EUPWR/KAP_1139114_ek2.pdf"
+    },
+    "KAP_1134139_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1134139 ek 1",
+      "published_at": "2023-04-07T20:42:46+03:00",
+      "sha256": "df6a65e853548e95fdbcb82275d94f693e5c4babd4a4691e09f297afc39294cc",
+      "path": "registry/oot/source_docs/EUPWR/KAP_1134139_ek1.pdf"
+    }
+  }
+}

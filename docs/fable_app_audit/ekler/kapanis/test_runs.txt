@@ -1,0 +1,196 @@
+# Tam koşu ölçümleri — BORSAI_FAZ3_FABLE_APP_AUDIT_CLOSE_20260924 [ÖLÇTÜM]
+# Asıl repo, HEAD db8e239; sıra test.sh → e2e_freeze_tmp_repo.sh → e2e_personal_isolation.sh → env'siz cargo test --workspace → pytest -q
+# Koşu öncesi git status --porcelain: '?? docs/fable_app_audit/ekler/kapanis/' '?? docs/prompts/FAZ3_FABLE_APP_AUDIT_CLOSE.md' ; sonrası: + '?? docs/fable_app_audit/KAPANIS.md' (koşu sırasında yazılan bu rapor; başka fark yok)
+# registry/ (95 dosya), data/ (84 dosya), scores/ (1 dosya) sha256 listeleri: koşu öncesi = sonrası (diff boş)
+
+## Özet
+test_sh rc=0 dur=48s :: bash app/scripts/test.sh
+e2e_freeze rc=0 dur=6s :: bash app/tests/e2e_freeze_tmp_repo.sh
+e2e_iso rc=0 dur=3s :: bash app/tests/e2e_personal_isolation.sh
+cargo_plain rc=0 dur=23s :: bash -c source app/scripts/env.sh && cd app/src-tauri && env -u BORSAI_REPO -u BORSAI_E2E_REPO -u BORSAI_E2E_DATA -u BORSAI_E2E_PYTHON -u BORSAI_E2E_SCREENS cargo test --workspace --offline
+cargo_plain_list rc=0 dur=2s :: bash -c source app/scripts/env.sh && cd app/src-tauri && cargo test --workspace --offline -- --list --ignored
+pytest rc=0 dur=611s :: .venv/bin/pytest -q
+registry sha listesi AYNI (95 dosya)
+data sha listesi AYNI (84 dosya)
+scores sha listesi AYNI (1 dosya)
+git status FARKLI
+DONE
+
+## 1. bash app/scripts/test.sh (48 s)
+     Running unittests src/lib.rs 
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running unittests src/main.rs 
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/build_embed.rs 
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/e2e.rs 
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 3 filtered out; finished in 0.00s
+     Running tests/integrity.rs 
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+     Running tests/no_network.rs 
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s
+     Running tests/stage2.rs 
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.34s
+     Running tests/stage3.rs 
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.62s
+     Running tests/stage4.rs 
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+     Running unittests src/lib.rs 
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+     Running tests/coverage.rs 
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.65s
+     Running tests/dec_semantics.rs 
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+     Running tests/golden.rs 
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 18.18s
+     Running tests/records_parity.rs 
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.15s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+ Test Files  16 passed (16)
+      Tests  222 passed (222)
+4 passed in 13.09s
+=== golden_unchanged: YEŞİL (U46) ===
+
+## 2. bash app/tests/e2e_freeze_tmp_repo.sh (6 s)
+=== 0. asıl repo registry sha listesi (öncesi) ===
+=== 1. geçici klon ===
+=== 2. PYTHONPATH sızıntısı denetimi (ilk freeze'den ÖNCE) ===
+=== 3. uygulama komutları (tauri CLI'siz; aynı Rust komut fonksiyonları) ===
+test freeze_flow ... E2E| adım 1 ön koşullar: git HEAD db8e23944aae, INDEX sha eşit, borsai = /private/var/folders/zr/drr97wqd4hl77c1q0bszd1vc0000gn/T/tmp.1wkaFbj2D8/repo/borsai/__init__.py
+E2E| adım 1 git status -- registry: ""
+E2E| adım 2 kaynak belgeler: 3 dosya → registry/source_docs/SNTA1
+E2E| adım 3 girdi belgesi: registry/inputs/SNTA1.PB.json (sha ae35045bfeee…)
+E2E| adım 4 yetkili denetim (Python): sorun yok (registry/inputs/SNTA1.PB.json)
+E2E| adım 6 kayıt (PB): registry/records/SNTA1/20260923T222259Z_2cc7c49c6a68.json · model sayısı: 19
+E2E| parite: 19/19 desteklenen model, |Δ|max = 0e0
+E2E| U30 uygulama verisinde kayıt kopyası: 0
+E2E| adım 6 'Şimdi yapılacaklar' bloğu:
+E2E|     cd /private/var/folders/zr/drr97wqd4hl77c1q0bszd1vc0000gn/T/tmp.1wkaFbj2D8/repo
+E2E|     git add registry/inputs/SNTA1.PB.json registry/source_docs/SNTA1/ registry/records/SNTA1/20260923T222259Z_2cc7c49c6a68.json
+E2E|     git commit -m "BORSAI_RECORD_SNTA1: prediction record before first trading day" -- registry/inputs/SNTA1.PB.json registry/source_docs/SNTA1/ registry/records/SNTA1/20260923T222259Z_2cc7c49c6a68.json
+E2E|     git push origin main
+E2E|     /Users/ahmet/Desktop/BorsAi/.venv/bin/python -m borsai.push_proof $(git rev-parse HEAD)
+E2E|     git add registry/push_proofs/
+E2E|     git commit -m "BORSAI_PUSH_PROOF: $(git rev-parse HEAD)" -- registry/push_proofs/
+E2E|     git push origin main
+E2E| adım 3 girdi belgesi: registry/inputs/SNTA1.json (sha 510ca16df0d2…)
+E2E| adım 4 yetkili denetim (Python): sorun yok (registry/inputs/SNTA1.json)
+E2E| ikinci kayıt (talep katlı) yazıldı: registry/records/SNTA1/20260923T222300Z_45c48527dda1.json · model sayısı: 19
+E2E| parite: 19/19 desteklenen model, |Δ|max = 0e0
+E2E| DUPLICATE_RECORD: DuplicateRecord: DUPLICATE_RECORD: SNTA1 için aynı girdi ve aynı model dizinli etkin kayıt var (20260923T222300Z_45c48527dda1.json)
+E2E| iptal kaydı: registry/records/SNTA1/20260923T222300Z_161d2d7cc4ea.json · iptal edilen: 20260923T222300Z_45c48527dda1.json · neden: kurgusal: e2e testi, ikinci kayıt geri alınıyor
+E2E| U31 adım 5: T = 2026-09-23 ≤ bugün (2026-09-24) → KIRMIZI uyarı
+E2E| adım 2 kaynak belgeler: 3 dosya → registry/source_docs/SNTB2
+E2E| adım 3 girdi belgesi: registry/inputs/SNTB2.json (sha d829144cb4d4…)
+E2E| adım 4 yetkili denetim (Python): sorun yok (registry/inputs/SNTB2.json)
+E2E| U31 geç kayıt yazıldı: registry/records/SNTB2/20260923T222301Z_a322e6d30c73.json · model sayısı: 19
+E2E| U31 iptal reddi (Python): FreezeError: iptal ilk işlem gününden (2026-09-23) itibaren yapılamaz (SPEC_SCORING §6)
+E2E| sicil: SNTA1 3 kayıt, etkin 1; desteklenmeyen model: 
+E2E| arz sayfası: 7 model render (tavan serisi eğrisi 5 model), uygulamada olmayan 0
+E2E| U50 yeni kayıt: 19 model · parite: 19/19 desteklenen model, |Δ|max = 0e0
+E2E| U50 eski kayıt 20260922T121936Z_459846d44a17.json: parite: 16/16 desteklenen model, |Δ|max = 0e0 · kayıt INDEX'ten eski: 3 model kayıtta yok (ceiling_path_v0, ceiling_path_v0@INF, pb_ceiling_path_v0)
+E2E| U50 eski kayıt 20260922T121935Z_6356b36ec865.json: parite: 16/16 desteklenen model, |Δ|max = 0e0 · kayıt INDEX'ten eski: 3 model kayıtta yok (ceiling_path_v0, ceiling_path_v0@INF, pb_ceiling_path_v0)
+E2E| U50 eski kayıt 20260922T121935Z_6dccd49888dc.json: parite: 16/16 desteklenen model, |Δ|max = 0e0 · kayıt INDEX'ten eski: 3 model kayıtta yok (ceiling_path_v0, ceiling_path_v0@INF, pb_ceiling_path_v0)
+E2E| U50 eski kayıt 20260922T121935Z_4ef4794c6b2b.json: parite: 16/16 desteklenen model, |Δ|max = 0e0 · kayıt INDEX'ten eski: 3 model kayıtta yok (ceiling_path_v0, ceiling_path_v0@INF, pb_ceiling_path_v0)
+E2E| U50 eski kayıt 20260922T121936Z_65a39d7392dd.json: parite: 16/16 desteklenen model, |Δ|max = 0e0 · kayıt INDEX'ten eski: 3 model kayıtta yok (ceiling_path_v0, ceiling_path_v0@INF, pb_ceiling_path_v0)
+E2E| U50 eski kayıt 20260922T121935Z_653e87af9823.json: parite: 16/16 desteklenen model, |Δ|max = 0e0 · kayıt INDEX'ten eski: 3 model kayıtta yok (ceiling_path_v0, ceiling_path_v0@INF, pb_ceiling_path_v0)
+E2E| U50 eski kayıt 20260922T121935Z_0f4695ad423c.json: parite: 16/16 desteklenen model, |Δ|max = 0e0 · kayıt INDEX'ten eski: 3 model kayıtta yok (ceiling_path_v0, ceiling_path_v0@INF, pb_ceiling_path_v0)
+E2E| U28: 3 kişisel kayıt saklandı, 1'i ve tümü (3 kayıt) dışa aktarıldı; repo altına tekli ve toplu dışa aktarma reddedildi
+E2E| B1 dışa aktarma [askıda dosya bağı]: tekli SCENARIO_PATH_INSIDE_REPO · toplu SCENARIO_PATH_INSIDE_REPO
+E2E| B1 dışa aktarma [askıda dizin bağı]: tekli SCENARIO_PATH_INSIDE_REPO · toplu SCENARIO_PATH_INSIDE_REPO
+E2E| B1 dışa aktarma [dizin bağı]: tekli SCENARIO_PATH_INSIDE_REPO · toplu SCENARIO_PATH_INSIDE_REPO
+E2E| B1 dışa aktarma [var olmayan ara dizinli ..]: tekli SCENARIO_PATH_INSIDE_REPO · toplu SCENARIO_PATH_INSIDE_REPO
+E2E| B1 kaydetme [askıda uygulama verisi bağı]: SCENARIO_PATH_INSIDE_REPO
+E2E| B1 kaydetme [var olmayan ara dizinli ..]: SCENARIO_PATH_INSIDE_REPO
+E2E| B1: askıda dosya/dizin bağı, dizin bağı ve `..` hedefleri tekli, toplu ve kaydetmede reddedildi
+E2E| U28: kişisel kayıt ve dışa aktarma sonrası registry/ sha listesi öncesiyle aynı
+E2E| geçici klon registry: 15 yeni/değişen dosya
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 3 filtered out; finished in 3.80s
+=== 4. U29: kişisel kayıt sicile düşse bile skorlanamaz (record_type yok); U30: iptal sonrası active_records ===
+U30 iptal kaydı 20260923T222300Z_161d2d7cc4ea.json -> 20260923T222300Z_45c48527dda1.json ; active_records içinde değil; etkin kayıt = 1 ['20260923T222259Z_2cc7c49c6a68.json']
+=== 4b. ekran görüntüsü hazırlığı (prepare_screens; #[ignore], yalnız geçici klonda) ===
+E2E| adım 2 kaynak belgeler: 3 dosya → registry/source_docs/SNTC3
+E2E| SNTC3 MANIFEST: 3 belge
+test prepare_screens ... ok
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 3 filtered out; finished in 0.04s
+=== 5. geçici klon: yazılan sicil dosyaları ===
+=== 6. ASIL REPO denetimi ===
+asıl repo registry/ sha listesi öncesiyle BİREBİR AYNI (95 dosya)
+asıl repo GIT_OPTIONAL_LOCKS=0 git status --porcelain -- registry: BOŞ
+=== e2e_freeze_tmp_repo: YEŞİL ===
+
+## 3. bash app/tests/e2e_personal_isolation.sh (3 s)
+=== 0. asıl repo registry sha listesi (öncesi) ===
+=== 1. geçici klon ===
+=== 2. beyan + kişisel kayıt + resmi kayıt görüntüleme ===
+test personal_isolation ... E2E| U39 şerit BKRGY: j = Some(0), bozuldu = true, dosya durumu = FOUND (kaynak yalnız dosya)
+E2E| U39 kişisel kayıt: /private/var/folders/zr/drr97wqd4hl77c1q0bszd1vc0000gn/T/tmp.xShpt8YFUS/appdata/scenarios/01M385V1C5DE55AG0VYGN5TQBG.json
+E2E| U39 resmi kayıt görüntülendi: registry/records/BKRGY/20260922T121936Z_459846d44a17.json (6 model)
+E2E| U39 data/outcomes: 8 dosya, sha listesi aynı
+E2E| U39 registry: 95 dosya, sha listesi aynı
+E2E| U39 scores: 1 dosya, sha listesi aynı
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 3 filtered out; finished in 1.04s
+=== 3. geçici klon: sonuç, sicil ve skor ağaçları değişmedi ===
+geçici klon git status --porcelain -- data registry scores: BOŞ
+=== 4. beyan yalnız uygulama verisinde ===
+=== 5. statik tarama: observed_streak_user'ı kim okuyor ===
+=== 6. ASIL REPO denetimi ===
+asıl repo registry/ sha listesi öncesiyle BİREBİR AYNI (95 dosya)
+asıl repo git status --porcelain -- registry data scores: BOŞ
+=== e2e_personal_isolation: YEŞİL ===
+
+## 4. env'siz yalın cargo test --workspace --offline (23 s): env yüzünden 'ok' dönen test yok; ignored listesi
+     Running unittests src/lib.rs 
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+     Running unittests src/main.rs 
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/build_embed.rs 
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/e2e.rs 
+test freeze_flow ... ignored, BORSAI_E2E_REPO/DATA/PYTHON (geçici klon) ister: bash app/tests/e2e_freeze_tmp_repo.sh --ignored ile koşar
+test personal_isolation ... ignored, BORSAI_E2E_REPO/DATA/PYTHON (geçici klon) ister: bash app/tests/e2e_personal_isolation.sh --ignored ile koşar
+test prepare_screens ... ignored, BORSAI_E2E_REPO/DATA/PYTHON + BORSAI_E2E_SCREENS=1 ister: app/scripts/screens.sh ve bash app/tests/e2e_freeze_tmp_repo.sh --ignored ile koşar
+test result: ok. 1 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/integrity.rs 
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.15s
+     Running tests/no_network.rs 
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.31s
+     Running tests/stage2.rs 
+test market20_via_python_repo ... ignored, BORSAI_REPO (asıl repo; .venv Python'u) ister: bash app/scripts/test.sh --include-ignored ile koşar
+test result: ok. 13 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.38s
+     Running tests/stage3.rs 
+test inputs_doc_bytes_match_python ... ignored, BORSAI_REPO (asıl repo; .venv Python'u) ister: bash app/scripts/test.sh --include-ignored ile koşar
+test preflight_real_repo ... ignored, BORSAI_REPO (asıl repo; .venv Python'u) ister: bash app/scripts/test.sh --include-ignored ile koşar
+test wizard_fixtures ... ignored, BORSAI_REPO (asıl repo; .venv Python'u) ister: bash app/scripts/test.sh --include-ignored ile koşar
+test result: ok. 12 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out; finished in 0.70s
+     Running tests/stage4.rs 
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+     Running unittests src/lib.rs 
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+     Running tests/coverage.rs 
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.87s
+     Running tests/dec_semantics.rs 
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+     Running tests/golden.rs 
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 17.41s
+     Running tests/records_parity.rs 
+test records_parity ... ignored, BORSAI_REPO (asıl repo; .venv Python'u) ister: bash app/scripts/test.sh --include-ignored ile koşar
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+toplam: passed=89 failed=0 ignored=8
+cargo test -- --list --ignored:
+freeze_flow: test
+personal_isolation: test
+prepare_screens: test
+market20_via_python_repo: test
+inputs_doc_bytes_match_python: test
+preflight_real_repo: test
+wizard_fixtures: test
+records_parity: test
+
+## 5. .venv/bin/pytest -q (611 s duvar saati)
+........................................................................ [ 83%]
+........................................................................ [100%]
+432 passed in 609.65s (0:10:09)

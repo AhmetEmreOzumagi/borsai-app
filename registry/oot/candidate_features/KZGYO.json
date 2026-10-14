@@ -1,0 +1,240 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "KZGYO",
+  "company": "Kuzugrup Gayrimenkul Yatırım Ortaklığı A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "2085695",
+      "source_id": "KAP_1189295_EK1",
+      "source_document": "KAP 1189295 ek 1",
+      "source_published_at": "2023-08-24T16:10:04+03:00",
+      "source_sha256": "b34694e0d6e08c4d246a8eb6e33d3de85762f628feac0a3d54fd564cbd11894d",
+      "source_path": "registry/oot/source_docs/KZGYO/KAP_1189295_ek1.pdf",
+      "quote": "TOPLAM 50.000.000 100,0% 2.114.922 280.244.019 100,0% 2.085.695 50.000.000 100,0%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden (başvuru) 2.114.922; talebi karşılanan 2.085.695",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "2085606",
+        "domestic_institutional": "80",
+        "foreign_institutional": "9"
+      },
+      "source_id": "KAP_1189295_EK1",
+      "source_document": "KAP 1189295 ek 1",
+      "source_published_at": "2023-08-24T16:10:04+03:00",
+      "source_sha256": "b34694e0d6e08c4d246a8eb6e33d3de85762f628feac0a3d54fd564cbd11894d",
+      "source_path": "registry/oot/source_docs/KZGYO/KAP_1189295_ek1.pdf",
+      "quote": [
+        "27.500.000 55,0% 2.114.770 156.880.563 56,0% 2.085.606 27.500.000 55,0%",
+        "10.000.000 20,0% 139 90.855.856 32,4% 80 10.000.000 20,0%",
+        "12.500.000 25,0% 13 32.507.600 11,6% 9 12.500.000 25,0%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "başvuru: bireysel 2.114.770, yurt içi kurumsal 139, yurt dışı kurumsal 13",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "5.7",
+      "source_id": "KAP_1189295_EK1",
+      "source_document": "KAP 1189295 ek 1",
+      "source_published_at": "2023-08-24T16:10:04+03:00",
+      "source_sha256": "b34694e0d6e08c4d246a8eb6e33d3de85762f628feac0a3d54fd564cbd11894d",
+      "source_path": "registry/oot/source_docs/KZGYO/KAP_1189295_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 5,7 katı",
+      "note": "belge 'yaklaşık' diyor; nihai tahsisata göre",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "5,7",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "9.1",
+      "source_id": "KAP_1189295_EK1",
+      "source_document": "KAP 1189295 ek 1",
+      "source_published_at": "2023-08-24T16:10:04+03:00",
+      "source_sha256": "b34694e0d6e08c4d246a8eb6e33d3de85762f628feac0a3d54fd564cbd11894d",
+      "source_path": "registry/oot/source_docs/KZGYO/KAP_1189295_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara nihai tahsisat tutarının yaklaşık 9,1 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "9,1",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "2.6",
+      "source_id": "KAP_1189295_EK1",
+      "source_document": "KAP 1189295 ek 1",
+      "source_published_at": "2023-08-24T16:10:04+03:00",
+      "source_sha256": "b34694e0d6e08c4d246a8eb6e33d3de85762f628feac0a3d54fd564cbd11894d",
+      "source_path": "registry/oot/source_docs/KZGYO/KAP_1189295_ek1.pdf",
+      "quote": "Yatırımcılara nihai tahsisat tutarının yaklaşık 2,6 katı talep gelmiştir.",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,6",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "27500000",
+        "domestic_institutional": "10000000",
+        "foreign_institutional": "12500000"
+      },
+      "source_id": "KAP_1189295_EK1",
+      "source_document": "KAP 1189295 ek 1",
+      "source_published_at": "2023-08-24T16:10:04+03:00",
+      "source_sha256": "b34694e0d6e08c4d246a8eb6e33d3de85762f628feac0a3d54fd564cbd11894d",
+      "source_path": "registry/oot/source_docs/KZGYO/KAP_1189295_ek1.pdf",
+      "quote": [
+        "27.500.000 55,0% 2.114.770 156.880.563 56,0% 2.085.606 27.500.000 55,0%",
+        "10.000.000 20,0% 139 90.855.856 32,4% 80 10.000.000 20,0%",
+        "12.500.000 25,0% 13 32.507.600 11,6% 9 12.500.000 25,0%"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "55.0",
+      "source_id": "KAP_1189295_EK1",
+      "source_document": "KAP 1189295 ek 1",
+      "source_published_at": "2023-08-24T16:10:04+03:00",
+      "source_sha256": "b34694e0d6e08c4d246a8eb6e33d3de85762f628feac0a3d54fd564cbd11894d",
+      "source_path": "registry/oot/source_docs/KZGYO/KAP_1189295_ek1.pdf",
+      "quote": "27.500.000 55,0% 2.114.770 156.880.563 56,0% 2.085.606 27.500.000 55,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %55,0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "20.0",
+      "source_id": "KAP_1189295_EK1",
+      "source_document": "KAP 1189295 ek 1",
+      "source_published_at": "2023-08-24T16:10:04+03:00",
+      "source_sha256": "b34694e0d6e08c4d246a8eb6e33d3de85762f628feac0a3d54fd564cbd11894d",
+      "source_path": "registry/oot/source_docs/KZGYO/KAP_1189295_ek1.pdf",
+      "quote": "10.000.000 20,0% 139 90.855.856 32,4% 80 10.000.000 20,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %20,0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "25.0",
+      "source_id": "KAP_1189295_EK1",
+      "source_document": "KAP 1189295 ek 1",
+      "source_published_at": "2023-08-24T16:10:04+03:00",
+      "source_sha256": "b34694e0d6e08c4d246a8eb6e33d3de85762f628feac0a3d54fd564cbd11894d",
+      "source_path": "registry/oot/source_docs/KZGYO/KAP_1189295_ek1.pdf",
+      "quote": "12.500.000 25,0% 13 32.507.600 11,6% 9 12.500.000 25,0%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %25,0",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız talep toplama/aracılık yöntemini yazıyor (“Sabit Fiyatla Talep Toplama” ve “En İyi Gayret Aracılığı”); dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede talep toplama (satış) yöntemi olarak geçiyor, dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Tera Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_1186833_EK1",
+      "source_document": "KAP 1186833 ek 1",
+      "source_published_at": "2023-08-17T22:54:44+03:00",
+      "source_sha256": "6e21606be5a7215855f3559ac925a6e07c1d883f3aa54a77ba0a7153fe1f588b",
+      "source_path": "registry/oot/source_docs/KZGYO/KAP_1186833_ek1.pdf",
+      "quote": "Konsorsiyum Lideri Yetkili Kuruluş KISIm: TERA YATIRIM MENKUL DEĞERLER A.Ş.",
+      "note": "sonuç eki de 'Tera Yatırım Konsorsiyum Liderliğinde' diyor",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (OCR, kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_1189723",
+      "source_document": "KAP 1189723",
+      "source_published_at": "2023-08-25T18:10:03+03:00",
+      "source_sha256": "6eafec797c948e6b7936b1a01dca978a848b855302069bc6a316b773eeec0199",
+      "source_path": "registry/oot/source_docs/KZGYO/KAP_1189723_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1189723",
+      "source_document": "KAP 1189723",
+      "source_published_at": "2023-08-25T18:10:03+03:00",
+      "source_sha256": "6eafec797c948e6b7936b1a01dca978a848b855302069bc6a316b773eeec0199",
+      "source_path": "registry/oot/source_docs/KZGYO/KAP_1189723_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1189723": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1189723",
+      "published_at": "2023-08-25T18:10:03+03:00",
+      "sha256": "6eafec797c948e6b7936b1a01dca978a848b855302069bc6a316b773eeec0199",
+      "path": "registry/oot/source_docs/KZGYO/KAP_1189723_bildirim.pdf"
+    },
+    "KAP_1189295_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1189295 ek 1",
+      "published_at": "2023-08-24T16:10:04+03:00",
+      "sha256": "b34694e0d6e08c4d246a8eb6e33d3de85762f628feac0a3d54fd564cbd11894d",
+      "path": "registry/oot/source_docs/KZGYO/KAP_1189295_ek1.pdf"
+    },
+    "KAP_1186833_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1186833 ek 1",
+      "published_at": "2023-08-17T22:54:44+03:00",
+      "sha256": "6e21606be5a7215855f3559ac925a6e07c1d883f3aa54a77ba0a7153fe1f588b",
+      "path": "registry/oot/source_docs/KZGYO/KAP_1186833_ek1.pdf"
+    }
+  }
+}

@@ -1,0 +1,275 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "MOBTL",
+  "company": "Mobiltel İletişim Hizmetleri Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "33127",
+      "source_id": "KAP_978867_EK1",
+      "source_document": "KAP 978867 ek 1",
+      "source_published_at": "2021-11-22T08:02:39+03:00",
+      "source_sha256": "680b73acade728cbb1440dec88872546cc24b918e13e338f20857c490c7843da",
+      "source_path": "registry/oot/source_docs/MOBTL/KAP_978867_ek1.pdf",
+      "quote": "Toplam 208.000.000 100% 34.091 629.159.426 100% 33.127 208.000.000 100%",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep eden 34.091; dağıtım yapılan 33.127",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": "34.091",
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "34.091",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "34.091 talep eden kişi sayısı; dağıtım yapılan 33.127 (ALLOCATED tercih)"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "33046",
+        "domestic_institutional": "73",
+        "foreign_institutional": "8"
+      },
+      "source_id": "KAP_978867_EK1",
+      "source_document": "KAP 978867 ek 1",
+      "source_published_at": "2021-11-22T08:02:39+03:00",
+      "source_sha256": "680b73acade728cbb1440dec88872546cc24b918e13e338f20857c490c7843da",
+      "source_path": "registry/oot/source_docs/MOBTL/KAP_978867_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 124.800.000 60% 34.010 214.462.776 34,1% 33.046 124.800.000 60%",
+        "Yurt İçi Kurumsal 52.000.000 25% 73 343.746.650 54,6% 73 58.240.000 28%",
+        "31.200.000 15% 8 70.950.000 11,3% 8 24.960.000 12%"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "üçüncü satır Yurt Dışı Kurumsal; talep eden bireysel 34.010",
+      "provenance": "CODEX_CORRECTED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "34.010",
+        "Yurt İçi Kurumsal": "73",
+        "Yurt Dışı Kurumsal": "8"
+      },
+      "correction_kind": "VALUE_OR_DEFINITION",
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '34.010', 'Yurt İçi Kurumsal': '73', 'Yurt Dışı Kurumsal': '8'}",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "Codex talep eden sayılarını almış; dağıtım yapılan bireysel 33.046 (diğerleri aynı)"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": "1.7",
+      "source_id": "KAP_978867_EK1",
+      "source_document": "KAP 978867 ek 1",
+      "source_published_at": "2021-11-22T08:02:39+03:00",
+      "source_sha256": "680b73acade728cbb1440dec88872546cc24b918e13e338f20857c490c7843da",
+      "source_path": "registry/oot/source_docs/MOBTL/KAP_978867_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara tahsis edilen payların 1,7 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "1,7",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "6.6",
+      "source_id": "KAP_978867_EK1",
+      "source_document": "KAP 978867 ek 1",
+      "source_published_at": "2021-11-22T08:02:39+03:00",
+      "source_sha256": "680b73acade728cbb1440dec88872546cc24b918e13e338f20857c490c7843da",
+      "source_path": "registry/oot/source_docs/MOBTL/KAP_978867_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara tahsis edilen payların 6,6 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "6,6",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "2.3",
+      "source_id": "KAP_978867_EK1",
+      "source_document": "KAP 978867 ek 1",
+      "source_published_at": "2021-11-22T08:02:39+03:00",
+      "source_sha256": "680b73acade728cbb1440dec88872546cc24b918e13e338f20857c490c7843da",
+      "source_path": "registry/oot/source_docs/MOBTL/KAP_978867_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara tahsis edilen payların 2,3 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,3",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "124800000",
+        "domestic_institutional": "58240000",
+        "foreign_institutional": "24960000"
+      },
+      "source_id": "KAP_978867_EK1",
+      "source_document": "KAP 978867 ek 1",
+      "source_published_at": "2021-11-22T08:02:39+03:00",
+      "source_sha256": "680b73acade728cbb1440dec88872546cc24b918e13e338f20857c490c7843da",
+      "source_path": "registry/oot/source_docs/MOBTL/KAP_978867_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 124.800.000 60% 34.010 214.462.776 34,1% 33.046 124.800.000 60%",
+        "Yurt İçi Kurumsal 52.000.000 25% 73 343.746.650 54,6% 73 58.240.000 28%",
+        "31.200.000 15% 8 70.950.000 11,3% 8 24.960.000 12%"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurt İçi Bireysel": "124.800.000",
+        "Yurt İçi Kurumsal": "58.240.000",
+        "Yurt Dışı Kurumsal": "24.960.000"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurt İçi Bireysel': '124.800.000', 'Yurt İçi Kurumsal': '58.240.000', 'Yurt Dışı Kurumsal': '24.960.000'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "60",
+      "source_id": "KAP_978867_EK1",
+      "source_document": "KAP 978867 ek 1",
+      "source_published_at": "2021-11-22T08:02:39+03:00",
+      "source_sha256": "680b73acade728cbb1440dec88872546cc24b918e13e338f20857c490c7843da",
+      "source_path": "registry/oot/source_docs/MOBTL/KAP_978867_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 124.800.000 60% 34.010 214.462.776 34,1% 33.046 124.800.000 60%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %60",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "60",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "28",
+      "source_id": "KAP_978867_EK1",
+      "source_document": "KAP 978867 ek 1",
+      "source_published_at": "2021-11-22T08:02:39+03:00",
+      "source_sha256": "680b73acade728cbb1440dec88872546cc24b918e13e338f20857c490c7843da",
+      "source_path": "registry/oot/source_docs/MOBTL/KAP_978867_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal 52.000.000 25% 73 343.746.650 54,6% 73 58.240.000 28%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %25",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "28",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "12",
+      "source_id": "KAP_978867_EK1",
+      "source_document": "KAP 978867 ek 1",
+      "source_published_at": "2021-11-22T08:02:39+03:00",
+      "source_sha256": "680b73acade728cbb1440dec88872546cc24b918e13e338f20857c490c7843da",
+      "source_path": "registry/oot/source_docs/MOBTL/KAP_978867_ek1.pdf",
+      "quote": "31.200.000 15% 8 70.950.000 11,3% 8 24.960.000 12%",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %15",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "12",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki ve TSSD dağıtım yöntemini adlandırmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "NOT_FOUND_IN_DOCS",
+        "note": "'sabit fiyat' ifadesi sonuç ekinde ve TSSD'de yok; ayrıca satış yöntemi, dağıtım yöntemi değil"
+      }
+    },
+    "lead_broker": {
+      "value": "İnfo Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_977424_EK1",
+      "source_document": "KAP 977424 ek 1",
+      "source_published_at": "2021-11-12T16:58:31+03:00",
+      "source_sha256": "d3f007cc20957bd6bb8b4f5bcb2083b573c71ebf9981688d8a48a6bc3686c768",
+      "source_path": "registry/oot/source_docs/MOBTL/KAP_977424_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Info Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "TSSD OCR 'Info'; sonuç bildirimini de İnfo Yatırım yayımlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "İnfo Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_979022",
+      "source_document": "KAP 979022",
+      "source_published_at": "2021-11-22T18:29:21+03:00",
+      "source_sha256": "dce53c08441186961dde2d22b451adb64764eaac2a2536fedaef74aac0cb39cf",
+      "source_path": "registry/oot/source_docs/MOBTL/KAP_979022_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_979022",
+      "source_document": "KAP 979022",
+      "source_published_at": "2021-11-22T18:29:21+03:00",
+      "source_sha256": "dce53c08441186961dde2d22b451adb64764eaac2a2536fedaef74aac0cb39cf",
+      "source_path": "registry/oot/source_docs/MOBTL/KAP_979022_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_979022": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 979022",
+      "published_at": "2021-11-22T18:29:21+03:00",
+      "sha256": "dce53c08441186961dde2d22b451adb64764eaac2a2536fedaef74aac0cb39cf",
+      "path": "registry/oot/source_docs/MOBTL/KAP_979022_bildirim.pdf"
+    },
+    "KAP_978867_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 978867 ek 1",
+      "published_at": "2021-11-22T08:02:39+03:00",
+      "sha256": "680b73acade728cbb1440dec88872546cc24b918e13e338f20857c490c7843da",
+      "path": "registry/oot/source_docs/MOBTL/KAP_978867_ek1.pdf"
+    },
+    "KAP_977424_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 977424 ek 1",
+      "published_at": "2021-11-12T16:58:31+03:00",
+      "sha256": "d3f007cc20957bd6bb8b4f5bcb2083b573c71ebf9981688d8a48a6bc3686c768",
+      "path": "registry/oot/source_docs/MOBTL/KAP_977424_ek1.pdf"
+    }
+  }
+}

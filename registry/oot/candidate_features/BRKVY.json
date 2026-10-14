@@ -1,0 +1,229 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "BRKVY",
+  "company": "Birikim Varlık Yönetim A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "538277",
+      "source_id": "KAP_1086520_EK1",
+      "source_document": "KAP 1086520 ek 1",
+      "source_published_at": "2022-12-11T21:36:44+03:00",
+      "source_sha256": "db18905b825ae0e05eec3f0e47bc5e286681826e2e373d08bf0041809f07939c",
+      "source_path": "registry/oot/source_docs/BRKVY/KAP_1086520_ek1.pdf",
+      "quote": "Toplam 12.000.000 %100,00 587.764 260.734.207 %100,00 538.277 12.000.000 %100,00",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "talep kişi sayısı 587.764; dağıtım kişi sayısı 538.277",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "538226",
+        "domestic_institutional": "49",
+        "foreign_institutional": "2"
+      },
+      "source_id": "KAP_1086520_EK1",
+      "source_document": "KAP 1086520 ek 1",
+      "source_published_at": "2022-12-11T21:36:44+03:00",
+      "source_sha256": "db18905b825ae0e05eec3f0e47bc5e286681826e2e373d08bf0041809f07939c",
+      "source_path": "registry/oot/source_docs/BRKVY/KAP_1086520_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 6.000.000 %50,00 587.646 104.063.128 %39,91 538.226 6.000.000 %50,00",
+        "4.200.000 %35,00 113 153.171.079 %58,75 49 4.560.000 %38,00",
+        "1.800.000 %15,00 5 3.500.000 %1,34 2 1.440.000 %12,00"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "talep eden: bireysel 587.646, yurt içi kurumsal 113, yurt dışı kurumsal 5",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_demand_multiple": {
+      "value": "17.34",
+      "source_id": "KAP_1086520_EK1",
+      "source_document": "KAP 1086520 ek 1",
+      "source_published_at": "2022-12-11T21:36:44+03:00",
+      "source_sha256": "db18905b825ae0e05eec3f0e47bc5e286681826e2e373d08bf0041809f07939c",
+      "source_path": "registry/oot/source_docs/BRKVY/KAP_1086520_ek1.pdf",
+      "quote": "Yurt İçi Bireysel Yatırımcılara nihai tahsisat tutarının yaklaşık 17,34 katı",
+      "note": "belge 'yaklaşık' ve 'nihai tahsisat' diyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "17,34",
+        "verdict": "FOUND_SAME",
+        "note": "belgede 'yaklaşık'"
+      }
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": "33.59",
+      "source_id": "KAP_1086520_EK1",
+      "source_document": "KAP 1086520 ek 1",
+      "source_published_at": "2022-12-11T21:36:44+03:00",
+      "source_sha256": "db18905b825ae0e05eec3f0e47bc5e286681826e2e373d08bf0041809f07939c",
+      "source_path": "registry/oot/source_docs/BRKVY/KAP_1086520_ek1.pdf",
+      "quote": "Yurt İçi Kurumsal Yatırımcılara yaklaşık 33,59 katı",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "33,59",
+        "verdict": "FOUND_SAME",
+        "note": "belgede 'yaklaşık'"
+      }
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": "2.43",
+      "source_id": "KAP_1086520_EK1",
+      "source_document": "KAP 1086520 ek 1",
+      "source_published_at": "2022-12-11T21:36:44+03:00",
+      "source_sha256": "db18905b825ae0e05eec3f0e47bc5e286681826e2e373d08bf0041809f07939c",
+      "source_path": "registry/oot/source_docs/BRKVY/KAP_1086520_ek1.pdf",
+      "quote": "Yurt Dışı Kurumsal Yatırımcılara ise yaklaşık 2,43 katı talep gelmiştir",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "2,43",
+        "verdict": "FOUND_SAME",
+        "note": "belgede 'yaklaşık'"
+      }
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "6000000",
+        "domestic_institutional": "4560000",
+        "foreign_institutional": "1440000"
+      },
+      "source_id": "KAP_1086520_EK1",
+      "source_document": "KAP 1086520 ek 1",
+      "source_published_at": "2022-12-11T21:36:44+03:00",
+      "source_sha256": "db18905b825ae0e05eec3f0e47bc5e286681826e2e373d08bf0041809f07939c",
+      "source_path": "registry/oot/source_docs/BRKVY/KAP_1086520_ek1.pdf",
+      "quote": [
+        "Yurt İçi Bireysel 6.000.000 %50,00 587.646 104.063.128 %39,91 538.226 6.000.000 %50,00",
+        "4.200.000 %35,00 113 153.171.079 %58,75 49 4.560.000 %38,00",
+        "1.800.000 %15,00 5 3.500.000 %1,34 2 1.440.000 %12,00"
+      ],
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "retail_allocation_pct": {
+      "value": "50.00",
+      "source_id": "KAP_1086520_EK1",
+      "source_document": "KAP 1086520 ek 1",
+      "source_published_at": "2022-12-11T21:36:44+03:00",
+      "source_sha256": "db18905b825ae0e05eec3f0e47bc5e286681826e2e373d08bf0041809f07939c",
+      "source_path": "registry/oot/source_docs/BRKVY/KAP_1086520_ek1.pdf",
+      "quote": "Yurt İçi Bireysel 6.000.000 %50,00 587.646 104.063.128 %39,91 538.226 6.000.000 %50,00",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan da %50,00",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "38.00",
+      "source_id": "KAP_1086520_EK1",
+      "source_document": "KAP 1086520 ek 1",
+      "source_published_at": "2022-12-11T21:36:44+03:00",
+      "source_sha256": "db18905b825ae0e05eec3f0e47bc5e286681826e2e373d08bf0041809f07939c",
+      "source_path": "registry/oot/source_docs/BRKVY/KAP_1086520_ek1.pdf",
+      "quote": "4.200.000 %35,00 113 153.171.079 %58,75 49 4.560.000 %38,00",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %35,00",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "12.00",
+      "source_id": "KAP_1086520_EK1",
+      "source_document": "KAP 1086520 ek 1",
+      "source_published_at": "2022-12-11T21:36:44+03:00",
+      "source_sha256": "db18905b825ae0e05eec3f0e47bc5e286681826e2e373d08bf0041809f07939c",
+      "source_path": "registry/oot/source_docs/BRKVY/KAP_1086520_ek1.pdf",
+      "quote": "1.800.000 %15,00 5 3.500.000 %1,34 2 1.440.000 %12,00",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "note": "planlanan %15,00",
+      "provenance": "FILLED_BY_CLAUDE_VERIFIER",
+      "filled_by": "CLAUDE_VERIFIER"
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "sonuç eki yalnız talep toplama yöntemini yazıyor (“Sabit Fiyatla Talep Toplama” yöntemiyle); dağıtım yöntemi adlandırılmıyor; TSSD dossier'de yok",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Sabit Fiyatla Talep Toplama",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Sabit Fiyatla Talep Toplama",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede talep toplama (satış) yöntemi olarak geçiyor, dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": null,
+      "missing_reason": "TSSD dossier'de yok; sonuç eki aracı kurum adı yazmıyor (bildirimi Halk Yatırım Menkul Değerler A.Ş. yayımlamış, ancak belgede 'aracılık' ifadesi yok)",
+      "provenance": "MISSING"
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD dossier'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD dossier'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD dossier'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD dossier'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Ana Pazar",
+      "source_id": "KAP_1086669",
+      "source_document": "KAP 1086669",
+      "source_published_at": "2022-12-12T18:10:55+03:00",
+      "source_sha256": "c35943c7ea2aec96aea4e7cbb2bba03a9f32ffea5e174ed30be431503abb7634",
+      "source_path": "registry/oot/source_docs/BRKVY/KAP_1086669_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Ana Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsa Dışında (Off the Exchange)",
+      "source_id": "KAP_1086669",
+      "source_document": "KAP 1086669",
+      "source_published_at": "2022-12-12T18:10:55+03:00",
+      "source_sha256": "c35943c7ea2aec96aea4e7cbb2bba03a9f32ffea5e174ed30be431503abb7634",
+      "source_path": "registry/oot/source_docs/BRKVY/KAP_1086669_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsa Dışında (Off the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_1086669": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 1086669",
+      "published_at": "2022-12-12T18:10:55+03:00",
+      "sha256": "c35943c7ea2aec96aea4e7cbb2bba03a9f32ffea5e174ed30be431503abb7634",
+      "path": "registry/oot/source_docs/BRKVY/KAP_1086669_bildirim.pdf"
+    },
+    "KAP_1086520_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 1086520 ek 1",
+      "published_at": "2022-12-11T21:36:44+03:00",
+      "sha256": "db18905b825ae0e05eec3f0e47bc5e286681826e2e373d08bf0041809f07939c",
+      "path": "registry/oot/source_docs/BRKVY/KAP_1086520_ek1.pdf"
+    }
+  }
+}

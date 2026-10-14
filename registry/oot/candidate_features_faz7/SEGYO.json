@@ -1,0 +1,226 @@
+{
+ "schema_version": "borsai.oot_candidate_features_faz7/1",
+ "ticker": "SEGYO",
+ "company": "Şeker Gayrimenkul Yatırım Ortaklığı A.Ş.",
+ "first_trading_date": "2022-06-07",
+ "note": "FAZ7 aday özellikleri (7 alan; model girdisi DEĞİLDİR). Biçim H99 ana tablosuyla uyumlu. Kaynaklar listeleme öncesi resmi KAP belgeleri; PDF'ler repo dışında, source_docs/<T>/MANIFEST.json URL+sha256 ile eşlenir.",
+ "fields": {
+  "distribution_method": {
+   "value": "Borsa İstanbul Birincil Piyasa; yatırımcı grubu bazında tahsisat ve dağıtım yapılmadı",
+   "unit": "",
+   "status": "VERIFIED",
+   "source_id": "KAP_1033112_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c80e9178f01810685132426df",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1033112",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1033112",
+   "published_at": "2022-05-27T22:52:16+03:00",
+   "source_sha256": "12527452b810690953172ef910aa889309c934737f90fad7b3f9465beb15f630",
+   "source_file": "source_docs/SEGYO/KAP_1033112_ek1.pdf",
+   "page": 10,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "25.2.3. Halka arzda yatırımcılara tahsis ve dağıtım esasları: Halka arz, Borsa Istanbul Birincil Piyasa'da \"Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış\" yöntemi ile yapılacağından, herhangi bir yatırımcı grubuna tahsisat yapılmayacaktır. a) Yatırımcı grubu bazında tahsisat oranları: Yoktur.",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1033112_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c80e9178f01810685132426df",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1033112",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1033112",
+     "published_at": "2022-05-27T22:52:16+03:00",
+     "source_sha256": "12527452b810690953172ef910aa889309c934737f90fad7b3f9465beb15f630",
+     "source_file": "source_docs/SEGYO/KAP_1033112_ek1.pdf",
+     "page": 10,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "c) Bireysel yatırımcılar ve İhraççı'nın çalışanlarına ilişkin tahsisat grubunda tahsis edilen nominal değerden daha fazla talep gelmesi durumunda uygulanacak dağıtım yöntemi/yöntemleri: Yoktur."
+    }
+   ],
+   "provenance": "CODEX_VERIFIED",
+   "note": "Borsa'da Satış - Sabit Fiyatla Talep Toplama ve Satış (Şeker Yatırım; 01-02/06/2022). Yatırımcı grubu tahsisatı yok; dağıtımı Borsa İstanbul birincil piyasa süresi bitiminde yapar (s.10); izahname s.6'da dağıtımda zaman önceliği kuralı geçerli ve MKK sicil numarasıyla tekleştirme yazıyor. Belge eşit/oransal adlandırmıyor. Borsa birincil piyasa duyurusu (KAP_1033395) da Sabit Fiyatla Talep Toplama ve Satış Yöntemi diyor.",
+   "codex_value": "borsada satış",
+   "codex_verdict": "VERIFIED"
+  },
+  "price_stability_planned": {
+   "value": "TRUE",
+   "unit": "boolean",
+   "status": "FILLED",
+   "source_id": "KAP_1033112_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c80e9178f01810685132426df",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1033112",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1033112",
+   "published_at": "2022-05-27T22:52:16+03:00",
+   "source_sha256": "12527452b810690953172ef910aa889309c934737f90fad7b3f9465beb15f630",
+   "source_file": "source_docs/SEGYO/KAP_1033112_ek1.pdf",
+   "page": 14,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5. Fiyat istikrarı işlemlerinin planlanıp planlanmadığı: Fiyat istikrarı işlemlerinin gerçekleştirilmesi planlanmaktadır.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "İşlemleri Şeker Yatırım yapar; kaynak Şirket'in halka arzdan elde edeceği brüt fonun %20'si (44.745.540,62 TL), Pay Tebliği md.11 (s.15). Garanti yok (26.5.1)."
+  },
+  "price_stability_days": {
+   "value": "30",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1033112_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c80e9178f01810685132426df",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1033112",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1033112",
+   "published_at": "2022-05-27T22:52:16+03:00",
+   "source_sha256": "12527452b810690953172ef910aa889309c934737f90fad7b3f9465beb15f630",
+   "source_file": "source_docs/SEGYO/KAP_1033112_ek1.pdf",
+   "page": 14,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "26.5.2. Fiyat istikrarı işlemlerinin gerçekleştirilebileceği zaman aralığı: Payların borsada işlem görmeye başlamasından itibaren 30 gündür.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": ""
+  },
+  "issuer_lockup_days": {
+   "value": "0",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1033112_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c80e9178f01810685132426df",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1033112",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1033112",
+   "published_at": "2022-05-27T22:52:16+03:00",
+   "source_sha256": "12527452b810690953172ef910aa889309c934737f90fad7b3f9465beb15f630",
+   "source_file": "source_docs/SEGYO/KAP_1033112_ek1.pdf",
+   "page": 16,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "27.3. Halka arzdan sonra dolaşımdaki pay miktarının artırılmamasına ilişkin taahhütler: a) Ihraççı tarafindan verilen taahhüt: Yoktur.",
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "İhraççı taahhüdü yok (H99 biçimi 0)."
+  },
+  "shareholder_lockup_days": {
+   "value": "365",
+   "unit": "gün",
+   "status": "FILLED",
+   "source_id": "KAP_1033112_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c80e9178f01810685132426df",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1033112",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1033112",
+   "published_at": "2022-05-27T22:52:16+03:00",
+   "source_sha256": "12527452b810690953172ef910aa889309c934737f90fad7b3f9465beb15f630",
+   "source_file": "source_docs/SEGYO/KAP_1033112_ek1.pdf",
+   "page": 16,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "c) Sermaye piyasası mevzuatı kapsamında verilen taahhütler: Işbu Izahname'nin Kurul tarafından onaylandığı tarih itibarıyla Şirket'in mevcut sermayesinin tamamı üzerinde pay sahibi olan ortak Şekerbank'tır. Şekerbank, Şirket paylarının Borsa Istanbul'da işlem görmeye başladığı tarihten itibaren 365 gün boyunca, maliki olduğu Şirket paylarını halka arz fiyatının altındaki bir fiyattan Borsa Istanbul'da satmayacağımı,",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1033112_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c80e9178f01810685132426df",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1033112",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1033112",
+     "published_at": "2022-05-27T22:52:16+03:00",
+     "source_sha256": "12527452b810690953172ef910aa889309c934737f90fad7b3f9465beb15f630",
+     "source_file": "source_docs/SEGYO/KAP_1033112_ek1.pdf",
+     "page": 16,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "b) Ortaklar tarafindan verilen taahhütler: Yoktur."
+    }
+   ],
+   "components": [
+    {
+     "who": "Şekerbank T.A.Ş. (tek ortak, %100)",
+     "days": "365",
+     "type": "FIYAT_ALTI",
+     "basis": "MEVZUAT Pay Tebliği 8/1",
+     "start": "Borsa İstanbul'da işlem görmeye başlama"
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "b) Ortaklar tarafından verilen gönüllü taahhüt: Yoktur. c) Şekerbank 365 gün halka arz fiyatının altında Borsa'da satmama. Halka arz tamamen sermaye artırımı; Şekerbank pay satmıyor (27.2). d) Şeker Yatırım'ın bakiye yüklenim taahhüdü ve yüklenimle aldığı paylar için altı ay fiyat altı satmama taahhüdü yetkili kuruluş taahhüdüdür, ortak taahhüdü değil — hariç. En kısa süre 365."
+  },
+  "sector": {
+   "value": "Gayrimenkul yatırım ortaklığı",
+   "unit": "",
+   "status": "FILLED",
+   "source_id": "KAP_1033110_EK1",
+   "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c80e9178f01810680acb0267f",
+   "source_type": "IZAHNAME",
+   "kap_notice_id": "1033110",
+   "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1033110",
+   "published_at": "2022-05-27T22:51:42+03:00",
+   "source_sha256": "4e64bbb18bcc8d9cb8ec091ca61317dbae7c58455b5b0ec948417f0147bfa694",
+   "source_file": "source_docs/SEGYO/KAP_1033110_ek1.pdf",
+   "page": 4,
+   "ocr": true,
+   "text_layer_used": "OCR",
+   "quote": "7.1. Ana faaliyet alanları: Şirket, GYO Tebliği'nde belirlenmiş usul ve esaslar dähilinde gayrimenkuller, gayrimenkul projeleri gibi varlık ve gayrimenkule dayalı haklardan oluşan bir portföyü işletmek veya belirli bir projeye, gayrimenkule veya altyapı yatırım hizmetine yatırım yapmak amacıyla faaliyet gösteren",
+   "extra_quotes": [
+    {
+     "source_id": "KAP_1033109_EK1",
+     "source_url": "https://www.kap.org.tr/tr/api/file/download/4028328c80e9178f0181067e86012651",
+     "source_type": "IZAHNAME",
+     "kap_notice_id": "1033109",
+     "kap_notice_url": "https://www.kap.org.tr/tr/Bildirim/1033109",
+     "published_at": "2022-05-27T22:50:32+03:00",
+     "source_sha256": "fb2d04356177e6ff36aeb40cc34bf71a5d86656db8ddd20eda44c7838ef8c415",
+     "source_file": "source_docs/SEGYO/KAP_1033109_ek1.pdf",
+     "page": 40,
+     "ocr": true,
+     "text_layer_used": "OCR",
+     "quote": "Şirket, Kurul'un iznini müteakip 6 Ocak 2020 tarihinde esas sözleşmesinde yapılan değişikliklerin tescili ile gayrimenkul yatırım ortaklığına dönüşmüştür ve bu nedenle çok kısa bir süredir gayrimenkul yatırım ortaklığı olarak faaliyette bulunmaktadır."
+    }
+   ],
+   "provenance": "CLAUDE_VERIFIER_FILLED",
+   "note": "Tek ortak Şekerbank'ın bankacılık faaliyeti ve bağlı ortaklık Şeker Kentsel'in inşaat faaliyeti ihraççının faaliyeti değil."
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "unit": "boolean",
+   "status": "MISSING",
+   "provenance": "MISSING",
+   "missing_reason": "belgede beyan yok: Borsa İstanbul görüşü (KAP_1033109_EK1 s.6, 21.04.2022 yazısı) yalnız Ana Pazar/kotasyon ve hukukçu raporu hususlarını içeriyor, BIST Katılım endeksi cümlesi yok. 35. EKLER (KAP_1033112_EK1 s.32: Ek 1-10 esas sözleşme, iç yönerge, finansal tablolar, sorumluluk beyanları, değerleme raporları, hukukçu raporu, iki fiyat tespit raporu) Katılım Finans İlkeleri Bilgi Formu'nu anmıyor. qfind 'Katılım Tüm Endeks|yer alma şartlarını|katılım endeks|katılım finans|faizsiz|icazet|islami|Bilgi Formu' yalnız 'Kurumsal Yönetim Bilgi Formu'nu buldu. TSSD ve Borsa birincil piyasa duyurusunda da beyan yok.",
+   "looked_at": [
+    "KAP_1033109_EK1",
+    "KAP_1033110_EK1",
+    "KAP_1033111_EK1",
+    "KAP_1033112_EK1",
+    "KAP_1033160_EK1",
+    "KAP_1033160",
+    "KAP_1033395",
+    "KAP_1034640"
+   ],
+   "note": ""
+  }
+ },
+ "sources": {
+  "KAP_1033109_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1033109",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c80e9178f0181067e86012651",
+   "published_at": "2022-05-27T22:50:32+03:00",
+   "sha256": "fb2d04356177e6ff36aeb40cc34bf71a5d86656db8ddd20eda44c7838ef8c415",
+   "file": "source_docs/SEGYO/KAP_1033109_ek1.pdf"
+  },
+  "KAP_1033110_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1033110",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c80e9178f01810680acb0267f",
+   "published_at": "2022-05-27T22:51:42+03:00",
+   "sha256": "4e64bbb18bcc8d9cb8ec091ca61317dbae7c58455b5b0ec948417f0147bfa694",
+   "file": "source_docs/SEGYO/KAP_1033110_ek1.pdf"
+  },
+  "KAP_1033112_EK1": {
+   "type": "IZAHNAME",
+   "kap_notice_id": "1033112",
+   "url": "https://www.kap.org.tr/tr/api/file/download/4028328c80e9178f01810685132426df",
+   "published_at": "2022-05-27T22:52:16+03:00",
+   "sha256": "12527452b810690953172ef910aa889309c934737f90fad7b3f9465beb15f630",
+   "file": "source_docs/SEGYO/KAP_1033112_ek1.pdf"
+  }
+ }
+}

@@ -1,0 +1,452 @@
+{
+  "algorithm": "discrete_time_hazard_offset_logit_l2",
+  "code_version": {
+    "borsai_dirty": false,
+    "borsai_source_sha256": "5804e5cdbfdedd021525be051bd86c42654873dbe1bdb9339c716b5698558ab8",
+    "git_commit": "fe8ed5462c9a158311bf0f399e602d411360f99a"
+  },
+  "created_at": "2026-09-24T16:28:40+03:00",
+  "d1_preprocessing": {
+    "clip": {
+      "d1_turnover": {
+        "p05": -6.923783040059334,
+        "p95": -0.6157622757273886
+      }
+    },
+    "columns": [
+      "d1_lock",
+      "d1_turnover"
+    ],
+    "dropped": [],
+    "mean": {
+      "d1_lock": 0.8641975308641975,
+      "d1_turnover": -4.858982673118316
+    },
+    "method": "kantil/ortalama/varyans kesin Fraction, std ve z 60 haneli Decimal (f3 ile aynı yöntem)",
+    "n_train": 81,
+    "std": {
+      "d1_lock": 0.34257868951880516,
+      "d1_turnover": 1.9764970261723038
+    }
+  },
+  "delta": {
+    "d1_lock": -0.3278985872465678,
+    "d1_turnover": 0.25106109793882575
+  },
+  "description": "D1 sonrası güncelleme (SPEC_POST_D1_V0): dondurulmuş ceiling_hazard_v0'ın doğrusal öngörücüsü sabit ofset; d = 2..10 hazard'ına δ·u (u = z-skorlu d1_lock, d1_turnover), L2 (λ iç arz-bırak CV ile). h_1 ana modelden aynen. Yalnız D1'i tavanda kapatan arzlarda tanımlı; birincil çıktı koşullu S_cond[k] = S_k / S_1.",
+  "feature_ranges": {
+    "d1_lock": {
+      "max": 1.0,
+      "min": 0.0,
+      "n": 81
+    },
+    "d1_turnover": {
+      "max": 0.6748457361247311,
+      "min": -7.21899033586943,
+      "n": 81
+    },
+    "f1": {
+      "max": 6825000000.0,
+      "min": 290870000.0,
+      "n": 97,
+      "n_missing": 0
+    },
+    "f2": {
+      "max": 40.4749055586,
+      "min": 10.0314889789,
+      "n": 97,
+      "n_missing": 0
+    },
+    "f3": {
+      "max": 14.6,
+      "min": 1.0,
+      "n": 97,
+      "n_missing": 0
+    }
+  },
+  "features": [
+    "d1_lock",
+    "d1_turnover"
+  ],
+  "horizons": {
+    "D1": {
+      "p_up": null,
+      "return": null
+    },
+    "D10": {
+      "p_up": null,
+      "return": null
+    },
+    "D3": {
+      "p_up": null,
+      "return": null
+    },
+    "D5": {
+      "p_up": null,
+      "return": null
+    }
+  },
+  "input_policy": {
+    "d1_limit_na": "REFUSE D1_LIMIT_NA",
+    "d1_not_ceiling": "NOT_APPLICABLE D1_NOT_CEILING (ret değil)",
+    "d1_not_traded": "D1_NOT_TRADED: kayıt yazılmaz",
+    "d1_turnover_outside_train_p05_p95": "CLIP_AND_FLAG",
+    "d1_volume_invalid": "REFUSE D1_VOLUME_INVALID",
+    "half_day": "WARN",
+    "intraday_halt": "WARN",
+    "lock_inconsistent": "WARN",
+    "out_of_training_range": "WARN",
+    "parent": "ceiling_hazard_v0 kuralları aynen (f3 yoksa RET F3_MISSING)",
+    "shares_offered_invalid": "REFUSE INPUT_SHARES_OFFERED",
+    "special_trades": "WARN (hacim düzeltilmez)"
+  },
+  "lambda": 30.0,
+  "lambda_score_table": [
+    {
+      "lambda": 0.1,
+      "score": 0.39516214343262773,
+      "status": "SCORED"
+    },
+    {
+      "lambda": 1.0,
+      "score": 0.3939017239475392,
+      "status": "SCORED"
+    },
+    {
+      "lambda": 3.0,
+      "score": 0.39188784228193857,
+      "status": "SCORED"
+    },
+    {
+      "lambda": 10.0,
+      "score": 0.3887083697617967,
+      "status": "SCORED"
+    },
+    {
+      "lambda": 30.0,
+      "score": 0.38788300044658586,
+      "status": "SCORED"
+    },
+    {
+      "lambda": 100.0,
+      "score": 0.39328404554217355,
+      "status": "SCORED"
+    },
+    {
+      "lambda": 300.0,
+      "score": 0.40058366205586743,
+      "status": "SCORED"
+    },
+    {
+      "lambda": 1000.0,
+      "score": 0.40530966208661073,
+      "status": "SCORED"
+    },
+    {
+      "lambda": "INF",
+      "score": 0.4079193828377214,
+      "status": "SCORED"
+    }
+  ],
+  "model_id": "post_d1_hazard_v0",
+  "parent": {
+    "beta": {
+      "f1": 0.4489496623236836,
+      "f2": -0.17873210876625734,
+      "f3": -0.5498510595924825
+    },
+    "file": "ceiling_hazard_v0.json",
+    "gamma": [
+      -1.8094610656223502,
+      -2.1470148967547216,
+      -1.0070890642576587
+    ],
+    "model_id": "ceiling_hazard_v0",
+    "preprocessing_id": "V1_3_STEPS_F1_F2_F3_IPO_LEVEL_NO_IMPUTATION_NO_F5",
+    "sha256": "caa4dc867a9fc20d9f57cf6269e157ee1fafc9527c5144e53797bf48af0ffb67"
+  },
+  "path_secondary": {
+    "file": "ceiling_path_v0.json",
+    "model_id": "ceiling_path_v0",
+    "sha256": "3e97e8788266f807a06604316d562de939a3e84ab6fcc9c0be1ce87790c6952d"
+  },
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "schema_version": "borsai.model/1",
+  "solver": {
+    "grad_max": 2.1316282072803006e-14,
+    "iterations": 4
+  },
+  "spec": {
+    "algorithm": "discrete_time_hazard_offset_logit_l2",
+    "d1_features": {
+      "d1_lock": "1[Decimal(EN DUSUK FIYAT) == Decimal(UST LIMIT FIYATI)], D_1 satırı, ham metin (adım/yuvarlama yok)",
+      "d1_turnover": "ln(TOPLAM ISLEM ADEDI / shares_offered): Decimal 60 hane, bir kez binary64",
+      "lock_consistency": "kilit => açılış = en yüksek = kapanış = üst limit; tutmazsa WARN_D1_LOCK_INCONSISTENT"
+    },
+    "d1_preprocessing": {
+      "arithmetic": "kantil/ortalama/varyans kesin Fraction, std ve z 60 haneli Decimal (f3 ile aynı yöntem)",
+      "d1_lock": "z-skor (ortalama, popülasyon std, ddof = 0); σ = 0 ise düşer (katsayı 0)",
+      "d1_turnover": "Type-7 [p05, p95] kırpma (eğitim kümesinden, arz düzeyinde) -> z-skor; σ = 0 ise düşer"
+    },
+    "days": 10,
+    "description": "D1 sonrası güncelleme (SPEC_POST_D1_V0): dondurulmuş ceiling_hazard_v0'ın doğrusal öngörücüsü sabit ofset; d = 2..10 hazard'ına δ·u (u = z-skorlu d1_lock, d1_turnover), L2 (λ iç arz-bırak CV ile). h_1 ana modelden aynen. Yalnız D1'i tavanda kapatan arzlarda tanımlı; birincil çıktı koşullu S_cond[k] = S_k / S_1.",
+    "features": [
+      "d1_lock",
+      "d1_turnover"
+    ],
+    "input_policy": {
+      "d1_limit_na": "REFUSE D1_LIMIT_NA",
+      "d1_not_ceiling": "NOT_APPLICABLE D1_NOT_CEILING (ret değil)",
+      "d1_not_traded": "D1_NOT_TRADED: kayıt yazılmaz",
+      "d1_turnover_outside_train_p05_p95": "CLIP_AND_FLAG",
+      "d1_volume_invalid": "REFUSE D1_VOLUME_INVALID",
+      "half_day": "WARN",
+      "intraday_halt": "WARN",
+      "lock_inconsistent": "WARN",
+      "out_of_training_range": "WARN",
+      "parent": "ceiling_hazard_v0 kuralları aynen (f3 yoksa RET F3_MISSING)",
+      "shares_offered_invalid": "REFUSE INPUT_SHARES_OFFERED",
+      "special_trades": "WARN (hacim düzeltilmez)"
+    },
+    "lambda_INF": "delta ≡ 0 (karşılaştırıcının kendisi; ayrı sıfır model yok, SPEC_POST_D1_V0 §3.4)",
+    "lambda_grid": [
+      0.1,
+      1.0,
+      3.0,
+      10.0,
+      30.0,
+      100.0,
+      300.0,
+      1000.0,
+      "INF"
+    ],
+    "model": "logit h_d = eta_base_d(x) + delta·u(w), d = 2..10; h_1 = sigmoid(eta_base_1) (ana modelden aynen); eta_base_d = gamma_{g(d)} + beta·z(x) dondurulmuş ceiling_hazard_v0'dan (ofset, sabit)",
+    "model_id": "post_d1_hazard_v0",
+    "outputs": [
+      "hazard",
+      "S",
+      "P_L",
+      "P_close_ceiling",
+      "conditional_j1: S_cond (k = 2..10), p_break_next, P_L_cond (l = 1..10)",
+      "path_conditional (ikincil; ceiling_path_v0 hücreleri + bu modelin S'i, j = 1) | null"
+    ],
+    "parent": {
+      "file": "ceiling_hazard_v0.json",
+      "index": "models/INDEX.json",
+      "model_id": "ceiling_hazard_v0",
+      "preprocessing_id": "V1_3_STEPS_F1_F2_F3_IPO_LEVEL_NO_IMPUTATION_NO_F5",
+      "sha256": "caa4dc867a9fc20d9f57cf6269e157ee1fafc9527c5144e53797bf48af0ffb67"
+    },
+    "path_ledger": {
+      "path": "tests/reference/macos_golden_faz4/ceiling_path_v0_fold_ledger.csv",
+      "sha256": "1f45365ee2d84612c7a1882d98bd46697405030b003aa3db379b4fcf450e2e15"
+    },
+    "path_secondary": {
+      "file": "ceiling_path_v0.json",
+      "index": "models/INDEX.json",
+      "model_id": "ceiling_path_v0",
+      "sha256": "3e97e8788266f807a06604316d562de939a3e84ab6fcc9c0be1ce87790c6952d"
+    },
+    "penalty": "L2 yalnız delta'da, (lambda/2)·||delta||²; yeni kesişim yok",
+    "plan_id": "H99_POST_D1_PP_WALK_FORWARD_T_CUTOFF_F3_PRESENT_L_GE_1_MIN10IPO_5EV_5SV",
+    "pp_rows": "SPEC_CEILING_V0 §2 kişi-dönem satırlarından d ≥ 2 olanlar (satır ancak d − 1 ≤ L; event = 1[L = d − 1])",
+    "pseudo_rows": null,
+    "runtime_pins": {
+      "joblib": "1.5.3",
+      "numpy": "2.5.2",
+      "python": "3.12",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "scorability": {
+      "min_events": 5,
+      "min_ipo": 10,
+      "min_survivals": 5
+    },
+    "selection": {
+      "method": "INNER_LEAVE_ONE_IPO_OUT",
+      "non_convergence": "CANDIDATE_NOT_CONVERGED_DROPPED_INF_ALWAYS_KEPT",
+      "objective": "satır başına ortalama log-kayıp; h [1e-12, 1 − 1e-12]'ye kırpılır",
+      "preprocessing": "D1 ön işlemesi (p05/p95, μ, σ) kalan arzlardan yeniden; ofset değişmez",
+      "rows": "j'nin bütün d ≥ 2 satırları dışarıda",
+      "tie_break": "BIT_EXACT_TIE_TO_LARGEST_LAMBDA_INF_LARGEST"
+    },
+    "sessions_source": {
+      "half_day": "session_type == OPEN_HALF_DAY (OPEN_FULL_DAY -> 0; başka kod durur)",
+      "halt_flag": "security_trading_status != ACTIVE_NOT_SUSPENDED (başka kod durur)",
+      "other_session_columns": [
+        "target_session_date"
+      ],
+      "path": "data/raw/HISTORICAL99_OFFICIAL_BIST_OUTCOME_V1_canonical_bist_session_outcomes.csv",
+      "session_1_columns": [
+        "thb_raw_open",
+        "thb_raw_high",
+        "thb_raw_low",
+        "thb_raw_close",
+        "thb_raw_volume",
+        "thb_raw_trade_count",
+        "thm_raw_upper_limit",
+        "session_type",
+        "security_trading_status",
+        "target_session_date"
+      ]
+    },
+    "solver": {
+      "descent_check": "J_new <= J_old + m·eps·max(|J_old|, 1) (SPEC_DEVIATIONS A2)",
+      "grad_tol": 1e-10,
+      "init": "delta = 0",
+      "max_halvings": 30,
+      "max_iter": 100,
+      "method": "NEWTON_RAPHSON_NUMPY_OFFSET",
+      "non_convergence": "MODEL_NOT_FIT_DID_NOT_CONVERGE"
+    },
+    "spec_document": {
+      "path": "docs/specs_faz5/SPEC_POST_D1_V0.md",
+      "sha256": "a5b4675d84784b4a9db9c3b0f7fe3b6a1c1014e823c66b237b4613b51f7ead34"
+    },
+    "stage": "POST_D1",
+    "survival_ledger": {
+      "path": "tests/reference/macos_golden_faz1b/ceiling_hazard_v0_fold_ledger.csv",
+      "sha256": "976b4dcea9819160bf863873a0a3e3a639942bdfeec6f9229e015047c904665b"
+    },
+    "training": {
+      "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+      "description": "data/training_table.csv'nin total_demand_multiple dolu VE ceiling_close_D1 = 1 olan 81 satırı, tablo sırasıyla",
+      "n": 81,
+      "set": "H99_F3_PRESENT_L_GE_1"
+    },
+    "updated_days": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "spec_document": {
+    "path": "docs/specs_faz5/SPEC_POST_D1_V0.md",
+    "sha256": "a5b4675d84784b4a9db9c3b0f7fe3b6a1c1014e823c66b237b4613b51f7ead34"
+  },
+  "spec_sha256": "9d01c3c08cabe1bb6611c599edfe713319faec3e048a6491e649c32ba68898f4",
+  "stage": "POST_D1",
+  "training": {
+    "cutoff_date": "2026-08-13",
+    "d1_fields_sha256": "4cc9a7182eeb2b91929c876a665f7e593b5880b9315f397b9b525c7b3f0a564c",
+    "data_version_sha256": "a0c7d082dacdbde03f53d1c4af1ce9f7983f9946abc80062de570f4a1df1f977",
+    "n": 81,
+    "n_delta_ipo": 81,
+    "n_events": 67,
+    "n_ipo": 81,
+    "n_pp_rows": 409,
+    "n_survivals": 342,
+    "sessions_file_sha256": "eca620d3a5e8fed0b118bab556da5ce519257a4b2e14efcd22065f5bcdc93da9",
+    "set": "H99_F3_PRESENT_L_GE_1",
+    "tickers": [
+      "HATSN",
+      "DMRGD",
+      "MEKAG",
+      "DOFER",
+      "MHRGY",
+      "BORLS",
+      "TABGD",
+      "VRGYO",
+      "MARBL",
+      "BINHO",
+      "EKOS",
+      "AGROT",
+      "SKYMD",
+      "CATES",
+      "BEGYO",
+      "KBORU",
+      "SURGY",
+      "MEGMT",
+      "PATEK",
+      "BORSK",
+      "LMKDC",
+      "ALVES",
+      "OBAMS",
+      "ARTMS",
+      "MOGAN",
+      "ODINE",
+      "ENTRA",
+      "RGYAS",
+      "LILAK",
+      "KOTON",
+      "ALTNY",
+      "KOCMT",
+      "HRKET",
+      "ONRYT",
+      "OZYSR",
+      "ALKLC",
+      "DCTTR",
+      "BAHKM",
+      "TCKRC",
+      "GUNDG",
+      "OZATD",
+      "CEMZY",
+      "DURKN",
+      "CGCAM",
+      "SMRVA",
+      "EGEGY",
+      "MOPAS",
+      "SERNT",
+      "BIGEN",
+      "DSTKF",
+      "VSNMD",
+      "BULGS",
+      "DOFRB",
+      "ECOGR",
+      "VAKFA",
+      "PAHOL",
+      "ZERGY",
+      "ARFYE",
+      "MEYSU",
+      "FRMPL",
+      "ZGYO",
+      "UCAYM",
+      "NETCD",
+      "AKHAN",
+      "BESTE",
+      "ATATR",
+      "EMPAE",
+      "GENKM",
+      "SVGYO",
+      "LXGYO",
+      "MCARD",
+      "AAGYO",
+      "EKDMR",
+      "BETAE",
+      "SOHOE",
+      "ORZAX",
+      "GOLDA",
+      "ISVEA",
+      "SARAE",
+      "METEN",
+      "KARCL"
+    ],
+    "tickers_sha256": "7fd2e60018a1770234068f294cc41713a1e0eea9f490d02d9c87232ce6fc2989"
+  },
+  "updated_days": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

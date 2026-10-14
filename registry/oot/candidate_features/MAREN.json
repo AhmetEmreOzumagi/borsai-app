@@ -1,0 +1,246 @@
+{
+  "schema_version": "borsai.oot_candidate_features/1",
+  "ticker": "MAREN",
+  "company": "Margün Enerji Üretim Sanayi ve Ticaret A.Ş.",
+  "note": "Aday özellikler model girdisi DEĞİLDİR (KARARLAR D7). Adlar H99 ana tablosuyla aynı.",
+  "fields": {
+    "investor_count": {
+      "value": "206145",
+      "source_id": "KAP_965209_EK1",
+      "source_document": "KAP 965209 ek 1",
+      "source_published_at": "2021-09-24T18:01:45+03:00",
+      "source_sha256": "7254449e6a8a7f7f48a82c8b800f3910d182de838e0e1ee456b8748f6356dc73",
+      "source_path": "registry/oot/source_docs/MAREN/KAP_965209_ek1.pdf",
+      "quote": "Halka arza toplamda 206.145 yatırımcı katılmıştır.",
+      "semantic": "ALLOCATED_INVESTOR_COUNT",
+      "note": "dağıtım tablosu toplamı da 206,145",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "206.145",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "investor_count_by_group": {
+      "value": {
+        "retail": "205684",
+        "domestic_institutional": "122",
+        "foreign_retail": "338",
+        "foreign_institutional": "1"
+      },
+      "source_id": "KAP_965209_EK1",
+      "source_document": "KAP 965209 ek 1",
+      "source_published_at": "2021-09-24T18:01:45+03:00",
+      "source_sha256": "7254449e6a8a7f7f48a82c8b800f3910d182de838e0e1ee456b8748f6356dc73",
+      "source_path": "registry/oot/source_docs/MAREN/KAP_965209_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar 205,684 99,264,889 99.26",
+        "Yurtiçi Kurumsal Yatırımcılar 122 547,527 0.55",
+        "Yurtdışı Bireysel Yatırımcılar 338 182,584 0.18",
+        "Yurtdışı Kurumsal Yatırımcılar 1 5,000 0.01"
+      ],
+      "semantic": "ALLOCATED",
+      "note": "tablo İngilizce binlik ayırıcı kullanıyor",
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "205.684",
+        "Yurtiçi Kurumsal": "122",
+        "Yurtdışı Bireysel": "338",
+        "Yurtdışı Kurumsal": "1"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '205.684', 'Yurtiçi Kurumsal': '122', 'Yurtdışı Bireysel': '338', 'Yurtdışı Kurumsal': '1'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı yok ('herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'), grup talebi yazılmıyor",
+      "provenance": "MISSING"
+    },
+    "domestic_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "foreign_institutional_demand_multiple": {
+      "value": null,
+      "missing_reason": "borsada satış; grup tahsisatı ve grup talebi yok",
+      "provenance": "MISSING"
+    },
+    "distributed_by_group": {
+      "value": {
+        "retail": "99264889",
+        "domestic_institutional": "547527",
+        "foreign_retail": "182584",
+        "foreign_institutional": "5000"
+      },
+      "source_id": "KAP_965209_EK1",
+      "source_document": "KAP 965209 ek 1",
+      "source_published_at": "2021-09-24T18:01:45+03:00",
+      "source_sha256": "7254449e6a8a7f7f48a82c8b800f3910d182de838e0e1ee456b8748f6356dc73",
+      "source_path": "registry/oot/source_docs/MAREN/KAP_965209_ek1.pdf",
+      "quote": [
+        "Yurtiçi Bireysel Yatırımcılar 205,684 99,264,889 99.26",
+        "Yurtiçi Kurumsal Yatırımcılar 122 547,527 0.55",
+        "Yurtdışı Bireysel Yatırımcılar 338 182,584 0.18",
+        "Yurtdışı Kurumsal Yatırımcılar 1 5,000 0.01"
+      ],
+      "provenance": "CODEX_VERIFIED",
+      "codex_value": {
+        "Yurtiçi Bireysel": "99.264.889",
+        "Yurtiçi Kurumsal": "547.527",
+        "Yurtdışı Bireysel": "182.584",
+        "Yurtdışı Kurumsal": "5.000"
+      },
+      "codex_check": {
+        "codex_value": "{'Yurtiçi Bireysel': '99.264.889', 'Yurtiçi Kurumsal': '547.527', 'Yurtdışı Bireysel': '182.584', 'Yurtdışı Kurumsal': '5.000'}",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "retail_allocation_pct": {
+      "value": "99.26",
+      "source_id": "KAP_965209_EK1",
+      "source_document": "KAP 965209 ek 1",
+      "source_published_at": "2021-09-24T18:01:45+03:00",
+      "source_sha256": "7254449e6a8a7f7f48a82c8b800f3910d182de838e0e1ee456b8748f6356dc73",
+      "source_path": "registry/oot/source_docs/MAREN/KAP_965209_ek1.pdf",
+      "quote": "Yurtiçi Bireysel Yatırımcılar 205,684 99,264,889 99.26",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "99,26",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "domestic_institutional_allocation_pct": {
+      "value": "0.55",
+      "source_id": "KAP_965209_EK1",
+      "source_document": "KAP 965209 ek 1",
+      "source_published_at": "2021-09-24T18:01:45+03:00",
+      "source_sha256": "7254449e6a8a7f7f48a82c8b800f3910d182de838e0e1ee456b8748f6356dc73",
+      "source_path": "registry/oot/source_docs/MAREN/KAP_965209_ek1.pdf",
+      "quote": "Yurtiçi Kurumsal Yatırımcılar 122 547,527 0.55",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,55",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "foreign_institutional_allocation_pct": {
+      "value": "0.01",
+      "source_id": "KAP_965209_EK1",
+      "source_document": "KAP 965209 ek 1",
+      "source_published_at": "2021-09-24T18:01:45+03:00",
+      "source_sha256": "7254449e6a8a7f7f48a82c8b800f3910d182de838e0e1ee456b8748f6356dc73",
+      "source_path": "registry/oot/source_docs/MAREN/KAP_965209_ek1.pdf",
+      "quote": "Yurtdışı Kurumsal Yatırımcılar 1 5,000 0.01",
+      "semantic": "REALIZED_DISTRIBUTION_SHARE",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "0,01",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "distribution_method": {
+      "value": null,
+      "missing_reason": "belge yalnız satış yöntemini yazıyor (\"Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış\") ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor",
+      "provenance": "CODEX_UNVERIFIABLE",
+      "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+      "codex_status": "OK",
+      "codex_check": {
+        "codex_value": "Borsa'da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+        "verdict": "FOUND_DIFFERENT",
+        "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+      }
+    },
+    "lead_broker": {
+      "value": "Metro Yatırım Menkul Değerler A.Ş.",
+      "source_id": "KAP_964372_EK1",
+      "source_document": "KAP 964372 ek 1",
+      "source_published_at": "2021-09-17T18:25:54+03:00",
+      "source_sha256": "f657efcc5b606a89730592d30eff474df76fc7e14a26224c3da26293bd86a4fa",
+      "source_path": "registry/oot/source_docs/MAREN/KAP_964372_ek1.pdf",
+      "quote": "halka arzda satışa aracılık edecek Metro Yatırım Menkul Değerler A.Ş.'nin",
+      "note": "sonuç bildirimini de Metro Yatırım yayımlamış",
+      "provenance": "CODEX_VERIFIED",
+      "codex_check": {
+        "codex_value": "Metro Yatırım Menkul Değerler A.Ş.",
+        "verdict": "FOUND_SAME"
+      }
+    },
+    "price_stability_planned": {
+      "value": null,
+      "missing_reason": "TSSD (kısa biçim) fiyat istikrarından söz etmiyor; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "price_stability_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "issuer_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "shareholder_lockup_days": {
+      "value": null,
+      "missing_reason": "TSSD'de yok; izahname indirilmedi",
+      "provenance": "MISSING"
+    },
+    "sector": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "participation_index_eligible": {
+      "value": null,
+      "missing_reason": "TSSD, sonuç belgesi ve listeleme bildiriminde yok",
+      "provenance": "MISSING"
+    },
+    "market": {
+      "value": "Yıldız Pazar",
+      "source_id": "KAP_965391",
+      "source_document": "KAP 965391",
+      "source_published_at": "2021-09-27T18:10:35+03:00",
+      "source_sha256": "2d09a9f2235cab7db5231ffea441233bd90a860af3abed76fa8bf9e9bd62cbd9",
+      "source_path": "registry/oot/source_docs/MAREN/KAP_965391_bildirim.pdf",
+      "quote": "İşlem Göreceği Pazar Yıldız Pazar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "sale_method": {
+      "value": "Borsada (On the Exchange)",
+      "source_id": "KAP_965391",
+      "source_document": "KAP 965391",
+      "source_published_at": "2021-09-27T18:10:35+03:00",
+      "source_sha256": "2d09a9f2235cab7db5231ffea441233bd90a860af3abed76fa8bf9e9bd62cbd9",
+      "source_path": "registry/oot/source_docs/MAREN/KAP_965391_bildirim.pdf",
+      "quote": "Halka Arz Yöntemi Borsada (On the Exchange) Halka Arz Tarihi",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_965391": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 965391",
+      "published_at": "2021-09-27T18:10:35+03:00",
+      "sha256": "2d09a9f2235cab7db5231ffea441233bd90a860af3abed76fa8bf9e9bd62cbd9",
+      "path": "registry/oot/source_docs/MAREN/KAP_965391_bildirim.pdf"
+    },
+    "KAP_965209_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 965209 ek 1",
+      "published_at": "2021-09-24T18:01:45+03:00",
+      "sha256": "7254449e6a8a7f7f48a82c8b800f3910d182de838e0e1ee456b8748f6356dc73",
+      "path": "registry/oot/source_docs/MAREN/KAP_965209_ek1.pdf"
+    },
+    "KAP_964372_EK1": {
+      "kind": "KAP_ATTACHMENT_PDF",
+      "document_id": "KAP 964372 ek 1",
+      "published_at": "2021-09-17T18:25:54+03:00",
+      "sha256": "f657efcc5b606a89730592d30eff474df76fc7e14a26224c3da26293bd86a4fa",
+      "path": "registry/oot/source_docs/MAREN/KAP_964372_ek1.pdf"
+    }
+  }
+}

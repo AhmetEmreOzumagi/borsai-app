@@ -1,0 +1,324 @@
+{
+  "schema_version": "borsai.inputs/1",
+  "ticker": "BAYRK",
+  "company": "Bayrak EBT Taban Sanayi ve Ticaret A.Ş.",
+  "stage": "POST_BOOKBUILD_PRE_LISTING",
+  "collected_at": "2026-09-24T21:55:59+03:00",
+  "collected_at_basis": "LOCAL_CLOCK_SELF_REPORTED",
+  "collection_rules": [
+    "Yalnız resmi belgeler: KAP bildirimleri (Borsa İstanbul, aracı kurum, şirket) ve SPK haftalık bülteni; hepsi ilk işlem gününden (İstanbul) önce yayımlanmış. Belgeler resmi URL'den yeniden indirildi, sha256 ile pinlendi.",
+    "Değerler belgedeki yazımdan: binlik noktalar atıldı, ondalık virgül noktaya çevrildi; başka dönüşüm yok ('milyon' yazımı açılırsa alanda unit_expansion notu var).",
+    "Belgede olmayan alan boş (null) ve missing_reason ile; tahmin, türetme, ikincil kaynak yok. Tek istisna: aynı belgede iki nominal (toplam talep ve arz edilen) yazılıysa talep katı oran olarak hesaplandı (origin CALCULATED_FROM_SOURCE_TOTALS, derived: true, formül alanda).",
+    "PB alanları (planned_*, ipo_price_try) H99 PB tablosuyla aynı tanımla SPK bülteni A.1 'İlk Halka Arzlar' tablosundan; planned_base_offer_shares = Bedelli + Mevcut Pay Satışı, planned_max_offer_shares = taban + Ek Pay Satışı ('-' = 0). SPK bülteninin yayın anı: bültenin basılı tarihi (2022 site göçü nedeniyle URL ObjectId zamanı kullanılamaz), gün sonu üst sınırı olarak yazıldı.",
+    "Sermaye ayrımı sonuç belgesinde yazmıyorsa DATA_NOTES §2 kuralıyla planlanan ayrım taşındı (PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION; koşullar alanda).",
+    "Codex (+ GPT-6 Astra) çıkardı, Claude (verifier) doğruladı: her alanın provenance etiketi CODEX_VERIFIED | CODEX_CORRECTED | FILLED_BY_CLAUDE_VERIFIER.",
+    "Gerçekleşen sonuç (fiyat, getiri, tavan) okunmadı ve yazılmadı; THB/THM indirilmedi."
+  ],
+  "first_trading_date_source": "KAP_848611",
+  "cohort": "OOT_PRE_H99",
+  "sale_method": "ON_EXCHANGE",
+  "market": "ANA",
+  "fields": {
+    "ipo_price_tl": {
+      "value": "3.28",
+      "source_id": "KAP_848611",
+      "source_document": "KAP 848611",
+      "source_published_at": "2020-06-02T18:13:33+03:00",
+      "source_sha256": "90c235bfd32fd980493d7d6d301208b9626d824eb2053a96f7ad029745f1f990",
+      "source_path": "registry/oot/source_docs/BAYRK/KAP_848611_bildirim.pdf",
+      "quote": "Baz Fiyat (TL) 3,28",
+      "locator": "BIST 'Payların İşlem Görmeye Başlaması' bildirimi Baz Fiyat alanı (arz fiyatı; 135/135 SPK tablosuyla çapraz denetlendi)",
+      "cross_checks": [
+        {
+          "source_id": "SPK_BULTEN_2020_32",
+          "quote": "Bayrak EBT Taban Sanayi ve Ticaret A.Ş. 16.000.000 21.250.000 5.250.000 - 4.000.000 (2) - 3,28 (1)",
+          "note": "SPK Satış Fiyatı"
+        }
+      ],
+      "provenance": "CODEX_VERIFIED"
+    },
+    "shares_offered": {
+      "value": "9250000",
+      "source_id": "KAP_848611",
+      "source_document": "KAP 848611",
+      "source_published_at": "2020-06-02T18:13:33+03:00",
+      "source_sha256": "90c235bfd32fd980493d7d6d301208b9626d824eb2053a96f7ad029745f1f990",
+      "source_path": "registry/oot/source_docs/BAYRK/KAP_848611_bildirim.pdf",
+      "quote": "İşlem Görecek Payların Nominal Tutarı (TL) 9.250.000",
+      "locator": "BIST bildirimi 'İşlem Görecek Payların Nominal Tutarı' = halka arz edilen (satılan) nominal",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "post_ipo_share_capital": {
+      "value": "21250000",
+      "source_id": "KAP_848611",
+      "source_document": "KAP 848611",
+      "source_published_at": "2020-06-02T18:13:33+03:00",
+      "source_sha256": "90c235bfd32fd980493d7d6d301208b9626d824eb2053a96f7ad029745f1f990",
+      "source_path": "registry/oot/source_docs/BAYRK/KAP_848611_bildirim.pdf",
+      "quote": "21.250.000 TL nominal değerli sermayesini temsil eden",
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "capital_increase_shares": {
+      "value": "5250000",
+      "source_id": "SPK_BULTEN_2020_32",
+      "source_document": "SPK Bülteni 2020/32",
+      "source_published_at": "2020-05-21T23:59:59+03:00",
+      "source_sha256": "c5c8f18f900384fdd4d890d54554e897af20e83cd55d1ea937215154a1ab533a",
+      "source_path": "registry/oot/source_docs/BAYRK/SPK_BULTEN_2020-32.pdf",
+      "quote": "Bayrak EBT Taban Sanayi ve Ticaret A.Ş. 16.000.000 21.250.000 5.250.000 - 4.000.000 (2) - 3,28 (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_848583",
+          "quote": "toplam 9.250.000 TL nominal değerli payların tamamının satışı 3,28 TL satış fiyatından gerçekleşmiştir"
+        },
+        "b_shares_offered_equals_planned_base": "9250000 = 5250000 + 4000000",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "existing_share_sale_shares": {
+      "value": "4000000",
+      "source_id": "SPK_BULTEN_2020_32",
+      "source_document": "SPK Bülteni 2020/32",
+      "source_published_at": "2020-05-21T23:59:59+03:00",
+      "source_sha256": "c5c8f18f900384fdd4d890d54554e897af20e83cd55d1ea937215154a1ab533a",
+      "source_path": "registry/oot/source_docs/BAYRK/SPK_BULTEN_2020-32.pdf",
+      "quote": "Bayrak EBT Taban Sanayi ve Ticaret A.Ş. 16.000.000 21.250.000 5.250.000 - 4.000.000 (2) - 3,28 (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0); sonuç belgesi ayrımı yazmıyor",
+      "carry_rule": "PLANNED_SPLIT_CARRIED_FULL_SUBSCRIPTION",
+      "carry_conditions": {
+        "a_full_sale": {
+          "source_id": "KAP_848583",
+          "quote": "toplam 9.250.000 TL nominal değerli payların tamamının satışı 3,28 TL satış fiyatından gerçekleşmiştir"
+        },
+        "b_shares_offered_equals_planned_base": "9250000 = 5250000 + 4000000",
+        "c_no_additional_sale": "SPK Ek Pay Satışı '-'"
+      },
+      "provenance": "CODEX_VERIFIED",
+      "codex_status": "PARTIAL"
+    },
+    "total_demand_multiple": {
+      "value": null,
+      "missing_reason": "SALE_METHOD_ON_EXCHANGE_NO_BOOKBUILD_MULTIPLE: KAP_848583 yalnız dağıtım/talebi karşılanan başvuru sayısı veriyor; toplam talep ya da kat yok",
+      "checked_sources": [
+        "KAP_848583",
+        "KAP_848611",
+        "KAP_846722",
+        "KAP_846722_EK1"
+      ],
+      "provenance": "MISSING"
+    },
+    "total_demand_filter_status": {
+      "value": null,
+      "missing_reason": "f3 yok; filtre durumu uygulanamaz (H99: NOT_APPLICABLE)",
+      "provenance": "MISSING"
+    },
+    "additional_sale_shares": {
+      "value": "0",
+      "source_id": "KAP_848583",
+      "source_document": "KAP 848583",
+      "source_published_at": "2020-06-02T17:45:57+03:00",
+      "source_sha256": "d204d3747dbca512a07b6d0ed6ccc33f212e55bcd6795eedadbc37e7296958a7",
+      "source_path": "registry/oot/source_docs/BAYRK/KAP_848583_bildirim.pdf",
+      "quote": "toplam 9.250.000 TL nominal değerli payların tamamının satışı 3,28 TL satış fiyatından gerçekleşmiştir",
+      "zero_from_statement": true,
+      "note": "satılan toplam 9.250.000 = SPK planlanan taban (bedelli 5.250.000 + mevcut pay satışı 4.000.000); SPK satırında ek pay satışı '-'",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "ipo_size_tl": {
+      "value": null,
+      "missing_reason": "KAP_848583 gerçekleşen arzın TL tutarını yazmıyor (yalnız 9.250.000 TL nominal ve 3,28 TL fiyat); fiyat x pay hesaplanmadı",
+      "provenance": "MISSING"
+    },
+    "ipo_price_try": {
+      "value": "3.28",
+      "source_id": "SPK_BULTEN_2020_32",
+      "source_document": "SPK Bülteni 2020/32",
+      "source_published_at": "2020-05-21T23:59:59+03:00",
+      "source_sha256": "c5c8f18f900384fdd4d890d54554e897af20e83cd55d1ea937215154a1ab533a",
+      "source_path": "registry/oot/source_docs/BAYRK/SPK_BULTEN_2020-32.pdf",
+      "quote": "Bayrak EBT Taban Sanayi ve Ticaret A.Ş. 16.000.000 21.250.000 5.250.000 - 4.000.000 (2) - 3,28 (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Satış Fiyatı)",
+      "pb_semantics": "SPK_APPROVED_PLANNED_IPO_PRICE",
+      "pit_pb": {
+        "bulletin_date": "2020-05-21",
+        "bookbuilding_start": "2020-05-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_pre_ipo_capital": {
+      "value": "16000000",
+      "source_id": "SPK_BULTEN_2020_32",
+      "source_document": "SPK Bülteni 2020/32",
+      "source_published_at": "2020-05-21T23:59:59+03:00",
+      "source_sha256": "c5c8f18f900384fdd4d890d54554e897af20e83cd55d1ea937215154a1ab533a",
+      "source_path": "registry/oot/source_docs/BAYRK/SPK_BULTEN_2020-32.pdf",
+      "quote": "Bayrak EBT Taban Sanayi ve Ticaret A.Ş. 16.000.000 21.250.000 5.250.000 - 4.000.000 (2) - 3,28 (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2020-05-21",
+        "bookbuilding_start": "2020-05-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_post_ipo_capital": {
+      "value": "21250000",
+      "source_id": "SPK_BULTEN_2020_32",
+      "source_document": "SPK Bülteni 2020/32",
+      "source_published_at": "2020-05-21T23:59:59+03:00",
+      "source_sha256": "c5c8f18f900384fdd4d890d54554e897af20e83cd55d1ea937215154a1ab533a",
+      "source_path": "registry/oot/source_docs/BAYRK/SPK_BULTEN_2020-32.pdf",
+      "quote": "Bayrak EBT Taban Sanayi ve Ticaret A.Ş. 16.000.000 21.250.000 5.250.000 - 4.000.000 (2) - 3,28 (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Yeni Sermaye)",
+      "pit_pb": {
+        "bulletin_date": "2020-05-21",
+        "bookbuilding_start": "2020-05-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_capital_increase_shares": {
+      "value": "5250000",
+      "source_id": "SPK_BULTEN_2020_32",
+      "source_document": "SPK Bülteni 2020/32",
+      "source_published_at": "2020-05-21T23:59:59+03:00",
+      "source_sha256": "c5c8f18f900384fdd4d890d54554e897af20e83cd55d1ea937215154a1ab533a",
+      "source_path": "registry/oot/source_docs/BAYRK/SPK_BULTEN_2020-32.pdf",
+      "quote": "Bayrak EBT Taban Sanayi ve Ticaret A.Ş. 16.000.000 21.250.000 5.250.000 - 4.000.000 (2) - 3,28 (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Bedelli)",
+      "pit_pb": {
+        "bulletin_date": "2020-05-21",
+        "bookbuilding_start": "2020-05-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_existing_share_sale": {
+      "value": "4000000",
+      "source_id": "SPK_BULTEN_2020_32",
+      "source_document": "SPK Bülteni 2020/32",
+      "source_published_at": "2020-05-21T23:59:59+03:00",
+      "source_sha256": "c5c8f18f900384fdd4d890d54554e897af20e83cd55d1ea937215154a1ab533a",
+      "source_path": "registry/oot/source_docs/BAYRK/SPK_BULTEN_2020-32.pdf",
+      "quote": "Bayrak EBT Taban Sanayi ve Ticaret A.Ş. 16.000.000 21.250.000 5.250.000 - 4.000.000 (2) - 3,28 (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Mevcut Pay Satışı; '-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2020-05-21",
+        "bookbuilding_start": "2020-05-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_base_offer_shares": {
+      "value": "9250000",
+      "source_id": "SPK_BULTEN_2020_32",
+      "source_document": "SPK Bülteni 2020/32",
+      "source_published_at": "2020-05-21T23:59:59+03:00",
+      "source_sha256": "c5c8f18f900384fdd4d890d54554e897af20e83cd55d1ea937215154a1ab533a",
+      "source_path": "registry/oot/source_docs/BAYRK/SPK_BULTEN_2020-32.pdf",
+      "quote": "Bayrak EBT Taban Sanayi ve Ticaret A.Ş. 16.000.000 21.250.000 5.250.000 - 4.000.000 (2) - 3,28 (1)",
+      "locator": "H99 PB tanımı: Bedelli + Mevcut Pay Satışı (tablo toplamı ayrıca yazmaz)",
+      "derived": true,
+      "formula": "Bedelli + Mevcut Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2020-05-21",
+        "bookbuilding_start": "2020-05-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_additional_sale_ceiling": {
+      "value": "0",
+      "source_id": "SPK_BULTEN_2020_32",
+      "source_document": "SPK Bülteni 2020/32",
+      "source_published_at": "2020-05-21T23:59:59+03:00",
+      "source_sha256": "c5c8f18f900384fdd4d890d54554e897af20e83cd55d1ea937215154a1ab533a",
+      "source_path": "registry/oot/source_docs/BAYRK/SPK_BULTEN_2020-32.pdf",
+      "quote": "Bayrak EBT Taban Sanayi ve Ticaret A.Ş. 16.000.000 21.250.000 5.250.000 - 4.000.000 (2) - 3,28 (1)",
+      "locator": "SPK bülteni A.1 'İlk Halka Arzlar' tablosu satırı: Mevcut Sermaye, Yeni Sermaye, Bedelli, Bedelsiz, Mevcut Pay Satışı, Ek Pay Satışı, Satış Fiyatı (Ek Pay Satışı; '-' = 0: SPK_TABLE_EXPLICIT_DASH__NO_PLANNED_ADDITIONAL_SALE)",
+      "pit_pb": {
+        "bulletin_date": "2020-05-21",
+        "bookbuilding_start": "2020-05-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "planned_max_offer_shares": {
+      "value": "9250000",
+      "source_id": "SPK_BULTEN_2020_32",
+      "source_document": "SPK Bülteni 2020/32",
+      "source_published_at": "2020-05-21T23:59:59+03:00",
+      "source_sha256": "c5c8f18f900384fdd4d890d54554e897af20e83cd55d1ea937215154a1ab533a",
+      "source_path": "registry/oot/source_docs/BAYRK/SPK_BULTEN_2020-32.pdf",
+      "quote": "Bayrak EBT Taban Sanayi ve Ticaret A.Ş. 16.000.000 21.250.000 5.250.000 - 4.000.000 (2) - 3,28 (1)",
+      "locator": "H99 PB tanımı: planned_base_offer_shares + Ek Pay Satışı",
+      "derived": true,
+      "formula": "taban + Ek Pay Satışı ('-' = 0)",
+      "pit_pb": {
+        "bulletin_date": "2020-05-21",
+        "bookbuilding_start": "2020-05-28",
+        "ok": true
+      },
+      "provenance": "CODEX_VERIFIED"
+    },
+    "first_trading_date": {
+      "value": "2020-06-04",
+      "source_id": "KAP_848611",
+      "source_document": "KAP 848611",
+      "source_published_at": "2020-06-02T18:13:33+03:00",
+      "source_sha256": "90c235bfd32fd980493d7d6d301208b9626d824eb2053a96f7ad029745f1f990",
+      "source_path": "registry/oot/source_docs/BAYRK/KAP_848611_bildirim.pdf",
+      "quote": "İşlem Görmeye Başlayacağı Tarih 04/06/2020",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_start": {
+      "value": "2020-05-28",
+      "source_id": "KAP_848611",
+      "source_document": "KAP 848611",
+      "source_published_at": "2020-06-02T18:13:33+03:00",
+      "source_sha256": "90c235bfd32fd980493d7d6d301208b9626d824eb2053a96f7ad029745f1f990",
+      "source_path": "registry/oot/source_docs/BAYRK/KAP_848611_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 28-29/05/2020 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    },
+    "bookbuilding_end": {
+      "value": "2020-05-29",
+      "source_id": "KAP_848611",
+      "source_document": "KAP 848611",
+      "source_published_at": "2020-06-02T18:13:33+03:00",
+      "source_sha256": "90c235bfd32fd980493d7d6d301208b9626d824eb2053a96f7ad029745f1f990",
+      "source_path": "registry/oot/source_docs/BAYRK/KAP_848611_bildirim.pdf",
+      "quote": "Halka Arz Tarihi 28-29/05/2020 Açıklamalar",
+      "provenance": "CODEX_VERIFIED"
+    }
+  },
+  "sources": {
+    "KAP_848611": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 848611",
+      "published_at": "2020-06-02T18:13:33+03:00",
+      "sha256": "90c235bfd32fd980493d7d6d301208b9626d824eb2053a96f7ad029745f1f990",
+      "path": "registry/oot/source_docs/BAYRK/KAP_848611_bildirim.pdf"
+    },
+    "SPK_BULTEN_2020_32": {
+      "kind": "SPK_BULLETIN",
+      "document_id": "SPK Bülteni 2020/32",
+      "published_at": "2020-05-21T23:59:59+03:00",
+      "sha256": "c5c8f18f900384fdd4d890d54554e897af20e83cd55d1ea937215154a1ab533a",
+      "path": "registry/oot/source_docs/BAYRK/SPK_BULTEN_2020-32.pdf"
+    },
+    "KAP_848583": {
+      "kind": "KAP_NOTIFICATION_PDF",
+      "document_id": "KAP 848583",
+      "published_at": "2020-06-02T17:45:57+03:00",
+      "sha256": "d204d3747dbca512a07b6d0ed6ccc33f212e55bcd6795eedadbc37e7296958a7",
+      "path": "registry/oot/source_docs/BAYRK/KAP_848583_bildirim.pdf"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+# T5 eşik mutasyonu (BORSAI_FAZ7_C_IMPL_20260927, commit A öncesi; sonuç verisi yok)
+
+Mutasyon: borsai/backtest.py'de NEAR_ERA_TOLERANCE_FALL 0.008 -> 0.015 (sed), dört etiket testi koşuldu, dosya yedekten geri
+yüklendi (sha256 önce = sonra = 77f68ef41dc6f3fc3c7926dec3d31ef0b9efee4dc84b97a94e855d0ed3737a31).
+
+Mutasyonsuz:
+  4 passed in 0.03s
+Mutasyonlu satır:
+  1386:NEAR_ERA_TOLERANCE_FALL = 0.015          # §5.1 δ (V1
+Mutasyonlu koşu (.venv/bin/pytest -q -rf tests/test_faz7c_backtest.py::test_near_era_*):
+  FAILED tests/test_faz7c_backtest.py::test_near_era_tolerance_constant - asser...
+  FAILED tests/test_faz7c_backtest.py::test_near_era_sentinel_intervals - Asser...
+  FAILED tests/test_faz7c_backtest.py::test_near_era_rule_text_from_constant - ...
+  3 failed, 1 passed in 0.06s
+
+Sentetik §11-8 aralıkları ([+0.001, +0.02], [−0.02, +0.007], [−0.005, +0.02], [+0.000, +0.02]) δ = 0.015'te de aynı
+etiketi verir; eşiği yakalayan sentinel üst ucu (0.008, 0.015] içindeki aralıklardır ([−0.02, +0.012] → "belirsiz").

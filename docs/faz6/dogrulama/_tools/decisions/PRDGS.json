@@ -1,0 +1,187 @@
+{
+ "ticker": "PRDGS",
+ "reviewed_by": "claude-verifier (ajan)",
+ "result_docs_seen": [
+  "KAP_1036925",
+  "KAP_1036925_EK1"
+ ],
+ "fields": {
+  "total_demand_multiple": {
+   "value": "3.07",
+   "origin": "SOURCE_REPORTED",
+   "source_id": "KAP_1036925_EK1",
+   "quote": "halka arz büyüklüğünün toplamda 3,07 katına denk gelen 463.658.120,55 TL karşılığı filtre edilmemiş 202.470.795 TL nominal değerli talep gelmiştir",
+   "definition": "belgedeki toplam kat (ek satış dahil halka arz büyüklüğü 66.000.000 TL nominal / 151.140.000 TL'ye göre; filtre edilmemiş; Borsa İstanbul verisi)",
+   "denominator_includes_additional_sale": true,
+   "note": "202.470.795 / 66.000.000 = 3,0677; belge büyüklüğü 'ek satış dahil' olarak tanımlıyor"
+  },
+  "total_demand_filter_status": {
+   "value": "UNFILTERED",
+   "source_id": "KAP_1036925_EK1",
+   "quote": "463.658.120,55 TL karşılığı filtre edilmemiş 202.470.795 TL nominal değerli talep gelmiştir",
+   "note": "belgede filtrelenmiş toplam verilmiyor"
+  },
+  "ipo_size_tl": {
+   "value": "151140000",
+   "source_id": "KAP_1036925_EK1",
+   "quote": "belirlenen halka arz fiyatı ile ek satış dahil halka arz büyüklüğü 151.140.000 TL olarak gerçekleşmiştir"
+  },
+  "capital_increase_shares": {
+   "value": "55000000",
+   "source_id": "KAP_1036925_EK1",
+   "quote": "ihraç edilen 55.000.000 TL nominal değerli paylar ile ek satışa konu edilen"
+  },
+  "existing_share_sale_shares": {
+   "value": null,
+   "missing_reason": "sonuç ekinde ek satış dışında ortak satışı yok: mevcut ortak payları (Güler Yatırım Holding A.Ş. 5.500.000 + Murat GÜLER 5.500.000) yalnız 'ek satışa konu edilen' olarak yazılı ve additional_sale_shares'te; SPK satırında mevcut pay satışı '-'"
+  },
+  "additional_sale_shares": {
+   "value": null,
+   "missing_reason": "belgede tek sayı olarak yazılı değil; türetme (satılan toplam − planlanan taban = 66.000.000 − 55.000.000 bedelli = 11.000.000 (belgede 5.500.000 + 5.500.000 olarak iki ortağa ait yazılı)) görev kuralı gereği kullanılmadı",
+   "derived_candidate": {
+    "value": "11000000",
+    "source_id": "KAP_1036925_EK1",
+    "quote": "ek satışa konu edilen Pardus GSYO’nun mevcut ortaklarından Güler Yatırım Holding A.Ş.’ye ait 5.500.000 TL nominal değerli ve mevcut ortaklardan Murat GÜLER’e ait 5.500.000 TL nominal değerli paylar olmak üzere toplam 66.000.000 TL nominal değerli paylar halka arz edilmiştir.",
+    "formula": "satılan toplam − planlanan taban = 66.000.000 − 55.000.000 bedelli = 11.000.000 (belgede 5.500.000 + 5.500.000 olarak iki ortağa ait yazılı)",
+    "note": "SPK planlanan ek satış 11.000.000 ile aynı"
+   }
+  },
+  "full_sale_statement": {
+   "source_id": "KAP_1036925_EK1",
+   "quote": "olmak üzere toplam 66.000.000 TL nominal değerli paylar halka arz edilmiştir"
+  },
+  "additional_sale_usage_statement": {
+   "source_id": "KAP_1036925_EK1",
+   "used": "FULL",
+   "quote": "belirlenen halka arz fiyatı ile ek satış dahil halka arz büyüklüğü 151.140.000 TL olarak gerçekleşmiştir",
+   "note": "ek satışa konu 5.500.000 + 5.500.000 pay halka arz edilen 66.000.000'e dahil; SPK planlanan ek satış 11.000.000 tamamen kullanılmış"
+  },
+  "investor_count": {
+   "value": "125497",
+   "source_id": "KAP_1036925_EK1",
+   "semantic": "ALLOCATED_INVESTOR_COUNT",
+   "quote": "TOPLAM 125.497 66.000.000 100,00",
+   "note": "'Halka arza toplamda 125.497 yatırımcı katılmıştır'; dağıtım tablosu kişi sayısı aynı"
+  },
+  "investor_count_by_group": {
+   "value": {
+    "retail": "125298",
+    "domestic_institutional": "12",
+    "foreign_retail": "187"
+   },
+   "semantic": "ALLOCATED",
+   "source_id": "KAP_1036925_EK1",
+   "quote": [
+    "Yurt İçi Bireysel 125.298 65.889.703 99,83",
+    "Yurt İçi Kurumsal 12 6.664 0,01",
+    "Yurt Dışı Bireysel 187 103.633 0,16"
+   ]
+  },
+  "retail_demand_multiple": {
+   "value": null,
+   "missing_reason": "belge grup bazında talep/kat vermiyor; 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır'"
+  },
+  "domestic_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "belge grup bazında talep/kat vermiyor; grup tahsisatı yok"
+  },
+  "foreign_institutional_demand_multiple": {
+   "value": null,
+   "missing_reason": "belge grup bazında talep/kat vermiyor; grup tahsisatı yok"
+  },
+  "distributed_by_group": {
+   "value": {
+    "retail": "65889703",
+    "domestic_institutional": "6664",
+    "foreign_retail": "103633"
+   },
+   "source_id": "KAP_1036925_EK1",
+   "quote": [
+    "Yurt İçi Bireysel 125.298 65.889.703 99,83",
+    "Yurt İçi Kurumsal 12 6.664 0,01",
+    "Yurt Dışı Bireysel 187 103.633 0,16"
+   ]
+  },
+  "retail_allocation_pct": {
+   "value": "99.83",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1036925_EK1",
+   "quote": "Yurt İçi Bireysel 125.298 65.889.703 99,83",
+   "note": "ayrıca yurt dışı bireysel %0,16"
+  },
+  "domestic_institutional_allocation_pct": {
+   "value": "0.01",
+   "semantic": "REALIZED_DISTRIBUTION_SHARE",
+   "source_id": "KAP_1036925_EK1",
+   "quote": "Yurt İçi Kurumsal 12 6.664 0,01"
+  },
+  "foreign_institutional_allocation_pct": {
+   "value": null,
+   "missing_reason": "dağıtım tablosunda yurt dışı kurumsal satırı yok (yalnız yurt dışı bireysel)"
+  },
+  "distribution_method": {
+   "value": null,
+   "missing_reason": "belge yalnız satış yöntemini yazıyor (“Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış”) ve 'herhangi bir yatırımcı grubuna tahsisat yapılmamıştır' diyor; dağıtım yöntemi adlandırılmıyor"
+  },
+  "lead_broker": {
+   "value": null,
+   "missing_reason": "dossier'de TSSD yok; sonuç bildirimini A1 CAPITAL YATIRIM MENKUL DEĞERLER A.Ş. yayımlamış ama bildirim ve ek metninde aracılık/liderlik ifadesi yok"
+  },
+  "price_stability_planned": {
+   "value": null,
+   "missing_reason": "dossier'de TSSD yok; izahname indirilmedi"
+  },
+  "price_stability_days": {
+   "value": null,
+   "missing_reason": "dossier'de TSSD yok; izahname indirilmedi"
+  },
+  "issuer_lockup_days": {
+   "value": null,
+   "missing_reason": "dossier'de TSSD yok; izahname indirilmedi"
+  },
+  "shareholder_lockup_days": {
+   "value": null,
+   "missing_reason": "dossier'de TSSD yok; izahname indirilmedi"
+  },
+  "sector": {
+   "value": null,
+   "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok"
+  },
+  "participation_index_eligible": {
+   "value": null,
+   "missing_reason": "sonuç belgesi ve listeleme bildiriminde yok"
+  }
+ },
+ "codex_check": {
+  "total_demand_multiple": {
+   "codex_value": "3,07",
+   "verdict": "FOUND_SAME",
+   "note": "filtre edilmemiş, ek satış dahil büyüklüğe göre"
+  },
+  "ipo_size_tl": {
+   "codex_value": "151.140.000",
+   "verdict": "FOUND_SAME"
+  },
+  "existing_share_sale_shares": {
+   "codex_value": "5.500.000",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "5.500.000 iki ortaktan yalnız birinin (Güler Yatırım Holding) ek satışa konu payı; iki ortağın ek satış toplamı 11.000.000 additional_sale_shares'te; ek satış dışında ortak satışı yok, alan null"
+  },
+  "additional_sale_shares": {
+   "codex_value": "11.000.000",
+   "verdict": "FOUND_SAME",
+   "note": "belgede 5.500.000 + 5.500.000; 66.000.000 − 55.000.000"
+  },
+  "investor_count": {
+   "codex_value": "125.497",
+   "verdict": "FOUND_SAME"
+  },
+  "distribution_method": {
+   "codex_value": "Borsa’da Satış-Sabit Fiyatla Talep Toplama ve Satış",
+   "verdict": "FOUND_DIFFERENT",
+   "note": "ifade belgede var ama satış yöntemi olarak; dağıtım yöntemi değil; alan null"
+  }
+ },
+ "notes": "Borsada satış (sabit fiyat 2,29); sonuç eki toplam katı 3,07 (filtre edilmemiş, ek satış dahil büyüklüğe göre) açıkça yazıyor. Ek satış 11.000.000 (iki mevcut ortak, 5.500.000'er) tamamen kullanılmış. SPK bülteni A.1 satırında Yeni Sermaye '196.00.000' diye hatalı basılmış; sonuç eki halka arz sonrası sermayeyi açıkça 196.000.000 TL yazıyor: KAP_1036925_EK1 \"Şirket’in çıkarılmış sermayesinin 141.000.000 TL’den 196.000.000 TL’ye artırılması nedeniyle\" (ayrıca BIST listeleme bildirimi KAP_1036999: \"Şirketin sermayesini temsil eden 196.000.000 TL nominal değerli payları\"). TSSD dossier'de yok. | Doğrulayıcı son işlemi: türetilmiş ayrım alanları boşaltıldı (postprocess.py).",
+ "needs_search": false
+}

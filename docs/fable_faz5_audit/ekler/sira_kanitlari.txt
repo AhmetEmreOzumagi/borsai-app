@@ -1,0 +1,71 @@
+# Sıra kanıtları — BORSAI_FAZ5_FABLE_REPRO_AUDIT_20260924 (2026-09-24T12:55:22Z); yalnız okuma git komutları, GIT_OPTIONAL_LOCKS=0
+
+$ git log -1 --format="%H %cI" c20c092 ; 7ce0593 ; 7d08169
+c20c092207027926906da4fe8de1a0c467510de4 2026-09-24T02:58:53+03:00 BORSAI_FAZ5_SPEC: post-D1 update model spec with pre-registered expectations, before implementation
+7ce0593f8b80afac7ca9c6b9117f9079f7abb662 2026-09-24T14:53:40+03:00 BORSAI_FAZ5_A: post_d1_hazard_v0 code, tests, expectation rules and separate POST_D1 model index support, no backtest results
+7d08169bc19f7efdaef25f3a4d85b0c1a1610251 2026-09-24T15:12:42+03:00 BORSAI_FAZ5_B: post_d1_hazard_v0 walk-forward backtest, golden ledger and MODELS.md Faz 5 section (not frozen)
+
+$ push kanıtı registry/push_proofs/c20c092….json: created_at, method, proven_commit_sha
+2026-09-24T00:44:25Z GITHUB_COMMIT_STATUS_CREATED_AT c20c092207027926906da4fe8de1a0c467510de4 success
+=> push kanıtı created_at 2026-09-24T00:44:25Z (= 03:44:25+03:00) < 7ce0593 commit zamanı 2026-09-24T14:53:40+03:00: True
+
+$ git merge-base --is-ancestor c20c092 7ce0593 ; 7ce0593 7d08169
+c20c092 → 7ce0593 ata: evet
+7ce0593 → 7d08169 ata: evet
+
+$ git diff c20c092 7d08169 --stat -- docs/specs_faz5   (boş olmalı)
+[çıktı satır sayısı: 0]
+
+$ git diff c20c092 7d08169 --stat -- docs/specs docs/specs_faz4   (boş olmalı)
+[çıktı satır sayısı: 0]
+
+$ git diff 7ce0593 7d08169 --stat -- borsai   (boş olmalı: değerlendirme kuralları ve eşikler sonuçtan sonra değişmedi)
+[çıktı satır sayısı: 0]
+
+$ git diff 7ce0593 7d08169 --stat   (B commit'inin dokunduğu yollar)
+ docs/MODELS.md                                     | 140 +++++++
+ docs/faz5/IMPL_RAPOR.md                            | 269 ++++++++++++
+ docs/faz5/ekler/test_runs.txt                      |  17 +
+ experiments/log.jsonl                              |   1 +
+ tests/reference/macos_golden_faz5/MANIFEST.json    |  37 ++
+ tests/reference/macos_golden_faz5/SHA256SUMS       |   2 +
+ .../post_d1_hazard_v0_final_fit_preview.json       | 452 +++++++++++++++++++++
+ .../post_d1_hazard_v0_fold_ledger.csv              |  88 ++++
+ tests/test_faz5_golden.py                          | 152 +++++++
+ 9 files changed, 1158 insertions(+)
+
+$ git ls-tree -r --name-only 7ce0593 -- tests/reference/macos_golden_faz5   (boş olmalı)
+[dosya sayısı: 0]
+
+$ git show 7ce0593:docs/MODELS.md | grep -c "Faz 5"   (0 olmalı)
+0
+$ git show 7d08169:docs/MODELS.md | grep -c "## Faz 5: D1 sonrası güncelleme"
+1
+
+$ git show 7ce0593:experiments/log.jsonl | grep -c post_d1_hazard_v0 ; satır sayısı
+0
+      64
+$ git show 7d08169:experiments/log.jsonl | grep -c post_d1_hazard_v0 ; satır sayısı
+1
+      65
+
+$ şartname sha256 (çalışma ağacı ve c20c092)
+a5b4675d84784b4a9db9c3b0f7fe3b6a1c1014e823c66b237b4613b51f7ead34  docs/specs_faz5/SPEC_POST_D1_V0.md
+a5b4675d84784b4a9db9c3b0f7fe3b6a1c1014e823c66b237b4613b51f7ead34  -
+
+$ OPERATIONAL_RULES_FAZ5 ve eşikler A ile B arasında aynı mı (git diff 7ce0593 7d08169 -- borsai/report_faz5.py)
+0
+$ report_faz5.py 7ce0593 ile çalışma ağacı bayt-eşit:
+evet
+
+$ günlük 65. satır: git_commit, spec_document_sha256, ledger_sha256, evaluated sha'ları dosyalarla eşit mi
+ git_commit 7ce0593 borsai_dirty False spec_document_sha256 a5b4675d8478
+ ledger_sha256 == dosya: True
+ survival_ledger_sha256 == Faz 1B ledger: True
+ path_ledger_sha256 == Faz 4 ledger: True
+ evaluated ceiling_hazard_v0 sha == dosya: True
+ evaluated ceiling_hazard_v0@INF sha == dosya: True
+ evaluated base_km_expanding sha == dosya: True
+ evaluated base_km_last10 sha == dosya: True
+ evaluated base_always_ceiling__ceiling sha == dosya: True
+ evaluated ceiling_path_v0 sha == dosya: True
