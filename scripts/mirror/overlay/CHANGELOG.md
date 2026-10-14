@@ -3,6 +3,12 @@
 Sürüm numarası uygulamanınkidir (`app/src-tauri/tauri.conf.json`, `app/package.json`, `app/src-tauri/Cargo.toml`). Her sürüm,
 özel kaynak repodaki bir commit'in aynasıdır; kaynak commit README'nin "Kaynak ve kanıt" bölümünde yazar.
 
+## Yayımlanmamış (yalnız ayna; uygulama değişmedi)
+
+- Ayna CI'ı Python testlerini referans yapıyla koşar (CPython 3.12.14, python-build-standalone 20260901, uv 0.12.17).
+- Bayt-eşit altın testlerden referans platform dışında son basamakta ayrışan 23'ü `requires_reference_platform` ile gerekçesiyle
+  atlanır (`tests/conftest.py`; ölçüm: ayna CI koşusu 38539817802).
+
 ## v0.1.0 — 2026-10-13
 
 İlk herkese açık sürüm.
@@ -17,3 +23,4 @@ Sürüm numarası uygulamanınkidir (`app/src-tauri/tauri.conf.json`, `app/packa
 - **Ayna:** ham bültenler, KAP/SPK PDF'leri, KAP API yanıtı, SPK xlsx tabloları ve doğrulama günlükleri dışarıda
   (`DATA_NOTICE.md`); bunları ya da özel repo geçmişini isteyen testler açıkça atlanır (README, "Yeniden üretim").
 - **Lisans:** kaynak kod Apache-2.0.
+- **Paketler:** özel repo `af234f9`'dan, özel CI koşusu 38537333550; sha256'lar Release'teki `SHA256SUMS.txt`'te.

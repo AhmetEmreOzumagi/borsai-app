@@ -50,7 +50,7 @@ sertifikası yok).
   içinde (Rust) hesaplanır. Yeni arz girişi, tahmin sonucu ve kayıtlarım çalışır. Monitör, Analiz, Sicil ve Model performansı
   paketin derlendiği andaki resmi sicilin gömülü, salt okunur kopyasından okunur; Monitör derlemeyi ve son sonuç tarihini
   yazar (v0.1.0: son sonuç 30.09.2026, 7 arz). Yeni arzlar ve sonuçlar yeni paketle gelir.
-- Release paketleri özel kaynak reponun CI'ında, bu aynanın kaynak commit'inden derlenir (aşağıda "Kaynak ve kanıt");
+- Release paketleri özel kaynak reponun CI'ında derlenir (v0.1.0: özel repo `af234f9`; aşağıda "Kaynak ve kanıt");
   uygulamanın Ayarlar → Hakkında ekranı derleme commit'ini gösterir.
 
 ## Dürüst durum
@@ -109,7 +109,7 @@ adresi, baytı ve sha256'sı [`data/raw/bist/MANIFEST.csv`](data/raw/bist/MANIFE
 `registry/**/source_docs/**/MANIFEST.json`'dadır. Türetilmiş tablolar, skorlar ve kayıtlar buradadır; modeller ve testler
 onlardan koşar.
 
-Bu aynada (kaynak `@@KAYNAK_SHA7@@`) ölçülen test sonuçları:
+Bu aynada (kaynak `@@KAYNAK_SHA7@@`) referans platformda (`Darwin 27.0.0 arm64 / CPython 3.12.14`) ölçülen test sonuçları:
 
 | Takım | Komut | Sonuç |
 |---|---|---|
@@ -118,8 +118,9 @@ Bu aynada (kaynak `@@KAYNAK_SHA7@@`) ölçülen test sonuçları:
 | vitest | `cd app && npm ci && npm test` | 24 dosya, 384 test geçti |
 | altın vektörler | `python app/parity/gen_golden.py --check` | 35 dosya, fark 0 (`app/parity/test_gen_golden.py` 8 geçti) |
 
-952 testin 782'si koşar; 170'i aşağıdaki iki gerekçeyle açıkça atlanır (`tests/conftest.py`; işaretler iddiaları değiştirmez;
-pytest özeti modül düzeyindeki atlamayı tek sayar: 154). Özel repoda aynı takım 952 geçti, 0 atlandı.
+Referans platformda 952 testin 782'si koşar; 170'i aşağıdaki ilk iki gerekçeyle açıkça atlanır (`tests/conftest.py`; işaretler
+iddiaları değiştirmez; pytest özeti modül düzeyindeki atlamayı tek sayar: 154). Başka bir platformda (ör. bu reponun GitHub
+Actions macOS runner'ı) üçüncü gerekçeyle 23 test daha atlanır. Özel repoda aynı takım 952 geçti, 0 atlandı.
 
 - `requires_raw_sources` (76 test): ham bülteni ya da resmi belgeyi açan testler (sonuçları bültenden yeniden üretme,
   girdi belgesinin PDF'ini denetleme, kaydı yeniden dondurma). Gerekçe: "ham bülten ve resmi belgeler herkese açık aynada
@@ -127,8 +128,13 @@ pytest özeti modül düzeyindeki atlamayı tek sayar: 154). Özel repoda aynı 
 - `requires_git_history` (77 test, ayrıca içe aktarmada gerçek deponun push kanıtını okuyan `tests/test_faz7_vault.py`
   modülü düzeyinde: 17 test): özel reponun commit geçmişini isteyen testler (commit ataları, push kanıtının hangi commit'i
   kapsadığı, eski commit'teki dosyanın değişmediği). Ayna tek commit'tir; zaman kanıtı özel repodadır.
-- Rust'ta `sade.rs::snapshot_mode_views_equal_repo_views` aynı nedenle yalnız aynada atlanır (gömülü sicil kayıtlarının push
-  kanıtını kaydı ekleyen commit'e bağlar).
+- `requires_reference_platform` (23 test): backtest ledger'larının, yeniden fit parametrelerinin ve nihai fit önizlemelerinin
+  altın dosyalarla bayt-eşitliği. Altın dosyalar `Darwin 27.0.0 arm64 / CPython 3.12.14`'te üretildi
+  (`tests/reference/macos_golden*/MANIFEST.json`); başka işletim sistemi ya da işlemcide sayısal kütüphaneler son basamakta
+  farklı sonuç verir (ölçüm: GitHub `macos-26-arm64` runner'ında 23 test, fark 1e-16 düzeyinde). Liste ölçülmüştür ve
+  `tests/conftest.py`'de açıktır.
+- Rust'ta `sade.rs::snapshot_mode_views_equal_repo_views` geçmiş gerekçesiyle yalnız aynada atlanır (gömülü sicil kayıtlarının
+  push kanıtını kaydı ekleyen commit'e bağlar).
 
 ## Geliştirme
 
@@ -148,8 +154,9 @@ Windows ve macOS paketleri artefakt olarak). Katkı: [`CONTRIBUTING.md`](CONTRIB
   ile kaydedildi; bu yanıtlar [`registry/push_proofs/`](registry/push_proofs/) altında `<özel repo commit sha>.json` adıyla
   durur. Aynanın kendi commit tarihi kanıt değildir. Skorlardaki sınıflar (canlı, geç kayıt, geçmişe dönük) özel repoda bu
   kanıtlardan hesaplandı; aynadan yeniden hesaplanamaz, bu yüzden onu isteyen testler burada atlanır.
-- Release paketleri özel repo CI'ında aynı kaynak commit'ten derlenir: Sicil ekranındaki "kaydı ekleyen commit" ve push kanıtı
-  bu yüzden doğru görünür. Bu aynanın CI'ı aynı kodu test eder ve paketleri yalnız doğrulama artefaktı olarak üretir.
+- Release paketleri özel repo CI'ında derlenir (v0.1.0: `af234f9`, koşu 38537333550): Sicil ekranındaki "kaydı ekleyen commit"
+  ve push kanıtı bu yüzden doğru görünür. Bu aynanın CI'ı aynı kodu test eder ve paketleri yalnız doğrulama artefaktı olarak
+  üretir. Release'teki `SHA256SUMS.txt` iki paketin sha256'sını taşır.
 
 ## Lisans ve veri
 

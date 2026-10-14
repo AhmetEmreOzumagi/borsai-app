@@ -79,7 +79,10 @@ jobs:
           git checkout -- ../tests/fixtures/ui
           cargo test -p borsai_predict --test golden golden_parity -- --nocapture 2>&1 | grep -E "bit-eşit|test result" || true
 
-  # Python araştırma hattı (borsai/): pytest. Referans ortam macOS arm64 + CPython 3.12 (pyproject.toml); kilitli sürümler.
+  # Python araştırma hattı (borsai/): pytest. Referans ortam macOS arm64 + CPython 3.12.14 (pyproject.toml; altın manifestlerdeki
+  # machine.platform); kilitli sürümler. actions/python-versions 3.12.10'dan sonra macOS yapısı sunmuyor: CPython 3.12.14 referans
+  # makinedeki yapıyla aynı python-build-standalone 20260901 yapısıdır (uv 0.12.17'nin gömülü listesi). Bayt-eşit altın testlerden
+  # bu platformda son basamakta ayrışanlar tests/conftest.py'de requires_reference_platform ile gerekçesiyle atlanır.
   test-python:
     name: test-python
     runs-on: macos-latest
@@ -93,8 +96,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: pip install -r requirements.lock
-        run: python -m pip install -r requirements.lock
+      - name: CPython 3.12.14 (uv 0.12.17) ve pip install -r requirements.lock
+        run: |
+          python -m pip install uv==0.12.17
+          uv python install 3.12.14
+          uv venv --python 3.12.14 "$RUNNER_TEMP/venv"
+          uv pip install --python "$RUNNER_TEMP/venv/bin/python" -r requirements.lock
+          "$RUNNER_TEMP/venv/bin/python" -c "import sys; from borsai import backtest as bt; print(sys.version); print(bt._platform())"
+          echo "$RUNNER_TEMP/venv/bin" >> "$GITHUB_PATH"
       - name: pytest -q
         run: python -m pytest -q -rs
       - name: parite (app/parity)
